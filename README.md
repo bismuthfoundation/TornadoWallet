@@ -35,3 +35,6 @@ open [http://localhost:8888](http://localhost:8888)
 * JS
 * Embedded local webserver
 
+# References
+
+Current HTML template derived from mBitcoin wallet
