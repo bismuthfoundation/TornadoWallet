@@ -10,15 +10,15 @@ mockup "index" and "transactions" screens only are up, with made up data.
 
 Goal is to re-use the existing python code for behind the scene heavy lifting, but leverage HTML/JS flexibility for GUI.
 
-# installation
+# Installation
 
 `pip3 install -r requirements.txt`
 
-# Usage
+# Usage
 
 `python3 wallet.py`
 
-open []http://localhost:8888](http://localhost:8888)
+open [http://localhost:8888](http://localhost:8888)
 
 # Roadmap
 
@@ -28,7 +28,7 @@ open []http://localhost:8888](http://localhost:8888)
 * Multiwallet
 * Allinone mobile app with embedded browser and python engine
 
-# The tech
+# The tech
 
 * Tornado web app
 * Templates / HTML Themes
