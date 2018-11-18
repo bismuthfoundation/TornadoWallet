@@ -10,6 +10,18 @@ These json routes can be used as a local api endpoint for any javascript need (l
 
 ## The HTTP routes
 
+## Available variables
+
+### Wallet
+
+### Balance
+
+### Transactions
+
+### Server
+
+### official_api
+
 ## The Json routes
 
 ## The websocket server

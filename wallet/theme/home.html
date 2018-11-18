@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-	
+
 {% block body %}
 
 		<div style="margin-top:15px;margin-left:5px;">
@@ -7,35 +7,35 @@
 			<span id="span_WalletHeaderText">Bismuth <span style="font-style: italic;font-size:.7em;">m</span>Wallet</span>
 			<hr class="hr_wallet">
 		</div>
-		
+
 		<div class="div_WalletOverview">
 			<span class="primary">Total Balance:</span>
 			<span class="secondary_lite">{{ escape(balance) }}&nbsp;BIS</span>
 		</div>
-		
+
 		<div class="div_WalletOverview">
 			<span class="primary">Fee per transaction:</span>
 			<span class="secondary_lite">--</span>
 		</div>
-		
+
 		<div class="div_WalletOverview">
 			<span class="primary">Wallet Version:</span>
 			<span class="secondary_lite">--</span>
 		</div>
-		
+
 		<div class="div_WalletOverview">
 			<span class="primary">Network:</span>
 			<span class="secondary_lite">--</span>
-		</div>	
-	
+		</div>
+
 		<div class="div_WalletOverview">
 			<span class="primary">Bitcoind Protocol:</span>
 			<span class="secondary_lite">--</span>
 		</div>
-	
+
 		<div class="div_WalletOverview">
-			<span class="primary">Current Connections:</span>
-			<span class="secondary_lite">--</span>
+			<span class="primary">Available servers:</span>
+			<span class="secondary_lite">{{ wallet_servers }}</span>
 		</div>
 
 {% end %}

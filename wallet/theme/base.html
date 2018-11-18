@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ escape(handler.settings["app_title"]) }}</title>
-<link rel="stylesheet" href="static/css/jquery.mobile-1.4.5.min.css" />
-<link rel="stylesheet" href="static/css/m_phpbitadmin.css" />
-<script src="static/js/jquery-1.11.1.min.js"></script>
-<script src="static/js/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="/static/css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="/static/css/m_phpbitadmin.css" />
+<script src="/static/js/jquery-1.11.1.min.js"></script>
+<script src="/static/js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">
 $(document).bind("pagecreate", function () {
     $.mobile.ajaxEnabled = false;
@@ -17,8 +17,8 @@ $(document).bind("pagecreate", function () {
 <body>
 <div data-role="page" id="home" data-theme="a">
 
-	<div data-role="header" data-add-back-btn="true" data-icon="arrow-l">	
-		<h1><img src="static/images/bitcoin2.png" height="16" width="16" alt=""/>&nbsp;Tornado Bismuth Wallet</h1>
+	<div data-role="header" data-add-back-btn="true" data-icon="arrow-l">
+		<h1><img src="/static/images/bitcoin2.png" height="16" width="16" alt=""/>&nbsp;Tornado Bismuth Wallet</h1>
 		<a href="/scan" class="ui-btn ui-btn-right ui-corner-all ui-shadow ui-btn-inline ui-icon-camera ui-btn-icon-left ui-btn-a" data-theme="a">Scan</a>
 		<div data-role="navbar" data-iconpos="top">
 			<ul>
@@ -28,13 +28,13 @@ $(document).bind("pagecreate", function () {
 			</ul>
 		</div>
 	</div><!-- /header -->
-	
+
 	<div data-role="content" class="content">
 
 		{% block body %}{% end %}
 
 	</div><!-- /content  -->
-		
+
 	<div data-role="footer" data-id="main" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar">
 			<ul>
@@ -44,7 +44,7 @@ $(document).bind("pagecreate", function () {
 			</ul>
 		</div>
 	</div><!-- /footer -->
-		
+
 </div><!-- /page home -->
 </body>
 </html>
