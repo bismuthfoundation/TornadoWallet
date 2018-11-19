@@ -76,7 +76,10 @@ class BaseHandler(tornado.web.RequestHandler):
         self.bismuth_vars = self.settings['bismuth_vars']
         # self.bismuth_vars['wallet'] =
         # reflect server info
+        self.settings["page_title"] = self.settings["app_title"]
         self.bismuth_vars['server'] = self.bismuth.info()
+        self.bismuth_vars['balance'] = 'TODO.1234'
+        self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.cristals = self.settings['bismuth_cristals']
 
 
@@ -86,7 +89,8 @@ class HomeHandler(BaseHandler):
         :return:
         """
         # self.render("home.html", balance="101", wallet_servers=','.join(self.settings['wallet_servers']))
-        self.render("home.html", balance="101", wallet_servers='N/A', bismuth=self.bismuth_vars)
+        self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5)
+        self.render("home.html", bismuth=self.bismuth_vars)
         # self.app_log.info("> home")
 
 
@@ -98,7 +102,6 @@ class TransactionsHandler(BaseHandler):
     def tx(self, i):
         """
         fake tx
-        :return:
         """
         txdate = time.time() - i * 5
         txdate = datetime.datetime.fromtimestamp(int(txdate)).strftime('%Y-%m-%d %H:%M:%S')
@@ -110,7 +113,9 @@ class TransactionsHandler(BaseHandler):
         """
         :return:
         """
-        self.render("transactions.html", transactions=[self.tx(i) for i in range(15)])
+        self.settings["page_title"] = "Transaction list"
+        self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(10)
+        self.render("transactions.html", bismuth=self.bismuth_vars)
 
 
 class JsonHandler(BaseHandler):
@@ -149,7 +154,7 @@ class WalletHandler(BaseHandler):
     async def load(self, params=None):
         if not params:
             wallets = self.bismuth.list_wallets('wallets')
-            self.render("wallet_load.html", wallets=wallets)
+            self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars)
         else:
             # load a wallet
             file_name = '/'.join(params)
@@ -160,7 +165,7 @@ class WalletHandler(BaseHandler):
 
     async def info(self, params=None):
         wallet_info = self.bismuth.wallet('wallets')
-        self.render("wallet_info.html", wallet=wallet_info)
+        self.render("wallet_info.html", wallet=wallet_info, bismuth=self.bismuth_vars)
 
     async def get(self, command=''):
         command, *params = command.split('/')
