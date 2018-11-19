@@ -25,33 +25,40 @@ from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
 define("verbose", default=False, help="verbose mode", type=bool)
+define("theme", default='theme', help="theme directory", type=str)
 
 
 class Application(tornado.web.Application):
     def __init__(self):
         # wallet_servers = bismuthapi.get_wallet_servers_legacy()
         bismuth_client = bismuthclient.BismuthClient(verbose=options.verbose)
+        bismuth_client.get_server()
         handlers = [
             (r"/", HomeHandler),
             (r"/transactions", TransactionsHandler),
-            (r"/json/(.*)", JsonHandler)
+            (r"/json/(.*)", JsonHandler),
+            (r"/wallet/(.*)", WalletHandler)
         ]
         settings = dict(
             app_title=u"Tornado Bismuth Wallet",
-            template_path=os.path.join(os.path.dirname(__file__), "theme"),
-            static_path=os.path.join(os.path.dirname(__file__), "theme/static"),
+            template_path=os.path.join(os.path.dirname(__file__), options.theme),
+            static_path=os.path.join(os.path.dirname(__file__), "{}/static".format(options.theme)),
             ui_modules={"Transaction": TxModule},
             xsrf_cookies=True,
             cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
             login_url="/auth/login",
+            compress_response=True,
             debug=options.debug,  # Also activates auto reload
+            serve_traceback=options.debug,
             # wallet_servers = wallet_servers
-            bismuth_client = bismuth_client
+            bismuth_client = bismuth_client,
+            bismuth_vars = {},
+            bismuth_cristals = {}
         )
         super(Application, self).__init__(handlers, **settings)
 
@@ -62,6 +69,11 @@ class BaseHandler(tornado.web.RequestHandler):
         self.app_log = logging.getLogger("tornado.application")
         # print("cookies", self.cookies)
         self.bismuth = self.settings['bismuth_client']
+        self.bismuth_vars = self.settings['bismuth_vars']
+        # self.bismuth_vars['wallet'] =
+        # reflect server info
+        self.bismuth_vars['server'] = self.bismuth.info()
+        self.cristals = self.settings['bismuth_cristals']
 
 
 class HomeHandler(BaseHandler):
@@ -70,7 +82,7 @@ class HomeHandler(BaseHandler):
         :return:
         """
         # self.render("home.html", balance="101", wallet_servers=','.join(self.settings['wallet_servers']))
-        self.render("home.html", balance="101", wallet_servers='N/A')
+        self.render("home.html", balance="101", wallet_servers='N/A', bismuth=self.bismuth_vars)
         # self.app_log.info("> home")
 
 
@@ -102,13 +114,41 @@ class JsonHandler(BaseHandler):
         """
         :return:
         """
-        try:
-            json_result = json.dumps(self.bismuth.command(command))
-        except Exception as e:
-            json_result = json.dumps(str(e))
+        params = None
+        if '/' in command:
+            command, *params = command.split('/')
+        # have a list of valid commands for the bismuthclient, and route some to our internal vars
+        # The list could also enforce the required number of params.
+        if command.startswith('bismuth.'):
+            # internal var wallet, config, ....
+            command, var = command.split('.')
+            json_result = json.dumps(self.bismuth_vars.get(var, None))
+        elif command.startswith('settings.'):
+            # internal var wallet, config, ....
+            command, var = command.split('.')
+            json_result = json.dumps(self.settings.get(var, None))
+        # TODO: add slug. for cristals
+        else:
+            try:
+                json_result = json.dumps(self.bismuth.command(command, params))
+            except Exception as e:
+                json_result = json.dumps(str(e))
+                # TODO: wrap in a common "error" json structure
         self.write(json_result)
         self.set_header('Content-Type', 'application/json')
         # self.render("home.html", balance="json", wallet_servers=json_result)
+        self.finish()
+
+
+
+class WalletHandler(BaseHandler):
+    async def load(self, params=None):
+        wallets = self.bismuth.list_wallets('wallets')
+        self.render("wallet_load.html", wallets=wallets)
+
+    async def get(self, command=''):
+        command, *params = command.split('/')
+        await getattr(self, command)(params)
 
 
 class TxModule(tornado.web.UIModule):
