@@ -67,8 +67,12 @@ class BaseHandler(tornado.web.RequestHandler):
     def initialize(self):
         # Common init for every request
         self.app_log = logging.getLogger("tornado.application")
-        # print("cookies", self.cookies)
         self.bismuth = self.settings['bismuth_client']
+        # Load persisted wallet if needed
+        wallet = self.get_cookie('wallet')
+        if wallet and wallet != self.bismuth.wallet_file:
+            self.bismuth.load_wallet(wallet)
+        # print("cookies", self.cookies)
         self.bismuth_vars = self.settings['bismuth_vars']
         # self.bismuth_vars['wallet'] =
         # reflect server info
@@ -143,8 +147,20 @@ class JsonHandler(BaseHandler):
 
 class WalletHandler(BaseHandler):
     async def load(self, params=None):
-        wallets = self.bismuth.list_wallets('wallets')
-        self.render("wallet_load.html", wallets=wallets)
+        if not params:
+            wallets = self.bismuth.list_wallets('wallets')
+            self.render("wallet_load.html", wallets=wallets)
+        else:
+            # load a wallet
+            file_name = '/'.join(params)
+            self.bismuth.load_wallet(file_name)
+            # TODO: store as cookie
+            self.set_cookie('wallet', file_name)
+            self.redirect("/wallet/info")
+
+    async def info(self, params=None):
+        wallet_info = self.bismuth.wallet('wallets')
+        self.render("wallet_info.html", wallet=wallet_info)
 
     async def get(self, command=''):
         command, *params = command.split('/')

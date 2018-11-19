@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<div class="row">
+
+	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+	  <div class="card card-stats">
+		<div class="card-header card-header-success card-header-icon">
+		  <div class="card-icon">
+			<i class="material-icons">store</i>
+		  </div>
+		  <p class="card-category">Balance</p>
+		  <h3 class="card-title">{{ escape(balance) }}&nbsp;$BIS</h3>
+		</div>
+		<div class="card-footer">
+		  <div class="stats">
+			<i class="material-icons">date_range</i> Just now
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+	  <div class="card card-stats">
+		<div class="card-header card-header-warning card-header-icon">
+		  <div class="card-icon">
+			<i class="material-icons">content_copy</i>
+		  </div>
+		  <p class="card-category">Mempool</p>
+		  <h3 class="card-title">2 <small>Txs</small>
+		  </h3>
+		</div>
+		<div class="card-footer">
+		  <div class="stats">
+			<i class="material-icons text-warning">warning</i>
+			<a href="#" class="warning-link">One Tx in mempool</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+	  <div class="card card-stats">
+		<div class="card-header card-header-success card-header-icon">
+		  <div class="card-icon">
+			<i class="material-icons">info_outline</i>
+		  </div>
+		  <p class="card-category">Server Height</p>
+		  <h3 class="card-title">750 000</h3>
+		</div>
+		<div class="card-footer">
+		  <div class="stats">
+			<i class="material-icons">local_offer</i> {{ wallet_servers }}
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+
+	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+	  <div class="card card-stats">
+		<div class="card-header card-header-info card-header-icon">
+		  <div class="card-icon">
+			<i class="fa fa-server"></i>
+		  </div>
+		  <p class="card-category">Hypernode</p>
+		  <h3 class="card-title">542</h3>
+		</div>
+		<div class="card-footer">
+		  <div class="stats">
+			<i class="material-icons">update</i> Active
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+</div>
+
+
+<div class="row">
+	 <div class="col-xl-4 col-lg-12">
+		  <div class="card card-chart">
+			<div class="card-header card-header-warning">
+			  <div class="ct-chart" id="websiteViewsChart"></div>
+			</div>
+			<div class="card-body">
+			  <h4 class="card-title">Account balance</h4>
+			  <p class="card-category">Last 12 months</p>
+			</div>
+			<div class="card-footer">
+			  <div class="stats">
+				<i class="material-icons">access_time</i> some related info
+			  </div>
+			</div>
+		  </div>
+	 </div>
+
+
+	 <div class="col-lg-8 col-md-12">
+		  <div class="card">
+			<div class="card-header card-header-primary">
+			  <h4 class="card-title">Latest transactions</h4>
+			  <p class="card-category">Updated on November 19, 2018</p>
+			</div>
+			<div class="card-body table-responsive">
+			  <table class="table table-hover">
+				<thead class="text-warning">
+				  <th>Date</th>
+				  <th>Address</th>
+				  <th>Amount</th>
+				  <th>Type</th>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>1</td>
+					<td>Dakota Rice</td>
+					<td>$36,738</td>
+					<td>Niger</td>
+				  </tr>
+				  <tr>
+					<td>2</td>
+					<td>Minerva Hooper</td>
+					<td>$23,789</td>
+					<td>Curaçao</td>
+				  </tr>
+				  <tr>
+					<td>3</td>
+					<td>Sage Rodriguez</td>
+					<td>$56,142</td>
+					<td>Netherlands</td>
+				  </tr>
+
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+	 </div>
+
+
+</div>
+
+
+<div class="row">
+
+
+	 <div class="col-lg-8 col-md-12">
+		  <div class="card">
+			<div class="card-header card-header-primary">
+			  <h4 class="card-title">Bismuth news</h4>
+			  <!-- p class="card-category">Updated on November 19, 2018</p -->
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>This awesome wallet is Tornado based and comes with themes</li>
+					<li>Bismuth is proud to be listed on QTrade.io exchange</li>
+					<li>4 000 000 $BIS now locked in Hypernodes collateral</li>
+				</ul>
+
+			</div>
+		  </div>
+	 </div>
+
+
+	<div class="col-xl-4 col-lg-12">
+	  <div class="card card-chart">
+		<div class="card-header card-header-success">
+		  <div class="ct-chart" id="dailySalesChart"></div>
+		</div>
+		<div class="card-body">
+		  <h4 class="card-title">Bismuth vs USD</h4>
+		  <p class="card-category">
+			<span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase this month</p>
+		</div>
+		<div class="card-footer">
+		  <div class="stats">
+			<i class="material-icons">access_time</i> updated 4 minutes ago
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+{% end %}

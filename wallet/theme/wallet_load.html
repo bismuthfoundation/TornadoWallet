@@ -13,7 +13,7 @@
 		    {% for wallet in wallets %}
             <tr style="border-bottom:1px solid #808080;">
                 <td>{{ wallet['file'] }}</td>
-	            <td>{{ wallet['address'] }}</td>
+				<td><a href="/wallet/load/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
 	            <td>{{ wallet['encrypted'] }}</td>
             </tr>
 			{% end %}
