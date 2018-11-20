@@ -24,6 +24,40 @@
 
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 	  <div class="card card-stats">
+		<div class="card-header card-header-warning card-header-icon">
+		  <div class="card-icon">
+			<i class="material-icons">forward</i>
+		  </div>
+		  <p class="card-category">Send</p>
+		  <h3 class="card-title">...</h3>
+		</div>
+		<div class="card-footer">
+		  <div class="stats">
+			<i class="material-icons">local_offer</i> Send $BIS to...
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+	  <div class="card card-stats">
+		<div class="card-header card-header-success card-header-icon">
+		  <div class="card-icon">
+			<i class="material-icons">save_alt</i>
+		  </div>
+		  <p class="card-category">Receive</p>
+		  <h3 class="card-title">...</h3>
+		</div>
+		<div class="card-footer">
+		  <div class="stats">
+			<i class="material-icons">local_offer</i> Request a $BIS payment
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+	  <div class="card card-stats">
 		<div class="card-header card-header-info card-header-icon">
 		  <div class="card-icon">
 			<i class="material-icons">info_outline</i>
@@ -37,7 +71,7 @@
 		  </div>
 		</div>
 	  </div>
-	</div>
+	</div -->
 
 <!--
 	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
@@ -122,7 +156,7 @@
 						<!-- td>{{ transaction['signature'][:56] }}</td -->
 						{% if transaction['address'] == bismuth['address'] %}
 						<td>{{ transaction['recipient'] }}</td>
-						<td class="text-danger">{{ - transaction['amount'] }}</td>
+						<td class="text-warning">{{ - transaction['amount'] }}</td>
 						{% else %}
 						<td>{{ transaction['address'] }}</td>
 						<td class="text-success">{{ transaction['amount'] }}</td>
