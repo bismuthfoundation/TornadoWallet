@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/static/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/static/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>{{ escape(handler.settings["app_title"]) }}</title>
+  <title>{{ escape(handler.settings["page_title"]) }}</title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -33,38 +33,38 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="/">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="/transactions">
               <i class="material-icons">content_paste</i>
               <p>Transactions</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
-              <i class="material-icons">person</i>
+            <a class="nav-link" href="/address">
+              <i class="material-icons">perm_contact_calendar</i>
               <p>Address Book</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
-              <i class="material-icons">library_books</i>
+            <a class="nav-link" href="/messages">
+              <i class="material-icons">question_answer</i>
               <p>Messages</p>
             </a>
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
+            <a class="nav-link" href="/network">
               <i class="material-icons">location_ons</i>
               <p>Network</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
+            <a class="nav-link" href="/notifications">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
@@ -78,7 +78,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">{{ bismuth['server']['address'] }}</a>
+            <a class="navbar-brand" href="javascript:void(0)">{{ bismuth['address'] }}</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -87,9 +87,9 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
+            <form class="navbar-form" methog=get" target="/search">
               <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
+                <input type="text" name="data" value="" class="form-control" placeholder="Search...">
                 <button type="submit" class="btn btn-default btn-round btn-just-icon">
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>
@@ -97,14 +97,14 @@
               </div>
             </form>
             <ul class="navbar-nav">
-              <li class="nav-item">
+              <!-- li class="nav-item">
                 <a class="nav-link" href="javascript:void(0)">
                   <i class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
                   </p>
                 </a>
-              </li>
+              </li -->
               <li class="nav-item dropdown">
                 <a class="nav-link" href="javscript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">notifications</i>
@@ -122,10 +122,11 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">
-                  <i class="material-icons">person</i>
+                <a class="nav-link" href="/wallet/info">
+                  <i class="material-icons">lock_open</i>
+                  <!-- todo: lock if wallet is encrypted and locked , other icon if no wallet, and if wallet is in clear -->
                   <p class="d-lg-none d-md-block">
-                    Account
+                    Wallet
                   </p>
                 </a>
               </li>

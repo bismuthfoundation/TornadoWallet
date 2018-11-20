@@ -5,14 +5,14 @@
 
 <div class="row">
 
-	<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+	<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
 	  <div class="card card-stats">
 		<div class="card-header card-header-success card-header-icon">
 		  <div class="card-icon">
 			<i class="material-icons">store</i>
 		  </div>
 		  <p class="card-category">Balance</p>
-		  <h3 class="card-title">{{ escape(balance) }}&nbsp;$BIS</h3>
+		  <h3 class="card-title">{{ escape(bismuth['balance']) }}&nbsp;$BIS</h3>
 		</div>
 		<div class="card-footer">
 		  <div class="stats">
@@ -33,7 +33,7 @@
 		</div>
 		<div class="card-footer">
 		  <div class="stats">
-			<i class="material-icons">local_offer</i> {{ wallet_servers }}
+			<i class="material-icons">local_offer</i> {{ bismuth['server']['server'] }}
 		  </div>
 		</div>
 	  </div>
@@ -70,7 +70,7 @@
 		</div>
 		<div class="card-footer">
 		  <div class="stats">
-			<i class="material-icons">local_offer</i> {{ wallet_servers }}
+			<i class="material-icons">local_offer</i> {{ bismuth['server']['server'] }}
 		  </div>
 		</div>
 	  </div>
@@ -98,25 +98,8 @@
 
 
 <div class="row">
-	 <div class="col-xl-4 col-lg-12">
-		  <div class="card card-chart">
-			<div class="card-header card-header-warning">
-			  <div class="ct-chart" id="websiteViewsChart"></div>
-			</div>
-			<div class="card-body">
-			  <h4 class="card-title">Account balance</h4>
-			  <p class="card-category">Last 12 months</p>
-			</div>
-			<div class="card-footer">
-			  <div class="stats">
-				<i class="material-icons">access_time</i> Mockup with fake data
-			  </div>
-			</div>
-		  </div>
-	 </div>
 
-
-	 <div class="col-lg-8 col-md-12">
+	 <div class="col-lg-12 col-md-12">
 		  <div class="card">
 			<div class="card-header card-header-primary">
 			  <h4 class="card-title">Latest transactions</h4>
@@ -131,24 +114,22 @@
 				  <th>Type</th>
 				</thead>
 				<tbody>
-				  <tr>
-					<td>1</td>
-					<td>Dakota Rice</td>
-					<td>$36,738</td>
-					<td>Niger</td>
-				  </tr>
-				  <tr>
-					<td>2</td>
-					<td>Minerva Hooper</td>
-					<td>$23,789</td>
-					<td>Curaçao</td>
-				  </tr>
-				  <tr>
-					<td>3</td>
-					<td>Sage Rodriguez</td>
-					<td>$56,142</td>
-					<td>Netherlands</td>
-				  </tr>
+
+				{% for transaction in bismuth['transactions'][:3] %}
+  			    <!-- module Transaction(transaction) -->
+					<tr>
+						<td>{{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}</td>
+						<!-- td>{{ transaction['signature'][:56] }}</td -->
+						{% if transaction['address'] == bismuth['address'] %}
+						<td>{{ transaction['recipient'] }}</td>
+						<td class="text-danger">{{ - transaction['amount'] }}</td>
+						{% else %}
+						<td>{{ transaction['address'] }}</td>
+						<td class="text-success">{{ transaction['amount'] }}</td>
+						{% end %}
+						<td>-</td>
+					</tr>
+				{% end %}
 
 				</tbody>
 			  </table>
@@ -198,6 +179,25 @@
 		</div>
 	  </div>
 	</div>
+</div>
+
+<div class="row">
+	 <div class="col-xl-4 col-lg-12">
+		  <div class="card card-chart">
+			<div class="card-header card-header-warning">
+			  <div class="ct-chart" id="websiteViewsChart"></div>
+			</div>
+			<div class="card-body">
+			  <h4 class="card-title">Account balance</h4>
+			  <p class="card-category">Last 12 months</p>
+			</div>
+			<div class="card-footer">
+			  <div class="stats">
+				<i class="material-icons">access_time</i> Mockup with fake data
+			  </div>
+			</div>
+		  </div>
+	 </div>
 </div>
 
 {% end %}

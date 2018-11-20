@@ -78,7 +78,7 @@ class BaseHandler(tornado.web.RequestHandler):
         # reflect server info
         self.settings["page_title"] = self.settings["app_title"]
         self.bismuth_vars['server'] = self.bismuth.info()
-        self.bismuth_vars['balance'] = 'TODO.1234'
+        self.bismuth_vars['balance'] = self.bismuth.balance()
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.cristals = self.settings['bismuth_cristals']
 
