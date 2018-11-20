@@ -25,7 +25,7 @@ from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
 
-__version__ = '0.0.5'
+__version__ = '0.0.6'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
@@ -40,11 +40,14 @@ class Application(tornado.web.Application):
         bismuth_client.get_server()
         handlers = [
             (r"/", HomeHandler),
-            (r"/transactions", TransactionsHandler),
+            (r"/transactions/", TransactionsHandler),
             (r"/json/(.*)", JsonHandler),
+            (r"/address/(.*)", AddressHandler),
+            (r"/messages/(.*)", AddressHandler),
             (r"/wallet/(.*)", WalletHandler),
             (r"/about/(.*)", AboutHandler),
-            (r"/tokens(.*)", TokensHandler),
+            (r"/tokens/(.*)", TokensHandler),
+            (r"/search/(.*)", SearchHandler),
             (r"/cristals/(.*)", CristalsHandler)
         ]
         settings = dict(
@@ -154,6 +157,7 @@ class JsonHandler(BaseHandler):
 
 
 class WalletHandler(BaseHandler):
+    """Wallet related routes"""
     async def load(self, params=None):
         if not params:
             wallets = self.bismuth.list_wallets('wallets')
@@ -179,6 +183,9 @@ class AboutHandler(BaseHandler):
 
     async def credits(self, params=None):
         self.render("about_credits.html", bismuth=self.bismuth_vars)
+
+    async def network(self, params=None):
+        self.render("wip.html", bismuth=self.bismuth_vars)
 
     async def get(self, command=''):
         command, *params = command.split('/')
@@ -210,6 +217,23 @@ class CristalsHandler(BaseHandler):
         if not command:
             command = 'list'
         await getattr(self, command)(params)
+
+
+class AddressHandler(BaseHandler):
+
+    async def get(self, command=''):
+        self.render("wip.html", bismuth=self.bismuth_vars)
+
+class SearchHandler(BaseHandler):
+
+    async def get(self, command=''):
+        self.render("wip.html", bismuth=self.bismuth_vars)
+
+
+class MessagesHandler(BaseHandler):
+
+    async def get(self, command=''):
+        self.render("wip.html", bismuth=self.bismuth_vars)
 
 
 class TxModule(tornado.web.UIModule):
