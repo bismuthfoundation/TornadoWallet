@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<!-- div class="row">
+
+	 <div class="col-lg-12 col-md-12">
+		  <div class="card">
+			<div class="card-header card-header-primary">
+			  <h4 class="card-title">Credits</h4>
+			  <p class="card-category">This wallet wouldn't have existed without...</p>
+			</div>
+			<div class="card-body">
+                <ul>
+                    <li>made with <i class="material-icons">favorite</i> using a <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> template.</li>
+                </ul>
+          </div>
+	  	  </div>
+	 </div>
+</div-->
+
+<div class="row">
+		 <div class="col-lg-6 col-md-12">
+		  <div class="card">
+			<div class="card-header card-header-info">
+			  <h4 class="card-title">Credits</h4>
+			  <p class="card-category">This wallet wouldn't have existed without...</p>
+			</div>
+			<div class="card-body">
+                <ul>
+                    <li>The "Material Dark" template by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a></li>
+                    <li>Python, awesome language!</li>
+                    <li>The <a href="https://www.tornadoweb.org/en/stable/index.html" target="_blank">Tornado</a> web application framework</li>
+                </ul>
+          </div>
+			</div>
+		  </div>
+
+		 <div class="col-lg-6 col-md-12">
+		  <div class="card">
+			<div class="card-header card-header-success">
+			  <h4 class="card-title">About</h4>
+			  <p class="card-category"></p>
+			</div>
+			<div class="card-body">
+                <ul>
+                    <li>Tornado wallet version {{ bismuth['wallet_version'] }} </li>
+                    <li>This is the default wallet theme by <a href="https://twitter.com/EggPoolNet" target="_blank">EggdraSyl</a> from the Bismuth Foundation.</li>
+                </ul>
+          </div>
+			</div>
+		  </div>
+
+
+</div>
+
+
+
+
+
+{% end %}

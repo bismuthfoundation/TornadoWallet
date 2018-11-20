@@ -69,6 +69,12 @@
               <p>Notifications</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/cristals">
+              <i class="material-icons">brightness_high</i>
+              <p>Cristals</p>
+            </a>
+          </li>
 
         </ul>
       </div>
@@ -149,13 +155,17 @@
           <nav class="float-left">
             <ul>
               <li>
+                <a href="/about/credits" id="date">
+                </a>
+              </li>
+              <li>
                 <a href="https://www.bismuth.cz">
                   Bismuth.cz
                 </a>
               </li>
               <li>
                 <a href="https://github.com/BismuthFoundation">
-                  Github
+                  Source
                 </a>
               </li>
               <li>
@@ -165,16 +175,28 @@
               </li>
               <li>
                 <a href="DISCORD LINK">
-                  Help
+                  Discord
+                </a>
+              </li>
+              <li>
+                <a href="#donate">
+                  Donate
+                </a>
+              </li>
+              <li>
+                <a href="/about/credits">
+                  Credits
                 </a>
               </li>
             </ul>
           </nav>
-          <div class="copyright float-right" id="date">
-            , made with <i class="material-icons">favorite</i> using a
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> template.
+          <div class="copyright float-right">
+        {{ bismuth['server']['server'] }} - block #123456
           </div>
         </div>
+
+
+
       </footer>
       <script>
         const x = new Date().getFullYear();

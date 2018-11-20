@@ -26,7 +26,7 @@
 				{% for transaction in bismuth['transactions'][:3] %}
   			    <!-- module Transaction(transaction) -->
 					<tr>
-						<td><i class="material-icons" title="{{ transaction['signature'][:56] }}">local_offer</i></td>
+						<td><i class="material-icons" title="{{ transaction['signature'][:56] }}">receipt</i></td>
 						<td>{{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}</td>
 						{% if transaction['address'] == bismuth['address'] %}
 						<td>{{ transaction['recipient'] }}</td>

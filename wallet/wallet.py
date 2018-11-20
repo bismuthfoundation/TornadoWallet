@@ -25,7 +25,7 @@ from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
 
-__version__ = '0.0.3'
+__version__ = '0.0.5'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
@@ -42,7 +42,8 @@ class Application(tornado.web.Application):
             (r"/", HomeHandler),
             (r"/transactions", TransactionsHandler),
             (r"/json/(.*)", JsonHandler),
-            (r"/wallet/(.*)", WalletHandler)
+            (r"/wallet/(.*)", WalletHandler),
+            (r"/about/(.*)", AboutHandler)
         ]
         settings = dict(
             app_title=u"Tornado Bismuth Wallet",
@@ -57,7 +58,7 @@ class Application(tornado.web.Application):
             serve_traceback=options.debug,
             # wallet_servers = wallet_servers
             bismuth_client = bismuth_client,
-            bismuth_vars = {},
+            bismuth_vars = {'wallet_version': __version__},
             bismuth_cristals = {}
         )
         super(Application, self).__init__(handlers, **settings)
@@ -169,6 +170,18 @@ class WalletHandler(BaseHandler):
 
     async def get(self, command=''):
         command, *params = command.split('/')
+        await getattr(self, command)(params)
+
+
+class AboutHandler(BaseHandler):
+
+    async def credits(self, params=None):
+        self.render("about_credits.html", bismuth=self.bismuth_vars)
+
+    async def get(self, command=''):
+        command, *params = command.split('/')
+        if not command:
+            command = 'credits'
         await getattr(self, command)(params)
 
 
