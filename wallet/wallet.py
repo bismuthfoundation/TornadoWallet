@@ -43,7 +43,8 @@ class Application(tornado.web.Application):
             (r"/transactions", TransactionsHandler),
             (r"/json/(.*)", JsonHandler),
             (r"/wallet/(.*)", WalletHandler),
-            (r"/about/(.*)", AboutHandler)
+            (r"/about/(.*)", AboutHandler),
+            (r"/cristals/(.*)", CristalsHandler)
         ]
         settings = dict(
             app_title=u"Tornado Bismuth Wallet",
@@ -182,6 +183,18 @@ class AboutHandler(BaseHandler):
         command, *params = command.split('/')
         if not command:
             command = 'credits'
+        await getattr(self, command)(params)
+
+
+class CristalsHandler(BaseHandler):
+
+    async def list(self, params=None):
+        self.render("cristals_list.html", bismuth=self.bismuth_vars)
+
+    async def get(self, command=''):
+        command, *params = command.split('/')
+        if not command:
+            command = 'list'
         await getattr(self, command)(params)
 
 
