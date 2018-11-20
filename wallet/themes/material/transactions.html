@@ -13,12 +13,12 @@
 			<div class="card-body table-responsive">
 			  <table class="table table-hover">
 				<thead class="text-warning">
-				  <th>Txid</th>
+				  <th class="center">Txid</th>
 				  <th>Date</th>
 				  <th>Address</th>
-				  <th>Amount</th>
-				  <th>Type</th>
-				  <th>Fees</th>
+				  <th  class="amount">Amount</th>
+				  <th class="center">Type</th>
+				  <th  class="amount">Fees</th>
 				  <th>Data</th>
 				</thead>
 				<tbody>
@@ -26,17 +26,17 @@
 				{% for transaction in bismuth['transactions'][:3] %}
   			    <!-- module Transaction(transaction) -->
 					<tr>
-						<td><i class="material-icons" title="{{ transaction['signature'][:56] }}">receipt</i></td>
+						<td class="center"><i class="material-icons" title="{{ transaction['signature'][:56] }}">receipt</i></td>
 						<td>{{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}</td>
 						{% if transaction['address'] == bismuth['address'] %}
 						<td>{{ transaction['recipient'] }}</td>
-						<td class="text-warning">{{ - transaction['amount'] }}</td>
+						<td class="text-warning amount">-{{ transaction['amount'] }}</td>
 						{% else %}
 						<td>{{ transaction['address'] }}</td>
-						<td class="text-success">{{ transaction['amount'] }}</td>
+						<td class="text-success amount"> {{ transaction['amount'] }}</td>
 						{% end %}
-						<td>-</td>
-						<td>{{ transaction['fee'] }}</td>
+						<td class="center">-</td>
+						<td class="amount">{{ transaction['fee'] }}</td>
 						<td>{{ transaction['openfield'][:10] }}</td>
 					</tr>
 				{% end %}

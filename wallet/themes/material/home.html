@@ -144,24 +144,25 @@
 				<thead class="text-warning">
 				  <th>Date</th>
 				  <th>Address</th>
-				  <th>Amount</th>
-				  <th>Type</th>
+				  <th class="amount">Amount</th>
+				  <th class="center">Type</th>
 				</thead>
 				<tbody>
 
 				{% for transaction in bismuth['transactions'][:3] %}
   			    <!-- module Transaction(transaction) -->
 					<tr>
-						<td>{{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}</td>
+						<!-- td>{{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}</td -->
+						<td>{{ transaction['datetime'] }}</td>
 						<!-- td>{{ transaction['signature'][:56] }}</td -->
 						{% if transaction['address'] == bismuth['address'] %}
 						<td>{{ transaction['recipient'] }}</td>
-						<td class="text-warning">{{ - transaction['amount'] }}</td>
+						<td class="text-warning amount">-{{ transaction['amount'] }}</td>
 						{% else %}
 						<td>{{ transaction['address'] }}</td>
-						<td class="text-success">{{ transaction['amount'] }}</td>
+						<td class="text-success amount"> {{ transaction['amount'] }}</td>
 						{% end %}
-						<td>-</td>
+						<td class="center">-</td>
 					</tr>
 				{% end %}
 

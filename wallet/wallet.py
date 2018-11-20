@@ -44,6 +44,7 @@ class Application(tornado.web.Application):
             (r"/json/(.*)", JsonHandler),
             (r"/wallet/(.*)", WalletHandler),
             (r"/about/(.*)", AboutHandler),
+            (r"/tokens(.*)", TokensHandler),
             (r"/cristals/(.*)", CristalsHandler)
         ]
         settings = dict(
@@ -91,7 +92,7 @@ class HomeHandler(BaseHandler):
         :return:
         """
         # self.render("home.html", balance="101", wallet_servers=','.join(self.settings['wallet_servers']))
-        self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5)
+        self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5, for_display=True)
         self.render("home.html", bismuth=self.bismuth_vars)
         # self.app_log.info("> home")
 
@@ -116,7 +117,7 @@ class TransactionsHandler(BaseHandler):
         :return:
         """
         self.settings["page_title"] = "Transaction list"
-        self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(10)
+        self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(10, for_display=True)
         self.render("transactions.html", bismuth=self.bismuth_vars)
 
 
@@ -183,6 +184,19 @@ class AboutHandler(BaseHandler):
         command, *params = command.split('/')
         if not command:
             command = 'credits'
+        await getattr(self, command)(params)
+
+
+class TokensHandler(BaseHandler):
+    """Handler for tokens related features"""
+
+    async def list(self, params=None):
+        self.render("tokens_list.html", bismuth=self.bismuth_vars)
+
+    async def get(self, command=''):
+        command, *params = command.split('/')
+        if not command:
+            command = 'list'
         await getattr(self, command)(params)
 
 
