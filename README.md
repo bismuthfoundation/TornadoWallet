@@ -1,6 +1,8 @@
 # TornadoWallet
 
-A Python/HTML Wallet based upon the Tornado framework
+A Python/HTML Wallet based upon the Tornado framework.
+
+> **EXTREME WIP** Lots of work, ongoing, to be considered immature until further notice.
 
 # Proof of concept
 
@@ -16,9 +18,9 @@ Goal is to re-use the existing python code for behind the scene heavy lifting, b
 
 # Usage
 
-`python3 wallet.py`
-
-open [http://localhost:8888](http://localhost:8888)
+* place you wallet(s) file in wallets subdirectory
+* `python3 wallet.py --theme=themes/material`
+* open [http://localhost:8888](http://localhost:8888)
 
 # Roadmap
 
