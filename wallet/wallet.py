@@ -71,7 +71,8 @@ class Application(tornado.web.Application):
 
 class BaseHandler(tornado.web.RequestHandler):
     def initialize(self):
-        # Common init for every request
+        """Common init for every request"""
+
         self.app_log = logging.getLogger("tornado.application")
         self.bismuth = self.settings['bismuth_client']
         # Load persisted wallet if needed
@@ -87,6 +88,18 @@ class BaseHandler(tornado.web.RequestHandler):
         self.bismuth_vars['balance'] = self.bismuth.balance()
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.cristals = self.settings['bismuth_cristals']
+
+    def active_if(self, path: string):
+        """return the 'active' string if the request uri is the one in path. Used for menu css"""
+        if self.request.uri == path:
+            return "active"
+        return ''
+
+    def active_if_start(self, path: string):
+        """return the 'active' string if the request uri begins with the one in path. Used for menu css"""
+        if self.request.uri.startswith(path):
+            return "active"
+        return ''
 
 
 class HomeHandler(BaseHandler):

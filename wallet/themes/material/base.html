@@ -23,7 +23,7 @@
     <div class="sidebar" data-color="purple" data-background-color="black" data-image="/static/img/sidebar-2.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
+{{ handler.request.uri }}
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
@@ -33,39 +33,39 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+          <li class="nav-item {{ handler.active_if("/") }}  ">
             <a class="nav-link" href="/">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item {{ handler.active_if_start("/transactions/") }} ">
             <a class="nav-link" href="/transactions/">
               <i class="material-icons">content_paste</i>
               <p>Transactions</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item  {{ handler.active_if_start("/address/") }} ">
             <a class="nav-link" href="/address/">
               <i class="material-icons">perm_contact_calendar</i>
               <p>Address Book</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item  {{ handler.active_if_start("/tokens/") }} ">
             <a class="nav-link" href="/tokens/">
               <i class="material-icons">scatter_plot</i>
               <!-- category -->
               <p>Tokens</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item  {{ handler.active_if_start("/messages/") }} ">
             <a class="nav-link" href="/messages/">
               <i class="material-icons">question_answer</i>
               <p>Messages</p>
             </a>
           </li>
 
-          <li class="nav-item ">
+          <li class="nav-item  {{ handler.active_if_start("/about/network") }} ">
             <a class="nav-link" href="/about/network">
               <i class="material-icons">public</i>
               <p>Network</p>
@@ -77,7 +77,7 @@
               <p>Notifications</p>
             </a>
           </li -->
-          <li class="nav-item ">
+          <li class="nav-item  {{ handler.active_if_start("/cristals/") }} ">
             <a class="nav-link" href="/cristals/">
               <i class="material-icons">brightness_high</i>
               <p>Cristals</p>
