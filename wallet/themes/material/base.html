@@ -46,7 +46,7 @@
             </a>
           </li>
           <li class="nav-item  {{ handler.active_if_start("/address/") }} ">
-            <a class="nav-link" href="/address/">
+            <a class="nav-link disabled" href="/address/">
               <i class="material-icons">perm_contact_calendar</i>
               <p>Address Book</p>
             </a>
@@ -92,7 +92,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:void(0)">{{ bismuth['address'] }}</a>
+            <a class="navbar-brand" href="/wallet/info">{{ bismuth['address'] }}</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
             <span class="sr-only">Toggle navigation</span>
@@ -199,7 +199,7 @@
             </ul>
           </nav>
           <div class="copyright float-right">
-        {{ bismuth['server']['server'] }} - block #123456
+        {{ bismuth['server']['server'] }} - block #{{ bismuth['server_status']['blocks'] }}
           </div>
         </div>
 

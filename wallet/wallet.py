@@ -85,6 +85,7 @@ class BaseHandler(tornado.web.RequestHandler):
         # reflect server info
         self.settings["page_title"] = self.settings["app_title"]
         self.bismuth_vars['server'] = self.bismuth.info()
+        self.bismuth_vars['server_status'] = self.bismuth.status()
         self.bismuth_vars['balance'] = self.bismuth.balance()
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.cristals = self.settings['bismuth_cristals']
@@ -168,7 +169,6 @@ class JsonHandler(BaseHandler):
         self.finish()
 
 
-
 class WalletHandler(BaseHandler):
     """Wallet related routes"""
     async def load(self, params=None):
@@ -187,6 +187,25 @@ class WalletHandler(BaseHandler):
         wallet_info = self.bismuth.wallet('wallets')
         self.render("wallet_info.html", wallet=wallet_info, bismuth=self.bismuth_vars)
 
+    async def create(self, params=None):
+        # self.write(json.dumps(self.request))
+        _, param = self.request.uri.split("?")
+        wallet = param.replace('wallet=', '')
+        wallet = wallet.replace('.der', '')  # just in case the user added .der
+        file_name = 'wallets/{}.der'.format(wallet)
+        if os.path.isfile(file_name):
+            self.render("message.html", type="warning", title="Error", message="This file already exists: {}.der".format(wallet), bismuth=self.bismuth_vars)
+        else:
+            # create one
+            if self.bismuth.new_wallet(file_name):
+                # load the new wallet
+                self.bismuth.load_wallet(file_name)
+                self.set_cookie('wallet', file_name)
+                self.redirect("/wallet/info")
+            else:
+                self.render("message.html", type="warning", title="Error", message="Error creating {}.der".format(wallet), bismuth=self.bismuth_vars)
+
+
     async def get(self, command=''):
         command, *params = command.split('/')
         await getattr(self, command)(params)
@@ -198,7 +217,7 @@ class AboutHandler(BaseHandler):
         self.render("about_credits.html", bismuth=self.bismuth_vars)
 
     async def network(self, params=None):
-        self.render("wip.html", bismuth=self.bismuth_vars)
+        self.render("about_network.html", bismuth=self.bismuth_vars)
 
     async def get(self, command=''):
         command, *params = command.split('/')

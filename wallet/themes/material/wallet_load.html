@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="card-body table-responsive">
+			  <table class="table table-hover">
+				<thead class="text-warning">
+				  <th>File</th>
+				  <th>Address</th>
+				  <th>Encrypted</th>
+				</thead>
+		  <tbody>
+		    {% for wallet in wallets %}
+            <tr style="border-bottom:1px solid #808080;">
+                <td>{{ wallet['file'] }}</td>
+				<td><a href="/wallet/load/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
+	            <td>{{ wallet['encrypted'] }}</td>
+            </tr>
+			{% end %}
+		  </tbody>
+		</table>
+</div>
+{% end %}
