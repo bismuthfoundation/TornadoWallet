@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-07 21:02+0100\n"
+"POT-Creation-Date: 2018-12-07 22:12+0100\n"
 "PO-Revision-Date: 2018-12-07 21:02+0100\n"
 "Last-Translator: toto <dev@eggpool.net>\n"
 "Language-Team: German\n"
@@ -209,23 +209,25 @@ msgstr ""
 msgid "Latest transactions"
 msgstr ""
 
-#: themes/material/home.html:75
+#: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
 msgstr ""
 
-#: themes/material/home.html:80
+#: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
 msgstr ""
 
-#: themes/material/home.html:81 themes/material/wallet_load.html:9
+#: themes/material/home.html:81 themes/material/transactions.html:81
+#: themes/material/wallet_load.html:9
 msgid "Address"
 msgstr ""
 
-#: themes/material/home.html:82 themes/material/transactions_send.html:40
+#: themes/material/home.html:82 themes/material/transactions.html:82
+#: themes/material/transactions_send.html:40
 msgid "Amount"
 msgstr ""
 
-#: themes/material/home.html:83
+#: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
 msgstr ""
 
@@ -259,6 +261,18 @@ msgstr ""
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
+msgstr ""
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr ""
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr ""
+
+#: themes/material/transactions.html:85
+msgid "Data"
 msgstr ""
 
 #: themes/material/transactions_send.html:15
