@@ -1,4 +1,4 @@
-# English translations for PACKAGE package.
+# German translations for PACKAGE package.
 # Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # toto <dev@eggpool.net>, 2018.
@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-07 21:01+0100\n"
-"PO-Revision-Date: 2018-12-05 19:01+0100\n"
+"POT-Creation-Date: 2018-12-07 21:02+0100\n"
+"PO-Revision-Date: 2018-12-07 21:02+0100\n"
 "Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: English\n"
-"Language: en\n"
+"Language-Team: German\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -115,35 +115,35 @@ msgstr ""
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
-msgstr "Bismuth Wallet"
+msgstr ""
 
 #: themes/material/base.html:40
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr ""
 
 #: themes/material/base.html:46
 msgid "Transactions"
-msgstr "Transactions"
+msgstr ""
 
 #: themes/material/base.html:52
 msgid "Address book"
-msgstr "Address book"
+msgstr ""
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr "Tokens"
+msgstr ""
 
 #: themes/material/base.html:65
 msgid "Messages"
-msgstr "Messages"
+msgstr ""
 
 #: themes/material/base.html:72
 msgid "Network"
-msgstr "Network"
+msgstr ""
 
 #: themes/material/base.html:84 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr "Cristals"
+msgstr ""
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
@@ -206,9 +206,8 @@ msgid "Request a $BIS payment"
 msgstr ""
 
 #: themes/material/home.html:74
-#, fuzzy
 msgid "Latest transactions"
-msgstr "Transactions"
+msgstr ""
 
 #: themes/material/home.html:75
 msgid "Updated on"
@@ -219,9 +218,8 @@ msgid "Date"
 msgstr ""
 
 #: themes/material/home.html:81 themes/material/wallet_load.html:9
-#, fuzzy
 msgid "Address"
-msgstr "Address book"
+msgstr ""
 
 #: themes/material/home.html:82 themes/material/transactions_send.html:40
 msgid "Amount"
@@ -232,9 +230,8 @@ msgid "Type"
 msgstr ""
 
 #: themes/material/home.html:121
-#, fuzzy
 msgid "Bismuth news"
-msgstr "Bismuth Wallet"
+msgstr ""
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
@@ -305,9 +302,8 @@ msgid "Send BIS"
 msgstr ""
 
 #: themes/material/wallet_info.html:13
-#, fuzzy
 msgid "Current Wallet"
-msgstr "Bismuth Wallet"
+msgstr ""
 
 #: themes/material/wallet_info.html:30
 msgid "Open existing"
@@ -346,9 +342,8 @@ msgid "This feature is under construction."
 msgstr ""
 
 #: wallet.py:152
-#, fuzzy
 msgid "Transaction list"
-msgstr "Transactions"
+msgstr ""
 
 #: wallet.py:215 wallet.py:224
 msgid "Error"
