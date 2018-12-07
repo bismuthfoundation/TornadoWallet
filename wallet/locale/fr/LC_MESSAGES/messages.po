@@ -89,19 +89,19 @@ msgstr "Bloc"
 
 #: themes/material/about_network.html:59
 msgid "Difficulty"
-msgstr ""
+msgstr "Difficulté"
 
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr ""
+msgstr "Serveurs de porte-monnaie disponibles"
 
 #: themes/material/about_network.html:73
 msgid "servers"
-msgstr ""
+msgstr "serveurs"
 
 #: themes/material/about_network.html:81
 msgid "Refresh from API"
-msgstr ""
+msgstr "Rafraichhir depuis l'API"
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
@@ -137,63 +137,63 @@ msgstr "Cristaux"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Basculer Navigation"
 
 #: themes/material/base.html:177
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: themes/material/base.html:182
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: themes/material/base.html:187
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: themes/material/base.html:192
 msgid "Donate"
-msgstr ""
+msgstr "Faire un don"
 
 #: themes/material/base.html:203
 msgid "block #"
-msgstr ""
+msgstr "bloc N°"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr ""
+msgstr "Filtre de sidebarre"
 
 #: themes/material/base.html:236
 msgid "Images"
-msgstr ""
+msgstr "Images"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr ""
+msgstr "Les cristaux sont des fonctionalités additionnelles que vous pouvez ajouter à votre porte-monnaie."
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
-msgstr ""
+msgstr "En Cours..."
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
 msgid "Balance"
-msgstr ""
+msgstr "Solde"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr ""
+msgstr "Envoyer"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr ""
+msgstr "Envoyer des $BIS à ..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 msgid "Receive"
-msgstr ""
+msgstr "Recevoir"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr ""
+msgstr "Demander un paiement en $BIS"
 
 #: themes/material/home.html:74
 #, fuzzy
@@ -202,138 +202,138 @@ msgstr "Transactions"
 
 #: themes/material/home.html:75
 msgid "Updated on"
-msgstr ""
+msgstr "Mis à jour le"
 
 #: themes/material/home.html:80
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: themes/material/home.html:81 themes/material/wallet_load.html:9
 #, fuzzy
 msgid "Address"
-msgstr "Carnet d'adresses"
+msgstr "Adresse"
 
 #: themes/material/home.html:82 themes/material/transactions_send.html:40
 msgid "Amount"
-msgstr ""
+msgstr "Montant"
 
 #: themes/material/home.html:83
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: themes/material/home.html:121
 #, fuzzy
 msgid "Bismuth news"
-msgstr "Portemonnaie Bismuth"
+msgstr "Actualités Bismuth"
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
-msgstr ""
+msgstr "Bismuth vs USD"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr ""
+msgstr "Ceci est une démo avec des données bidon."
 
 #: themes/material/home.html:162
 msgid "Account balance"
-msgstr ""
+msgstr "Solde du compte"
 
 #: themes/material/home.html:163
 msgid "Last 12 months"
-msgstr ""
+msgstr "12 derniers mois"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr ""
+msgstr "Démo avec des données bidon."
 
 #: themes/material/message.html:16
 msgid "Previous page"
-msgstr ""
+msgstr "Page précédente"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr ""
+msgstr "Les tokens sont une fonctionalité de base de BIS."
 
 #: themes/material/transactions_send.html:15
 msgid "Send To"
-msgstr ""
+msgstr "Envoyer à"
 
 #: themes/material/transactions_send.html:16
 msgid "To whom send BIS."
-msgstr ""
+msgstr "À qui envoyer des BIS"
 
 #: themes/material/transactions_send.html:20
 msgid "Recipient"
-msgstr ""
+msgstr "Destinataire"
 
 #: themes/material/transactions_send.html:25
 msgid "Data (message)"
-msgstr ""
+msgstr "Data (message)"
 
 #: themes/material/transactions_send.html:27
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr ""
+msgstr "Tu peux inclure un commentaire optionnel à ta transaction. Obligatoire pour un dépôt sur un exchange."
 
 #: themes/material/transactions_send.html:41
 msgid "How many BIS to send."
-msgstr ""
+msgstr "Combien de BIS envoyer"
 
 #: themes/material/transactions_send.html:47
 msgid "Amount (BIS)"
-msgstr ""
+msgstr "Montant (BIS)"
 
 #: themes/material/transactions_send.html:53
 msgid "Est. fees"
-msgstr ""
+msgstr "Frais Est."
 
 #: themes/material/transactions_send.html:57
 msgid "Total (BIS)"
-msgstr ""
+msgstr "Total (BIS)"
 
 #: themes/material/transactions_send.html:62
 msgid "Send BIS"
-msgstr ""
+msgstr "Envoyer BIS"
 
 #: themes/material/wallet_info.html:13
 #, fuzzy
 msgid "Current Wallet"
-msgstr "Portemonnaie Bismuth"
+msgstr "Portemonnaie Bismuth courant"
 
 #: themes/material/wallet_info.html:30
 msgid "Open existing"
-msgstr ""
+msgstr "Ouvrir un"
 
 #: themes/material/wallet_info.html:31
 msgid "wallet"
-msgstr ""
+msgstr "porte-monnaie"
 
 #: themes/material/wallet_info.html:35
 msgid "Load a wallet from disk"
-msgstr ""
+msgstr "Charge un porte-monnaie depuis le disque"
 
 #: themes/material/wallet_info.html:49
 msgid "Create a"
-msgstr ""
+msgstr "Créer un"
 
 #: themes/material/wallet_info.html:50
 msgid "new wallet"
-msgstr ""
+msgstr "nouveau porte-monnaie"
 
 #: themes/material/wallet_load.html:8
 msgid "File"
-msgstr ""
+msgstr "Fichier"
 
 #: themes/material/wallet_load.html:10
 msgid "Encrypted"
-msgstr ""
+msgstr "Chiffré"
 
 #: themes/material/wip.html:10
 msgid "W.I.P."
-msgstr ""
+msgstr "En Cours"
 
 #: themes/material/wip.html:13
 msgid "This feature is under construction."
-msgstr ""
+msgstr "Cette fonctionalité est en développement."
 
 #: wallet.py:152
 #, fuzzy
@@ -342,13 +342,13 @@ msgstr "Transactions"
 
 #: wallet.py:215 wallet.py:224
 msgid "Error"
-msgstr ""
+msgstr "Erreur"
 
 #: wallet.py:215
 msgid "This file already exists: {}.der"
-msgstr ""
+msgstr "Ce fichier existe déjà : {}.der"
 
 #: wallet.py:224
 msgid "Error creating {}.der"
-msgstr ""
+msgstr "Erreur en créant {}.der"
 
