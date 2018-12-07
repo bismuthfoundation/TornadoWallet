@@ -25,7 +25,7 @@ from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
 
-__version__ = '0.0.6'
+__version__ = '0.0.61'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
@@ -77,7 +77,8 @@ class Application(tornado.web.Application):
 class BaseHandler(tornado.web.RequestHandler):
     def initialize(self):
         """Common init for every request"""
-
+        # TODO: advantage in using Tornado Babel maybe? https://media.readthedocs.org/pdf/tornado-babel/0.1/tornado-babel.pdf
+        _ = self.locale.translate
         self.app_log = logging.getLogger("tornado.application")
         self.bismuth = self.settings['bismuth_client']
         # Load persisted wallet if needed
@@ -95,7 +96,6 @@ class BaseHandler(tornado.web.RequestHandler):
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.cristals = self.settings['bismuth_cristals']
         # print(self.bismuth_vars)
-        _ = self.locale.translate
 
     def active_if(self, path: string):
         """return the 'active' string if the request uri is the one in path. Used for menu css"""
@@ -148,7 +148,8 @@ class TransactionsHandler(BaseHandler):
         if command:
             await getattr(self, command)(params)
         else:
-            self.settings["page_title"] = "Transaction list"
+            _ = self.locale.translate
+            self.settings["page_title"] = _("Transaction list")
             self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(10, for_display=True)
             self.render("transactions.html", bismuth=self.bismuth_vars)
 
@@ -206,11 +207,12 @@ class WalletHandler(BaseHandler):
     async def create(self, params=None):
         # self.write(json.dumps(self.request))
         _, param = self.request.uri.split("?")
+        _ = self.locale.translate
         wallet = param.replace('wallet=', '')
         wallet = wallet.replace('.der', '')  # just in case the user added .der
         file_name = 'wallets/{}.der'.format(wallet)
         if os.path.isfile(file_name):
-            self.render("message.html", type="warning", title="Error", message="This file already exists: {}.der".format(wallet), bismuth=self.bismuth_vars)
+            self.render("message.html", type="warning", title=_("Error"), message=_("This file already exists: {}.der").format(wallet), bismuth=self.bismuth_vars)
         else:
             # create one
             if self.bismuth.new_wallet(file_name):
@@ -219,8 +221,7 @@ class WalletHandler(BaseHandler):
                 self.set_cookie('wallet', file_name)
                 self.redirect("/wallet/info")
             else:
-                self.render("message.html", type="warning", title="Error", message="Error creating {}.der".format(wallet), bismuth=self.bismuth_vars)
-
+                self.render("message.html", type="warning", title=_("Error"), message=_("Error creating {}.der").format(wallet), bismuth=self.bismuth_vars)
 
     async def get(self, command=''):
         command, *params = command.split('/')
