@@ -10,7 +10,8 @@
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <!-- CSS Files -->
   <link href="/static/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
   <link href="/static/css/custom.css" rel="stylesheet" />
@@ -28,47 +29,47 @@
     -->
       <div class="logo">
         <a href="/" class="simple-text logo-normal">
-          Bismuth Wallet
+          {{_("Bismuth Wallet")}}
         </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item {{ handler.active_if("/") }}  ">
             <a class="nav-link" href="/">
-              <i class="material-icons">dashboard</i>
+              <i class="material-icons">{{_("Dashboard")}}</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item {{ handler.active_if_start("/transactions/") }} ">
             <a class="nav-link" href="/transactions/">
               <i class="material-icons">content_paste</i>
-              <p>Transactions</p>
+              <p>{{_("Transactions")}}</p>
             </a>
           </li>
           <li class="nav-item  {{ handler.active_if_start("/address/") }} ">
             <a class="nav-link disabled" href="/address/">
               <i class="material-icons">perm_contact_calendar</i>
-              <p>Address Book</p>
+              <p>{{_("Address book")}}</p>
             </a>
           </li>
           <li class="nav-item  {{ handler.active_if_start("/tokens/") }} ">
             <a class="nav-link" href="/tokens/">
               <i class="material-icons">scatter_plot</i>
               <!-- category -->
-              <p>Tokens</p>
+              <p>{{_("Tokens")}}</p>
             </a>
           </li>
           <li class="nav-item  {{ handler.active_if_start("/messages/") }} ">
             <a class="nav-link" href="/messages/">
               <i class="material-icons">question_answer</i>
-              <p>Messages</p>
+              <p>{{_("Messages")}}</p>
             </a>
           </li>
 
           <li class="nav-item  {{ handler.active_if_start("/about/network") }} ">
             <a class="nav-link" href="/about/network">
               <i class="material-icons">public</i>
-              <p>Network</p>
+              <p>{{_("Network")}}</p>
             </a>
           </li>
           <!-- li class="nav-item ">
@@ -80,7 +81,7 @@
           <li class="nav-item  {{ handler.active_if_start("/cristals/") }} ">
             <a class="nav-link" href="/cristals/">
               <i class="material-icons">brightness_high</i>
-              <p>Cristals</p>
+              <p>{{_("Cristals")}}</p>
             </a>
           </li>
 
@@ -103,7 +104,7 @@
           <div class="collapse navbar-collapse justify-content-end">
             <form class="navbar-form" method="get" action="/search/">
               <div class="input-group no-border">
-                <input type="text" name="data" value="" class="form-control" placeholder="Search...">
+                <input type="text" name="data" value="" class="form-control" placeholder="{{_('Search...')}}">
                 <button type="submit" class="btn btn-default btn-round btn-just-icon">
                   <i class="material-icons">search</i>
                   <div class="ripple-container"></div>

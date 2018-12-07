@@ -30,17 +30,22 @@ __version__ = '0.0.6'
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
 define("verbose", default=False, help="verbose mode", type=bool)
-define("theme", default='theme', help="theme directory", type=str)
+define("theme", default='themes/material', help="theme directory", type=str)
+define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
+
 
 
 class Application(tornado.web.Application):
     def __init__(self):
         # wallet_servers = bismuthapi.get_wallet_servers_legacy()
-        bismuth_client = bismuthclient.BismuthClient(verbose=options.verbose)
+        servers = None
+        if options.server:
+            servers = [options.server]
+        bismuth_client = bismuthclient.BismuthClient(verbose=options.verbose, servers_list=servers)
         bismuth_client.get_server()
         handlers = [
             (r"/", HomeHandler),
-            (r"/transactions/", TransactionsHandler),
+            (r"/transactions/(.*)", TransactionsHandler),
             (r"/json/(.*)", JsonHandler),
             (r"/address/(.*)", AddressHandler),
             (r"/messages/(.*)", AddressHandler),
@@ -89,6 +94,8 @@ class BaseHandler(tornado.web.RequestHandler):
         self.bismuth_vars['balance'] = self.bismuth.balance()
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.cristals = self.settings['bismuth_cristals']
+        # print(self.bismuth_vars)
+        _ = self.locale.translate
 
     def active_if(self, path: string):
         """return the 'active' string if the request uri is the one in path. Used for menu css"""
@@ -129,13 +136,22 @@ class TransactionsHandler(BaseHandler):
                 'amount': str(random.randint(1,100)/10), 'date': txdate,
                 'openfield': self.randhex(10), 'fees': '0.01'}
 
-    async def get(self):
+    async def send(self, params=None):
+        self.render("transactions_send.html", bismuth=self.bismuth_vars)
+
+
+    async def get(self, command=''):
         """
         :return:
         """
-        self.settings["page_title"] = "Transaction list"
-        self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(10, for_display=True)
-        self.render("transactions.html", bismuth=self.bismuth_vars)
+        command, *params = command.split('/')
+        if command:
+            await getattr(self, command)(params)
+        else:
+            self.settings["page_title"] = "Transaction list"
+            self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(10, for_display=True)
+            self.render("transactions.html", bismuth=self.bismuth_vars)
+
 
 
 class JsonHandler(BaseHandler):
@@ -256,6 +272,7 @@ class AddressHandler(BaseHandler):
     async def get(self, command=''):
         self.render("wip.html", bismuth=self.bismuth_vars)
 
+
 class SearchHandler(BaseHandler):
 
     async def get(self, command=''):
@@ -285,4 +302,6 @@ async def main():
 
 
 if __name__ == "__main__":
+    # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
+    tornado.locale.load_gettext_translations('locale', 'messages')
     tornado.ioloop.IOLoop.current().run_sync(main)
