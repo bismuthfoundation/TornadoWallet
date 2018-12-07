@@ -1,101 +1,91 @@
-# French translations for PACKAGE package.
-# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# toto <dev@eggpool.net>, 2018.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-07 21:01+0100\n"
-"PO-Revision-Date: 2018-12-05 18:37+0100\n"
-"Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: French\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: TornadoWallet\n"
+"Language: fr\n"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
-msgstr ""
+msgstr "Crédits"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr ""
+msgstr "Ce projet n'aurait pas vu le jour sans..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr ""
+msgstr "Le template \"Material Dark\" de <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
-msgstr ""
+msgstr "Python, un langage incroyable !"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr ""
+msgstr "Le framework Web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">"
 
 #: themes/material/about_credits.html:27
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
 #: themes/material/about_credits.html:32
 msgid "Tornado wallet version {}"
-msgstr ""
+msgstr "Porte-monnaie Tornado version {}"
 
 #: themes/material/about_credits.html:33
 msgid "This is the default wallet theme by {} from {}."
-msgstr ""
+msgstr "Ceci est le thème par défaut par {} de {}"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr ""
+msgstr "Serveur de portemonnaie courant"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr ""
+msgstr "C'est le serveur auquel tu es connecté."
 
 #: themes/material/about_network.html:18
 msgid "Server:"
-msgstr ""
+msgstr "Serveur :"
 
 #: themes/material/about_network.html:20
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr ""
+msgstr "Version du serveur {} "
 
 #: themes/material/about_network.html:22
 msgid "Connected clients:"
-msgstr ""
+msgstr "Clients connectés :"
 
 #: themes/material/about_network.html:23
 msgid "Protocol"
-msgstr ""
+msgstr "Protocole"
 
 #: themes/material/about_network.html:24
 msgid "Node Version"
-msgstr ""
+msgstr "Version du Node"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr ""
+msgstr "Connections aux pairs :"
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
-msgstr ""
+msgstr "Temps de service :"
 
 #: themes/material/about_network.html:27
 msgid "Consensus:"
-msgstr ""
+msgstr "Consensus :"
 
 #: themes/material/about_network.html:47
 msgid "Block"
-msgstr ""
+msgstr "Bloc"
 
 #: themes/material/about_network.html:59
 msgid "Difficulty"
@@ -361,3 +351,4 @@ msgstr ""
 #: wallet.py:224
 msgid "Error creating {}.der"
 msgstr ""
+
