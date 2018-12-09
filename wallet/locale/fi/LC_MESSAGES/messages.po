@@ -1,481 +1,477 @@
-# Finnish translations for PACKAGE package.
-# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# toto <dev@eggpool.net>, 2018.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-09 11:52+0100\n"
-"PO-Revision-Date: 2018-12-09 11:52+0100\n"
-"Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: Finnish\n"
-"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: TornadoWallet\n"
+"Language: fi\n"
 
+#. Credits as if you made it is : Tekijät
+#. Yep, that's the one in this context!
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
-msgstr ""
+msgstr "Tekijät"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr ""
+msgstr "Tätä lompakkoa ei olisi olemassa ilman..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr ""
+msgstr "\"Materiaalinen Pimeys\" malli <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
-msgstr ""
+msgstr "Python, loistava ohjelmointikieli!\n"
+""
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr ""
-
-#: themes/material/about_credits.html:20
-msgid "Translations"
-msgstr ""
+msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 
 #: themes/material/about_credits.html:33
 msgid "About"
-msgstr ""
+msgstr "Lisätietoa"
 
 #: themes/material/about_credits.html:38
 msgid "Tornado wallet version {}"
-msgstr ""
+msgstr "Tornado lompakko versio {}"
 
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr ""
+msgstr "This is the default wallet theme by {} from {}."
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr ""
+msgstr "Nykyinen lompakon palvelin"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr ""
+msgstr "Tähän palvelimeen olet yhdistettynä."
 
 #: themes/material/about_network.html:18
 msgid "Server:"
-msgstr ""
+msgstr "Palvelin:"
 
 #: themes/material/about_network.html:20
 msgid "IP"
-msgstr ""
+msgstr "IP-osoite"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr ""
+msgstr "Lompakon palvelimen version {}"
 
 #: themes/material/about_network.html:22
 msgid "Connected clients:"
-msgstr ""
+msgstr "Yhdistetyt käyttäjät:"
 
 #: themes/material/about_network.html:23
 msgid "Protocol"
-msgstr ""
+msgstr "Protokolla"
 
 #: themes/material/about_network.html:24
 msgid "Node Version"
-msgstr ""
+msgstr "Node Versio"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr ""
+msgstr "Vastaanottavat yhteydet"
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
-msgstr ""
+msgstr "Yhteyden kesto"
 
 #: themes/material/about_network.html:27
 msgid "Consensus:"
-msgstr ""
+msgstr "Konsensus"
 
 #: themes/material/about_network.html:47
 msgid "Block"
-msgstr ""
+msgstr "Lohko"
 
 #: themes/material/about_network.html:59
 msgid "Difficulty"
-msgstr ""
+msgstr "Vaikeustaso"
 
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr ""
+msgstr "Saatavilla olevat lompakon palvelimet"
 
 #: themes/material/about_network.html:73
 msgid "servers"
-msgstr ""
+msgstr "Palvelimet"
 
 #: themes/material/about_network.html:81
 msgid "Refresh from API"
-msgstr ""
+msgstr "API-lähteen päivittäminen"
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
-msgstr ""
+msgstr "Bismuth Lompakko\n"
+""
 
 #: themes/material/base.html:40
 msgid "Dashboard"
-msgstr ""
+msgstr "Ohjauspaneeli"
 
 #: themes/material/base.html:46
 msgid "Transactions"
-msgstr ""
+msgstr "Transaktiot"
 
 #: themes/material/base.html:52
 msgid "Address book"
-msgstr ""
+msgstr "Osoitekirja"
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr ""
+msgstr "Tokenit"
 
 #: themes/material/base.html:65
 msgid "Messages"
-msgstr ""
+msgstr "Viestit"
 
 #: themes/material/base.html:72
 msgid "Network"
-msgstr ""
+msgstr "Verkko"
 
 #: themes/material/base.html:84 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr ""
+msgstr "Cristals"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Laita navigointi päälle"
 
 #: themes/material/base.html:177
 msgid "Source"
-msgstr ""
+msgstr "Lähde"
 
 #: themes/material/base.html:182
 msgid "Blog"
-msgstr ""
+msgstr "Blogi"
 
 #: themes/material/base.html:187
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: themes/material/base.html:192
 msgid "Donate"
-msgstr ""
+msgstr "Lahjoita"
 
 #: themes/material/base.html:203
 msgid "block #"
-msgstr ""
+msgstr "blokki #"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr ""
+msgstr "Sidebar Filters"
 
 #: themes/material/base.html:236
 msgid "Images"
-msgstr ""
+msgstr "Kuvat"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr ""
+msgstr "Cristallit ovat lisätoimintoja joita voit lisätä lompakkoosi"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
-msgstr ""
+msgstr "WIP"
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
 msgid "Balance"
-msgstr ""
+msgstr "Käyttövara"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr ""
+msgstr "Lähetä"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr ""
+msgstr "Lähetä $BIS osoitteeseen..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr ""
+msgstr "Vastaanota"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr ""
+msgstr "Pyydä $BIS maksua"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
-msgstr ""
+msgstr "Viimeisimmät siirrot"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
-msgstr ""
+msgstr "Päivitetty"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
-msgstr ""
+msgstr "Päiväys"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
 #: themes/material/wallet_load.html:9
 msgid "Address"
-msgstr ""
+msgstr "Osoite"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:43
 #: themes/material/transactions_send.html:39
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
-msgstr ""
+msgstr "Määrä"
 
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr ""
+msgstr "Tyyppi"
 
 #: themes/material/home.html:121
 msgid "Bismuth news"
-msgstr ""
+msgstr "Bismuth uutiset"
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
-msgstr ""
+msgstr "Bismuth vs Yhdysvaltain dollari"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr ""
+msgstr "Tämä on malli väärennetystä datasta"
 
 #: themes/material/home.html:162
 msgid "Account balance"
-msgstr ""
+msgstr "Käyttövara"
 
 #: themes/material/home.html:163
 msgid "Last 12 months"
-msgstr ""
+msgstr "Viimeiset 12 kuukautta"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr ""
+msgstr "Malli väärennetystä datasta"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
 msgid "Previous page"
-msgstr ""
+msgstr "Edellinen sivu"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr ""
+msgstr "Tokens are a core BIS functionality"
 
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr ""
+#: themes/material/transactions_send.html:14
+#: themes/material/transactions_send_confirm.html:28
+msgid "Send To"
+msgstr "Lähetä"
 
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr ""
+#: themes/material/transactions_send.html:15
+#: themes/material/transactions_send_confirm.html:29
+msgid "To whom send BIS."
+msgstr "Kenelle BIS lähetetään"
 
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr ""
-
-#: themes/material/transactions_receive.html:16
-msgid "Request BIS"
-msgstr ""
-
-#: themes/material/transactions_receive.html:20
-msgid "Your address"
-msgstr ""
-
-#: themes/material/transactions_receive.html:22
-msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr ""
+#: themes/material/transactions_send.html:19
+#: themes/material/transactions_send_confirm.html:33
+msgid "Recipient"
+msgstr "Saaja"
 
 #: themes/material/transactions_receive.html:26
 #: themes/material/transactions_send.html:24
 #: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
-msgstr ""
+msgstr "Data (viesti)"
 
-#: themes/material/transactions_receive.html:28
-msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr ""
+#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send_confirm.html:43
+msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
+msgstr "Jos tahdot, voit lisätä lyhyen kommentin transaktioosi. \n"
+"Tämä tarvitaan pörssiin lähetettäessä."
 
-#: themes/material/transactions_receive.html:32
-msgid "This is the QR code for your address only."
-msgstr ""
-
-#: themes/material/transactions_receive.html:44
-msgid "How many BIS to request."
-msgstr ""
+#: themes/material/transactions_send.html:40
+#: themes/material/transactions_send_confirm.html:56
+msgid "How many BIS to send."
+msgstr "Lähetettävä BIS määrä."
 
 #: themes/material/transactions_receive.html:50
 #: themes/material/transactions_send.html:46
 #: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
-msgstr ""
-
-#: themes/material/transactions_receive.html:52
-msgid "This is what you will receive"
-msgstr ""
+msgstr "Määrä (BIS)"
 
 #: themes/material/transactions_receive.html:57
 #: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr ""
-
-#: themes/material/transactions_receive.html:59
-#: themes/material/transactions_send.html:55
-#: themes/material/transactions_send_confirm.html:72
-msgid "Fees depend on Data length"
-msgstr ""
+msgstr "Arvioidut kulut"
 
 #: themes/material/transactions_receive.html:62
 #: themes/material/transactions_send.html:58
 #: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
-msgstr ""
+msgstr "Kokonaismäärä (BIS)"
+
+#: themes/material/transactions_send.html:64 wallet.py:149
+msgid "Send BIS"
+msgstr "Lähetä BIS"
+
+#: themes/material/wallet_info.html:13
+msgid "Current Wallet"
+msgstr "Nykyinen Lompakko"
+
+#: themes/material/wallet_info.html:30
+msgid "Open existing"
+msgstr "Avaa olemassaoleva"
+
+#: themes/material/wallet_info.html:31
+msgid "wallet"
+msgstr "lompakko"
+
+#: themes/material/wallet_info.html:35
+msgid "Load a wallet from disk"
+msgstr "Lataa lompakko kovalevyltä"
+
+#: themes/material/wallet_info.html:49
+msgid "Create a"
+msgstr "Luo"
+
+#: themes/material/wallet_info.html:50
+msgid "new wallet"
+msgstr "uusi lompakko"
+
+#: themes/material/wallet_load.html:8
+msgid "File"
+msgstr "Tiedosto"
+
+#: themes/material/wallet_load.html:10
+msgid "Encrypted"
+msgstr "Salattu"
+
+#: themes/material/wip.html:10
+msgid "W.I.P."
+msgstr "W.I.P."
+
+#: themes/material/wip.html:13
+msgid "This feature is under construction."
+msgstr "Tätä toimintoa kehitellään vielä."
+
+#: wallet.py:190
+msgid "Transaction list"
+msgstr "Lista Transaktioista"
+
+#: wallet.py:260 wallet.py:269
+msgid "Error"
+msgstr "Virhe"
+
+#: wallet.py:260
+msgid "This file already exists: {}.der"
+msgstr "Tämä tiedosto on jo olemassa: {}.der"
+
+#: wallet.py:269
+msgid "Error creating {}.der"
+msgstr "Virhe luomisessa {}.der"
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr "Txid"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "Kulut"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "Data"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "Pyydä BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Sinun osoitteesi"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "Tämä on nykyisen lompakkosi osoite. Voit vaihtaa sen halutessasi, mutta tarkista siinä tapauksessa huolellisesti."
+
+#: themes/material/transactions_receive.html:28
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Jos tahdot, voit jättää pienen kommentit transaktioosi. Tämä tulee jäämään talteen lohkoketjulle."
+
+#: themes/material/transactions_receive.html:32
+msgid "This is the QR code for your address only."
+msgstr "Tämä QR koodi on vain sinun osoitteellesi."
+
+#: themes/material/transactions_receive.html:44
+msgid "How many BIS to request."
+msgstr "Kuinka monta BIS pyydetään?"
+
+#: themes/material/transactions_receive.html:52
+msgid "This is what you will receive"
+msgstr "Tämän verran saat"
+
+#: themes/material/transactions_receive.html:59
+#: themes/material/transactions_send.html:55
+#: themes/material/transactions_send_confirm.html:72
+msgid "Fees depend on Data length"
+msgstr "Kulut vaihtelevat Datan pituuden mukaan"
 
 #: themes/material/transactions_receive.html:64
 msgid "This is what the sender will pay"
-msgstr ""
+msgstr "Tämän verran lähettäjä maksaa"
 
 #: themes/material/transactions_receive.html:68
 msgid "Get BIS URL"
-msgstr ""
+msgstr "Hanki BIS URL"
 
 #: themes/material/transactions_receive.html:72
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr ""
+msgstr "Tämä on QR koodi sinun osoitteellesi, datalle ja määrälle BisUrl muodossa."
 
 #: themes/material/transactions_receive.html:73
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr ""
-
-#: themes/material/transactions_send.html:14
-#: themes/material/transactions_send_confirm.html:28
-msgid "Send To"
-msgstr ""
-
-#: themes/material/transactions_send.html:15
-#: themes/material/transactions_send_confirm.html:29
-msgid "To whom send BIS."
-msgstr ""
-
-#: themes/material/transactions_send.html:19
-#: themes/material/transactions_send_confirm.html:33
-msgid "Recipient"
-msgstr ""
-
-#: themes/material/transactions_send.html:26
-#: themes/material/transactions_send_confirm.html:43
-msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr ""
-
-#: themes/material/transactions_send.html:40
-#: themes/material/transactions_send_confirm.html:56
-msgid "How many BIS to send."
-msgstr ""
+msgstr "Voit kopioida/liittää tämän kuvan lähetettäväksi postitse tai miten tahansa muuten"
 
 #: themes/material/transactions_send.html:48
 #: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
-msgstr ""
+msgstr "Tämän vastaanottaja saa"
 
 #: themes/material/transactions_send.html:60
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr ""
-
-#: themes/material/transactions_send.html:64 wallet.py:149
-msgid "Send BIS"
-msgstr ""
-
-#: themes/material/transactions_send_confirm.html:99
-msgid "Cancel"
-msgstr ""
-
-#: themes/material/transactions_send_confirm.html:103
-msgid "Confirm and send BIS"
-msgstr ""
-
-#: themes/material/wallet_info.html:13
-msgid "Current Wallet"
-msgstr ""
-
-#: themes/material/wallet_info.html:30
-msgid "Open existing"
-msgstr ""
-
-#: themes/material/wallet_info.html:31
-msgid "wallet"
-msgstr ""
-
-#: themes/material/wallet_info.html:35
-msgid "Load a wallet from disk"
-msgstr ""
-
-#: themes/material/wallet_info.html:49
-msgid "Create a"
-msgstr ""
-
-#: themes/material/wallet_info.html:50
-msgid "new wallet"
-msgstr ""
-
-#: themes/material/wallet_load.html:8
-msgid "File"
-msgstr ""
-
-#: themes/material/wallet_load.html:10
-msgid "Encrypted"
-msgstr ""
+msgstr "Tämän verran sinä maksat, kulut mukaanluekien"
 
 #: themes/material/wallet_load.html:11
 msgid "Action"
-msgstr ""
+msgstr "Toiminto"
 
-#: themes/material/wip.html:10
-msgid "W.I.P."
-msgstr ""
+#: themes/material/about_credits.html:20
+msgid "Translations"
+msgstr "Käännökset"
 
-#: themes/material/wip.html:13
-msgid "This feature is under construction."
-msgstr ""
+#: themes/material/transactions_send_confirm.html:99
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: themes/material/transactions_send_confirm.html:103
+msgid "Confirm and send BIS"
+msgstr "Varmista ja lähetä BIS"
 
 #: wallet.py:152
 msgid "Send BIS: Confirmation"
-msgstr ""
+msgstr "Lähetä BIS: Varmistus"
 
 #: wallet.py:154
 msgid "Please confirm this transaction"
-msgstr ""
+msgstr "Ole hyvä ja varmista transaktio"
 
 #: wallet.py:155
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr ""
+msgstr "Varmista, että tämä on toiminto jonka aiot suorittaa ja paina \"varmista\" painiketta"
 
 #: wallet.py:174
 msgid "Receive BIS"
-msgstr ""
+msgstr "Vastaanota BIS"
 
-#: wallet.py:190
-msgid "Transaction list"
-msgstr ""
-
-#: wallet.py:260 wallet.py:269
-msgid "Error"
-msgstr ""
-
-#: wallet.py:260
-msgid "This file already exists: {}.der"
-msgstr ""
-
-#: wallet.py:269
-msgid "Error creating {}.der"
-msgstr ""
