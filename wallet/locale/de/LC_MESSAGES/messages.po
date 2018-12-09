@@ -188,6 +188,7 @@ msgid "Send $BIS to..."
 msgstr "Sende $BIS an…"
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
+#: themes/material/transactions_receive.html:15
 msgid "Receive"
 msgstr "Erhalten"
 
@@ -213,7 +214,8 @@ msgid "Address"
 msgstr "Adresse"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
-#: themes/material/transactions_send.html:40
+#: themes/material/transactions_receive.html:43
+#: themes/material/transactions_send.html:39
 msgid "Amount"
 msgstr "Betrag"
 
@@ -253,43 +255,47 @@ msgstr "Vorherige Seite"
 msgid "Tokens are a core BIS functionality"
 msgstr "Tokens sind eine BIS Kernfunktionalität"
 
-#: themes/material/transactions_send.html:15
+#: themes/material/transactions_send.html:14
 msgid "Send To"
 msgstr "Senden An"
 
-#: themes/material/transactions_send.html:16
+#: themes/material/transactions_send.html:15
 msgid "To whom send BIS."
 msgstr "An wen BIS senden."
 
-#: themes/material/transactions_send.html:20
+#: themes/material/transactions_send.html:19
 msgid "Recipient"
 msgstr "Empfänger"
 
-#: themes/material/transactions_send.html:25
+#: themes/material/transactions_receive.html:26
+#: themes/material/transactions_send.html:24
 msgid "Data (message)"
 msgstr "Daten (Nachricht)"
 
-#: themes/material/transactions_send.html:27
+#: themes/material/transactions_send.html:26
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Optional kannst Du Deiner Transaktion einen kurzen Kommentar hinzufügen. Erforderlich für Zahlungen an Börsen."
 
-#: themes/material/transactions_send.html:41
+#: themes/material/transactions_send.html:40
 msgid "How many BIS to send."
 msgstr "Wieviel BIS versenden."
 
-#: themes/material/transactions_send.html:47
+#: themes/material/transactions_receive.html:50
+#: themes/material/transactions_send.html:46
 msgid "Amount (BIS)"
 msgstr "Betrag (BIS)"
 
+#: themes/material/transactions_receive.html:57
 #: themes/material/transactions_send.html:53
 msgid "Est. fees"
 msgstr "Geschätzte Gebühren"
 
-#: themes/material/transactions_send.html:57
+#: themes/material/transactions_receive.html:62
+#: themes/material/transactions_send.html:58
 msgid "Total (BIS)"
 msgstr "Gesamt (BIS)"
 
-#: themes/material/transactions_send.html:62
+#: themes/material/transactions_send.html:64
 msgid "Send BIS"
 msgstr "BIS senden"
 
@@ -333,19 +339,19 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "Diese Funktion ist in Bearbeitung."
 
-#: wallet.py:152
+#: wallet.py:173
 msgid "Transaction list"
 msgstr "Transaktionsliste"
 
-#: wallet.py:215 wallet.py:224
+#: wallet.py:236 wallet.py:245
 msgid "Error"
 msgstr "Fehler"
 
-#: wallet.py:215
+#: wallet.py:236
 msgid "This file already exists: {}.der"
 msgstr "Diese Datei existiert bereits: {}.der"
 
-#: wallet.py:224
+#: wallet.py:245
 msgid "Error creating {}.der"
 msgstr "Fehler beim Erzeugen von {}.der"
 
@@ -360,4 +366,65 @@ msgstr "Gebühren"
 #: themes/material/transactions.html:85
 msgid "Data"
 msgstr "Daten"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "BIS anfordern"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Deine Adresse"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "Dies ist Deine Adresse für das derzeitige Wallet, aber wenn es erforderlich ist, kannst Du es ändern."
+
+#: themes/material/transactions_receive.html:28
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Optional kannst Du einen kurzen Transaktions-Kommentar hinzufügen (z.B. einen Betreff). Dies wird im Blockchain gespeichert."
+
+#: themes/material/transactions_receive.html:32
+msgid "This is the QR code for your address only."
+msgstr "Dies ist der QR Code lediglich für Deine Adresse."
+
+#: themes/material/transactions_receive.html:44
+msgid "How many BIS to request."
+msgstr "Wieviel BIS sollen angefordert werden."
+
+#: themes/material/transactions_receive.html:52
+msgid "This is what you will receive"
+msgstr "Das ist was Du empfangen wirst"
+
+#: themes/material/transactions_receive.html:59
+#: themes/material/transactions_send.html:55
+msgid "Fees depend on Data length"
+msgstr "Gebühren hängen von der Daten Menge ab"
+
+#: themes/material/transactions_receive.html:64
+msgid "This is what the sender will pay"
+msgstr "Dies ist was der Versender zahlen wird"
+
+#: themes/material/transactions_receive.html:68
+msgid "Get BIS URL"
+msgstr "BIS URL erhalten"
+
+#: themes/material/transactions_receive.html:72
+msgid "This is the QR code for your address, data and amount as a BisUrl."
+msgstr "Dies ist der QR code für Deine Adresse, Daten und Betrag als eine BisUrl."
+
+#: themes/material/transactions_receive.html:73
+msgid "You can copy/paste this image to send in a mail or anything"
+msgstr "Du kannst das Bild kopieren/ einfügen um es z.B. in einer E-mail oder anderweitig zu verschicken"
+
+#: themes/material/transactions_send.html:48
+msgid "This is what the recipient will receive"
+msgstr "Dies ist was der Empfänger erhalten wird"
+
+#: themes/material/transactions_send.html:60
+msgid "This is what you will pay, fees included."
+msgstr "Dies ist was Du bezahlen wirst, Gebühren inbegriffen."
+
+#: themes/material/wallet_load.html:11
+msgid "Action"
+msgstr "Aktion"
 
