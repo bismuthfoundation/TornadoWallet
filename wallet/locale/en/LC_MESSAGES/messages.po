@@ -1,13 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: TornadoWallet\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-09 09:40+0100\n"
-"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
+"Project-Id-Version: TornadoWallet\n"
+"Language: en\n"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
@@ -257,91 +255,6 @@ msgstr "Previous page"
 msgid "Tokens are a core BIS functionality"
 msgstr "Tokens are a core BIS functionality"
 
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr ""
-
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr ""
-
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr ""
-
-#: themes/material/transactions_receive.html:16
-#, fuzzy
-msgid "Request BIS"
-msgstr "Request a $BIS payment"
-
-#: themes/material/transactions_receive.html:20
-#, fuzzy
-msgid "Your address"
-msgstr "Address"
-
-#: themes/material/transactions_receive.html:22
-msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr ""
-
-#: themes/material/transactions_receive.html:26
-#: themes/material/transactions_send.html:24
-msgid "Data (message)"
-msgstr "Data (message)"
-
-#: themes/material/transactions_receive.html:28
-#, fuzzy
-msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-
-#: themes/material/transactions_receive.html:32
-msgid "This is the QR code for your address only."
-msgstr ""
-
-#: themes/material/transactions_receive.html:44
-#, fuzzy
-msgid "How many BIS to request."
-msgstr "How many BIS to send."
-
-#: themes/material/transactions_receive.html:50
-#: themes/material/transactions_send.html:46
-msgid "Amount (BIS)"
-msgstr "Amount (BIS)"
-
-#: themes/material/transactions_receive.html:52
-msgid "This is what you will receive"
-msgstr ""
-
-#: themes/material/transactions_receive.html:57
-#: themes/material/transactions_send.html:53
-msgid "Est. fees"
-msgstr "Est. fees"
-
-#: themes/material/transactions_receive.html:59
-#: themes/material/transactions_send.html:55
-msgid "Fees depend on Data length"
-msgstr ""
-
-#: themes/material/transactions_receive.html:62
-#: themes/material/transactions_send.html:58
-msgid "Total (BIS)"
-msgstr "Total (BIS)"
-
-#: themes/material/transactions_receive.html:64
-msgid "This is what the sender will pay"
-msgstr ""
-
-#: themes/material/transactions_receive.html:68
-msgid "Get BIS URL"
-msgstr ""
-
-#: themes/material/transactions_receive.html:72
-msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr ""
-
-#: themes/material/transactions_receive.html:73
-msgid "You can copy/paste this image to send in a mail or anything"
-msgstr ""
-
 #: themes/material/transactions_send.html:14
 msgid "Send To"
 msgstr "Send To"
@@ -354,6 +267,11 @@ msgstr "To whom send BIS."
 msgid "Recipient"
 msgstr "Recipient"
 
+#: themes/material/transactions_receive.html:26
+#: themes/material/transactions_send.html:24
+msgid "Data (message)"
+msgstr "Data (message)"
+
 #: themes/material/transactions_send.html:26
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
@@ -362,13 +280,20 @@ msgstr "Optionally, you can add a small comment to your transaction. Required fo
 msgid "How many BIS to send."
 msgstr "How many BIS to send."
 
-#: themes/material/transactions_send.html:48
-msgid "This is what the recipient will receive"
-msgstr ""
+#: themes/material/transactions_receive.html:50
+#: themes/material/transactions_send.html:46
+msgid "Amount (BIS)"
+msgstr "Amount (BIS)"
 
-#: themes/material/transactions_send.html:60
-msgid "This is what you will pay, fees included."
-msgstr ""
+#: themes/material/transactions_receive.html:57
+#: themes/material/transactions_send.html:53
+msgid "Est. fees"
+msgstr "Est. fees"
+
+#: themes/material/transactions_receive.html:62
+#: themes/material/transactions_send.html:58
+msgid "Total (BIS)"
+msgstr "Total (BIS)"
 
 #: themes/material/transactions_send.html:64
 msgid "Send BIS"
@@ -406,10 +331,6 @@ msgstr "File"
 msgid "Encrypted"
 msgstr "Encrypted"
 
-#: themes/material/wallet_load.html:11
-msgid "Action"
-msgstr ""
-
 #: themes/material/wip.html:10
 msgid "W.I.P."
 msgstr "W.I.P."
@@ -433,3 +354,77 @@ msgstr "This file already exists: {}.der"
 #: wallet.py:245
 msgid "Error creating {}.der"
 msgstr "Error creating {}.der"
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr "Txid"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "Fees"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "Data"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "Request BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Your address"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "This is your address for current wallet, but you can change it if needed. Double check then."
+
+#: themes/material/transactions_receive.html:28
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+
+#: themes/material/transactions_receive.html:32
+msgid "This is the QR code for your address only."
+msgstr "This is the QR code for your address only."
+
+#: themes/material/transactions_receive.html:44
+msgid "How many BIS to request."
+msgstr "How many BIS to request."
+
+#: themes/material/transactions_receive.html:52
+msgid "This is what you will receive"
+msgstr "This is what you will receive"
+
+#: themes/material/transactions_receive.html:59
+#: themes/material/transactions_send.html:55
+msgid "Fees depend on Data length"
+msgstr "Fees depend on Data length"
+
+#: themes/material/transactions_receive.html:64
+msgid "This is what the sender will pay"
+msgstr "This is what the sender will pay"
+
+#: themes/material/transactions_receive.html:68
+msgid "Get BIS URL"
+msgstr "Get BIS URL"
+
+#: themes/material/transactions_receive.html:72
+msgid "This is the QR code for your address, data and amount as a BisUrl."
+msgstr "This is the QR code for your address, data and amount as a BisUrl."
+
+#: themes/material/transactions_receive.html:73
+msgid "You can copy/paste this image to send in a mail or anything"
+msgstr "You can copy/paste this image to send in a mail or anything"
+
+#: themes/material/transactions_send.html:48
+msgid "This is what the recipient will receive"
+msgstr "This is what the recipient will receive"
+
+#: themes/material/transactions_send.html:60
+msgid "This is what you will pay, fees included."
+msgstr "This is what you will pay, fees included."
+
+#: themes/material/wallet_load.html:11
+msgid "Action"
+msgstr "Action"
+
