@@ -112,11 +112,13 @@ class BaseHandler(tornado.web.RequestHandler):
         return ''
 
     def extract_params(self):
+        # TODO: rewrite with get_arguments and remove
         if '?' not in self.request.uri:
             self.bismuth_vars['params'] = {}
             return {}
         _, param = self.request.uri.split("?")
         res = {key: value for key, value in [item.split('=') for item in param.split("&")]}
+        # TODO: see https://www.tornadoweb.org/en/stable/web.html#tornado.web.RequestHandler.decode_argument
         self.bismuth_vars['params'] = res
         return res
 
@@ -135,31 +137,46 @@ class HomeHandler(BaseHandler):
 
 class TransactionsHandler(BaseHandler):
 
+    """
     def randhex(self, size):
         return ''.join(random.choices(string.ascii_lowercase + string.digits, k=size))
-
-    def tx(self, i):
-        """
-        fake tx
-        """
-        txdate = time.time() - i * 5
-        txdate = datetime.datetime.fromtimestamp(int(txdate)).strftime('%Y-%m-%d %H:%M:%S')
-        return {'txid': self.randhex(32), 'address': self.randhex(32), 'recipient': self.randhex(32),
-                'amount': str(random.randint(1,100)/10), 'date': txdate,
-                'openfield': self.randhex(10), 'fees': '0.01'}
+    """
 
     async def send(self, params=None):
-        self.render("transactions_send.html", bismuth=self.bismuth_vars)
+        query_params = self.extract_params()
+        # print(params)
+        _ = self.locale.translate
+        self.settings["page_title"] = _("Send BIS")
+        if query_params.get('recipient', False):
+            # We have an address param, it's a confirmation
+            self.settings["page_title"] = _("Send BIS: Confirmation")
+            type='warning'  # Do not translate
+            title=_("Please confirm this transaction")
+            message=_("Check this is what you intended to do and hit the \"confirm\" button")
+            # TODO: address ok?
+            # todo: amount ok
+            # todo: enough balance?
+            self.render("transactions_send_confirm.html", bismuth=self.bismuth_vars, type=type, title=title,
+                        message=message)
+        else:
+            self.render("transactions_send.html", bismuth=self.bismuth_vars)
+
+    async def confirm(self, params=None):
+        amount = self.get_argument("amount")
+        recipient = self.get_argument("recipient")
+        data = self.get_argument("data", '')
+
 
     async def receive(self, params=None):
-        params = self.extract_params()
+        query_params = self.extract_params()
         address = self.bismuth_vars['server']['address']
+        _ = self.locale.translate
+        self.settings["page_title"] = _("Receive BIS")
         bisurl = ''
-        if params.get('address', False):
-            address = params['address']
-            bisurl = BismuthUtil.create_bis_url(address, params['amount'], '', params['data'])
+        if query_params.get('address', False):
+            address = query_params['address']
+            bisurl = BismuthUtil.create_bis_url(address, query_params['amount'], '', query_params['data'])
         self.render("transactions_receive.html", bismuth=self.bismuth_vars, address=address, bisurl=bisurl)
-
 
     async def get(self, command=''):
         """
@@ -174,6 +191,13 @@ class TransactionsHandler(BaseHandler):
             self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(10, for_display=True)
             self.render("transactions.html", bismuth=self.bismuth_vars)
 
+    async def post(self, command=''):
+        """
+        :return:
+        """
+        command, *params = command.split('/')
+        if command:
+            await getattr(self, command)(params)
 
 
 class JsonHandler(BaseHandler):
