@@ -14,7 +14,7 @@ Here are the current languages and matching credits:
 * FR (French): EggdraSyl @Eggpoolnet
 * RU (Russian): @Anykayebyka and @Whatever
 * FI (Finnish): @Aksss
-* NO (Norvegian): @gh2
+* NO, NB, NN (Norvegian): @gh2
 * SV (Swedish): @gh2
 * EL (Greek): @SatoshiHaze
 
