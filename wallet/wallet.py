@@ -112,7 +112,7 @@ class BaseHandler(tornado.web.RequestHandler):
         return ''
 
     def extract_params(self):
-        # TODO: rewrite with get_arguments and remove
+        # TODO: rewrite with get_arguments and remove this redundant function
         if '?' not in self.request.uri:
             self.bismuth_vars['params'] = {}
             return {}
@@ -121,7 +121,6 @@ class BaseHandler(tornado.web.RequestHandler):
         # TODO: see https://www.tornadoweb.org/en/stable/web.html#tornado.web.RequestHandler.decode_argument
         self.bismuth_vars['params'] = res
         return res
-
 
 
 class HomeHandler(BaseHandler):
@@ -165,6 +164,8 @@ class TransactionsHandler(BaseHandler):
         amount = self.get_argument("amount")
         recipient = self.get_argument("recipient")
         data = self.get_argument("data", '')
+        operation = self.get_argument("operation", '')
+        txid = self.bismuth.send(recipient, amount, operation, data)
 
 
     async def receive(self, params=None):
