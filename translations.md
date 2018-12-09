@@ -15,11 +15,12 @@ Here are the current languages and matching credits:
 * RU (Russian): @Anykayebyka and @Whatever
 * FI (Finnish): @Aksss
 * NO (Norvegian): @gh2
-* EL (Greek): @SatoshiHHaze
+* SV (Swedish): @gh2
+* EL (Greek): @SatoshiHaze
 
 # Wanted!
 
-* CN
+* CN (Current translations are machine translations, need human proofreading.)
 * ES
 * IT
 

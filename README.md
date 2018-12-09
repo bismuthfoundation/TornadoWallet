@@ -16,6 +16,18 @@ Goal is to re-use the existing python code for behind the scene heavy lifting, b
 
 `pip3 install -r requirements.txt`
 
+Pycryptodomex is used and may need extra install on your machine
+
+## Mac
+
+Install xcode compiler:
+
+`xcode-select --install`
+
+## Windows
+
+WIP
+
 # Usage
 
 * place you wallet(s) file in wallets subdirectory
@@ -24,10 +36,10 @@ Goal is to re-use the existing python code for behind the scene heavy lifting, b
 
 # Roadmap
 
-* Proof of concept
-* Basic wallet functionality
+* Proof of concept (check)
+* Basic wallet functionality (check)
 * Auth
-* Multiwallet
+* Multiwallet (partly done)
 * Allinone mobile app with embedded browser and python engine
 
 # The tech
