@@ -1,371 +1,472 @@
-# Language cn translations for PACKAGE package.
-# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# toto <dev@eggpool.net>, 2018.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-07 22:12+0100\n"
-"PO-Revision-Date: 2018-12-07 21:30+0100\n"
-"Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: Language cn\n"
-"Language: cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: TornadoWallet\n"
+"Language: zh-CN\n"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
-msgstr ""
+msgstr "积分"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr ""
+msgstr "没有......这个钱包就不存在了"
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr ""
+msgstr "<a href=\"https://www.creative-tim.com\" target=\"_blank\"> Creative Tim </a>的“Material Dark”模板"
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
-msgstr ""
+msgstr "Python，很棒的语言！"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr ""
-
-#: themes/material/about_credits.html:27
-msgid "About"
-msgstr ""
-
-#: themes/material/about_credits.html:32
-msgid "Tornado wallet version {}"
-msgstr ""
+msgstr "<a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">龙卷风</a>网络应用框架"
 
 #: themes/material/about_credits.html:33
+msgid "About"
+msgstr "关于"
+
+#: themes/material/about_credits.html:38
+msgid "Tornado wallet version {}"
+msgstr "龙卷风钱包版{}"
+
+#: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr ""
+msgstr "这是来自{}的{}的默认钱包主题。"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr ""
+msgstr "当前钱包服务器"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr ""
+msgstr "这是您连接的服务器。"
 
 #: themes/material/about_network.html:18
 msgid "Server:"
-msgstr ""
+msgstr "服务器："
 
 #: themes/material/about_network.html:20
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr ""
+msgstr "电子钱包服务器版{}"
 
 #: themes/material/about_network.html:22
 msgid "Connected clients:"
-msgstr ""
+msgstr "连接客户："
 
 #: themes/material/about_network.html:23
 msgid "Protocol"
-msgstr ""
+msgstr "协议"
 
 #: themes/material/about_network.html:24
 msgid "Node Version"
-msgstr ""
+msgstr "节点版本"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr ""
+msgstr "同行连接："
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
-msgstr ""
+msgstr "正常运行时间："
 
 #: themes/material/about_network.html:27
 msgid "Consensus:"
-msgstr ""
+msgstr "共识："
 
 #: themes/material/about_network.html:47
 msgid "Block"
-msgstr ""
+msgstr "块"
 
 #: themes/material/about_network.html:59
 msgid "Difficulty"
-msgstr ""
+msgstr "困难"
 
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr ""
+msgstr "可用的钱包服务器"
 
 #: themes/material/about_network.html:73
 msgid "servers"
-msgstr ""
+msgstr "服务器"
 
 #: themes/material/about_network.html:81
 msgid "Refresh from API"
-msgstr ""
+msgstr "从API刷新"
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
-msgstr ""
+msgstr "铋钱包"
 
 #: themes/material/base.html:40
 msgid "Dashboard"
-msgstr ""
+msgstr "仪表板"
 
 #: themes/material/base.html:46
 msgid "Transactions"
-msgstr ""
+msgstr "交易"
 
 #: themes/material/base.html:52
 msgid "Address book"
-msgstr ""
+msgstr "地址簿"
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr ""
+msgstr "令牌"
 
 #: themes/material/base.html:65
 msgid "Messages"
-msgstr ""
+msgstr "消息"
 
 #: themes/material/base.html:72
 msgid "Network"
-msgstr ""
+msgstr "网络"
 
 #: themes/material/base.html:84 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr ""
+msgstr "Cristals"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
-msgstr ""
+msgstr "切换导航"
 
 #: themes/material/base.html:177
 msgid "Source"
-msgstr ""
+msgstr "资源"
 
 #: themes/material/base.html:182
 msgid "Blog"
-msgstr ""
+msgstr "博客"
 
 #: themes/material/base.html:187
 msgid "Discord"
-msgstr ""
+msgstr "不和"
 
 #: themes/material/base.html:192
 msgid "Donate"
-msgstr ""
+msgstr "捐"
 
 #: themes/material/base.html:203
 msgid "block #"
-msgstr ""
+msgstr "块＃"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr ""
+msgstr "边栏过滤器"
 
 #: themes/material/base.html:236
 msgid "Images"
-msgstr ""
+msgstr "图片"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr ""
+msgstr "Cristals是您可以添加到钱包的额外功能"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
-msgstr ""
+msgstr "WIP"
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
 msgid "Balance"
-msgstr ""
+msgstr "平衡"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr ""
+msgstr "发送"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr ""
+msgstr "发送$ BIS给..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
+#: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr ""
+msgstr "接收"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr ""
+msgstr "申请$ BIS付款"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
-msgstr ""
+msgstr "最新交易"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
-msgstr ""
+msgstr "更新了"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
 #: themes/material/wallet_load.html:9
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
-#: themes/material/transactions_send.html:40
+#: themes/material/transactions_receive.html:43
+#: themes/material/transactions_send.html:39
+#: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
-msgstr ""
+msgstr "量"
 
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: themes/material/home.html:121
 msgid "Bismuth news"
-msgstr ""
+msgstr "铋新闻"
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
-msgstr ""
+msgstr "铋对美元"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr ""
+msgstr "这是一个假数据的模型"
 
 #: themes/material/home.html:162
 msgid "Account balance"
-msgstr ""
+msgstr "账户余额"
 
 #: themes/material/home.html:163
 msgid "Last 12 months"
-msgstr ""
+msgstr "过去12个月"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr ""
+msgstr "假数据样机"
 
 #: themes/material/message.html:16
+#: themes/material/transactions_send_confirm.html:16
 msgid "Previous page"
-msgstr ""
+msgstr "上一页"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr ""
+msgstr "令牌是核心BIS功能"
 
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr ""
-
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr ""
-
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr ""
+#: themes/material/transactions_send.html:14
+#: themes/material/transactions_send_confirm.html:28
+msgid "Send To"
+msgstr "发送至"
 
 #: themes/material/transactions_send.html:15
-msgid "Send To"
-msgstr ""
-
-#: themes/material/transactions_send.html:16
+#: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
-msgstr ""
+msgstr "向谁发送BIS。"
 
-#: themes/material/transactions_send.html:20
+#: themes/material/transactions_send.html:19
+#: themes/material/transactions_send_confirm.html:33
 msgid "Recipient"
-msgstr ""
+msgstr "接受者"
 
-#: themes/material/transactions_send.html:25
+#: themes/material/transactions_receive.html:26
+#: themes/material/transactions_send.html:24
+#: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
-msgstr ""
+msgstr "数据（消息）"
 
-#: themes/material/transactions_send.html:27
+#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr ""
+msgstr "（可选）您可以在事务中添加一条小注释。交换存款需要。"
 
-#: themes/material/transactions_send.html:41
+#: themes/material/transactions_send.html:40
+#: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr ""
+msgstr "要发送多少BIS。"
 
-#: themes/material/transactions_send.html:47
+#: themes/material/transactions_receive.html:50
+#: themes/material/transactions_send.html:46
+#: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
-msgstr ""
+msgstr "金额（BIS）"
 
+#: themes/material/transactions_receive.html:57
 #: themes/material/transactions_send.html:53
+#: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr ""
+msgstr "美东时间。费用"
 
-#: themes/material/transactions_send.html:57
+#: themes/material/transactions_receive.html:62
+#: themes/material/transactions_send.html:58
+#: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
-msgstr ""
+msgstr "总计（BIS）"
 
-#: themes/material/transactions_send.html:62
+#: themes/material/transactions_send.html:64 wallet.py:149
 msgid "Send BIS"
-msgstr ""
+msgstr "发送BIS"
 
 #: themes/material/wallet_info.html:13
 msgid "Current Wallet"
-msgstr ""
+msgstr "目前的钱包"
 
 #: themes/material/wallet_info.html:30
 msgid "Open existing"
-msgstr ""
+msgstr "打开现有的"
 
 #: themes/material/wallet_info.html:31
 msgid "wallet"
-msgstr ""
+msgstr "钱包"
 
 #: themes/material/wallet_info.html:35
 msgid "Load a wallet from disk"
-msgstr ""
+msgstr "从磁盘加载钱包"
 
 #: themes/material/wallet_info.html:49
 msgid "Create a"
-msgstr ""
+msgstr "创建一个"
 
 #: themes/material/wallet_info.html:50
 msgid "new wallet"
-msgstr ""
+msgstr "新钱包"
 
 #: themes/material/wallet_load.html:8
 msgid "File"
-msgstr ""
+msgstr "文件"
 
 #: themes/material/wallet_load.html:10
 msgid "Encrypted"
-msgstr ""
+msgstr "加密"
 
 #: themes/material/wip.html:10
 msgid "W.I.P."
-msgstr ""
+msgstr "W.I.P."
 
 #: themes/material/wip.html:13
 msgid "This feature is under construction."
-msgstr ""
+msgstr "此功能正在建设中。"
+
+#: wallet.py:190
+msgid "Transaction list"
+msgstr "交易清单"
+
+#: wallet.py:260 wallet.py:269
+msgid "Error"
+msgstr "错误"
+
+#: wallet.py:260
+msgid "This file already exists: {}.der"
+msgstr "此文件已存在：{} .der"
+
+#: wallet.py:269
+msgid "Error creating {}.der"
+msgstr "创建{} .der时出错"
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr "TxID添加"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "费用"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "数据"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "请求BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "你的地址"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "这是您当前钱包的地址，但您可以根据需要进行更改。然后仔细检查。"
+
+#: themes/material/transactions_receive.html:28
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "或者，您可以在交易中添加一条小评论，例如您自己的参考。将存储在链上。"
+
+#: themes/material/transactions_receive.html:32
+msgid "This is the QR code for your address only."
+msgstr "这是您的地址的二维码。"
+
+#: themes/material/transactions_receive.html:44
+msgid "How many BIS to request."
+msgstr "请求多少BIS。"
+
+#: themes/material/transactions_receive.html:52
+msgid "This is what you will receive"
+msgstr "这是你将收到的"
+
+#: themes/material/transactions_receive.html:59
+#: themes/material/transactions_send.html:55
+#: themes/material/transactions_send_confirm.html:72
+msgid "Fees depend on Data length"
+msgstr "费用取决于数据长度"
+
+#: themes/material/transactions_receive.html:64
+msgid "This is what the sender will pay"
+msgstr "这是发件人将支付的费用"
+
+#: themes/material/transactions_receive.html:68
+msgid "Get BIS URL"
+msgstr "获取BIS URL"
+
+#: themes/material/transactions_receive.html:72
+msgid "This is the QR code for your address, data and amount as a BisUrl."
+msgstr "这是您的地址，数据和金额的二维码作为BisUrl。"
+
+#: themes/material/transactions_receive.html:73
+msgid "You can copy/paste this image to send in a mail or anything"
+msgstr "您可以复制/粘贴此图像以通过邮件或任何方式发送"
+
+#: themes/material/transactions_send.html:48
+#: themes/material/transactions_send_confirm.html:65
+msgid "This is what the recipient will receive"
+msgstr "这是收件人将收到的内容"
+
+#: themes/material/transactions_send.html:60
+#: themes/material/transactions_send_confirm.html:77
+msgid "This is what you will pay, fees included."
+msgstr "这是你要支付的费用，包括费用。"
+
+#: themes/material/wallet_load.html:11
+msgid "Action"
+msgstr "行动"
+
+#: themes/material/about_credits.html:20
+msgid "Translations"
+msgstr "翻译"
+
+#: themes/material/transactions_send_confirm.html:99
+msgid "Cancel"
+msgstr "取消"
+
+#: themes/material/transactions_send_confirm.html:103
+msgid "Confirm and send BIS"
+msgstr "确认并发送BIS"
 
 #: wallet.py:152
-msgid "Transaction list"
-msgstr ""
+msgid "Send BIS: Confirmation"
+msgstr "发送BIS：确认"
 
-#: wallet.py:215 wallet.py:224
-msgid "Error"
-msgstr ""
+#: wallet.py:154
+msgid "Please confirm this transaction"
+msgstr "请确认此交易"
 
-#: wallet.py:215
-msgid "This file already exists: {}.der"
-msgstr ""
+#: wallet.py:155
+msgid "Check this is what you intended to do and hit the \"confirm\" button"
+msgstr "检查这是您打算做的，然后点击“确认”按钮"
 
-#: wallet.py:224
-msgid "Error creating {}.der"
-msgstr ""
+#: wallet.py:174
+msgid "Receive BIS"
+msgstr "收到BIS"
+
