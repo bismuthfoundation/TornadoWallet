@@ -27,15 +27,15 @@ msgstr "Python, awesome language!"
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 
-#: themes/material/about_credits.html:27
+#: themes/material/about_credits.html:33
 msgid "About"
 msgstr "About"
 
-#: themes/material/about_credits.html:32
+#: themes/material/about_credits.html:38
 msgid "Tornado wallet version {}"
 msgstr "Tornado wallet version {}"
 
-#: themes/material/about_credits.html:33
+#: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
 msgstr "This is the default wallet theme by {} from {}."
 
@@ -216,6 +216,7 @@ msgstr "Address"
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:43
 #: themes/material/transactions_send.html:39
+#: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Amount"
 
@@ -248,6 +249,7 @@ msgid "Mockup with fake data"
 msgstr "Mockup with fake data"
 
 #: themes/material/message.html:16
+#: themes/material/transactions_send_confirm.html:16
 msgid "Previous page"
 msgstr "Previous page"
 
@@ -256,46 +258,55 @@ msgid "Tokens are a core BIS functionality"
 msgstr "Tokens are a core BIS functionality"
 
 #: themes/material/transactions_send.html:14
+#: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
 msgstr "Send To"
 
 #: themes/material/transactions_send.html:15
+#: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
 msgstr "To whom send BIS."
 
 #: themes/material/transactions_send.html:19
+#: themes/material/transactions_send_confirm.html:33
 msgid "Recipient"
 msgstr "Recipient"
 
 #: themes/material/transactions_receive.html:26
 #: themes/material/transactions_send.html:24
+#: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
 msgstr "Data (message)"
 
 #: themes/material/transactions_send.html:26
+#: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 
 #: themes/material/transactions_send.html:40
+#: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "How many BIS to send."
 
 #: themes/material/transactions_receive.html:50
 #: themes/material/transactions_send.html:46
+#: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
 msgstr "Amount (BIS)"
 
 #: themes/material/transactions_receive.html:57
 #: themes/material/transactions_send.html:53
+#: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
 msgstr "Est. fees"
 
 #: themes/material/transactions_receive.html:62
 #: themes/material/transactions_send.html:58
+#: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
 msgstr "Total (BIS)"
 
-#: themes/material/transactions_send.html:64
+#: themes/material/transactions_send.html:64 wallet.py:149
 msgid "Send BIS"
 msgstr "Send BIS"
 
@@ -339,19 +350,19 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "This feature is under construction."
 
-#: wallet.py:173
+#: wallet.py:190
 msgid "Transaction list"
 msgstr "Transaction list"
 
-#: wallet.py:236 wallet.py:245
+#: wallet.py:260 wallet.py:269
 msgid "Error"
 msgstr "Error"
 
-#: wallet.py:236
+#: wallet.py:260
 msgid "This file already exists: {}.der"
 msgstr "This file already exists: {}.der"
 
-#: wallet.py:245
+#: wallet.py:269
 msgid "Error creating {}.der"
 msgstr "Error creating {}.der"
 
@@ -397,6 +408,7 @@ msgstr "This is what you will receive"
 
 #: themes/material/transactions_receive.html:59
 #: themes/material/transactions_send.html:55
+#: themes/material/transactions_send_confirm.html:72
 msgid "Fees depend on Data length"
 msgstr "Fees depend on Data length"
 
@@ -417,14 +429,44 @@ msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "You can copy/paste this image to send in a mail or anything"
 
 #: themes/material/transactions_send.html:48
+#: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
 msgstr "This is what the recipient will receive"
 
 #: themes/material/transactions_send.html:60
+#: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
 msgstr "This is what you will pay, fees included."
 
 #: themes/material/wallet_load.html:11
 msgid "Action"
 msgstr "Action"
+
+#: themes/material/about_credits.html:20
+msgid "Translations"
+msgstr "Translations"
+
+#: themes/material/transactions_send_confirm.html:99
+msgid "Cancel"
+msgstr "Cancel"
+
+#: themes/material/transactions_send_confirm.html:103
+msgid "Confirm and send BIS"
+msgstr "Confirm and send BIS"
+
+#: wallet.py:152
+msgid "Send BIS: Confirmation"
+msgstr "Send BIS: Confirmation"
+
+#: wallet.py:154
+msgid "Please confirm this transaction"
+msgstr "Please confirm this transaction"
+
+#: wallet.py:155
+msgid "Check this is what you intended to do and hit the \"confirm\" button"
+msgstr "Check this is what you intended to do and hit the \"confirm\" button"
+
+#: wallet.py:174
+msgid "Receive BIS"
+msgstr "Receive BIS"
 
