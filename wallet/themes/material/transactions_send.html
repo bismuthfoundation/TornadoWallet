@@ -5,7 +5,6 @@
 
 <div class="row">
 
-
 		 <div class="col-lg-6 col-sm-12">
 
 			 <form>
@@ -46,16 +45,19 @@
 								 <div class="form-group">
 									<label class="bmd-label-floating">{{ _("Amount (BIS)")}}</label>
 									<input class="form-control" id="amount" type="text" name="amount"/>
+									 <small>{{ _("This is what the recipient will receive")}}</small>
 								</div>
 							</div>
 							<div class="col-md-6">
 								 <div class="form-group">
 									<label class="bmd-label-floating">{{ _("Est. fees")}}</label>
 									<input class="form-control" id="fees" type="text" name="fees" disabled/>
+									 <small>{{ _("Fees depend on Data length")}}</small>
 								</div>
 								 <div class="form-group">
 									<label class="bmd-label-floating">{{ _("Total (BIS)")}}</label>
 									<input class="form-control" id="total" type="text" name="total" disabled/>
+									 <small>{{ _("This is what you will pay, fees included.")}}</small>
 								</div>
 							</div>
 						</div>
@@ -70,7 +72,6 @@
 
 
 </div>
-
 
 
 

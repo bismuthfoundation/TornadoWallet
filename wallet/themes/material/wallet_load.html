@@ -8,6 +8,7 @@
 				  <th>{{ _("File")}}</th>
 				  <th>{{ _("Address")}}</th>
 				  <th>{{ _("Encrypted")}}</th>
+				  <th>{{ _("Action")}}</th>
 				</thead>
 		  <tbody>
 		    {% for wallet in wallets %}
@@ -15,6 +16,9 @@
                 <td>{{ wallet['file'] }}</td>
 				<td><a href="/wallet/load/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
 	            <td>{{ wallet['encrypted'] }}</td>
+				<td><a href="/wallet/load/{{ wallet['file'] }}">
+					<i class="fa fa-envelope-open" title="{{ _("Load")}}"></i>
+				</a></td>
             </tr>
 			{% end %}
 		  </tbody>

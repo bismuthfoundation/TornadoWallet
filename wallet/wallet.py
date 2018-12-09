@@ -24,6 +24,7 @@ import unicodedata
 from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
+from bismuthclient.bismuthutil import BismuthUtil
 
 __version__ = '0.0.61'
 
@@ -94,6 +95,7 @@ class BaseHandler(tornado.web.RequestHandler):
         self.bismuth_vars['server_status'] = self.bismuth.status()
         self.bismuth_vars['balance'] = self.bismuth.balance()
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
+        self.bismuth_vars['params'] = {}
         self.cristals = self.settings['bismuth_cristals']
         # print(self.bismuth_vars)
 
@@ -108,6 +110,16 @@ class BaseHandler(tornado.web.RequestHandler):
         if self.request.uri.startswith(path):
             return "active"
         return ''
+
+    def extract_params(self):
+        if '?' not in self.request.uri:
+            self.bismuth_vars['params'] = {}
+            return {}
+        _, param = self.request.uri.split("?")
+        res = {key: value for key, value in [item.split('=') for item in param.split("&")]}
+        self.bismuth_vars['params'] = res
+        return res
+
 
 
 class HomeHandler(BaseHandler):
@@ -138,6 +150,15 @@ class TransactionsHandler(BaseHandler):
 
     async def send(self, params=None):
         self.render("transactions_send.html", bismuth=self.bismuth_vars)
+
+    async def receive(self, params=None):
+        params = self.extract_params()
+        address = self.bismuth_vars['server']['address']
+        bisurl = ''
+        if params.get('address', False):
+            address = params['address']
+            bisurl = BismuthUtil.create_bis_url(address, params['amount'], '', params['data'])
+        self.render("transactions_receive.html", bismuth=self.bismuth_vars, address=address, bisurl=bisurl)
 
 
     async def get(self, command=''):
