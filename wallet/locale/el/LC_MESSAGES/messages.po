@@ -1,20 +1,21 @@
-# Northern Sami translations for PACKAGE package.
+# Greek translations for PACKAGE package.
 # Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# toto <dev@eggpool.nte>, 2018.
+# toto <dev@eggpool.net>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-09 13:22+0100\n"
-"PO-Revision-Date: 2018-12-09 13:22+0100\n"
+"POT-Creation-Date: 2018-12-09 14:26+0100\n"
+"PO-Revision-Date: 2018-12-09 14:26+0100\n"
 "Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: Northern Sami\n"
-"Language: se\n"
+"Language-Team: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
@@ -40,15 +41,15 @@ msgstr ""
 msgid "Translations"
 msgstr ""
 
-#: themes/material/about_credits.html:33
+#: themes/material/about_credits.html:35
 msgid "About"
 msgstr ""
 
-#: themes/material/about_credits.html:38
+#: themes/material/about_credits.html:40
 msgid "Tornado wallet version {}"
 msgstr ""
 
-#: themes/material/about_credits.html:39
+#: themes/material/about_credits.html:41
 msgid "This is the default wallet theme by {} from {}."
 msgstr ""
 

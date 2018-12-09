@@ -39,4 +39,8 @@ Goal is to re-use the existing python code for behind the scene heavy lifting, b
 
 # References
 
-Current HTML template derived from mBitcoin wallet
+First HTML template derived from mBitcoin wallet.  
+
+# Translations
+
+Thanks to a great community effort, the wallet is available in several languages, see [translations.md](translations.md) for list and credits. 
