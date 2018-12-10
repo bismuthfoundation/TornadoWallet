@@ -133,7 +133,7 @@ msgstr "Network"
 
 #: themes/material/base.html:84 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr "Cristals"
+msgstr "Crystals"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
@@ -169,7 +169,7 @@ msgstr "Images"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "Cristals are extra functionalities you can add to your wallet"
+msgstr "Crystals are extra functionalities you can add to your wallet"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
@@ -422,11 +422,11 @@ msgstr "Get BIS URL"
 
 #: themes/material/transactions_receive.html:72
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "This is the QR code for your address, data and amount as a BisUrl."
+msgstr "This is the QR code for your address, data and amount as a BIS URL"
 
 #: themes/material/transactions_receive.html:73
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "You can copy/paste this image to send in a mail or anything"
+msgstr "You can copy/paste this image to send in a mail or elsewhere"
 
 #: themes/material/transactions_send.html:48
 #: themes/material/transactions_send_confirm.html:65
