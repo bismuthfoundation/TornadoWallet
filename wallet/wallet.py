@@ -10,6 +10,7 @@ import json
 import logging
 import random
 import string
+import sys
 import time
 import datetime
 import tornado.escape
@@ -26,7 +27,7 @@ from tornado.options import define, options
 from bismuthclient import bismuthclient
 from bismuthclient.bismuthutil import BismuthUtil
 
-__version__ = '0.0.61'
+__version__ = '0.0.62'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
@@ -34,6 +35,9 @@ define("verbose", default=False, help="verbose mode", type=bool)
 define("theme", default='themes/material', help="theme directory", type=str)
 define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
 
+# Where the wallets and other potential private info are to be stored.
+# It's a dir under the user's own home directory.
+BISMUTH_PRIVATE_DIR = 'bismuth-private'
 
 
 class Application(tornado.web.Application):
@@ -43,6 +47,8 @@ class Application(tornado.web.Application):
         if options.server:
             servers = [options.server]
         bismuth_client = bismuthclient.BismuthClient(verbose=options.verbose, servers_list=servers)
+        wallet_dir = bismuth_client.user_subdir(BISMUTH_PRIVATE_DIR)
+        print("Please store your wallets under '{}'".format(wallet_dir))
         bismuth_client.get_server()
         handlers = [
             (r"/", HomeHandler),
@@ -97,7 +103,6 @@ class BaseHandler(tornado.web.RequestHandler):
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
         self.cristals = self.settings['bismuth_cristals']
-        # print(self.bismuth_vars)
 
     def active_if(self, path: string):
         """return the 'active' string if the request uri is the one in path. Used for menu css"""
@@ -110,6 +115,11 @@ class BaseHandler(tornado.web.RequestHandler):
         if self.request.uri.startswith(path):
             return "active"
         return ''
+
+    def message(self, title, message, type="info"):
+        """Display message template page"""
+        self.render("message.html", bismuth=self.bismuth_vars, title=title, message=message, type=type)
+
 
     def extract_params(self):
         # TODO: rewrite with get_arguments and remove this redundant function
@@ -129,6 +139,9 @@ class HomeHandler(BaseHandler):
         :return:
         """
         # self.render("home.html", balance="101", wallet_servers=','.join(self.settings['wallet_servers']))
+        if not self.bismuth_vars['address']:
+            self.bismuth_vars['address'] = 'None'
+            self.redirect("/wallet/load")
         self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5, for_display=True)
         self.render("home.html", bismuth=self.bismuth_vars)
         # self.app_log.info("> home")
@@ -146,6 +159,14 @@ class TransactionsHandler(BaseHandler):
         # print(params)
         _ = self.locale.translate
         self.settings["page_title"] = _("Send BIS")
+
+        if not self.bismuth_vars['address']:
+            await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            return
+        # print(self.bismuth.wallet())
+        if self.bismuth.wallet()['encrypted']:
+            self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
+            return
         if query_params.get('recipient', False):
             # We have an address param, it's a confirmation
             self.settings["page_title"] = _("Send BIS: Confirmation")
@@ -161,12 +182,20 @@ class TransactionsHandler(BaseHandler):
             self.render("transactions_send.html", bismuth=self.bismuth_vars)
 
     async def confirm(self, params=None):
-        amount = self.get_argument("amount")
+        _ = self.locale.translate
+        amount = float(self.get_argument("amount"))
         recipient = self.get_argument("recipient")
         data = self.get_argument("data", '')
         operation = self.get_argument("operation", '')
         txid = self.bismuth.send(recipient, amount, operation, data)
-
+        print("txid", txid)
+        if txid:
+            self.message(_("Success:") + " " + _("Transaction sent"),
+                         _("The transaction was submitted to the mempool.")
+                         + "<br />" +
+                         _("Txid is {}").format(txid), "success")
+        else:
+            self.message(_("Error:"), _("There was an error submitting to the mempool, transaction was not sent."), "warning")
 
     async def receive(self, params=None):
         query_params = self.extract_params()
@@ -236,8 +265,9 @@ class WalletHandler(BaseHandler):
     """Wallet related routes"""
     async def load(self, params=None):
         if not params:
-            wallets = self.bismuth.list_wallets('wallets')
-            self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars)
+            wallet_dir = self.bismuth.user_subdir(BISMUTH_PRIVATE_DIR)
+            wallets = self.bismuth.list_wallets(wallet_dir)
+            self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars, wallet_dir=wallet_dir)
         else:
             # load a wallet
             file_name = '/'.join(params)

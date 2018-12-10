@@ -38,9 +38,22 @@ then `pip3 install -r requirements.txt`
 
 # Usage
 
-* place you wallet(s) file in wallets subdirectory
-* `python3 wallet.py --theme=themes/material`
+* `python3 wallet.py`
 * open [http://localhost:8888](http://localhost:8888)
+
+Possible command line switches:  
+`--verbose --debug`  
+
+`--theme=themes/material`
+
+## Wallet(s) location
+
+Wallets and other potential private info are to be stored under a "bismuth-private" dir, under the user's own home directory.
+
+The wallet prints that dir at start.  
+You should also find in on the wallet/load page :
+`http://127.0.0.1:8888/wallet/load`
+
 
 # Roadmap
 

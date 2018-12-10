@@ -32,15 +32,15 @@
                     <div class="form-group">
                         <label class="bmd-label-floating">{{ _("Recipient")}}</label>
                         <input class="form-control" id="recipient" type="text" name="recipient"
-                               value="{{ bismuth['params'].get('recipient', '') }}" />
+                               value="{{ bismuth['params'].get('recipient', '') }}"/>
                     </div>
                     <br/>
                     <div class="form-group">
                         <label class="bmd-label-floating">{{ _("Data (message)")}}</label>
                         <input class="form-control" id="data" type="text" name="data"
-                               value="{{ bismuth['params'].get('data', '') }}" />
+                               value="{{ bismuth['params'].get('data', '') }}"/>
                         <small>
-                            {{ _("Optionally, you can add a small comment to your transaction. Required for exchanges deposit.")}}
+{{ _("Optionally, you can add a small comment to your transaction. Required for exchanges deposit.")}}
                         </small>
                     </div>
 
@@ -61,7 +61,7 @@
                             <div class="form-group">
                                 <label class="bmd-label-floating">{{ _("Amount (BIS)")}}</label>
                                 <input class="form-control" id="amount" type="text" name="amount"
-                                       value="{{ bismuth['params'].get('amount', '') }}" />
+                                       value="{{ bismuth['params'].get('amount', '') }}"/>
                                 <small>{{ _("This is what the recipient will receive")}}</small>
                             </div>
                         </div>
@@ -96,7 +96,9 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
 
-                            <button type="submit" value="cancel" class="btn btn-warning" onclick="javascript:history.go(-1);return false">{{ _("Cancel")}}</button>
+                            <button type="submit" value="cancel" class="btn btn-warning"
+                                    onclick="javascript:history.go(-1);return false">{{ _("Cancel")}}
+                            </button>
                         </div>
                         <div class="col-lg-6 col-sm-12">
                             <button type="submit" value="confirm" class="btn btn-success pull-right">
@@ -110,7 +112,7 @@
 
         </div>
     </div>
-{% raw xsrf_form_html() %}
+    {% raw xsrf_form_html() %}
 </form>
 
 

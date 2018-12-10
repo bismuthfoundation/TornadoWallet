@@ -2,26 +2,71 @@
 
 {% block body %}
 
+
+<div class="row">
+
+    <div class="col-xl-9 col-lg-9 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <a href="/transactions/">
+                <div class="card-header card-header-success card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">account_balance_wallet</i>
+                    </div>
+                    <p class="card-category">&nbsp;</p>
+                    <h3 class="card-title">{{ _("Your Bismuth wallets") }}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <i class="material-icons">folder</i> {{ _("Your wallets directory is {}".format(wallet_dir)) }}
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <form action="/wallet/create/">
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">create_new_folder</i>
+                    </div>
+                    <p class="card-category">{{ _("Create a")}}</p>
+                    <h3 class="card-title">{{ _("new wallet")}}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class="stats">
+                        <input type="text" name="wallet" placeholder="wallet_file_name">
+                        <input type="submit" value="{{ _(' Ok')}}">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
 <div class="card-body table-responsive">
-			  <table class="table table-hover">
-				<thead class="text-warning">
-				  <th>{{ _("File")}}</th>
-				  <th>{{ _("Address")}}</th>
-				  <th>{{ _("Encrypted")}}</th>
-				  <th>{{ _("Action")}}</th>
-				</thead>
-		  <tbody>
-		    {% for wallet in wallets %}
-            <tr style="border-bottom:1px solid #808080;">
-                <td>{{ wallet['file'] }}</td>
-				<td><a href="/wallet/load/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
-	            <td>{{ wallet['encrypted'] }}</td>
-				<td><a href="/wallet/load/{{ wallet['file'] }}">
-					<i class="fa fa-envelope-open" title="{{ _("Load")}}"></i>
-				</a></td>
-            </tr>
-			{% end %}
-		  </tbody>
-		</table>
+    <table class="table table-hover">
+        <thead class="text-warning">
+        <th>{{ _("File")}}</th>
+        <th>{{ _("Address")}}</th>
+        <th>{{ _("Encrypted")}}</th>
+        <th>{{ _("Action")}}</th>
+        </thead>
+        <tbody>
+        {% for wallet in wallets %}
+        <tr style="border-bottom:1px solid #808080;">
+            <td>{{ wallet['file'] }}</td>
+            <td><a href="/wallet/load/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
+            <td>{{ wallet['encrypted'] }}</td>
+            <td><a href="/wallet/load/{{ wallet['file'] }}">
+                <i class="fa fa-envelope-open" title="{{ _(' Load')}}"></i>
+            </a></td>
+        </tr>
+        {% end %}
+        </tbody>
+    </table>
 </div>
 {% end %}
