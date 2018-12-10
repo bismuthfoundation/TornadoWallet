@@ -28,7 +28,7 @@ msgstr "Python, loistava ohjelmointikieli!\n"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
+msgstr " <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> Web-Sovelluskehys"
 
 #: themes/material/about_credits.html:33
 msgid "About"
@@ -40,7 +40,7 @@ msgstr "Tornado lompakko versio {}"
 
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr "This is the default wallet theme by {} from {}."
+msgstr "Tämä on lompakon default teema"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
@@ -165,7 +165,7 @@ msgstr "blokki #"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr "Sidebar Filters"
+msgstr "Sivupalkin suodattimet"
 
 #: themes/material/base.html:236
 msgid "Images"
@@ -259,7 +259,7 @@ msgstr "Edellinen sivu"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "Tokens are a core BIS functionality"
+msgstr "Tokenit ovat Bismuthin perusta"
 
 #: themes/material/transactions_send.html:14
 #: themes/material/transactions_send_confirm.html:28
