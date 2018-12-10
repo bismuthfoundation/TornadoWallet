@@ -1,372 +1,472 @@
-# Spanish translations for PACKAGE package.
-# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# toto <dev@eggpool.net>, 2018.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-08 10:52+0100\n"
-"PO-Revision-Date: 2018-12-08 10:52+0100\n"
-"Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: Spanish\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: TornadoWallet\n"
+"Language: es\n"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
-msgstr ""
+msgstr "Créditos"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr ""
+msgstr "Esta cartera no hubiera existido sin..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr ""
+msgstr "La plantilla \"Material Dark\" creada por <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
-msgstr ""
+msgstr "Python, ¡genial lenguaje de programación!"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr ""
-
-#: themes/material/about_credits.html:27
-msgid "About"
-msgstr ""
-
-#: themes/material/about_credits.html:32
-msgid "Tornado wallet version {}"
-msgstr ""
+msgstr "La plataforma de aplicación web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
 
 #: themes/material/about_credits.html:33
+msgid "About"
+msgstr "Sobre nosotros"
+
+#: themes/material/about_credits.html:38
+msgid "Tornado wallet version {}"
+msgstr "Cartera Tornado versión {}"
+
+#: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr ""
+msgstr "Este es el tema por defecto de la cartera por {} desde {}."
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr ""
+msgstr "Servidor actual de la cartera"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr ""
+msgstr "Este es el servidor al que estás conectado."
 
 #: themes/material/about_network.html:18
 msgid "Server:"
-msgstr ""
+msgstr "Servidor:"
 
 #: themes/material/about_network.html:20
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr ""
+msgstr "Versión del servidor de la cartera {}"
 
 #: themes/material/about_network.html:22
 msgid "Connected clients:"
-msgstr ""
+msgstr "Clientes conectados:"
 
 #: themes/material/about_network.html:23
 msgid "Protocol"
-msgstr ""
+msgstr "Protocolo"
 
 #: themes/material/about_network.html:24
 msgid "Node Version"
-msgstr ""
+msgstr "Versión de nodo"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr ""
+msgstr "Conexiones de pares:"
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
-msgstr ""
+msgstr "Tiempo online:"
 
 #: themes/material/about_network.html:27
 msgid "Consensus:"
-msgstr ""
+msgstr "Consenso:"
 
 #: themes/material/about_network.html:47
 msgid "Block"
-msgstr ""
+msgstr "Bloque"
 
 #: themes/material/about_network.html:59
 msgid "Difficulty"
-msgstr ""
+msgstr "Dificultad"
 
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr ""
+msgstr "Servidores disponibles de cartera"
 
 #: themes/material/about_network.html:73
 msgid "servers"
-msgstr ""
+msgstr "servidores"
 
 #: themes/material/about_network.html:81
 msgid "Refresh from API"
-msgstr ""
+msgstr "Actualizar desde API"
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
-msgstr ""
+msgstr "Cartera Bismuth"
 
 #: themes/material/base.html:40
 msgid "Dashboard"
-msgstr ""
+msgstr "Centro de Control"
 
 #: themes/material/base.html:46
 msgid "Transactions"
-msgstr ""
+msgstr "Transacciones"
 
 #: themes/material/base.html:52
 msgid "Address book"
-msgstr ""
+msgstr "Libro de direcciones"
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr ""
+msgstr "Tokens"
 
 #: themes/material/base.html:65
 msgid "Messages"
-msgstr ""
+msgstr "Mensajes"
 
 #: themes/material/base.html:72
 msgid "Network"
-msgstr ""
+msgstr "Red"
 
 #: themes/material/base.html:84 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr ""
+msgstr "Cristales"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Cambiar navegación"
 
 #: themes/material/base.html:177
 msgid "Source"
-msgstr ""
+msgstr "Fuente"
 
 #: themes/material/base.html:182
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: themes/material/base.html:187
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: themes/material/base.html:192
 msgid "Donate"
-msgstr ""
+msgstr "Donar"
 
 #: themes/material/base.html:203
 msgid "block #"
-msgstr ""
+msgstr "bloque #"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr ""
+msgstr "Filtros de Barra Lateral"
 
 #: themes/material/base.html:236
 msgid "Images"
-msgstr ""
+msgstr "Imágenes"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr ""
+msgstr "Los Cristales son funcionalidades extra que puedes añadir a tu cartera"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
-msgstr ""
+msgstr "WIP"
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
 msgid "Balance"
-msgstr ""
+msgstr "Balance"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr ""
+msgstr "Enviar $BIS a..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
+#: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr ""
+msgstr "Recibir"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr ""
+msgstr "Solicitar un pago con $BIS"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
-msgstr ""
+msgstr "Última transacciones"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
-msgstr ""
+msgstr "Actualizado el"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
 #: themes/material/wallet_load.html:9
 msgid "Address"
-msgstr ""
+msgstr "Dirección"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
-#: themes/material/transactions_send.html:40
+#: themes/material/transactions_receive.html:43
+#: themes/material/transactions_send.html:39
+#: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
-msgstr ""
+msgstr "Cantidad"
 
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: themes/material/home.html:121
 msgid "Bismuth news"
-msgstr ""
+msgstr "Noticias Bismuth"
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
-msgstr ""
+msgstr "Bismuth vs USD"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr ""
+msgstr "Esto es una prueba con datos de test"
 
 #: themes/material/home.html:162
 msgid "Account balance"
-msgstr ""
+msgstr "Balance de cuenta"
 
 #: themes/material/home.html:163
 msgid "Last 12 months"
-msgstr ""
+msgstr "Últimos 12 meses"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr ""
+msgstr "Prueba con datos de test"
 
 #: themes/material/message.html:16
+#: themes/material/transactions_send_confirm.html:16
 msgid "Previous page"
-msgstr ""
+msgstr "Página anterior"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr ""
+msgstr "Los Tokens son una funcionalidad principal de BIS"
 
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr ""
-
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr ""
-
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr ""
+#: themes/material/transactions_send.html:14
+#: themes/material/transactions_send_confirm.html:28
+msgid "Send To"
+msgstr "Enviar a"
 
 #: themes/material/transactions_send.html:15
-msgid "Send To"
-msgstr ""
-
-#: themes/material/transactions_send.html:16
+#: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
-msgstr ""
+msgstr "A quién enviar BIS."
 
-#: themes/material/transactions_send.html:20
+#: themes/material/transactions_send.html:19
+#: themes/material/transactions_send_confirm.html:33
 msgid "Recipient"
-msgstr ""
+msgstr "Destinatario"
 
-#: themes/material/transactions_send.html:25
+#: themes/material/transactions_receive.html:26
+#: themes/material/transactions_send.html:24
+#: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
-msgstr ""
+msgstr "Datos (mensaje)"
 
-#: themes/material/transactions_send.html:27
+#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr ""
+msgstr "Opcionalmente, puedes añadir un pequeño comentario con tu transacción. Se requiere para depósitos en exchanges."
 
-#: themes/material/transactions_send.html:41
+#: themes/material/transactions_send.html:40
+#: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr ""
+msgstr "Cuántos BIS enviar."
 
-#: themes/material/transactions_send.html:47
+#: themes/material/transactions_receive.html:50
+#: themes/material/transactions_send.html:46
+#: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
-msgstr ""
+msgstr "Cantidad (BIS)"
 
+#: themes/material/transactions_receive.html:57
 #: themes/material/transactions_send.html:53
+#: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr ""
+msgstr "Comisiones est."
 
-#: themes/material/transactions_send.html:57
+#: themes/material/transactions_receive.html:62
+#: themes/material/transactions_send.html:58
+#: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
-msgstr ""
+msgstr "Total (BIS)"
 
-#: themes/material/transactions_send.html:62
+#: themes/material/transactions_send.html:64 wallet.py:149
 msgid "Send BIS"
-msgstr ""
+msgstr "Enviar BIS"
 
 #: themes/material/wallet_info.html:13
 msgid "Current Wallet"
-msgstr ""
+msgstr "Cartera actual"
 
 #: themes/material/wallet_info.html:30
 msgid "Open existing"
-msgstr ""
+msgstr "Abrir existente"
 
 #: themes/material/wallet_info.html:31
 msgid "wallet"
-msgstr ""
+msgstr "cartera"
 
 #: themes/material/wallet_info.html:35
 msgid "Load a wallet from disk"
-msgstr ""
+msgstr "Cargar cartera desde disco"
 
 #: themes/material/wallet_info.html:49
 msgid "Create a"
-msgstr ""
+msgstr "Crear una"
 
 #: themes/material/wallet_info.html:50
 msgid "new wallet"
-msgstr ""
+msgstr "nueva cartera"
 
 #: themes/material/wallet_load.html:8
 msgid "File"
-msgstr ""
+msgstr "Archivo"
 
 #: themes/material/wallet_load.html:10
 msgid "Encrypted"
-msgstr ""
+msgstr "Encriptado"
 
 #: themes/material/wip.html:10
 msgid "W.I.P."
-msgstr ""
+msgstr "W.I.P."
 
 #: themes/material/wip.html:13
 msgid "This feature is under construction."
-msgstr ""
+msgstr "Esta opción está bajo construcción"
+
+#: wallet.py:190
+msgid "Transaction list"
+msgstr "Lista de transacciones"
+
+#: wallet.py:260 wallet.py:269
+msgid "Error"
+msgstr "Error"
+
+#: wallet.py:260
+msgid "This file already exists: {}.der"
+msgstr "Este archivo ya existe {}.der"
+
+#: wallet.py:269
+msgid "Error creating {}.der"
+msgstr "Error al crear {}.der"
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr "Txid"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "Comisiones"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "Datos"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "Solicitar BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Tu dirección"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "Esta es la dirección de tu cartera actual, pero la puedes cambiar si es necesario. En ese caso, comprueba doblemente."
+
+#: themes/material/transactions_receive.html:28
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Opcionalmente, puedes añadir un pequeño comentario a tu transacción, como una referencia para ti. Se guardara en la cadena de bloques."
+
+#: themes/material/transactions_receive.html:32
+msgid "This is the QR code for your address only."
+msgstr "Este es el código QR para tu dirección única."
+
+#: themes/material/transactions_receive.html:44
+msgid "How many BIS to request."
+msgstr "Cuántos BIS solicitar"
+
+#: themes/material/transactions_receive.html:52
+msgid "This is what you will receive"
+msgstr "Esto es lo que vas a recibir"
+
+#: themes/material/transactions_receive.html:59
+#: themes/material/transactions_send.html:55
+#: themes/material/transactions_send_confirm.html:72
+msgid "Fees depend on Data length"
+msgstr "Las comisiones dependen de la longitud de los Datos"
+
+#: themes/material/transactions_receive.html:64
+msgid "This is what the sender will pay"
+msgstr "Esto es lo que pagará quien hace el envío"
+
+#: themes/material/transactions_receive.html:68
+msgid "Get BIS URL"
+msgstr "Ir a la URL de BIS"
+
+#: themes/material/transactions_receive.html:72
+msgid "This is the QR code for your address, data and amount as a BisUrl."
+msgstr "Este es el código QR para tu dirección, datos y cantidad como un BisUrl."
+
+#: themes/material/transactions_receive.html:73
+msgid "You can copy/paste this image to send in a mail or anything"
+msgstr "Puedes copiar/pegar esta imagen para enviar por mail o por donde quieras"
+
+#: themes/material/transactions_send.html:48
+#: themes/material/transactions_send_confirm.html:65
+msgid "This is what the recipient will receive"
+msgstr "Esto es lo que el destinatario recibirá"
+
+#: themes/material/transactions_send.html:60
+#: themes/material/transactions_send_confirm.html:77
+msgid "This is what you will pay, fees included."
+msgstr "Esto es lo que pagarás, comisiones incluidas"
+
+#: themes/material/wallet_load.html:11
+msgid "Action"
+msgstr "Acción"
+
+#: themes/material/about_credits.html:20
+msgid "Translations"
+msgstr "Traducciones"
+
+#: themes/material/transactions_send_confirm.html:99
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: themes/material/transactions_send_confirm.html:103
+msgid "Confirm and send BIS"
+msgstr "Confirmar y enviar BIS"
 
 #: wallet.py:152
-msgid "Transaction list"
-msgstr ""
+msgid "Send BIS: Confirmation"
+msgstr "Enviar BIS: Confirmación"
 
-#: wallet.py:215 wallet.py:224
-msgid "Error"
-msgstr ""
+#: wallet.py:154
+msgid "Please confirm this transaction"
+msgstr "Por favor, confirma esta transacción"
 
-#: wallet.py:215
-msgid "This file already exists: {}.der"
-msgstr ""
+#: wallet.py:155
+msgid "Check this is what you intended to do and hit the \"confirm\" button"
+msgstr "Comprueba que esto es lo que estabas intentando hacer y haz clic en el botón \"confirmar\""
 
-#: wallet.py:224
-msgid "Error creating {}.der"
-msgstr ""
+#: wallet.py:174
+msgid "Receive BIS"
+msgstr "Recibir BIS"
+
