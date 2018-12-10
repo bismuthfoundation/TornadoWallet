@@ -1,485 +1,477 @@
-# Romanian translations for PACKAGE package.
-# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# toto <dev@eggpool.net>, 2018.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 08:13+0100\n"
-"PO-Revision-Date: 2018-12-10 08:13+0100\n"
-"Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: Romanian\n"
-"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: TornadoWallet\n"
+"Language: ro\n"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
-msgstr ""
+msgstr "Merite"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr ""
+msgstr "Acest portofel nu ar fi existat fără...\n"
+""
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr ""
+msgstr "Șablon \"Material Dark\" de <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>\n"
+""
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
-msgstr ""
+msgstr "Python, un limbaj minunat!"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr ""
+msgstr "Arhitectura aplicației web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
 
-#: themes/material/about_credits.html:20
-msgid "Translations"
-msgstr ""
+#: themes/material/about_credits.html:33
+msgid "About"
+msgstr "Despre"
+
+#: themes/material/about_credits.html:38
+msgid "Tornado wallet version {}"
+msgstr "Portofel Tornado versiunea {}"
 
 #: themes/material/about_credits.html:39
-msgid "About"
-msgstr ""
-
-#: themes/material/about_credits.html:44
-msgid "Tornado wallet version {}"
-msgstr ""
-
-#: themes/material/about_credits.html:45
 msgid "This is the default wallet theme by {} from {}."
-msgstr ""
+msgstr "Aceasta este tema implicită a portofelului de {} din {}."
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr ""
+msgstr "Server portofel curent"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr ""
+msgstr "Acesta este serverul la care eşti conectat."
 
 #: themes/material/about_network.html:18
 msgid "Server:"
-msgstr ""
+msgstr "Server:"
 
 #: themes/material/about_network.html:20
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr ""
+msgstr "Versiunea de server a portofelului"
 
 #: themes/material/about_network.html:22
 msgid "Connected clients:"
-msgstr ""
+msgstr "Clienți conectați:"
 
 #: themes/material/about_network.html:23
 msgid "Protocol"
-msgstr ""
+msgstr "Protocol"
 
 #: themes/material/about_network.html:24
 msgid "Node Version"
-msgstr ""
+msgstr "Versiune nod"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr ""
+msgstr "Conexiunile rețelei:"
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
-msgstr ""
+msgstr "Timp"
 
 #: themes/material/about_network.html:27
 msgid "Consensus:"
-msgstr ""
+msgstr "Consens"
 
 #: themes/material/about_network.html:47
 msgid "Block"
-msgstr ""
+msgstr "Block"
 
 #: themes/material/about_network.html:59
 msgid "Difficulty"
-msgstr ""
+msgstr "Dificultate"
 
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr ""
+msgstr "Servere portofel disponibile"
 
 #: themes/material/about_network.html:73
 msgid "servers"
-msgstr ""
+msgstr "servere"
 
 #: themes/material/about_network.html:81
 msgid "Refresh from API"
-msgstr ""
+msgstr "Reîmprospătare din API"
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
-msgstr ""
+msgstr "Portofel Bismuth"
 
 #: themes/material/base.html:40
 msgid "Dashboard"
-msgstr ""
+msgstr "Panou de comandă"
 
 #: themes/material/base.html:46
 msgid "Transactions"
-msgstr ""
+msgstr "Tranzacții"
 
 #: themes/material/base.html:52
 msgid "Address book"
-msgstr ""
+msgstr "Agendă"
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr ""
+msgstr "Tokeni"
 
 #: themes/material/base.html:65
 msgid "Messages"
-msgstr ""
+msgstr "Mesaje"
 
 #: themes/material/base.html:72
 msgid "Network"
-msgstr ""
+msgstr "Rețea"
 
 #: themes/material/base.html:84 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr ""
+msgstr "Cristale"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Comutare navigație"
 
 #: themes/material/base.html:177
 msgid "Source"
-msgstr ""
+msgstr "Sursă"
 
 #: themes/material/base.html:182
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: themes/material/base.html:187
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: themes/material/base.html:192
 msgid "Donate"
-msgstr ""
+msgstr "Donează"
 
 #: themes/material/base.html:203
 msgid "block #"
-msgstr ""
+msgstr "block #"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr ""
+msgstr "Filtre Bară Laterală"
 
 #: themes/material/base.html:236
 msgid "Images"
-msgstr ""
+msgstr "Imagini"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr ""
+msgstr "Cristalele sunt funcții extra pe care le poți adăuga la portofel"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
-msgstr ""
+msgstr "În lucru"
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
 msgid "Balance"
-msgstr ""
+msgstr "Balanță"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr ""
+msgstr "Trimite"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr ""
+msgstr "Trimite $BIS la..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr ""
+msgstr "Primește"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr ""
+msgstr "Cere o plată în $BIS"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
-msgstr ""
+msgstr "Ultimele tranzacții"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
-msgstr ""
+msgstr "Actualizat la"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
-msgstr ""
+msgstr "Dată"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
 #: themes/material/wallet_load.html:9
 msgid "Address"
-msgstr ""
+msgstr "Adresă"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:43
 #: themes/material/transactions_send.html:39
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
-msgstr ""
+msgstr "Sumă"
 
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr ""
+msgstr "Tipul"
 
 #: themes/material/home.html:121
 msgid "Bismuth news"
-msgstr ""
+msgstr "Știri Bismuth"
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
-msgstr ""
+msgstr "Bismuth vs USD"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr ""
+msgstr "Aceasta este o mostră cu date false"
 
 #: themes/material/home.html:162
 msgid "Account balance"
-msgstr ""
+msgstr "Balanța contului"
 
 #: themes/material/home.html:163
 msgid "Last 12 months"
-msgstr ""
+msgstr "Ultimele 12 luni"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr ""
+msgstr "Mostră cu date false"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
 msgid "Previous page"
-msgstr ""
+msgstr "Pagina anterioară"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr ""
+msgstr "Tokenii sunt o funcționalitate de bază BIS\n"
+""
 
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr ""
+#: themes/material/transactions_send.html:14
+#: themes/material/transactions_send_confirm.html:28
+msgid "Send To"
+msgstr "Trimite la"
 
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr ""
+#: themes/material/transactions_send.html:15
+#: themes/material/transactions_send_confirm.html:29
+msgid "To whom send BIS."
+msgstr "Cui îi trimiți BIS."
 
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr ""
-
-#: themes/material/transactions_receive.html:16
-msgid "Request BIS"
-msgstr ""
-
-#: themes/material/transactions_receive.html:20
-msgid "Your address"
-msgstr ""
-
-#: themes/material/transactions_receive.html:22
-msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr ""
+#: themes/material/transactions_send.html:19
+#: themes/material/transactions_send_confirm.html:33
+msgid "Recipient"
+msgstr "Destinatar"
 
 #: themes/material/transactions_receive.html:26
 #: themes/material/transactions_send.html:24
 #: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
-msgstr ""
+msgstr "Date (mesaj)"
 
-#: themes/material/transactions_receive.html:28
-msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr ""
+#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send_confirm.html:43
+msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
+msgstr "Opțional, puteți adăuga un mic comentariu la tranzacție. Necesar la depunerea pe exchange-uri."
 
-#: themes/material/transactions_receive.html:32
-msgid "This is the QR code for your address only."
-msgstr ""
-
-#: themes/material/transactions_receive.html:44
-msgid "How many BIS to request."
-msgstr ""
+#: themes/material/transactions_send.html:40
+#: themes/material/transactions_send_confirm.html:56
+msgid "How many BIS to send."
+msgstr "Câti BIS trimiți."
 
 #: themes/material/transactions_receive.html:50
 #: themes/material/transactions_send.html:46
 #: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
-msgstr ""
-
-#: themes/material/transactions_receive.html:52
-msgid "This is what you will receive"
-msgstr ""
+msgstr "Suma (BIS)"
 
 #: themes/material/transactions_receive.html:57
 #: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr ""
-
-#: themes/material/transactions_receive.html:59
-#: themes/material/transactions_send.html:55
-#: themes/material/transactions_send_confirm.html:72
-msgid "Fees depend on Data length"
-msgstr ""
+msgstr "~ Comision"
 
 #: themes/material/transactions_receive.html:62
 #: themes/material/transactions_send.html:58
 #: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
-msgstr ""
+msgstr "Total (BIS)"
+
+#: themes/material/transactions_send.html:64 wallet.py:149
+msgid "Send BIS"
+msgstr "Trimite (BIS)"
+
+#: themes/material/wallet_info.html:13
+msgid "Current Wallet"
+msgstr "Portofel curent"
+
+#: themes/material/wallet_info.html:30
+msgid "Open existing"
+msgstr "Deschide existent"
+
+#: themes/material/wallet_info.html:31
+msgid "wallet"
+msgstr "portofel"
+
+#: themes/material/wallet_info.html:35
+msgid "Load a wallet from disk"
+msgstr "Incarcă un portofel de pe disc"
+
+#: themes/material/wallet_info.html:49
+msgid "Create a"
+msgstr "Creează un"
+
+#: themes/material/wallet_info.html:50
+msgid "new wallet"
+msgstr "portofel nou"
+
+#: themes/material/wallet_load.html:8
+msgid "File"
+msgstr "Fișier"
+
+#: themes/material/wallet_load.html:10
+msgid "Encrypted"
+msgstr "Criptat"
+
+#: themes/material/wip.html:10
+msgid "W.I.P."
+msgstr "În lucru"
+
+#: themes/material/wip.html:13
+msgid "This feature is under construction."
+msgstr "Această funcție este în lucru."
+
+#: wallet.py:190
+msgid "Transaction list"
+msgstr "Listă tranzacții"
+
+#: wallet.py:260 wallet.py:269
+msgid "Error"
+msgstr "Eroare"
+
+#: wallet.py:260
+msgid "This file already exists: {}.der"
+msgstr "Acest fișier există deja: {}. der"
+
+#: wallet.py:269
+msgid "Error creating {}.der"
+msgstr "Eroare la crearea {}. der"
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr "Txid"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "Comision"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "Date"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "Cere BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Adresa ta"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "Aceasta este adresa ta pentru portofelul curent, dar o poți schimba dacă este necesar. Dar verifică de 2 ori."
+
+#: themes/material/transactions_receive.html:28
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Opțional, puteți adăuga un mic comentariu la tranzacția dvs., ca o referință proprie. Vor fi stocate pe lanț."
+
+#: themes/material/transactions_receive.html:32
+msgid "This is the QR code for your address only."
+msgstr "Acesta este codul QR doar pentru adresa dvs."
+
+#: themes/material/transactions_receive.html:44
+msgid "How many BIS to request."
+msgstr "Cați BIS să soliciți."
+
+#: themes/material/transactions_receive.html:52
+msgid "This is what you will receive"
+msgstr "Asta vei primi"
+
+#: themes/material/transactions_receive.html:59
+#: themes/material/transactions_send.html:55
+#: themes/material/transactions_send_confirm.html:72
+msgid "Fees depend on Data length"
+msgstr "Comisionul depinde de mărimea datelor"
 
 #: themes/material/transactions_receive.html:64
 msgid "This is what the sender will pay"
-msgstr ""
+msgstr "Aceasta este ceea ce expeditorul va plăti"
 
 #: themes/material/transactions_receive.html:68
 msgid "Get BIS URL"
-msgstr ""
+msgstr "Obțineți URL-ul BIS"
 
-#: themes/material/transactions_receive.html:74
+#: themes/material/transactions_receive.html:72
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr ""
+msgstr "Acesta este codul QR pentru adresa dvs., datele și suma ca un URL BIS"
 
-#: themes/material/transactions_receive.html:75
+#: themes/material/transactions_receive.html:73
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr ""
-
-#: themes/material/transactions_receive.html:77
-msgid "BIS URL"
-msgstr ""
-
-#: themes/material/transactions_send.html:14
-#: themes/material/transactions_send_confirm.html:28
-msgid "Send To"
-msgstr ""
-
-#: themes/material/transactions_send.html:15
-#: themes/material/transactions_send_confirm.html:29
-msgid "To whom send BIS."
-msgstr ""
-
-#: themes/material/transactions_send.html:19
-#: themes/material/transactions_send_confirm.html:33
-msgid "Recipient"
-msgstr ""
-
-#: themes/material/transactions_send.html:26
-#: themes/material/transactions_send_confirm.html:43
-msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr ""
-
-#: themes/material/transactions_send.html:40
-#: themes/material/transactions_send_confirm.html:56
-msgid "How many BIS to send."
-msgstr ""
+msgstr "Puteți copia/lipi această imagine pentru a trimite într-un e-mail sau în altă parte"
 
 #: themes/material/transactions_send.html:48
 #: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
-msgstr ""
+msgstr "Aceasta este ceea ce destinatarul va primi\n"
+""
 
 #: themes/material/transactions_send.html:60
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr ""
-
-#: themes/material/transactions_send.html:64 wallet.py:148
-msgid "Send BIS"
-msgstr ""
-
-#: themes/material/transactions_send_confirm.html:99
-msgid "Cancel"
-msgstr ""
-
-#: themes/material/transactions_send_confirm.html:103
-msgid "Confirm and send BIS"
-msgstr ""
-
-#: themes/material/wallet_info.html:13
-msgid "Current Wallet"
-msgstr ""
-
-#: themes/material/wallet_info.html:30
-msgid "Open existing"
-msgstr ""
-
-#: themes/material/wallet_info.html:31
-msgid "wallet"
-msgstr ""
-
-#: themes/material/wallet_info.html:35
-msgid "Load a wallet from disk"
-msgstr ""
-
-#: themes/material/wallet_info.html:49
-msgid "Create a"
-msgstr ""
-
-#: themes/material/wallet_info.html:50
-msgid "new wallet"
-msgstr ""
-
-#: themes/material/wallet_load.html:8
-msgid "File"
-msgstr ""
-
-#: themes/material/wallet_load.html:10
-msgid "Encrypted"
-msgstr ""
+msgstr "Asta este ceea ce vei plăti, comision inclus.\n"
+""
 
 #: themes/material/wallet_load.html:11
 msgid "Action"
-msgstr ""
+msgstr "Acțiune"
 
-#: themes/material/wip.html:10
-msgid "W.I.P."
-msgstr ""
+#: themes/material/about_credits.html:20
+msgid "Translations"
+msgstr "Traduceri"
 
-#: themes/material/wip.html:13
-msgid "This feature is under construction."
-msgstr ""
+#: themes/material/transactions_send_confirm.html:99
+msgid "Cancel"
+msgstr "Anulează"
 
-#: wallet.py:151
+#: themes/material/transactions_send_confirm.html:103
+msgid "Confirm and send BIS"
+msgstr "Confirmă și trimite BIS"
+
+#: wallet.py:152
 msgid "Send BIS: Confirmation"
-msgstr ""
-
-#: wallet.py:153
-msgid "Please confirm this transaction"
-msgstr ""
+msgstr "Trimite BIS: Confirmă"
 
 #: wallet.py:154
+msgid "Please confirm this transaction"
+msgstr "Te rugăm să confirmi această tranzacție"
+
+#: wallet.py:155
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr ""
+msgstr "Verifică dacă asta intenționezi să faci și apasă butonul \"confirmă"
 
-#: wallet.py:175
+#: wallet.py:174
 msgid "Receive BIS"
-msgstr ""
+msgstr "Primește BIS"
 
-#: wallet.py:191
-msgid "Transaction list"
-msgstr ""
-
-#: wallet.py:261 wallet.py:270
-msgid "Error"
-msgstr ""
-
-#: wallet.py:261
-msgid "This file already exists: {}.der"
-msgstr ""
-
-#: wallet.py:270
-msgid "Error creating {}.der"
-msgstr ""
