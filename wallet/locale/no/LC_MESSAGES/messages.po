@@ -1,485 +1,472 @@
-# Norwegian translations for PACKAGE package.
-# Copyright (C) 2018 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# toto <dev@eggpool.net>, 2018.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-09 13:22+0100\n"
-"PO-Revision-Date: 2018-12-09 13:22+0100\n"
-"Last-Translator: toto <dev@eggpool.net>\n"
-"Language-Team: Norwegian\n"
-"Language: no\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: TornadoWallet\n"
+"Language: no\n"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
-msgstr ""
+msgstr "Kreditt"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr ""
+msgstr "Denne lommebok ville ikke ha eksistert uten..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr ""
+msgstr "\"Material Dark\" malen av <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
-msgstr ""
+msgstr "Python, rått språk!"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr ""
-
-#: themes/material/about_credits.html:20
-msgid "Translations"
-msgstr ""
+msgstr "<a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web utviklingsmiljø"
 
 #: themes/material/about_credits.html:33
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: themes/material/about_credits.html:38
 msgid "Tornado wallet version {}"
-msgstr ""
+msgstr "Tornado lommebok versjon {}"
 
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr ""
+msgstr "Dette er standard lommebok tema av {} fra {}"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr ""
+msgstr "Gjeldende lommeboktjener"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr ""
+msgstr "Dette er tjeneren du er tilkoblet"
 
 #: themes/material/about_network.html:18
 msgid "Server:"
-msgstr ""
+msgstr "Tjener:"
 
 #: themes/material/about_network.html:20
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr ""
+msgstr "Lommeboktjener versjon {}"
 
 #: themes/material/about_network.html:22
 msgid "Connected clients:"
-msgstr ""
+msgstr "Tilkoblede klienter:"
 
 #: themes/material/about_network.html:23
 msgid "Protocol"
-msgstr ""
+msgstr "Protokoll"
 
 #: themes/material/about_network.html:24
 msgid "Node Version"
-msgstr ""
+msgstr "Node Versjon"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr ""
+msgstr "Tilkoblinger fra andre noder:"
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
-msgstr ""
+msgstr "Oppetid:"
 
 #: themes/material/about_network.html:27
 msgid "Consensus:"
-msgstr ""
+msgstr "Konsensus:"
 
 #: themes/material/about_network.html:47
 msgid "Block"
-msgstr ""
+msgstr "Blokk"
 
 #: themes/material/about_network.html:59
 msgid "Difficulty"
-msgstr ""
+msgstr "Vanskelighetsgrad"
 
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr ""
+msgstr "Tilgjengelige lommeboktjenere"
 
 #: themes/material/about_network.html:73
 msgid "servers"
-msgstr ""
+msgstr "tjenere"
 
 #: themes/material/about_network.html:81
 msgid "Refresh from API"
-msgstr ""
+msgstr "Oppfrisk fra API"
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
-msgstr ""
+msgstr "Bismuth Lommebok"
 
 #: themes/material/base.html:40
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashbord"
 
 #: themes/material/base.html:46
 msgid "Transactions"
-msgstr ""
+msgstr "Transaksjoner"
 
 #: themes/material/base.html:52
 msgid "Address book"
-msgstr ""
+msgstr "Adressebok"
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr ""
+msgstr "Tokens"
 
 #: themes/material/base.html:65
 msgid "Messages"
-msgstr ""
+msgstr "Meldinger"
 
 #: themes/material/base.html:72
 msgid "Network"
-msgstr ""
+msgstr "Nettverk"
 
 #: themes/material/base.html:84 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr ""
+msgstr "Krystaller"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Veksle navigasjon"
 
 #: themes/material/base.html:177
 msgid "Source"
-msgstr ""
+msgstr "Kilde"
 
 #: themes/material/base.html:182
 msgid "Blog"
-msgstr ""
+msgstr "Blogg"
 
 #: themes/material/base.html:187
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: themes/material/base.html:192
 msgid "Donate"
-msgstr ""
+msgstr "Donér"
 
 #: themes/material/base.html:203
 msgid "block #"
-msgstr ""
+msgstr "blokk #"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr ""
+msgstr "Sidebar filtre"
 
 #: themes/material/base.html:236
 msgid "Images"
-msgstr ""
+msgstr "Bilder"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr ""
+msgstr "Krystaller er ekstra funksjonalitet som du kan legge til din lommebok"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
-msgstr ""
+msgstr "WIP"
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
 msgid "Balance"
-msgstr ""
+msgstr "Balanse"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr ""
+msgstr "Send"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr ""
+msgstr "Send $BIS til..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr ""
+msgstr "Motta"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr ""
+msgstr "Be om en $BIS betaling"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
-msgstr ""
+msgstr "Siste transaksjoner"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
-msgstr ""
+msgstr "Oppdatert den"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
-msgstr ""
+msgstr "Dato"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
 #: themes/material/wallet_load.html:9
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:43
 #: themes/material/transactions_send.html:39
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
-msgstr ""
+msgstr "Beløp"
 
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: themes/material/home.html:121
 msgid "Bismuth news"
-msgstr ""
+msgstr "Bismuth nyheter"
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
-msgstr ""
+msgstr "Bismuth vs USD"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr ""
+msgstr "Dette er en mockup med falske data"
 
 #: themes/material/home.html:162
 msgid "Account balance"
-msgstr ""
+msgstr "Kontobalanse"
 
 #: themes/material/home.html:163
 msgid "Last 12 months"
-msgstr ""
+msgstr "Siste 12 måneder"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr ""
+msgstr "Mockup med falske data"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
 msgid "Previous page"
-msgstr ""
+msgstr "Forrige side"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr ""
+msgstr "Tokens er en kjernefunksjonalitet i BIS"
 
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr ""
+#: themes/material/transactions_send.html:14
+#: themes/material/transactions_send_confirm.html:28
+msgid "Send To"
+msgstr "Send Til"
 
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr ""
+#: themes/material/transactions_send.html:15
+#: themes/material/transactions_send_confirm.html:29
+msgid "To whom send BIS."
+msgstr "Hvem sende BIS til"
 
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr ""
-
-#: themes/material/transactions_receive.html:16
-msgid "Request BIS"
-msgstr ""
-
-#: themes/material/transactions_receive.html:20
-msgid "Your address"
-msgstr ""
-
-#: themes/material/transactions_receive.html:22
-msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr ""
+#: themes/material/transactions_send.html:19
+#: themes/material/transactions_send_confirm.html:33
+msgid "Recipient"
+msgstr "Mottaker"
 
 #: themes/material/transactions_receive.html:26
 #: themes/material/transactions_send.html:24
 #: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
-msgstr ""
+msgstr "Data (melding)"
 
-#: themes/material/transactions_receive.html:28
-msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr ""
+#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send_confirm.html:43
+msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
+msgstr "Valgfri, du kan legge til en kort kommentar til transaksjonen. Nødvendig for innskudd på børs."
 
-#: themes/material/transactions_receive.html:32
-msgid "This is the QR code for your address only."
-msgstr ""
-
-#: themes/material/transactions_receive.html:44
-msgid "How many BIS to request."
-msgstr ""
+#: themes/material/transactions_send.html:40
+#: themes/material/transactions_send_confirm.html:56
+msgid "How many BIS to send."
+msgstr "Hvor mange BIS å sende"
 
 #: themes/material/transactions_receive.html:50
 #: themes/material/transactions_send.html:46
 #: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
-msgstr ""
-
-#: themes/material/transactions_receive.html:52
-msgid "This is what you will receive"
-msgstr ""
+msgstr "Beløp (BIS)"
 
 #: themes/material/transactions_receive.html:57
 #: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr ""
-
-#: themes/material/transactions_receive.html:59
-#: themes/material/transactions_send.html:55
-#: themes/material/transactions_send_confirm.html:72
-msgid "Fees depend on Data length"
-msgstr ""
+msgstr "Est. avgift"
 
 #: themes/material/transactions_receive.html:62
 #: themes/material/transactions_send.html:58
 #: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
-msgstr ""
+msgstr "Total (BIS)"
+
+#: themes/material/transactions_send.html:64 wallet.py:149
+msgid "Send BIS"
+msgstr "Sende BIS"
+
+#: themes/material/wallet_info.html:13
+msgid "Current Wallet"
+msgstr "Gjeldene Lommebok"
+
+#: themes/material/wallet_info.html:30
+msgid "Open existing"
+msgstr "Åpne eksisterende"
+
+#: themes/material/wallet_info.html:31
+msgid "wallet"
+msgstr "lommebok"
+
+#: themes/material/wallet_info.html:35
+msgid "Load a wallet from disk"
+msgstr "Åpne en lommebok fra disk"
+
+#: themes/material/wallet_info.html:49
+msgid "Create a"
+msgstr "Lag en"
+
+#: themes/material/wallet_info.html:50
+msgid "new wallet"
+msgstr "ny lommebok"
+
+#: themes/material/wallet_load.html:8
+msgid "File"
+msgstr "Fil"
+
+#: themes/material/wallet_load.html:10
+msgid "Encrypted"
+msgstr "Krypert"
+
+#: themes/material/wip.html:10
+msgid "W.I.P."
+msgstr "W.I.P."
+
+#: themes/material/wip.html:13
+msgid "This feature is under construction."
+msgstr "Denne funksjonalitet er under konstruksjon"
+
+#: wallet.py:190
+msgid "Transaction list"
+msgstr "Transaksjonsliste"
+
+#: wallet.py:260 wallet.py:269
+msgid "Error"
+msgstr "Feil"
+
+#: wallet.py:260
+msgid "This file already exists: {}.der"
+msgstr "Denne filen eksisterer allerede: {}.der"
+
+#: wallet.py:269
+msgid "Error creating {}.der"
+msgstr "Feil ved oppretting av {}.der"
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr "Txid"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "Avgifter"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "Data"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "Be om BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Din adresse"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "Dette er din adresse for gjeldende lommebok, men du kan endre den om nødvendig. I så fall dobbelsjekk."
+
+#: themes/material/transactions_receive.html:28
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Valgritt, du kan legge til en liten kommentar til din transaksjon, f.eks. en egen referanse. Den vil bli lagret på blokkjeden."
+
+#: themes/material/transactions_receive.html:32
+msgid "This is the QR code for your address only."
+msgstr "Dette er QR koden for kun din adresse."
+
+#: themes/material/transactions_receive.html:44
+msgid "How many BIS to request."
+msgstr "Hvor mange BIS å be om."
+
+#: themes/material/transactions_receive.html:52
+msgid "This is what you will receive"
+msgstr "Dette er hvor mye du vil motta"
+
+#: themes/material/transactions_receive.html:59
+#: themes/material/transactions_send.html:55
+#: themes/material/transactions_send_confirm.html:72
+msgid "Fees depend on Data length"
+msgstr "Avgift avhenger av Data lengde"
 
 #: themes/material/transactions_receive.html:64
 msgid "This is what the sender will pay"
-msgstr ""
+msgstr "Dette er hva sender vil betale"
 
 #: themes/material/transactions_receive.html:68
 msgid "Get BIS URL"
-msgstr ""
+msgstr "Få BIS URL"
 
-#: themes/material/transactions_receive.html:74
+#: themes/material/transactions_receive.html:72
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr ""
+msgstr "Dette er QR koden for din adresse, data og beløp som BisUrl."
 
-#: themes/material/transactions_receive.html:75
+#: themes/material/transactions_receive.html:73
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr ""
-
-#: themes/material/transactions_receive.html:77
-msgid "BIS URL"
-msgstr ""
-
-#: themes/material/transactions_send.html:14
-#: themes/material/transactions_send_confirm.html:28
-msgid "Send To"
-msgstr ""
-
-#: themes/material/transactions_send.html:15
-#: themes/material/transactions_send_confirm.html:29
-msgid "To whom send BIS."
-msgstr ""
-
-#: themes/material/transactions_send.html:19
-#: themes/material/transactions_send_confirm.html:33
-msgid "Recipient"
-msgstr ""
-
-#: themes/material/transactions_send.html:26
-#: themes/material/transactions_send_confirm.html:43
-msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr ""
-
-#: themes/material/transactions_send.html:40
-#: themes/material/transactions_send_confirm.html:56
-msgid "How many BIS to send."
-msgstr ""
+msgstr "Du kan copy/paste dette bildet og sende i en epost eller annet"
 
 #: themes/material/transactions_send.html:48
 #: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
-msgstr ""
+msgstr "Dette er hva mottaker vil få"
 
 #: themes/material/transactions_send.html:60
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr ""
-
-#: themes/material/transactions_send.html:64 wallet.py:148
-msgid "Send BIS"
-msgstr ""
-
-#: themes/material/transactions_send_confirm.html:99
-msgid "Cancel"
-msgstr ""
-
-#: themes/material/transactions_send_confirm.html:103
-msgid "Confirm and send BIS"
-msgstr ""
-
-#: themes/material/wallet_info.html:13
-msgid "Current Wallet"
-msgstr ""
-
-#: themes/material/wallet_info.html:30
-msgid "Open existing"
-msgstr ""
-
-#: themes/material/wallet_info.html:31
-msgid "wallet"
-msgstr ""
-
-#: themes/material/wallet_info.html:35
-msgid "Load a wallet from disk"
-msgstr ""
-
-#: themes/material/wallet_info.html:49
-msgid "Create a"
-msgstr ""
-
-#: themes/material/wallet_info.html:50
-msgid "new wallet"
-msgstr ""
-
-#: themes/material/wallet_load.html:8
-msgid "File"
-msgstr ""
-
-#: themes/material/wallet_load.html:10
-msgid "Encrypted"
-msgstr ""
+msgstr "Dette er hva du vil betale, avgift inkludert."
 
 #: themes/material/wallet_load.html:11
 msgid "Action"
-msgstr ""
+msgstr "Aksjon"
 
-#: themes/material/wip.html:10
-msgid "W.I.P."
-msgstr ""
+#: themes/material/about_credits.html:20
+msgid "Translations"
+msgstr "Oversettelser"
 
-#: themes/material/wip.html:13
-msgid "This feature is under construction."
-msgstr ""
+#: themes/material/transactions_send_confirm.html:99
+msgid "Cancel"
+msgstr "Kansellér"
 
-#: wallet.py:151
+#: themes/material/transactions_send_confirm.html:103
+msgid "Confirm and send BIS"
+msgstr "Bekreft og send BIS"
+
+#: wallet.py:152
 msgid "Send BIS: Confirmation"
-msgstr ""
-
-#: wallet.py:153
-msgid "Please confirm this transaction"
-msgstr ""
+msgstr "Send BIS: Bekreftelse"
 
 #: wallet.py:154
+msgid "Please confirm this transaction"
+msgstr "Vennligst bekreft denne transaksjon"
+
+#: wallet.py:155
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr ""
+msgstr "Sjekk at dette er hva du ønsker å gjøre og klikk på \"bekreft\" knappen"
 
-#: wallet.py:175
+#: wallet.py:174
 msgid "Receive BIS"
-msgstr ""
+msgstr "Motta BIS"
 
-#: wallet.py:191
-msgid "Transaction list"
-msgstr ""
-
-#: wallet.py:261 wallet.py:270
-msgid "Error"
-msgstr ""
-
-#: wallet.py:261
-msgid "This file already exists: {}.der"
-msgstr ""
-
-#: wallet.py:270
-msgid "Error creating {}.der"
-msgstr ""
