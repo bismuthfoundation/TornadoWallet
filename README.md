@@ -16,17 +16,25 @@ Goal is to re-use the existing python code for behind the scene heavy lifting, b
 
 `pip3 install -r requirements.txt`
 
-Pycryptodomex is used and may need extra install on your machine
+Pycryptodomex is used and may need extra install on your machine.
+
+An autoinstaller will be provided with first beta version.
 
 ## Mac
 
-Install xcode compiler:
+Install xcode compiler first:
 
 `xcode-select --install`
 
+then `pip3 install -r requirements.txt`
+
 ## Windows
 
-WIP
+See 
+https://pycryptodome.readthedocs.io/en/latest/src/installation.html#windows-from-sources-python-3-5-and-newer
+
+then `pip3 install -r requirements.txt`
+
 
 # Usage
 

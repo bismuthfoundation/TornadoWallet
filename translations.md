@@ -14,7 +14,7 @@ Here are the current languages and matching credits:
 * FR (French): EggdraSyl @Eggpoolnet
 * RU (Russian): @Anykayebyka, @Whatever
 * FI (Finnish): @Aksss, @DTC, @EvilPokerQueen
-* NO, NB, NN (Norvegian): @gh2
+* NO (Norvegian): @gh2
 * SV (Swedish): @gh2
 * EL (Greek): @SatoshiHaze
 * RO (Romanian): @Gawlea
@@ -23,12 +23,12 @@ Here are the current languages and matching credits:
 * SR (Serbian): @AdriCrypto
 * PT-BR (Brazilian Portuguese): @jcsanches
 * TR (Turkish): @Asertin
+* ES (Spanush): @Savitend
 
 
 # Wanted!
 
 * CN (Current translations are machine translations, need human proofreading.)
-* ES
 * IT
 
 More!
