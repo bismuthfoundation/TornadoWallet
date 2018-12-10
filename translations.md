@@ -12,11 +12,18 @@ Here are the current languages and matching credits:
  
 * DE (German): Damian @portait
 * FR (French): EggdraSyl @Eggpoolnet
-* RU (Russian): @Anykayebyka and @Whatever
-* FI (Finnish): @Aksss
+* RU (Russian): @Anykayebyka, @Whatever
+* FI (Finnish): @Aksss, @DTC, @EvilPokerQueen
 * NO, NB, NN (Norvegian): @gh2
 * SV (Swedish): @gh2
 * EL (Greek): @SatoshiHaze
+* RO (Romanian): @Gawlea
+* CS (Czech): @HClivess
+* HU (Hungarian): @AdriCrypto
+* SR (Serbian): @AdriCrypto
+* PT-BR (Brazilian Portuguese): @jcsanches
+* TR (Turkish): @Asertin
+
 
 # Wanted!
 
