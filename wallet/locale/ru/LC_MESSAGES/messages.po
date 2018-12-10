@@ -21,7 +21,7 @@ msgstr "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
-msgstr "Python, классный язык!"
+msgstr "Python, классный язык программирования!"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
@@ -30,16 +30,16 @@ msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\
 #. About what? In Russian it would be necessary to add, e.g. About authors, About the software, etc... Об авторах, о программе
 #: themes/material/about_credits.html:33
 msgid "About"
-msgstr "About"
+msgstr "О программе"
 
 #: themes/material/about_credits.html:38
 msgid "Tornado wallet version {}"
-msgstr "Версия кошелька Tornado {}"
+msgstr "Версия кошелька Торнадо {}"
 
 #. by what from what? Example?
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr "This is the default wallet theme by {} from {}."
+msgstr "Этa тема кошелька по умолчанию создана разработчиком {}, дата {}"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
@@ -47,7 +47,7 @@ msgstr "Текущий сервер кошелька"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr "Это сервер, к которому вы подключены."
+msgstr "Это сервер, к которому Вы подключены."
 
 #: themes/material/about_network.html:18
 msgid "Server:"
@@ -75,11 +75,11 @@ msgstr "Версия узла"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr "Peers connections:"
+msgstr "Подключенные пиры:"
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
-msgstr "UpTime:"
+msgstr "Время с последнего подключения"
 
 #: themes/material/about_network.html:27
 msgid "Consensus:"
@@ -125,7 +125,7 @@ msgstr "Адресная книга"
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr "Tokens"
+msgstr "Токен"
 
 #: themes/material/base.html:65
 msgid "Messages"
@@ -143,11 +143,11 @@ msgstr "Кристаллы"
 
 #: themes/material/base.html:99
 msgid "Toggle navigation"
-msgstr "Toggle navigation"
+msgstr "Переключить навигацию"
 
 #: themes/material/base.html:177
 msgid "Source"
-msgstr "Source"
+msgstr "Исходный код"
 
 #: themes/material/base.html:182
 msgid "Blog"
@@ -167,7 +167,7 @@ msgstr "блок #"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr "Sidebar Filters"
+msgstr "Фильтры боковой панели"
 
 #: themes/material/base.html:236
 msgid "Images"
@@ -192,7 +192,7 @@ msgstr "Отправить"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr "Send $BIS to..."
+msgstr "Отправить $BIS получателю"
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
@@ -201,7 +201,7 @@ msgstr "Получить"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr "Request a $BIS payment"
+msgstr "Запросить оплату в $ BIS"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
@@ -230,7 +230,7 @@ msgstr "Сумма"
 #. What is type here? Verb, noun? To type smth on a keyboard... or different species?
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr "Type"
+msgstr "Тип транзакции"
 
 #: themes/material/home.html:121
 msgid "Bismuth news"
@@ -238,7 +238,7 @@ msgstr "Новости о Висмуте"
 
 #: themes/material/home.html:142
 msgid "Bismuth vs USD"
-msgstr "Висмут по отношению к Доллару США"
+msgstr "Висмут к Доллару США"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
@@ -263,12 +263,12 @@ msgstr "Предыдущая страница"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "Tokens are a core BIS functionality"
+msgstr "Токены являются основной функциональностью BIS"
 
 #: themes/material/transactions_send.html:14
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
-msgstr "Send To"
+msgstr "Отправить на этот адрес"
 
 #: themes/material/transactions_send.html:15
 #: themes/material/transactions_send_confirm.html:29
@@ -289,7 +289,7 @@ msgstr "Данные (сообщение)"
 #: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "При желании вы можете добавить небольшой комментарий к вашей транзакции. Требуется для отправки депозито на биржи."
+msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции. Требуется для отправки средств на биржи."
 
 #: themes/material/transactions_send.html:40
 #: themes/material/transactions_send_confirm.html:56
@@ -396,15 +396,15 @@ msgstr "Ваш адрес"
 
 #: themes/material/transactions_receive.html:22
 msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "Это адрес вашего текущего кошелька, но вы можете изменить его при необходимости. Затем перепроверьте."
+msgstr "Это адрес Вашего текущего кошелька, но Вы можете изменить его при необходимости. Затем перепроверьте."
 
 #: themes/material/transactions_receive.html:28
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "При желании вы можете добавить небольшой комментарий к вашей транзакции, например, собственную ссылку. Будет храниться в блокчейн."
+msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции, например, собственную ссылку. Будет храниться в блокчейн."
 
 #: themes/material/transactions_receive.html:32
 msgid "This is the QR code for your address only."
-msgstr "Это QR-код только для вашего адреса."
+msgstr "Это QR-код только для Вашего адреса."
 
 #: themes/material/transactions_receive.html:44
 msgid "How many BIS to request."
@@ -412,7 +412,7 @@ msgstr "Сколько BIS запросить"
 
 #: themes/material/transactions_receive.html:52
 msgid "This is what you will receive"
-msgstr "This is what you will receive"
+msgstr "Сумма, которую Вы получите"
 
 #. Информация весто данные?
 #: themes/material/transactions_receive.html:59
@@ -423,33 +423,33 @@ msgstr "Комиссия зависит от длинны поля \"Данны�
 
 #: themes/material/transactions_receive.html:64
 msgid "This is what the sender will pay"
-msgstr "This is what the sender will pay"
+msgstr "Сумма, которую отправитель должен будет оплатить"
 
 #: themes/material/transactions_receive.html:68
 msgid "Get BIS URL"
-msgstr "Get BIS URL"
+msgstr "Получить BIS URL"
 
 #: themes/material/transactions_receive.html:72
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "This is the QR code for your address, data and amount as a BIS URL"
+msgstr "Это QR код для Вашего адреса, данных и суммы в виде URL BIS"
 
 #: themes/material/transactions_receive.html:73
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "You can copy/paste this image to send in a mail or elsewhere"
+msgstr "Вы можете скопировать и вставить это изображение, чтобы отправить его по почте или другим способом"
 
 #: themes/material/transactions_send.html:48
 #: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
-msgstr "This is what the recipient will receive"
+msgstr "Сумма, которую получит получатель"
 
 #: themes/material/transactions_send.html:60
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr "This is what you will pay, fees included."
+msgstr "Сумма к оплате, включая комиссию."
 
 #: themes/material/wallet_load.html:11
 msgid "Action"
-msgstr "Action"
+msgstr "Действие"
 
 #: themes/material/about_credits.html:20
 msgid "Translations"
@@ -473,7 +473,7 @@ msgstr "Пожалуйста, подтвердите эту транзакцию
 
 #: wallet.py:155
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Убедитесь в том, что вы намерены сделать, и нажмите кнопку «Подтвердить»."
+msgstr "Убедитесь в том, что Вы намерены сделать, и нажмите кнопку «Подтвердить»."
 
 #: wallet.py:174
 msgid "Receive BIS"
