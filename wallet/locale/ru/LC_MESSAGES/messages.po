@@ -17,7 +17,7 @@ msgstr "Создание этого кошелька не было бы возм
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
+msgstr "Шаблон \"Material Dark\" (создан  <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>)"
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
@@ -25,7 +25,7 @@ msgstr "Python, классный язык программирования!"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
+msgstr "каркас веб-приложения <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Торнадо</a>"
 
 #. About what? In Russian it would be necessary to add, e.g. About authors, About the software, etc... Об авторах, о программе
 #: themes/material/about_credits.html:33
@@ -96,7 +96,7 @@ msgstr "Трудность"
 #. Доступные серверы кошелька?
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr "Доступные серверы для кошелька"
+msgstr "Доступные серверы"
 
 #: themes/material/about_network.html:73
 msgid "servers"
@@ -109,7 +109,7 @@ msgstr "Обновить с помощью API"
 #. Bismuth? without translation?
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
-msgstr "Висмут кошелек"
+msgstr "Bismuth / Бисмут кошелек"
 
 #: themes/material/base.html:40
 msgid "Dashboard"
@@ -125,7 +125,7 @@ msgstr "Адресная книга"
 
 #: themes/material/base.html:59 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr "Токен"
+msgstr "Токены"
 
 #: themes/material/base.html:65
 msgid "Messages"
@@ -153,9 +153,10 @@ msgstr "Исходный код"
 msgid "Blog"
 msgstr "Блог"
 
+#. again a name, english is readable but might worth mentioning russian translation in documents
 #: themes/material/base.html:187
 msgid "Discord"
-msgstr "Discord"
+msgstr "Discord / Дискорд"
 
 #: themes/material/base.html:192
 msgid "Donate"
@@ -419,7 +420,7 @@ msgstr "Сумма, которую Вы получите"
 #: themes/material/transactions_send.html:55
 #: themes/material/transactions_send_confirm.html:72
 msgid "Fees depend on Data length"
-msgstr "Комиссия зависит от длинны поля \"Данные\""
+msgstr "Комиссия зависит от длины поля \"Данные\""
 
 #: themes/material/transactions_receive.html:64
 msgid "This is what the sender will pay"
@@ -431,7 +432,7 @@ msgstr "Получить BIS URL"
 
 #: themes/material/transactions_receive.html:72
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "Это QR код для Вашего адреса, данных и суммы в виде URL BIS"
+msgstr "Это QR код для Вашего адреса, данных и суммы в виде BIS URL"
 
 #: themes/material/transactions_receive.html:73
 msgid "You can copy/paste this image to send in a mail or anything"
@@ -442,10 +443,14 @@ msgstr "Вы можете скопировать и вставить это из
 msgid "This is what the recipient will receive"
 msgstr "Сумма, которую получит получатель"
 
+#. would you say "fee" would be :
+#. a) network charge
+#. b) network commission
+#. c) exchange fee
 #: themes/material/transactions_send.html:60
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr "Сумма к оплате, включая комиссию."
+msgstr "Сумма к оплате, включая комиссию за транзакцию"
 
 #: themes/material/wallet_load.html:11
 msgid "Action"
@@ -473,7 +478,7 @@ msgstr "Пожалуйста, подтвердите эту транзакцию
 
 #: wallet.py:155
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Убедитесь в том, что Вы намерены сделать, и нажмите кнопку «Подтвердить»."
+msgstr "Убедитесь в том, что Вы намерены сделать, и нажмите кнопку \"Подтвердить\"."
 
 #: wallet.py:174
 msgid "Receive BIS"
