@@ -9,15 +9,15 @@ msgstr ""
 
 #: themes/material/about_credits.html:10 themes/material/base.html:197
 msgid "Credits"
-msgstr "Crédits"
+msgstr "Remerciements"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr "Ce projet n'aurait pas vu le jour sans..."
+msgstr "Ce portemonnaie n'aurait pas existé sans..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr "Le template \"Material Dark\" de <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
+msgstr "Modèle \"Material Dark\" par <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 
 #: themes/material/about_credits.html:17
 msgid "Python, awesome language!"
@@ -25,7 +25,7 @@ msgstr "Python, un langage incroyable !"
 
 #: themes/material/about_credits.html:18
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "Le framework Web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
+msgstr "La structure Web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
 
 #: themes/material/about_credits.html:33
 msgid "About"
@@ -33,19 +33,19 @@ msgstr "À propos"
 
 #: themes/material/about_credits.html:38
 msgid "Tornado wallet version {}"
-msgstr "Porte-monnaie Tornado version {}"
+msgstr "Portemonnaie Tornado version {}"
 
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr "Ceci est le thème par défaut par {} de {}"
+msgstr "Ceci est le thème par défaut du portemonnaie par {} de {}"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr "Serveur de portemonnaie courant"
+msgstr "Serveur de portemonnaie actuel"
 
 #: themes/material/about_network.html:15
 msgid "This is the server you're connected to."
-msgstr "C'est le serveur auquel tu es connecté."
+msgstr "Ceci est le serveur auquel vous êtes connecté."
 
 #: themes/material/about_network.html:18
 msgid "Server:"
@@ -57,7 +57,7 @@ msgstr "IP"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr "Version du serveur {} "
+msgstr "Serveur de portemonnaie version {}"
 
 #: themes/material/about_network.html:22
 msgid "Connected clients:"
@@ -73,7 +73,7 @@ msgstr "Version du Node"
 
 #: themes/material/about_network.html:25
 msgid "Peers connections:"
-msgstr "Connections aux pairs :"
+msgstr "Connexions aux pairs :"
 
 #: themes/material/about_network.html:26
 msgid "UpTime:"
@@ -93,7 +93,7 @@ msgstr "Difficulté"
 
 #: themes/material/about_network.html:72
 msgid "Available wallet servers"
-msgstr "Serveurs de porte-monnaie disponibles"
+msgstr "Serveurs de portemonnaie disponibles"
 
 #: themes/material/about_network.html:73
 msgid "servers"
@@ -101,7 +101,7 @@ msgstr "serveurs"
 
 #: themes/material/about_network.html:81
 msgid "Refresh from API"
-msgstr "Rafraichhir depuis l'API"
+msgstr "Rafraîchir depuis l'API"
 
 #: themes/material/base.html:32
 msgid "Bismuth Wallet"
@@ -161,7 +161,7 @@ msgstr "bloc N°"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
-msgstr "Filtre de sidebarre"
+msgstr "Filtres barre latérale"
 
 #: themes/material/base.html:236
 msgid "Images"
@@ -169,7 +169,7 @@ msgstr "Images"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "Les cristaux sont des fonctionalités additionnelles que vous pouvez ajouter à votre porte-monnaie."
+msgstr "Les cristaux sont des fonctionnalités supplémentaires que vous pouvez ajouter à votre portemonnaie."
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
@@ -185,7 +185,7 @@ msgstr "Envoyer"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr "Envoyer des $BIS à ..."
+msgstr "Envoyer $BIS à ..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
@@ -199,7 +199,7 @@ msgstr "Demander un paiement en $BIS"
 #: themes/material/home.html:74
 #, fuzzy
 msgid "Latest transactions"
-msgstr "Transactions"
+msgstr "Dernières transactions"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
@@ -237,7 +237,7 @@ msgstr "Bismuth vs USD"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr "Ceci est une démo avec des données bidon."
+msgstr "Ceci est une maquette de fausses données"
 
 #: themes/material/home.html:162
 msgid "Account balance"
@@ -249,7 +249,7 @@ msgstr "12 derniers mois"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr "Démo avec des données bidon."
+msgstr "Maquette de fausses données"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
@@ -258,7 +258,7 @@ msgstr "Page précédente"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "Les tokens sont une fonctionalité de base de BIS."
+msgstr "Les tokens sont une fonctionnalité essentielle de BIS."
 
 #: themes/material/transactions_send.html:14
 #: themes/material/transactions_send_confirm.html:28
@@ -268,7 +268,7 @@ msgstr "Envoyer à"
 #: themes/material/transactions_send.html:15
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
-msgstr "À qui envoyer des BIS"
+msgstr "À qui envoyer des BIS."
 
 #: themes/material/transactions_send.html:19
 #: themes/material/transactions_send_confirm.html:33
@@ -279,17 +279,18 @@ msgstr "Destinataire"
 #: themes/material/transactions_send.html:24
 #: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
-msgstr "Data (message)"
+msgstr "Données (message)"
 
 #: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "Tu peux inclure un commentaire optionnel à ta transaction. Obligatoire pour un dépôt sur un exchange."
+msgstr "Vous avez l'option d'ajouter un court commentaire à votre transaction.\n"
+"Cette étape est nécessaire pour déposer sur les bourses d'échange."
 
 #: themes/material/transactions_send.html:40
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr "Combien de BIS envoyer"
+msgstr "Combien de BIS envoyer."
 
 #: themes/material/transactions_receive.html:50
 #: themes/material/transactions_send.html:46
@@ -301,7 +302,7 @@ msgstr "Montant (BIS)"
 #: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr "Frais Est."
+msgstr "Frais estimés"
 
 #: themes/material/transactions_receive.html:62
 #: themes/material/transactions_send.html:58
@@ -314,9 +315,8 @@ msgid "Send BIS"
 msgstr "Envoyer BIS"
 
 #: themes/material/wallet_info.html:13
-#, fuzzy
 msgid "Current Wallet"
-msgstr "Portemonnaie Bismuth courant"
+msgstr "Portemonnaie actuel"
 
 #: themes/material/wallet_info.html:30
 msgid "Open existing"
@@ -324,19 +324,19 @@ msgstr "Ouvrir un"
 
 #: themes/material/wallet_info.html:31
 msgid "wallet"
-msgstr "porte-monnaie"
+msgstr "portemonnaie"
 
 #: themes/material/wallet_info.html:35
 msgid "Load a wallet from disk"
-msgstr "Charge un porte-monnaie depuis le disque"
+msgstr "Charger un portemonnaie depuis le disque"
 
 #: themes/material/wallet_info.html:49
 msgid "Create a"
-msgstr "Ajouter un"
+msgstr "Créer un"
 
 #: themes/material/wallet_info.html:50
 msgid "new wallet"
-msgstr "porte-monnaie"
+msgstr "nouveau portemonnaie"
 
 #: themes/material/wallet_load.html:8
 msgid "File"
@@ -348,16 +348,15 @@ msgstr "Chiffré"
 
 #: themes/material/wip.html:10
 msgid "W.I.P."
-msgstr "En Cours de développement."
+msgstr "En cours de développement."
 
 #: themes/material/wip.html:13
 msgid "This feature is under construction."
-msgstr "Cette fonctionalité est en développement."
+msgstr "Cette fonctionalité est en cours de développement."
 
 #: wallet.py:190
-#, fuzzy
 msgid "Transaction list"
-msgstr "Transactions"
+msgstr "Liste des transactions"
 
 #: wallet.py:260 wallet.py:269
 msgid "Error"
@@ -381,35 +380,39 @@ msgstr "Frais"
 
 #: themes/material/transactions.html:85
 msgid "Data"
-msgstr "Data"
+msgstr "Données"
 
 #: themes/material/transactions_receive.html:16
 msgid "Request BIS"
-msgstr "Réclamer des BIS"
+msgstr "Demander BIS"
 
 #: themes/material/transactions_receive.html:20
 msgid "Your address"
-msgstr "Ton adresse"
+msgstr "Votre adresse"
 
+#. *but you can change it at will. Make sure to enter the correct address.
+#. 
+#. Would be better in my opinion.
 #: themes/material/transactions_receive.html:22
+#, fuzzy
 msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "C'est l'adresse de ton porte-monnaie actuel. Tu peux l'éditer si besoin, mais fais attention !"
+msgstr "Ceci est l'adresse de votre portemonnaie actuel, vous pouvez la modifier si besoin. Veillez à entrer la bonne adresse."
 
 #: themes/material/transactions_receive.html:28
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "En option, tu peux demander d'inclure un commentaire, comme une référence. Cela sera stocké sur la chaine."
+msgstr "Vous avez l'option d'ajouter un court commentaire à votre transaction, tel qu'une référence personnelle. Elle sera stockée dans la blockchain."
 
 #: themes/material/transactions_receive.html:32
 msgid "This is the QR code for your address only."
-msgstr "Ce QR Code ne contient que ton adresse"
+msgstr "Ceci est le QR code qui représente votre adresse seule."
 
 #: themes/material/transactions_receive.html:44
 msgid "How many BIS to request."
-msgstr "Combien de BIS demander"
+msgstr "Combien de BIS demander."
 
 #: themes/material/transactions_receive.html:52
 msgid "This is what you will receive"
-msgstr "C'est le montant que tu recevras"
+msgstr "Ceci est le montant que vous recevrez"
 
 #: themes/material/transactions_receive.html:59
 #: themes/material/transactions_send.html:55
@@ -419,19 +422,19 @@ msgstr "Les frais dépendent de la taille du champ \"data\""
 
 #: themes/material/transactions_receive.html:64
 msgid "This is what the sender will pay"
-msgstr "Voici ce que l'emetteur va payer"
+msgstr "Voici ce que l'expéditeur va payer"
 
 #: themes/material/transactions_receive.html:68
 msgid "Get BIS URL"
-msgstr "Voir la BisUrl"
+msgstr "Obtenir la BIS URL"
 
 #: themes/material/transactions_receive.html:72
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "Ce QR code est une BisUrl qui contient adresse, montant, et data."
+msgstr "Ceci est le QR code pour votre addresse, données et montant en tant que BIS URL"
 
 #: themes/material/transactions_receive.html:73
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "Tu peux copier cette image pour l'envoyer par email par exemple."
+msgstr "Vous pouvez copier/coller cette image pour l'envoyer par courriel ou d'une autre manière"
 
 #: themes/material/transactions_send.html:48
 #: themes/material/transactions_send_confirm.html:65
@@ -441,7 +444,7 @@ msgstr "Voici ce que le destinataire va recevoir"
 #: themes/material/transactions_send.html:60
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr "C'est ce que tu vas payer, frais compris."
+msgstr "Voici ce que vous allez payer, frais inclus."
 
 #: themes/material/wallet_load.html:11
 msgid "Action"
@@ -461,15 +464,16 @@ msgstr "Confirmer et envoyer les BIS"
 
 #: wallet.py:152
 msgid "Send BIS: Confirmation"
-msgstr "Envoyer des BIS: Confirmation"
+msgstr "Envoyer BIS : Confirmation"
 
 #: wallet.py:154
 msgid "Please confirm this transaction"
-msgstr "Merci de confirmer cette transaction"
+msgstr "Veuillez confirmer cette transation"
 
+#. Is the "confirm" button somewhere in the translation? Doesn't seem like it
 #: wallet.py:155
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Vérifie que c'est bien ce que tu veux faire, puis confirme."
+msgstr "Vérifiez bien que c'est ce que vous souhaitez faire et cliquez le bouton \"Confirmer\""
 
 #: wallet.py:174
 msgid "Receive BIS"
