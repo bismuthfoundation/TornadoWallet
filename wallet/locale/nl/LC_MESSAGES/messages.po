@@ -157,7 +157,7 @@ msgstr "Doneer"
 
 #: themes/material/base.html:203
 msgid "block #"
-msgstr "Blok #"
+msgstr "blok #"
 
 #: themes/material/base.html:223
 msgid "Sidebar Filters"
@@ -234,7 +234,7 @@ msgstr "Bismuth vs USD"
 
 #: themes/material/home.html:148
 msgid "This is a mockup with fake data"
-msgstr "Dit is een mockup met "
+msgstr "Dit is een mockup met fictieve data"
 
 #: themes/material/home.html:162
 msgid "Account balance"
@@ -246,7 +246,7 @@ msgstr "Laatste 12 maanden"
 
 #: themes/material/home.html:167
 msgid "Mockup with fake data"
-msgstr "Dit is een mockup met fictieve data"
+msgstr "Mockup met fictieve data"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
@@ -270,7 +270,7 @@ msgstr "Naar wie BIS versturen"
 #: themes/material/transactions_send.html:19
 #: themes/material/transactions_send_confirm.html:33
 msgid "Recipient"
-msgstr "Ontvangen"
+msgstr "Begunstigde"
 
 #: themes/material/transactions_receive.html:26
 #: themes/material/transactions_send.html:24
@@ -286,7 +286,7 @@ msgstr "Indien gewenst kan je enige commentaar toevoegen aan je transactie. Dit 
 #: themes/material/transactions_send.html:40
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr "Hoeveel BIS te versturen."
+msgstr "Aantal te versturen BIS"
 
 #: themes/material/transactions_receive.html:50
 #: themes/material/transactions_send.html:46
@@ -431,7 +431,7 @@ msgstr "Je kan deze afbeelding kopiëren/plakken in een e-mail of iets dergelijk
 #: themes/material/transactions_send.html:48
 #: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
-msgstr "Dit is wat de ontvangen zal krijgen"
+msgstr "Dit is wat de ontvanger zal krijgen"
 
 #: themes/material/transactions_send.html:60
 #: themes/material/transactions_send_confirm.html:77
