@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: sr\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:197
+#: themes/material/about_credits.html:10 themes/material/base.html:201
 msgid "Credits"
 msgstr "Zasluga"
 
@@ -19,21 +19,21 @@ msgstr "Ovaj novčanik ne bi postojalo bez, da..."
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 msgstr "Sa pomoćom \"Material Dark\" <a href=\"https://www.creative-tim.com\" target=\"_blank\"> Creative Tim </a> sablonom"
 
-#: themes/material/about_credits.html:17
+#: themes/material/about_credits.html:19
 msgid "Python, awesome language!"
 msgstr "Python, fantastican jezik!"
 
-#: themes/material/about_credits.html:18
+#: themes/material/about_credits.html:20
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 
-#: themes/material/about_credits.html:33
+#: themes/material/about_credits.html:30
 msgid "About"
-msgstr "About"
+msgstr "O nama"
 
-#: themes/material/about_credits.html:38
+#: themes/material/about_credits.html:35
 msgid "Tornado wallet version {}"
-msgstr "Tornado wallet version {}"
+msgstr "Verzija Tornado novčanika {}"
 
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
@@ -41,135 +41,135 @@ msgstr "This is the default wallet theme by {} from {}."
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
-msgstr "Current wallet server"
+msgstr "Trenutni server novčanika"
 
-#: themes/material/about_network.html:15
+#: themes/material/about_network.html:16
 msgid "This is the server you're connected to."
-msgstr "This is the server you're connected to."
+msgstr "Ovo je server gde ste konektovani."
 
-#: themes/material/about_network.html:18
+#: themes/material/about_network.html:19
 msgid "Server:"
 msgstr "Server:"
 
-#: themes/material/about_network.html:20
+#: themes/material/about_network.html:21
 msgid "IP"
-msgstr "IP"
+msgstr "IP:"
 
 #: themes/material/about_network.html:21
 msgid "Wallet  server version {}"
-msgstr "Wallet  server version {}"
-
-#: themes/material/about_network.html:22
-msgid "Connected clients:"
-msgstr "Connected clients:"
-
-#: themes/material/about_network.html:23
-msgid "Protocol"
-msgstr "Protocol"
-
-#: themes/material/about_network.html:24
-msgid "Node Version"
-msgstr "Node Version"
+msgstr "Verzija novčanika {}"
 
 #: themes/material/about_network.html:25
-msgid "Peers connections:"
-msgstr "Peers connections:"
+msgid "Connected clients:"
+msgstr "Konektovani klijenti:"
 
 #: themes/material/about_network.html:26
-msgid "UpTime:"
-msgstr "UpTime:"
+msgid "Protocol"
+msgstr "Protokol"
 
 #: themes/material/about_network.html:27
+msgid "Node Version"
+msgstr "Verzija node-a"
+
+#: themes/material/about_network.html:28
+msgid "Peers connections:"
+msgstr "Peer konekcije:"
+
+#: themes/material/about_network.html:29
+msgid "UpTime:"
+msgstr "Vreme od pokretanja:"
+
+#: themes/material/about_network.html:30
 msgid "Consensus:"
-msgstr "Consensus:"
+msgstr "Koncenzus:"
 
-#: themes/material/about_network.html:47
+#: themes/material/about_network.html:52
 msgid "Block"
-msgstr "Block"
+msgstr "Blok"
 
-#: themes/material/about_network.html:59
+#: themes/material/about_network.html:64
 msgid "Difficulty"
-msgstr "Difficulty"
+msgstr "Teskoća"
 
-#: themes/material/about_network.html:72
+#: themes/material/about_network.html:77
 msgid "Available wallet servers"
-msgstr "Available wallet servers"
+msgstr "Dostupni serveri novčanika"
 
-#: themes/material/about_network.html:73
+#: themes/material/about_network.html:79
 msgid "servers"
-msgstr "servers"
+msgstr "serveri"
 
-#: themes/material/about_network.html:81
+#: themes/material/about_network.html:87
 msgid "Refresh from API"
-msgstr "Refresh from API"
+msgstr "Osvezi iz API-ja"
 
-#: themes/material/base.html:32
+#: themes/material/base.html:34
 msgid "Bismuth Wallet"
-msgstr "Bismuth Wallet"
+msgstr "Bismuth Novčanik"
 
-#: themes/material/base.html:40
+#: themes/material/base.html:42
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "Komandna tabla"
 
-#: themes/material/base.html:46
+#: themes/material/base.html:48
 msgid "Transactions"
-msgstr "Transactions"
+msgstr "Tranzakcije"
 
-#: themes/material/base.html:52
+#: themes/material/base.html:54
 msgid "Address book"
-msgstr "Address book"
+msgstr "Adresar"
 
-#: themes/material/base.html:59 themes/material/tokens_list.html:10
+#: themes/material/base.html:61 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr "Tokens"
+msgstr "Tokeni"
 
-#: themes/material/base.html:65
+#: themes/material/base.html:67
 msgid "Messages"
-msgstr "Messages"
+msgstr "Poruke"
 
-#: themes/material/base.html:72
+#: themes/material/base.html:74
 msgid "Network"
-msgstr "Network"
+msgstr "Mreža"
 
-#: themes/material/base.html:84 themes/material/cristals_list.html:10
+#: themes/material/base.html:86 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr "Crystals"
+msgstr "Kristali"
 
-#: themes/material/base.html:99
+#: themes/material/base.html:102
 msgid "Toggle navigation"
-msgstr "Toggle navigation"
+msgstr "Prebaciti navigaciju"
 
-#: themes/material/base.html:177
+#: themes/material/base.html:181
 msgid "Source"
-msgstr "Source"
+msgstr "Izvor"
 
-#: themes/material/base.html:182
+#: themes/material/base.html:186
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:187
+#: themes/material/base.html:191
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:192
+#: themes/material/base.html:196
 msgid "Donate"
-msgstr "Donate"
+msgstr "Donacija"
 
-#: themes/material/base.html:203
+#: themes/material/base.html:207
 msgid "block #"
-msgstr "block #"
+msgstr "Blok #"
 
-#: themes/material/base.html:223
+#: themes/material/base.html:227
 msgid "Sidebar Filters"
-msgstr "Sidebar Filters"
+msgstr "Filteri bocne trake"
 
-#: themes/material/base.html:236
+#: themes/material/base.html:240
 msgid "Images"
-msgstr "Images"
+msgstr "Slike"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "Crystals are extra functionalities you can add to your wallet"
+msgstr "Kristali su extra funkcije koje možete dodati svom novčaniku"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
@@ -177,170 +177,170 @@ msgstr "WIP"
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
 msgid "Balance"
-msgstr "Balance"
+msgstr "Balans"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr "Send"
+msgstr "Posalji"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr "Send $BIS to..."
+msgstr "Posalji $BIS za..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr "Receive"
+msgstr "Primiti"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr "Request a $BIS payment"
+msgstr "Zahtevati $BIS isplate"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
-msgstr "Latest transactions"
+msgstr "Poslednje tranzakcije"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
-msgstr "Updated on"
+msgstr "Ažurirano"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
-msgstr "Date"
+msgstr "Datum"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:9
+#: themes/material/wallet_load.html:54
 msgid "Address"
-msgstr "Address"
+msgstr "Adresa"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
-#: themes/material/transactions_receive.html:43
-#: themes/material/transactions_send.html:39
+#: themes/material/transactions_receive.html:46
+#: themes/material/transactions_send.html:42
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
-msgstr "Amount"
+msgstr "Količina"
 
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr "Type"
+msgstr "Tip"
 
-#: themes/material/home.html:121
+#: themes/material/home.html:128
 msgid "Bismuth news"
-msgstr "Bismuth news"
+msgstr "Bismuth novosti"
 
-#: themes/material/home.html:142
+#: themes/material/home.html:149
 msgid "Bismuth vs USD"
 msgstr "Bismuth vs USD"
 
-#: themes/material/home.html:148
+#: themes/material/home.html:155
 msgid "This is a mockup with fake data"
-msgstr "This is a mockup with fake data"
+msgstr "Ovo je šablon sa lažnim podacima"
 
-#: themes/material/home.html:162
+#: themes/material/home.html:169
 msgid "Account balance"
-msgstr "Account balance"
+msgstr "Balans naloga"
 
-#: themes/material/home.html:163
+#: themes/material/home.html:170
 msgid "Last 12 months"
-msgstr "Last 12 months"
+msgstr "U poslednjih 12 meseci"
 
-#: themes/material/home.html:167
+#: themes/material/home.html:174
 msgid "Mockup with fake data"
-msgstr "Mockup with fake data"
+msgstr "Šablon sa lažnim podacima"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
 msgid "Previous page"
-msgstr "Previous page"
+msgstr "Prethodna strana"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "Tokens are a core BIS functionality"
+msgstr "Tokeni su glavne BIS funkcije."
 
-#: themes/material/transactions_send.html:14
+#: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
-msgstr "Send To"
+msgstr "Poslati"
 
-#: themes/material/transactions_send.html:15
+#: themes/material/transactions_send.html:17
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
-msgstr "To whom send BIS."
+msgstr "Kome poslati BIS."
 
-#: themes/material/transactions_send.html:19
+#: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
 msgid "Recipient"
-msgstr "Recipient"
+msgstr "Primalac"
 
-#: themes/material/transactions_receive.html:26
-#: themes/material/transactions_send.html:24
+#: themes/material/transactions_receive.html:27
+#: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
-msgstr "Data (message)"
+msgstr "Podatak (poruka)"
 
-#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
+msgstr "Izborno možete dodati mali komentar za tranzakciju. Neophodno je za slanje ka menjačnici."
 
-#: themes/material/transactions_send.html:40
+#: themes/material/transactions_send.html:43
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr "How many BIS to send."
+msgstr "Koliko komada BIS-a poslati."
 
-#: themes/material/transactions_receive.html:50
-#: themes/material/transactions_send.html:46
+#: themes/material/transactions_receive.html:53
+#: themes/material/transactions_send.html:49
 #: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
-msgstr "Amount (BIS)"
+msgstr "Količina (BIS)"
 
-#: themes/material/transactions_receive.html:57
-#: themes/material/transactions_send.html:53
+#: themes/material/transactions_receive.html:61
+#: themes/material/transactions_send.html:56
 #: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr "Est. fees"
+msgstr "Približna taksa"
 
-#: themes/material/transactions_receive.html:62
-#: themes/material/transactions_send.html:58
+#: themes/material/transactions_receive.html:66
+#: themes/material/transactions_send.html:61
 #: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
-msgstr "Total (BIS)"
+msgstr "Ukupan (BIS)"
 
-#: themes/material/transactions_send.html:64 wallet.py:149
+#: themes/material/transactions_send.html:67 wallet.py:161
 msgid "Send BIS"
-msgstr "Send BIS"
+msgstr "Pošalji BIS"
 
-#: themes/material/wallet_info.html:13
+#: themes/material/wallet_info.html:11
 msgid "Current Wallet"
-msgstr "Current Wallet"
+msgstr "Trenutni novčanik"
 
-#: themes/material/wallet_info.html:30
+#: themes/material/wallet_info.html:28
 msgid "Open existing"
-msgstr "Open existing"
+msgstr "Otvori postojeći"
 
-#: themes/material/wallet_info.html:31
+#: themes/material/wallet_info.html:29
 msgid "wallet"
-msgstr "wallet"
+msgstr "novčanik"
 
-#: themes/material/wallet_info.html:35
+#: themes/material/wallet_info.html:33
 msgid "Load a wallet from disk"
-msgstr "Load a wallet from disk"
+msgstr "Učitaj novčanik iz disk-a"
 
-#: themes/material/wallet_info.html:49
+#: themes/material/wallet_info.html:47 themes/material/wallet_load.html:34
 msgid "Create a"
-msgstr "Create a"
+msgstr "Stvoriti"
 
-#: themes/material/wallet_info.html:50
+#: themes/material/wallet_info.html:48 themes/material/wallet_load.html:35
 msgid "new wallet"
-msgstr "new wallet"
+msgstr "novi novčanik"
 
-#: themes/material/wallet_load.html:8
+#: themes/material/wallet_load.html:53
 msgid "File"
-msgstr "File"
+msgstr "Fajl"
 
-#: themes/material/wallet_load.html:10
+#: themes/material/wallet_load.html:55
 msgid "Encrypted"
-msgstr "Encrypted"
+msgstr "Enkriptovan"
 
 #: themes/material/wip.html:10
 msgid "W.I.P."
@@ -348,23 +348,23 @@ msgstr "W.I.P."
 
 #: themes/material/wip.html:13
 msgid "This feature is under construction."
-msgstr "This feature is under construction."
+msgstr "Ova opcija je u fazi izrade."
 
-#: wallet.py:190
+#: wallet.py:220
 msgid "Transaction list"
-msgstr "Transaction list"
+msgstr "Lista trnzakcije"
 
-#: wallet.py:260 wallet.py:269
+#: wallet.py:291 wallet.py:300
 msgid "Error"
-msgstr "Error"
+msgstr "Greška"
 
-#: wallet.py:260
+#: wallet.py:291
 msgid "This file already exists: {}.der"
-msgstr "This file already exists: {}.der"
+msgstr "Postojeci fajl: {}.der"
 
-#: wallet.py:269
+#: wallet.py:300
 msgid "Error creating {}.der"
-msgstr "Error creating {}.der"
+msgstr "Greška stvaranje {}.der"
 
 #: themes/material/transactions.html:79
 msgid "Txid"
@@ -372,101 +372,169 @@ msgstr "Txid"
 
 #: themes/material/transactions.html:84
 msgid "Fees"
-msgstr "Fees"
+msgstr "Taksa"
 
 #: themes/material/transactions.html:85
 msgid "Data"
-msgstr "Data"
+msgstr "Podatak"
 
 #: themes/material/transactions_receive.html:16
 msgid "Request BIS"
-msgstr "Request BIS"
+msgstr "Zahtev BIS-a"
 
 #: themes/material/transactions_receive.html:20
 msgid "Your address"
-msgstr "Your address"
+msgstr "Vaša adresa"
 
 #: themes/material/transactions_receive.html:22
 msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "Ovo je vaša trenutna adresa, ali ga možete izmeniti po potrebi. U tom slučaju budite pažljivi."
 
-#: themes/material/transactions_receive.html:28
+#: themes/material/transactions_receive.html:30
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Izborno možete dodati mali komentar za transakciju, kao lična referenca. Biće sačuvano u lancu."
 
-#: themes/material/transactions_receive.html:32
+#: themes/material/transactions_receive.html:35
 msgid "This is the QR code for your address only."
-msgstr "This is the QR code for your address only."
+msgstr "Ovaj QR kod je za vašu adresu."
 
-#: themes/material/transactions_receive.html:44
+#: themes/material/transactions_receive.html:47
 msgid "How many BIS to request."
-msgstr "How many BIS to request."
+msgstr "Koliko komada BIS-a za zahtev."
 
-#: themes/material/transactions_receive.html:52
+#: themes/material/transactions_receive.html:56
 msgid "This is what you will receive"
-msgstr "This is what you will receive"
+msgstr "Ovo je što ćete dobiti"
 
-#: themes/material/transactions_receive.html:59
-#: themes/material/transactions_send.html:55
+#: themes/material/transactions_receive.html:63
+#: themes/material/transactions_send.html:58
 #: themes/material/transactions_send_confirm.html:72
 msgid "Fees depend on Data length"
-msgstr "Fees depend on Data length"
-
-#: themes/material/transactions_receive.html:64
-msgid "This is what the sender will pay"
-msgstr "This is what the sender will pay"
+msgstr "Taksa zavisnosti od dužine Podataka"
 
 #: themes/material/transactions_receive.html:68
-msgid "Get BIS URL"
-msgstr "Get BIS URL"
+msgid "This is what the sender will pay"
+msgstr "Ovo je što će pošiljalac plaćati"
 
 #: themes/material/transactions_receive.html:72
+msgid "Get BIS URL"
+msgstr "Dobiti BIS URL"
+
+#: themes/material/transactions_receive.html:78
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "This is the QR code for your address, data and amount as a BIS URL"
+msgstr "Ovo je QR kod za vašu adresu, podatke i kolicinu kao BIS URL"
 
-#: themes/material/transactions_receive.html:73
+#: themes/material/transactions_receive.html:79
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "You can copy/paste this image to send in a mail or elsewhere"
+msgstr "Možete kopirati/nalepiti ovu sliku da bi mogli slati emailom ili drugom"
 
-#: themes/material/transactions_send.html:48
+#: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
-msgstr "This is what the recipient will receive"
+msgstr "Ovo je što je primalac primiti"
 
-#: themes/material/transactions_send.html:60
+#: themes/material/transactions_send.html:63
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr "This is what you will pay, fees included."
+msgstr "Ovo je što ćete plaćati, takse su uračunate."
 
-#: themes/material/wallet_load.html:11
+#: themes/material/wallet_load.html:56
 msgid "Action"
-msgstr "Action"
+msgstr "Akcija"
 
-#: themes/material/about_credits.html:20
+#: themes/material/about_credits.html:52
 msgid "Translations"
-msgstr "Translations"
+msgstr "Prevodi"
 
-#: themes/material/transactions_send_confirm.html:99
+#: themes/material/transactions_send_confirm.html:100
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "Odustati"
 
-#: themes/material/transactions_send_confirm.html:103
+#: themes/material/transactions_send_confirm.html:105
 msgid "Confirm and send BIS"
-msgstr "Confirm and send BIS"
+msgstr "Potvrditi i poslati BIS"
 
-#: wallet.py:152
+#: wallet.py:172
 msgid "Send BIS: Confirmation"
-msgstr "Send BIS: Confirmation"
-
-#: wallet.py:154
-msgid "Please confirm this transaction"
-msgstr "Please confirm this transaction"
-
-#: wallet.py:155
-msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Check this is what you intended to do and hit the \"confirm\" button"
+msgstr "Poslati BIS: Potvrditi"
 
 #: wallet.py:174
+msgid "Please confirm this transaction"
+msgstr "Molimo potvrdite ovu tranzakciju"
+
+#: wallet.py:175
+msgid "Check this is what you intended to do and hit the \"confirm\" button"
+msgstr "Oznacite ovo je sta ste nameravali da uradite i udarite (pritisnite) dugme za potvrdu"
+
+#: wallet.py:204
 msgid "Receive BIS"
-msgstr "Receive BIS"
+msgstr "Primiti BIS"
+
+#: themes/material/about_credits.html:36
+msgid "Wallet template {} by {}."
+msgstr ""
+
+#: themes/material/about_credits.html:53
+msgid "Many thanks to our translators and proofreaders"
+msgstr ""
+
+#: themes/material/about_network.html:22
+msgid "Wallet server version {}"
+msgstr ""
+
+#: themes/material/base.html:148
+msgid "Wallet"
+msgstr ""
+
+#: themes/material/transactions_receive.html:81
+msgid "BIS URL"
+msgstr ""
+
+#: themes/material/wallet_load.html:16
+msgid "Your Bismuth wallets"
+msgstr ""
+
+#: themes/material/wallet_load.html:20
+msgid "Your wallets directory is {}"
+msgstr ""
+
+#: wallet.py:164 wallet.py:168 wallet.py:198
+msgid "Error:"
+msgstr ""
+
+#: wallet.py:164
+msgid "Load your wallet first"
+msgstr ""
+
+#: wallet.py:164
+msgid "No Wallet"
+msgstr ""
+
+#: wallet.py:168
+msgid "Encrypted wallet"
+msgstr ""
+
+#: wallet.py:168
+msgid "You have to unlock your wallet first"
+msgstr ""
+
+#: wallet.py:193
+msgid "Success:"
+msgstr ""
+
+#: wallet.py:193
+msgid "Transaction sent"
+msgstr ""
+
+#: wallet.py:194
+msgid "The transaction was submitted to the mempool."
+msgstr ""
+
+#: wallet.py:196
+msgid "Txid is {}"
+msgstr ""
+
+#: wallet.py:198
+msgid "There was an error submitting to the mempool, transaction was not sent."
+msgstr ""
 
