@@ -1,5 +1,8 @@
 # History
 
+## 0.0.65 - 2018-12-11
+
+Incremental fixes to wallet creation location and small template tweak.
 
 ## 0.0.64 - 2018-12-11
 

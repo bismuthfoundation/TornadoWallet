@@ -30,7 +30,7 @@ from tornado.options import define, options
 from bismuthclient import bismuthclient
 from bismuthclient.bismuthutil import BismuthUtil
 
-__version__ = '0.0.64'  #
+__version__ = '0.0.65'  #
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
@@ -145,6 +145,7 @@ class HomeHandler(BaseHandler):
         if not self.bismuth_vars['address']:
             self.bismuth_vars['address'] = 'None'
             self.redirect("/wallet/load")
+            return
         self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5, for_display=True)
         self.render("home.html", bismuth=self.bismuth_vars)
         # self.app_log.info("> home")
@@ -280,7 +281,7 @@ class WalletHandler(BaseHandler):
             self.redirect("/wallet/info")
 
     async def info(self, params=None):
-        wallet_info = self.bismuth.wallet('wallets')
+        wallet_info = self.bismuth.wallet()
         self.render("wallet_info.html", wallet=wallet_info, bismuth=self.bismuth_vars)
 
     async def create(self, params=None):
@@ -289,7 +290,8 @@ class WalletHandler(BaseHandler):
         _ = self.locale.translate
         wallet = param.replace('wallet=', '')
         wallet = wallet.replace('.der', '')  # just in case the user added .der
-        file_name = 'wallets/{}.der'.format(wallet)
+        wallet_dir = self.bismuth.user_subdir(BISMUTH_PRIVATE_DIR)
+        file_name = os.path.join(wallet_dir,'{}.der'.format(wallet))
         if os.path.isfile(file_name):
             self.render("message.html", type="warning", title=_("Error"), message=_("This file already exists: {}.der").format(wallet), bismuth=self.bismuth_vars)
         else:
