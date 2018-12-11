@@ -10,24 +10,25 @@ Here are the current languages and matching credits:
 
 # Existing Languages and credits
  
-* DE (German): Damian @portait
-* FR (French): EggdraSyl @Eggpoolnet
-* RU (Russian): @Anykayebyka, @Whatever
-* FI (Finnish): @Aksss, @DTC, @EvilPokerQueen
-* NO (Norvegian): @gh2
-* SV (Swedish): @gh2
-* EL (Greek): @SatoshiHaze
-* RO (Romanian): @Gawlea
-* CS (Czech): @HClivess
-* HU (Hungarian): @AdriCrypto
-* SR (Serbian): @AdriCrypto
-* PT-BR (Brazilian Portuguese): @jcsanches
-* TR (Turkish): @Asertin
-* ES (Spanush): @Savitend
-
+* Czech: Hclivess, cipery
+* Dutch: cxn
+* Finnish: Aksss, DTC, Evilpokerqueen
+* French: EggPool, k4nd17r33
+* German: Damian
+* Greek: SatoshiHaze
+* Hungarian: Adricrypto
+* Norwegian: GH2
+* Portuguese (BR): jcsanches
+* Romanian: Gawlea
+* Russian: anykayebyka, Whatever
+* Serbian: Adricrypto
+* Spanish: Savitend
+* Swedish: GH2
+* Turkish: Asertin, k4nd17r33
 
 # Wanted!
 
+* EN-UK and EN-US proofreaders
 * CN (Current translations are machine translations, need human proofreading.)
 * IT
 

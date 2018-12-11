@@ -27,7 +27,7 @@ from tornado.options import define, options
 from bismuthclient import bismuthclient
 from bismuthclient.bismuthutil import BismuthUtil
 
-__version__ = '0.0.62'
+__version__ = '0.0.63'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)

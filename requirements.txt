@@ -1,2 +1,2 @@
 tornado
-bismuthclient>=0.0.28
+bismuthclient>=0.0.29

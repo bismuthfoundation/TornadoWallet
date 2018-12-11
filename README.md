@@ -6,23 +6,32 @@ A Python/HTML Wallet based upon the Tornado framework.
 
 # Proof of concept
 
-Not functional for now, merely a technology test.
-
-mockup "index" and "transactions" screens only are up, with made up data.
-
 Goal is to re-use the existing python code for behind the scene heavy lifting, but leverage HTML/JS flexibility for GUI.
 
-# Installation
+First release only has minimal features
+
+- manage wallets (unencrypted)
+- auto connect to an available wallet server
+- check balance and transactions
+- request BIS payments
+- Send simple BIS transactions
+- network status
+
+# Installation from release
+
+See Release tab for info/installer and OS Specific FAQ.
+
+# Installation from source
 
 `pip3 install -r requirements.txt`
 
 Pycryptodomex is used and may need extra install on your machine.
 
-An autoinstaller will be provided with first beta version.
+An auto-installer will be provided with first beta version.
 
 ## Mac
 
-Install xcode compiler first:
+You may have to install xcode compiler:
 
 `xcode-select --install`
 
