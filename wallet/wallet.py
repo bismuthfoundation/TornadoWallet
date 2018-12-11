@@ -5,14 +5,14 @@ Use --help command line switch to get usage.
 """
 
 import os.path
-import re
+# import re
 import json
 import logging
-import random
+# import random
 import string
-import sys
-import time
-import datetime
+# import sys
+# import time
+# import datetime
 import tornado.escape
 import tornado.httpserver
 import tornado.ioloop
@@ -20,14 +20,17 @@ import tornado.log
 import tornado.locks
 import tornado.options
 import tornado.web
-import unicodedata
+# import unicodedata
+import subprocess
+import webbrowser
+import sys
 
 from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
 from bismuthclient.bismuthutil import BismuthUtil
 
-__version__ = '0.0.63'
+__version__ = '0.0.64'  #
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
@@ -367,6 +370,15 @@ class TxModule(tornado.web.UIModule):
         return self.render_string("modules/transaction.html", tx=tx)
 
 
+def open_url(url):
+    """Opens the default browser with our page"""
+    if sys.platform == 'darwin':
+        # in case of OS X
+        subprocess.Popen(['open', url])
+    else:
+        webbrowser.open_new_tab(url)
+
+
 async def main():
     tornado.options.parse_command_line()
     app = Application()
@@ -375,6 +387,10 @@ async def main():
     # with Ctrl-C, but if you want to shut down more gracefully,
     # call shutdown_event.set().
     shutdown_event = tornado.locks.Event()
+    if not options.debug:
+        # In debug mode, any code change will restart the server and launch another tab.
+        # This goes in the way, so we deactivate in debug.
+        open_url("http://127.0.0.1:8888")
     await shutdown_event.wait()
 
 
