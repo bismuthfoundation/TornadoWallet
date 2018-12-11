@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: ru\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:197
+#: themes/material/about_credits.html:10 themes/material/base.html:201
 msgid "Credits"
 msgstr "Разработчики"
 
@@ -19,41 +19,46 @@ msgstr "Создание этого кошелька не было бы возм
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 msgstr "Шаблон \"Material Dark\" (создан  <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>)"
 
-#: themes/material/about_credits.html:17
+#: themes/material/about_credits.html:19
 msgid "Python, awesome language!"
-msgstr "Python, классный язык программирования!"
+msgstr "Python, высококлассный язык программирования!"
 
-#: themes/material/about_credits.html:18
+#. would this be a web command, in a way?
+#. 
+#. <a href="https://www.tornadoweb.org/en/stable/index.html" target="_blank">Tornado</a>
+#. 
+#. if yes, we should leave "Tornado" in english?
+#: themes/material/about_credits.html:20
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 msgstr "каркас веб-приложения <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Торнадо</a>"
 
 #. About what? In Russian it would be necessary to add, e.g. About authors, About the software, etc... Об авторах, о программе
-#: themes/material/about_credits.html:33
+#: themes/material/about_credits.html:30
 msgid "About"
 msgstr "О программе"
 
-#: themes/material/about_credits.html:38
+#: themes/material/about_credits.html:35
 msgid "Tornado wallet version {}"
 msgstr "Версия кошелька Торнадо {}"
 
 #. by what from what? Example?
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr "Этa тема кошелька по умолчанию создана разработчиком {}, дата {}"
+msgstr "Этa тема кошелька по умолчанию создана разработчиком {} ({})"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
 msgstr "Текущий сервер кошелька"
 
-#: themes/material/about_network.html:15
+#: themes/material/about_network.html:16
 msgid "This is the server you're connected to."
 msgstr "Это сервер, к которому Вы подключены."
 
-#: themes/material/about_network.html:18
+#: themes/material/about_network.html:19
 msgid "Server:"
 msgstr "Сервер"
 
-#: themes/material/about_network.html:20
+#: themes/material/about_network.html:21
 msgid "IP"
 msgstr "IP"
 
@@ -61,116 +66,116 @@ msgstr "IP"
 msgid "Wallet  server version {}"
 msgstr "Версия сервера кошелька {}"
 
-#: themes/material/about_network.html:22
+#: themes/material/about_network.html:25
 msgid "Connected clients:"
 msgstr "Подключенные клиенты:"
 
-#: themes/material/about_network.html:23
+#: themes/material/about_network.html:26
 msgid "Protocol"
 msgstr "Протокол"
 
-#: themes/material/about_network.html:24
+#: themes/material/about_network.html:27
 msgid "Node Version"
-msgstr "Версия узла"
+msgstr "Версия нода"
 
-#: themes/material/about_network.html:25
+#: themes/material/about_network.html:28
 msgid "Peers connections:"
 msgstr "Подключенные пиры:"
 
-#: themes/material/about_network.html:26
+#: themes/material/about_network.html:29
 msgid "UpTime:"
 msgstr "Время с последнего подключения"
 
-#: themes/material/about_network.html:27
+#: themes/material/about_network.html:30
 msgid "Consensus:"
 msgstr "Консенсус:"
 
-#: themes/material/about_network.html:47
+#: themes/material/about_network.html:52
 msgid "Block"
 msgstr "Блок"
 
-#: themes/material/about_network.html:59
+#: themes/material/about_network.html:64
 msgid "Difficulty"
-msgstr "Трудность"
+msgstr "Сложность"
 
 #. Доступные серверы кошелька?
-#: themes/material/about_network.html:72
+#: themes/material/about_network.html:77
 msgid "Available wallet servers"
 msgstr "Доступные серверы"
 
-#: themes/material/about_network.html:73
+#: themes/material/about_network.html:79
 msgid "servers"
 msgstr "Серверы"
 
-#: themes/material/about_network.html:81
+#: themes/material/about_network.html:87
 msgid "Refresh from API"
 msgstr "Обновить с помощью API"
 
 #. Bismuth? without translation?
-#: themes/material/base.html:32
+#: themes/material/base.html:34
 msgid "Bismuth Wallet"
-msgstr "Bismuth / Бисмут кошелек"
+msgstr "Bismuth кошелек"
 
-#: themes/material/base.html:40
+#: themes/material/base.html:42
 msgid "Dashboard"
 msgstr "Приборная доска"
 
-#: themes/material/base.html:46
+#: themes/material/base.html:48
 msgid "Transactions"
 msgstr "Транзакции"
 
-#: themes/material/base.html:52
+#: themes/material/base.html:54
 msgid "Address book"
-msgstr "Адресная книга"
+msgstr "электронная адресная книга"
 
-#: themes/material/base.html:59 themes/material/tokens_list.html:10
+#: themes/material/base.html:61 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Токены"
 
-#: themes/material/base.html:65
+#: themes/material/base.html:67
 msgid "Messages"
 msgstr "Сообщения"
 
-#: themes/material/base.html:72
+#: themes/material/base.html:74
 msgid "Network"
 msgstr "Сеть"
 
 #. Is that Crystal (
 #. кристалл) with typo? or some name?
-#: themes/material/base.html:84 themes/material/cristals_list.html:10
+#: themes/material/base.html:86 themes/material/cristals_list.html:10
 msgid "Cristals"
 msgstr "Кристаллы"
 
-#: themes/material/base.html:99
+#: themes/material/base.html:102
 msgid "Toggle navigation"
 msgstr "Переключить навигацию"
 
-#: themes/material/base.html:177
+#: themes/material/base.html:181
 msgid "Source"
 msgstr "Исходный код"
 
-#: themes/material/base.html:182
+#: themes/material/base.html:186
 msgid "Blog"
 msgstr "Блог"
 
 #. again a name, english is readable but might worth mentioning russian translation in documents
-#: themes/material/base.html:187
+#: themes/material/base.html:191
 msgid "Discord"
 msgstr "Discord / Дискорд"
 
-#: themes/material/base.html:192
+#: themes/material/base.html:196
 msgid "Donate"
 msgstr "Пожертвовать"
 
-#: themes/material/base.html:203
+#: themes/material/base.html:207
 msgid "block #"
 msgstr "блок #"
 
-#: themes/material/base.html:223
+#: themes/material/base.html:227
 msgid "Sidebar Filters"
 msgstr "Фильтры боковой панели"
 
-#: themes/material/base.html:236
+#: themes/material/base.html:240
 msgid "Images"
 msgstr "Картинки"
 
@@ -217,13 +222,13 @@ msgid "Date"
 msgstr "Дата"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:9
+#: themes/material/wallet_load.html:54
 msgid "Address"
 msgstr "Адрес"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
-#: themes/material/transactions_receive.html:43
-#: themes/material/transactions_send.html:39
+#: themes/material/transactions_receive.html:46
+#: themes/material/transactions_send.html:42
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Сумма"
@@ -233,27 +238,27 @@ msgstr "Сумма"
 msgid "Type"
 msgstr "Тип транзакции"
 
-#: themes/material/home.html:121
+#: themes/material/home.html:128
 msgid "Bismuth news"
-msgstr "Новости о Висмуте"
+msgstr "Новости о Bismuth"
 
-#: themes/material/home.html:142
+#: themes/material/home.html:149
 msgid "Bismuth vs USD"
-msgstr "Висмут к Доллару США"
+msgstr "Bismuth к Доллару США"
 
-#: themes/material/home.html:148
+#: themes/material/home.html:155
 msgid "This is a mockup with fake data"
 msgstr "Это образец с выдуманными данными"
 
-#: themes/material/home.html:162
+#: themes/material/home.html:169
 msgid "Account balance"
 msgstr "Баланс аккаунта"
 
-#: themes/material/home.html:163
+#: themes/material/home.html:170
 msgid "Last 12 months"
 msgstr "Последние 12 месяцев"
 
-#: themes/material/home.html:167
+#: themes/material/home.html:174
 msgid "Mockup with fake data"
 msgstr "Образец с выдуманными данными"
 
@@ -266,88 +271,89 @@ msgstr "Предыдущая страница"
 msgid "Tokens are a core BIS functionality"
 msgstr "Токены являются основной функциональностью BIS"
 
-#: themes/material/transactions_send.html:14
+#: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
 msgstr "Отправить на этот адрес"
 
-#: themes/material/transactions_send.html:15
+#: themes/material/transactions_send.html:17
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
 msgstr "Кому отправить BIS."
 
-#: themes/material/transactions_send.html:19
+#: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
 msgid "Recipient"
 msgstr "Получатель"
 
-#: themes/material/transactions_receive.html:26
-#: themes/material/transactions_send.html:24
+#: themes/material/transactions_receive.html:27
+#: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:39
 msgid "Data (message)"
 msgstr "Данные (сообщение)"
 
-#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции. Требуется для отправки средств на биржи."
 
-#: themes/material/transactions_send.html:40
+#: themes/material/transactions_send.html:43
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "Колличество BIS для отправки."
 
-#: themes/material/transactions_receive.html:50
-#: themes/material/transactions_send.html:46
+#: themes/material/transactions_receive.html:53
+#: themes/material/transactions_send.html:49
 #: themes/material/transactions_send_confirm.html:62
 msgid "Amount (BIS)"
 msgstr "Колличество (BIS)."
 
-#: themes/material/transactions_receive.html:57
-#: themes/material/transactions_send.html:53
+#: themes/material/transactions_receive.html:61
+#: themes/material/transactions_send.html:56
 #: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
 msgstr "Примерная комиссия."
 
-#: themes/material/transactions_receive.html:62
-#: themes/material/transactions_send.html:58
+#: themes/material/transactions_receive.html:66
+#: themes/material/transactions_send.html:61
 #: themes/material/transactions_send_confirm.html:75
 msgid "Total (BIS)"
 msgstr "Всего (BIS)"
 
-#: themes/material/transactions_send.html:64 wallet.py:149
+#: themes/material/transactions_send.html:67 wallet.py:161
 msgid "Send BIS"
 msgstr "Отправить (BIS)"
 
-#: themes/material/wallet_info.html:13
+#: themes/material/wallet_info.html:11
 msgid "Current Wallet"
 msgstr "Текущий кошелек"
 
-#: themes/material/wallet_info.html:30
+#: themes/material/wallet_info.html:28
 msgid "Open existing"
 msgstr "Открыть"
 
-#: themes/material/wallet_info.html:31
+#: themes/material/wallet_info.html:29
 msgid "wallet"
 msgstr "кошелек"
 
-#: themes/material/wallet_info.html:35
+#: themes/material/wallet_info.html:33
 msgid "Load a wallet from disk"
 msgstr "Загрузить кошелек с диска"
 
-#: themes/material/wallet_info.html:49
+#: themes/material/wallet_info.html:47 themes/material/wallet_load.html:34
 msgid "Create a"
 msgstr "Создать"
 
-#: themes/material/wallet_info.html:50
+#. I understand this term must be very short, then if "Новый кошелек" (which is translated as new wallet) doesn't fit, then just leave "кошелек" (wallet). So the whole thing would be "Create" + "wallet". No need in "new": obviously you are creating a NEW wallet.
+#: themes/material/wallet_info.html:48 themes/material/wallet_load.html:35
 msgid "new wallet"
 msgstr "Новый кошелек"
 
-#: themes/material/wallet_load.html:8
+#: themes/material/wallet_load.html:53
 msgid "File"
 msgstr "Файл"
 
-#: themes/material/wallet_load.html:10
+#: themes/material/wallet_load.html:55
 msgid "Encrypted"
 msgstr "Зашифрованный"
 
@@ -359,19 +365,19 @@ msgstr "В разработке"
 msgid "This feature is under construction."
 msgstr "Эта функция в разработке."
 
-#: wallet.py:190
+#: wallet.py:220
 msgid "Transaction list"
 msgstr "Список транзакций"
 
-#: wallet.py:260 wallet.py:269
+#: wallet.py:291 wallet.py:300
 msgid "Error"
 msgstr "Ошибка"
 
-#: wallet.py:260
+#: wallet.py:291
 msgid "This file already exists: {}.der"
 msgstr "Этот файл уже существует: {} .der"
 
-#: wallet.py:269
+#: wallet.py:300
 msgid "Error creating {}.der"
 msgstr "Ошибка при создании {} .der"
 
@@ -399,46 +405,46 @@ msgstr "Ваш адрес"
 msgid "This is your address for current wallet, but you can change it if needed. Double check then."
 msgstr "Это адрес Вашего текущего кошелька, но Вы можете изменить его при необходимости. Затем перепроверьте."
 
-#: themes/material/transactions_receive.html:28
+#: themes/material/transactions_receive.html:30
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
 msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции, например, собственную ссылку. Будет храниться в блокчейн."
 
-#: themes/material/transactions_receive.html:32
+#: themes/material/transactions_receive.html:35
 msgid "This is the QR code for your address only."
-msgstr "Это QR-код только для Вашего адреса."
+msgstr "Это QR код для адреса Вашего кошелька"
 
-#: themes/material/transactions_receive.html:44
+#: themes/material/transactions_receive.html:47
 msgid "How many BIS to request."
 msgstr "Сколько BIS запросить"
 
-#: themes/material/transactions_receive.html:52
+#: themes/material/transactions_receive.html:56
 msgid "This is what you will receive"
 msgstr "Сумма, которую Вы получите"
 
 #. Информация весто данные?
-#: themes/material/transactions_receive.html:59
-#: themes/material/transactions_send.html:55
+#: themes/material/transactions_receive.html:63
+#: themes/material/transactions_send.html:58
 #: themes/material/transactions_send_confirm.html:72
 msgid "Fees depend on Data length"
 msgstr "Комиссия зависит от длины поля \"Данные\""
 
-#: themes/material/transactions_receive.html:64
+#: themes/material/transactions_receive.html:68
 msgid "This is what the sender will pay"
 msgstr "Сумма, которую отправитель должен будет оплатить"
 
-#: themes/material/transactions_receive.html:68
+#: themes/material/transactions_receive.html:72
 msgid "Get BIS URL"
 msgstr "Получить BIS URL"
 
-#: themes/material/transactions_receive.html:72
+#: themes/material/transactions_receive.html:78
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "Это QR код для Вашего адреса, данных и суммы в виде BIS URL"
+msgstr "Это QR код для полной BIS URL включая адрес Вашего кошелька и запрашиваемой суммы"
 
-#: themes/material/transactions_receive.html:73
+#: themes/material/transactions_receive.html:79
 msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "Вы можете скопировать и вставить это изображение, чтобы отправить его по почте или другим способом"
 
-#: themes/material/transactions_send.html:48
+#: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:65
 msgid "This is what the recipient will receive"
 msgstr "Сумма, которую получит получатель"
@@ -447,40 +453,110 @@ msgstr "Сумма, которую получит получатель"
 #. a) network charge
 #. b) network commission
 #. c) exchange fee
-#: themes/material/transactions_send.html:60
+#: themes/material/transactions_send.html:63
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
 msgstr "Сумма к оплате, включая комиссию за транзакцию"
 
-#: themes/material/wallet_load.html:11
+#: themes/material/wallet_load.html:56
 msgid "Action"
 msgstr "Действие"
 
-#: themes/material/about_credits.html:20
+#: themes/material/about_credits.html:52
 msgid "Translations"
 msgstr "Перевод"
 
-#: themes/material/transactions_send_confirm.html:99
+#: themes/material/transactions_send_confirm.html:100
 msgid "Cancel"
 msgstr "Отменить"
 
-#: themes/material/transactions_send_confirm.html:103
+#: themes/material/transactions_send_confirm.html:105
 msgid "Confirm and send BIS"
 msgstr "Подтвердить и отправить BIS"
 
-#: wallet.py:152
+#: wallet.py:172
 msgid "Send BIS: Confirmation"
 msgstr "Отправить BIS: Подтверждение"
 
-#: wallet.py:154
+#: wallet.py:174
 msgid "Please confirm this transaction"
 msgstr "Пожалуйста, подтвердите эту транзакцию"
 
-#: wallet.py:155
+#: wallet.py:175
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Убедитесь в том, что Вы намерены сделать, и нажмите кнопку \"Подтвердить\"."
 
-#: wallet.py:174
+#: wallet.py:204
 msgid "Receive BIS"
 msgstr "Получить BIS"
+
+#: themes/material/about_credits.html:36
+msgid "Wallet template {} by {}."
+msgstr "Шаблон кошелька {} (автор {})"
+
+#: themes/material/about_credits.html:53
+msgid "Many thanks to our translators and proofreaders"
+msgstr "Большое спасибо нашим переводчикам и корректорам"
+
+#: themes/material/about_network.html:22
+msgid "Wallet server version {}"
+msgstr "Версия сервера кошелька {}"
+
+#: themes/material/base.html:148
+msgid "Wallet"
+msgstr "Кошелек"
+
+#: themes/material/transactions_receive.html:81
+msgid "BIS URL"
+msgstr "BIS URL"
+
+#: themes/material/wallet_load.html:16
+msgid "Your Bismuth wallets"
+msgstr "Ваш Bismuth кошелек"
+
+#: themes/material/wallet_load.html:20
+msgid "Your wallets directory is {}"
+msgstr "Ваш кошелек находится в папке {}"
+
+#: wallet.py:164 wallet.py:168 wallet.py:198
+msgid "Error:"
+msgstr "Ошибка:"
+
+#: wallet.py:164
+msgid "Load your wallet first"
+msgstr "Сначала вы должны загрузить Ваш кошелек"
+
+#: wallet.py:164
+msgid "No Wallet"
+msgstr "Кошелек не найден"
+
+#. is that also an error message, in which case it should be translated differently "Кошелек зашифрован"
+#: wallet.py:168
+msgid "Encrypted wallet"
+msgstr "Зашифрованный кошелек"
+
+#: wallet.py:168
+msgid "You have to unlock your wallet first"
+msgstr "Вы должны сначала разблокировать свой кошелек"
+
+#: wallet.py:193
+msgid "Success:"
+msgstr "Получилось:"
+
+#: wallet.py:193
+msgid "Transaction sent"
+msgstr "Транзакция отправлена"
+
+#: wallet.py:194
+msgid "The transaction was submitted to the mempool."
+msgstr "Транзакция размещена в блокчейн"
+
+#: wallet.py:196
+msgid "Txid is {}"
+msgstr "Txid Вашей транзакции: {}"
+
+#. To Anykayebuka: транзакция не была размещена в блокчейн vs транзакция не была отправлена. The 1st case there may give a wrong impression that the money is gone, but didn't reach the blockchain, while in the 2nd case it's clear that nothing happened. Money is safe. What do you think?
+#: wallet.py:198
+msgid "There was an error submitting to the mempool, transaction was not sent."
+msgstr "Произошла ошибка, транзакция не была отправлена в блокчейн"
 
