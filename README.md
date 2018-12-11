@@ -88,4 +88,9 @@ First HTML template derived from mBitcoin wallet.
 
 # Translations
 
-Thanks to a great community effort, the wallet is available in several languages, see [translations.md](translations.md) for list and credits. 
+Thanks to a great community effort, the wallet is available in several languages, see [translations.md](translations.md) for list and credits.
+
+## Localized help
+Help file / User guide is a WIP, see locale/en/Help.md
+
+ 
