@@ -472,69 +472,69 @@ msgstr "收到BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "{}的电子钱包模板{}。"
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "非常感谢我们的翻译和校对员"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "电子钱包服务器版{}"
 
 #: themes/material/base.html:148
 msgid "Wallet"
-msgstr ""
+msgstr "钱包"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "你的铋钱包"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "你的钱包目录是{}"
 
 #: wallet.py:164 wallet.py:168 wallet.py:198
 msgid "Error:"
-msgstr ""
+msgstr "错误："
 
 #: wallet.py:164
 msgid "Load your wallet first"
-msgstr ""
+msgstr "首先装入你的钱包"
 
 #: wallet.py:164
 msgid "No Wallet"
-msgstr ""
+msgstr "没有钱包"
 
 #: wallet.py:168
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "加密钱包"
 
 #: wallet.py:168
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "你必须先解锁你的钱包"
 
 #: wallet.py:193
 msgid "Success:"
-msgstr ""
+msgstr "成功："
 
 #: wallet.py:193
 msgid "Transaction sent"
-msgstr ""
+msgstr "交易发送"
 
 #: wallet.py:194
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "该交易已提交给mempool。"
 
 #: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid是{}"
 
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "提交给mempool时出错，未发送交易。"
 
