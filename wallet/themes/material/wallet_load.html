@@ -17,7 +17,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <i class="material-icons">folder</i> {{ _("Your wallets directory is {}".format(wallet_dir)) }}
+                        <i class="material-icons">folder</i> {{ _("Your wallets directory is {}").format(wallet_dir) }}
                     </div>
                 </div>
             </a>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <input type="text" name="wallet" placeholder="wallet_file_name">
+                        <input type="text" name="wallet" placeholder="{{ _('wallet_file_name') }}">
                         <input type="submit" value="{{ _(' Ok')}}">
                     </div>
                 </div>

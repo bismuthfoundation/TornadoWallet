@@ -10,7 +10,6 @@ import json
 import logging
 # import random
 import string
-# import sys
 # import time
 # import datetime
 import tornado.escape
@@ -29,8 +28,9 @@ from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
 from bismuthclient.bismuthutil import BismuthUtil
+from modules.basehandlers import BaseHandler
 
-__version__ = '0.0.65'  #
+__version__ = '0.0.66b'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
@@ -83,57 +83,6 @@ class Application(tornado.web.Application):
         )
         super(Application, self).__init__(handlers, **settings)
 
-
-class BaseHandler(tornado.web.RequestHandler):
-    def initialize(self):
-        """Common init for every request"""
-        # TODO: advantage in using Tornado Babel maybe? https://media.readthedocs.org/pdf/tornado-babel/0.1/tornado-babel.pdf
-        _ = self.locale.translate
-        self.app_log = logging.getLogger("tornado.application")
-        self.bismuth = self.settings['bismuth_client']
-        # Load persisted wallet if needed
-        wallet = self.get_cookie('wallet')
-        if wallet and wallet != self.bismuth.wallet_file:
-            self.bismuth.load_wallet(wallet)
-        # print("cookies", self.cookies)
-        self.bismuth_vars = self.settings['bismuth_vars']
-        # self.bismuth_vars['wallet'] =
-        # reflect server info
-        self.settings["page_title"] = self.settings["app_title"]
-        self.bismuth_vars['server'] = self.bismuth.info()
-        self.bismuth_vars['server_status'] = self.bismuth.status()
-        self.bismuth_vars['balance'] = self.bismuth.balance()
-        self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
-        self.bismuth_vars['params'] = {}
-        self.cristals = self.settings['bismuth_cristals']
-
-    def active_if(self, path: string):
-        """return the 'active' string if the request uri is the one in path. Used for menu css"""
-        if self.request.uri == path:
-            return "active"
-        return ''
-
-    def active_if_start(self, path: string):
-        """return the 'active' string if the request uri begins with the one in path. Used for menu css"""
-        if self.request.uri.startswith(path):
-            return "active"
-        return ''
-
-    def message(self, title, message, type="info"):
-        """Display message template page"""
-        self.render("message.html", bismuth=self.bismuth_vars, title=title, message=message, type=type)
-
-
-    def extract_params(self):
-        # TODO: rewrite with get_arguments and remove this redundant function
-        if '?' not in self.request.uri:
-            self.bismuth_vars['params'] = {}
-            return {}
-        _, param = self.request.uri.split("?")
-        res = {key: value for key, value in [item.split('=') for item in param.split("&")]}
-        # TODO: see https://www.tornadoweb.org/en/stable/web.html#tornado.web.RequestHandler.decode_argument
-        self.bismuth_vars['params'] = res
-        return res
 
 
 class HomeHandler(BaseHandler):
@@ -398,5 +347,11 @@ async def main():
 
 if __name__ == "__main__":
     # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
-    tornado.locale.load_gettext_translations('locale', 'messages')
+    if getattr(sys, 'frozen', False):
+        # running in a bundle
+        locale_path = os.path.join(os.path.dirname(sys.executable), 'locale')
+    else:
+        # running live
+        locale_path = os.path.join(os.path.dirname(__file__), 'locale')
+    tornado.locale.load_gettext_translations(locale_path, 'messages')
     tornado.ioloop.IOLoop.current().run_sync(main)
