@@ -17,7 +17,7 @@ msgstr "Esta carteira não existiria sem..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr "O modelo \"Material Escuro\", de <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
+msgstr "O tema \"Material Escuro\", de <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 
 #: themes/material/about_credits.html:19
 msgid "Python, awesome language!"
@@ -472,69 +472,69 @@ msgstr "Receber BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "Tema da carteira {} por {}."
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Muito obrigado aos nossos tradutores e revisores"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Versão do servidor da carteira {}"
 
 #: themes/material/base.html:148
 msgid "Wallet"
-msgstr ""
+msgstr "Carteira"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "URL BIS"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Suas carteiras Bismuth"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "O seu diretório de carteiras é {}"
 
 #: wallet.py:164 wallet.py:168 wallet.py:198
 msgid "Error:"
-msgstr ""
+msgstr "Erro:"
 
 #: wallet.py:164
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Carregue sua carteira primeiro"
 
 #: wallet.py:164
 msgid "No Wallet"
-msgstr ""
+msgstr "Sem carteira"
 
 #: wallet.py:168
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Carteira criptografada"
 
 #: wallet.py:168
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "Você precisa desbloquear sua carteira primeiro"
 
 #: wallet.py:193
 msgid "Success:"
-msgstr ""
+msgstr "Sucesso"
 
 #: wallet.py:193
 msgid "Transaction sent"
-msgstr ""
+msgstr "Transação enviada"
 
 #: wallet.py:194
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "A transação foi enviada para o pool de memória."
 
 #: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid é {}"
 
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Houve um erro ao enviar para o pool de memória, a transação não foi enviada."
 
