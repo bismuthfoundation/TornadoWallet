@@ -25,7 +25,7 @@ msgstr "Python, fantastican jezik!"
 
 #: themes/material/about_credits.html:20
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
+msgstr "<a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> okruženje web aplikacije"
 
 #: themes/material/about_credits.html:30
 msgid "About"
@@ -37,7 +37,7 @@ msgstr "Verzija Tornado novčanika {}"
 
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr "This is the default wallet theme by {} from {}."
+msgstr "Podrazumevana tema je {} od {}."
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
@@ -472,69 +472,69 @@ msgstr "Primiti BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "{} šablon novčanika od {}."
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Puno zahvala našim prevodiocima i korektorima"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Verzija servera od novčanika {}"
 
 #: themes/material/base.html:148
 msgid "Wallet"
-msgstr ""
+msgstr "Novčanik"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Vaši Bismuth novčanici"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "Direktorijum vašeg novčanika je {}"
 
 #: wallet.py:164 wallet.py:168 wallet.py:198
 msgid "Error:"
-msgstr ""
+msgstr "Greška:"
 
 #: wallet.py:164
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Pokreni svoj novčanik prvo"
 
 #: wallet.py:164
 msgid "No Wallet"
-msgstr ""
+msgstr "Nema novčanika"
 
 #: wallet.py:168
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Kodiran novčanik"
 
 #: wallet.py:168
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "Morate prvo otključati svoj novčanik"
 
 #: wallet.py:193
 msgid "Success:"
-msgstr ""
+msgstr "Uspešno:"
 
 #: wallet.py:193
 msgid "Transaction sent"
-msgstr ""
+msgstr "Tranzakcija poslata"
 
 #: wallet.py:194
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "Tranzakcija je podnešena mempool-u."
 
 #: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid je {}"
 
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Doslo je do greske poslati na mempool, tranzakcija nije poslata."
 
