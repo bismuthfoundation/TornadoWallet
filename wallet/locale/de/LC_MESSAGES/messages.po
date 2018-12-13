@@ -9,7 +9,7 @@ msgstr ""
 
 #: themes/material/about_credits.html:10 themes/material/base.html:201
 msgid "Credits"
-msgstr "Credits"
+msgstr "Danksagung"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
@@ -45,7 +45,7 @@ msgstr "Derzeitiger Wallet Server"
 
 #: themes/material/about_network.html:16
 msgid "This is the server you're connected to."
-msgstr "Dies ist der Server mit dem Du verbunden bist."
+msgstr "Dies ist der Server mit dem Sie verbunden sind."
 
 #: themes/material/about_network.html:19
 msgid "Server:"
@@ -133,11 +133,11 @@ msgstr "Netzwerk"
 
 #: themes/material/base.html:86 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr "Kristalle"
+msgstr "Crystals"
 
 #: themes/material/base.html:102
 msgid "Toggle navigation"
-msgstr "Navigation Umschalten"
+msgstr "Navigation umschalten"
 
 #: themes/material/base.html:181
 msgid "Source"
@@ -155,21 +155,24 @@ msgstr "Discord"
 msgid "Donate"
 msgstr "Spenden"
 
+#. Capitalization question: how is this string used? As in "Wallet at block 10" or as in a simple label "Block 10"?
 #: themes/material/base.html:207
 msgid "block #"
-msgstr "Block #"
+msgstr "block #"
 
 #: themes/material/base.html:227
 msgid "Sidebar Filters"
 msgstr "Seitenleiste Filter"
 
+#. Is there an example sentence?
 #: themes/material/base.html:240
 msgid "Images"
 msgstr "Bilder"
 
+#. For the strings I translated, I went with "Sie / Ihr". What does the team say on this?
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "Kristalle sind weitere Funktionalitäten die Du Deinem Wallet hinzufügen kannst"
+msgstr "Crystals sind weitere Funktionalitäten die Sie Ihrem Wallet hinzufügen können"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
@@ -187,10 +190,11 @@ msgstr "Senden"
 msgid "Send $BIS to..."
 msgstr "Sende $BIS an…"
 
+#. "Empfangen" might be better
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr "Erhalten"
+msgstr "Empfangen"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
@@ -224,17 +228,19 @@ msgstr "Betrag"
 msgid "Type"
 msgstr "Typ"
 
+#. "Neuigkeiten" maybe?
 #: themes/material/home.html:128
 msgid "Bismuth news"
-msgstr "Bismuth Nachrichten"
+msgstr "Bismuth Neuigkeiten"
 
 #: themes/material/home.html:149
 msgid "Bismuth vs USD"
 msgstr "Bismuth vs USD"
 
+#. "mit erfundenen Daten" maybe?
 #: themes/material/home.html:155
 msgid "This is a mockup with fake data"
-msgstr "Dies ist eine Attrappe mit falschen Daten"
+msgstr "Dies ist eine Attrappe mit erfundenen Daten"
 
 #: themes/material/home.html:169
 msgid "Account balance"
@@ -246,7 +252,7 @@ msgstr "Letzten 12 Monate"
 
 #: themes/material/home.html:174
 msgid "Mockup with fake data"
-msgstr "Dies ist eine Attrappe mit falschen Daten"
+msgstr "Dies ist eine Attrappe mit erfundenen Daten"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
@@ -281,7 +287,7 @@ msgstr "Daten (Nachricht)"
 #: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "Optional kannst Du Deiner Transaktion einen kurzen Kommentar hinzufügen. Erforderlich für Zahlungen an Börsen."
+msgstr "Optional können Sie Ihrer Transaktion einen kurzen Kommentar hinzufügen. Erforderlich für Zahlungen an Börsen."
 
 #: themes/material/transactions_send.html:43
 #: themes/material/transactions_send_confirm.html:56
@@ -316,8 +322,9 @@ msgstr "Aktuelles Wallet"
 
 #: themes/material/wallet_info.html:28
 msgid "Open existing"
-msgstr "Öffne bestehendes"
+msgstr "Öffnen Sie das bestehende"
 
+#. Not sure if "wallet", should be translated since it might become world wide term like e.g. "browser"
 #: themes/material/wallet_info.html:29
 msgid "wallet"
 msgstr "Wallet"
@@ -384,19 +391,19 @@ msgstr "BIS anfordern"
 
 #: themes/material/transactions_receive.html:20
 msgid "Your address"
-msgstr "Deine Adresse"
+msgstr "Ihre Adresse"
 
 #: themes/material/transactions_receive.html:22
 msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "Dies ist Deine Adresse für das derzeitige Wallet, aber wenn es erforderlich ist, kannst Du es ändern."
+msgstr "Dies ist Ihre Adresse für das derzeitige Wallet, aber wenn es erforderlich ist, können Sie es ändern."
 
 #: themes/material/transactions_receive.html:30
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "Optional kannst Du einen kurzen Transaktions-Kommentar hinzufügen (z.B. einen Betreff). Dies wird im Blockchain gespeichert."
+msgstr "Optional können Soe einen kurzen Transaktions-Kommentar hinzufügen (z.B. einen Betreff). Dies wird in der Blockchain gespeichert."
 
 #: themes/material/transactions_receive.html:35
 msgid "This is the QR code for your address only."
-msgstr "Dies ist der QR Code lediglich für Deine Adresse."
+msgstr "Dies ist nur der QR Code für Ihre Adresse."
 
 #: themes/material/transactions_receive.html:47
 msgid "How many BIS to request."
@@ -404,7 +411,7 @@ msgstr "Wieviel BIS sollen angefordert werden."
 
 #: themes/material/transactions_receive.html:56
 msgid "This is what you will receive"
-msgstr "Das ist was Du empfangen wirst"
+msgstr "Das ist was Sie empfangen werden"
 
 #: themes/material/transactions_receive.html:63
 #: themes/material/transactions_send.html:58
@@ -422,11 +429,11 @@ msgstr "BIS URL erhalten"
 
 #: themes/material/transactions_receive.html:78
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "Dies ist der QR code für Deine Adresse, Daten und Betrag als eine BisUrl."
+msgstr "Dies ist der QR code für Ihre Adresse, Daten und Betrag als eine BisUrl."
 
 #: themes/material/transactions_receive.html:79
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "Du kannst das Bild kopieren/ einfügen um es z.B. in einer E-mail oder anderweitig zu verschicken"
+msgstr "Sie können das Bild kopieren/ einfügen um es z.B. in einer E-mail oder anderweitig zu verschicken"
 
 #: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:65
@@ -436,7 +443,7 @@ msgstr "Dies ist was der Empfänger erhalten wird"
 #: themes/material/transactions_send.html:63
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr "Dies ist was Du bezahlen wirst, Gebühren inbegriffen."
+msgstr "Dies ist was Sie bezahlen werden, Gebühren inbegriffen."
 
 #: themes/material/wallet_load.html:56
 msgid "Action"
@@ -472,69 +479,69 @@ msgstr "BIS erhalten"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "Wallet Template {} von {}."
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Vielen Dank an unsere Übersetzer und Korrekturleser"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Wallet Server Version {}"
 
 #: themes/material/base.html:148
 msgid "Wallet"
-msgstr ""
+msgstr "Wallet"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Ihre Bismuth Wallets"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "Ihr Wallet-Verzeichnis ist {}"
 
 #: wallet.py:164 wallet.py:168 wallet.py:198
 msgid "Error:"
-msgstr ""
+msgstr "Fehler:"
 
 #: wallet.py:164
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Laden Sie zunächst Ihr Wallet"
 
 #: wallet.py:164
 msgid "No Wallet"
-msgstr ""
+msgstr "Kein Wallet"
 
 #: wallet.py:168
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Verschlüsseltes Wallet"
 
 #: wallet.py:168
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "Sie müssen zunächst Ihr Wallet entsperren"
 
 #: wallet.py:193
 msgid "Success:"
-msgstr ""
+msgstr "Erfolg:"
 
 #: wallet.py:193
 msgid "Transaction sent"
-msgstr ""
+msgstr "Transaktion gesendet"
 
 #: wallet.py:194
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "Die Transaktion wurde zum mempool hinzugefügt."
 
 #: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Die Txid lautet {}"
 
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Fehler beim Hinzufügen zum mempool - Transaktion wurde nicht gesendet."
 
