@@ -9,7 +9,7 @@ msgstr ""
 
 #: themes/material/about_credits.html:10 themes/material/base.html:201
 msgid "Credits"
-msgstr "Dank aan"
+msgstr "Over"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
@@ -29,7 +29,7 @@ msgstr "Het <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\
 
 #: themes/material/about_credits.html:30
 msgid "About"
-msgstr "Over"
+msgstr "Details"
 
 #: themes/material/about_credits.html:35
 msgid "Tornado wallet version {}"
@@ -101,7 +101,7 @@ msgstr "servers"
 
 #: themes/material/about_network.html:87
 msgid "Refresh from API"
-msgstr "Vernieuw van API"
+msgstr "Vernieuwen vanuit API"
 
 #: themes/material/base.html:34
 msgid "Bismuth Wallet"
@@ -153,7 +153,7 @@ msgstr "Discord"
 
 #: themes/material/base.html:196
 msgid "Donate"
-msgstr "Doneer"
+msgstr "Doneren"
 
 #: themes/material/base.html:207
 msgid "block #"
@@ -181,11 +181,11 @@ msgstr "Saldo"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr "Verstuur"
+msgstr "Verzenden"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr "Verstuur $BIS naar..."
+msgstr "Verzend $BIS naar..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
@@ -260,12 +260,12 @@ msgstr "Tokens zijn een kernfunctionaliteit van BIS"
 #: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
-msgstr "Verstuur naar"
+msgstr "Verzend naar"
 
 #: themes/material/transactions_send.html:17
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
-msgstr "Naar wie BIS versturen"
+msgstr "Naar wie BIS verzenden"
 
 #: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
@@ -281,12 +281,12 @@ msgstr "Data (bericht)"
 #: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "Indien gewenst kan je enige commentaar toevoegen aan je transactie. Dit is vereist bij het versturen naar een exchange."
+msgstr "Indien gewenst kan je enige commentaar toevoegen aan je transactie. Dit is vereist bij het verzenden naar een exchange."
 
 #: themes/material/transactions_send.html:43
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr "Aantal te versturen BIS"
+msgstr "Aantal te verzenden BIS"
 
 #: themes/material/transactions_receive.html:53
 #: themes/material/transactions_send.html:49
@@ -308,7 +308,7 @@ msgstr "Totaal (BIS)"
 
 #: themes/material/transactions_send.html:67 wallet.py:161
 msgid "Send BIS"
-msgstr "Verstuur BIS"
+msgstr "Verzend BIS"
 
 #: themes/material/wallet_info.html:11
 msgid "Current Wallet"
@@ -392,7 +392,7 @@ msgstr "Dit is je adres voor de huidige wallet, maar je kan dit veranderen indie
 
 #: themes/material/transactions_receive.html:30
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "Indien gewenst kan je enige commentaar toevoegen aan je transactie, bijvoorbeeld een zelf gekozen referentie. Zal bewaard worden op de chain."
+msgstr "Indien gewenst kan je enige commentaar toevoegen aan je transactie, bijvoorbeeld een zelf gekozen referentie. Dit zal bewaard worden op de chain."
 
 #: themes/material/transactions_receive.html:35
 msgid "This is the QR code for your address only."
@@ -452,11 +452,11 @@ msgstr "Annuleer"
 
 #: themes/material/transactions_send_confirm.html:105
 msgid "Confirm and send BIS"
-msgstr "Bevestigen en verstuur BIS"
+msgstr "Bevestigen en verzend BIS"
 
 #: wallet.py:172
 msgid "Send BIS: Confirmation"
-msgstr "Verstuur BIS: bevestiging"
+msgstr "Verzend BIS: bevestiging"
 
 #: wallet.py:174
 msgid "Please confirm this transaction"
@@ -472,69 +472,69 @@ msgstr "Ontvang BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "Wallet thema {} door {}."
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Hartelijk dank aan onze vertalers en proeflezers"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Wallet server versie {}"
 
 #: themes/material/base.html:148
 msgid "Wallet"
-msgstr ""
+msgstr "Wallet"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Jouw Bismuth wallets"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "Je folder met wallets is {}"
 
 #: wallet.py:164 wallet.py:168 wallet.py:198
 msgid "Error:"
-msgstr ""
+msgstr "Fout:"
 
 #: wallet.py:164
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Laad eerst je wallet"
 
 #: wallet.py:164
 msgid "No Wallet"
-msgstr ""
+msgstr "Geen wallet"
 
 #: wallet.py:168
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Versleutelde wallet"
 
 #: wallet.py:168
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "Je moet eerst je wallet ontgrendelen"
 
 #: wallet.py:193
 msgid "Success:"
-msgstr ""
+msgstr "Succes:"
 
 #: wallet.py:193
 msgid "Transaction sent"
-msgstr ""
+msgstr "Transactie verzonden"
 
 #: wallet.py:194
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "De transactie is verstuurd naar de mempool."
 
 #: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid is {}"
 
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Er is een fout opgetreden bij het versturen naar de mempool, de transactie werd niet uitgevoerd."
 
