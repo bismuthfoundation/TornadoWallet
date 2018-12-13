@@ -472,69 +472,69 @@ msgstr "Motta BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "Lommebok mal {} av {}"
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Mange takk til våre oversettere og korrekturlesere"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Lommebok tjener versjon {}"
 
 #: themes/material/base.html:148
 msgid "Wallet"
-msgstr ""
+msgstr "Lommebok"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Dine Bismuth lommebøker"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "Din lommebok katalog er {}"
 
 #: wallet.py:164 wallet.py:168 wallet.py:198
 msgid "Error:"
-msgstr ""
+msgstr "Feilmelding:"
 
 #: wallet.py:164
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Last inn din lommebok først"
 
 #: wallet.py:164
 msgid "No Wallet"
-msgstr ""
+msgstr "Ingen Lommebok"
 
 #: wallet.py:168
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Kryptert lommebok"
 
 #: wallet.py:168
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "Du må låse opp din lommebok først"
 
 #: wallet.py:193
 msgid "Success:"
-msgstr ""
+msgstr "Suksess:"
 
 #: wallet.py:193
 msgid "Transaction sent"
-msgstr ""
+msgstr "Transaksjon sendt"
 
 #: wallet.py:194
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "Transaksjonen ble sendt til mempool."
 
 #: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid er {}"
 
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Det oppstod en feil ved sending til mempool, transaksjonen ble ikke sendt."
 
