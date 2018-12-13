@@ -45,7 +45,7 @@ msgstr "Jelenlegi pénztárca szerver."
 
 #: themes/material/about_network.html:16
 msgid "This is the server you're connected to."
-msgstr "Ez a szerver amihez csatlakozik."
+msgstr "Ez a szerver amihez csatlakozva vagy."
 
 #: themes/material/about_network.html:19
 msgid "Server:"
@@ -133,7 +133,7 @@ msgstr "Hálózat"
 
 #: themes/material/base.html:86 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr "Kristályok"
+msgstr "Crystal-ok"
 
 #: themes/material/base.html:102
 msgid "Toggle navigation"
@@ -169,7 +169,7 @@ msgstr "Képek"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "A kristályok extra funkciók amelyeket hozzáadhat a pénztárcájahoz"
+msgstr "A Crystal-ok extra funkciók amelyeket hozzáadhat a pénztárcájahoz"
 
 #: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
 msgid "WIP"
@@ -190,11 +190,11 @@ msgstr "Küldj $BIS-t a..."
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr "Fogadni"
+msgstr "Fogad"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr "Kérjen $BIS fizetést"
+msgstr "$BIS utalás igénylése"
 
 #: themes/material/home.html:74
 msgid "Latest transactions"
@@ -202,7 +202,7 @@ msgstr "Legutóbbi tranzakciók"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
-msgstr "Frissítve"
+msgstr "utoljára frissítve"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
@@ -255,7 +255,7 @@ msgstr "Előző oldal"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "A tokenek a legfontosabb BIS funkciók"
+msgstr "A tokenek a központi funkciói a BIS-nek"
 
 #: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:28
@@ -265,12 +265,12 @@ msgstr "Címzett"
 #: themes/material/transactions_send.html:17
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
-msgstr "Kinek küldeni a BIS-t."
+msgstr "Kinek küldöd a BIS-t."
 
 #: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
 msgid "Recipient"
-msgstr "Fogadó"
+msgstr "Címzett"
 
 #: themes/material/transactions_receive.html:27
 #: themes/material/transactions_send.html:26
@@ -281,7 +281,7 @@ msgstr "Adat (üzenet)"
 #: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "Opcionálissan hozzáadhat egy kis megjegyzést a tranzakcióhoz. Pénzváltók esetében kötelező."
+msgstr "Opcionálissan megjegyzést adhat a tranzakcióhoz. Pénzváltók esetében kötelező."
 
 #: themes/material/transactions_send.html:43
 #: themes/material/transactions_send_confirm.html:56
@@ -298,7 +298,7 @@ msgstr "Mennyiség (BIS)"
 #: themes/material/transactions_send.html:56
 #: themes/material/transactions_send_confirm.html:70
 msgid "Est. fees"
-msgstr "Becsült költségdíjak"
+msgstr "Becsült járulék"
 
 #: themes/material/transactions_receive.html:66
 #: themes/material/transactions_send.html:61
@@ -308,7 +308,7 @@ msgstr "Teljes (BIS)"
 
 #: themes/material/transactions_send.html:67 wallet.py:161
 msgid "Send BIS"
-msgstr "Küldje a BIS-t"
+msgstr "BIS küldése"
 
 #: themes/material/wallet_info.html:11
 msgid "Current Wallet"
@@ -324,7 +324,7 @@ msgstr "pénztárca"
 
 #: themes/material/wallet_info.html:33
 msgid "Load a wallet from disk"
-msgstr "Töltsön be egy tárcát a lemezről"
+msgstr "Töltsön be egy tárcát a tárhelyről"
 
 #: themes/material/wallet_info.html:47 themes/material/wallet_load.html:34
 msgid "Create a"
@@ -372,7 +372,7 @@ msgstr "Txid"
 
 #: themes/material/transactions.html:84
 msgid "Fees"
-msgstr "Költségdíjak"
+msgstr "járulék"
 
 #: themes/material/transactions.html:85
 msgid "Data"
@@ -388,7 +388,7 @@ msgstr "Címed"
 
 #: themes/material/transactions_receive.html:22
 msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "Ez a cím a jelenlegi pénztárca számára van, de szükség esetén megváltoztathatja. Ekkor fokozottan ellenőrizze."
+msgstr "Ez a jelenlegi pénztárcájának a címe, de szükség esetén megváltoztathatja. Ekkor fokozottan ellenőrizze."
 
 #: themes/material/transactions_receive.html:30
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
@@ -396,7 +396,7 @@ msgstr "Opcionálisan hozzáadhat egy kis megjegyzést a tranzakcióhoz, mint p�
 
 #: themes/material/transactions_receive.html:35
 msgid "This is the QR code for your address only."
-msgstr "Ez a QR kódja a címednek."
+msgstr "Ez csak a te címed QR kódja"
 
 #: themes/material/transactions_receive.html:47
 msgid "How many BIS to request."
@@ -404,17 +404,17 @@ msgstr "Hány BIS-t szeretne kérni."
 
 #: themes/material/transactions_receive.html:56
 msgid "This is what you will receive"
-msgstr "Ez az amit kapni fog"
+msgstr "Ennyit fog kapni"
 
 #: themes/material/transactions_receive.html:63
 #: themes/material/transactions_send.html:58
 #: themes/material/transactions_send_confirm.html:72
 msgid "Fees depend on Data length"
-msgstr "A költségdíjak függnek az adat hosszától"
+msgstr "A járulék az adat hosszától függ"
 
 #: themes/material/transactions_receive.html:68
 msgid "This is what the sender will pay"
-msgstr "Ez az amit a küldő fizet"
+msgstr "Ennyit fizet a küldő fél"
 
 #: themes/material/transactions_receive.html:72
 msgid "Get BIS URL"
@@ -422,11 +422,11 @@ msgstr "BIS URL kérése"
 
 #: themes/material/transactions_receive.html:78
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "Ez a QR-kód a címedre, az adatokra és az összegre, mint BisUrl."
+msgstr "Ez a QR-kód a címedre, az adatokra és az összegre, mint BIS Url."
 
 #: themes/material/transactions_receive.html:79
 msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "Ezt a képet bemásolhatja/beillesztheti, ha levélben vagy bármiben küldi"
+msgstr "Ezt a képet bemásolhatja/beillesztheti, ha levélben vagy bármiben küldené"
 
 #: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:65
@@ -436,7 +436,7 @@ msgstr "Ezt fogja megkapni a címzett"
 #: themes/material/transactions_send.html:63
 #: themes/material/transactions_send_confirm.html:77
 msgid "This is what you will pay, fees included."
-msgstr "Ez az, amit fizetni fog, beleértve a díjakat is."
+msgstr "Ennyit fog fizetni járulékokkal együtt."
 
 #: themes/material/wallet_load.html:56
 msgid "Action"
@@ -472,69 +472,69 @@ msgstr "BIS fogadása"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "{} pénztárca sablont készítette: {}."
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Sok köszönet a fordítóinknak és rektorainknak."
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Pénztárca szerver verzió {}"
 
 #: themes/material/base.html:148
 msgid "Wallet"
-msgstr ""
+msgstr "Pénztárca"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Bismuth pénztárcái"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "Pénztárcáinak könyvtára a {}"
 
 #: wallet.py:164 wallet.py:168 wallet.py:198
 msgid "Error:"
-msgstr ""
+msgstr "Hiba:"
 
 #: wallet.py:164
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Először töltse be a pénztárcáját"
 
 #: wallet.py:164
 msgid "No Wallet"
-msgstr ""
+msgstr "Nincs pénztárca"
 
 #: wallet.py:168
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Titkosított pénztárca"
 
 #: wallet.py:168
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "Először ki kell nyitnia a pénztárcáját"
 
 #: wallet.py:193
 msgid "Success:"
-msgstr ""
+msgstr "Siker:"
 
 #: wallet.py:193
 msgid "Transaction sent"
-msgstr ""
+msgstr "Tranzakció elküldve"
 
 #: wallet.py:194
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "A tranzakciót beküldtük a mempool-nak."
 
 #: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid-k {}"
 
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Hiba történt a mempoolra történő beküldéskor. A tranzakció sikertelen."
 
