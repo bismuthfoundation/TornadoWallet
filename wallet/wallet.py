@@ -29,13 +29,14 @@ from tornado.options import define, options
 from bismuthclient import bismuthclient
 from bismuthclient.bismuthutil import BismuthUtil
 from modules.basehandlers import BaseHandler
+from modules import helpers
 
-__version__ = '0.0.66b'
+__version__ = '0.0.67'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("debug", default=False, help="debug mode", type=bool)
 define("verbose", default=False, help="verbose mode", type=bool)
-define("theme", default='themes/material', help="theme directory", type=str)
+define("theme", default='themes/material', help="theme directory, relative to the app", type=str)
 define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
 
 # Where the wallets and other potential private info are to be stored.
@@ -53,6 +54,9 @@ class Application(tornado.web.Application):
         wallet_dir = bismuth_client.user_subdir(BISMUTH_PRIVATE_DIR)
         print("Please store your wallets under '{}'".format(wallet_dir))
         bismuth_client.get_server()
+        # Convert relative to absolute
+        options.theme = os.path.join(helpers.base_path(), options.theme)
+        static_path = os.path.join(options.theme, 'static')
         handlers = [
             (r"/", HomeHandler),
             (r"/transactions/(.*)", TransactionsHandler),
@@ -68,7 +72,7 @@ class Application(tornado.web.Application):
         settings = dict(
             app_title=u"Tornado Bismuth Wallet",
             template_path=os.path.join(os.path.dirname(__file__), options.theme),
-            static_path=os.path.join(os.path.dirname(__file__), "{}/static".format(options.theme)),
+            static_path=os.path.join(os.path.dirname(__file__), static_path),
             ui_modules={"Transaction": TxModule},
             xsrf_cookies=True,
             cookie_secret="__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
@@ -82,7 +86,6 @@ class Application(tornado.web.Application):
             bismuth_cristals = {}
         )
         super(Application, self).__init__(handlers, **settings)
-
 
 
 class HomeHandler(BaseHandler):
@@ -347,11 +350,6 @@ async def main():
 
 if __name__ == "__main__":
     # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
-    if getattr(sys, 'frozen', False):
-        # running in a bundle
-        locale_path = os.path.join(os.path.dirname(sys.executable), 'locale')
-    else:
-        # running live
-        locale_path = os.path.join(os.path.dirname(__file__), 'locale')
+    locale_path = os.path.join(helpers.base_path(), 'locale')
     tornado.locale.load_gettext_translations(locale_path, 'messages')
     tornado.ioloop.IOLoop.current().run_sync(main)
