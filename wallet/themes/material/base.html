@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="/static/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/static/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ static_url('img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ static_url('img/favicon.png') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>{{ escape(handler.settings["page_title"]) }}</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- CSS Files -->
-    <link href="/static/css/material-dashboard.css?v=2.1.0" rel="stylesheet"/>
-    <link href="/static/css/custom.css" rel="stylesheet"/>
+    <link href="{{ static_url('css/material-dashboard.css') }}" rel="stylesheet"/>
+    <link href="{{ static_url('css/custom.css') }}" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, dont include it in your project -->
-    <link href="/static/demo/demo.css" rel="stylesheet"/>
+    <link href="{{ static_url('demo/demo.css') }}" rel="stylesheet"/>
 </head>
 
 <body class="dark-edition">
 <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="/static/img/sidebar-2.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{{ static_url('img/sidebar-2.jpg') }}">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
   {{ handler.request.uri }}
@@ -80,10 +80,10 @@
                     <p>Notifications</p>
                   </a>
                 </li -->
-                <li class="nav-item  {{ handler.active_if_start('/cristals/') }} ">
-                <a class="nav-link" href="/cristals/">
+                <li class="nav-item  {{ handler.active_if_start('/crystals/') }} ">
+                <a class="nav-link" href="/crystals/">
                     <i class="material-icons">brightness_high</i>
-                    <p>{{_("Cristals")}}</p>
+                    <p>{{_("Crystals")}}</p>
                 </a>
                 </li>
 
@@ -279,23 +279,23 @@
     </div>
 </div>
 <!--   Core JS Files   -->
-<script src="/static/js/core/jquery.min.js"></script>
-<script src="/static/js/core/popper.min.js"></script>
-<script src="/static/js/core/bootstrap-material-design.min.js"></script>
+<script src="{{ static_url('js/core/jquery.min.js') }}"></script>
+<script src="{{ static_url('js/core/popper.min.js') }}"></script>
+<script src="{{ static_url('js/core/bootstrap-material-design.min.js') }}"></script>
 <script src="https://unpkg.com/default-passive-events"></script>
-<script src="/static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="{{ static_url('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!--  Google Maps Plugin    -->
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Chartist JS -->
-<script src="/static/js/plugins/chartist.min.js"></script>
+<script src="{{ static_url('js/plugins/chartist.min.js') }}"></script>
 <!--  Notifications Plugin    -->
-<script src="/static/js/plugins/bootstrap-notify.js"></script>
+<script src="{{ static_url('js/plugins/bootstrap-notify.js') }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="/static/js/material-dashboard.js?v=2.1.0"></script>
+<script src="{{ static_url('js/material-dashboard.js') }}"></script>
 <!-- Material Dashboard DEMO methods, dont include it in your project -->
-<script src="/static/demo/demo.js"></script>
+<script src="{{ static_url('demo/demo.js') }}"></script>
 <script>
     $(document).ready(function() {
       $().ready(function() {

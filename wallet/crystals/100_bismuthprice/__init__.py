@@ -2,13 +2,15 @@
 Dragginator Crystal for Tornado wallet
 """
 
+from os import path
+
 from modules.basehandlers import CrystalHandler
+from modules.helpers import base_path
+
+DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/100_bistmuthprice/themes/default')
 
 
-DEFAULT_THEME_PATH = 'crystals/dragginator/themes/default'
-
-
-class DragginatorHandler(CrystalHandler):
+class BismuthpriceHandler(CrystalHandler):
 
     async def about(self, params=None):
         self.render("about.html", bismuth=self.bismuth_vars)

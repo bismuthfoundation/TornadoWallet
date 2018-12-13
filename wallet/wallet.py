@@ -23,13 +23,15 @@ import tornado.web
 import subprocess
 import webbrowser
 import sys
+import socket
 
 from tornado.options import define, options
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
 from bismuthclient.bismuthutil import BismuthUtil
-from modules.basehandlers import BaseHandler
+from modules.basehandlers import BaseHandler, CrystalLoader
 from modules import helpers
+from modules.crystals import CrystalManager
 
 __version__ = '0.0.67'
 
@@ -38,6 +40,7 @@ define("debug", default=False, help="debug mode", type=bool)
 define("verbose", default=False, help="verbose mode", type=bool)
 define("theme", default='themes/material', help="theme directory, relative to the app", type=str)
 define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
+define("crystals", default=False, help="Load Crystals (Experimental)", type=bool)
 
 # Where the wallets and other potential private info are to be stored.
 # It's a dir under the user's own home directory.
@@ -67,10 +70,19 @@ class Application(tornado.web.Application):
             (r"/about/(.*)", AboutHandler),
             (r"/tokens/(.*)", TokensHandler),
             (r"/search/(.*)", SearchHandler),
-            (r"/cristals/(.*)", CristalsHandler)
+            (r"/crystals/(.*)", CristalsHandler),
+            (r"/(apple-touch-icon\.png)", tornado.web.StaticFileHandler,
+             dict(path=static_path))
         ]
+        # Parse crystals dir, import and plug handlers.
+        self.crystals_manager = CrystalManager(init=options.crystals)
+        handlers.extend(self.crystals_manager.get_handlers())
+        # print("handlers", handlers)
+        self.crystals_manager.execute_action_hook('init')
+
         settings = dict(
             app_title=u"Tornado Bismuth Wallet",
+            # template_loader = CrystalLoader(options.theme),
             template_path=os.path.join(os.path.dirname(__file__), options.theme),
             static_path=os.path.join(os.path.dirname(__file__), static_path),
             ui_modules={"Transaction": TxModule},
@@ -99,7 +111,10 @@ class HomeHandler(BaseHandler):
             self.redirect("/wallet/load")
             return
         self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5, for_display=True)
-        self.render("home.html", bismuth=self.bismuth_vars)
+        home_crystals = {"address": self.bismuth_vars['address'], "content": b'',
+                         'request_handler': self}
+        self.application.crystals_manager.execute_filter_hook('home', home_crystals, first_only=False)
+        self.render("home.html", bismuth=self.bismuth_vars, home_crystals=home_crystals)
         # self.app_log.info("> home")
 
 
@@ -292,7 +307,10 @@ class TokensHandler(BaseHandler):
 class CristalsHandler(BaseHandler):
 
     async def list(self, params=None):
-        self.render("cristals_list.html", bismuth=self.bismuth_vars)
+        crystals = self.application.crystals_manager.get_loaded_crystals()
+        #crystal_names = {name: name.split('_')[1] for name in crystals.keys()}
+        crystal_names = [name.split('_')[1] for name in crystals.keys()]
+        self.render("cristals_list.html", bismuth=self.bismuth_vars, crystals=crystal_names)
 
     async def get(self, command=''):
         command, *params = command.split('/')
@@ -344,12 +362,21 @@ async def main():
     if not options.debug:
         # In debug mode, any code change will restart the server and launch another tab.
         # This goes in the way, so we deactivate in debug.
-        open_url("http://127.0.0.1:8888")
+        open_url("http://127.0.0.1:{}".format(options.port))
     await shutdown_event.wait()
+
+def port_in_use(port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.settimeout(1)
+    result = sock.connect_ex(('127.0.0.1', port))
+    return result == 0
 
 
 if __name__ == "__main__":
-    # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
-    locale_path = os.path.join(helpers.base_path(), 'locale')
-    tornado.locale.load_gettext_translations(locale_path, 'messages')
-    tornado.ioloop.IOLoop.current().run_sync(main)
+    if port_in_use(options.port):
+        open_url("http://127.0.0.1:{}".format(options.port))
+    else:
+        # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
+        locale_path = os.path.join(helpers.base_path(), 'locale')
+        tornado.locale.load_gettext_translations(locale_path, 'messages')
+        tornado.ioloop.IOLoop.current().run_sync(main)
