@@ -70,7 +70,7 @@ class Application(tornado.web.Application):
             (r"/about/(.*)", AboutHandler),
             (r"/tokens/(.*)", TokensHandler),
             (r"/search/(.*)", SearchHandler),
-            (r"/crystals/(.*)", CristalsHandler),
+            (r"/crystals/(.*)", CrystalsHandler),
             (r"/(apple-touch-icon\.png)", tornado.web.StaticFileHandler,
              dict(path=static_path))
         ]
@@ -95,7 +95,7 @@ class Application(tornado.web.Application):
             # wallet_servers = wallet_servers
             bismuth_client = bismuth_client,
             bismuth_vars = {'wallet_version': __version__},
-            bismuth_cristals = {}
+            bismuth_crystals = {}
         )
         super(Application, self).__init__(handlers, **settings)
 
@@ -112,8 +112,9 @@ class HomeHandler(BaseHandler):
             return
         self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5, for_display=True)
         home_crystals = {"address": self.bismuth_vars['address'], "content": b'',
-                         'request_handler': self}
+                         'request_handler': self, "extra": self.bismuth_vars['extra']}
         self.application.crystals_manager.execute_filter_hook('home', home_crystals, first_only=False)
+        self.bismuth_vars['extra'] = home_crystals['extra']
         self.render("home.html", bismuth=self.bismuth_vars, home_crystals=home_crystals)
         # self.app_log.info("> home")
 
@@ -219,7 +220,7 @@ class JsonHandler(BaseHandler):
             # internal var wallet, config, ....
             command, var = command.split('.')
             json_result = json.dumps(self.settings.get(var, None))
-        # TODO: add slug. for cristals
+        # TODO: add slug. for crystals
         else:
             try:
                 json_result = json.dumps(self.bismuth.command(command, params))
@@ -304,13 +305,13 @@ class TokensHandler(BaseHandler):
         await getattr(self, command)(params)
 
 
-class CristalsHandler(BaseHandler):
+class CrystalsHandler(BaseHandler):
 
     async def list(self, params=None):
         crystals = self.application.crystals_manager.get_loaded_crystals()
         #crystal_names = {name: name.split('_')[1] for name in crystals.keys()}
         crystal_names = [name.split('_')[1] for name in crystals.keys()]
-        self.render("cristals_list.html", bismuth=self.bismuth_vars, crystals=crystal_names)
+        self.render("crystals_list.html", bismuth=self.bismuth_vars, crystals=crystal_names)
 
     async def get(self, command=''):
         command, *params = command.split('/')

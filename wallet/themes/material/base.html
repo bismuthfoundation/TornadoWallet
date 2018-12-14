@@ -19,6 +19,7 @@
     <link href="{{ static_url('css/custom.css') }}" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, dont include it in your project -->
     <link href="{{ static_url('demo/demo.css') }}" rel="stylesheet"/>
+    {% raw bismuth['extra']['header'] %}
 </head>
 
 <body class="dark-edition">
@@ -467,6 +468,10 @@
     });
 
 </script>
+
+{% raw bismuth['extra']['footer'] %}
+
+
 </body>
 
 </html>

@@ -30,7 +30,8 @@ class BaseHandler(RequestHandler):
         self.bismuth_vars['balance'] = self.bismuth.balance()
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
-        self.cristals = self.settings['bismuth_cristals']
+        self.bismuth_vars['extra'] = {"header":'', "footer": ''}
+        self.crystals = self.settings['bismuth_crystals']
         if self.bismuth_vars['address'] is None:
             self.bismuth_vars['address'] = _("No Bismuth address, please create or load a wallet first.")
 

@@ -14,6 +14,10 @@ MODULES = {}
 
 class DragginatorHandler(CrystalHandler):
 
+    def initialize(self):
+        super().initialize()
+        self.bismuth_vars['extra'] = {"header":'<!-- DRAGGINATOR HEADER -->', "footer": '<!-- DRAGGINATOR FOOTER -->'}
+
     async def about(self, params=None):
         self.render("about.html", bismuth=self.bismuth_vars)
 
@@ -50,6 +54,10 @@ def filter_home(params):
             namespace = params['request_handler'].get_template_namespace()
             # namespace.update(kwargs)
             params["content"] += MODULES['home'].generate(**namespace)
+            # If you need to add extra header or footer to the home route
+            params['extra']['header'] += ' <!-- dragg home extra header-->'
+            params['extra']['footer'] += ' <!-- dragg home extra footer-->'
+
         return params
     except Exception as e:
         print(str(e))
