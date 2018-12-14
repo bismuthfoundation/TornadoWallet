@@ -86,9 +86,12 @@ def filter_home(params):
 Crystals can also have their own routes and screens.  
 Route is derived from the crystal directory name.
 
-> For instance, route for crystals/100_bismuthprice/ is `/crystal/bismuthprice/(.*)`
+> For instance, route for crystals/100_bismuthprice/ **will be** `/crystal/bismuthprice/(.*)`
 
-The crystal has to implement its own handler, from CrystalHandler
+The crystal has to implement its own handler, from CrystalHandler.  
+The name of the class also is derived from the directory name.
+
+> For instance, handler for crystals/100_bismuthprice/ **has to be** `BismuthpriceHandler` (notice the First uppercase!!!)
 
 Ex:
 ```
