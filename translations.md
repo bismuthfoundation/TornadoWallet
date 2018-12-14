@@ -18,6 +18,7 @@ Here are the current languages and matching credits:
 * Greek: SatoshiHaze
 * Hungarian: Adricrypto
 * Norwegian: GH2
+* Polish: Feri
 * Portuguese (BR): jcsanches
 * Romanian: Gawlea
 * Russian: anykayebyka, Whatever
