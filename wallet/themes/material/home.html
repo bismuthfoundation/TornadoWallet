@@ -119,44 +119,11 @@
 </div>
 
 
+
+
+
 <div class="row">
-
-
-	 <div class="col-lg-8 col-md-12">
-		  <div class="card">
-			<div class="card-header card-header-info">
-			  <h4 class="card-title">{{ _("Bismuth news")}}</h4>
-			  <!-- p class="card-category">Updated on November 19, 2018</p -->
-			</div>
-			<div class="card-body">
-				<ul>
-					<li>This awesome wallet is Tornado based and comes with themes</li>
-					<li>Bismuth is proud to be listed on QTrade.io exchange</li>
-					<li>4 000 000 $BIS now locked in Hypernodes collateral</li>
-				</ul>
-
-			</div>
-		  </div>
-	 </div>
-
-
-	<div class="col-xl-4 col-lg-12">
-	  <div class="card card-chart">
-		<div class="card-header card-header-success">
-		  <div class="ct-chart" id="dailySalesChart"></div>
-		</div>
-		<div class="card-body">
-		  <h4 class="card-title">{{ _("Bismuth vs USD")}}</h4>
-		  <p class="card-category">
-			<span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase this month</p>
-		</div>
-		<div class="card-footer">
-		  <div class="stats">
-			<i class="material-icons">access_time</i> {{ _("This is a mockup with fake data")}}
-		  </div>
-		</div>
-	  </div>
-	</div>
+	{% raw home_crystals['content'] %}
 </div>
 
 <div class="row">
@@ -176,10 +143,24 @@
 			</div>
 		  </div>
 	 </div>
-</div>
 
-<div class="row">
-	{% raw home_crystals['content'] %}
+	 <div class="col-lg-8 col-md-12">
+		  <div class="card">
+			<div class="card-header card-header-info">
+			  <h4 class="card-title">{{ _("Bismuth news")}}</h4>
+			  <!-- p class="card-category">Updated on November 19, 2018</p -->
+			</div>
+			<div class="card-body">
+				<ul>
+					<li>This awesome wallet is Tornado based and comes with themes</li>
+					<li>Bismuth is proud to be listed on QTrade.io exchange</li>
+					<li>4 000 000 $BIS now locked in Hypernodes collateral</li>
+				</ul>
+
+			</div>
+		  </div>
+	 </div>
+
 </div>
 
 {% end %}

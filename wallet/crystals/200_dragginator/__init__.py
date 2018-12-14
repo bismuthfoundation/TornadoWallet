@@ -48,6 +48,7 @@ def action_init(params=None):
 
 
 def filter_home(params):
+    return
     try:
         # params["content"] += b"Dragginator"
         if 'home' in MODULES:
