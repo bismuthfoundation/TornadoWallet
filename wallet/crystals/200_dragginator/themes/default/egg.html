@@ -14,19 +14,19 @@
             <div class="card-body">
                 <div>
 
-                
-                
+
+
                     {% if "9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf" == data["seller"] %}
-                            <div class="ribbon"><span>{{ data["cost"]}} {{_("Bis")}}</span></div>
+                            <div class="ribbon"><span>{{ data["cost"]}} {{_("BIS")}}</span></div>
                         {% end %}
                     {% if "erased" == data["other"] %}
-                            <div class="ribbonl"><span>{{_("archive")}}</span></div>
+                            <div class="ribbonl"><span>{{_("Archive")}}</span></div>
                         {% end %}
-                <img src="https://dragginator.com/data/eggs/{{ dna }}/egg.png" class="img-responsive" alt="Mountain View">        
-                        
+                <img src="https://dragginator.com/data/eggs/{{ dna }}/egg.png" class="img-responsive" alt="Mountain View">
+
 
                 </div>
-                
+
                 <div class="alert alert-{{ data['color'] }}"><span>{{ data["type"] }} <span class="float-right"> {{_("Element")}}</span></span></div>
                 <div class="alert alert-primary"><span>{{ _(data["species"]) }} <span class="float-right"> {{_("Species")}}</span></span></div>
                 <div class="alert alert-primary"><span>{{ _(data["age"]) }} <span class="float-right"> {{_("Age")}}</span></span></div>
@@ -37,7 +37,7 @@
 
     <div class="col-lg-6 col-md-12">
         <div class="card">
-            
+
             {% if data['owner'] == bismuth['address'] %}
             <div class="card-header card-header-success">
                 <h4 class="card-title">{{ _("You own this egg") }}</h4>
@@ -45,8 +45,8 @@
             <div class="card-header card-header-warning">
                 <h4 class="card-title">{{ _("You don't own this egg") }}</h4>
             {% end %}
-                
-                
+
+
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
@@ -55,43 +55,43 @@
                         <canvas id="radar" height="50%" width="50%" style="background-color:#fff;border-radius:4px; padding:4px"></canvas>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        
+
                         {% if data['owner'] == bismuth['address'] %}
-                        <button class="btn btn-primary " onclick="send($('#give').val(), 0, 'dragg:transfer', '{{dna}}')">{{ _("Send this egg to")}}</button>
-                        <input class="form-control" id="give" type="text" placeholder="{{_('address')}}" />
+                        <button class="btn btn-primary " onclick="send($('#give').val(), 0, 'dragg:transfer', '{{dna}}')">{{ _("Send this egg to...")}}</button>
+                        <input class="form-control" id="give" type="text" placeholder="{{_('Address')}}" />
                         <br><hr>
-                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:sell', '{{dna}}:*:'+$('#price').val())">{{ _("Sell this egg for Bis")}}</button>
+                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:sell', '{{dna}}:*:'+$('#price').val())">{{ _("Sell this egg for BIS")}}</button>
                         <input class="form-control" id="price" type="text" placeholder="{{_('Price')}}" />
-                        
+
                         {% if "9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf" == data["seller"] %}
                         <br><hr>
-                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:unsell', '{{dna}}')">{{ _("Remove this egg from marketplace")}}</button>
-                        
+                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:unsell', '{{dna}}')">{{ _("Remove this egg from the marketplace")}}</button>
+
                         {% end %}
-                        
+
                         {% end %}
-                        
+
                         {% if "9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf" == data["seller"] and data['owner'] != bismuth['address']%}
-                            
-                        
-                        <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{ data['cost']}}, 'dragg:buy', '{{ dna }}')">{{_("Buy for")}} {{ data["cost"]}} {{_("Bis")}}</button>
+
+
+                        <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{ data['cost']}}, 'dragg:buy', '{{ dna }}')">{{_("Buy for")}} {{ data["cost"]}} {{_("BIS")}}</button>
                         {% end %}
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     <div id="payment_window" class="modal" tabindex="-1" role="dialog"></div>
-    
-    
+
+
 
 
 </div>

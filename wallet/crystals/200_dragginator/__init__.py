@@ -34,16 +34,16 @@ async def async_get(url, is_json=False):
 
 
 class DragginatorHandler(CrystalHandler):
-    
-    
+
+
     """
     def initialize(self):
         super().initialize()
         self.bismuth_vars['extra'] = {"header":'<!-- DRAGGINATOR HEADER -->', "footer": '<!-- DRAGGINATOR FOOTER -->'}
     """
-    
+
     async def about(self, params=None):
-        
+
         if len(self.bismuth_vars['address']) == 56:
             data = await async_get("https://dragginator.com/api/info.php?address={}&type=list".format(self.bismuth_vars['address']),is_json=True)
             if len(data) == 0:
@@ -54,42 +54,43 @@ class DragginatorHandler(CrystalHandler):
             data = []
         price = await async_get("https://dragginator.com/api/info.php?type=price".format(self.bismuth_vars['address']),is_json=True)
         namespace = self.get_template_namespace()
-        
+
         kwargs = {}
         namespace.update(kwargs)
 
         self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace), "footer": MODULES['buy'].generate(**namespace) + MODULES['table'].generate(**namespace)}
-        
-        
-        
-        
+
+
+
+
         self.render("about.html", bismuth=self.bismuth_vars, data = data, price=price[0], eggdrop=eggdrop)
-        
+
     async def egg(self, dna=[""]):
         _ = self.locale.translate
-        
-        
+
+
         data = await async_get("https://dragginator.com/api/info.php?egg={}&type=egg_info".format(dna[0]),is_json=True)
-        
+
         namespace = self.get_template_namespace()
-        
+
         kwargs = {"abilities": data["abilities"]}
         namespace.update(kwargs)
 
         self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace), "footer": MODULES['egg'].generate(**namespace)+ MODULES['buy'].generate(**namespace)}
-        
-        
-        
-        
+
+
+
+
         dic = {"Fire":"danger", "Water":"info", "Earth":"success", "Air":"air",  "???":"air"}
         data["color"] = dic[data["type"]]
         dic = {"Fire":_("Fire egg"), "Water":_("Water egg"), "Earth":_("Earth egg"), "Air":_("Air egg"), "???": "???"}
         data["type"] = dic[data["type"]]
-        
+
+        # For registration of terms only, do not edit ever!
         void = _("world cup 2018"),_("special egg"),_("Cup")
-        
+
         self.render("egg.html", bismuth=self.bismuth_vars, dna=dna[0], data=data)
-        
+
 
 
     async def get(self, command=''):

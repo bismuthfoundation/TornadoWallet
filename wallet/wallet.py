@@ -181,7 +181,6 @@ class TransactionsHandler(BaseHandler):
         else:
             self.message(_("Error:"), "No recipient", "warning")
 
-
     async def confirmpop(self, params=None):
         _ = self.locale.translate
         amount = float(self.get_argument("amount"))
@@ -197,13 +196,14 @@ class TransactionsHandler(BaseHandler):
                          _("Txid is {}").format(_(txid))
             color = "success"
             title = _("Success")
-            
+
         else:
             message =  _("There was an error submitting to the mempool, transaction was not sent.")
             color = "danger"
             title = _("Error")
-            
+
         self.render("transactions_confirmpop.html", bismuth=self.bismuth_vars, message=message, color=color, title=title)
+
     async def confirm(self, params=None):
         _ = self.locale.translate
         amount = float(self.get_argument("amount"))
