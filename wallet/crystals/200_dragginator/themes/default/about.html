@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+<!-- "../../../../themes/material/base.html" -->
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-info">
+                <h4 class="card-title">DRAGGINATOR CRYSTAL</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{price }}, '', '')">{{_("Buy an egg for")}} {{price }} {{_("Bis")}}</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-success">
+                <h4 class="card-title">{{ _("My eggs") }}</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+                
+                {% if len(bismuth['address']) == 56 %}
+                
+                {% if len(data) == 0 %}
+                    {{_("You don't own any egg ;(")}}<br>
+                    
+                    {% if eggdrop[0] == "registered" %}
+                        {{_("And you are registered to the current eggdrop")}}
+                    {% else %}
+                        {{_("So you can register to the eggdrop!")}} <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, '', '{{eggdrop[1]}}')">{{_("Register")}}</button>
+                    {% end %}
+                
+                
+                {% else %}
+                
+                {{_("You own")}} {{len(data)}} {{_("eggs")}}
+                
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table id="egg_list" class="table table-hover">
+                      <thead class="">
+                        <tr>
+                        <th>{{_("DNA")}}</th>
+                        <th>{{_("Element")}}</th>
+                        <th>{{_("Species")}}</th>
+                        
+                        </tr>
+                      </thead>
+                      <tbody>
+                          {% for egg in data %}
+                            <tr>
+                                <td><a href="egg/{{egg['dna']}}">{{egg["dna"]}}</a></td>
+                                <td>{{_(egg["type"] + " egg")}}</a></td>
+                                <td>{{_(egg["species"])}}</a></td>
+                            </tr>
+                            {% end %}
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                {% end %}
+                    
+                
+                
+                {% else %}
+                
+                {{_("No Bismuth address, please create or load a wallet first.")}}
+                
+                {% end %}
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="payment_window" class="modal" tabindex="-1" role="dialog"></div>
+
+
+{% end %}

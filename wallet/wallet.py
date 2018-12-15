@@ -182,6 +182,28 @@ class TransactionsHandler(BaseHandler):
             self.message(_("Error:"), "No recipient", "warning")
 
 
+    async def confirmpop(self, params=None):
+        _ = self.locale.translate
+        amount = float(self.get_argument("amount"))
+        recipient = self.get_argument("recipient")
+        data = self.get_argument("data", '')
+        operation = self.get_argument("operation", '')
+        txid = self.bismuth.send(recipient, amount, operation, data)
+        print("txid", txid)
+        if txid:
+            message = _("Success:") + " " + _("Transaction sent") + "<br>" +\
+                         _("The transaction was submitted to the mempool.")\
+                         + "<br />" +\
+                         _("Txid is {}").format(_(txid))
+            color = "success"
+            title = _("Success")
+            
+        else:
+            message =  _("There was an error submitting to the mempool, transaction was not sent.")
+            color = "danger"
+            title = _("Error")
+            
+        self.render("transactions_confirmpop.html", bismuth=self.bismuth_vars, message=message, color=color, title=title)
     async def confirm(self, params=None):
         _ = self.locale.translate
         amount = float(self.get_argument("amount"))
