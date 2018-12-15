@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: sr\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:201
+#: themes/material/about_credits.html:10 themes/material/base.html:203
 msgid "Credits"
 msgstr "Zasluga"
 
@@ -27,6 +27,9 @@ msgstr "Python, fantastican jezik!"
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 msgstr "<a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> okruženje web aplikacije"
 
+#: crystals/100_bismuthprice/themes/default/about.html:25
+#: crystals/200_dragginator/themes/default/about.html:25
+#: crystals/210_eggpool/themes/default/about.html:25
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "O nama"
@@ -103,31 +106,31 @@ msgstr "serveri"
 msgid "Refresh from API"
 msgstr "Osvezi iz API-ja"
 
-#: themes/material/base.html:34
+#: themes/material/base.html:35
 msgid "Bismuth Wallet"
 msgstr "Bismuth Novčanik"
 
-#: themes/material/base.html:42
+#: themes/material/base.html:43
 msgid "Dashboard"
 msgstr "Komandna tabla"
 
-#: themes/material/base.html:48
+#: themes/material/base.html:49
 msgid "Transactions"
 msgstr "Tranzakcije"
 
-#: themes/material/base.html:54
+#: themes/material/base.html:55
 msgid "Address book"
 msgstr "Adresar"
 
-#: themes/material/base.html:61 themes/material/tokens_list.html:10
+#: themes/material/base.html:62 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokeni"
 
-#: themes/material/base.html:67
+#: themes/material/base.html:68
 msgid "Messages"
 msgstr "Poruke"
 
-#: themes/material/base.html:74
+#: themes/material/base.html:75
 msgid "Network"
 msgstr "Mreža"
 
@@ -135,35 +138,35 @@ msgstr "Mreža"
 msgid "Cristals"
 msgstr "Kristali"
 
-#: themes/material/base.html:102
+#: themes/material/base.html:103
 msgid "Toggle navigation"
 msgstr "Prebaciti navigaciju"
 
-#: themes/material/base.html:181
+#: themes/material/base.html:183
 msgid "Source"
 msgstr "Izvor"
 
-#: themes/material/base.html:186
+#: themes/material/base.html:188
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:191
+#: themes/material/base.html:193
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:196
+#: themes/material/base.html:198
 msgid "Donate"
 msgstr "Donacija"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:209
 msgid "block #"
 msgstr "Blok #"
 
-#: themes/material/base.html:227
+#: themes/material/base.html:229
 msgid "Sidebar Filters"
 msgstr "Filteri bocne trake"
 
-#: themes/material/base.html:240
+#: themes/material/base.html:242
 msgid "Images"
 msgstr "Slike"
 
@@ -171,7 +174,7 @@ msgstr "Slike"
 msgid "Cristals are extra functionalities you can add to your wallet"
 msgstr "Kristali su extra funkcije koje možete dodati svom novčaniku"
 
-#: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
+#: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "WIP"
 
@@ -196,7 +199,7 @@ msgstr "Primiti"
 msgid "Request a $BIS payment"
 msgstr "Zahtevati $BIS isplate"
 
-#: themes/material/home.html:74
+#: themes/material/home.html:74 themes/material/transactions.html:73
 msgid "Latest transactions"
 msgstr "Poslednje tranzakcije"
 
@@ -244,6 +247,8 @@ msgstr "Balans naloga"
 msgid "Last 12 months"
 msgstr "U poslednjih 12 meseci"
 
+#: crystals/100_bismuthprice/themes/default/modules/home.html:12
+#: crystals/200_dragginator/themes/default/modules/home.html:12
 #: themes/material/home.html:174
 msgid "Mockup with fake data"
 msgstr "Šablon sa lažnim podacima"
@@ -306,7 +311,7 @@ msgstr "Približna taksa"
 msgid "Total (BIS)"
 msgstr "Ukupan (BIS)"
 
-#: themes/material/transactions_send.html:67 wallet.py:161
+#: themes/material/transactions_send.html:67 wallet.py:133
 msgid "Send BIS"
 msgstr "Pošalji BIS"
 
@@ -350,19 +355,19 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "Ova opcija je u fazi izrade."
 
-#: wallet.py:220
+#: wallet.py:192
 msgid "Transaction list"
 msgstr "Lista trnzakcije"
 
-#: wallet.py:291 wallet.py:300
+#: wallet.py:264 wallet.py:273
 msgid "Error"
 msgstr "Greška"
 
-#: wallet.py:291
+#: wallet.py:264
 msgid "This file already exists: {}.der"
 msgstr "Postojeci fajl: {}.der"
 
-#: wallet.py:300
+#: wallet.py:273
 msgid "Error creating {}.der"
 msgstr "Greška stvaranje {}.der"
 
@@ -454,19 +459,19 @@ msgstr "Odustati"
 msgid "Confirm and send BIS"
 msgstr "Potvrditi i poslati BIS"
 
-#: wallet.py:172
+#: wallet.py:144
 msgid "Send BIS: Confirmation"
 msgstr "Poslati BIS: Potvrditi"
 
-#: wallet.py:174
+#: wallet.py:146
 msgid "Please confirm this transaction"
 msgstr "Molimo potvrdite ovu tranzakciju"
 
-#: wallet.py:175
+#: wallet.py:147
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Oznacite ovo je sta ste nameravali da uradite i udarite (pritisnite) dugme za potvrdu"
 
-#: wallet.py:204
+#: wallet.py:176
 msgid "Receive BIS"
 msgstr "Primiti BIS"
 
@@ -482,7 +487,7 @@ msgstr "Puno zahvala našim prevodiocima i korektorima"
 msgid "Wallet server version {}"
 msgstr "Verzija servera od novčanika {}"
 
-#: themes/material/base.html:148
+#: themes/material/base.html:150
 msgid "Wallet"
 msgstr "Novčanik"
 
@@ -498,43 +503,59 @@ msgstr "Vaši Bismuth novčanici"
 msgid "Your wallets directory is {}"
 msgstr "Direktorijum vašeg novčanika je {}"
 
-#: wallet.py:164 wallet.py:168 wallet.py:198
+#: wallet.py:136 wallet.py:140 wallet.py:170
 msgid "Error:"
 msgstr "Greška:"
 
-#: wallet.py:164
+#: wallet.py:136
 msgid "Load your wallet first"
 msgstr "Pokreni svoj novčanik prvo"
 
-#: wallet.py:164
+#: wallet.py:136
 msgid "No Wallet"
 msgstr "Nema novčanika"
 
-#: wallet.py:168
+#: wallet.py:140
 msgid "Encrypted wallet"
 msgstr "Kodiran novčanik"
 
-#: wallet.py:168
+#: wallet.py:140
 msgid "You have to unlock your wallet first"
 msgstr "Morate prvo otključati svoj novčanik"
 
-#: wallet.py:193
+#: wallet.py:165
 msgid "Success:"
 msgstr "Uspešno:"
 
-#: wallet.py:193
+#: wallet.py:165
 msgid "Transaction sent"
 msgstr "Tranzakcija poslata"
 
-#: wallet.py:194
+#: wallet.py:166
 msgid "The transaction was submitted to the mempool."
 msgstr "Tranzakcija je podnešena mempool-u."
 
-#: wallet.py:196
+#: wallet.py:168
 msgid "Txid is {}"
 msgstr "Txid je {}"
 
-#: wallet.py:198
+#: wallet.py:170
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Doslo je do greske poslati na mempool, tranzakcija nije poslata."
+
+#: modules/basehandlers.py:36
+msgid "No Bismuth address, please create or load a wallet first."
+msgstr "Nema Bismuth adrese, prvo kreirajte jednu ili ga ucitajte."
+
+#: themes/material/base.html:87 themes/material/crystals_list.html:11
+msgid "Crystals"
+msgstr "Crystal-i"
+
+#: themes/material/base.html:112
+msgid "Search..."
+msgstr "Potrazi"
+
+#: themes/material/crystals_list.html:12
+msgid "Crystals are extra functionalities you can add to your wallet"
+msgstr "Crystal-i su ekstra funkcije koje mozete dodati svom novcaniku"
 
