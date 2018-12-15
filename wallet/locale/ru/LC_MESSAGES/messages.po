@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: ru\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:201
+#: themes/material/about_credits.html:10 themes/material/base.html:203
 msgid "Credits"
 msgstr "Разработчики"
 
@@ -33,6 +33,9 @@ msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"
 msgstr "каркас веб-приложения <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Торнадо</a>"
 
 #. About what? In Russian it would be necessary to add, e.g. About authors, About the software, etc... Об авторах, о программе
+#: crystals/100_bismuthprice/themes/default/about.html:25
+#: crystals/200_dragginator/themes/default/about.html:25
+#: crystals/210_eggpool/themes/default/about.html:25
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "О программе"
@@ -112,15 +115,15 @@ msgid "Refresh from API"
 msgstr "Обновить с помощью API"
 
 #. Bismuth? without translation?
-#: themes/material/base.html:34
+#: themes/material/base.html:35
 msgid "Bismuth Wallet"
 msgstr "Bismuth кошелек"
 
-#: themes/material/base.html:42
+#: themes/material/base.html:43
 msgid "Dashboard"
 msgstr "Контрольная панель"
 
-#: themes/material/base.html:48
+#: themes/material/base.html:49
 msgid "Transactions"
 msgstr "Транзакции"
 
@@ -130,19 +133,19 @@ msgstr "Транзакции"
 #. -my saved addresses
 #. 
 #. any sort of clarification?
-#: themes/material/base.html:54
+#: themes/material/base.html:55
 msgid "Address book"
 msgstr "адресная книга"
 
-#: themes/material/base.html:61 themes/material/tokens_list.html:10
+#: themes/material/base.html:62 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Токены"
 
-#: themes/material/base.html:67
+#: themes/material/base.html:68
 msgid "Messages"
 msgstr "Сообщения"
 
-#: themes/material/base.html:74
+#: themes/material/base.html:75
 msgid "Network"
 msgstr "Сеть"
 
@@ -152,36 +155,36 @@ msgstr "Сеть"
 msgid "Cristals"
 msgstr "Кристаллы"
 
-#: themes/material/base.html:102
+#: themes/material/base.html:103
 msgid "Toggle navigation"
 msgstr "Переключить навигацию"
 
-#: themes/material/base.html:181
+#: themes/material/base.html:183
 msgid "Source"
 msgstr "Исходный код"
 
-#: themes/material/base.html:186
+#: themes/material/base.html:188
 msgid "Blog"
 msgstr "Блог"
 
 #. again a name, english is readable but might worth mentioning russian translation in documents
-#: themes/material/base.html:191
+#: themes/material/base.html:193
 msgid "Discord"
 msgstr "Дискорд"
 
-#: themes/material/base.html:196
+#: themes/material/base.html:198
 msgid "Donate"
 msgstr "Пожертвовать"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:209
 msgid "block #"
 msgstr "блок #"
 
-#: themes/material/base.html:227
+#: themes/material/base.html:229
 msgid "Sidebar Filters"
 msgstr "Фильтры боковой панели"
 
-#: themes/material/base.html:240
+#: themes/material/base.html:242
 msgid "Images"
 msgstr "Картинки"
 
@@ -190,7 +193,7 @@ msgid "Cristals are extra functionalities you can add to your wallet"
 msgstr "Кристаллы - это дополнительные функции, которые вы можете добавить к своему кошельку"
 
 #. Is that Work in progress? then "В разработке..."
-#: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
+#: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "В разработке"
 
@@ -215,7 +218,7 @@ msgstr "Получить"
 msgid "Request a $BIS payment"
 msgstr "Запросить оплату в $ BIS"
 
-#: themes/material/home.html:74
+#: themes/material/home.html:74 themes/material/transactions.html:73
 msgid "Latest transactions"
 msgstr "Последние транзакции"
 
@@ -264,6 +267,8 @@ msgstr "Баланс аккаунта"
 msgid "Last 12 months"
 msgstr "Последние 12 месяцев"
 
+#: crystals/100_bismuthprice/themes/default/modules/home.html:12
+#: crystals/200_dragginator/themes/default/modules/home.html:12
 #: themes/material/home.html:174
 msgid "Mockup with fake data"
 msgstr "Образец с выдуманными данными"
@@ -326,7 +331,7 @@ msgstr "Примерная комиссия."
 msgid "Total (BIS)"
 msgstr "Всего (BIS)"
 
-#: themes/material/transactions_send.html:67 wallet.py:161
+#: themes/material/transactions_send.html:67 wallet.py:133
 msgid "Send BIS"
 msgstr "Отправить (BIS)"
 
@@ -371,19 +376,19 @@ msgstr "В разработке"
 msgid "This feature is under construction."
 msgstr "Эта функция в разработке."
 
-#: wallet.py:220
+#: wallet.py:192
 msgid "Transaction list"
 msgstr "Список транзакций"
 
-#: wallet.py:291 wallet.py:300
+#: wallet.py:264 wallet.py:273
 msgid "Error"
 msgstr "Ошибка"
 
-#: wallet.py:291
+#: wallet.py:264
 msgid "This file already exists: {}.der"
 msgstr "Этот файл уже существует: {} .der"
 
-#: wallet.py:300
+#: wallet.py:273
 msgid "Error creating {}.der"
 msgstr "Ошибка при создании {} .der"
 
@@ -480,19 +485,19 @@ msgstr "Отменить"
 msgid "Confirm and send BIS"
 msgstr "Подтвердить и отправить BIS"
 
-#: wallet.py:172
+#: wallet.py:144
 msgid "Send BIS: Confirmation"
 msgstr "Отправить BIS: Подтверждение"
 
-#: wallet.py:174
+#: wallet.py:146
 msgid "Please confirm this transaction"
 msgstr "Пожалуйста, подтвердите эту транзакцию"
 
-#: wallet.py:175
+#: wallet.py:147
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Убедитесь в том, что Вы намерены сделать, и нажмите кнопку \"Подтвердить\"."
 
-#: wallet.py:204
+#: wallet.py:176
 msgid "Receive BIS"
 msgstr "Получить BIS"
 
@@ -508,7 +513,7 @@ msgstr "Большое спасибо нашим переводчикам и к�
 msgid "Wallet server version {}"
 msgstr "Версия сервера кошелька {}"
 
-#: themes/material/base.html:148
+#: themes/material/base.html:150
 msgid "Wallet"
 msgstr "Кошелек"
 
@@ -524,45 +529,62 @@ msgstr "Ваш Bismuth кошелек"
 msgid "Your wallets directory is {}"
 msgstr "Ваш кошелек находится в папке {}"
 
-#: wallet.py:164 wallet.py:168 wallet.py:198
+#: wallet.py:136 wallet.py:140 wallet.py:170
 msgid "Error:"
 msgstr "Ошибка:"
 
-#: wallet.py:164
+#: wallet.py:136
 msgid "Load your wallet first"
 msgstr "Сначала вы должны загрузить Ваш кошелек"
 
-#: wallet.py:164
+#: wallet.py:136
 msgid "No Wallet"
 msgstr "Кошелек не найден"
 
 #. is that also an error message, in which case it should be translated differently "Кошелек зашифрован"
-#: wallet.py:168
+#: wallet.py:140
 msgid "Encrypted wallet"
 msgstr "Зашифрованный кошелек"
 
-#: wallet.py:168
+#: wallet.py:140
 msgid "You have to unlock your wallet first"
 msgstr "Вы должны сначала разблокировать свой кошелек"
 
-#: wallet.py:193
+#: wallet.py:165
 msgid "Success:"
 msgstr "Получилось:"
 
-#: wallet.py:193
+#: wallet.py:165
 msgid "Transaction sent"
 msgstr "Транзакция отправлена"
 
-#: wallet.py:194
+#: wallet.py:166
 msgid "The transaction was submitted to the mempool."
 msgstr "Транзакция размещена в блокчейн"
 
-#: wallet.py:196
+#: wallet.py:168
 msgid "Txid is {}"
 msgstr "Txid Вашей транзакции: {}"
 
 #. To Anykayebuka: транзакция не была размещена в блокчейн vs транзакция не была отправлена. The 1st case there may give a wrong impression that the money is gone, but didn't reach the blockchain, while in the 2nd case it's clear that nothing happened. Money is safe. What do you think?
-#: wallet.py:198
+#: wallet.py:170
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Произошла ошибка, транзакция не была отправлена в блокчейн"
+
+#: modules/basehandlers.py:36
+msgid "No Bismuth address, please create or load a wallet first."
+msgstr "Bismuth адрес не найден, пожалуйста сначала создайте или зазгрузите кошелёк"
+
+#: themes/material/base.html:87 themes/material/crystals_list.html:11
+msgid "Crystals"
+msgstr "Кристаллы"
+
+#: themes/material/base.html:112
+msgid "Search..."
+msgstr "\n"
+"Поиск"
+
+#: themes/material/crystals_list.html:12
+msgid "Crystals are extra functionalities you can add to your wallet"
+msgstr "Кристаллы - это дополнительные функции, которые вы можете добавить в свой кошелек"
 
