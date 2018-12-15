@@ -2,13 +2,10 @@
 Dragginator Crystal for Tornado wallet
 """
 
-import requests
-
 from os import path, listdir
 
-import cachetools.func
 from modules.basehandlers import CrystalHandler
-from modules.helpers import base_path
+from modules.helpers import base_path, get_api_10
 from tornado.template import Template
 
 DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/100_bismuthprice/themes/default')
@@ -30,25 +27,8 @@ class BismuthpriceHandler(CrystalHandler):
 
     def get_template_path(self):
         """Override to customize template path for each handler.
-
-        By default, we use the ``template_path`` application setting.
-        Return None to load templates relative to the calling file.
         """
         return DEFAULT_THEME_PATH
-
-
-@cachetools.func.ttl_cache(maxsize=5, ttl=600)
-def get_api(url, is_json=True):
-    """A Cached API getter"""
-    # TODO: move into helpers for all to use
-    print('live api request')
-    response = requests.get(url)
-    if response.status_code == 200:
-        if is_json:
-            return response.json()
-        else:
-            return response.content
-    return ''
 
 
 def action_init(params=None):
@@ -64,12 +44,12 @@ def action_init(params=None):
 def filter_home(params):
     if 'home' in MODULES:
         namespace = params['request_handler'].get_template_namespace()
-        api = get_api('https://bismuth.ciperyho.eu/api/markets')
-        print(api)
+        api = get_api_10('https://bismuth.ciperyho.eu/api/markets', is_json=True)  # gets as dict, and cache for 10 min
+        # print(api)
         kwargs = {"api": api}
         namespace.update(kwargs)
         params["content"] += MODULES['home'].generate(**namespace)
         # If you need to add extra header or footer to the home route
-        params['extra']['header'] += ' <!-- home extra header-->'
-        params['extra']['footer'] += ' <!-- home extra footer-->'
+        # params['extra']['header'] += ' <!-- home extra header-->'
+        # params['extra']['footer'] += ' <!-- home extra footer-->'
     return params

@@ -165,7 +165,7 @@ class TransactionsHandler(BaseHandler):
             self.message(_("Success:") + " " + _("Transaction sent"),
                          _("The transaction was submitted to the mempool.")
                          + "<br />" +
-                         _("Txid is {}").format(txid), "success")
+                         _("Txid is {}").format(_(txid)), "success")
         else:
             self.message(_("Error:"), _("There was an error submitting to the mempool, transaction was not sent."), "warning")
 
