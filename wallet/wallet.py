@@ -153,6 +153,35 @@ class TransactionsHandler(BaseHandler):
         else:
             self.render("transactions_send.html", bismuth=self.bismuth_vars)
 
+    async def sendpop(self, params=None):
+        # TODO: factorize, common code with send.
+        query_params = self.extract_params()
+        # print(params)
+        _ = self.locale.translate
+        self.settings["page_title"] = _("Send BIS")
+
+        if not self.bismuth_vars['address']:
+            await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            return
+        # print(self.bismuth.wallet())
+        if self.bismuth.wallet()['encrypted']:
+            self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
+            return
+        if query_params.get('recipient', False):
+            # We have an address param, it's a confirmation
+            self.settings["page_title"] = _("Send BIS: Confirmation")
+            type='warning'  # Do not translate
+            title=_("Please confirm this transaction")
+            message=_("Check this is what you intended to do and hit the \"confirm\" button")
+            # TODO: address ok?
+            # todo: amount ok
+            # todo: enough balance?
+            self.render("transactions_sendpop_confirm.html", bismuth=self.bismuth_vars, type=type, title=title,
+                        message=message)
+        else:
+            self.message(_("Error:"), "No recipient", "warning")
+
+
     async def confirm(self, params=None):
         _ = self.locale.translate
         amount = float(self.get_argument("amount"))
