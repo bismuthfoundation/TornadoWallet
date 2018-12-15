@@ -9,7 +9,7 @@ msgstr ""
 
 #. Credits as if you made it is : Tekijät
 #. Yep, that's the one in this context!
-#: themes/material/about_credits.html:10 themes/material/base.html:201
+#: themes/material/about_credits.html:10 themes/material/base.html:203
 msgid "Credits"
 msgstr "Tekijät"
 
@@ -30,6 +30,9 @@ msgstr "Python, loistava ohjelmointikieli!\n"
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 msgstr " <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> Web-Sovelluskehys"
 
+#: crystals/100_bismuthprice/themes/default/about.html:25
+#: crystals/200_dragginator/themes/default/about.html:25
+#: crystals/210_eggpool/themes/default/about.html:25
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "Lisätietoa"
@@ -106,32 +109,32 @@ msgstr "Palvelimet"
 msgid "Refresh from API"
 msgstr "API-lähteen päivittäminen"
 
-#: themes/material/base.html:34
+#: themes/material/base.html:35
 msgid "Bismuth Wallet"
 msgstr "Bismuth Lompakko\n"
 ""
 
-#: themes/material/base.html:42
+#: themes/material/base.html:43
 msgid "Dashboard"
 msgstr "Ohjauspaneeli"
 
-#: themes/material/base.html:48
+#: themes/material/base.html:49
 msgid "Transactions"
 msgstr "Transaktiot"
 
-#: themes/material/base.html:54
+#: themes/material/base.html:55
 msgid "Address book"
 msgstr "Osoitekirja"
 
-#: themes/material/base.html:61 themes/material/tokens_list.html:10
+#: themes/material/base.html:62 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokenit"
 
-#: themes/material/base.html:67
+#: themes/material/base.html:68
 msgid "Messages"
 msgstr "Viestit"
 
-#: themes/material/base.html:74
+#: themes/material/base.html:75
 msgid "Network"
 msgstr "Verkko"
 
@@ -139,43 +142,43 @@ msgstr "Verkko"
 msgid "Cristals"
 msgstr "Cristals"
 
-#: themes/material/base.html:102
+#: themes/material/base.html:103
 msgid "Toggle navigation"
 msgstr "Laita navigointi päälle"
 
-#: themes/material/base.html:181
+#: themes/material/base.html:183
 msgid "Source"
 msgstr "Lähde"
 
-#: themes/material/base.html:186
+#: themes/material/base.html:188
 msgid "Blog"
 msgstr "Blogi"
 
-#: themes/material/base.html:191
+#: themes/material/base.html:193
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:196
+#: themes/material/base.html:198
 msgid "Donate"
 msgstr "Lahjoita"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:209
 msgid "block #"
 msgstr "blokki #"
 
-#: themes/material/base.html:227
+#: themes/material/base.html:229
 msgid "Sidebar Filters"
 msgstr "Sivupalkin suodattimet"
 
-#: themes/material/base.html:240
+#: themes/material/base.html:242
 msgid "Images"
 msgstr "Kuvat"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "Cristallit ovat lisätoimintoja joita voit lisätä lompakkoosi"
+msgstr "Kristallit ovat lisätoimintoja joita voit lisätä lompakkoosi"
 
-#: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
+#: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "WIP"
 
@@ -200,7 +203,7 @@ msgstr "Vastaanota"
 msgid "Request a $BIS payment"
 msgstr "Pyydä $BIS maksua"
 
-#: themes/material/home.html:74
+#: themes/material/home.html:74 themes/material/transactions.html:73
 msgid "Latest transactions"
 msgstr "Viimeisimmät siirrot"
 
@@ -248,6 +251,8 @@ msgstr "Käyttövara"
 msgid "Last 12 months"
 msgstr "Viimeiset 12 kuukautta"
 
+#: crystals/100_bismuthprice/themes/default/modules/home.html:12
+#: crystals/200_dragginator/themes/default/modules/home.html:12
 #: themes/material/home.html:174
 msgid "Mockup with fake data"
 msgstr "Malli väärennetystä datasta"
@@ -311,7 +316,7 @@ msgstr "Arvioidut kulut"
 msgid "Total (BIS)"
 msgstr "Kokonaismäärä (BIS)"
 
-#: themes/material/transactions_send.html:67 wallet.py:161
+#: themes/material/transactions_send.html:67 wallet.py:133
 msgid "Send BIS"
 msgstr "Lähetä BIS"
 
@@ -355,19 +360,19 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "Tätä toimintoa kehitellään vielä."
 
-#: wallet.py:220
+#: wallet.py:192
 msgid "Transaction list"
 msgstr "Lista Transaktioista"
 
-#: wallet.py:291 wallet.py:300
+#: wallet.py:264 wallet.py:273
 msgid "Error"
 msgstr "Virhe"
 
-#: wallet.py:291
+#: wallet.py:264
 msgid "This file already exists: {}.der"
 msgstr "Tämä tiedosto on jo olemassa: {}.der"
 
-#: wallet.py:300
+#: wallet.py:273
 msgid "Error creating {}.der"
 msgstr "Virhe luomisessa {}.der"
 
@@ -459,87 +464,105 @@ msgstr "Peruuta"
 msgid "Confirm and send BIS"
 msgstr "Varmista ja lähetä BIS"
 
-#: wallet.py:172
+#: wallet.py:144
 msgid "Send BIS: Confirmation"
 msgstr "Lähetä BIS: Varmistus"
 
-#: wallet.py:174
+#: wallet.py:146
 msgid "Please confirm this transaction"
 msgstr "Ole hyvä ja varmista transaktio"
 
-#: wallet.py:175
+#: wallet.py:147
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Varmista, että tämä on toiminto jonka aiot suorittaa ja paina \"varmista\" painiketta"
 
-#: wallet.py:204
+#: wallet.py:176
 msgid "Receive BIS"
 msgstr "Vastaanota BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "Lompakon malli {} tekijältä {}"
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Suuret kiitokset kääntäjillemme"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Lompakon palvelimen versio"
 
-#: themes/material/base.html:148
+#: themes/material/base.html:150
 msgid "Wallet"
-msgstr ""
+msgstr "lompakko"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS web-osoite"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Sinun Bismuth lompakkosi"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "Sinun lompakkosi osoitekirja on {}"
 
-#: wallet.py:164 wallet.py:168 wallet.py:198
+#: wallet.py:136 wallet.py:140 wallet.py:170
 msgid "Error:"
-msgstr ""
+msgstr "Virhe:"
 
-#: wallet.py:164
+#: wallet.py:136
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Lataa lompakkosi ensin"
 
-#: wallet.py:164
+#: wallet.py:136
 msgid "No Wallet"
-msgstr ""
+msgstr "Ei olemassa olevaa lompakkoa"
 
-#: wallet.py:168
+#: wallet.py:140
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Salattu lompakko"
+
+#: wallet.py:140
+msgid "You have to unlock your wallet first"
+msgstr "Sinun täytyy avata lompakkosi ensin"
+
+#: wallet.py:165
+msgid "Success:"
+msgstr "Onnistui:"
+
+#: wallet.py:165
+msgid "Transaction sent"
+msgstr "Transaktio lähetetty"
+
+#: wallet.py:166
+msgid "The transaction was submitted to the mempool."
+msgstr "Transaktio lähetetty mempooliin"
 
 #: wallet.py:168
-msgid "You have to unlock your wallet first"
-msgstr ""
-
-#: wallet.py:193
-msgid "Success:"
-msgstr ""
-
-#: wallet.py:193
-msgid "Transaction sent"
-msgstr ""
-
-#: wallet.py:194
-msgid "The transaction was submitted to the mempool."
-msgstr ""
-
-#: wallet.py:196
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid on"
 
-#: wallet.py:198
+#: wallet.py:170
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Mempooliin lähetettäessä tapahtui virhe. Transaktiota ei lähetetty."
+
+#: modules/basehandlers.py:36
+msgid "No Bismuth address, please create or load a wallet first."
+msgstr "Ei Bismuth-osoitetta, ole hyvä, ja luo- tai lataa lompakko ensin."
+
+#: themes/material/base.html:87 themes/material/crystals_list.html:11
+msgid "Crystals"
+msgstr "Kristallit"
+
+#. Search : Haku
+#. To search: Hakea
+#: themes/material/base.html:112
+msgid "Search..."
+msgstr "Haku"
+
+#: themes/material/crystals_list.html:12
+msgid "Crystals are extra functionalities you can add to your wallet"
+msgstr "Kristallit ovat lisätoimintoja joita voit lisätä lompakkoosi"
 
