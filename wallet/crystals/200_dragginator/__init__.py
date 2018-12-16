@@ -69,9 +69,10 @@ class DragginatorHandler(CrystalHandler):
         self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace), "footer": MODULES['egg'].generate(**namespace)+ MODULES['buy'].generate(**namespace)}
 
         dic = {"Fire":"danger", "Water":"info", "Earth":"success", "Air":"air",  "???":"air"}
-        data["color"] = dic[data["type"]]
+        data["color"] = dic.get(data["type"], "primary")
         dic = {"Fire":_("D:Fire egg"), "Water":_("D:Water egg"), "Earth":_("D:Earth egg"), "Air":_("D:Air egg"), "???": "???"}
-        data["type"] = dic[data["type"]]
+
+        data["type"] = dic.get(data["type"], data["type"])
         # For registration of terms only, do not edit ever!
         void = _("D:world cup 2018"),_("D:special egg"),_("D:Cup")
         self.render("egg.html", bismuth=self.bismuth_vars, dna=dna[0], data=data)
