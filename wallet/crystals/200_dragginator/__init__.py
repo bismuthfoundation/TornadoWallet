@@ -6,6 +6,7 @@ import sys
 import aiohttp
 
 from modules.basehandlers import CrystalHandler
+from modules.i18n import get_dt_language
 from modules.helpers import base_path
 from tornado.template import Template
 
@@ -20,6 +21,7 @@ async def async_get(url, is_json=False):
 
     If is_json, decodes the content
     """
+    # TODO: make accessible everywhere and add an optional cache.
     global HTTP_SESSION
     # TODO: retry on error?
     if not HTTP_SESSION:
@@ -51,8 +53,8 @@ class DragginatorHandler(CrystalHandler):
             data = []
         price = await async_get("https://dragginator.com/api/info.php?type=price".format(self.bismuth_vars['address']),is_json=True)
         namespace = self.get_template_namespace()
-
-        kwargs = {}
+        self.bismuth_vars['dtlanguage'] = get_dt_language(self.locale.translate)
+        kwargs = {"bismuth": self.bismuth_vars}
         namespace.update(kwargs)
         message = await async_get("https://dragginator.com/api/info.php?type=message", is_json=True)
         self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace), "footer": MODULES['buy'].generate(**namespace) + MODULES['table'].generate(**namespace)}
@@ -100,9 +102,6 @@ def filter_home(params):
     try:
         if 'home' in MODULES:
             namespace = params['request_handler'].get_template_namespace()
-            
-            
-            
             params["content"] += MODULES['home'].generate(**namespace)
         return params
     except Exception as e:

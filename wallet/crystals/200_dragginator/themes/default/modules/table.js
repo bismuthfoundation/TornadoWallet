@@ -2,6 +2,6 @@
 
 <script>
 $(document).ready(function() {
-    $('#egg_list').DataTable();
-} );
+    $('#egg_list').DataTable({ {% raw bismuth['dtlanguage'] %} });
+});
 </script>

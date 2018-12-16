@@ -1,18 +1,26 @@
 """
 Dragginator Crystal for Tornado wallet
 """
-from os import path
+from os import path, listdir
+import json
 
 from modules.basehandlers import CrystalHandler
-from modules.helpers import base_path, get_api_10
+from modules.helpers import base_path, get_api_10, graph_colors_rgba
+from tornado.template import Template
+
+
+__version__ = '0.1b'
+
 
 DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/210_eggpool/themes/default')
+MODULES = {}
 
 
 class EggpoolHandler(CrystalHandler):
 
     async def about(self, params=None):
-        url = 'https://eggpool.net/index.php?action=api&miner={}&type=v2'.format(self.bismuth_vars['address'])
+        url = 'https://eggpool.net/index.php?action=api&miner={}&type=detail'.format(self.bismuth_vars['address'])
+        # TODO: rewrite as async with parametrized cache ttl, see dragginator crystal
         api = get_api_10(url, is_json=True)  # gets as dict, and cache for 10 min
         print(api)
         """
@@ -41,7 +49,27 @@ class EggpoolHandler(CrystalHandler):
             }
 
         """
-        self.render("about.html", bismuth=self.bismuth_vars)
+        workers_name = {}
+        sh_datasets = []
+        hr_datasets = []
+        i = 0
+        gcolors = graph_colors_rgba()
+        for worker, data in api['workers']['detail'].items():
+            # shares_series += json.dumps(data[3])+',\n'
+            rgba = gcolors[i % len(gcolors)]
+            workers_name[worker] = rgba
+            sh_datasets.append({"label": worker, "data":data[3], "strokeColor": rgba})
+            hr_datasets.append({"label": worker, "data":data[2], "strokeColor": rgba})
+            i += 1
+
+        namespace = self.get_template_namespace()
+        kwargs = {"bismuth": self.bismuth_vars, "workers_name": workers_name,
+                  "hr_datasets": json.dumps(hr_datasets), "sh_datasets": json.dumps(sh_datasets),
+                  'version': __version__}
+        namespace.update(kwargs)
+        self.bismuth_vars['extra'] = {"header": '', "footer": MODULES['about_charts'].generate(**namespace)}
+
+        self.render("about.html", bismuth=self.bismuth_vars, workers_name=workers_name, version=__version__)
 
     async def get(self, command=''):
         command, *params = command.split('/')
@@ -56,3 +84,13 @@ class EggpoolHandler(CrystalHandler):
         Return None to load templates relative to the calling file.
         """
         return DEFAULT_THEME_PATH
+
+
+def action_init(params=None):
+    """Load and compiles module templates"""
+    modules_dir = path.join(DEFAULT_THEME_PATH, 'modules')
+    for module in listdir(modules_dir):
+        module_name = module.split('.')[0]
+        file_name = path.join(modules_dir, module)
+        with open(file_name, 'rb') as f:
+            MODULES[module_name] = Template(f.read())

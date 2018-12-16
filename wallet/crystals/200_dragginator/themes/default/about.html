@@ -15,19 +15,19 @@
                 <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{price }}, '', '')">{{_("D:Buy an egg for")}} {{price }} {{_("BIS")}}</button>
             </div>
         </div>
-        
+
         <div class="card card-chart">
         <div class="card-header card-header-warning">
             {{_("D:Dragginator News")}}
         </div>
         <div class="card-body">
-            
+
             <p class="card-category">{% raw message %}</p>
         </div>
-        
+
     </div>
-        
-        
+
+
     </div>
 
     <div class="col-lg-6 col-md-12">
@@ -67,7 +67,7 @@
                       <tbody>
                           {% for egg in data %}
                               {% if egg["species"] in ["world cup 2018","special egg","Cup"] %}
-                                {{ egg["species"] = "D:"+egg["species"] }}
+                                <!-- {{ egg["species"] = "D:"+egg["species"] }} -->
                               {% end %}
                             <tr>
                                 <td><a href="egg/{{egg['dna']}}">{{egg["dna"]}}</a></td>

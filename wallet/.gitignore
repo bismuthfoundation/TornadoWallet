@@ -1,3 +1,7 @@
 bismuthclient
 bismuthcore
 *.der
+.buildozer
+*.spec
+main.py
+bin

@@ -33,9 +33,10 @@ from modules.basehandlers import BaseHandler, CrystalLoader
 from modules import helpers
 from modules.crystals import CrystalManager
 
-__version__ = '0.0.67'
+__version__ = '0.0.70'
 
 define("port", default=8888, help="run on the given port", type=int)
+define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
 define("debug", default=False, help="debug mode", type=bool)
 define("verbose", default=False, help="verbose mode", type=bool)
 define("theme", default='themes/material', help="theme directory, relative to the app", type=str)
@@ -406,7 +407,7 @@ def open_url(url):
 async def main():
     tornado.options.parse_command_line()
     app = Application()
-    app.listen(options.port)
+    app.listen(options.port, options.listen)
     # In this demo the server will simply run until interrupted
     # with Ctrl-C, but if you want to shut down more gracefully,
     # call shutdown_event.set().

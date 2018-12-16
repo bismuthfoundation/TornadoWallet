@@ -29,10 +29,10 @@ Failsafes
 - js code , data table generic
 - check balance
 
-- D: prefix for custom dragginator terms to translate.
+ok - D: prefix for custom dragginator terms to translate.
 
 
-- wallet version + updatye (auto update? => os + version)
+- wallet version + update (auto update? => os + version)
 - crystals version (api?) + update
 - crystal on/off
 

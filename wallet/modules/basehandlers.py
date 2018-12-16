@@ -10,6 +10,7 @@ from os import path
 class BaseHandler(RequestHandler):
     """Common ancestor for ann route handlers"""
 
+
     def initialize(self):
         """Common init for every request"""
         # TODO: advantage in using Tornado Babel maybe? https://media.readthedocs.org/pdf/tornado-babel/0.1/tornado-babel.pdf
@@ -34,6 +35,7 @@ class BaseHandler(RequestHandler):
         self.crystals = self.settings['bismuth_crystals']
         if self.bismuth_vars['address'] is None:
             self.bismuth_vars['address'] = _("No Bismuth address, please create or load a wallet first.")
+        # self.bismuth_vars['dtlanguage'] = get_dt_language(_)
 
     def active_if(self, path: str):
         """return the 'active' string if the request uri is the one in path. Used for menu css"""
