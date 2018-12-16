@@ -23,3 +23,25 @@ Failsafes
 - wallet server selection (link there but no route)
 
 - "queued on the blockchain" rather than "inserted to mempool" (mempool / pool/ eggpool ??)
+
+
+- modal to confirm.
+- js code , data table generic
+- check balance
+
+- D: prefix for custom dragginator terms to translate.
+
+
+- wallet version + updatye (auto update? => os + version)
+- crystals version (api?) + update
+- crystal on/off
+
+- auto lock wallet after time out. (lock after time or 1 tx)
+- pin to send tx
+- warning if wallet not encrypted
+
+- 2fa (token) to auto unlock wallet?
+
+
+- api: balance server (all addresses, bis as well as tokens)
+(+ reindex)
