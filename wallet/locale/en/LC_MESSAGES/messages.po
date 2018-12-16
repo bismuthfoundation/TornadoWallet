@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-16 17:54+0100\n"
+"POT-Creation-Date: 2018-12-16 18:03+0100\n"
 "PO-Revision-Date: 2018-12-16 17:51+0100\n"
 "Last-Translator: toto <dev@eggpool.net>\n"
 "Language-Team: English\n"
@@ -79,14 +79,9 @@ msgid "D:world cup 2018"
 msgstr "D:world cup 2018"
 
 #: crystals/200_dragginator/themes/default/about.html:15
-#: crystals/200_dragginator/themes/default/egg.html:20
-#: crystals/200_dragginator/themes/default/egg.html:77
-msgid "BIS"
-msgstr "BIS"
-
-#: crystals/200_dragginator/themes/default/about.html:15
-msgid "D:Buy an egg for"
-msgstr "D:Buy an egg for"
+#, fuzzy
+msgid "D:Buy an egg for {} BIS"
+msgstr "D:Buy an egg for {} BIS"
 
 #: crystals/200_dragginator/themes/default/about.html:21
 msgid "D:Dragginator News"
@@ -147,6 +142,11 @@ msgstr "D:DNA:"
 #: crystals/200_dragginator/themes/default/egg.html:11
 msgid "D:See on Dragginator.com"
 msgstr "D:See on Dragginator.com"
+
+#: crystals/200_dragginator/themes/default/egg.html:20
+#: crystals/200_dragginator/themes/default/egg.html:77
+msgid "BIS"
+msgstr "BIS"
 
 #: crystals/200_dragginator/themes/default/egg.html:23
 msgid "D:Archive"

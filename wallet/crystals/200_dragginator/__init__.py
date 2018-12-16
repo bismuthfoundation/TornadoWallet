@@ -84,7 +84,6 @@ class DragginatorHandler(CrystalHandler):
 
     def get_template_path(self):
         """Override to customize template path for each handler."""
-        print("DragginatorHandler get_template_path")
         return DEFAULT_THEME_PATH
 
 
