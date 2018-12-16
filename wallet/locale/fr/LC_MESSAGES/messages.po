@@ -2,1107 +2,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-16 17:21+0100\n"
+"POT-Creation-Date: 2018-12-16 17:26+0100\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/about.html:11
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/modules/home.html:16
 #: crystals/100_bismuthprice/themes/default/about.html:11
 #: crystals/100_bismuthprice/themes/default/modules/home.html:16
 #, fuzzy
 msgid "Crystal"
 msgstr "Crystals"
 
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/about.html:15
-#: .buildozer/android/app/themes/material/crystals_list.html:15
-#: .buildozer/android/app/themes/material/tokens_list.html:14
 #: crystals/100_bismuthprice/themes/default/about.html:15
 #: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "En cours de développement"
 
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/about.html:23
-#: .buildozer/android/app/crystals/210_eggpool/themes/default/about.html:25
-#: .buildozer/android/app/themes/material/about_credits.html:30
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "À propos"
 
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/210_eggpool/themes/default/about.html:29
 #, fuzzy
 msgid "Version"
 msgstr "Version du Node"
 
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/modules/home.html:4
 #: crystals/100_bismuthprice/themes/default/modules/home.html:4
 #, fuzzy
 msgid "Current Bismuth Prices"
 msgstr "Vos portemonnaies Bismuth"
 
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/modules/home.html:28
 #: crystals/100_bismuthprice/themes/default/modules/home.html:28
 msgid "Bismuth vs USD"
 msgstr "Bismuth vs USD"
 
-#: .buildozer/android/app/crystals/100_bismuthprice/themes/default/modules/home.html:33
 #: crystals/100_bismuthprice/themes/default/modules/home.html:33
 msgid "This is a mockup with fake data"
 msgstr "Ceci est une maquette avec de fausses données"
-
-#: .buildozer/android/app/crystals/200_dragginator/__init__.py:71
-msgid "Air egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/__init__.py:71
-msgid "Earth egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/__init__.py:71
-msgid "Fire egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/__init__.py:71
-msgid "Water egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/__init__.py:74
-msgid "Cup"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/__init__.py:74
-msgid "special egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/__init__.py:74
-msgid "world cup 2018"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:15
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:20
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:77
-#: crystals/200_dragginator/themes/default/about.html:15
-#: crystals/200_dragginator/themes/default/egg.html:20
-#: crystals/200_dragginator/themes/default/egg.html:77
-#, fuzzy
-msgid "BIS"
-msgstr "BIS URL"
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:15
-msgid "Buy an egg for"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:23
-msgid "My eggs"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:31
-#: crystals/200_dragginator/themes/default/about.html:44
-msgid "You don't own any egg ;("
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:34
-msgid "And you are registered to the current eggdrop"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:36
-msgid "Register"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:36
-msgid "So you can register to the eggdrop!"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:41
-msgid "You own"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:41
-msgid "eggs"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:48
-msgid "DNA"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:49
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:30
-msgid "Element"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:50
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:31
-msgid "Species"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:58
-msgid " egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/about.html:73
-#: .buildozer/android/app/modules/basehandlers.py:36
-#: crystals/200_dragginator/themes/default/about.html:89
-#: modules/basehandlers.py:37
-msgid "No Bismuth address, please create or load a wallet first."
-msgstr "Pas d'adresse Bismuth, merci de créer ou charger un portemonnaie."
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:11
-msgid "DNA:"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:11
-msgid "See on Dragginator.com"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:23
-msgid "Archive"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:32
-msgid "Age"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:33
-msgid "Rarity"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:43
-msgid "You own this egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:46
-msgid "You don't own this egg"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:60
-#, fuzzy
-msgid "Send this egg to..."
-msgstr "Envoyer $BIS à ..."
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:63
-msgid "Sell this egg for BIS"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:68
-msgid "Remove this egg from the marketplace"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/egg.html:77
-msgid "Buy for"
-msgstr ""
-
-#: .buildozer/android/app/crystals/200_dragginator/themes/default/modules/home.html:12
-#: .buildozer/android/app/themes/material/home.html:141
-#: themes/material/home.html:141
-msgid "Mockup with fake data"
-msgstr "Maquette avec de fausses données"
-
-#: .buildozer/android/app/main.py:133 .buildozer/android/app/main.py:161
-#: .buildozer/android/app/themes/material/transactions_send.html:67
-#: .buildozer/android/app/wallet.py:133 .buildozer/android/app/wallet.py:161
-#: main.py:133 main.py:161 themes/material/transactions_send.html:67
-msgid "Send BIS"
-msgstr "Envoyer BIS"
-
-#: .buildozer/android/app/main.py:136 .buildozer/android/app/main.py:140
-#: .buildozer/android/app/main.py:164 .buildozer/android/app/main.py:168
-#: .buildozer/android/app/main.py:182 .buildozer/android/app/main.py:221
-#: .buildozer/android/app/wallet.py:136 .buildozer/android/app/wallet.py:140
-#: .buildozer/android/app/wallet.py:164 .buildozer/android/app/wallet.py:168
-#: .buildozer/android/app/wallet.py:182 .buildozer/android/app/wallet.py:221
-#: main.py:136 main.py:140 main.py:164 main.py:168 main.py:182 main.py:221
-msgid "Error:"
-msgstr "Erreur :"
-
-#: .buildozer/android/app/main.py:136 .buildozer/android/app/main.py:164
-#: .buildozer/android/app/wallet.py:136 .buildozer/android/app/wallet.py:164
-#: main.py:136 main.py:164
-msgid "Load your wallet first"
-msgstr "Commencer par charger un portemonnaie"
-
-#: .buildozer/android/app/main.py:136 .buildozer/android/app/main.py:164
-#: .buildozer/android/app/wallet.py:136 .buildozer/android/app/wallet.py:164
-#: main.py:136 main.py:164
-msgid "No Wallet"
-msgstr "Pas de portemonnaie"
-
-#: .buildozer/android/app/main.py:140 .buildozer/android/app/main.py:168
-#: .buildozer/android/app/wallet.py:140 .buildozer/android/app/wallet.py:168
-#: main.py:140 main.py:168
-msgid "Encrypted wallet"
-msgstr "Portemonnaie chiffré"
-
-#: .buildozer/android/app/main.py:140 .buildozer/android/app/main.py:168
-#: .buildozer/android/app/wallet.py:140 .buildozer/android/app/wallet.py:168
-#: main.py:140 main.py:168
-msgid "You have to unlock your wallet first"
-msgstr "Vous devez d'abord déverouiller votre portemonnaie"
-
-#: .buildozer/android/app/main.py:144 .buildozer/android/app/main.py:172
-#: .buildozer/android/app/wallet.py:144 .buildozer/android/app/wallet.py:172
-#: main.py:144 main.py:172
-msgid "Send BIS: Confirmation"
-msgstr "Envoyer BIS : Confirmation"
-
-#: .buildozer/android/app/main.py:146 .buildozer/android/app/main.py:174
-#: .buildozer/android/app/wallet.py:146 .buildozer/android/app/wallet.py:174
-#: main.py:146 main.py:174
-msgid "Please confirm this transaction"
-msgstr "Veuillez confirmer cette transaction"
-
-#: .buildozer/android/app/main.py:147 .buildozer/android/app/main.py:175
-#: .buildozer/android/app/wallet.py:147 .buildozer/android/app/wallet.py:175
-#: main.py:147 main.py:175
-msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Vérifiez bien que c'est ce que vous souhaitez faire et cliquez sur le bouton \"Confirmer\""
-
-#: .buildozer/android/app/main.py:193 .buildozer/android/app/main.py:216
-#: .buildozer/android/app/wallet.py:193 .buildozer/android/app/wallet.py:216
-#: main.py:193 main.py:216
-msgid "Success:"
-msgstr "Succès :"
-
-#: .buildozer/android/app/main.py:193 .buildozer/android/app/main.py:216
-#: .buildozer/android/app/wallet.py:193 .buildozer/android/app/wallet.py:216
-#: main.py:193 main.py:216
-msgid "Transaction sent"
-msgstr "Transaction émise"
-
-#: .buildozer/android/app/main.py:194 .buildozer/android/app/main.py:217
-#: .buildozer/android/app/wallet.py:194 .buildozer/android/app/wallet.py:217
-#: main.py:194 main.py:217
-msgid "The transaction was submitted to the mempool."
-msgstr "La transaction a été insérée dans la mempool."
-
-#: .buildozer/android/app/main.py:196 .buildozer/android/app/main.py:219
-#: .buildozer/android/app/wallet.py:196 .buildozer/android/app/wallet.py:219
-#: main.py:196 main.py:219
-msgid "Txid is {}"
-msgstr "L'ID de transaction (txid) est {}"
-
-#: .buildozer/android/app/main.py:198 .buildozer/android/app/wallet.py:198
-#: main.py:198
-#, fuzzy
-msgid "Success"
-msgstr "Succès :"
-
-#: .buildozer/android/app/main.py:201 .buildozer/android/app/main.py:221
-#: .buildozer/android/app/wallet.py:201 .buildozer/android/app/wallet.py:221
-#: main.py:201 main.py:221
-msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr "Erreur en soumettant à la mempool, la transaction n'a pas été émise."
-
-#: .buildozer/android/app/main.py:203 .buildozer/android/app/main.py:315
-#: .buildozer/android/app/main.py:324 .buildozer/android/app/wallet.py:203
-#: .buildozer/android/app/wallet.py:315 .buildozer/android/app/wallet.py:324
-#: main.py:203 main.py:315 main.py:324
-msgid "Error"
-msgstr "Erreur"
-
-#: .buildozer/android/app/main.py:227 .buildozer/android/app/wallet.py:227
-#: main.py:227
-msgid "Receive BIS"
-msgstr "Recevoir des BIS"
-
-#: .buildozer/android/app/main.py:243 .buildozer/android/app/wallet.py:243
-#: main.py:243
-msgid "Transaction list"
-msgstr "Liste des transactions"
-
-#: .buildozer/android/app/main.py:315 .buildozer/android/app/wallet.py:315
-#: main.py:315
-msgid "This file already exists: {}.der"
-msgstr "Ce fichier existe déjà : {}.der"
-
-#: .buildozer/android/app/main.py:324 .buildozer/android/app/wallet.py:324
-#: main.py:324
-msgid "Error creating {}.der"
-msgstr "Erreur en créant {}.der"
-
-#: .buildozer/android/app/themes/material/about_credits.html:10
-#: .buildozer/android/app/themes/material/base.html:203
-#: themes/material/about_credits.html:10 themes/material/base.html:210
-msgid "Credits"
-msgstr "Remerciements"
-
-#: .buildozer/android/app/themes/material/about_credits.html:11
-#: themes/material/about_credits.html:11
-msgid "This wallet wouldn't have existed without..."
-msgstr "Ce projet n'aurait pas vu le jour sans..."
-
-#: .buildozer/android/app/themes/material/about_credits.html:19
-#: themes/material/about_credits.html:19
-msgid "Python, awesome language!"
-msgstr "Python, un langage incroyable !"
-
-#: .buildozer/android/app/themes/material/about_credits.html:20
-#: themes/material/about_credits.html:20
-msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "Le framework Web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
-
-#: .buildozer/android/app/themes/material/about_credits.html:35
-#: themes/material/about_credits.html:35
-msgid "Tornado wallet version {}"
-msgstr "Portemonnaie Tornado version {}"
-
-#: .buildozer/android/app/themes/material/about_credits.html:36
-#: themes/material/about_credits.html:36
-msgid "Wallet template {} by {}."
-msgstr "Theme {} par {}."
-
-#: .buildozer/android/app/themes/material/about_credits.html:52
-#: themes/material/about_credits.html:52
-msgid "Translations"
-msgstr "Traductions"
-
-#: .buildozer/android/app/themes/material/about_credits.html:53
-#: themes/material/about_credits.html:53
-msgid "Many thanks to our translators and proofreaders"
-msgstr "Mille mercis à nos traducteurs et relecteurs"
-
-#: .buildozer/android/app/themes/material/about_network.html:14
-#: themes/material/about_network.html:14
-msgid "Current wallet server"
-msgstr "Serveur de portemonnaie actuel"
-
-#: .buildozer/android/app/themes/material/about_network.html:16
-#: themes/material/about_network.html:16
-msgid "This is the server you're connected to."
-msgstr "Ceci est le serveur auquel vous êtes connecté."
-
-#: .buildozer/android/app/themes/material/about_network.html:19
-#: themes/material/about_network.html:19
-msgid "Server:"
-msgstr "Serveur :"
-
-#: .buildozer/android/app/themes/material/about_network.html:21
-#: themes/material/about_network.html:21
-msgid "IP"
-msgstr "IP"
-
-#: .buildozer/android/app/themes/material/about_network.html:22
-#: themes/material/about_network.html:22
-msgid "Wallet server version {}"
-msgstr "Serveur de portemonnaie version {}"
-
-#: .buildozer/android/app/themes/material/about_network.html:25
-#: themes/material/about_network.html:25
-msgid "Connected clients:"
-msgstr "Clients connectés :"
-
-#: .buildozer/android/app/themes/material/about_network.html:26
-#: themes/material/about_network.html:26
-msgid "Protocol"
-msgstr "Protocole"
-
-#: .buildozer/android/app/themes/material/about_network.html:27
-#: themes/material/about_network.html:27
-msgid "Node Version"
-msgstr "Version du Node"
-
-#: .buildozer/android/app/themes/material/about_network.html:28
-#: themes/material/about_network.html:28
-msgid "Peers connections:"
-msgstr "Connexions aux pairs :"
-
-#: .buildozer/android/app/themes/material/about_network.html:29
-#: themes/material/about_network.html:29
-msgid "UpTime:"
-msgstr "Temps de service :"
-
-#: .buildozer/android/app/themes/material/about_network.html:30
-#: themes/material/about_network.html:30
-msgid "Consensus:"
-msgstr "Consensus :"
-
-#: .buildozer/android/app/themes/material/about_network.html:52
-#: themes/material/about_network.html:52
-msgid "Block"
-msgstr "Bloc"
-
-#: .buildozer/android/app/themes/material/about_network.html:64
-#: themes/material/about_network.html:64
-msgid "Difficulty"
-msgstr "Difficulté"
-
-#: .buildozer/android/app/themes/material/about_network.html:77
-#: themes/material/about_network.html:77
-msgid "Available wallet servers"
-msgstr "Serveurs de portemonnaie disponibles"
-
-#: .buildozer/android/app/themes/material/about_network.html:79
-#: themes/material/about_network.html:79
-msgid "servers"
-msgstr "serveurs"
-
-#: .buildozer/android/app/themes/material/about_network.html:87
-#: themes/material/about_network.html:87
-msgid "Refresh from API"
-msgstr "Rafraîchir depuis l'API"
-
-#: .buildozer/android/app/themes/material/base.html:35
-#: themes/material/base.html:42
-msgid "Bismuth Wallet"
-msgstr "Portemonnaie Bismuth"
-
-#: .buildozer/android/app/themes/material/base.html:43
-#: themes/material/base.html:50
-msgid "Dashboard"
-msgstr "Accueil"
-
-#: .buildozer/android/app/themes/material/base.html:49
-#: themes/material/base.html:56
-msgid "Transactions"
-msgstr "Transactions"
-
-#: .buildozer/android/app/themes/material/base.html:55
-#: themes/material/base.html:62
-msgid "Address book"
-msgstr "Carnet d'adresses"
-
-#: .buildozer/android/app/themes/material/base.html:62
-#: .buildozer/android/app/themes/material/tokens_list.html:10
-#: themes/material/base.html:69 themes/material/tokens_list.html:10
-msgid "Tokens"
-msgstr "Tokens"
-
-#: .buildozer/android/app/themes/material/base.html:68
-#: themes/material/base.html:75
-msgid "Messages"
-msgstr "Messages"
-
-#: .buildozer/android/app/themes/material/base.html:75
-#: themes/material/base.html:82
-msgid "Network"
-msgstr "Réseau"
-
-#: .buildozer/android/app/themes/material/base.html:87
-#: .buildozer/android/app/themes/material/crystals_list.html:11
-#: themes/material/base.html:94 themes/material/crystals_list.html:11
-msgid "Crystals"
-msgstr "Crystals"
-
-#: .buildozer/android/app/themes/material/base.html:103
-#: themes/material/base.html:110
-msgid "Toggle navigation"
-msgstr "Basculer Navigation"
-
-#: .buildozer/android/app/themes/material/base.html:112
-#: themes/material/base.html:119
-msgid "Search..."
-msgstr "Chercher..."
-
-#: .buildozer/android/app/themes/material/base.html:150
-#: themes/material/base.html:157
-msgid "Wallet"
-msgstr "Portemonnaie"
-
-#: .buildozer/android/app/themes/material/base.html:183
-#: themes/material/base.html:190
-msgid "Source"
-msgstr "Source"
-
-#: .buildozer/android/app/themes/material/base.html:188
-#: themes/material/base.html:195
-msgid "Blog"
-msgstr "Blog"
-
-#: .buildozer/android/app/themes/material/base.html:193
-#: themes/material/base.html:200
-msgid "Discord"
-msgstr "Discord"
-
-#: .buildozer/android/app/themes/material/base.html:198
-#: themes/material/base.html:205
-msgid "Donate"
-msgstr "Faire un don"
-
-#: .buildozer/android/app/themes/material/base.html:209
-#: themes/material/base.html:216
-msgid "block #"
-msgstr "bloc N°"
-
-#: .buildozer/android/app/themes/material/base.html:229
-#: themes/material/base.html:236
-msgid "Sidebar Filters"
-msgstr "Filtres barre latérale"
-
-#: .buildozer/android/app/themes/material/base.html:242
-#: themes/material/base.html:249
-msgid "Images"
-msgstr "Images"
-
-#: .buildozer/android/app/themes/material/crystals_list.html:12
-#: themes/material/crystals_list.html:12
-msgid "Crystals are extra functionalities you can add to your wallet"
-msgstr "Les \"Crystals\" (cristaux) sont des fonctionnalités supplémentaires que vous pouvez ajouter à votre portemonnaie."
-
-#: .buildozer/android/app/themes/material/home.html:15
-#: .buildozer/android/app/themes/material/transactions.html:15
-#: themes/material/home.html:15 themes/material/transactions.html:15
-msgid "Balance"
-msgstr "Solde"
-
-#: .buildozer/android/app/themes/material/home.html:34
-#: .buildozer/android/app/themes/material/transactions.html:34
-#: themes/material/home.html:34 themes/material/transactions.html:34
-msgid "Send"
-msgstr "Envoyer"
-
-#: .buildozer/android/app/themes/material/home.html:39
-#: .buildozer/android/app/themes/material/transactions.html:39
-#: themes/material/home.html:39 themes/material/transactions.html:39
-msgid "Send $BIS to..."
-msgstr "Envoyer $BIS à ..."
-
-#: .buildozer/android/app/themes/material/home.html:53
-#: .buildozer/android/app/themes/material/transactions.html:53
-#: .buildozer/android/app/themes/material/transactions_receive.html:15
-#: themes/material/home.html:53 themes/material/transactions.html:53
-#: themes/material/transactions_receive.html:15
-msgid "Receive"
-msgstr "Recevoir"
-
-#: .buildozer/android/app/themes/material/home.html:58
-#: .buildozer/android/app/themes/material/transactions.html:58
-#: themes/material/home.html:58 themes/material/transactions.html:58
-msgid "Request a $BIS payment"
-msgstr "Demander un paiement en $BIS"
-
-#: .buildozer/android/app/themes/material/home.html:74
-#: .buildozer/android/app/themes/material/transactions.html:73
-#: themes/material/home.html:74 themes/material/transactions.html:73
-#, fuzzy
-msgid "Latest transactions"
-msgstr "Dernières transactions"
-
-#: .buildozer/android/app/themes/material/home.html:75
-#: .buildozer/android/app/themes/material/transactions.html:74
-#: themes/material/home.html:75 themes/material/transactions.html:74
-msgid "Updated on"
-msgstr "Mis à jour le"
-
-#: .buildozer/android/app/themes/material/home.html:80
-#: .buildozer/android/app/themes/material/transactions.html:80
-#: themes/material/home.html:80 themes/material/transactions.html:80
-msgid "Date"
-msgstr "Date"
-
-#: .buildozer/android/app/themes/material/home.html:81
-#: .buildozer/android/app/themes/material/transactions.html:81
-#: .buildozer/android/app/themes/material/wallet_load.html:54
-#: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:54
-#, fuzzy
-msgid "Address"
-msgstr "Adresse"
-
-#: .buildozer/android/app/themes/material/home.html:82
-#: .buildozer/android/app/themes/material/transactions.html:82
-#: .buildozer/android/app/themes/material/transactions_receive.html:46
-#: .buildozer/android/app/themes/material/transactions_send.html:42
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:55
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:78
-#: themes/material/home.html:82 themes/material/transactions.html:82
-#: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:42
-#: themes/material/transactions_send_confirm.html:55
-msgid "Amount"
-msgstr "Montant"
-
-#: .buildozer/android/app/themes/material/home.html:83
-#: .buildozer/android/app/themes/material/transactions.html:83
-#: themes/material/home.html:83 themes/material/transactions.html:83
-msgid "Type"
-msgstr "Type"
-
-#: .buildozer/android/app/themes/material/home.html:136
-#: themes/material/home.html:136
-msgid "Account balance"
-msgstr "Solde du compte"
-
-#: .buildozer/android/app/themes/material/home.html:137
-#: themes/material/home.html:137
-msgid "Last 12 months"
-msgstr "12 derniers mois"
-
-#: .buildozer/android/app/themes/material/home.html:150
-#: themes/material/home.html:150
-#, fuzzy
-msgid "Bismuth news"
-msgstr "Actualités Bismuth"
-
-#: .buildozer/android/app/themes/material/message.html:16
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:16
-#: themes/material/message.html:16
-#: themes/material/transactions_send_confirm.html:16
-msgid "Previous page"
-msgstr "Page précédente"
-
-#: .buildozer/android/app/themes/material/tokens_list.html:11
-#: themes/material/tokens_list.html:11
-msgid "Tokens are a core BIS functionality"
-msgstr "Les tokens sont une fonctionnalité essentielle de BIS."
-
-#: .buildozer/android/app/themes/material/transactions.html:79
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr "Txid"
-
-#: .buildozer/android/app/themes/material/transactions.html:84
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr "Frais"
-
-#: .buildozer/android/app/themes/material/transactions.html:85
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr "Données"
-
-#: .buildozer/android/app/themes/material/transactions_confirmpop.html:10
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:11
-#: themes/material/transactions_confirmpop.html:10
-#: themes/material/transactions_sendpop_confirm.html:11
-#, fuzzy
-msgid "Confirm Transaction"
-msgstr "Transactions"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:16
-#: themes/material/transactions_receive.html:16
-msgid "Request BIS"
-msgstr "Demander BIS"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:20
-#: themes/material/transactions_receive.html:20
-msgid "Your address"
-msgstr "Votre adresse"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:22
-#: themes/material/transactions_receive.html:22
-#, fuzzy
-msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "Ceci est l'adresse de votre portemonnaie actuel, vous pouvez la modifier si besoin. Veillez à entrer la bonne adresse."
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:27
-#: .buildozer/android/app/themes/material/transactions_send.html:26
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:39
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:55
-#: themes/material/transactions_receive.html:27
-#: themes/material/transactions_send.html:26
-#: themes/material/transactions_send_confirm.html:39
-#: themes/material/transactions_sendpop_confirm.html:84
-msgid "Data (message)"
-msgstr "Données (message)"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:30
-#: themes/material/transactions_receive.html:30
-msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "Option: Vous pouvez ajouter un court commentaire à votre transaction, tel qu'une référence personnelle. Il sera stocké dans la blockchain."
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:35
-#: themes/material/transactions_receive.html:35
-msgid "This is the QR code for your address only."
-msgstr "Ceci est le QR code qui représente votre adresse seule."
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:47
-#: themes/material/transactions_receive.html:47
-msgid "How many BIS to request."
-msgstr "Combien de BIS demander."
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:53
-#: .buildozer/android/app/themes/material/transactions_send.html:49
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:62
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:85
-#: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:49
-#: themes/material/transactions_send_confirm.html:62
-#: themes/material/transactions_sendpop_confirm.html:55
-msgid "Amount (BIS)"
-msgstr "Montant (BIS)"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:56
-#: themes/material/transactions_receive.html:56
-msgid "This is what you will receive"
-msgstr "Ceci est le montant que vous recevrez"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:61
-#: .buildozer/android/app/themes/material/transactions_send.html:56
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:70
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:93
-#: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:56
-#: themes/material/transactions_send_confirm.html:70
-#: themes/material/transactions_sendpop_confirm.html:63
-msgid "Est. fees"
-msgstr "Frais estimés"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:63
-#: .buildozer/android/app/themes/material/transactions_send.html:58
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:72
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:95
-#: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:58
-#: themes/material/transactions_send_confirm.html:72
-#: themes/material/transactions_sendpop_confirm.html:65
-msgid "Fees depend on Data length"
-msgstr "Les frais dépendent de la taille du champ \"données\" (data)"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:66
-#: .buildozer/android/app/themes/material/transactions_send.html:61
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:75
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:98
-#: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:61
-#: themes/material/transactions_send_confirm.html:75
-#: themes/material/transactions_sendpop_confirm.html:68
-msgid "Total (BIS)"
-msgstr "Total (BIS)"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:68
-#: themes/material/transactions_receive.html:68
-msgid "This is what the sender will pay"
-msgstr "Voici ce que l'expéditeur va payer"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:72
-#: themes/material/transactions_receive.html:72
-msgid "Get BIS URL"
-msgstr "Obtenir la BIS URL"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:78
-#: themes/material/transactions_receive.html:78
-msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "Ceci est le QR code pour votre addresse, données et montant en tant que BIS URL"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:79
-#: themes/material/transactions_receive.html:79
-msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "Vous pouvez copier/coller cette image pour l'envoyer par courriel ou d'une autre manière"
-
-#: .buildozer/android/app/themes/material/transactions_receive.html:81
-#: themes/material/transactions_receive.html:81
-msgid "BIS URL"
-msgstr "BIS URL"
-
-#: .buildozer/android/app/themes/material/transactions_send.html:16
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:28
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:44
-#: themes/material/transactions_send.html:16
-#: themes/material/transactions_send_confirm.html:28
-msgid "Send To"
-msgstr "Envoyer à"
-
-#: .buildozer/android/app/themes/material/transactions_send.html:17
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:29
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:45
-#: themes/material/transactions_send.html:17
-#: themes/material/transactions_send_confirm.html:29
-msgid "To whom send BIS."
-msgstr "À qui envoyer des BIS."
-
-#: .buildozer/android/app/themes/material/transactions_send.html:21
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:33
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:49
-#: themes/material/transactions_send.html:21
-#: themes/material/transactions_send_confirm.html:33
-#: themes/material/transactions_sendpop_confirm.html:46
-msgid "Recipient"
-msgstr "Destinataire"
-
-#: .buildozer/android/app/themes/material/transactions_send.html:28
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:43
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:59
-#: themes/material/transactions_send.html:28
-#: themes/material/transactions_send_confirm.html:43
-#: themes/material/transactions_sendpop_confirm.html:88
-msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr ""
-"Option: Vous pouvez ajouter un court commentaire à votre transaction.\n"
-"Ce champ est indispensable pour déposer sur les bourses d'échange."
-
-#: .buildozer/android/app/themes/material/transactions_send.html:43
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:56
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:79
-#: themes/material/transactions_send.html:43
-#: themes/material/transactions_send_confirm.html:56
-msgid "How many BIS to send."
-msgstr "Combien de BIS envoyer."
-
-#: .buildozer/android/app/themes/material/transactions_send.html:51
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:65
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:88
-#: themes/material/transactions_send.html:51
-#: themes/material/transactions_send_confirm.html:65
-#: themes/material/transactions_sendpop_confirm.html:58
-msgid "This is what the recipient will receive"
-msgstr "Voici ce que le destinataire va recevoir"
-
-#: .buildozer/android/app/themes/material/transactions_send.html:63
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:77
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:100
-#: themes/material/transactions_send.html:63
-#: themes/material/transactions_send_confirm.html:77
-#: themes/material/transactions_sendpop_confirm.html:70
-msgid "This is what you will pay, fees included."
-msgstr "Voici ce que vous allez payer, frais inclus."
-
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:100
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:123
-#: themes/material/transactions_send_confirm.html:100
-#: themes/material/transactions_sendpop_confirm.html:112
-msgid "Cancel"
-msgstr "Annuler"
-
-#: .buildozer/android/app/themes/material/transactions_send_confirm.html:105
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:128
-#: themes/material/transactions_send_confirm.html:105
-#: themes/material/transactions_sendpop_confirm.html:117
-msgid "Confirm and send BIS"
-msgstr "Confirmer et envoyer les BIS"
-
-#: .buildozer/android/app/themes/material/transactions_sendpop_confirm.html:64
-#: themes/material/transactions_sendpop_confirm.html:77
-msgid "Operation"
-msgstr ""
-
-#: .buildozer/android/app/themes/material/wallet_info.html:11
-#: themes/material/wallet_info.html:11
-msgid "Current Wallet"
-msgstr "Portemonnaie actuel"
-
-#: .buildozer/android/app/themes/material/wallet_info.html:28
-#: themes/material/wallet_info.html:28
-msgid "Open existing"
-msgstr "Ouvrir un"
-
-#: .buildozer/android/app/themes/material/wallet_info.html:29
-#: themes/material/wallet_info.html:29
-msgid "wallet"
-msgstr "portemonnaie"
-
-#: .buildozer/android/app/themes/material/wallet_info.html:33
-#: themes/material/wallet_info.html:33
-msgid "Load a wallet from disk"
-msgstr "Charger un portemonnaie depuis le disque"
-
-#: .buildozer/android/app/themes/material/wallet_info.html:47
-#: .buildozer/android/app/themes/material/wallet_load.html:34
-#: themes/material/wallet_info.html:47 themes/material/wallet_load.html:34
-msgid "Create a"
-msgstr "Ajouter un"
-
-#: .buildozer/android/app/themes/material/wallet_info.html:48
-#: .buildozer/android/app/themes/material/wallet_load.html:35
-#: themes/material/wallet_info.html:48 themes/material/wallet_load.html:35
-msgid "new wallet"
-msgstr "portemonnaie"
-
-#: .buildozer/android/app/themes/material/wallet_load.html:16
-#: themes/material/wallet_load.html:16
-msgid "Your Bismuth wallets"
-msgstr "Vos portemonnaies Bismuth"
-
-#: .buildozer/android/app/themes/material/wallet_load.html:20
-#: themes/material/wallet_load.html:20
-msgid "Your wallets directory is {}"
-msgstr "Le répertoire de vos portemonnaies est {}"
-
-#: .buildozer/android/app/themes/material/wallet_load.html:53
-#: themes/material/wallet_load.html:53
-msgid "File"
-msgstr "Fichier"
-
-#: .buildozer/android/app/themes/material/wallet_load.html:55
-#: themes/material/wallet_load.html:55
-msgid "Encrypted"
-msgstr "Chiffré"
-
-#: .buildozer/android/app/themes/material/wallet_load.html:56
-#: themes/material/wallet_load.html:56
-msgid "Action"
-msgstr "Action"
-
-#: .buildozer/android/app/themes/material/wip.html:10
-#: themes/material/wip.html:10
-msgid "W.I.P."
-msgstr "En cours de développement."
-
-#: .buildozer/android/app/themes/material/wip.html:13
-#: themes/material/wip.html:13
-msgid "This feature is under construction."
-msgstr "Cette fonctionalité est en cours de développement."
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/layout_old.html:29
-#, fuzzy
-msgid "Navigation"
-msgstr "Basculer Navigation"
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:11
-#, fuzzy
-msgid "Search"
-msgstr "Chercher..."
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:33
-msgid "Search Results"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:35
-msgid "Your search did not match any documents. Please make sure that all words are spelled correctly and that you've selected enough categories."
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:328
-msgid "usage: "
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:830
-msgid ".__call__() not defined"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1114
-#, python-format
-msgid "unknown parser %r (choices: %s)"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1150
-#, python-format
-msgid "argument \"-\" with mode %r"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1351
-#, python-format
-msgid "cannot merge actions - two groups are named %r"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1389
-msgid "'required' is an invalid argument for positionals"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1409
-#, python-format
-msgid "invalid option string %r: must start with a character %r"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1430
-#, python-format
-msgid "dest= is required for options like %r"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1447
-#, python-format
-msgid "invalid conflict_resolution value: %r"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1465
-#, python-format
-msgid "conflicting option string(s): %s"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1528
-msgid "mutually exclusive arguments must be optional"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1598
-msgid "positional arguments"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1599
-msgid "optional arguments"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1612
-msgid "show this help message and exit"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1617
-msgid "show program's version number and exit"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1649
-msgid "cannot have multiple subparser arguments"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1701
-#, python-format
-msgid "unrecognized arguments: %s"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1794
-#, python-format
-msgid "not allowed with argument %s"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1840
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1854
-#, python-format
-msgid "ignored explicit argument %r"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1944
-msgid "too few arguments"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1951
-#, python-format
-msgid "argument %s is required"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:1965
-#, python-format
-msgid "one of the arguments %s is required"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2011
-msgid "expected one argument"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2012
-msgid "expected at most one argument"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2013
-msgid "expected at least one argument"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2015
-#, python-format
-msgid "expected %s argument(s)"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2072
-#, python-format
-msgid "ambiguous option: %s could match %s"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2134
-#, python-format
-msgid "unexpected option string: %s"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2235
-#, python-format
-msgid "%r is not callable"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2251
-#, python-format
-msgid "invalid %s value: %r"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2261
-#, python-format
-msgid "invalid choice: %r (choose from %s)"
-msgstr ""
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/pythonforandroid/bootstraps/pygame/build/buildlib/argparse.py:2354
-#, python-format
-msgid "%s: error: %s\n"
-msgstr ""
 
 #: crystals/200_dragginator/__init__.py:73
 msgid "D:Air egg"
@@ -1133,6 +74,13 @@ msgid "D:world cup 2018"
 msgstr ""
 
 #: crystals/200_dragginator/themes/default/about.html:15
+#: crystals/200_dragginator/themes/default/egg.html:20
+#: crystals/200_dragginator/themes/default/egg.html:77
+#, fuzzy
+msgid "BIS"
+msgstr "BIS URL"
+
+#: crystals/200_dragginator/themes/default/about.html:15
 msgid "D:Buy an egg for"
 msgstr ""
 
@@ -1142,6 +90,10 @@ msgstr ""
 
 #: crystals/200_dragginator/themes/default/about.html:36
 msgid "D:My eggs"
+msgstr ""
+
+#: crystals/200_dragginator/themes/default/about.html:44
+msgid "You don't own any egg ;("
 msgstr ""
 
 #: crystals/200_dragginator/themes/default/about.html:47
@@ -1177,6 +129,11 @@ msgstr ""
 #: crystals/200_dragginator/themes/default/egg.html:31
 msgid "D:Species"
 msgstr ""
+
+#: crystals/200_dragginator/themes/default/about.html:89
+#: modules/basehandlers.py:37
+msgid "No Bismuth address, please create or load a wallet first."
+msgstr "Pas d'adresse Bismuth, merci de créer ou charger un portemonnaie."
 
 #: crystals/200_dragginator/themes/default/egg.html:11
 msgid "D:DNA:"
@@ -1253,6 +210,91 @@ msgstr ""
 msgid "EP:Workers"
 msgstr ""
 
+#: main.py:133 main.py:161 themes/material/transactions_send.html:67
+#: wallet.py:134 wallet.py:162
+msgid "Send BIS"
+msgstr "Envoyer BIS"
+
+#: main.py:136 main.py:140 main.py:164 main.py:168 main.py:182 main.py:221
+#: wallet.py:137 wallet.py:141 wallet.py:165 wallet.py:169 wallet.py:183
+#: wallet.py:222
+msgid "Error:"
+msgstr "Erreur :"
+
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
+msgid "Load your wallet first"
+msgstr "Commencer par charger un portemonnaie"
+
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
+msgid "No Wallet"
+msgstr "Pas de portemonnaie"
+
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
+msgid "Encrypted wallet"
+msgstr "Portemonnaie chiffré"
+
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
+msgid "You have to unlock your wallet first"
+msgstr "Vous devez d'abord déverouiller votre portemonnaie"
+
+#: main.py:144 main.py:172 wallet.py:145 wallet.py:173
+msgid "Send BIS: Confirmation"
+msgstr "Envoyer BIS : Confirmation"
+
+#: main.py:146 main.py:174 wallet.py:147 wallet.py:175
+msgid "Please confirm this transaction"
+msgstr "Veuillez confirmer cette transaction"
+
+#: main.py:147 main.py:175 wallet.py:148 wallet.py:176
+msgid "Check this is what you intended to do and hit the \"confirm\" button"
+msgstr "Vérifiez bien que c'est ce que vous souhaitez faire et cliquez sur le bouton \"Confirmer\""
+
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
+msgid "Success:"
+msgstr "Succès :"
+
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
+msgid "Transaction sent"
+msgstr "Transaction émise"
+
+#: main.py:194 main.py:217 wallet.py:195 wallet.py:218
+msgid "The transaction was submitted to the mempool."
+msgstr "La transaction a été insérée dans la mempool."
+
+#: main.py:196 main.py:219 wallet.py:197 wallet.py:220
+msgid "Txid is {}"
+msgstr "L'ID de transaction (txid) est {}"
+
+#: main.py:198 wallet.py:199
+#, fuzzy
+msgid "Success"
+msgstr "Succès :"
+
+#: main.py:201 main.py:221 wallet.py:202 wallet.py:222
+msgid "There was an error submitting to the mempool, transaction was not sent."
+msgstr "Erreur en soumettant à la mempool, la transaction n'a pas été émise."
+
+#: main.py:203 main.py:315 main.py:324 wallet.py:204 wallet.py:316
+#: wallet.py:325
+msgid "Error"
+msgstr "Erreur"
+
+#: main.py:227 wallet.py:228
+msgid "Receive BIS"
+msgstr "Recevoir des BIS"
+
+#: main.py:243 wallet.py:244
+msgid "Transaction list"
+msgstr "Liste des transactions"
+
+#: main.py:315 wallet.py:316
+msgid "This file already exists: {}.der"
+msgstr "Ce fichier existe déjà : {}.der"
+
+#: main.py:324 wallet.py:325
+msgid "Error creating {}.der"
+msgstr "Erreur en créant {}.der"
+
 #: modules/i18n.py:11
 msgid "DT:Processing..."
 msgstr ""
@@ -1311,6 +353,464 @@ msgstr ""
 msgid "DT:Sort by descending order"
 msgstr ""
 
+#: themes/material/about_credits.html:10 themes/material/base.html:210
+msgid "Credits"
+msgstr "Remerciements"
+
+#: themes/material/about_credits.html:11
+msgid "This wallet wouldn't have existed without..."
+msgstr "Ce projet n'aurait pas vu le jour sans..."
+
+#: themes/material/about_credits.html:19
+msgid "Python, awesome language!"
+msgstr "Python, un langage incroyable !"
+
+#: themes/material/about_credits.html:20
+msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
+msgstr "Le framework Web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
+
+#: themes/material/about_credits.html:35
+msgid "Tornado wallet version {}"
+msgstr "Portemonnaie Tornado version {}"
+
+#: themes/material/about_credits.html:36
+msgid "Wallet template {} by {}."
+msgstr "Theme {} par {}."
+
+#: themes/material/about_credits.html:52
+msgid "Translations"
+msgstr "Traductions"
+
+#: themes/material/about_credits.html:53
+msgid "Many thanks to our translators and proofreaders"
+msgstr "Mille mercis à nos traducteurs et relecteurs"
+
+#: themes/material/about_network.html:14
+msgid "Current wallet server"
+msgstr "Serveur de portemonnaie actuel"
+
+#: themes/material/about_network.html:16
+msgid "This is the server you're connected to."
+msgstr "Ceci est le serveur auquel vous êtes connecté."
+
+#: themes/material/about_network.html:19
+msgid "Server:"
+msgstr "Serveur :"
+
+#: themes/material/about_network.html:21
+msgid "IP"
+msgstr "IP"
+
+#: themes/material/about_network.html:22
+msgid "Wallet server version {}"
+msgstr "Serveur de portemonnaie version {}"
+
+#: themes/material/about_network.html:25
+msgid "Connected clients:"
+msgstr "Clients connectés :"
+
+#: themes/material/about_network.html:26
+msgid "Protocol"
+msgstr "Protocole"
+
+#: themes/material/about_network.html:27
+msgid "Node Version"
+msgstr "Version du Node"
+
+#: themes/material/about_network.html:28
+msgid "Peers connections:"
+msgstr "Connexions aux pairs :"
+
+#: themes/material/about_network.html:29
+msgid "UpTime:"
+msgstr "Temps de service :"
+
+#: themes/material/about_network.html:30
+msgid "Consensus:"
+msgstr "Consensus :"
+
+#: themes/material/about_network.html:52
+msgid "Block"
+msgstr "Bloc"
+
+#: themes/material/about_network.html:64
+msgid "Difficulty"
+msgstr "Difficulté"
+
+#: themes/material/about_network.html:77
+msgid "Available wallet servers"
+msgstr "Serveurs de portemonnaie disponibles"
+
+#: themes/material/about_network.html:79
+msgid "servers"
+msgstr "serveurs"
+
+#: themes/material/about_network.html:87
+msgid "Refresh from API"
+msgstr "Rafraîchir depuis l'API"
+
+#: themes/material/base.html:42
+msgid "Bismuth Wallet"
+msgstr "Portemonnaie Bismuth"
+
+#: themes/material/base.html:50
+msgid "Dashboard"
+msgstr "Accueil"
+
+#: themes/material/base.html:56
+msgid "Transactions"
+msgstr "Transactions"
+
+#: themes/material/base.html:62
+msgid "Address book"
+msgstr "Carnet d'adresses"
+
+#: themes/material/base.html:69 themes/material/tokens_list.html:10
+msgid "Tokens"
+msgstr "Tokens"
+
+#: themes/material/base.html:75
+msgid "Messages"
+msgstr "Messages"
+
+#: themes/material/base.html:82
+msgid "Network"
+msgstr "Réseau"
+
+#: themes/material/base.html:94 themes/material/crystals_list.html:11
+msgid "Crystals"
+msgstr "Crystals"
+
+#: themes/material/base.html:110
+msgid "Toggle navigation"
+msgstr "Basculer Navigation"
+
+#: themes/material/base.html:119
+msgid "Search..."
+msgstr "Chercher..."
+
+#: themes/material/base.html:157
+msgid "Wallet"
+msgstr "Portemonnaie"
+
+#: themes/material/base.html:190
+msgid "Source"
+msgstr "Source"
+
+#: themes/material/base.html:195
+msgid "Blog"
+msgstr "Blog"
+
+#: themes/material/base.html:200
+msgid "Discord"
+msgstr "Discord"
+
+#: themes/material/base.html:205
+msgid "Donate"
+msgstr "Faire un don"
+
+#: themes/material/base.html:216
+msgid "block #"
+msgstr "bloc N°"
+
+#: themes/material/base.html:236
+msgid "Sidebar Filters"
+msgstr "Filtres barre latérale"
+
+#: themes/material/base.html:249
+msgid "Images"
+msgstr "Images"
+
+#: themes/material/crystals_list.html:12
+msgid "Crystals are extra functionalities you can add to your wallet"
+msgstr "Les \"Crystals\" (cristaux) sont des fonctionnalités supplémentaires que vous pouvez ajouter à votre portemonnaie."
+
+#: themes/material/home.html:15 themes/material/transactions.html:15
+msgid "Balance"
+msgstr "Solde"
+
+#: themes/material/home.html:34 themes/material/transactions.html:34
+msgid "Send"
+msgstr "Envoyer"
+
+#: themes/material/home.html:39 themes/material/transactions.html:39
+msgid "Send $BIS to..."
+msgstr "Envoyer $BIS à ..."
+
+#: themes/material/home.html:53 themes/material/transactions.html:53
+#: themes/material/transactions_receive.html:15
+msgid "Receive"
+msgstr "Recevoir"
+
+#: themes/material/home.html:58 themes/material/transactions.html:58
+msgid "Request a $BIS payment"
+msgstr "Demander un paiement en $BIS"
+
+#: themes/material/home.html:74 themes/material/transactions.html:73
+#, fuzzy
+msgid "Latest transactions"
+msgstr "Dernières transactions"
+
+#: themes/material/home.html:75 themes/material/transactions.html:74
+msgid "Updated on"
+msgstr "Mis à jour le"
+
+#: themes/material/home.html:80 themes/material/transactions.html:80
+msgid "Date"
+msgstr "Date"
+
+#: themes/material/home.html:81 themes/material/transactions.html:81
+#: themes/material/wallet_load.html:54
+#, fuzzy
+msgid "Address"
+msgstr "Adresse"
+
+#: themes/material/home.html:82 themes/material/transactions.html:82
+#: themes/material/transactions_receive.html:46
+#: themes/material/transactions_send.html:42
+#: themes/material/transactions_send_confirm.html:55
+msgid "Amount"
+msgstr "Montant"
+
+#: themes/material/home.html:83 themes/material/transactions.html:83
+msgid "Type"
+msgstr "Type"
+
+#: themes/material/home.html:136
+msgid "Account balance"
+msgstr "Solde du compte"
+
+#: themes/material/home.html:137
+msgid "Last 12 months"
+msgstr "12 derniers mois"
+
+#: themes/material/home.html:141
+msgid "Mockup with fake data"
+msgstr "Maquette avec de fausses données"
+
+#: themes/material/home.html:150
+#, fuzzy
+msgid "Bismuth news"
+msgstr "Actualités Bismuth"
+
+#: themes/material/message.html:16
+#: themes/material/transactions_send_confirm.html:16
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: themes/material/tokens_list.html:11
+msgid "Tokens are a core BIS functionality"
+msgstr "Les tokens sont une fonctionnalité essentielle de BIS."
+
+#: themes/material/transactions.html:79
+msgid "Txid"
+msgstr "Txid"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "Frais"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "Données"
+
+#: themes/material/transactions_confirmpop.html:10
+#: themes/material/transactions_sendpop_confirm.html:11
+#, fuzzy
+msgid "Confirm Transaction"
+msgstr "Transactions"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "Demander BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Votre adresse"
+
+#: themes/material/transactions_receive.html:22
+#, fuzzy
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "Ceci est l'adresse de votre portemonnaie actuel, vous pouvez la modifier si besoin. Veillez à entrer la bonne adresse."
+
+#: themes/material/transactions_receive.html:27
+#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send_confirm.html:39
+#: themes/material/transactions_sendpop_confirm.html:84
+msgid "Data (message)"
+msgstr "Données (message)"
+
+#: themes/material/transactions_receive.html:30
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Option: Vous pouvez ajouter un court commentaire à votre transaction, tel qu'une référence personnelle. Il sera stocké dans la blockchain."
+
+#: themes/material/transactions_receive.html:35
+msgid "This is the QR code for your address only."
+msgstr "Ceci est le QR code qui représente votre adresse seule."
+
+#: themes/material/transactions_receive.html:47
+msgid "How many BIS to request."
+msgstr "Combien de BIS demander."
+
+#: themes/material/transactions_receive.html:53
+#: themes/material/transactions_send.html:49
+#: themes/material/transactions_send_confirm.html:62
+#: themes/material/transactions_sendpop_confirm.html:55
+msgid "Amount (BIS)"
+msgstr "Montant (BIS)"
+
+#: themes/material/transactions_receive.html:56
+msgid "This is what you will receive"
+msgstr "Ceci est le montant que vous recevrez"
+
+#: themes/material/transactions_receive.html:61
+#: themes/material/transactions_send.html:56
+#: themes/material/transactions_send_confirm.html:70
+#: themes/material/transactions_sendpop_confirm.html:63
+msgid "Est. fees"
+msgstr "Frais estimés"
+
+#: themes/material/transactions_receive.html:63
+#: themes/material/transactions_send.html:58
+#: themes/material/transactions_send_confirm.html:72
+#: themes/material/transactions_sendpop_confirm.html:65
+msgid "Fees depend on Data length"
+msgstr "Les frais dépendent de la taille du champ \"données\" (data)"
+
+#: themes/material/transactions_receive.html:66
+#: themes/material/transactions_send.html:61
+#: themes/material/transactions_send_confirm.html:75
+#: themes/material/transactions_sendpop_confirm.html:68
+msgid "Total (BIS)"
+msgstr "Total (BIS)"
+
+#: themes/material/transactions_receive.html:68
+msgid "This is what the sender will pay"
+msgstr "Voici ce que l'expéditeur va payer"
+
+#: themes/material/transactions_receive.html:72
+msgid "Get BIS URL"
+msgstr "Obtenir la BIS URL"
+
+#: themes/material/transactions_receive.html:78
+msgid "This is the QR code for your address, data and amount as a BisUrl."
+msgstr "Ceci est le QR code pour votre addresse, données et montant en tant que BIS URL"
+
+#: themes/material/transactions_receive.html:79
+msgid "You can copy/paste this image to send in a mail or anything"
+msgstr "Vous pouvez copier/coller cette image pour l'envoyer par courriel ou d'une autre manière"
+
+#: themes/material/transactions_receive.html:81
+msgid "BIS URL"
+msgstr "BIS URL"
+
+#: themes/material/transactions_send.html:16
+#: themes/material/transactions_send_confirm.html:28
+msgid "Send To"
+msgstr "Envoyer à"
+
+#: themes/material/transactions_send.html:17
+#: themes/material/transactions_send_confirm.html:29
+msgid "To whom send BIS."
+msgstr "À qui envoyer des BIS."
+
+#: themes/material/transactions_send.html:21
+#: themes/material/transactions_send_confirm.html:33
+#: themes/material/transactions_sendpop_confirm.html:46
+msgid "Recipient"
+msgstr "Destinataire"
+
+#: themes/material/transactions_send.html:28
+#: themes/material/transactions_send_confirm.html:43
+#: themes/material/transactions_sendpop_confirm.html:88
+msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
+msgstr ""
+"Option: Vous pouvez ajouter un court commentaire à votre transaction.\n"
+"Ce champ est indispensable pour déposer sur les bourses d'échange."
+
+#: themes/material/transactions_send.html:43
+#: themes/material/transactions_send_confirm.html:56
+msgid "How many BIS to send."
+msgstr "Combien de BIS envoyer."
+
+#: themes/material/transactions_send.html:51
+#: themes/material/transactions_send_confirm.html:65
+#: themes/material/transactions_sendpop_confirm.html:58
+msgid "This is what the recipient will receive"
+msgstr "Voici ce que le destinataire va recevoir"
+
+#: themes/material/transactions_send.html:63
+#: themes/material/transactions_send_confirm.html:77
+#: themes/material/transactions_sendpop_confirm.html:70
+msgid "This is what you will pay, fees included."
+msgstr "Voici ce que vous allez payer, frais inclus."
+
+#: themes/material/transactions_send_confirm.html:100
+#: themes/material/transactions_sendpop_confirm.html:112
+msgid "Cancel"
+msgstr "Annuler"
+
+#: themes/material/transactions_send_confirm.html:105
+#: themes/material/transactions_sendpop_confirm.html:117
+msgid "Confirm and send BIS"
+msgstr "Confirmer et envoyer les BIS"
+
+#: themes/material/transactions_sendpop_confirm.html:77
+msgid "Operation"
+msgstr ""
+
+#: themes/material/wallet_info.html:11
+msgid "Current Wallet"
+msgstr "Portemonnaie actuel"
+
+#: themes/material/wallet_info.html:28
+msgid "Open existing"
+msgstr "Ouvrir un"
+
+#: themes/material/wallet_info.html:29
+msgid "wallet"
+msgstr "portemonnaie"
+
+#: themes/material/wallet_info.html:33
+msgid "Load a wallet from disk"
+msgstr "Charger un portemonnaie depuis le disque"
+
+#: themes/material/wallet_info.html:47 themes/material/wallet_load.html:34
+msgid "Create a"
+msgstr "Ajouter un"
+
+#: themes/material/wallet_info.html:48 themes/material/wallet_load.html:35
+msgid "new wallet"
+msgstr "portemonnaie"
+
+#: themes/material/wallet_load.html:16
+msgid "Your Bismuth wallets"
+msgstr "Vos portemonnaies Bismuth"
+
+#: themes/material/wallet_load.html:20
+msgid "Your wallets directory is {}"
+msgstr "Le répertoire de vos portemonnaies est {}"
+
+#: themes/material/wallet_load.html:53
+msgid "File"
+msgstr "Fichier"
+
+#: themes/material/wallet_load.html:55
+msgid "Encrypted"
+msgstr "Chiffré"
+
+#: themes/material/wallet_load.html:56
+msgid "Action"
+msgstr "Action"
+
+#: themes/material/wip.html:10
+msgid "W.I.P."
+msgstr "En cours de développement."
+
+#: themes/material/wip.html:13
+msgid "This feature is under construction."
+msgstr "Cette fonctionalité est en cours de développement."
+
 #~ msgid "Cristals are extra functionalities you can add to your wallet"
 #~ msgstr "Les \"Crystals\" (cristaux) sont des fonctionnalités supplémentaires que vous pouvez ajouter à votre portemonnaie."
 
@@ -1325,3 +825,15 @@ msgstr ""
 
 #~ msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 #~ msgstr "Modèle \"Material Dark\" par <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
+
+#, fuzzy
+#~ msgid "Search"
+#~ msgstr "Chercher..."
+
+#, fuzzy
+#~ msgid "Navigation"
+#~ msgstr "Basculer Navigation"
+
+#, fuzzy
+#~ msgid "Send this egg to..."
+#~ msgstr "Envoyer $BIS à ..."

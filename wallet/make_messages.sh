@@ -14,6 +14,8 @@ pot_file="locale/${domain}.pot"
 po_file="${locale_dir}/${domain}.po"
 # create folders if not exists
 mkdir -p $locale_dir
+
+rm -rf ./.buildozer
 # create .pot file
 find . -iname "*.html" -o -iname "*.py" | xargs \
     xgettext --output=${pot_file} --language=Python --from-code=UTF-8 \
