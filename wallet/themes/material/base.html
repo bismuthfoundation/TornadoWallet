@@ -169,6 +169,8 @@
 
                 {% block body %}{% end %}
 
+                <div id="payment_window" class="modal" tabindex="-1" role="dialog"></div>
+
 
             </div>
         </div>
@@ -305,7 +307,68 @@
 <!-- Material Dashboard DEMO methods, dont include it in your project -->
 <script src="{{ static_url('demo/demo.js') }}"></script>
 <script>
+
+function float_to_bis(x){
+  return x.toFixed(8).replace(/\.?0*$/,'');
+}
+
+    function send(address, amount, operation, data ){
+
+    if (address == '') { return false}
+    if (amount <= 0) { amount=0}
+
+    enabled = true;
+    $.get('/transactions/sendpop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation,function(page){
+        $("#payment_window").html(page);
+        $("#payment_window").modal("show");
+        fees = 0.01+0.00001*data.length
+        $("#feespop").val(float_to_bis(fees));
+        $("#totalpop").val(float_to_bis(parseFloat(amount) + fees));
+
+        });
+    }
+
+function confirmed(){
+    if(enabled){
+        enabled = false;
+        $("#payment_window").css({"cursor":"wait"});
+        $("#send_button").prop("disabled",true);
+
+        address = $("#recipient").val();
+        data = $("#data").val();
+        amount = $("#amount").val();
+        operation = $("#operation").val();
+
+        $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation,function(page){
+            $("#payment_window").html(page);
+            $("#payment_window").css({"cursor":"context-menu"});
+            //$("#payment_window").modal("show");
+        });
+
+    }
+}
+
+       function fees_calc() {
+            data = $("#data").val();
+            amount = $("#amount").val();
+            if (amount <= 0) { amount=0}
+            fees = 0.01+0.00001*data.length
+            $("#fees").val(float_to_bis(fees));
+            $("#total").val(float_to_bis(parseFloat(amount) + fees));
+       }
+
     $(document).ready(function() {
+
+        $("#amount").on('keyup paste', fees_calc);
+        $("#data").on('keyup paste', fees_calc);
+
+      $("#extra_option").on("hide.bs.collapse", function(){
+        $("#extra").text('arrow_drop_down');
+      });
+      $("#extra_option").on("show.bs.collapse", function(){
+        $("#extra").text('arrow_drop_up');
+      });
+
       $().ready(function() {
         $sidebar = $('.sidebar');
 

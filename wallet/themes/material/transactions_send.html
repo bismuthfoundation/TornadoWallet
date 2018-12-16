@@ -3,7 +3,7 @@
 {% block body %}
 
 
-    <form method="get" action="/transactions/send">
+    <!-- form method="get" action="/transactions/send"-->
 
         <div class="row">
 
@@ -26,6 +26,14 @@
                             <label class="bmd-label-floating">{{ _("Data (message)")}}</label>
                             <input class="form-control" id="data" type="text" name="data"/>
                             <small>{{ _("Optionally, you can add a small comment to your transaction. Required for exchanges deposit.")}}
+                            </small>
+                        </div>
+
+                        <span data-toggle="collapse" data-target="#extra_option"><i id="extra" class="material-icons" style="color:#029eb1;" title="{{ _('Expert')}}">arrow_drop_down</i></span>
+                        <div id="extra_option" class="form-group collapse">
+                            <label class="bmd-label-floating">{{ _("Operation")}}</label>
+                            <input class="form-control" id="operation" type="text" name="operation"/>
+                            <small>{{ _('"operation" allows for powerful Bismuth Features. Leave empty until otherwise required.')}}
                             </small>
                         </div>
 
@@ -54,17 +62,18 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="bmd-label-floating">{{ _("Est. fees")}}</label>
-                                    <input class="form-control" id="fees" type="text" name="fees" disabled/>
+                                    <input class="form-control" id="fees" type="text" name="fees" value="0.01" disabled/>
                                     <small>{{ _("Fees depend on Data length")}}</small>
                                 </div>
                                 <div class="form-group">
                                     <label class="bmd-label-floating">{{ _("Total (BIS)")}}</label>
-                                    <input class="form-control" id="total" type="text" name="total" disabled/>
+                                    <input class="form-control" id="total" type="text" name="total" value="0.01" disabled/>
                                     <small>{{ _("This is what you will pay, fees included.")}}</small>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary pull-right">{{ _("Send BIS")}}</button>
+                        <!-- button type="submit" class="btn btn-primary pull-right">{{ _("Send BIS")}}</button -->
+                        <button class="btn btn-primary " onclick="send($('#recipient').val(), $('#amount').val(), '', $('#data').val());return false;">{{ _("Send BIS")}}</button>
                         <div class="clearfix"></div>
                     </div>
                 </div>
@@ -75,6 +84,7 @@
 
 </div>
 
-          </form>
+          <!-- /form -->
 
+<div id="payment_window" class="modal" tabindex="-1" role="dialog"></div>
 {% end %}
