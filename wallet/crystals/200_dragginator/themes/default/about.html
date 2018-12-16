@@ -12,15 +12,28 @@
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
-                <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{price }}, '', '')">{{_("Buy an egg for")}} {{price }} {{_("BIS")}}</button>
+                <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{price }}, '', '')">{{_("D:Buy an egg for")}} {{price }} {{_("BIS")}}</button>
             </div>
         </div>
+        
+        <div class="card card-chart">
+        <div class="card-header card-header-warning">
+            {{_("D:Dragginator News")}}
+        </div>
+        <div class="card-body">
+            
+            <p class="card-category">{% raw message %}</p>
+        </div>
+        
+    </div>
+        
+        
     </div>
 
     <div class="col-lg-6 col-md-12">
         <div class="card">
             <div class="card-header card-header-success">
-                <h4 class="card-title">{{ _("My eggs") }}</h4>
+                <h4 class="card-title">{{ _("D:My eggs") }}</h4>
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
@@ -31,32 +44,35 @@
                     {{_("You don't own any egg ;(")}}<br>
 
                     {% if eggdrop[0] == "registered" %}
-                        {{_("And you are registered to the current eggdrop")}}
+                        {{_("D:And you are registered to the current eggdrop")}}
                     {% else %}
-                        {{_("So you can register to the eggdrop!")}} <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, '', '{{eggdrop[1]}}')">{{_("Register")}}</button>
+                        {{_("D:So you can register to the eggdrop!")}} <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, '', '{{eggdrop[1]}}')">{{_("D:Register")}}</button>
                     {% end %}
 
                 {% else %}
 
-                {{_("You own")}} {{len(data)}} {{_("eggs")}}
+                {{_("D:You own")}} {{len(data)}} {{_("D:eggs")}}
 
                 <div class="card-body">
                   <div class="table-responsive">
                     <table id="egg_list" class="table table-hover">
                       <thead class="">
                         <tr>
-                        <th>{{_("DNA")}}</th>
-                        <th>{{_("Element")}}</th>
-                        <th>{{_("Species")}}</th>
+                        <th>{{_("D:DNA")}}</th>
+                        <th>{{_("D:Element")}}</th>
+                        <th>{{_("D:Species")}}</th>
 
                         </tr>
                       </thead>
                       <tbody>
                           {% for egg in data %}
+                              {% if egg["species"] in ["world cup 2018","special egg","Cup"] %}
+                                {{ egg["species"] = "D:"+egg["species"] }}
+                              {% end %}
                             <tr>
                                 <td><a href="egg/{{egg['dna']}}">{{egg["dna"]}}</a></td>
-                                <td>{{_(egg["type"] + " egg")}}</a></td>
-                                <td>{{_(egg["species"])}}</a></td>
+                                <td>{{locale.translate("D:"+egg["type"] + " egg")}}</a></td>
+                                <td>{{locale.translate(egg["species"])}}</a></td>
                             </tr>
                             {% end %}
                         </tr>

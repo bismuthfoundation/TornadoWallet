@@ -8,7 +8,7 @@
     <div class="col-lg-6 col-md-12">
         <div class="card">
             <div class="card-header card-header-info">
-                <h4 class="card-title"><i class="fa fa-dna  "></i> {{ _("DNA:") }} {{ dna }} <span class="float-right"><a target="_blank" href="https://dragginator.com/egg.php?egg={{dna}}">{{_("See on Dragginator.com")}}</a></span></h4>
+                <h4 class="card-title"><i class="fa fa-dna  "></i> {{ _("D:DNA:") }} {{ dna }} <span class="float-right"><a target="_blank" href="https://dragginator.com/egg.php?egg={{dna}}">{{_("D:See on Dragginator.com")}}</a></span></h4>
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
@@ -20,17 +20,17 @@
                             <div class="ribbon"><span>{{ data["cost"]}} {{_("BIS")}}</span></div>
                         {% end %}
                     {% if "erased" == data["other"] %}
-                            <div class="ribbonl"><span>{{_("Archive")}}</span></div>
+                            <div class="ribbonl"><span>{{_("D:Archive")}}</span></div>
                         {% end %}
                 <img src="https://dragginator.com/data/eggs/{{ dna }}/egg.png" class="img-responsive" alt="Mountain View">
 
 
                 </div>
 
-                <div class="alert alert-{{ data['color'] }}"><span>{{ data["type"] }} <span class="float-right"> {{_("Element")}}</span></span></div>
-                <div class="alert alert-primary"><span>{{ _(data["species"]) }} <span class="float-right"> {{_("Species")}}</span></span></div>
-                <div class="alert alert-primary"><span>{{ _(data["age"]) }} <span class="float-right"> {{_("Age")}}</span></span></div>
-                <div class="alert alert-primary"><span>{{ _(data["rarity"]) }} <span class="float-right"> {{_("Rarity")}}</span></span></div>
+                <div class="alert alert-{{ data['color'] }}"><span>{{ data["type"] }} <span class="float-right"> {{_("D:Element")}}</span></span></div>
+                <div class="alert alert-primary"><span>{{ _(data["species"]) }} <span class="float-right"> {{_("D:Species")}}</span></span></div>
+                <div class="alert alert-primary"><span>{{ _(data["age"]) }} <span class="float-right"> {{_("D:Age")}}</span></span></div>
+                <div class="alert alert-primary"><span>{{ _(data["rarity"]) }} <span class="float-right"> {{_("D:Rarity")}}</span></span></div>
             </div>
         </div>
     </div>
@@ -40,10 +40,10 @@
 
             {% if data['owner'] == bismuth['address'] %}
             <div class="card-header card-header-success">
-                <h4 class="card-title">{{ _("You own this egg") }}</h4>
+                <h4 class="card-title">{{ _("D:You own this egg") }}</h4>
             {% else %}
             <div class="card-header card-header-warning">
-                <h4 class="card-title">{{ _("You don't own this egg") }}</h4>
+                <h4 class="card-title">{{ _("D:You don't own this egg") }}</h4>
             {% end %}
 
 
@@ -57,15 +57,15 @@
                     <div class="col-lg-6 col-md-12">
 
                         {% if data['owner'] == bismuth['address'] %}
-                        <button class="btn btn-primary " onclick="send($('#give').val(), 0, 'dragg:transfer', '{{dna}}')">{{ _("Send this egg to...")}}</button>
+                        <button class="btn btn-primary " onclick="send($('#give').val(), 0, 'dragg:transfer', '{{dna}}')">{{ _("D:Send this egg to...")}}</button>
                         <input class="form-control" id="give" type="text" placeholder="{{_('Address')}}" />
                         <br><hr>
-                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:sell', '{{dna}}:*:'+$('#price').val())">{{ _("Sell this egg for BIS")}}</button>
-                        <input class="form-control" id="price" type="text" placeholder="{{_('Price')}}" />
+                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:sell', '{{dna}}:*:'+$('#price').val())">{{ _("D:Sell this egg for BIS")}}</button>
+                        <input class="form-control" id="price" type="text" placeholder="{{_('D:Price')}}" />
 
                         {% if "9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf" == data["seller"] %}
                         <br><hr>
-                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:unsell', '{{dna}}')">{{ _("Remove this egg from the marketplace")}}</button>
+                        <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:unsell', '{{dna}}')">{{ _("D:Remove this egg from the marketplace")}}</button>
 
                         {% end %}
 
@@ -74,7 +74,7 @@
                         {% if "9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf" == data["seller"] and data['owner'] != bismuth['address']%}
 
 
-                        <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{ data['cost']}}, 'dragg:buy', '{{ dna }}')">{{_("Buy for")}} {{ data["cost"]}} {{_("BIS")}}</button>
+                        <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{ data['cost']}}, 'dragg:buy', '{{ dna }}')">{{_("D:Buy for")}} {{ data["cost"]}} {{_("BIS")}}</button>
                         {% end %}
 
 

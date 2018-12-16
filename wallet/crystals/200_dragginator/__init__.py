@@ -54,9 +54,9 @@ class DragginatorHandler(CrystalHandler):
 
         kwargs = {}
         namespace.update(kwargs)
-
+        message = await async_get("https://dragginator.com/api/info.php?type=message", is_json=True)
         self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace), "footer": MODULES['buy'].generate(**namespace) + MODULES['table'].generate(**namespace)}
-        self.render("about.html", bismuth=self.bismuth_vars, data = data, price=price[0], eggdrop=eggdrop)
+        self.render("about.html", bismuth=self.bismuth_vars, data = data, price=price[0], eggdrop=eggdrop, message=message[0])
 
     async def egg(self, dna=[""]):
         _ = self.locale.translate
@@ -68,10 +68,10 @@ class DragginatorHandler(CrystalHandler):
 
         dic = {"Fire":"danger", "Water":"info", "Earth":"success", "Air":"air",  "???":"air"}
         data["color"] = dic[data["type"]]
-        dic = {"Fire":_("Fire egg"), "Water":_("Water egg"), "Earth":_("Earth egg"), "Air":_("Air egg"), "???": "???"}
+        dic = {"Fire":_("D:Fire egg"), "Water":_("D:Water egg"), "Earth":_("D:Earth egg"), "Air":_("D:Air egg"), "???": "???"}
         data["type"] = dic[data["type"]]
         # For registration of terms only, do not edit ever!
-        void = _("world cup 2018"),_("special egg"),_("Cup")
+        void = _("D:world cup 2018"),_("D:special egg"),_("D:Cup")
         self.render("egg.html", bismuth=self.bismuth_vars, dna=dna[0], data=data)
 
     async def get(self, command=''):
@@ -100,7 +100,9 @@ def filter_home(params):
     try:
         if 'home' in MODULES:
             namespace = params['request_handler'].get_template_namespace()
-            # namespace.update(kwargs)
+            
+            
+            
             params["content"] += MODULES['home'].generate(**namespace)
         return params
     except Exception as e:

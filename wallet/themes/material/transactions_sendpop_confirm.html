@@ -38,12 +38,9 @@
 
     <div class="row">
 
-        <div class="col-lg-6 col-md-12">
+        
             <div class="card">
-                <div class="card-header card-header-info">
-                    <h4 class="card-title"><i class="material-icons">account_circle</i> {{ _("Send To")}}</h4>
-                    <p class="card-category">{{ _("To whom send BIS.")}}</p>
-                </div>
+                
                 <div class="card-body">
                     <div class="form-group">
                         <label class="bmd-label-floating">{{ _("Recipient")}}</label>
@@ -51,34 +48,7 @@
                                value="{{ bismuth['params'].get('recipient', '') }}" disabled/>
                     </div>
                     <br/>
-                    <div class="form-group">
-                        <label class="bmd-label-floating">{{ _("Data (message)")}}</label>
-                        <input class="form-control" id="data" type="text" name="data" title="{{ bismuth['params'].get('data', '') }}"
-                               value="{{ bismuth['params'].get('data', '') }}" disabled/>
-                        <small>
-{{ _("Optionally, you can add a small comment to your transaction. Required for exchanges deposit.")}}
-                        </small>
-                    </div>
-                    <br/>
-                    <div class="form-group">
-                        <label class="bmd-label-floating">{{ _("Operation")}}</label>
-                        <input class="form-control" id="operation" type="text" name="operation"
-                               value="{{ bismuth['params'].get('operation', '') }}" disabled/>
-                        
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-lg-6 col-md-12">
-            <div class="card">
-                <div class="card-header card-header-success">
-                    <h4 class="card-title"><i class="material-icons">payment</i> {{ _("Amount")}}</h4>
-                    <p class="card-category">{{ _("How many BIS to send.")}}</p>
-                </div>
-                <div class="card-body">
+                    
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -101,10 +71,29 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <br/>
+                    <div class="form-group">
+                        <label class="bmd-label-floating">{{ _("Operation")}}</label>
+                        <input class="form-control" id="operation" type="text" name="operation"
+                               value="{{ bismuth['params'].get('operation', '') }}" disabled/>
+                        
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label class="bmd-label-floating">{{ _("Data (message)")}}</label>
+                        <input class="form-control" id="data" type="text" name="data" title="{{ bismuth['params'].get('data', '') }}"
+                               value="{{ bismuth['params'].get('data', '') }}" disabled/>
+                        <small>
+                            {{ _("Optionally, you can add a small comment to your transaction. Required for exchanges deposit.")}}
+                        </small>
+                    </div>
 
                 </div>
             </div>
-        </div>
+        
+            
+        
 
     </div>
     </form>

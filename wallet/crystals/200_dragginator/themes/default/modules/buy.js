@@ -4,6 +4,10 @@ function send(address, amount, operation, data ){
     $.get('/transactions/sendpop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation,function(page){
         $("#payment_window").html(page);
         $("#payment_window").modal("show");
+        fees = 0.01+0.00001*data.length
+        $("#fees").val(fees);
+        $("#total").val(amount + fees);
+        
         });
     }
 
