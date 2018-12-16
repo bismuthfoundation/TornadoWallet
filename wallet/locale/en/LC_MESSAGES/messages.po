@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-16 18:08+0100\n"
+"POT-Creation-Date: 2018-12-16 18:13+0100\n"
 "PO-Revision-Date: 2018-12-16 17:51+0100\n"
 "Last-Translator: toto <dev@eggpool.net>\n"
 "Language-Team: English\n"
@@ -141,7 +141,6 @@ msgid "D:See on Dragginator.com"
 msgstr "D:See on Dragginator.com"
 
 #: crystals/200_dragginator/themes/default/egg.html:20
-#: crystals/200_dragginator/themes/default/egg.html:77
 msgid "BIS"
 msgstr "BIS"
 
@@ -178,8 +177,9 @@ msgid "D:Remove this egg from the marketplace"
 msgstr "D:Remove this egg from the marketplace"
 
 #: crystals/200_dragginator/themes/default/egg.html:77
-msgid "D:Buy for"
-msgstr "D:Buy for"
+#, fuzzy
+msgid "D:Buy for {} BIS"
+msgstr "D:Buy an egg for {} BIS"
 
 #: crystals/210_eggpool/themes/default/about.html:14
 msgid "EP:Direct Link to official Dashboard"
@@ -800,3 +800,6 @@ msgstr "W.I.P."
 #: themes/material/wip.html:13
 msgid "This feature is under construction."
 msgstr "This feature is under construction."
+
+#~ msgid "D:Buy for"
+#~ msgstr "D:Buy for"

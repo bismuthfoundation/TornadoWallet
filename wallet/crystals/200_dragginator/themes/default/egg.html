@@ -74,7 +74,7 @@
                         {% if "9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf" == data["seller"] and data['owner'] != bismuth['address']%}
 
 
-                        <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{ data['cost']}}, 'dragg:buy', '{{ dna }}')">{{_("D:Buy for")}} {{ data["cost"]}} {{_("BIS")}}</button>
+                        <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{ data['cost']}}, 'dragg:buy', '{{ dna }}')">{{_("D:Buy for {} BIS").format(data["cost"])}}</button>
                         {% end %}
 
 

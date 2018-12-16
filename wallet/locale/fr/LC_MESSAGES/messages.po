@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-16 18:08+0100\n"
+"POT-Creation-Date: 2018-12-16 18:13+0100\n"
 "PO-Revision-Date: 2018-12-16 17:51+0100\n"
 "Last-Translator: toto <dev@eggpool.net>\n"
 "Language-Team: French\n"
@@ -138,7 +138,6 @@ msgid "D:See on Dragginator.com"
 msgstr ""
 
 #: crystals/200_dragginator/themes/default/egg.html:20
-#: crystals/200_dragginator/themes/default/egg.html:77
 msgid "BIS"
 msgstr ""
 
@@ -175,7 +174,7 @@ msgid "D:Remove this egg from the marketplace"
 msgstr ""
 
 #: crystals/200_dragginator/themes/default/egg.html:77
-msgid "D:Buy for"
+msgid "D:Buy for {} BIS"
 msgstr ""
 
 #: crystals/210_eggpool/themes/default/about.html:14
