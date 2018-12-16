@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-16 17:51+0100\n"
+"POT-Creation-Date: 2018-12-16 17:54+0100\n"
 "PO-Revision-Date: 2018-12-16 17:51+0100\n"
 "Last-Translator: toto <dev@eggpool.net>\n"
 "Language-Team: English\n"
@@ -97,7 +97,8 @@ msgid "D:My eggs"
 msgstr "D:My eggs"
 
 #: crystals/200_dragginator/themes/default/about.html:44
-msgid "You don't own any egg ;("
+#, fuzzy
+msgid "D:You don't own any egg ;("
 msgstr "You don't own any egg ;("
 
 #: crystals/200_dragginator/themes/default/about.html:47
