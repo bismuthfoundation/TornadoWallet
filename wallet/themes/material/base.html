@@ -88,11 +88,18 @@
                     <p>Notifications</p>
                   </a>
                 </li -->
-                <li class="nav-item  {{ handler.active_if_start('/crystals/') }} ">
+                <li class="nav-item  {{ handler.active_if_start('/crystal') }} ">
                 <a class="nav-link" href="/crystals/">
                     <i class="material-icons">brightness_high</i>
                     <p>{{_("Crystals")}}</p>
                 </a>
+                    {% if True %}
+                    <ul class="nav" style="padding-left:20px">
+                        {% for crystal in bismuth['crystals'] %}
+                        <li class="nav-item  {{ handler.active_if_start('/crystal/'+crystal) }}"><a class="nav-link" href="/crystal/{{ crystal }}/"><i class="material-icons">brightness_high</i> {{ crystal }}</a></li>
+                        {% end %}
+                    </ul>
+                    {% end %}
                 </li>
 
             </ul>

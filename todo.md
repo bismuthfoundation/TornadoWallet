@@ -2,13 +2,17 @@
 
 Failsafes
 
+- FEES: JS as well as BismuthClient: add specia lops, like alias and token!!!
+
+
+
 - proper colored logs and no verbose option
 
 - Don't show /transactions/receive/ or /transactions/receive/ if there is no loaded wallet.
 
 - breadcrumb
 
-- only listen to 127.0.0.1  app.listen() + options
+OK - only listen to 127.0.0.1  app.listen() + options
 
 - https + user login => can use over the net
 
@@ -18,7 +22,9 @@ Failsafes
 
 - bis payment requests and send : check address and amount field for validity
 
-- est. fees
+OK - est. fees
+
+OK - crystals menu
 
 - wallet server selection (link there but no route)
 
@@ -29,7 +35,7 @@ Failsafes
 - js code , data table generic
 - check balance
 
-ok - D: prefix for custom dragginator terms to translate.
+OK - D: prefix for custom dragginator terms to translate.
 
 
 - wallet version + update (auto update? => os + version)

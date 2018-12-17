@@ -19,6 +19,7 @@ MODULES = {}
 class EggpoolHandler(CrystalHandler):
 
     async def about(self, params=None):
+        _ = self.locale.translate
         url = 'https://eggpool.net/index.php?action=api&miner={}&type=detail'.format(self.bismuth_vars['address'])
         # TODO: rewrite as async with parametrized cache ttl, see dragginator crystal
         api = get_api_10(url, is_json=True)  # gets as dict, and cache for 10 min
@@ -54,13 +55,16 @@ class EggpoolHandler(CrystalHandler):
         hr_datasets = []
         i = 0
         gcolors = graph_colors_rgba()
-        for worker, data in api['workers']['detail'].items():
-            # shares_series += json.dumps(data[3])+',\n'
-            rgba = gcolors[i % len(gcolors)]
-            workers_name[worker] = rgba
-            sh_datasets.append({"label": worker, "data":data[3], "strokeColor": rgba})
-            hr_datasets.append({"label": worker, "data":data[2], "strokeColor": rgba})
-            i += 1
+        if api['round']:
+            for worker, data in api['workers']['detail'].items():
+                # shares_series += json.dumps(data[3])+',\n'
+                rgba = gcolors[i % len(gcolors)]
+                workers_name[worker] = rgba
+                sh_datasets.append({"label": worker, "data":data[3], "strokeColor": rgba})
+                hr_datasets.append({"label": worker, "data":data[2], "strokeColor": rgba})
+                i += 1
+        else:
+            workers_name[_('No data')] = gcolors[0]
 
         namespace = self.get_template_namespace()
         kwargs = {"bismuth": self.bismuth_vars, "workers_name": workers_name,

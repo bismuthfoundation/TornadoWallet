@@ -361,7 +361,6 @@ class CrystalsHandler(BaseHandler):
 
     async def list(self, params=None):
         crystals = self.application.crystals_manager.get_loaded_crystals()
-        #crystal_names = {name: name.split('_')[1] for name in crystals.keys()}
         crystal_names = [name.split('_')[1] for name in crystals.keys()]
         self.render("crystals_list.html", bismuth=self.bismuth_vars, crystals=crystal_names)
 

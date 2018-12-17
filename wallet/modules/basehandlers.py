@@ -35,6 +35,9 @@ class BaseHandler(RequestHandler):
         self.crystals = self.settings['bismuth_crystals']
         if self.bismuth_vars['address'] is None:
             self.bismuth_vars['address'] = _("No Bismuth address, please create or load a wallet first.")
+        crystals = self.application.crystals_manager.get_loaded_crystals()
+        crystal_names = [name.split('_')[1] for name in crystals.keys()]
+        self.bismuth_vars['crystals'] = crystal_names
         # self.bismuth_vars['dtlanguage'] = get_dt_language(_)
 
     def active_if(self, path: str):
