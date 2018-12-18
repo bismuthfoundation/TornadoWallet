@@ -42,6 +42,7 @@ def action_init(params=None):
 
 
 def filter_home(params):
+    # print("bismuthprice filter_home")
     if 'home' in MODULES:
         namespace = params['request_handler'].get_template_namespace()
         api = get_api_10('https://bismuth.ciperyho.eu/api/markets', is_json=True)  # gets as dict, and cache for 10 min

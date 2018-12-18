@@ -6,15 +6,17 @@ Copyright 2018, BismuthFoundation
 """
 
 
-import importlib
-import importlib.util
-import importlib.machinery
-import os
-import logging
 import collections
+import importlib
+import importlib.machinery
+import importlib.util
+import json
+import logging
 import sys
-from modules import helpers
+from os import path, listdir
 
+from modules import helpers
+import tornado.autoreload
 
 __version__ = '0.2'
 
@@ -31,7 +33,7 @@ class CrystalManager:
             logging.basicConfig(level=logging.DEBUG)
             self.app_log = logging
         if crystal_folder == '':
-            crystal_folder = os.path.join(helpers.base_path(), 'crystals')
+            crystal_folder = path.join(helpers.base_path(), 'crystals')
         self.crystal_folder = crystal_folder
         self.main_module = main_module
         self.verbose = verbose
@@ -42,14 +44,39 @@ class CrystalManager:
         if init:
             self.init()
 
+    def get_active(self):
+        """Returns a dict of crystalname, active state"""
+        state_filename = path.join(helpers.get_private_dir(), 'crystals.json')
+        states = {}
+        if not path.isfile(state_filename):
+            return states
+        try:
+            with open(state_filename, 'r') as f:
+                states = json.load(f)
+        except:
+            pass
+        return states
+
+    def _save_active(self):
+        """Saves active state in the json dict for next run"""
+        state_filename = path.join(helpers.get_private_dir(), 'crystals.json')
+        states = {name: name in self.loaded_crystals for name in self.available_crystals.keys()}
+        try:
+            with open(state_filename, 'w') as f:
+                json.dump(states, f)
+        except:
+            pass
+
+
     def init(self):
         """
         loads all available crystals and inits them.
         :return:
         """
+        actives = self.get_active()
         for crystal in self.available_crystals:
-            # TODO: only load "auto load" crystals
-            self.load_crystal(crystal)
+            if actives.get(crystal, False):
+                self.load_crystal(crystal)
         self.execute_action_hook('init', {'manager': self})
 
     def get_available_crystals(self):
@@ -58,9 +85,9 @@ class CrystalManager:
         """
         crystals = collections.OrderedDict({})
         try:
-            for possible in sorted(os.listdir(self.crystal_folder)):
-                location = os.path.join(self.crystal_folder, possible)
-                if os.path.isdir(location) and self.main_module + '.py' in os.listdir(location):
+            for possible in sorted(listdir(self.crystal_folder)):
+                location = path.join(self.crystal_folder, possible)
+                if path.isdir(location) and self.main_module + '.py' in listdir(location):
                     info = importlib.machinery.PathFinder().find_spec(self.main_module, [location])
                     crystals[possible] = {
                         'name': possible,
@@ -78,7 +105,25 @@ class CrystalManager:
         """
         return self.loaded_crystals.copy()
 
-    def load_crystal(self, crystal_name):
+    def load_crystals(self, active_dict):
+        """gets a dict of name (with priority_) , active state"""
+        for name, state in active_dict.items():
+             if state:
+                 if name not in self.loaded_crystals:
+                     self.load_crystal(name)
+                     module = self.loaded_crystals[name]['module']
+                     hook_func_name = "action_init"
+                     if hasattr(module, hook_func_name):
+                         hook_func = getattr(module, hook_func_name)
+                         hook_func()
+             else:
+                 if name in self.loaded_crystals:
+                     self.unload_crystal(name)
+        self._save_active()
+        # Don't, this breaks the current request
+        # tornado.autoreload._reload()
+
+    def load_crystal(self, crystal_name, active=False):
         """
         Loads a crystal module
         """
@@ -90,7 +135,8 @@ class CrystalManager:
                 self.loaded_crystals[crystal_name] = {
                     'name': crystal_name,
                     'info': self.available_crystals[crystal_name]['info'],
-                    'module': module
+                    'module': module,
+                    'active': active
                 }
                 if self.verbose:
                     self.app_log.info("Crystal '{}' loaded".format(crystal_name))
@@ -111,7 +157,7 @@ class CrystalManager:
         """
         try:
             if crystal_name:
-                self.unload_crystal(crystal_name)
+                self._unload_crystal(crystal_name)
             else:
                 for crystal in self.get_loaded_crystals():
                     self._unload_crystal(crystal)
@@ -163,10 +209,10 @@ class CrystalManager:
                 try:
                     module = crystal_info['module']
                     hook_func_name = "filter_{}".format(hook_name)
-                    print("looking for ", hook_func_name)
+                    # print("looking for ", hook_func_name)
                     if hasattr(module, hook_func_name):
                         hook_func = getattr(module, hook_func_name)
-                        print("hook_params", hook_params)
+                        # print(key, "hook_params", hook_params)
                         hook_params = hook_func(hook_params)
                         for nkey in hook_params_keys:
                             if nkey not in hook_params.keys():
@@ -180,7 +226,7 @@ class CrystalManager:
                 except Exception as e:
                     self.app_log.warning("Crystal '{}' exception '{}' on filter '{}'".format(key, e, hook_name))
                     exc_type, exc_obj, exc_tb = sys.exc_info()
-                    fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+                    fname = path.split(exc_tb.tb_frame.f_code.co_filename)[1]
                     print(exc_type, fname, exc_tb.tb_lineno)
 
         except Exception as e:

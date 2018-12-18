@@ -33,7 +33,7 @@ from modules.basehandlers import BaseHandler, CrystalLoader
 from modules import helpers
 from modules.crystals import CrystalManager
 
-__version__ = '0.0.71'
+__version__ = '0.0.72'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -43,10 +43,6 @@ define("theme", default='themes/material', help="theme directory, relative to th
 define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
 define("crystals", default=False, help="Load Crystals (Experimental)", type=bool)
 
-# Where the wallets and other potential private info are to be stored.
-# It's a dir under the user's own home directory.
-BISMUTH_PRIVATE_DIR = 'bismuth-private'
-
 
 class Application(tornado.web.Application):
     def __init__(self):
@@ -55,13 +51,13 @@ class Application(tornado.web.Application):
         if options.server:
             servers = [options.server]
         bismuth_client = bismuthclient.BismuthClient(verbose=options.verbose, servers_list=servers)
-        wallet_dir = bismuth_client.user_subdir(BISMUTH_PRIVATE_DIR)
+        wallet_dir = helpers.get_private_dir()
         print("Please store your wallets under '{}'".format(wallet_dir))
         bismuth_client.get_server()
         # Convert relative to absolute
         options.theme = os.path.join(helpers.base_path(), options.theme)
         static_path = os.path.join(options.theme, 'static')
-        handlers = [
+        self.default_handlers = [
             (r"/", HomeHandler),
             (r"/transactions/(.*)", TransactionsHandler),
             (r"/json/(.*)", JsonHandler),
@@ -77,6 +73,7 @@ class Application(tornado.web.Application):
         ]
         # Parse crystals dir, import and plug handlers.
         self.crystals_manager = CrystalManager(init=options.crystals)
+        handlers = self.default_handlers.copy()
         handlers.extend(self.crystals_manager.get_handlers())
         # print("handlers", handlers)
         self.crystals_manager.execute_action_hook('init')
@@ -289,7 +286,7 @@ class WalletHandler(BaseHandler):
     """Wallet related routes"""
     async def load(self, params=None):
         if not params:
-            wallet_dir = self.bismuth.user_subdir(BISMUTH_PRIVATE_DIR)
+            wallet_dir = helpers.get_private_dir()
             wallets = self.bismuth.list_wallets(wallet_dir)
             self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars, wallet_dir=wallet_dir)
         else:
@@ -310,7 +307,7 @@ class WalletHandler(BaseHandler):
         _ = self.locale.translate
         wallet = param.replace('wallet=', '')
         wallet = wallet.replace('.der', '')  # just in case the user added .der
-        wallet_dir = self.bismuth.user_subdir(BISMUTH_PRIVATE_DIR)
+        wallet_dir = helpers.get_private_dir()
         file_name = os.path.join(wallet_dir,'{}.der'.format(wallet))
         if os.path.isfile(file_name):
             self.render("message.html", type="warning", title=_("Error"), message=_("This file already exists: {}.der").format(wallet), bismuth=self.bismuth_vars)
@@ -359,16 +356,36 @@ class TokensHandler(BaseHandler):
 
 class CrystalsHandler(BaseHandler):
 
-    async def list(self, params=None):
-        crystals = self.application.crystals_manager.get_loaded_crystals()
-        crystal_names = [name.split('_')[1] for name in crystals.keys()]
-        self.render("crystals_list.html", bismuth=self.bismuth_vars, crystals=crystal_names)
+
+    async def list(self, params=None, post=False):
+        loaded_crystals = self.application.crystals_manager.get_loaded_crystals()
+        available_crystals = self.application.crystals_manager.get_available_crystals()
+        # crystal_names = [name.split('_')[1] for name in available_crystals.keys()]
+        # crystals = {name.split('_')[1]: name in loaded_crystals for name in available_crystals}
+        crystals = {name.split('_')[1]: {"active": name in loaded_crystals, "fullname":name} for name in available_crystals}
+        if post:
+            new_actives = { data['fullname']: bool(self.get_argument("active_"+data['fullname'], False)) for data in crystals.values()}
+            # print("New actives", new_actives)
+            self.application.crystals_manager.load_crystals(new_actives)
+            loaded_crystals = self.application.crystals_manager.get_loaded_crystals()
+            self.update_crystals()
+            crystals = {name.split('_')[1]: {"active": name in loaded_crystals, "fullname":name} for name in available_crystals}
+
+        # print(crystals)
+        self.render("crystals_list.html", bismuth=self.bismuth_vars, crystals=crystals)
 
     async def get(self, command=''):
         command, *params = command.split('/')
         if not command:
             command = 'list'
         await getattr(self, command)(params)
+
+    async def post(self, command=''):
+        command, *params = command.split('/')
+        if not command:
+            command = 'list'
+        await getattr(self, command)(params, post=True)
+
 
 
 class AddressHandler(BaseHandler):

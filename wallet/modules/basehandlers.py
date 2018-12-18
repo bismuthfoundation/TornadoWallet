@@ -35,10 +35,16 @@ class BaseHandler(RequestHandler):
         self.crystals = self.settings['bismuth_crystals']
         if self.bismuth_vars['address'] is None:
             self.bismuth_vars['address'] = _("No Bismuth address, please create or load a wallet first.")
+        self.update_crystals()
+        # self.bismuth_vars['dtlanguage'] = get_dt_language(_)
+
+    def update_crystals(self):
         crystals = self.application.crystals_manager.get_loaded_crystals()
         crystal_names = [name.split('_')[1] for name in crystals.keys()]
         self.bismuth_vars['crystals'] = crystal_names
-        # self.bismuth_vars['dtlanguage'] = get_dt_language(_)
+
+    def bool2str(self, a_boolean, iftrue, iffalse):
+        return iftrue if a_boolean else iffalse
 
     def active_if(self, path: str):
         """return the 'active' string if the request uri is the one in path. Used for menu css"""
@@ -120,7 +126,7 @@ class CrystalLoader(Loader):
     def resolve_path(self, name, parent_path=None):
         # print("resolve path", name, parent_path)
         my_root = self.root
-        if name in ['base.html']:
+        if name in ['base.html', 'message.html']:
             # exceptions where template is to be loaded from main theme, not crystal.
             my_root = self.fallback
         # print("resolve path root", my_root)

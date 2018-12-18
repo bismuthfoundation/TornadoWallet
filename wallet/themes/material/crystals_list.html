@@ -12,12 +12,43 @@
                 <p class="card-category">{{ _("Crystals are extra functionalities you can add to your wallet")}}</p>
             </div>
             <div class="card-body">
-                {{ _("WIP")}}
-                <ul>
-                    {% for crystal in bismuth['crystals'] %}
-                    <li><a href="/crystal/{{ crystal }}/">{{ crystal }}</a></li>
-                    {% end %}
-                </ul>
+                <form method="post" action="/crystals/">
+
+                    <table class="table">
+                        <tbody>
+                        {% for name, data in crystals.items() %}
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="active_{{ data['fullname'] }}"
+                                               value="1" {{ handler.bool2str(data['active'], 'checked', '')}}>
+                                        <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>{{ name }}</td>
+                            <td class="td-actions text-right">
+                                <!-- a href="/crystal/{{ name }}/">
+                                    <button type="button" rel="tooltip" title=""
+                                            class="btn btn-white btn-link btn-sm">
+                                        <i class="material-icons">edit</i>
+                                    </button>
+                                </a -->
+                            </td>
+                        </tr>
+                        {% end %}
+                        </tbody>
+                    </table>
+                    {% raw xsrf_form_html() %}
+                    <button type="submit" rel="tooltip" title=""
+                            class="btn btn-primary">
+                        {{ _('Apply') }}
+                    </button>
+                    <br /><small>{{ _('Once a new crystal is checked, you will have to restart the wallet to fully activate it.')}}</small>
+                </form>
             </div>
         </div>
     </div>

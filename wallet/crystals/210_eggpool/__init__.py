@@ -15,6 +15,7 @@ __version__ = '0.1b'
 DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/210_eggpool/themes/default')
 MODULES = {}
 
+ACTIVE = False
 
 class EggpoolHandler(CrystalHandler):
 
@@ -23,7 +24,7 @@ class EggpoolHandler(CrystalHandler):
         url = 'https://eggpool.net/index.php?action=api&miner={}&type=detail'.format(self.bismuth_vars['address'])
         # TODO: rewrite as async with parametrized cache ttl, see dragginator crystal
         api = get_api_10(url, is_json=True)  # gets as dict, and cache for 10 min
-        print(api)
+        print("eggpool, api", api)
         """
         # detail
         {'last_event': 1544822567, 
@@ -55,7 +56,7 @@ class EggpoolHandler(CrystalHandler):
         hr_datasets = []
         i = 0
         gcolors = graph_colors_rgba()
-        if api['round']:
+        if api['lastround']:
             for worker, data in api['workers']['detail'].items():
                 # shares_series += json.dumps(data[3])+',\n'
                 rgba = gcolors[i % len(gcolors)]
@@ -79,6 +80,9 @@ class EggpoolHandler(CrystalHandler):
         command, *params = command.split('/')
         if not command:
             command = 'about'
+        if not ACTIVE:
+            _ = self.locale.translate
+            self.message(_("Error:"), _("This crystal is activated but needs a wallet restart."),'danger')
         await getattr(self, command)(params)
 
     def get_template_path(self):
@@ -92,9 +96,17 @@ class EggpoolHandler(CrystalHandler):
 
 def action_init(params=None):
     """Load and compiles module templates"""
+    global ACTIVE
+    active = True
     modules_dir = path.join(DEFAULT_THEME_PATH, 'modules')
     for module in listdir(modules_dir):
         module_name = module.split('.')[0]
         file_name = path.join(modules_dir, module)
         with open(file_name, 'rb') as f:
             MODULES[module_name] = Template(f.read())
+
+
+def action_unload(params=None):
+    """Removes the crystal from active state"""
+    global ACTIVE
+    active = False

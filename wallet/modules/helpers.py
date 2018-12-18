@@ -3,6 +3,15 @@ from os import path
 
 import cachetools.func
 import requests
+from bismuthclient.bismuthclient import BismuthClient
+
+# Where the wallets and other potential private info are to be stored.
+# It's a dir under the user's own home directory.
+BISMUTH_PRIVATE_DIR = 'bismuth-private'
+
+
+def get_private_dir():
+    return BismuthClient.user_subdir(BISMUTH_PRIVATE_DIR)
 
 
 def graph_colors_rgba():
