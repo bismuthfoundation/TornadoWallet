@@ -97,7 +97,7 @@ class EggpoolHandler(CrystalHandler):
 def action_init(params=None):
     """Load and compiles module templates"""
     global ACTIVE
-    active = True
+    ACTIVE = True
     modules_dir = path.join(DEFAULT_THEME_PATH, 'modules')
     for module in listdir(modules_dir):
         module_name = module.split('.')[0]
@@ -109,4 +109,4 @@ def action_init(params=None):
 def action_unload(params=None):
     """Removes the crystal from active state"""
     global ACTIVE
-    active = False
+    ACTIVE = False
