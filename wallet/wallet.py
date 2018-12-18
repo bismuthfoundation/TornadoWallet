@@ -366,7 +366,16 @@ class CrystalsHandler(BaseHandler):
         if post:
             new_actives = { data['fullname']: bool(self.get_argument("active_"+data['fullname'], False)) for data in crystals.values()}
             # print("New actives", new_actives)
-            self.application.crystals_manager.load_crystals(new_actives)
+            added = self.application.crystals_manager.load_crystals(new_actives)
+            # print("wild ", self.application.wildcard_router.__dict__)
+            # print("def ", self.application.default_router.__dict__)
+            current_handlers = [rule.target.__name__.replace('Handler','').lower() for rule in self.application.wildcard_router.rules]
+            for new in added:
+                if new.split('_')[1] not in current_handlers:
+                    handler = self.application.crystals_manager.get_handler(new)
+                    self.application.add_handlers(r".*",  # match any host
+                                                  handler
+                                                  )
             loaded_crystals = self.application.crystals_manager.get_loaded_crystals()
             self.update_crystals()
             crystals = {name.split('_')[1]: {"active": name in loaded_crystals, "fullname":name} for name in available_crystals}

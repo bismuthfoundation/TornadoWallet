@@ -106,7 +106,8 @@ class CrystalManager:
         return self.loaded_crystals.copy()
 
     def load_crystals(self, active_dict):
-        """gets a dict of name (with priority_) , active state"""
+        """gets a dict of name (with priority_) , active state. returns list of newly added crystals"""
+        added = []
         for name, state in active_dict.items():
              if state:
                  if name not in self.loaded_crystals:
@@ -116,12 +117,14 @@ class CrystalManager:
                      if hasattr(module, hook_func_name):
                          hook_func = getattr(module, hook_func_name)
                          hook_func()
+                     added.append(name)
              else:
                  if name in self.loaded_crystals:
                      self.unload_crystal(name)
         self._save_active()
         # Don't, this breaks the current request
         # tornado.autoreload._reload()
+        return added
 
     def load_crystal(self, crystal_name, active=False):
         """
@@ -163,6 +166,21 @@ class CrystalManager:
                     self._unload_crystal(crystal)
         except:
             pass
+
+    def get_handler(self, key):
+        """ get a tornado handler from a single (full) name"""
+        crystal_info = self.loaded_crystals[key]
+        handlers = []
+        try:
+            module = crystal_info['module']
+            name = key.split('_')[1]
+            hook_func_name ="{}Handler".format( name.capitalize())
+            if hasattr(module, hook_func_name):
+                hook_class = getattr(module, hook_func_name)
+                handlers.append((r"/crystal/{}/(.*)".format(name), hook_class))
+        except Exception as e:
+            self.app_log.warning("Crystal '{}' exception '{}' on get_handlers".format(key, e))
+        return handlers
 
     def get_handlers(self):
         handlers = []
