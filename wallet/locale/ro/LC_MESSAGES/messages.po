@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: ro\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:201
+#: themes/material/about_credits.html:10 themes/material/base.html:212
 msgid "Credits"
 msgstr "Merite"
 
@@ -29,6 +29,8 @@ msgstr "Python, un limbaj minunat!"
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 msgstr "Arhitectura aplicației web <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
 
+#: crystals/100_bismuthprice/themes/default/about.html:23
+#: crystals/210_eggpool/themes/default/about.html:25
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "Despre"
@@ -105,31 +107,31 @@ msgstr "servere"
 msgid "Refresh from API"
 msgstr "Reîmprospătare din API"
 
-#: themes/material/base.html:34
+#: themes/material/base.html:42
 msgid "Bismuth Wallet"
 msgstr "Portofel Bismuth"
 
-#: themes/material/base.html:42
+#: themes/material/base.html:50
 msgid "Dashboard"
 msgstr "Panou de comandă"
 
-#: themes/material/base.html:48
+#: themes/material/base.html:56
 msgid "Transactions"
 msgstr "Tranzacții"
 
-#: themes/material/base.html:54
+#: themes/material/base.html:62
 msgid "Address book"
 msgstr "Agendă"
 
-#: themes/material/base.html:61 themes/material/tokens_list.html:10
+#: themes/material/base.html:69 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokeni"
 
-#: themes/material/base.html:67
+#: themes/material/base.html:75
 msgid "Messages"
 msgstr "Mesaje"
 
-#: themes/material/base.html:74
+#: themes/material/base.html:82
 msgid "Network"
 msgstr "Rețea"
 
@@ -137,35 +139,35 @@ msgstr "Rețea"
 msgid "Cristals"
 msgstr "Cristale"
 
-#: themes/material/base.html:102
+#: themes/material/base.html:110
 msgid "Toggle navigation"
 msgstr "Comutare navigație"
 
-#: themes/material/base.html:181
+#: themes/material/base.html:192
 msgid "Source"
 msgstr "Sursă"
 
-#: themes/material/base.html:186
+#: themes/material/base.html:197
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:191
+#: themes/material/base.html:202
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:196
+#: themes/material/base.html:207
 msgid "Donate"
 msgstr "Donează"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:218
 msgid "block #"
 msgstr "block #"
 
-#: themes/material/base.html:227
+#: themes/material/base.html:238
 msgid "Sidebar Filters"
 msgstr "Filtre Bară Laterală"
 
-#: themes/material/base.html:240
+#: themes/material/base.html:251
 msgid "Images"
 msgstr "Imagini"
 
@@ -173,7 +175,8 @@ msgstr "Imagini"
 msgid "Cristals are extra functionalities you can add to your wallet"
 msgstr "Cristalele sunt funcții extra pe care le poți adăuga la portofel"
 
-#: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
+#: crystals/100_bismuthprice/themes/default/about.html:15
+#: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "În lucru"
 
@@ -198,7 +201,7 @@ msgstr "Primește"
 msgid "Request a $BIS payment"
 msgstr "Cere o plată în $BIS"
 
-#: themes/material/home.html:74
+#: themes/material/home.html:74 themes/material/transactions.html:73
 msgid "Latest transactions"
 msgstr "Ultimele tranzacții"
 
@@ -217,7 +220,7 @@ msgstr "Adresă"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:42
+#: themes/material/transactions_send.html:50
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Sumă"
@@ -226,27 +229,27 @@ msgstr "Sumă"
 msgid "Type"
 msgstr "Tipul"
 
-#: themes/material/home.html:128
+#: themes/material/home.html:150
 msgid "Bismuth news"
 msgstr "Știri Bismuth"
 
-#: themes/material/home.html:149
+#: crystals/100_bismuthprice/themes/default/modules/home.html:28
 msgid "Bismuth vs USD"
 msgstr "Bismuth vs USD"
 
-#: themes/material/home.html:155
+#: crystals/100_bismuthprice/themes/default/modules/home.html:33
 msgid "This is a mockup with fake data"
 msgstr "Aceasta este o mostră cu date false"
 
-#: themes/material/home.html:169
+#: themes/material/home.html:136
 msgid "Account balance"
 msgstr "Balanța contului"
 
-#: themes/material/home.html:170
+#: themes/material/home.html:137
 msgid "Last 12 months"
 msgstr "Ultimele 12 luni"
 
-#: themes/material/home.html:174
+#: themes/material/home.html:141
 msgid "Mockup with fake data"
 msgstr "Mostră cu date false"
 
@@ -272,44 +275,51 @@ msgstr "Cui îi trimiți BIS."
 
 #: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
+#: themes/material/transactions_sendpop_confirm.html:29
 msgid "Recipient"
 msgstr "Destinatar"
 
 #: themes/material/transactions_receive.html:27
 #: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:39
+#: themes/material/transactions_sendpop_confirm.html:67
 msgid "Data (message)"
 msgstr "Date (mesaj)"
 
 #: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
+#: themes/material/transactions_sendpop_confirm.html:72
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Opțional, puteți adăuga un mic comentariu la tranzacție. Necesar la depunerea pe exchange-uri."
 
-#: themes/material/transactions_send.html:43
+#: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "Câti BIS trimiți."
 
 #: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:49
+#: themes/material/transactions_send.html:57
 #: themes/material/transactions_send_confirm.html:62
+#: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
 msgstr "Suma (BIS)"
 
 #: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:56
+#: themes/material/transactions_send.html:64
 #: themes/material/transactions_send_confirm.html:70
+#: themes/material/transactions_sendpop_confirm.html:46
 msgid "Est. fees"
 msgstr "~ Comision"
 
 #: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:61
+#: themes/material/transactions_send.html:69
 #: themes/material/transactions_send_confirm.html:75
+#: themes/material/transactions_sendpop_confirm.html:51
 msgid "Total (BIS)"
 msgstr "Total (BIS)"
 
-#: themes/material/transactions_send.html:67 wallet.py:161
+#: main.py:133 main.py:161 themes/material/transactions_send.html:75
+#: themes/material/transactions_send.html:76 wallet.py:134 wallet.py:162
 msgid "Send BIS"
 msgstr "Trimite (BIS)"
 
@@ -353,19 +363,20 @@ msgstr "În lucru"
 msgid "This feature is under construction."
 msgstr "Această funcție este în lucru."
 
-#: wallet.py:220
+#: main.py:243 wallet.py:244
 msgid "Transaction list"
 msgstr "Listă tranzacții"
 
-#: wallet.py:291 wallet.py:300
+#: main.py:203 main.py:315 main.py:324 wallet.py:204 wallet.py:316
+#: wallet.py:325
 msgid "Error"
 msgstr "Eroare"
 
-#: wallet.py:291
+#: main.py:315 wallet.py:316
 msgid "This file already exists: {}.der"
 msgstr "Acest fișier există deja: {}. der"
 
-#: wallet.py:300
+#: main.py:324 wallet.py:325
 msgid "Error creating {}.der"
 msgstr "Eroare la crearea {}. der"
 
@@ -410,8 +421,9 @@ msgid "This is what you will receive"
 msgstr "Asta vei primi"
 
 #: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:58
+#: themes/material/transactions_send.html:66
 #: themes/material/transactions_send_confirm.html:72
+#: themes/material/transactions_sendpop_confirm.html:48
 msgid "Fees depend on Data length"
 msgstr "Comisionul depinde de mărimea datelor"
 
@@ -431,14 +443,16 @@ msgstr "Acesta este codul QR pentru adresa dvs., datele și suma ca un URL BIS"
 msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "Puteți copia/lipi această imagine pentru a trimite într-un e-mail sau în altă parte"
 
-#: themes/material/transactions_send.html:51
+#: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:65
+#: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
 msgstr "Aceasta este ceea ce destinatarul va primi\n"
 ""
 
-#: themes/material/transactions_send.html:63
+#: themes/material/transactions_send.html:71
 #: themes/material/transactions_send_confirm.html:77
+#: themes/material/transactions_sendpop_confirm.html:53
 msgid "This is what you will pay, fees included."
 msgstr "Asta este ceea ce vei plăti, comision inclus.\n"
 ""
@@ -452,26 +466,28 @@ msgid "Translations"
 msgstr "Traduceri"
 
 #: themes/material/transactions_send_confirm.html:100
+#: themes/material/transactions_sendpop_confirm.html:87
 msgid "Cancel"
 msgstr "Anulează"
 
 #: themes/material/transactions_send_confirm.html:105
+#: themes/material/transactions_sendpop_confirm.html:93
 msgid "Confirm and send BIS"
 msgstr "Confirmă și trimite BIS"
 
-#: wallet.py:172
+#: main.py:144 main.py:172 wallet.py:145 wallet.py:173
 msgid "Send BIS: Confirmation"
 msgstr "Trimite BIS: Confirmă"
 
-#: wallet.py:174
+#: main.py:146 main.py:174 wallet.py:147 wallet.py:175
 msgid "Please confirm this transaction"
 msgstr "Te rugăm să confirmi această tranzacție"
 
-#: wallet.py:175
+#: main.py:147 main.py:175 wallet.py:148 wallet.py:176
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Verifică dacă asta intenționezi să faci și apasă butonul \"confirmă"
 
-#: wallet.py:204
+#: main.py:227 wallet.py:228
 msgid "Receive BIS"
 msgstr "Primește BIS"
 
@@ -488,7 +504,7 @@ msgstr "Mulțumiri traducătorilor și corectorilor noștri\n"
 msgid "Wallet server version {}"
 msgstr "Versiune server portofel"
 
-#: themes/material/base.html:148
+#: themes/material/base.html:157
 msgid "Wallet"
 msgstr "Portofel"
 
@@ -504,43 +520,326 @@ msgstr "Portofelele tale Bismuth"
 msgid "Your wallets directory is {}"
 msgstr "Folderul portofelelor este {}"
 
-#: wallet.py:164 wallet.py:168 wallet.py:198
+#: main.py:136 main.py:140 main.py:164 main.py:168 main.py:182 main.py:221
+#: wallet.py:137 wallet.py:141 wallet.py:165 wallet.py:169 wallet.py:183
+#: wallet.py:222
 msgid "Error:"
 msgstr "Eroare:"
 
-#: wallet.py:164
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
 msgid "Load your wallet first"
 msgstr "Încarcă mai întâi portofelul"
 
-#: wallet.py:164
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
 msgid "No Wallet"
 msgstr "Fără Portofel"
 
-#: wallet.py:168
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
 msgid "Encrypted wallet"
 msgstr "Portofel cryptat"
 
-#: wallet.py:168
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
 msgid "You have to unlock your wallet first"
 msgstr "Trebuie să deblochezi portofelul mai întâi"
 
-#: wallet.py:193
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
 msgid "Success:"
 msgstr "Succes:"
 
-#: wallet.py:193
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
 msgid "Transaction sent"
 msgstr "Tranzacție trimisă"
 
-#: wallet.py:194
+#: main.py:194 main.py:217 wallet.py:195 wallet.py:218
 msgid "The transaction was submitted to the mempool."
 msgstr "Tranzacția a fost inclusă în mempool."
 
-#: wallet.py:196
+#: main.py:196 main.py:219 wallet.py:197 wallet.py:220
 msgid "Txid is {}"
 msgstr "Txid-ul este {}"
 
-#: wallet.py:198
+#: main.py:201 main.py:221 wallet.py:202 wallet.py:222
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "S-a produs o eroare la trimiterea în mempool, tranzacția nu a fost trimisă."
+
+#: crystals/200_dragginator/themes/default/about.html:89
+#: modules/basehandlers.py:37
+msgid "No Bismuth address, please create or load a wallet first."
+msgstr "Nu există adresă Bismuth, vă rugăm să creați sau încărcați un portofel mai întâi.\n"
+""
+
+#: themes/material/base.html:94 themes/material/crystals_list.html:11
+msgid "Crystals"
+msgstr "Crystals"
+
+#: themes/material/base.html:119
+msgid "Search..."
+msgstr "Căutare..."
+
+#: themes/material/crystals_list.html:12
+msgid "Crystals are extra functionalities you can add to your wallet"
+msgstr "Crystals sunt funcționalități suplimentare ce le puteți adăuga la portofel"
+
+#: crystals/100_bismuthprice/themes/default/about.html:11
+#: crystals/100_bismuthprice/themes/default/modules/home.html:16
+msgid "Crystal"
+msgstr "Crystal"
+
+#: crystals/100_bismuthprice/themes/default/about.html:28
+#: crystals/210_eggpool/themes/default/about.html:29
+msgid "Version"
+msgstr "Versiune"
+
+#: crystals/100_bismuthprice/themes/default/modules/home.html:4
+msgid "Current Bismuth Prices"
+msgstr "Prețul actual Bismuth"
+
+#: crystals/200_dragginator/themes/default/egg.html:20
+msgid "BIS"
+msgstr "BIS"
+
+#: main.py:198 wallet.py:199
+msgid "Success"
+msgstr "Succes"
+
+#: themes/material/transactions_confirmpop.html:10
+msgid "Confirm Transaction"
+msgstr "Confirmă tranzacția"
+
+#: themes/material/transactions_send.html:34
+#: themes/material/transactions_sendpop_confirm.html:60
+msgid "Operation"
+msgstr "Operațiune"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/layout_old.html:29
+msgid "Navigation"
+msgstr "Navigare"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:11
+msgid "Search"
+msgstr "Căutare"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:33
+msgid "Search Results"
+msgstr "Rezultatul căutării"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Air egg"
+msgstr "Ou de aer"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Earth egg"
+msgstr "Ou de pamant"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Fire egg"
+msgstr "Ou de foc"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Water egg"
+msgstr "Ou de apa"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:Cup"
+msgstr "Cupă"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:special egg"
+msgstr "Ou special"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:world cup 2018"
+msgstr "Cupa Mondială 2018 "
+
+#: crystals/200_dragginator/themes/default/about.html:21
+msgid "D:Dragginator News"
+msgstr "Știri Dragginator"
+
+#: crystals/200_dragginator/themes/default/about.html:36
+msgid "D:My eggs"
+msgstr "Ouăle mele"
+
+#: crystals/200_dragginator/themes/default/about.html:47
+msgid "D:And you are registered to the current eggdrop"
+msgstr "Acum sunteți înregistrat la eggdrop-ul curent\n"
+""
+
+#: crystals/200_dragginator/themes/default/about.html:49
+msgid "D:Register"
+msgstr "Înregistrare"
+
+#: crystals/200_dragginator/themes/default/about.html:49
+msgid "D:So you can register to the eggdrop!"
+msgstr "Ca să te poți înregistra la eggdrop!"
+
+#: crystals/200_dragginator/themes/default/about.html:61
+msgid "D:DNA"
+msgstr "ADN"
+
+#: crystals/200_dragginator/themes/default/about.html:62
+#: crystals/200_dragginator/themes/default/egg.html:30
+msgid "D:Element"
+msgstr "Element"
+
+#: crystals/200_dragginator/themes/default/about.html:63
+#: crystals/200_dragginator/themes/default/egg.html:31
+msgid "D:Species"
+msgstr "Specie"
+
+#: crystals/200_dragginator/themes/default/egg.html:11
+msgid "D:DNA:"
+msgstr "ADN"
+
+#: crystals/200_dragginator/themes/default/egg.html:11
+msgid "D:See on Dragginator.com"
+msgstr "Vezi pe Dragginator.com"
+
+#: crystals/200_dragginator/themes/default/egg.html:23
+msgid "D:Archive"
+msgstr "Arhivă"
+
+#: crystals/200_dragginator/themes/default/egg.html:32
+msgid "D:Age"
+msgstr "Vârstă"
+
+#: crystals/200_dragginator/themes/default/egg.html:33
+msgid "D:Rarity"
+msgstr "Raritate"
+
+#: crystals/200_dragginator/themes/default/egg.html:43
+msgid "D:You own this egg"
+msgstr "Deții acest ou"
+
+#: crystals/200_dragginator/themes/default/egg.html:46
+msgid "D:You don't own this egg"
+msgstr "Nu deții acest ou"
+
+#: crystals/200_dragginator/themes/default/egg.html:60
+msgid "D:Send this egg to..."
+msgstr "Trimite acest ou la..."
+
+#: crystals/200_dragginator/themes/default/egg.html:63
+msgid "D:Sell this egg for BIS"
+msgstr "Vinde acest ou pentru BIS"
+
+#: crystals/200_dragginator/themes/default/egg.html:69
+msgid "D:Remove this egg from the marketplace"
+msgstr "Eliminați acest ou de pe piață"
+
+#: crystals/210_eggpool/themes/default/about.html:14
+msgid "EP:Direct Link to official Dashboard"
+msgstr "Link direct către panoul oficial"
+
+#: crystals/210_eggpool/themes/default/about.html:15
+msgid "EP:Get last GPU miner"
+msgstr "Descarcă cel mai nou miner GPU"
+
+#: crystals/210_eggpool/themes/default/about.html:16
+msgid "Join the Official Bismuth Discord for support"
+msgstr "Alătură-te canalului oficial de Discord pentru suport"
+
+#: crystals/210_eggpool/themes/default/about.html:48
+msgid "EP:Hash Rate"
+msgstr "Rată Hash"
+
+#: crystals/210_eggpool/themes/default/about.html:49
+#: crystals/210_eggpool/themes/default/about.html:64
+msgid "EP:Last 12 hours"
+msgstr "Ultimele 12 ore"
+
+#: crystals/210_eggpool/themes/default/about.html:63
+msgid "EP:Shares"
+msgstr "Cote"
+
+#: crystals/210_eggpool/themes/default/about.html:73
+msgid "EP:Workers"
+msgstr "Muncitori"
+
+#: modules/i18n.py:11
+msgid "DT:Processing..."
+msgstr "Procesează..."
+
+#: modules/i18n.py:12
+msgid "DT:Search&nbsp;..."
+msgstr "Caută&nbsp"
+
+#: modules/i18n.py:13
+msgid "DT:Display _MENU_ elements"
+msgstr "Arată elementele _MENU_ "
+
+#: modules/i18n.py:14
+msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
+msgstr "Arată elementele de la _START_ până la _END_ din elementele _TOTAL_"
+
+#: modules/i18n.py:15 modules/i18n.py:19
+msgid "DT:Nothing to display"
+msgstr "Nimic de afișat"
+
+#: modules/i18n.py:16
+msgid "DT:filtered from _MAX_ total elements"
+msgstr "filtrat din totalul elementelor _MAX_"
+
+#: modules/i18n.py:18
+msgid "DT:Loading..."
+msgstr "Încarcă..."
+
+#: modules/i18n.py:20
+msgid "DT:No data in the table"
+msgstr "Nu exista date"
+
+#: modules/i18n.py:22
+msgid "DT:First"
+msgstr "Primul"
+
+#: modules/i18n.py:23
+msgid "DT:Previous"
+msgstr "Anterior"
+
+#: modules/i18n.py:24
+msgid "DT:Next"
+msgstr "Următorul"
+
+#: modules/i18n.py:25
+msgid "DT:Last"
+msgstr "Ultimul"
+
+#: modules/i18n.py:28
+msgid "DT:Sort by ascending order"
+msgstr "Sortează ascendent"
+
+#: modules/i18n.py:29
+msgid "DT:Sort by descending order"
+msgstr "Sortează descendent"
+
+#: crystals/200_dragginator/themes/default/about.html:44
+msgid "D:You don't own any egg ;("
+msgstr "Nu deții nici un ou ;("
+
+#: crystals/200_dragginator/themes/default/about.html:15
+msgid "D:Buy an egg for {} BIS"
+msgstr "Cumpără un ou cu {} BIS"
+
+#: crystals/200_dragginator/themes/default/about.html:54
+msgid "D:You own {} eggs"
+msgstr "Deții {} ouă"
+
+#: crystals/200_dragginator/themes/default/egg.html:78
+msgid "D:Buy for {} BIS"
+msgstr "Cumpară cu {} BIS"
+
+#: crystals/200_dragginator/themes/default/egg.html:65
+msgid "D:Price"
+msgstr "Preț"
+
+#: themes/material/transactions_confirmpop.html:7
+msgid "Transaction Status"
+msgstr "Status tranzacție"
+
+#: themes/material/transactions_confirmpop.html:23
+msgid "OK"
+msgstr "OK"
+
+#: themes/material/transactions_send.html:36
+msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
+msgstr "\"operation\" se foloseste pentru puternicele caracteristici Bismuth. Lasă gol dacă nu ți s-a cerut."
 
