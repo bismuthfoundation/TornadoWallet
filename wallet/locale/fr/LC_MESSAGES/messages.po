@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: fr\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:210
+#: themes/material/about_credits.html:10 themes/material/base.html:212
 msgid "Credits"
 msgstr "Remerciements"
 
@@ -141,31 +141,31 @@ msgstr "Crystals"
 msgid "Toggle navigation"
 msgstr "Basculer Navigation"
 
-#: themes/material/base.html:190
+#: themes/material/base.html:192
 msgid "Source"
 msgstr "Source"
 
-#: themes/material/base.html:195
+#: themes/material/base.html:197
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:200
+#: themes/material/base.html:202
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:205
+#: themes/material/base.html:207
 msgid "Donate"
 msgstr "Faire un don"
 
-#: themes/material/base.html:216
+#: themes/material/base.html:218
 msgid "block #"
 msgstr "bloc N°"
 
-#: themes/material/base.html:236
+#: themes/material/base.html:238
 msgid "Sidebar Filters"
 msgstr "Filtres barre latérale"
 
-#: themes/material/base.html:249
+#: themes/material/base.html:251
 msgid "Images"
 msgstr "Images"
 
@@ -218,7 +218,7 @@ msgstr "Adresse"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:42
+#: themes/material/transactions_send.html:50
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Montant"
@@ -273,52 +273,52 @@ msgstr "À qui envoyer des BIS."
 
 #: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
-#: themes/material/transactions_sendpop_confirm.html:46
+#: themes/material/transactions_sendpop_confirm.html:29
 msgid "Recipient"
 msgstr "Destinataire"
 
 #: themes/material/transactions_receive.html:27
 #: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:39
-#: themes/material/transactions_sendpop_confirm.html:84
+#: themes/material/transactions_sendpop_confirm.html:67
 msgid "Data (message)"
 msgstr "Données (message)"
 
 #: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
-#: themes/material/transactions_sendpop_confirm.html:88
+#: themes/material/transactions_sendpop_confirm.html:72
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Option: Vous pouvez ajouter un court commentaire à votre transaction.\n"
 "Ce champ est indispensable pour déposer sur les bourses d'échange."
 
-#: themes/material/transactions_send.html:43
+#: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "Combien de BIS envoyer."
 
 #: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:49
+#: themes/material/transactions_send.html:57
 #: themes/material/transactions_send_confirm.html:62
-#: themes/material/transactions_sendpop_confirm.html:55
+#: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
 msgstr "Montant (BIS)"
 
 #: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:56
+#: themes/material/transactions_send.html:64
 #: themes/material/transactions_send_confirm.html:70
-#: themes/material/transactions_sendpop_confirm.html:63
+#: themes/material/transactions_sendpop_confirm.html:46
 msgid "Est. fees"
 msgstr "Frais estimés"
 
 #: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:61
+#: themes/material/transactions_send.html:69
 #: themes/material/transactions_send_confirm.html:75
-#: themes/material/transactions_sendpop_confirm.html:68
+#: themes/material/transactions_sendpop_confirm.html:51
 msgid "Total (BIS)"
 msgstr "Total (BIS)"
 
-#: main.py:133 main.py:161 themes/material/transactions_send.html:67
-#: wallet.py:134 wallet.py:162
+#: main.py:133 main.py:161 themes/material/transactions_send.html:75
+#: themes/material/transactions_send.html:76 wallet.py:134 wallet.py:162
 msgid "Send BIS"
 msgstr "Envoyer BIS"
 
@@ -430,9 +430,9 @@ msgid "This is what you will receive"
 msgstr "Ceci est le montant que vous recevrez"
 
 #: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:58
+#: themes/material/transactions_send.html:66
 #: themes/material/transactions_send_confirm.html:72
-#: themes/material/transactions_sendpop_confirm.html:65
+#: themes/material/transactions_sendpop_confirm.html:48
 msgid "Fees depend on Data length"
 msgstr "Les frais dépendent de la taille du champ \"données\" (data)"
 
@@ -452,15 +452,15 @@ msgstr "Ceci est le QR code pour votre addresse, données et montant en tant que
 msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "Vous pouvez copier/coller cette image pour l'envoyer par courriel ou d'une autre manière"
 
-#: themes/material/transactions_send.html:51
+#: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:65
-#: themes/material/transactions_sendpop_confirm.html:58
+#: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
 msgstr "Voici ce que le destinataire va recevoir"
 
-#: themes/material/transactions_send.html:63
+#: themes/material/transactions_send.html:71
 #: themes/material/transactions_send_confirm.html:77
-#: themes/material/transactions_sendpop_confirm.html:70
+#: themes/material/transactions_sendpop_confirm.html:53
 msgid "This is what you will pay, fees included."
 msgstr "Voici ce que vous allez payer, frais inclus."
 
@@ -473,12 +473,12 @@ msgid "Translations"
 msgstr "Traductions"
 
 #: themes/material/transactions_send_confirm.html:100
-#: themes/material/transactions_sendpop_confirm.html:112
+#: themes/material/transactions_sendpop_confirm.html:87
 msgid "Cancel"
 msgstr "Annuler"
 
 #: themes/material/transactions_send_confirm.html:105
-#: themes/material/transactions_sendpop_confirm.html:117
+#: themes/material/transactions_sendpop_confirm.html:93
 msgid "Confirm and send BIS"
 msgstr "Confirmer et envoyer les BIS"
 
@@ -616,12 +616,12 @@ msgid "Success"
 msgstr "Succès"
 
 #: themes/material/transactions_confirmpop.html:10
-#: themes/material/transactions_sendpop_confirm.html:11
 msgid "Confirm Transaction"
 msgstr "Confirmer la transaction"
 
 #. This is the "operation" field for a transaction.
-#: themes/material/transactions_sendpop_confirm.html:77
+#: themes/material/transactions_send.html:34
+#: themes/material/transactions_sendpop_confirm.html:60
 msgid "Operation"
 msgstr "Operation"
 
@@ -654,15 +654,15 @@ msgstr "Oeuf 'Feu'"
 msgid "D:Water egg"
 msgstr "Oeuf 'Eau'"
 
-#: crystals/200_dragginator/__init__.py:76
+#: crystals/200_dragginator/__init__.py:77
 msgid "D:Cup"
 msgstr "Coupe"
 
-#: crystals/200_dragginator/__init__.py:76
+#: crystals/200_dragginator/__init__.py:77
 msgid "D:special egg"
 msgstr "Oeuf spécial"
 
-#: crystals/200_dragginator/__init__.py:76
+#: crystals/200_dragginator/__init__.py:77
 msgid "D:world cup 2018"
 msgstr "Coupe du monde 2018"
 
@@ -737,7 +737,7 @@ msgstr "Envoyer cet oeuf à ..."
 msgid "D:Sell this egg for BIS"
 msgstr "Vendre cet oeuf contre des BIS"
 
-#: crystals/200_dragginator/themes/default/egg.html:68
+#: crystals/200_dragginator/themes/default/egg.html:69
 msgid "D:Remove this egg from the marketplace"
 msgstr "Retirer cet oeuf de la vente"
 
@@ -779,8 +779,9 @@ msgid "DT:Search&nbsp;..."
 msgstr "Chercher&nbsp;..."
 
 #: modules/i18n.py:13
-msgid "DT:Display __MENU__ elements"
-msgstr "Afficher __MENU__ éléments"
+#, fuzzy
+msgid "DT:Display _MENU_ elements"
+msgstr "Afficher _MENU_ éléments"
 
 #: modules/i18n.py:14
 msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
@@ -838,7 +839,23 @@ msgstr "Acheter un oeuf pour {} BIS"
 msgid "D:You own {} eggs"
 msgstr "Vous êtes propriétaire de {} oeufs"
 
-#: crystals/200_dragginator/themes/default/egg.html:77
+#: crystals/200_dragginator/themes/default/egg.html:78
 msgid "D:Buy for {} BIS"
 msgstr "Acheter pour {} BIS"
+
+#: crystals/200_dragginator/themes/default/egg.html:65
+msgid "D:Price"
+msgstr "Prix"
+
+#: themes/material/transactions_confirmpop.html:7
+msgid "Transaction Status"
+msgstr "Etat de la transaction"
+
+#: themes/material/transactions_confirmpop.html:23
+msgid "OK"
+msgstr "OK"
+
+#: themes/material/transactions_send.html:36
+msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
+msgstr "\"Opération\" met en oeuvre des fonctions puissantes. Laissez vide à moins d'avoir un besoin explicite."
 
