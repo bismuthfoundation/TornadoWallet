@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: cs\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:201
+#: themes/material/about_credits.html:10 themes/material/base.html:212
 msgid "Credits"
 msgstr "Autoři"
 
@@ -28,6 +28,8 @@ msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"
 msgstr "\n"
 " The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> síťový aplikační framework"
 
+#: crystals/100_bismuthprice/themes/default/about.html:23
+#: crystals/210_eggpool/themes/default/about.html:25
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "Podrobnosti"
@@ -104,31 +106,31 @@ msgstr "servery"
 msgid "Refresh from API"
 msgstr "Obnovit z API"
 
-#: themes/material/base.html:34
+#: themes/material/base.html:42
 msgid "Bismuth Wallet"
 msgstr "Peněženka Bismuthu"
 
-#: themes/material/base.html:42
+#: themes/material/base.html:50
 msgid "Dashboard"
 msgstr "Nástěnka"
 
-#: themes/material/base.html:48
+#: themes/material/base.html:56
 msgid "Transactions"
-msgstr "Transakce"
+msgstr "Pokyny"
 
-#: themes/material/base.html:54
+#: themes/material/base.html:62
 msgid "Address book"
 msgstr "Seznam adres"
 
-#: themes/material/base.html:61 themes/material/tokens_list.html:10
+#: themes/material/base.html:69 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokeny"
 
-#: themes/material/base.html:67
+#: themes/material/base.html:75
 msgid "Messages"
 msgstr "Zprávy"
 
-#: themes/material/base.html:74
+#: themes/material/base.html:82
 msgid "Network"
 msgstr "Síť"
 
@@ -136,35 +138,35 @@ msgstr "Síť"
 msgid "Cristals"
 msgstr "Krystaly"
 
-#: themes/material/base.html:102
+#: themes/material/base.html:110
 msgid "Toggle navigation"
 msgstr "Přepnout procházení"
 
-#: themes/material/base.html:181
+#: themes/material/base.html:192
 msgid "Source"
 msgstr "Zdroj"
 
-#: themes/material/base.html:186
+#: themes/material/base.html:197
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:191
+#: themes/material/base.html:202
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:196
+#: themes/material/base.html:207
 msgid "Donate"
 msgstr "Přispějte"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:218
 msgid "block #"
 msgstr "č. bloku"
 
-#: themes/material/base.html:227
+#: themes/material/base.html:238
 msgid "Sidebar Filters"
 msgstr "Filtry postranních panelů"
 
-#: themes/material/base.html:240
+#: themes/material/base.html:251
 msgid "Images"
 msgstr "Obrázky"
 
@@ -172,7 +174,8 @@ msgstr "Obrázky"
 msgid "Cristals are extra functionalities you can add to your wallet"
 msgstr "Do peněženky si můžete přidat krystaly a tak ji rozšířit"
 
-#: themes/material/cristals_list.html:14 themes/material/tokens_list.html:14
+#: crystals/100_bismuthprice/themes/default/about.html:15
+#: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "Ve vývoji"
 
@@ -197,9 +200,9 @@ msgstr "Přijmout"
 msgid "Request a $BIS payment"
 msgstr "Požadovat platbu v $BIS"
 
-#: themes/material/home.html:74
+#: themes/material/home.html:74 themes/material/transactions.html:73
 msgid "Latest transactions"
-msgstr "Poslední transakce"
+msgstr "Poslední pokyny"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 msgid "Updated on"
@@ -216,7 +219,7 @@ msgstr "Adresa"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:42
+#: themes/material/transactions_send.html:50
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Částka"
@@ -225,27 +228,27 @@ msgstr "Částka"
 msgid "Type"
 msgstr "Druh"
 
-#: themes/material/home.html:128
+#: themes/material/home.html:150
 msgid "Bismuth news"
 msgstr "Novinky o Bismuthu"
 
-#: themes/material/home.html:149
+#: crystals/100_bismuthprice/themes/default/modules/home.html:28
 msgid "Bismuth vs USD"
 msgstr "Bismuth v USD"
 
-#: themes/material/home.html:155
+#: crystals/100_bismuthprice/themes/default/modules/home.html:33
 msgid "This is a mockup with fake data"
 msgstr "Toto je maketa s falešnými daty"
 
-#: themes/material/home.html:169
+#: themes/material/home.html:136
 msgid "Account balance"
 msgstr "Zůstatek účtu"
 
-#: themes/material/home.html:170
+#: themes/material/home.html:137
 msgid "Last 12 months"
 msgstr "Posledních 12 měsícu"
 
-#: themes/material/home.html:174
+#: themes/material/home.html:141
 msgid "Mockup with fake data"
 msgstr "Maketa s falešnými daty"
 
@@ -270,44 +273,51 @@ msgstr "Komu odeslat BIS"
 
 #: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
+#: themes/material/transactions_sendpop_confirm.html:29
 msgid "Recipient"
 msgstr "Příjemce"
 
 #: themes/material/transactions_receive.html:27
 #: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:39
+#: themes/material/transactions_sendpop_confirm.html:67
 msgid "Data (message)"
 msgstr "Data (zpráva)"
 
 #: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
+#: themes/material/transactions_sendpop_confirm.html:72
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "Ke své transakci můžete přidat krátkou zprávu. Vyžadováno při odesílání do směnáren."
+msgstr "Ke svému pokynu můžete přidat krátkou zprávu. Vyžadováno při odesílání do směnáren."
 
-#: themes/material/transactions_send.html:43
+#: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "Kolik BIS odeslat."
 
 #: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:49
+#: themes/material/transactions_send.html:57
 #: themes/material/transactions_send_confirm.html:62
+#: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
 msgstr "Částka (BIS)"
 
 #: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:56
+#: themes/material/transactions_send.html:64
 #: themes/material/transactions_send_confirm.html:70
+#: themes/material/transactions_sendpop_confirm.html:46
 msgid "Est. fees"
 msgstr "Přibližné poplatky"
 
 #: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:61
+#: themes/material/transactions_send.html:69
 #: themes/material/transactions_send_confirm.html:75
+#: themes/material/transactions_sendpop_confirm.html:51
 msgid "Total (BIS)"
 msgstr "Celkem (BIS)"
 
-#: themes/material/transactions_send.html:67 wallet.py:161
+#: main.py:133 main.py:161 themes/material/transactions_send.html:75
+#: themes/material/transactions_send.html:76 wallet.py:134 wallet.py:162
 msgid "Send BIS"
 msgstr "Odeslat BIS"
 
@@ -352,19 +362,20 @@ msgstr "Ve vývoji"
 msgid "This feature is under construction."
 msgstr "Tato funkce je ve vývoji"
 
-#: wallet.py:220
+#: main.py:243 wallet.py:244
 msgid "Transaction list"
-msgstr "Seznam transakcí"
+msgstr "Seznam pokynů"
 
-#: wallet.py:291 wallet.py:300
+#: main.py:203 main.py:315 main.py:324 wallet.py:204 wallet.py:316
+#: wallet.py:325
 msgid "Error"
 msgstr "Chyba"
 
-#: wallet.py:291
+#: main.py:315 wallet.py:316
 msgid "This file already exists: {}.der"
 msgstr "Tento soubor již existuje: {}.der"
 
-#: wallet.py:300
+#: main.py:324 wallet.py:325
 msgid "Error creating {}.der"
 msgstr "Chyba při vytváření {}.der"
 
@@ -394,7 +405,7 @@ msgstr "Toto je současná adresa vaší peněženky, kterou můžete v případ
 
 #: themes/material/transactions_receive.html:30
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "V případě potřeby můžete přidat k vaší transakci krátký komentář, například vaše označení transakce, který zůstane uložen s transakcí."
+msgstr "V případě potřeby můžete přidat k vašemu pokynu krátký komentář, například vaše označní, které s ním zůstane uloženo."
 
 #: themes/material/transactions_receive.html:35
 msgid "This is the QR code for your address only."
@@ -409,8 +420,9 @@ msgid "This is what you will receive"
 msgstr "Tolik obdržíte"
 
 #: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:58
+#: themes/material/transactions_send.html:66
 #: themes/material/transactions_send_confirm.html:72
+#: themes/material/transactions_sendpop_confirm.html:48
 msgid "Fees depend on Data length"
 msgstr "Poplatky se odvíjejí od množstí dat"
 
@@ -432,15 +444,17 @@ msgstr "Toto je QR kód vaší adresy, data a množství v BIS URL"
 msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "Můžete tento obrázek odeslat mailem či jinde"
 
-#: themes/material/transactions_send.html:51
+#: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:65
+#: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
 msgstr "Příjemce obdrží tuto částku"
 
-#: themes/material/transactions_send.html:63
+#: themes/material/transactions_send.html:71
 #: themes/material/transactions_send_confirm.html:77
+#: themes/material/transactions_sendpop_confirm.html:53
 msgid "This is what you will pay, fees included."
-msgstr "Tolik zaplatíte, včetně poplatků"
+msgstr "Částka k zaplacení, včetně poplatků"
 
 #: themes/material/wallet_load.html:56
 msgid "Action"
@@ -451,94 +465,380 @@ msgid "Translations"
 msgstr "Překlady"
 
 #: themes/material/transactions_send_confirm.html:100
+#: themes/material/transactions_sendpop_confirm.html:87
 msgid "Cancel"
 msgstr "Zrušit"
 
 #: themes/material/transactions_send_confirm.html:105
+#: themes/material/transactions_sendpop_confirm.html:93
 msgid "Confirm and send BIS"
 msgstr "Potvrdit a odeslat BIS"
 
-#: wallet.py:172
+#: main.py:144 main.py:172 wallet.py:145 wallet.py:173
 msgid "Send BIS: Confirmation"
 msgstr "Odeslat BIS: Potvrzení"
 
-#: wallet.py:174
+#: main.py:146 main.py:174 wallet.py:147 wallet.py:175
 msgid "Please confirm this transaction"
-msgstr "Potvrďte prosím tuto transakci"
+msgstr "Potvrďte prosím tento pokyn"
 
-#: wallet.py:175
+#: main.py:147 main.py:175 wallet.py:148 wallet.py:176
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Ujistěte se, zdali chcete učinit následující a stiskněte tlačítko \"potvrdit\""
 
-#: wallet.py:204
+#: main.py:227 wallet.py:228
 msgid "Receive BIS"
 msgstr "Přijmout BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr ""
+msgstr "Šablonu {} vytvořil {}"
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr ""
+msgstr "Poděkování patří naším překladatelům a korektorům\n"
+""
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
-msgstr ""
+msgstr "Verze serveru peneženky"
 
-#: themes/material/base.html:148
+#: themes/material/base.html:157
 msgid "Wallet"
-msgstr ""
+msgstr "peněženka"
 
 #: themes/material/transactions_receive.html:81
 msgid "BIS URL"
-msgstr ""
+msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr ""
+msgstr "Vaše Bismuth peněženky"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
-msgstr ""
+msgstr "Adresář vaší peneženky je {}"
 
-#: wallet.py:164 wallet.py:168 wallet.py:198
+#: main.py:136 main.py:140 main.py:164 main.py:168 main.py:182 main.py:221
+#: wallet.py:137 wallet.py:141 wallet.py:165 wallet.py:169 wallet.py:183
+#: wallet.py:222
 msgid "Error:"
-msgstr ""
+msgstr "Chyba:"
 
-#: wallet.py:164
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
 msgid "Load your wallet first"
-msgstr ""
+msgstr "Nejprve načtěte svou peněženku"
 
-#: wallet.py:164
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
 msgid "No Wallet"
-msgstr ""
+msgstr "Bez peněženky"
 
-#: wallet.py:168
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
 msgid "Encrypted wallet"
-msgstr ""
+msgstr "Zaheslovaná peněženka"
 
-#: wallet.py:168
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
 msgid "You have to unlock your wallet first"
-msgstr ""
+msgstr "Nejprve musíte svou peněženku odemknout"
 
-#: wallet.py:193
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
 msgid "Success:"
-msgstr ""
+msgstr "Úspěch:"
 
-#: wallet.py:193
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
 msgid "Transaction sent"
-msgstr ""
+msgstr "Pokyn odeslán"
 
-#: wallet.py:194
+#: main.py:194 main.py:217 wallet.py:195 wallet.py:218
 msgid "The transaction was submitted to the mempool."
-msgstr ""
+msgstr "Pokyn byl přijat mempoolem"
 
-#: wallet.py:196
+#: main.py:196 main.py:219 wallet.py:197 wallet.py:220
 msgid "Txid is {}"
-msgstr ""
+msgstr "Txid {}"
 
-#: wallet.py:198
+#: main.py:201 main.py:221 wallet.py:202 wallet.py:222
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr ""
+msgstr "Při odeslíání do mempoolu došlo k chybě, pokyn nebyl odeslán.\n"
+""
+
+#: crystals/200_dragginator/themes/default/about.html:89
+#: modules/basehandlers.py:37
+msgid "No Bismuth address, please create or load a wallet first."
+msgstr "Nezjištěna Bismuth adresa, prosím nejprve načtěte či vytvořte adresu"
+
+#: themes/material/base.html:94 themes/material/crystals_list.html:11
+msgid "Crystals"
+msgstr "Krystaly"
+
+#: themes/material/base.html:119
+msgid "Search..."
+msgstr "Vyhledat..."
+
+#: themes/material/crystals_list.html:12
+msgid "Crystals are extra functionalities you can add to your wallet"
+msgstr "Krystaly jsou přídavné funkce, které můžete do své peněženky přidat"
+
+#: crystals/100_bismuthprice/themes/default/about.html:11
+#: crystals/100_bismuthprice/themes/default/modules/home.html:16
+msgid "Crystal"
+msgstr "Krystal"
+
+#: crystals/100_bismuthprice/themes/default/about.html:28
+#: crystals/210_eggpool/themes/default/about.html:29
+msgid "Version"
+msgstr "Verze"
+
+#: crystals/100_bismuthprice/themes/default/modules/home.html:4
+msgid "Current Bismuth Prices"
+msgstr "Současné ceny Bismuthu"
+
+#: crystals/200_dragginator/themes/default/egg.html:20
+msgid "BIS"
+msgstr "BIS"
+
+#: main.py:198 wallet.py:199
+msgid "Success"
+msgstr "Úspěch"
+
+#: themes/material/transactions_confirmpop.html:10
+msgid "Confirm Transaction"
+msgstr "Potvrdit pokyn"
+
+#: themes/material/transactions_send.html:34
+#: themes/material/transactions_sendpop_confirm.html:60
+msgid "Operation"
+msgstr "Operace"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/layout_old.html:29
+msgid "Navigation"
+msgstr "Navigace"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:11
+msgid "Search"
+msgstr "Vyhledat"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:33
+msgid "Search Results"
+msgstr "Výsledky vyhledávání"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Air egg"
+msgstr "Vzdušné vejce"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Earth egg"
+msgstr "Vejce země"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Fire egg"
+msgstr "Ohnivé vejce"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Water egg"
+msgstr "Vodní vejce"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:Cup"
+msgstr "Turnaj"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:special egg"
+msgstr "Speciální vejce"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:world cup 2018"
+msgstr "Světový turnaj 2018"
+
+#: crystals/200_dragginator/themes/default/about.html:21
+msgid "D:Dragginator News"
+msgstr "Dragginator: novinky"
+
+#: crystals/200_dragginator/themes/default/about.html:36
+msgid "D:My eggs"
+msgstr "Má vejce"
+
+#: crystals/200_dragginator/themes/default/about.html:47
+msgid "D:And you are registered to the current eggdrop"
+msgstr "A jste registrováni do současného rozdávání vajec"
+
+#: crystals/200_dragginator/themes/default/about.html:49
+msgid "D:Register"
+msgstr "Registrovat"
+
+#: crystals/200_dragginator/themes/default/about.html:49
+msgid "D:So you can register to the eggdrop!"
+msgstr "Abyste se mohli účastnit rozdávání vajec"
+
+#: crystals/200_dragginator/themes/default/about.html:61
+msgid "D:DNA"
+msgstr "DNA"
+
+#: crystals/200_dragginator/themes/default/about.html:62
+#: crystals/200_dragginator/themes/default/egg.html:30
+msgid "D:Element"
+msgstr "Prvek"
+
+#: crystals/200_dragginator/themes/default/about.html:63
+#: crystals/200_dragginator/themes/default/egg.html:31
+msgid "D:Species"
+msgstr "Druh"
+
+#: crystals/200_dragginator/themes/default/egg.html:11
+msgid "D:DNA:"
+msgstr "DNA:"
+
+#: crystals/200_dragginator/themes/default/egg.html:11
+msgid "D:See on Dragginator.com"
+msgstr "Otevřít na Dragginator.com"
+
+#: crystals/200_dragginator/themes/default/egg.html:23
+msgid "D:Archive"
+msgstr "Archiv"
+
+#: crystals/200_dragginator/themes/default/egg.html:32
+msgid "D:Age"
+msgstr "Věk"
+
+#: crystals/200_dragginator/themes/default/egg.html:33
+msgid "D:Rarity"
+msgstr "Vzácnost"
+
+#: crystals/200_dragginator/themes/default/egg.html:43
+msgid "D:You own this egg"
+msgstr "Vlastníte toto vejce"
+
+#: crystals/200_dragginator/themes/default/egg.html:46
+msgid "D:You don't own this egg"
+msgstr "Toto vejce nevlastníte"
+
+#: crystals/200_dragginator/themes/default/egg.html:60
+msgid "D:Send this egg to..."
+msgstr "Vybrat příjemce vejce"
+
+#: crystals/200_dragginator/themes/default/egg.html:63
+msgid "D:Sell this egg for BIS"
+msgstr "Prodat toto vejce za BIS"
+
+#: crystals/200_dragginator/themes/default/egg.html:69
+msgid "D:Remove this egg from the marketplace"
+msgstr "Odstranit toto vejce z trhu"
+
+#: crystals/210_eggpool/themes/default/about.html:14
+msgid "EP:Direct Link to official Dashboard"
+msgstr "Přímý odkaz na oficiální tabuli"
+
+#. *latest
+#: crystals/210_eggpool/themes/default/about.html:15
+msgid "EP:Get last GPU miner"
+msgstr "Získat nejnovější GPU miner"
+
+#: crystals/210_eggpool/themes/default/about.html:16
+msgid "Join the Official Bismuth Discord for support"
+msgstr "Pžipojit se k oficiálnímu Bismuth Discordu a získat pomoc"
+
+#: crystals/210_eggpool/themes/default/about.html:48
+msgid "EP:Hash Rate"
+msgstr "Hash Rate"
+
+#: crystals/210_eggpool/themes/default/about.html:49
+#: crystals/210_eggpool/themes/default/about.html:64
+msgid "EP:Last 12 hours"
+msgstr "Za posledních 12 hodin"
+
+#: crystals/210_eggpool/themes/default/about.html:63
+msgid "EP:Shares"
+msgstr "Podíly"
+
+#: crystals/210_eggpool/themes/default/about.html:73
+msgid "EP:Workers"
+msgstr "Klienti"
+
+#: modules/i18n.py:11
+msgid "DT:Processing..."
+msgstr "Zpracovávám"
+
+#: modules/i18n.py:12
+msgid "DT:Search&nbsp;..."
+msgstr "Vyhledat&nbsp;..."
+
+#: modules/i18n.py:13
+msgid "DT:Display _MENU_ elements"
+msgstr "Zobrazit prvky _NABÍDKY_"
+
+#: modules/i18n.py:14
+msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
+msgstr "Zobrazit prvky _OD_ _DO_ ze _VŠECH_ prvků"
+
+#: modules/i18n.py:15 modules/i18n.py:19
+msgid "DT:Nothing to display"
+msgstr "Nic k zobrazení"
+
+#: modules/i18n.py:16
+msgid "DT:filtered from _MAX_ total elements"
+msgstr "Vybráno z _MAXIMÁLNÍHO_ počtu prvků"
+
+#: modules/i18n.py:18
+msgid "DT:Loading..."
+msgstr "Načítám..."
+
+#: modules/i18n.py:20
+msgid "DT:No data in the table"
+msgstr "V tabulce nejsou data"
+
+#: modules/i18n.py:22
+msgid "DT:First"
+msgstr "První"
+
+#: modules/i18n.py:23
+msgid "DT:Previous"
+msgstr "Předchozí"
+
+#: modules/i18n.py:24
+msgid "DT:Next"
+msgstr "Další"
+
+#: modules/i18n.py:25
+msgid "DT:Last"
+msgstr "Poslední"
+
+#: modules/i18n.py:28
+msgid "DT:Sort by ascending order"
+msgstr "Seřadit vzestupně"
+
+#: modules/i18n.py:29
+msgid "DT:Sort by descending order"
+msgstr "Seřadit sestupně"
+
+#: crystals/200_dragginator/themes/default/about.html:44
+msgid "D:You don't own any egg ;("
+msgstr "Nevlastníte žádná vejce ;("
+
+#: crystals/200_dragginator/themes/default/about.html:15
+msgid "D:Buy an egg for {} BIS"
+msgstr "Zakoupit vejce za {} BIS"
+
+#: crystals/200_dragginator/themes/default/about.html:54
+msgid "D:You own {} eggs"
+msgstr "Vlastníte {} vajec"
+
+#: crystals/200_dragginator/themes/default/egg.html:78
+msgid "D:Buy for {} BIS"
+msgstr "Koupit za {} BIS"
+
+#: crystals/200_dragginator/themes/default/egg.html:65
+msgid "D:Price"
+msgstr "Cena"
+
+#: themes/material/transactions_confirmpop.html:7
+msgid "Transaction Status"
+msgstr "Stav pokynu"
+
+#: themes/material/transactions_confirmpop.html:23
+msgid "OK"
+msgstr "Potvrdit"
+
+#: themes/material/transactions_send.html:36
+msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
+msgstr "\"operace\" umožňuje pokročilé funkce Bismuthu. Nevyplňujte, pokud není vyžadováno jinak."
 
