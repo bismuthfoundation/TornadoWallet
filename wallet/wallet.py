@@ -41,7 +41,7 @@ define("debug", default=False, help="debug mode", type=bool)
 define("verbose", default=False, help="verbose mode", type=bool)
 define("theme", default='themes/material', help="theme directory, relative to the app", type=str)
 define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
-define("crystals", default=False, help="Load Crystals (Experimental)", type=bool)
+define("crystals", default=True, help="Load Crystals (Experimental)", type=bool)
 
 
 class Application(tornado.web.Application):
