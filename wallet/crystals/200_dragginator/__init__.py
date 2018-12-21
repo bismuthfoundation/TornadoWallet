@@ -29,7 +29,7 @@ async def async_get(url, is_json=False):
     # async with aiohttp.ClientSession() as session:
     async with HTTP_SESSION.get(url) as resp:
         if is_json:
-            return await resp.json()
+            return await resp.json(content_type=None)
         else:
             return await resp.text()
         # TODO: could use resp content-type to decide

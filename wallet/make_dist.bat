@@ -1,4 +1,4 @@
-pyinstaller --hidden-import tornado.locale --onefile wallet.py
+pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --onefile wallet.py
 robocopy locale dist/locale /S /E *.mo
 mkdir dist/themes
 robocopy themes/material dist/themes/material /S /E
