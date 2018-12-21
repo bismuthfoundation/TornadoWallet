@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: hu\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:203
+#: themes/material/about_credits.html:10 themes/material/base.html:212
 msgid "Credits"
 msgstr "Érdem"
 
@@ -27,8 +27,7 @@ msgstr "Python, fantasztikus nyelv!"
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
 msgstr "A <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\"> Tornado </a> webes alkalmazás keretrendszer"
 
-#: crystals/100_bismuthprice/themes/default/about.html:25
-#: crystals/200_dragginator/themes/default/about.html:25
+#: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
 #: themes/material/about_credits.html:30
 msgid "About"
@@ -106,31 +105,31 @@ msgstr "szerverek"
 msgid "Refresh from API"
 msgstr "Frissítés API-ból"
 
-#: themes/material/base.html:35
+#: themes/material/base.html:42
 msgid "Bismuth Wallet"
 msgstr "Bismuth Pénztárca"
 
-#: themes/material/base.html:43
+#: themes/material/base.html:50
 msgid "Dashboard"
 msgstr "Irányítópult"
 
-#: themes/material/base.html:49
+#: themes/material/base.html:56
 msgid "Transactions"
 msgstr "Tranzakciók"
 
-#: themes/material/base.html:55
+#: themes/material/base.html:62
 msgid "Address book"
 msgstr "Címjegyzék"
 
-#: themes/material/base.html:62 themes/material/tokens_list.html:10
+#: themes/material/base.html:69 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokenek"
 
-#: themes/material/base.html:68
+#: themes/material/base.html:75
 msgid "Messages"
 msgstr "Üzenetek"
 
-#: themes/material/base.html:75
+#: themes/material/base.html:82
 msgid "Network"
 msgstr "Hálózat"
 
@@ -138,35 +137,35 @@ msgstr "Hálózat"
 msgid "Cristals"
 msgstr "Crystal-ok"
 
-#: themes/material/base.html:103
+#: themes/material/base.html:110
 msgid "Toggle navigation"
 msgstr "Navigáció áthelyezése"
 
-#: themes/material/base.html:183
+#: themes/material/base.html:192
 msgid "Source"
 msgstr "Forrás"
 
-#: themes/material/base.html:188
+#: themes/material/base.html:197
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:193
+#: themes/material/base.html:202
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:198
+#: themes/material/base.html:207
 msgid "Donate"
 msgstr "Adományoz"
 
-#: themes/material/base.html:209
+#: themes/material/base.html:218
 msgid "block #"
 msgstr "blokk #"
 
-#: themes/material/base.html:229
+#: themes/material/base.html:238
 msgid "Sidebar Filters"
 msgstr "Oldalsáv Szűrők"
 
-#: themes/material/base.html:242
+#: themes/material/base.html:251
 msgid "Images"
 msgstr "Képek"
 
@@ -174,6 +173,7 @@ msgstr "Képek"
 msgid "Cristals are extra functionalities you can add to your wallet"
 msgstr "A Crystal-ok extra funkciók amelyeket hozzáadhat a pénztárcájahoz"
 
+#: crystals/100_bismuthprice/themes/default/about.html:15
 #: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "WIP"
@@ -218,7 +218,7 @@ msgstr "Cím"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:42
+#: themes/material/transactions_send.html:50
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Mennyiség"
@@ -227,29 +227,27 @@ msgstr "Mennyiség"
 msgid "Type"
 msgstr "Típus"
 
-#: themes/material/home.html:128
+#: themes/material/home.html:150
 msgid "Bismuth news"
 msgstr "Bismuth hírek"
 
-#: themes/material/home.html:149
+#: crystals/100_bismuthprice/themes/default/modules/home.html:28
 msgid "Bismuth vs USD"
 msgstr "Bismuth vs USD"
 
-#: themes/material/home.html:155
+#: crystals/100_bismuthprice/themes/default/modules/home.html:33
 msgid "This is a mockup with fake data"
 msgstr "Ez egy mintadarab hamis adatokkal"
 
-#: themes/material/home.html:169
+#: themes/material/home.html:136
 msgid "Account balance"
 msgstr "Számlaegyenleg"
 
-#: themes/material/home.html:170
+#: themes/material/home.html:137
 msgid "Last 12 months"
 msgstr "Utolsó 12 hónap"
 
-#: crystals/100_bismuthprice/themes/default/modules/home.html:12
-#: crystals/200_dragginator/themes/default/modules/home.html:12
-#: themes/material/home.html:174
+#: themes/material/home.html:141
 msgid "Mockup with fake data"
 msgstr "Mintadarab hamis adatokkal"
 
@@ -274,44 +272,51 @@ msgstr "Kinek küldöd a BIS-t."
 
 #: themes/material/transactions_send.html:21
 #: themes/material/transactions_send_confirm.html:33
+#: themes/material/transactions_sendpop_confirm.html:29
 msgid "Recipient"
 msgstr "Címzett"
 
 #: themes/material/transactions_receive.html:27
 #: themes/material/transactions_send.html:26
 #: themes/material/transactions_send_confirm.html:39
+#: themes/material/transactions_sendpop_confirm.html:67
 msgid "Data (message)"
 msgstr "Adat (üzenet)"
 
 #: themes/material/transactions_send.html:28
 #: themes/material/transactions_send_confirm.html:43
+#: themes/material/transactions_sendpop_confirm.html:72
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Opcionálissan megjegyzést adhat a tranzakcióhoz. Pénzváltók esetében kötelező."
 
-#: themes/material/transactions_send.html:43
+#: themes/material/transactions_send.html:51
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "Küldeni kívánt BIS-ek száma."
 
 #: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:49
+#: themes/material/transactions_send.html:57
 #: themes/material/transactions_send_confirm.html:62
+#: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
 msgstr "Mennyiség (BIS)"
 
 #: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:56
+#: themes/material/transactions_send.html:64
 #: themes/material/transactions_send_confirm.html:70
+#: themes/material/transactions_sendpop_confirm.html:46
 msgid "Est. fees"
 msgstr "Becsült járulék"
 
 #: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:61
+#: themes/material/transactions_send.html:69
 #: themes/material/transactions_send_confirm.html:75
+#: themes/material/transactions_sendpop_confirm.html:51
 msgid "Total (BIS)"
 msgstr "Teljes (BIS)"
 
-#: themes/material/transactions_send.html:67 wallet.py:133
+#: main.py:133 main.py:161 themes/material/transactions_send.html:75
+#: themes/material/transactions_send.html:76 wallet.py:134 wallet.py:162
 msgid "Send BIS"
 msgstr "BIS küldése"
 
@@ -355,19 +360,20 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "Ez a szolgáltatás fejlesztés alatt."
 
-#: wallet.py:192
+#: main.py:243 wallet.py:244
 msgid "Transaction list"
 msgstr "Tranzakció lista"
 
-#: wallet.py:264 wallet.py:273
+#: main.py:203 main.py:315 main.py:324 wallet.py:204 wallet.py:316
+#: wallet.py:325
 msgid "Error"
 msgstr "Hiba"
 
-#: wallet.py:264
+#: main.py:315 wallet.py:316
 msgid "This file already exists: {}.der"
 msgstr "Ez a fájl már létezik: {} .der"
 
-#: wallet.py:273
+#: main.py:324 wallet.py:325
 msgid "Error creating {}.der"
 msgstr "Hiba történt a {} .der létrehozása közben"
 
@@ -412,8 +418,9 @@ msgid "This is what you will receive"
 msgstr "Ennyit fog kapni"
 
 #: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:58
+#: themes/material/transactions_send.html:66
 #: themes/material/transactions_send_confirm.html:72
+#: themes/material/transactions_sendpop_confirm.html:48
 msgid "Fees depend on Data length"
 msgstr "A járulék az adat hosszától függ"
 
@@ -433,13 +440,15 @@ msgstr "Ez a QR-kód a címedre, az adatokra és az összegre, mint BIS Url."
 msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "Ezt a képet bemásolhatja/beillesztheti, ha levélben vagy bármiben küldené"
 
-#: themes/material/transactions_send.html:51
+#: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:65
+#: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
 msgstr "Ezt fogja megkapni a címzett"
 
-#: themes/material/transactions_send.html:63
+#: themes/material/transactions_send.html:71
 #: themes/material/transactions_send_confirm.html:77
+#: themes/material/transactions_sendpop_confirm.html:53
 msgid "This is what you will pay, fees included."
 msgstr "Ennyit fog fizetni járulékokkal együtt."
 
@@ -452,26 +461,28 @@ msgid "Translations"
 msgstr "Fordítások"
 
 #: themes/material/transactions_send_confirm.html:100
+#: themes/material/transactions_sendpop_confirm.html:87
 msgid "Cancel"
 msgstr "Mégse"
 
 #: themes/material/transactions_send_confirm.html:105
+#: themes/material/transactions_sendpop_confirm.html:93
 msgid "Confirm and send BIS"
 msgstr "Megerősíti és küldi a BIS-t"
 
-#: wallet.py:144
+#: main.py:144 main.py:172 wallet.py:145 wallet.py:173
 msgid "Send BIS: Confirmation"
 msgstr "BIS küldés: Megerősítés"
 
-#: wallet.py:146
+#: main.py:146 main.py:174 wallet.py:147 wallet.py:175
 msgid "Please confirm this transaction"
 msgstr "Kérjük erősítse meg ezt a tranzakciót"
 
-#: wallet.py:147
+#: main.py:147 main.py:175 wallet.py:148 wallet.py:176
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Ellenőrizze, hogy ez az amit szeretne tenni, majd nyomja meg a \"megerősítés\" gombot"
 
-#: wallet.py:176
+#: main.py:227 wallet.py:228
 msgid "Receive BIS"
 msgstr "BIS fogadása"
 
@@ -487,7 +498,7 @@ msgstr "Sok köszönet a fordítóinknak és rektorainknak."
 msgid "Wallet server version {}"
 msgstr "Pénztárca szerver verzió {}"
 
-#: themes/material/base.html:150
+#: themes/material/base.html:157
 msgid "Wallet"
 msgstr "Pénztárca"
 
@@ -503,59 +514,324 @@ msgstr "Bismuth pénztárcái"
 msgid "Your wallets directory is {}"
 msgstr "Pénztárcáinak könyvtára a {}"
 
-#: wallet.py:136 wallet.py:140 wallet.py:170
+#: main.py:136 main.py:140 main.py:164 main.py:168 main.py:182 main.py:221
+#: wallet.py:137 wallet.py:141 wallet.py:165 wallet.py:169 wallet.py:183
+#: wallet.py:222
 msgid "Error:"
 msgstr "Hiba:"
 
-#: wallet.py:136
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
 msgid "Load your wallet first"
 msgstr "Először töltse be a pénztárcáját"
 
-#: wallet.py:136
+#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
 msgid "No Wallet"
 msgstr "Nincs pénztárca"
 
-#: wallet.py:140
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
 msgid "Encrypted wallet"
 msgstr "Titkosított pénztárca"
 
-#: wallet.py:140
+#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
 msgid "You have to unlock your wallet first"
 msgstr "Először ki kell nyitnia a pénztárcáját"
 
-#: wallet.py:165
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
 msgid "Success:"
 msgstr "Siker:"
 
-#: wallet.py:165
+#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
 msgid "Transaction sent"
 msgstr "Tranzakció elküldve"
 
-#: wallet.py:166
+#: main.py:194 main.py:217 wallet.py:195 wallet.py:218
 msgid "The transaction was submitted to the mempool."
 msgstr "A tranzakciót beküldtük a mempool-nak."
 
-#: wallet.py:168
+#: main.py:196 main.py:219 wallet.py:197 wallet.py:220
 msgid "Txid is {}"
 msgstr "Txid-k {}"
 
-#: wallet.py:170
+#: main.py:201 main.py:221 wallet.py:202 wallet.py:222
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Hiba történt a mempoolra történő beküldéskor. A tranzakció sikertelen."
 
-#: modules/basehandlers.py:36
+#: crystals/200_dragginator/themes/default/about.html:89
+#: modules/basehandlers.py:37
 msgid "No Bismuth address, please create or load a wallet first."
-msgstr "Nincs Bismuth cim, kerjuk hozzon letre egyet vagy olvasson be egyet."
+msgstr "Nincs Bismuth cím, kérjük hozzon létre vagy olvasson be egyet."
 
-#: themes/material/base.html:87 themes/material/crystals_list.html:11
+#: themes/material/base.html:94 themes/material/crystals_list.html:11
 msgid "Crystals"
 msgstr "Crystal-ok"
 
-#: themes/material/base.html:112
+#: themes/material/base.html:119
 msgid "Search..."
-msgstr "Kereses..."
+msgstr "Keresés..."
 
 #: themes/material/crystals_list.html:12
 msgid "Crystals are extra functionalities you can add to your wallet"
-msgstr "A Crystal-ok extra funkciok, melyeket hozzaadhat a penztarcajahoz"
+msgstr "A Crystal-ok extra funkciók, melyeket hozzáadhat a penztárcájához"
+
+#: crystals/100_bismuthprice/themes/default/about.html:11
+#: crystals/100_bismuthprice/themes/default/modules/home.html:16
+msgid "Crystal"
+msgstr "Crystal"
+
+#: crystals/100_bismuthprice/themes/default/about.html:28
+#: crystals/210_eggpool/themes/default/about.html:29
+msgid "Version"
+msgstr "Verzió"
+
+#: crystals/100_bismuthprice/themes/default/modules/home.html:4
+msgid "Current Bismuth Prices"
+msgstr "Jelenlegi Bismuth ár"
+
+#: crystals/200_dragginator/themes/default/egg.html:20
+msgid "BIS"
+msgstr "BIS"
+
+#: main.py:198 wallet.py:199
+msgid "Success"
+msgstr "Sikeres"
+
+#: themes/material/transactions_confirmpop.html:10
+msgid "Confirm Transaction"
+msgstr "Tranzakció megerősítése"
+
+#: themes/material/transactions_send.html:34
+#: themes/material/transactions_sendpop_confirm.html:60
+msgid "Operation"
+msgstr "Operáció"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/layout_old.html:29
+msgid "Navigation"
+msgstr "Navigáció"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:11
+msgid "Search"
+msgstr "Keresés"
+
+#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:33
+msgid "Search Results"
+msgstr "Keresés eredménye"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Air egg"
+msgstr "Levegő Tojás"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Earth egg"
+msgstr "Föld Tojás"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Fire egg"
+msgstr "Tűz tojás"
+
+#: crystals/200_dragginator/__init__.py:73
+msgid "D:Water egg"
+msgstr "Víz tojás"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:Cup"
+msgstr "Kupa"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:special egg"
+msgstr "Speciális tojás"
+
+#: crystals/200_dragginator/__init__.py:77
+msgid "D:world cup 2018"
+msgstr "2018-as Világbajnokság"
+
+#: crystals/200_dragginator/themes/default/about.html:21
+msgid "D:Dragginator News"
+msgstr "Dragginator hírek"
+
+#: crystals/200_dragginator/themes/default/about.html:36
+msgid "D:My eggs"
+msgstr "Tojásaim"
+
+#: crystals/200_dragginator/themes/default/about.html:47
+msgid "D:And you are registered to the current eggdrop"
+msgstr "És regisztrálva van a jelenlegi tojás osztásra"
+
+#: crystals/200_dragginator/themes/default/about.html:49
+msgid "D:Register"
+msgstr "Regisztráció"
+
+#: crystals/200_dragginator/themes/default/about.html:49
+msgid "D:So you can register to the eggdrop!"
+msgstr "Így regisztrálhatsz a tojás osztásra!"
+
+#: crystals/200_dragginator/themes/default/about.html:61
+msgid "D:DNA"
+msgstr "DNA"
+
+#: crystals/200_dragginator/themes/default/about.html:62
+#: crystals/200_dragginator/themes/default/egg.html:30
+msgid "D:Element"
+msgstr "Elem"
+
+#: crystals/200_dragginator/themes/default/about.html:63
+#: crystals/200_dragginator/themes/default/egg.html:31
+msgid "D:Species"
+msgstr "Faj"
+
+#: crystals/200_dragginator/themes/default/egg.html:11
+msgid "D:DNA:"
+msgstr "DNA:"
+
+#: crystals/200_dragginator/themes/default/egg.html:11
+msgid "D:See on Dragginator.com"
+msgstr "Lásd a Dragginator.com -on"
+
+#: crystals/200_dragginator/themes/default/egg.html:23
+msgid "D:Archive"
+msgstr "Arhív"
+
+#: crystals/200_dragginator/themes/default/egg.html:32
+msgid "D:Age"
+msgstr "Kor"
+
+#: crystals/200_dragginator/themes/default/egg.html:33
+msgid "D:Rarity"
+msgstr "Ritkaság"
+
+#: crystals/200_dragginator/themes/default/egg.html:43
+msgid "D:You own this egg"
+msgstr "Ön birtokolja ezt a tojást"
+
+#: crystals/200_dragginator/themes/default/egg.html:46
+msgid "D:You don't own this egg"
+msgstr "Ön nem birtokolja ezt a tojást"
+
+#: crystals/200_dragginator/themes/default/egg.html:60
+msgid "D:Send this egg to..."
+msgstr "Küldje el ezt a tojást a..."
+
+#: crystals/200_dragginator/themes/default/egg.html:63
+msgid "D:Sell this egg for BIS"
+msgstr "A tojást eladni BIS-ért"
+
+#: crystals/200_dragginator/themes/default/egg.html:69
+msgid "D:Remove this egg from the marketplace"
+msgstr "A tojás eltávolítása a piacról"
+
+#: crystals/210_eggpool/themes/default/about.html:14
+msgid "EP:Direct Link to official Dashboard"
+msgstr "Közvetlen Link a hivatalos irányítópulthoz"
+
+#: crystals/210_eggpool/themes/default/about.html:15
+msgid "EP:Get last GPU miner"
+msgstr "A legújabb GPU bányászprogram letöltése"
+
+#: crystals/210_eggpool/themes/default/about.html:16
+msgid "Join the Official Bismuth Discord for support"
+msgstr "Csatlakozás a hivatalos Discordhoz támogatásért"
+
+#: crystals/210_eggpool/themes/default/about.html:48
+msgid "EP:Hash Rate"
+msgstr "Hash sebesség"
+
+#: crystals/210_eggpool/themes/default/about.html:49
+#: crystals/210_eggpool/themes/default/about.html:64
+msgid "EP:Last 12 hours"
+msgstr "Utolsó 12 óra"
+
+#: crystals/210_eggpool/themes/default/about.html:63
+msgid "EP:Shares"
+msgstr "Részesedés"
+
+#: crystals/210_eggpool/themes/default/about.html:73
+msgid "EP:Workers"
+msgstr "Munkások"
+
+#: modules/i18n.py:11
+msgid "DT:Processing..."
+msgstr "Feldolgozás"
+
+#: modules/i18n.py:12
+msgid "DT:Search&nbsp;..."
+msgstr "Keresés&nbsp;..."
+
+#: modules/i18n.py:13
+msgid "DT:Display _MENU_ elements"
+msgstr "Megjeleníti a _MENU_ elemeket"
+
+#: modules/i18n.py:14
+msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
+msgstr "Kijelző elem _START_ -tól _END_ -ig származó _TOTAL_ elemek"
+
+#: modules/i18n.py:15 modules/i18n.py:19
+msgid "DT:Nothing to display"
+msgstr "Semmi sem jeleníthető meg"
+
+#: modules/i18n.py:16
+msgid "DT:filtered from _MAX_ total elements"
+msgstr "szűrve a _MAX_ teljes elemekből"
+
+#: modules/i18n.py:18
+msgid "DT:Loading..."
+msgstr "Betöltés..."
+
+#: modules/i18n.py:20
+msgid "DT:No data in the table"
+msgstr "Nincs adat a táblában"
+
+#: modules/i18n.py:22
+msgid "DT:First"
+msgstr "Első"
+
+#: modules/i18n.py:23
+msgid "DT:Previous"
+msgstr "Előző"
+
+#: modules/i18n.py:24
+msgid "DT:Next"
+msgstr "Következő"
+
+#: modules/i18n.py:25
+msgid "DT:Last"
+msgstr "Utolsó"
+
+#: modules/i18n.py:28
+msgid "DT:Sort by ascending order"
+msgstr "Rendezés növekvő sorrendben"
+
+#: modules/i18n.py:29
+msgid "DT:Sort by descending order"
+msgstr "Rendezés csökkenő sorrendben"
+
+#: crystals/200_dragginator/themes/default/about.html:44
+msgid "D:You don't own any egg ;("
+msgstr "Ön nem rendelkezik tojásokkal ;("
+
+#: crystals/200_dragginator/themes/default/about.html:15
+msgid "D:Buy an egg for {} BIS"
+msgstr "Venni tojást {} BIS-ért"
+
+#: crystals/200_dragginator/themes/default/about.html:54
+msgid "D:You own {} eggs"
+msgstr "Ön rendelkezik {} tojással"
+
+#: crystals/200_dragginator/themes/default/egg.html:78
+msgid "D:Buy for {} BIS"
+msgstr "Vásárlás {} BIS-ért"
+
+#: crystals/200_dragginator/themes/default/egg.html:65
+msgid "D:Price"
+msgstr "Ár"
+
+#: themes/material/transactions_confirmpop.html:7
+msgid "Transaction Status"
+msgstr "Tranzakció státusza"
+
+#: themes/material/transactions_confirmpop.html:23
+msgid "OK"
+msgstr "OK"
+
+#: themes/material/transactions_send.html:36
+msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
+msgstr "az \"operáció\" lehetővé teszi a Bismuth erőteljes jellemzőit. Haggya üressen hacsak ez nincs mésképp kívánva."
 
