@@ -17,6 +17,7 @@ Here are the current languages and matching credits:
 * German: Damian
 * Greek: SatoshiHaze
 * Hungarian: Adricrypto
+* Italian: Shakitano_
 * Norwegian: GH2
 * Polish: Feri
 * Portuguese (BR): jcsanches
@@ -30,7 +31,6 @@ Here are the current languages and matching credits:
 # Wanted!
 
 * EN-UK and EN-US proofreaders
-* CN (Current translations are machine translations, need human proofreading.)
-* IT
+* CN (Current translations are machine translations, need human proofreading.
 
 More!
