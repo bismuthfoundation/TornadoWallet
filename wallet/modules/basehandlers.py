@@ -5,6 +5,7 @@ import sys
 from tornado.web import RequestHandler
 from tornado.template import Loader, Template
 from os import path
+from modules.i18n import get_spend_type
 
 
 class BaseHandler(RequestHandler):
@@ -32,6 +33,8 @@ class BaseHandler(RequestHandler):
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
         self.bismuth_vars['extra'] = {"header":'', "footer": ''}
+        spend_type = self.application.wallet_settings['spend']['type']
+        self.bismuth_vars['spend_type'] = {"type": spend_type, "label": get_spend_type(_, spend_type) }
         self.crystals = self.settings['bismuth_crystals']
         if self.bismuth_vars['address'] is None:
             self.bismuth_vars['address'] = _("No Bismuth address, please create or load a wallet first.")

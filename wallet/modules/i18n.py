@@ -3,6 +3,17 @@ i18n / l18n helpers
 """
 
 
+def get_spend_type(_, spend:str) -> str:
+    if spend is None:
+        return _("(No protection)")
+    if spend == 'PIN':
+        return _("PIN Code")
+    if spend == 'YUBICO':
+        return _("YUBICO")
+    if spend == 'U2F':
+        return _("U2F Token")
+
+
 def get_dt_language(_):
     """Gives the translations for the datatables jquery plugin."""
     # TODO: handle better than that

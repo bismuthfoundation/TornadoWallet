@@ -8,7 +8,7 @@ import os.path
 # import re
 import json
 import logging
-# import random
+import random
 import string
 # import time
 # import datetime
@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.0.73'
+__version__ = '0.0.74'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -46,6 +46,7 @@ define("crystals", default=True, help="Load Crystals (Experimental)", type=bool)
 
 
 class Application(tornado.web.Application):
+
     def __init__(self):
         # wallet_servers = bismuthapi.get_wallet_servers_legacy()
         servers = None
@@ -53,7 +54,9 @@ class Application(tornado.web.Application):
             servers = [options.server]
         bismuth_client = bismuthclient.BismuthClient(verbose=options.verbose, servers_list=servers)
         wallet_dir = helpers.get_private_dir()
+        self.wallet_settings = None
         print("Please store your wallets under '{}'".format(wallet_dir))
+        self.load_user_data("{}/wallet.json".format(wallet_dir))
         bismuth_client.get_server()
         # Convert relative to absolute
         options.theme = os.path.join(helpers.base_path(), options.theme)
@@ -98,8 +101,24 @@ class Application(tornado.web.Application):
         )
         super(Application, self).__init__(handlers, **settings)
 
+    def load_user_data(self, filename: str):
+        """User data is config + optional integrated wallets."""
+        if not os.path.isfile(filename):
+            # Default: no master
+            charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&~#{([|-\_@)]=}+-*/<>!,;:.?%'
+            salt = "".join(random.choice(charset) for x in range(random.randint(10, 20)))
+            default = {"salt": salt, "master_hash": None, "spend": {"type": None, "value": None}, "addresses": []}
+            with open(filename, 'w') as f:
+                json.dump(default, f)
+            self.wallet_settings = default
+        else:
+            with open(filename) as f:
+                self.wallet_settings = json.load(f)
+
 
 class HomeHandler(BaseHandler):
+
+
     async def get(self):
         """
         :return:

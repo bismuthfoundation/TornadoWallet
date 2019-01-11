@@ -21,7 +21,6 @@ def graph_colors_rgba():
            'rgba(189, 195, 199,1.0)', 'rgba(127, 140, 141,1.0)')
 
 
-
 def base_path():
     """Returns the full path to the current dir, whether the app is frozen or not."""
     if getattr(sys, 'frozen', False):

@@ -4,6 +4,7 @@ Dragginator Crystal for Tornado wallet
 from os import path, listdir
 import sys
 import aiohttp
+import json
 
 from modules.basehandlers import CrystalHandler
 from modules.i18n import get_dt_language
@@ -16,6 +17,7 @@ DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/200_dragginator/themes/def
 MODULES = {}
 HTTP_SESSION = None
 
+
 async def async_get(url, is_json=False):
     """Async gets an url content.
 
@@ -26,10 +28,13 @@ async def async_get(url, is_json=False):
     # TODO: retry on error?
     if not HTTP_SESSION:
         HTTP_SESSION = aiohttp.ClientSession()
-    # async with aiohttp.ClientSession() as session:
     async with HTTP_SESSION.get(url) as resp:
         if is_json:
-            return await resp.json(content_type=None)
+            try:
+                return json.loads(await resp.text())
+            except Exception as e:
+                print("Error {}".format(e))
+                return None
         else:
             return await resp.text()
         # TODO: could use resp content-type to decide
