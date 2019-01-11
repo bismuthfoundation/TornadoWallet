@@ -1,5 +1,7 @@
 import sys
 from os import path
+import aiohttp
+import json
 
 import cachetools.func
 import requests
@@ -8,6 +10,8 @@ from bismuthclient.bismuthclient import BismuthClient
 # Where the wallets and other potential private info are to be stored.
 # It's a dir under the user's own home directory.
 BISMUTH_PRIVATE_DIR = 'bismuth-private'
+
+HTTP_SESSION = None
 
 
 def get_private_dir():
@@ -43,3 +47,37 @@ def get_api_10(url, is_json=True):
         else:
             return response.content
     return ''
+
+
+async def async_get(url, is_json=False):
+    """Async gets an url content.
+
+    If is_json, decodes the content
+    """
+    # TODO: add an optional cache.
+    global HTTP_SESSION
+    # TODO: retry on error?
+    if not HTTP_SESSION:
+        HTTP_SESSION = aiohttp.ClientSession()
+    try:
+        async with HTTP_SESSION.get(url) as resp:
+            if is_json:
+                try:
+                    return json.loads(await resp.text())
+                except Exception as e:
+                    print("Error {}".format(e))
+                    return None
+            else:
+                return await resp.text()
+            # TODO: could use resp content-type to decide
+    except Exception as e:
+        return None
+
+
+async def async_get_with_http_fallback(https_url, is_json=True):
+    data = await async_get(https_url, is_json=is_json)
+    if data is None:
+        http_url = https_url.replace("https://", "http://")
+        data = await async_get(http_url, is_json=is_json)
+    return data
+

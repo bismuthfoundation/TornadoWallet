@@ -3,41 +3,16 @@ Dragginator Crystal for Tornado wallet
 """
 from os import path, listdir
 import sys
-import aiohttp
-import json
 
 from modules.basehandlers import CrystalHandler
 from modules.i18n import get_dt_language
-from modules.helpers import base_path
+from modules.helpers import base_path, async_get_with_http_fallback
 from tornado.template import Template
 
 
 DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/200_dragginator/themes/default')
 
 MODULES = {}
-HTTP_SESSION = None
-
-
-async def async_get(url, is_json=False):
-    """Async gets an url content.
-
-    If is_json, decodes the content
-    """
-    # TODO: make accessible everywhere and add an optional cache.
-    global HTTP_SESSION
-    # TODO: retry on error?
-    if not HTTP_SESSION:
-        HTTP_SESSION = aiohttp.ClientSession()
-    async with HTTP_SESSION.get(url) as resp:
-        if is_json:
-            try:
-                return json.loads(await resp.text())
-            except Exception as e:
-                print("Error {}".format(e))
-                return None
-        else:
-            return await resp.text()
-        # TODO: could use resp content-type to decide
 
 
 class DragginatorHandler(CrystalHandler):
@@ -51,31 +26,42 @@ class DragginatorHandler(CrystalHandler):
     async def about(self, params=None):
         eggdrop = False
         if len(self.bismuth_vars['address']) == 56:
-            data = await async_get("https://dragginator.com/api/info.php?address={}&type=list".format(self.bismuth_vars['address']),is_json=True)
+            data = await async_get_with_http_fallback("https://dragginator.com/api/info.php?address={}&type=list"
+                                                      .format(self.bismuth_vars['address']))
             if len(data) == 0:
-                eggdrop = await async_get("https://dragginator.com/api/info.php?address={}&type=eggdrop".format(self.bismuth_vars['address']),is_json=True)
+                eggdrop = await async_get_with_http_fallback("https://dragginator.com/api/info.php?address={}&type=eggdrop"
+                                                             .format(self.bismuth_vars['address']))
         else:
             data = []
-        price = await async_get("https://dragginator.com/api/info.php?type=price".format(self.bismuth_vars['address']),is_json=True)
+        price = await async_get_with_http_fallback("https://dragginator.com/api/info.php?type=price"
+                                                   .format(self.bismuth_vars['address']))
         namespace = self.get_template_namespace()
         self.bismuth_vars['dtlanguage'] = get_dt_language(self.locale.translate)
         kwargs = {"bismuth": self.bismuth_vars}
         namespace.update(kwargs)
-        message = await async_get("https://dragginator.com/api/info.php?type=message", is_json=True)
-        self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace), "footer": MODULES['buy'].generate(**namespace) + MODULES['table'].generate(**namespace)}
-        self.render("about.html", bismuth=self.bismuth_vars, data = data, price=price[0], eggdrop=eggdrop, message=message[0])
+        message = await async_get_with_http_fallback("https://dragginator.com/api/info.php?type=message")
+        self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace),
+                                      "footer": MODULES['buy'].generate(**namespace)
+                                                + MODULES['table'].generate(**namespace)}
+        self.render("about.html", bismuth=self.bismuth_vars, data = data, price=price[0],
+                    eggdrop=eggdrop, message=message[0])
 
-    async def egg(self, dna=[""]):
+    async def egg(self, dna=None):
+        if dna is None:
+            dna = ['']
         _ = self.locale.translate
-        data = await async_get("https://dragginator.com/api/info.php?egg={}&type=egg_info".format(dna[0]),is_json=True)
+        data = await async_get_with_http_fallback("https://dragginator.com/api/info.php?egg={}&type=egg_info".format(dna[0]))
         namespace = self.get_template_namespace()
         kwargs = {"abilities": data["abilities"]}
         namespace.update(kwargs)
-        self.bismuth_vars['extra'] = {"header":MODULES['css'].generate(**namespace), "footer": MODULES['egg'].generate(**namespace)+ MODULES['buy'].generate(**namespace)}
+        self.bismuth_vars['extra'] = {"header": MODULES['css'].generate(**namespace),
+                                      "footer": MODULES['egg'].generate(**namespace)
+                                                + MODULES['buy'].generate(**namespace)}
 
         dic = {"Fire":"danger", "Water":"info", "Earth":"success", "Air":"air",  "???":"air"}
         data["color"] = dic.get(data["type"], "primary")
-        dic = {"Fire":_("D:Fire egg"), "Water":_("D:Water egg"), "Earth":_("D:Earth egg"), "Air":_("D:Air egg"), "???": "???"}
+        dic = {"Fire":_("D:Fire egg"), "Water":_("D:Water egg"), "Earth":_("D:Earth egg"),
+               "Air":_("D:Air egg"), "???": "???"}
 
         data["type"] = dic.get(data["type"], data["type"])
         # For registration of terms only, do not edit ever!
