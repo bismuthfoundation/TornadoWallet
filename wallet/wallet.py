@@ -66,7 +66,7 @@ class Application(tornado.web.Application):
             (r"/transactions/(.*)", TransactionsHandler),
             (r"/json/(.*)", JsonHandler),
             (r"/address/(.*)", AddressHandler),
-            (r"/messages/(.*)", AddressHandler),
+            (r"/messages/(.*)", MessagesHandler),
             (r"/wallet/(.*)", WalletHandler),
             (r"/about/(.*)", AboutHandler),
             (r"/tokens/(.*)", TokensHandler),
@@ -431,8 +431,20 @@ class SearchHandler(BaseHandler):
 
 class MessagesHandler(BaseHandler):
 
+    async def index(self, params=None, post=False):
+        self.render("messages.html", bismuth=self.bismuth_vars)
+
     async def get(self, command=''):
-        self.render("wip.html", bismuth=self.bismuth_vars)
+        command, *params = command.split('/')
+        if not command:
+            command = 'index'
+        await getattr(self, command)(params)
+
+    async def post(self, command=''):
+        command, *params = command.split('/')
+        if not command:
+            command = 'sign'
+        await getattr(self, command)(params, post=True)
 
 
 class TxModule(tornado.web.UIModule):
