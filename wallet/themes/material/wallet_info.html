@@ -57,6 +57,113 @@
         </div>
     </div>
 
+ <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="card">
+            <form action="/wallet/protection/">
+                {% if bismuth['master_set'] %}
+                <div class="card-header card-header-success card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">lock_close</i>
+                    </div>
+                {% else %}
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">lock_open</i>
+                    </div>
+                {% end %}
+                    <h3 class="card-title">&nbsp;{{ _("Master password")}}</h3>
+                </div>
+                <div class="card-body">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">{{ _("Existing master password")}}</label>
+                            <input class="form-control" id="master_password" type="password" name="master_password" value=""/>
+                            <small>{{ _("This is the password that protects your private key(s)")}}
+                            </small>
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <label class="bmd-label-floating">{{ _("New master password")}}</label>
+                            <input class="form-control" id="new_master_password" type="password" name="new_master_password"
+                                   value=""/>
+                            <small>{{ _("This is the password that protects your private key(s)")}}
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label class="bmd-label-floating">{{ _("Retype new master password")}}</label>
+                            <input class="form-control" id="new_master_password2" type="password" name="new_master_password2"
+                                   value=""/>
+                            <small>{{ _("Loosing this password means loosing your keys!")}}
+                            </small>
+                        </div>
+                        <br/>
+                        <input class="btn btn-warning" type="submit" value="{{ _('Set master password')}}">
+
+                    </div>
+                <div class="card-footer">
+                    <div class="stats">
+                {% if bismuth['master_set'] %}
+                        <i class="material-icons">lock_close</i> {{ _("Master password is set") }}
+                {% else %}
+                        <i class="material-icons">lock_open</i> {{ _("Master password is not set") }}
+                {% end %}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="card">
+            <form action="/wallet/protection/">
+                {% if bismuth['spend_type']['type'] == None %}
+                <div class="card-header card-header-warning card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">lock_open</i>
+                    </div>
+                {% else %}
+                <div class="card-header card-header-success card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">lock_close</i>
+                    </div>
+                {% end %}
+                    <!-- p class="card-category">{{ _("Spend protection")}}</p -->
+                    <h3 class="card-title">&nbsp;{{ _("Spend protection")}}</h3>
+                </div>
+                <div class="card-body">
+                        <div class="form-group">
+                            <input type="radio" name="spend_type" value="PIN" checked> {{ _("PIN Code") }}<br>
+                            <input type="radio" name="spend_type" value="YUBICO"> {{ _("YUBICO") }}<br>
+                            <input type="radio" name="spend_type" value="U2F" disabled> <strike>{{ _("U2F TOKEN") }} </strike><br>
+                            <input type="radio" name="spend_type" value="None"> {{ _("(No protection)") }}
+                        </div>
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Option</label>
+                            <input class="form-control" id="data" type="password" name="spend_value"
+                                   value=""/>
+                            <small id="value_detail">TODO - Depends on radio button</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="bmd-label-floating">{{ _("Existing master password")}}</label>
+                            <input class="form-control" id="check_master_password" type="password" name="master_password" value=""/>
+                            <small>{{ _("Needed to confirm operation")}}
+                            </small>
+                        </div>
+                        <input class="btn btn-warning" type="submit" value="{{ _('Set spend protection')}}">
+                    </div>
+                <div class="card-footer">
+                    <div class="stats">
+                {% if bismuth['spend_type']['type'] == None %}
+                        <i class="material-icons">lock_open</i> {{ _("Spending is currently not protected") }}
+                {% else %}
+                        <i class="material-icons">lock_close</i> {{ _("Spending is currently protected by {}").format(bismuth['spend_type']['label']) }}
+                {% end %}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
 </div>
 

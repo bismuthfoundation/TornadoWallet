@@ -54,7 +54,7 @@ async def async_get(url, is_json=False):
 
     If is_json, decodes the content
     """
-    # TODO: add an optional cache.
+    # TODO: add an optional cache (custom, since lru and cachetools do not support co-routines)
     global HTTP_SESSION
     # TODO: retry on error?
     if not HTTP_SESSION:

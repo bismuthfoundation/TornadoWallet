@@ -35,6 +35,7 @@ class BaseHandler(RequestHandler):
         self.bismuth_vars['extra'] = {"header":'', "footer": ''}
         spend_type = self.application.wallet_settings['spend']['type']
         self.bismuth_vars['spend_type'] = {"type": spend_type, "label": get_spend_type(_, spend_type) }
+        self.bismuth_vars['master_set'] = self.application.wallet_settings['master_hash']
         self.crystals = self.settings['bismuth_crystals']
         if self.bismuth_vars['address'] is None:
             self.bismuth_vars['address'] = _("No Bismuth address, please create or load a wallet first.")
