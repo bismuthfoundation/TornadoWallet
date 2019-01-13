@@ -57,13 +57,62 @@
         </div>
     </div>
 
+
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+        <div class="card">
+            <form action="/wallet/protection/" method="post">
+                {% if bismuth['wallet_locked'] %}
+                <div class="card-header card-header-danger card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">lock</i>
+                    </div>
+                    <h3 class="card-title">&nbsp;{{ _("Wallet is locked")}}</h3>
+                </div>
+                <div class="card-body">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">{{ _("Existing master password")}}</label>
+                            <input class="form-control" type="password" name="master_password" value=""/>
+                            <small>{{ _("This is the password that protects your private key(s)")}}
+                            </small>
+                        </div>
+                        <input type="hidden" name="action" value="unlock">
+                        <input class="btn btn-warning" type="submit" value="{{ _('Unlock wallet')}}">
+                </div>
+                {% else %}
+
+                <div class="card-header card-header-info card-header-icon">
+                    <div class="card-icon">
+                        <i class="material-icons">lock_open</i>
+                    </div>
+                    <h3 class="card-title">&nbsp;{{ _("Wallet is unlocked")}}</h3>
+                </div>
+                <div class="card-body">
+                    {{ _("You can lock it back for extra safety if you don't plan to use it soon.") }}
+                    <br/>
+                        <div class="form-group">
+                        <input type="hidden" name="action" value="lock">
+                        <input class="btn btn-warning" type="submit" value="{{ _('Lock wallet')}}">
+                        </div>
+                </div>
+                {% end %}
+                <div class="card-footer">
+                    <div class="stats">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
-            <form action="/wallet/protection/">
+            <form action="/wallet/protection/" method="post">
                 {% if bismuth['master_set'] %}
                 <div class="card-header card-header-success card-header-icon">
                     <div class="card-icon">
-                        <i class="material-icons">lock_close</i>
+                        <i class="material-icons">lock</i>
                     </div>
                 {% else %}
                 <div class="card-header card-header-warning card-header-icon">
@@ -96,6 +145,7 @@
                             </small>
                         </div>
                         <br/>
+                        <input type="hidden" name="action" value="set_master">
                         <input class="btn btn-warning" type="submit" value="{{ _('Set master password')}}">
 
                     </div>
@@ -115,7 +165,7 @@
 
     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
-            <form action="/wallet/protection/">
+            <form action="/wallet/protection/" method="post">
                 {% if bismuth['spend_type']['type'] == None %}
                 <div class="card-header card-header-warning card-header-icon">
                     <div class="card-icon">
@@ -135,7 +185,7 @@
                             <input type="radio" name="spend_type" value="PIN" checked> {{ _("PIN Code") }}<br>
                             <input type="radio" name="spend_type" value="YUBICO"> {{ _("YUBICO") }}<br>
                             <input type="radio" name="spend_type" value="U2F" disabled> <strike>{{ _("U2F TOKEN") }} </strike><br>
-                            <input type="radio" name="spend_type" value="None"> {{ _("(No protection)") }}
+                            <input type="radio" name="spend_type" value="None"> {{ _("No protection") }}
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">Option</label>
@@ -149,6 +199,7 @@
                             <small>{{ _("Needed to confirm operation")}}
                             </small>
                         </div>
+                        <input type="hidden" name="action" value="set_spend">
                         <input class="btn btn-warning" type="submit" value="{{ _('Set spend protection')}}">
                     </div>
                 <div class="card-footer">

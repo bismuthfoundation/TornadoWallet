@@ -5,7 +5,7 @@ i18n / l18n helpers
 
 def get_spend_type(_, spend:str) -> str:
     if spend is None:
-        return _("(No protection)")
+        return _("No protection")
     if spend == 'PIN':
         return _("PIN Code")
     if spend == 'YUBICO':
