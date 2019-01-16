@@ -162,7 +162,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/wallet/info" title="{{ _('Wallet') }}">
                                 <i class="material-icons">account_balance_wallet</i>
+                                {% if bismuth['wallet_locked'] %}
+                                <i class="material-icons" style="color:red;" title="{{ _('Your wallet is locked') }}">lock</i>
+                                {% else %}
                                 <i class="material-icons">lock_open</i>
+                                {% end %}
                                 <!-- todo: lock if wallet is encrypted and locked , other icon if no wallet, and if wallet is in clear -->
                                 <p class="d-lg-none d-md-block">
                                     {{ _("Wallet") }}

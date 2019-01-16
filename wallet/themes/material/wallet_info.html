@@ -13,7 +13,7 @@
             <div class="card-body">
                 {{ wallet['file'] }}<br>
                 {{ wallet['address'] }}<br>
-                {{ wallet['encrypted'] }}<br>
+                {{ _("{} Address(es)").format(wallet['count']) }}<br>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+    <!-- div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
         <div class="card card-stats">
             <form action="/wallet/create/">
                 <div class="card-header card-header-warning card-header-icon">
@@ -49,13 +49,15 @@
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        {{ _("Create a new BIS address in your wallet")}}
+
                     </div>
                 </div>
             </form>
         </div>
-    </div>
+    </div -->
+</div>
 
+<div class="row">
 
 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
@@ -75,6 +77,7 @@
                             </small>
                         </div>
                         <input type="hidden" name="action" value="unlock">
+                        {% raw xsrf_form_html() %}
                         <input class="btn btn-warning" type="submit" value="{{ _('Unlock wallet')}}">
                 </div>
                 {% else %}
@@ -90,6 +93,7 @@
                     <br/>
                         <div class="form-group">
                         <input type="hidden" name="action" value="lock">
+                        {% raw xsrf_form_html() %}
                         <input class="btn btn-warning" type="submit" value="{{ _('Lock wallet')}}">
                         </div>
                 </div>
@@ -145,6 +149,7 @@
                         </div>
                         <br/>
                         <input type="hidden" name="action" value="set_master">
+                        {% raw xsrf_form_html() %}
                         <input class="btn btn-warning" type="submit" value="{{ _('Set master password')}}">
 
                     </div>
@@ -199,6 +204,7 @@
                             </small>
                         </div>
                         <input type="hidden" name="action" value="set_spend">
+                        {% raw xsrf_form_html() %}
                         <input class="btn btn-warning" type="submit" value="{{ _('Set spend protection')}}">
                     </div>
                 <div class="card-footer">

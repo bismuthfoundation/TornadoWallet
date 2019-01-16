@@ -104,6 +104,7 @@ class Application(tornado.web.Application):
 
     def load_user_data(self, filename: str):
         """User data is config + optional integrated wallets."""
+        # TODO: no, already in wallet.
         if not os.path.isfile(filename):
             default = {"spend": {"type": None, "value": None}, "version": __version__}
             with open(filename, 'w') as f:
@@ -302,11 +303,18 @@ class JsonHandler(BaseHandler):
 
 class WalletHandler(BaseHandler):
     """Wallet related routes"""
-    async def load(self, params=None):
+    async def load(self, params=None, post=False):
+        _ = self.locale.translate
+        if self.bismuth._wallet._locked:
+            self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
         if not params:
             wallet_dir = helpers.get_private_dir()
+            # This lists the old stlye wallets
             wallets = self.bismuth.list_wallets(wallet_dir)
-            self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars, wallet_dir=wallet_dir)
+            # TODO: fix private access
+            addresses = self.bismuth._wallet._addresses
+            self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars, wallet_dir=wallet_dir,
+                        addresses=addresses)
         else:
             # load a wallet
             file_name = '/'.join(params)
@@ -315,11 +323,11 @@ class WalletHandler(BaseHandler):
             self.set_cookie('wallet', file_name)
             self.redirect("/wallet/info")
 
-    async def info(self, params=None):
+    async def info(self, params=None, post=False):
         wallet_info = self.bismuth.wallet()
         self.render("wallet_info.html", wallet=wallet_info, bismuth=self.bismuth_vars)
 
-    async def create(self, params=None):
+    async def create(self, params=None, post=False):
         # self.write(json.dumps(self.request))
         _, param = self.request.uri.split("?")
         _ = self.locale.translate
@@ -339,9 +347,57 @@ class WalletHandler(BaseHandler):
             else:
                 self.render("message.html", type="warning", title=_("Error"), message=_("Error creating {}.der").format(wallet), bismuth=self.bismuth_vars)
 
+    async def protection(self, params=None, post=False):
+        """Set lock, unlock, and other actions"""
+        _ = self.locale.translate
+        if not post:
+            self.redirect("/wallet/info")
+            return
+        action = self.get_argument("action", None)
+        if action == 'lock':
+            try:
+                self.bismuth._wallet.lock()
+            except Exception as e:
+                self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                            bismuth=self.bismuth_vars)
+                return
+            self.redirect("/wallet/info")
+        elif action == 'unlock':
+            try:
+                self.bismuth._wallet.unlock(self.get_argument("master_password", None))
+            except Exception as e:
+                self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                            bismuth=self.bismuth_vars)
+                return
+            self.redirect("/wallet/info")
+        elif action == 'set_master':
+            current_password = self.get_argument("master_password", None)
+            new_password = self.get_argument("new_master_password", None)
+            new_password2 = self.get_argument("new_master_password2", None)
+            if new_password != new_password2:
+                self.render("message.html", type="warning", title=_("Error"), message=_("Passwords do not match"),
+                            bismuth=self.bismuth_vars)
+                return
+            try:
+                self.bismuth._wallet.encrypt(new_password, current_password)
+            except Exception as e:
+                self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                            bismuth=self.bismuth_vars)
+                return
+            self.redirect("/wallet/info")
+
+        else:
+            self.redirect("/wallet/info")
+
     async def get(self, command=''):
         command, *params = command.split('/')
         await getattr(self, command)(params)
+
+    async def post(self, command=''):
+        command, *params = command.split('/')
+        if not command:
+            command = 'list'
+        await getattr(self, command)(params, post=True)
 
 
 class AboutHandler(BaseHandler):
