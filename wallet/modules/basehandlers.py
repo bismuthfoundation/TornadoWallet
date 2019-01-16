@@ -11,7 +11,6 @@ from modules.i18n import get_spend_type
 class BaseHandler(RequestHandler):
     """Common ancestor for ann route handlers"""
 
-
     def initialize(self):
         """Common init for every request"""
         # TODO: advantage in using Tornado Babel maybe? https://media.readthedocs.org/pdf/tornado-babel/0.1/tornado-babel.pdf
@@ -20,8 +19,10 @@ class BaseHandler(RequestHandler):
         self.bismuth = self.settings['bismuth_client']
         # Load persisted wallet if needed
         wallet = self.get_cookie('wallet')
+        """
         if wallet and wallet != self.bismuth.wallet_file:
             self.bismuth.load_wallet(wallet)
+        """
         # print("cookies", self.cookies)
         self.bismuth_vars = self.settings['bismuth_vars']
         # self.bismuth_vars['wallet'] =
@@ -35,7 +36,8 @@ class BaseHandler(RequestHandler):
         self.bismuth_vars['extra'] = {"header":'', "footer": ''}
         spend_type = self.application.wallet_settings['spend']['type']
         self.bismuth_vars['spend_type'] = {"type": spend_type, "label": get_spend_type(_, spend_type) }
-        self.bismuth_vars['master_set'] = self.application.wallet_settings['master_hash']
+        print(self.bismuth.wallet())
+        self.bismuth_vars['master_set'] = self.bismuth.wallet()['encrypted'] # self.application.wallet_settings['master_hash']
         self.bismuth_vars['wallet_locked'] = False
         self.crystals = self.settings['bismuth_crystals']
         if self.bismuth_vars['address'] is None:
@@ -48,6 +50,7 @@ class BaseHandler(RequestHandler):
         crystal_names = [name.split('_')[1] for name in crystals.keys()]
         self.bismuth_vars['crystals'] = crystal_names
 
+    # This could be static, but its easier to let it there so the template have direct access.
     def bool2str(self, a_boolean, iftrue, iffalse):
         return iftrue if a_boolean else iffalse
 

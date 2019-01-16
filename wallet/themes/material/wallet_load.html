@@ -13,11 +13,11 @@
                         <i class="material-icons">account_balance_wallet</i>
                     </div>
                     <p class="card-category">&nbsp;</p>
-                    <h3 class="card-title">{{ _("Your Bismuth wallets") }}</h3>
+                    <h3 class="card-title">{{ _("Your Bismuth addresses") }}</h3>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <i class="material-icons">folder</i> {{ _("Your wallets directory is {}").format(wallet_dir) }}
+                        <i class="material-icons">folder</i> <span>{{ _("Your wallet directory is {}").format(wallet_dir) }}</span>. {{ _("Your wallet is {}").format('wallet.json') }}
                     </div>
                 </div>
             </a>
@@ -25,20 +25,19 @@
     </div>
 
 
-    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
         <div class="card card-stats">
             <form action="/wallet/create/">
                 <div class="card-header card-header-warning card-header-icon">
                     <div class="card-icon">
                         <i class="material-icons">create_new_folder</i>
                     </div>
-                    <p class="card-category">{{ _("Create a")}}</p>
-                    <h3 class="card-title">{{ _("new wallet")}}</h3>
+                    <p class="card-category">{{ _("Create a new")}}</p>
+                    <h3 class="card-title">{{ _("address")}}</h3>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <input type="text" name="wallet" placeholder="{{ _('wallet_file_name') }}">
-                        <input type="submit" value="{{ _(' Ok')}}">
+                        {{ _("Create a new BIS address in your wallet")}}
                     </div>
                 </div>
             </form>

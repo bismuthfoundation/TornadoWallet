@@ -110,7 +110,11 @@
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="/wallet/info">{{ bismuth['address'] }}</a>
+                    {% if bismuth['address'] %}
+                    <span class="navbar-brand" >{{ bismuth['address'] }}</span> <a class="navbar-brand" href="/wallet/load"><i class="material-icons" title="{{_("Manage")}} {{_("addresses")}}">find_replace</i></a>
+                    {% else %}
+                    <a class="navbar-brand" href="/wallet/info">{{ _("Wallet info") }}</a>
+                    {% end %}
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">

@@ -56,7 +56,8 @@ class Application(tornado.web.Application):
         wallet_dir = helpers.get_private_dir()
         self.wallet_settings = None
         print("Please store your wallets under '{}'".format(wallet_dir))
-        self.load_user_data("{}/wallet.json".format(wallet_dir))
+        self.load_user_data("{}/options.json".format(wallet_dir))
+        bismuth_client.load_multi_wallet("{}/wallet.json".format(wallet_dir))
         bismuth_client.get_server()
         # Convert relative to absolute
         options.theme = os.path.join(helpers.base_path(), options.theme)
@@ -104,10 +105,7 @@ class Application(tornado.web.Application):
     def load_user_data(self, filename: str):
         """User data is config + optional integrated wallets."""
         if not os.path.isfile(filename):
-            # Default: no master
-            charset = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&~#{([|-\_@)]=}+-*/<>!,;:.?%'
-            salt = "".join(random.choice(charset) for x in range(random.randint(10, 20)))
-            default = {"salt": salt, "master_hash": None, "spend": {"type": None, "value": None}, "addresses": []}
+            default = {"spend": {"type": None, "value": None}, "version": __version__}
             with open(filename, 'w') as f:
                 json.dump(default, f)
             self.wallet_settings = default
@@ -416,7 +414,6 @@ class CrystalsHandler(BaseHandler):
         await getattr(self, command)(params, post=True)
 
 
-
 class AddressHandler(BaseHandler):
 
     async def get(self, command=''):
@@ -474,6 +471,7 @@ async def main():
         # This goes in the way, so we deactivate in debug.
         open_url("http://127.0.0.1:{}".format(options.port))
     await shutdown_event.wait()
+
 
 def port_in_use(port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
