@@ -351,6 +351,10 @@ class WalletHandler(BaseHandler):
     async def new_address(self, params=None, post=False):
         """Adds a new address to the current multiwallet."""
         _ = self.locale.translate
+        if len(self.bismuth._wallet._data['addresses']) >= 10:
+            self.render("message.html", type="warning", title=_("Error"), message=_("Max of {} addresses reached.").format(10),
+                        bismuth=self.bismuth_vars)
+            return
         label = self.get_argument("label", None)
         # TODO: check and block if this label already exists?
         try:
