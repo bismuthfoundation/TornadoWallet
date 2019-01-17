@@ -329,6 +329,7 @@ class WalletHandler(BaseHandler):
 
     async def create(self, params=None, post=False):
         # self.write(json.dumps(self.request))
+        # TODO: DEPRECATED
         _, param = self.request.uri.split("?")
         _ = self.locale.translate
         wallet = param.replace('wallet=', '')
@@ -346,6 +347,18 @@ class WalletHandler(BaseHandler):
                 self.redirect("/wallet/info")
             else:
                 self.render("message.html", type="warning", title=_("Error"), message=_("Error creating {}.der").format(wallet), bismuth=self.bismuth_vars)
+
+    async def new_address(self, params=None, post=False):
+        """Adds a new address to the current multiwallet."""
+        _ = self.locale.translate
+        label = self.get_argument("label", None)
+        # TODO: check and block if this label already exists?
+        try:
+            self.bismuth._wallet.new_address(label=label)
+            self.redirect("/wallet/load")
+        except Exception as e:
+            self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                    bismuth=self.bismuth_vars)
 
     async def protection(self, params=None, post=False):
         """Set lock, unlock, and other actions"""
