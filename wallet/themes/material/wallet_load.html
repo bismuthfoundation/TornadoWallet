@@ -102,7 +102,7 @@
         <!-- TODO: do not allow to import more than once -->
         <tr style="border-bottom:1px solid #808080;">
             <td>{{ wallet['file'] }}</td>
-            <td><a href="/wallet/import_der{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
+            <td><a href="/wallet/import_der{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
             <td>{{ wallet['encrypted'] }}</td>
             <td><a href="/wallet/import_der{{ wallet['file'] }}">
                 <i class="material-icons" title="{{ _('Import')}}">get_app</i>

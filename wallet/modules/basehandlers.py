@@ -30,7 +30,7 @@ class BaseHandler(RequestHandler):
         self.settings["page_title"] = self.settings["app_title"]
         self.bismuth_vars['server'] = self.bismuth.info()
         self.bismuth_vars['server_status'] = self.bismuth.status()
-        self.bismuth_vars['balance'] = self.bismuth.balance()
+        self.bismuth_vars['balance'] = self.bismuth.balance(for_display=True)
         self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
         self.bismuth_vars['extra'] = {"header":'', "footer": ''}
