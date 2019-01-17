@@ -316,18 +316,30 @@ class WalletHandler(BaseHandler):
             self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars, wallet_dir=wallet_dir,
                         addresses=addresses)
         else:
+            """
             # load a wallet
             file_name = '/'.join(params)
             self.bismuth.load_wallet(file_name)
             # TODO: store as cookie
             self.set_cookie('wallet', file_name)
-            self.redirect("/wallet/info")
+            """
+            self.redirect("/wallet/load")
+
 
     async def info(self, params=None, post=False):
         wallet_info = self.bismuth.wallet()
         self.render("wallet_info.html", wallet=wallet_info, bismuth=self.bismuth_vars)
 
-    async def create(self, params=None, post=False):
+    async def import_der(self, params=None, post: bool=False):
+        _ = self.locale.translate
+        if self.bismuth._wallet._locked:
+            self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
+        file_name = '/'+'/'.join(params)
+        # print(file_name)
+        self.bismuth._wallet.import_der(wallet_der=file_name)
+        self.redirect("/wallet/load")
+
+    async def create(self, params=None, post: bool=False):
         # self.write(json.dumps(self.request))
         # TODO: DEPRECATED
         _, param = self.request.uri.split("?")
