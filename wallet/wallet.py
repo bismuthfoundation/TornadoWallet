@@ -125,7 +125,7 @@ class HomeHandler(BaseHandler):
         # self.render("home.html", balance="101", wallet_servers=','.join(self.settings['wallet_servers']))
         if not self.bismuth_vars['address']:
             self.bismuth_vars['address'] = 'None'
-            self.redirect("/wallet/load")
+            self.redirect("/wallet/info")
             return
         self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(5, for_display=True)
         home_crystals = {"address": self.bismuth_vars['address'], "content": b'',
