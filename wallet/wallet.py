@@ -325,6 +325,18 @@ class WalletHandler(BaseHandler):
             """
             self.redirect("/wallet/load")
 
+    async def load_address(self, params=None, post=False):
+        """Set an address from the multiwallet as current address"""
+        _ = self.locale.translate
+        address = params[0]
+        try:
+            self.bismuth.set_address(address)
+        except Exception as e:
+            self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                        bismuth=self.bismuth_vars)
+            return
+        self.set_cookie('address', address)
+        self.redirect("/wallet/load")
 
     async def info(self, params=None, post=False):
         wallet_info = self.bismuth.wallet()

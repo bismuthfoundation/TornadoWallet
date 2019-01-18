@@ -24,7 +24,7 @@
             <a href="/wallet/load">
                 <div class="card-header card-header-success card-header-icon">
                     <div class="card-icon">
-                        <i class="material-icons">move_to_inbox</i>
+                        <i class="material-icons">find_replace</i>
                     </div>
                     <p class="card-category">{{ _("Manage")}}</p>
                     <h3 class="card-title">{{ _("addresses")}}</h3>
@@ -161,7 +161,7 @@
                 <div class="card-footer">
                     <div class="stats">
                 {% if bismuth['master_set'] %}
-                        <i class="material-icons">lock_close</i> {{ _("Master password is set") }}
+                        <i class="material-icons">lockk</i> {{ _("Master password is set") }}
                 {% else %}
                         <i class="material-icons">lock_open</i> {{ _("Master password is not set") }}
                 {% end %}
@@ -183,7 +183,7 @@
                 {% else %}
                 <div class="card-header card-header-success card-header-icon">
                     <div class="card-icon">
-                        <i class="material-icons">lock_close</i>
+                        <i class="material-icons">lockk</i>
                     </div>
                 {% end %}
                     <!-- p class="card-category">{{ _("Spend protection")}}</p -->
@@ -219,7 +219,7 @@
                 {% if bismuth['spend_type']['type'] == None %}
                         <i class="material-icons">lock_open</i> {{ _("Spending is currently not protected") }}
                 {% else %}
-                        <i class="material-icons">lock_close</i> {{ _("Spending is currently protected by {}").format(bismuth['spend_type']['label']) }}
+                        <i class="material-icons">lock</i> {{ _("Spending is currently protected by {}").format(bismuth['spend_type']['label']) }}
                 {% end %}
                     </div>
                 </div>

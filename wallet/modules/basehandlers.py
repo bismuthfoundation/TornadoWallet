@@ -23,6 +23,12 @@ class BaseHandler(RequestHandler):
         if wallet and wallet != self.bismuth.wallet_file:
             self.bismuth.load_wallet(wallet)
         """
+        address = self.get_cookie('address')
+        if address:
+            try:
+                self.bismuth.set_address(address)
+            except:
+                pass
         # print("cookies", self.cookies)
         self.bismuth_vars = self.settings['bismuth_vars']
         # self.bismuth_vars['wallet'] =
@@ -31,7 +37,7 @@ class BaseHandler(RequestHandler):
         self.bismuth_vars['server'] = self.bismuth.info()
         self.bismuth_vars['server_status'] = self.bismuth.status()
         self.bismuth_vars['balance'] = self.bismuth.balance(for_display=True)
-        self.bismuth_vars['address'] = self.bismuth_vars['server']['address']
+        self.bismuth_vars['address'] = self.bismuth._wallet.info()['address']  # self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
         self.bismuth_vars['extra'] = {"header":'', "footer": ''}
         spend_type = self.application.wallet_settings['spend']['type']

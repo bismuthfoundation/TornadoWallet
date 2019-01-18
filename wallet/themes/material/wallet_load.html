@@ -48,11 +48,11 @@
                     {% for address in addresses %}
                     <tr style="border-bottom:1px solid #808080;">
                         <td>{{ address['label'] }}</td>
-                        <td><a href="/wallet/load/{{ address['address'] }}">{{ address['address'] }}</a></td>
+                        <td><a href="/wallet/load_address/{{ address['address'] }}">{{ address['address'] }}</a></td>
                         <td>{{ datetime.datetime.utcfromtimestamp(address['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
-                        <td><a href="/wallet/load/{{ address['address'] }}">
-                            <i class="fa fa-envelope-open" title="{{ _(' Load')}}"></i>
+                        <td><a href="/wallet/load_address/{{ address['address'] }}">
+                            <i class="fa fa-envelope-open" title="{{ _('Set this address as current one')}}"></i>
                         </a></td>
                     </tr>
                     {% end %}
