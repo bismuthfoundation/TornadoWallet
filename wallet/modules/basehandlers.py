@@ -76,6 +76,10 @@ class BaseHandler(RequestHandler):
         """Display message template page"""
         self.render("message.html", bismuth=self.bismuth_vars, title=title, message=message, type=type)
 
+    def message_pop(self, title, message, type="info"):
+        """Display message template page"""
+        self.render("message_pop.html", bismuth=self.bismuth_vars, title=title, message=message, type=type)
+
     def extract_params(self):
         # TODO: rewrite with get_arguments and remove this redundant function
         if '?' not in self.request.uri:
