@@ -339,6 +339,16 @@ function float_to_bis(x){
         });
     }
 
+    function sign(data, token){
+
+    if (data == '') { return false}
+    enabled = true;
+    $.get('/messages/signpop?data='+data+"&token="+token,function(page){
+        $("#payment_window").html(page);
+        $("#payment_window").modal("show");
+        });
+    }
+
 function confirmed(){
     if(enabled){
         enabled = false;

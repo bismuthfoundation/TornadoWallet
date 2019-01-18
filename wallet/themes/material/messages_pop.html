@@ -1,0 +1,53 @@
+{% block body %}
+
+<div class="modal-open" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color: #1a2035;">
+
+            <div class="modal-body">
+
+
+                <div class="card">
+                    <div class="card-header card-header-{{ color }}">
+                        <h4 class="card-title">{{ title }}
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        {{ message }}
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label class="bmd-label-floating">{{ _("Data (message)")}}</label>
+                            <input class="form-control" id="data" type="text" name="data"
+                                   title="{{ bismuth['params'].get('data', '') }}"
+                                   value="{{ bismuth['params'].get('data', '') }}" disabled/>
+                            <!-- small>
+                                {{ _("Optionally, you can add a small comment to your transaction. Required for exchanges deposit.")}}
+                            </small-->
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-success float-right" data-dismiss="modal" aria-label="Close">
+                                {{ _('Close') }}
+                            </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% end %}

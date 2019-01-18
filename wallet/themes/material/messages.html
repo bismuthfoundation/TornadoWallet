@@ -8,7 +8,7 @@
 <div class="row">
 
     <div class="col-lg-6 col-sm-12">
-        <form method="post" action="/messages/sign">
+        <!-- form method="post" action="/messages/sign" -->
             <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-header card-header-info">
@@ -25,7 +25,8 @@
                                 <input class="form-control" id="spend_token" type="text" name="spend_token"/>
                                 <small>TODO - spend protection - Ignore for now.</small>
                         </div>
-                        <button class="btn btn-primary " name="action" value="sign">
+                        {% raw xsrf_form_html() %}
+                        <button class="btn btn-primary " name="action" value="sign" onclick="sign($('#data').val(), $('#spend_token').val());return false;">
                                {{ _("Sign Message") }}
                         </button>
                         <div class="clearfix"></div>
@@ -33,7 +34,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        <!-- /form -->
     </div>
 
 
@@ -55,6 +56,7 @@
                         <input class="form-control" id="recipient" type="text" name="recipient"/>
                         <small>{{ _("You have to tell the recipient address so the message can be encrypted with his private key")}}</small>
                     </div>
+                    {% raw xsrf_form_html() %}
                     <button class="btn btn-primary " name="action" value="encrypt">
                            {{ _("Encrypt Message") }}
                     </button>

@@ -533,6 +533,41 @@ class MessagesHandler(BaseHandler):
     async def index(self, params=None, post=False):
         self.render("messages.html", bismuth=self.bismuth_vars)
 
+    async def signpop(self, params=None):
+        # query_params = self.extract_params()
+        message = recipient = self.get_argument("message", '')
+        spend_token = recipient = self.get_argument("spend_token", '')
+        print(message, spend_token)
+        # print(params)
+        _ = self.locale.translate
+        self.settings["page_title"] = _("Sign message")
+
+        if not self.bismuth_vars['address']:
+            await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            return
+        # print(self.bismuth.wallet())
+        if self.bismuth.wallet()['encrypted']:
+            self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
+            return
+
+        self.bismuth_vars['data'] = 'test'
+        self.render("messages_pop.html", bismuth=self.bismuth_vars, title=self.settings["page_title"], message=message, color="success")
+        """
+        if message != '':
+            # We have an address param, it's a confirmation
+            self.settings["page_title"] = _("Send BIS: Confirmation")
+            type='warning'  # Do not translate
+            title=_("Please confirm this transaction")
+            message=_("Check this is what you intended to do and hit the \"confirm\" button")
+            # TODO: address ok?
+            # todo: amount ok
+            # todo: enough balance?
+            self.render("transactions_send_confirm.html", bismuth=self.bismuth_vars, type=type, title=title,
+                        message=message)
+        else:
+            self.render("transactions_send.html", bismuth=self.bismuth_vars)
+        """
+
     async def get(self, command=''):
         command, *params = command.split('/')
         if not command:
