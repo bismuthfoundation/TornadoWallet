@@ -40,7 +40,8 @@ class BaseHandler(RequestHandler):
         self.bismuth_vars['address'] = self.bismuth._wallet.info()['address']  # self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
         self.bismuth_vars['extra'] = {"header":'', "footer": ''}
-        spend_type = self.application.wallet_settings['spend']['type']
+        spend_type = self.bismuth.wallet()['spend']['type']
+        # Do not inject the token, or a malicious theme could get it.
         self.bismuth_vars['spend_type'] = {"type": spend_type, "label": get_spend_type(_, spend_type) }
         # print(self.bismuth.wallet())
         self.bismuth_vars['master_set'] = self.bismuth.wallet()['encrypted'] # self.application.wallet_settings['master_hash']
@@ -70,6 +71,11 @@ class BaseHandler(RequestHandler):
         """return the 'active' string if the request uri begins with the one in path. Used for menu css"""
         if self.request.uri.startswith(path):
             return "active"
+        return ''
+
+    def checked_if(self, condition:bool):
+        if condition:
+            return "checked"
         return ''
 
     def message(self, title, message, type="info"):

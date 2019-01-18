@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <label class="bmd-label-floating">{{ _("Recipient")}}</label>
                         <input class="form-control" id="recipient" type="text" name="recipient"/>
-                        <small>{{ _("You have to tell the recipient address so the message can be encrypted with his private key")}}</small>
+                        <small>{{ _("You have to tell the recipient address so the message can be encrypted with his public key")}}</small>
                     </div>
                     {% raw xsrf_form_html() %}
                     <button class="btn btn-primary " name="action" value="encrypt" onclick="encrypt($('#data').val(), $('#recipient').val());return false;">

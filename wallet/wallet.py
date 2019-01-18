@@ -56,7 +56,7 @@ class Application(tornado.web.Application):
         wallet_dir = helpers.get_private_dir()
         self.wallet_settings = None
         print("Please store your wallets under '{}'".format(wallet_dir))
-        self.load_user_data("{}/options.json".format(wallet_dir))
+        # self.load_user_data("{}/options.json".format(wallet_dir))
         bismuth_client.load_multi_wallet("{}/wallet.json".format(wallet_dir))
         bismuth_client.get_server()
         # Convert relative to absolute
@@ -105,6 +105,8 @@ class Application(tornado.web.Application):
     def load_user_data(self, filename: str):
         """User data is config + optional integrated wallets."""
         # TODO: no, already in wallet.
+        raise RuntimeError("Deprecated, do not use")
+        """
         if not os.path.isfile(filename):
             default = {"spend": {"type": None, "value": None}, "version": __version__}
             with open(filename, 'w') as f:
@@ -113,10 +115,10 @@ class Application(tornado.web.Application):
         else:
             with open(filename) as f:
                 self.wallet_settings = json.load(f)
+        """
 
 
 class HomeHandler(BaseHandler):
-
 
     async def get(self):
         """
@@ -137,7 +139,6 @@ class HomeHandler(BaseHandler):
 
 
 class TransactionsHandler(BaseHandler):
-
     """
     def randhex(self, size):
         return ''.join(random.choices(string.ascii_lowercase + string.digits, k=size))
@@ -218,7 +219,6 @@ class TransactionsHandler(BaseHandler):
             message =  _("There was an error submitting to the mempool, transaction was not sent.")
             color = "danger"
             title = _("Error")
-
         self.render("transactions_confirmpop.html", bismuth=self.bismuth_vars, message=message, color=color, title=title)
 
     async def confirm(self, params=None):
@@ -340,6 +340,7 @@ class WalletHandler(BaseHandler):
 
     async def info(self, params=None, post=False):
         wallet_info = self.bismuth.wallet()
+        # self.bismuth_vars['spend_type']['type'] = 'YUBICO'
         self.render("wallet_info.html", wallet=wallet_info, bismuth=self.bismuth_vars)
 
     async def import_der(self, params=None, post: bool=False):
@@ -431,7 +432,17 @@ class WalletHandler(BaseHandler):
                             bismuth=self.bismuth_vars)
                 return
             self.redirect("/wallet/info")
-
+        elif action == "set_spend":
+            password = self.get_argument("master_password", None)
+            spend_type = self.get_argument("spend_type", None)
+            spend_value = self.get_argument("spend_value", None)
+            try:
+                self.bismuth._wallet.set_spend(spend_type, spend_value, password=password)
+            except Exception as e:
+                self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                            bismuth=self.bismuth_vars)
+                return
+            self.redirect("/wallet/info")
         else:
             self.redirect("/wallet/info")
 
