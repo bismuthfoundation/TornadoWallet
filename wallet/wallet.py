@@ -170,7 +170,7 @@ class TransactionsHandler(BaseHandler):
         else:
             self.render("transactions_send.html", bismuth=self.bismuth_vars)
 
-    async def sendpop(self, params=None):
+    async def send_pop(self, params=None):
         # TODO: factorize, common code with send.
         query_params = self.extract_params()
         # print(params)
@@ -533,7 +533,7 @@ class MessagesHandler(BaseHandler):
     async def index(self, params=None, post=False):
         self.render("messages.html", bismuth=self.bismuth_vars)
 
-    async def signpop(self, params=None):
+    async def sign_pop(self, params=None):
         # query_params = self.extract_params()
         _ = self.locale.translate
         message = recipient = self.get_argument("data", '')
@@ -554,6 +554,11 @@ class MessagesHandler(BaseHandler):
         message = _("Your message '{}' has been signed.").format(message)
         self.render("messages_pop.html", bismuth=self.bismuth_vars, title=self.settings["page_title"], message=message,
                     color="success", what=_('Signature'), data=data)
+
+    async def encrypt_pop(self, params=None):
+        _ = self.locale.translate
+        await self.message_pop(_("Error:") , _("This feature is under construction. "), "warning")
+        return
 
     async def get(self, command=''):
         command, *params = command.split('/')

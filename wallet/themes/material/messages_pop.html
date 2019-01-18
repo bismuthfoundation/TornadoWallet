@@ -21,8 +21,8 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group">
-                            <label class="bmd-label-floating">{{ what }}</label>
-                            <textarea class="form-control" id="data" name="data" rows="10">{{ data }}</textarea>
+                            <label class="bmd-label-floating">{{ what }} ({{ _("Click text to copy") }})</label>
+                            <textarea class="form-control copy-to-clipboard" id="data" name="data" rows="10">{{ data }}</textarea>
                         </div>
 
                     </div>
@@ -30,6 +30,9 @@
                         <button type="button" class="btn btn-success float-right" data-dismiss="modal" aria-label="Close">
                                 {{ _('Close') }}
                             </button>
+                        <button type="button" class="btn btn-success float-right copied" style="display:none">
+                                <i class="material-icons">done_outline</i> {{ _('Copied to Clipboard') }}
+                        </button>
                     </div>
                 </div>
 
@@ -38,5 +41,15 @@
     </div>
 </div>
 
+<script>
+$(function() {
+	$('.copy-to-clipboard').click(function() {
+	$(this).focus();
+	$(this).select();
+	document.execCommand('copy');
+	$(".copied").show().fadeOut(2500);
+    });
+});
+</script>
 
 {% end %}

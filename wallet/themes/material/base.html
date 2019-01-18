@@ -323,13 +323,14 @@ function float_to_bis(x){
   return x.toFixed(8).replace(/\.?0*$/,'');
 }
 
+
     function send(address, amount, operation, data ){
 
     if (address == '') { return false}
     if (amount <= 0) { amount=0}
 
     enabled = true;
-    $.get('/transactions/sendpop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation,function(page){
+    $.get('/transactions/send_pop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation,function(page){
         $("#payment_window").html(page);
         $("#payment_window").modal("show");
         fees = 0.01+0.00001*data.length
@@ -340,14 +341,23 @@ function float_to_bis(x){
     }
 
     function sign(data, token){
-
-    if (data == '') { return false}
-    enabled = true;
-    $.get('/messages/signpop?data='+data+"&token="+token,function(page){
-        $("#payment_window").html(page);
-        $("#payment_window").modal("show");
-        });
+        if (data == '') { return false}
+        enabled = true;
+        $.get('/messages/sign_pop?data='+data+"&token="+token,function(page){
+            $("#payment_window").html(page);
+            $("#payment_window").modal("show");
+            });
     }
+
+    function encrypt(data, recipient){
+        if (data == '') { return false}
+        enabled = true;
+        $.get('/messages/encrypt_pop?data='+data+"&recipient="+recipient,function(page){
+            $("#payment_window").html(page);
+            $("#payment_window").modal("show");
+            });
+    }
+
 
 function confirmed(){
     if(enabled){

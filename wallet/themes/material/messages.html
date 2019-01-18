@@ -39,7 +39,6 @@
 
 
     <div class="col-lg-6 col-sm-12">
-        <form method="post" action="/messages/encrypt">
             <div class="col-lg-12 col-md-12">
                 <div class="card">
                     <div class="card-header card-header-info">
@@ -57,14 +56,13 @@
                         <small>{{ _("You have to tell the recipient address so the message can be encrypted with his private key")}}</small>
                     </div>
                     {% raw xsrf_form_html() %}
-                    <button class="btn btn-primary " name="action" value="encrypt">
+                    <button class="btn btn-primary " name="action" value="encrypt" onclick="encrypt($('#data').val(), $('#recipient').val());return false;">
                            {{ _("Encrypt Message") }}
                     </button>
                     <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
-        </form>
     </div>
 
 </div>
