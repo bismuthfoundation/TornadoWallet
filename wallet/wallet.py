@@ -539,7 +539,7 @@ class MessagesHandler(BaseHandler):
         message = recipient = self.get_argument("data", '')
         spend_token = recipient = self.get_argument("spend_token", '')
         self.settings["page_title"] = _("Sign message")
-        if True:  # not self.bismuth_vars['address']:
+        if not self.bismuth_vars['address']:
             await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
         # print(self.bismuth.wallet())
@@ -547,7 +547,8 @@ class MessagesHandler(BaseHandler):
             self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         data = 'test'
-
+        # TODO: check spend protection
+        data = self.bismuth.sign(message)
         if len(message) > 50:
             message = message[:50] + "[...]"
         message = _("Your message '{}' has been signed.").format(message)
