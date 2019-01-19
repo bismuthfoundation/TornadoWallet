@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.0.76'
+__version__ = '0.0.78'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -212,12 +212,12 @@ class TransactionsHandler(BaseHandler):
             type='warning'  # Do not translate
             title=_("Please confirm this transaction")
             message=_("Check this is what you intended to do and hit the \"confirm\" button")
-            
+
             self.bismuth_vars['params']['recipient'] = self.get_argument('recipient')
             self.bismuth_vars['params']['amount'] = self.get_argument('amount', '0.00000000')
             self.bismuth_vars['params']['operation'] = self.get_argument('operation', '')
             self.bismuth_vars['params']['data'] = self.get_argument('data', '')
-            
+
             # TODO: address ok?
             # todo: amount ok
             # todo: enough balance?
@@ -295,9 +295,16 @@ class TransactionsHandler(BaseHandler):
             self.message(_("Error:"), _("There was an error submitting to the mempool, transaction was not sent."), "warning")
 
     async def receive(self, params=None):
-        query_params = self.extract_params()
-        address = self.bismuth_vars['server']['address']
         _ = self.locale.translate
+        query_params = self.extract_params()
+        if not self.bismuth_vars['address']:
+            await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            return
+        # print(self.bismuth.wallet())
+        if self.bismuth.wallet()['encrypted']:
+            self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
+            return
+        address = self.bismuth_vars['server']['address']
         self.settings["page_title"] = _("Receive BIS")
         bisurl = ''
         if query_params.get('address', False):
