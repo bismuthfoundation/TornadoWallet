@@ -192,15 +192,15 @@ class TransactionsHandler(BaseHandler):
             message=_("Check this is what you intended to do and hit the \"confirm\" button")
             # self.bismuth_vars['recipient'] operation data amount
             decoded = BismuthUtil.read_url(self.get_argument('url'))
-            if decoded['Error']:
+            if decoded.get('Error', False):
                 self.message_pop(_("Error:") , _(decoded['Error']),
                                  "warning")
                 return
             print(decoded)
-            self.bismuth_vars['recipent'] = decoded['recipient']
-            self.bismuth_vars['amount'] = decoded['amount']
-            self.bismuth_vars['operation'] = decoded['operation']
-            self.bismuth_vars['data'] = decoded['openfield']
+            self.bismuth_vars['params']['recipient'] = decoded['recipient']
+            self.bismuth_vars['params']['amount'] = decoded['amount']
+            self.bismuth_vars['params']['operation'] = decoded['operation']
+            self.bismuth_vars['params']['data'] = decoded['openfield']
             # TODO: address ok?
             # todo: amount ok
             # todo: enough balance?
@@ -296,6 +296,7 @@ class TransactionsHandler(BaseHandler):
         bisurl = ''
         if query_params.get('address', False):
             address = query_params['address']
+            query_params['amount'] = "{:0.8f}".format(float(query_params['amount']))
             bisurl = BismuthUtil.create_bis_url(address, query_params['amount'], '', query_params['data'])
         self.render("transactions_receive.html", bismuth=self.bismuth_vars, address=address, bisurl=bisurl)
 

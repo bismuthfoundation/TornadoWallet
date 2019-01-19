@@ -331,6 +331,11 @@ function float_to_bis(x){
             $("#payment_window").html(page);
             $("#payment_window").modal("show");
             // TODO: missing alias and token emission
+            data = $("#data").val();
+            amount = $("#amount").val();
+            if (amount <= 0) { amount=0}
+            alert(data);
+            alert(amount);
             fees = 0.01+0.00001*data.length
             $("#feespop").val(float_to_bis(fees));
             $("#totalpop").val(float_to_bis(parseFloat(amount) + fees));
@@ -393,7 +398,7 @@ function confirmed(){
 
        function fees_calc() {
             data = $("#data").val();
-            amount = $("#amount").val();
+            amount = float($("#amount").val());
             if (amount <= 0) { amount=0}
             fees = 0.01+0.00001*data.length
             $("#fees").val(float_to_bis(fees));
