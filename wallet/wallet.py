@@ -172,7 +172,7 @@ class TransactionsHandler(BaseHandler):
 
     async def send_pop(self, params=None):
         # TODO: factorize, common code with send.
-        query_params = self.extract_params()
+        # query_params = self.extract_params()
         # print(params)
         _ = self.locale.translate
         self.settings["page_title"] = _("Send BIS")
@@ -184,7 +184,29 @@ class TransactionsHandler(BaseHandler):
         if self.bismuth.wallet()['encrypted']:
             self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
-        if query_params.get('recipient', False):
+        if self.get_argument('url', False):
+            # We have an url param, confirm once decoded
+            self.settings["page_title"] = _("Send BIS: Confirmation")
+            type='warning'  # Do not translate
+            title=_("Please confirm this transaction")
+            message=_("Check this is what you intended to do and hit the \"confirm\" button")
+            # self.bismuth_vars['recipient'] operation data amount
+            decoded = BismuthUtil.read_url(self.get_argument('url'))
+            if decoded['Error']:
+                self.message_pop(_("Error:") , _(decoded['Error']),
+                                 "warning")
+                return
+            print(decoded)
+            self.bismuth_vars['recipent'] = decoded['recipient']
+            self.bismuth_vars['amount'] = decoded['amount']
+            self.bismuth_vars['operation'] = decoded['operation']
+            self.bismuth_vars['data'] = decoded['openfield']
+            # TODO: address ok?
+            # todo: amount ok
+            # todo: enough balance?
+            self.render("transactions_sendpop_confirm.html", bismuth=self.bismuth_vars, type=type, title=title,
+                        message=message)
+        elif self.get_argument('recipient', False):
             # We have an address param, it's a confirmation
             self.settings["page_title"] = _("Send BIS: Confirmation")
             type='warning'  # Do not translate
