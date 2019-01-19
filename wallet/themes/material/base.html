@@ -397,7 +397,7 @@ function confirmed(){
 
        function fees_calc() {
             data = $("#data").val();
-            amount = float($("#amount").val());
+            amount = $("#amount").val();
             if (amount <= 0) { amount=0}
             fees = 0.01+0.00001*data.length
             $("#fees").val(float_to_bis(fees));
