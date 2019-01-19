@@ -149,7 +149,6 @@ class TransactionsHandler(BaseHandler):
         # print(params)
         _ = self.locale.translate
         self.settings["page_title"] = _("Send BIS")
-
         if not self.bismuth_vars['address']:
             await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
@@ -201,12 +200,27 @@ class TransactionsHandler(BaseHandler):
 
     async def confirmpop(self, params=None):
         _ = self.locale.translate
+        spend_token = self.get_argument("token", '')  # Beware naming inconsistencies token, spend_token
+        if not self.bismuth_vars['address']:
+            await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            return
+        if self.bismuth.wallet()['encrypted']:
+            self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
+            return
+        # check spend protection
+        # TODO: add more methods
+        if self.bismuth.wallet()['spend']['type'] == 'PIN':
+            print(spend_token, self.bismuth.wallet()['spend'])
+            if spend_token != self.bismuth.wallet()['spend']['value']:
+                self.message_pop(_("Error:") + " " + _("Spend protection"), _("Invalid PIN Number"),
+                                 "warning")
+                return
         amount = float(self.get_argument("amount"))
         recipient = self.get_argument("recipient")
         data = self.get_argument("data", '')
         operation = self.get_argument("operation", '')
         txid = self.bismuth.send(recipient, amount, operation, data)
-        print("txid", txid)
+        print("txidpop", txid)
         if txid:
             message = _("Success:") + " " + _("Transaction sent") + "<br>" +\
                          _("The transaction was submitted to the mempool.")\
@@ -223,12 +237,27 @@ class TransactionsHandler(BaseHandler):
 
     async def confirm(self, params=None):
         _ = self.locale.translate
+        spend_token = self.get_argument("token", '')  # Beware naming inconsistencies token, spend_token
+        if not self.bismuth_vars['address']:
+            await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            return
+        if self.bismuth.wallet()['encrypted']:
+            self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
+            return
+        # check spend protection
+        # TODO: add more methods
+        if self.bismuth.wallet()['spend']['type'] == 'PIN':
+            print(spend_token, self.bismuth.wallet()['spend'])
+            if spend_token != self.bismuth.wallet()['spend']['value']:
+                self.message_pop(_("Error:") + " " + _("Spend protection"), _("Invalid PIN Number"),
+                                 "warning")
+                return
         amount = float(self.get_argument("amount"))
         recipient = self.get_argument("recipient")
         data = self.get_argument("data", '')
         operation = self.get_argument("operation", '')
         txid = self.bismuth.send(recipient, amount, operation, data)
-        print("txid", txid)
+        print("txid1", txid)
         if txid:
             self.message(_("Success:") + " " + _("Transaction sent"),
                          _("The transaction was submitted to the mempool.")
@@ -547,8 +576,8 @@ class MessagesHandler(BaseHandler):
     async def sign_pop(self, params=None):
         # query_params = self.extract_params()
         _ = self.locale.translate
-        message = recipient = self.get_argument("data", '')
-        spend_token = recipient = self.get_argument("spend_token", '')
+        message = self.get_argument("data", '')
+        spend_token = self.get_argument("token", '')  # Beware naming inconsistencies token, spend_token
         self.settings["page_title"] = _("Sign message")
         if not self.bismuth_vars['address']:
             await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
@@ -557,8 +586,14 @@ class MessagesHandler(BaseHandler):
         if self.bismuth.wallet()['encrypted']:
             self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
-        data = 'test'
-        # TODO: check spend protection
+        # check spend protection
+        # TODO: add more methods
+        if self.bismuth.wallet()['spend']['type'] == 'PIN':
+            print(spend_token, self.bismuth.wallet()['spend'])
+            if spend_token != self.bismuth.wallet()['spend']['value']:
+                self.message_pop(_("Error:") + " " + _("Spend protection"), _("Invalid PIN Number"),
+                                 "warning")
+                return
         data = self.bismuth.sign(message)
         if len(message) > 50:
             message = message[:50] + "[...]"

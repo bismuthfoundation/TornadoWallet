@@ -78,8 +78,11 @@
                     {{ _("This is the QR code for your address, data and amount as a BisUrl.")}}<br/>
                     {{ _("You can copy/paste this image to send in a mail or anything")}}
                     <br/>
-                    <label class="bmd-label-floating">{{ _("BIS URL")}}</label>
-                    <input class="form-control" id="bisurl" type="text" name="bisurl" value="{{ bisurl }}"/>
+                    <label class="bmd-label-floating">{{ _("BIS URL")}} ({{ _("Click text to copy") }})</label>
+                    <input class="form-control copy-to-clipboard-base" id="bisurl" type="text" name="bisurl" value="{{ bisurl }}"/>
+                    <button type="button" class="btn btn-success float-right copied" style="display:none">
+                                <i class="material-icons">done_outline</i> {{ _('Copied to Clipboard') }}
+                    </button>
                     {% end %}
                 </div>
             </div>
@@ -89,5 +92,7 @@
 </div>
 
 </form>
+
+
 
 {% end %}

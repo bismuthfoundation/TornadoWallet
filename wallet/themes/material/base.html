@@ -324,7 +324,7 @@ function float_to_bis(x){
 }
 
 
-    function send(address, amount, operation, data ){
+    function send(address, amount, operation, data, token ){
 
     if (address == '') { return false}
     if (amount <= 0) { amount=0}
@@ -369,8 +369,9 @@ function confirmed(){
         data = $("#data").val();
         amount = $("#amount").val();
         operation = $("#operation").val();
+        token = $("#spend_token").val();
 
-        $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation,function(page){
+        $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation+"&token="+token,function(page){
             $("#payment_window").html(page);
             $("#payment_window").css({"cursor":"context-menu"});
             //$("#payment_window").modal("show");
@@ -563,8 +564,18 @@ function confirmed(){
 </script>
 <script>
     $(document).ready(function() {
-      // Javascript methods body can be found in static/js/demos.js
-      md.initDashboardPageCharts();
+        // Javascript methods body can be found in static/js/demos.js
+        md.initDashboardPageCharts();
+
+        $('.copy-to-clipboard-base').click(function() {
+            $(this).focus();
+            $(this).select();
+            document.execCommand('copy');
+            $(".copied").show().fadeOut(2500);
+        });
+    });
+
+</script>
 
     });
 

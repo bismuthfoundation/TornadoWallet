@@ -20,11 +20,18 @@
                             <label class="bmd-label-floating">{{ _("Data (message)")}}</label>
                             <textarea class="form-control" id="data" name="data" rows="5"></textarea>
                         </div>
+                        <!-- TODO: make that a generic block -->
+                        {% if bismuth['spend_type']['type'] %}
                         <div class="form-group">
                                 <label class="bmd-label-floating">{{ _("Spend protection")}}</label>
-                                <input class="form-control" id="spend_token" type="text" name="spend_token"/>
-                                <small>TODO - spend protection - Ignore for now.</small>
+                                <!-- https://stackoverflow.com/questions/468288/input-type-password-dont-let-browser-remember-the-password -->
+                                <!-- https://medium.com/@idanhareven/how-to-workaround-browsers-save-password-password-autocomplete-features-135b91ad06d2 -->
+                                <input class="form-control password" id="spend_token" type="text" name="spend_token" />
+                                <small>{{ bismuth['spend_type']['label'] }}</small>
                         </div>
+                        {% else %}
+                        <input type="hidden" name="spend_token" value="" />
+                        {% end %}
                         {% raw xsrf_form_html() %}
                         <button class="btn btn-primary " name="action" value="sign" onclick="sign($('#data').val(), $('#spend_token').val());return false;">
                                {{ _("Sign Message") }}

@@ -82,17 +82,31 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6 col-sm-12">
+                            </div>
+                             <div class="col-lg-6 col-sm-12">
+                                    <!-- TODO: make that a generic block -->
+                                    {% if bismuth['spend_type']['type'] %}
+                                    <div class="form-group">
+                                            <label class="bmd-label-floating">{{ _("Spend protection")}}</label>
+                                            <input class="form-control password" id="spend_token" type="text" name="spend_token" />
+                                            <small>{{ bismuth['spend_type']['label'] }}</small>
+                                    </div>
+                                    {% else %}
+                                    <input type="hidden" name="spend_token" value="" />
+                                    {% end %}
+                             </div>
+                             <div class="col-lg-6 col-sm-12">
 
                                 <button value="cancel" class="btn btn-warning"
                                         onclick="close()" data-dismiss="modal">{{ _("Cancel")}}
                                 </button>
-                            </div>
-                            <div class="col-lg-6 col-sm-12">
+                             </div>
+                             <div class="col-lg-6 col-sm-12">
                                 <button id="send_button" type="submit" value="confirm"
                                         class="btn btn-success float-right" onclick="confirmed()">
                                     {{ _("Confirm and send BIS")}}
                                 </button>
-                            </div>
+                             </div>
                         </div>
 
                     </div>

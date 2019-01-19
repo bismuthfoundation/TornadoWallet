@@ -74,6 +74,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- button type="submit" class="btn btn-primary pull-right">{{ _("Send BIS")}}</button -->
                 <button class="btn btn-primary "
                         onclick="send($('#recipient').val(), $('#amount').val(), '', $('#data').val());return false;">
@@ -112,14 +113,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <button class="btn btn-info "
-                                onclick="decode($('#bisurl').val()">
+                                onclick="decode($('#bisurl').val())">
                             {{ _('Decode BIS URL')}}
                         </button>
 
                     </div>
                     <div class="col-md-6">
                         <button class="btn btn-primary "
-                                onclick="sendurl($('#bisurl').val()">
+                                onclick="sendurl($('#bisurl').val())">
                             {{ _('Send BIS URL...')}}
                         </button>
                     </div>

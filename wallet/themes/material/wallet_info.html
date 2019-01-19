@@ -150,14 +150,14 @@
                 <div class="card-body">
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Master password")}}</label>
-                            <input class="form-control" id="new_master_password" type="password" name="new_master_password"
+                            <input class="form-control password" id="new_master_password" type="text" name="new_master_password"
                                    value=""/>
                             <small>{{ _("This is the password that will protect your private keys.")}}
                             </small>
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Retype Master password")}}</label>
-                            <input class="form-control" id="new_master_password2" type="password" name="new_master_password2"
+                            <input class="form-control password" id="new_master_password2" type="text" name="new_master_password2"
                                    value=""/>
                             <small>{{ _("Losing this password means loosing your keys!")}}
                             </small>
@@ -214,18 +214,18 @@
                     {% end %}
                         <div class="form-group">
                             <input type="radio" name="spend_type" value="PIN" {{ handler.checked_if(bismuth['spend_type']['type'] == 'PIN') }}> {{ _("PIN Code") }}<br>
-                            <input type="radio" name="spend_type" value="YUBICO" {{ handler.checked_if(bismuth['spend_type']['type'] == 'YUBICO') }}> {{ _("YUBICO") }}<br>
+                            <input type="radio" name="spend_type" value="YUBICO" disabled {{ handler.checked_if(bismuth['spend_type']['type'] == 'YUBICO') }}> <strike>{{ _("YUBICO") }}</strike><br>
                             <input type="radio" name="spend_type" value="U2F" disabled {{ handler.checked_if(bismuth['spend_type']['type'] == 'U2F') }}> <strike>{{ _("U2F TOKEN") }} </strike><br>
                             <input type="radio" name="spend_type" value="None" {{ handler.checked_if(bismuth['spend_type']['type'] is None) }}> {{ _("No protection") }}
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">Option</label>
-                            <input class="form-control" id="data" type="password" name="spend_value" value=""/>
+                            <input class="form-control password" id="data" type="text" name="spend_value" value=""/>
                             <small id="value_detail">TODO - Depends on radio button</small>
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Master password")}}</label>
-                            <input class="form-control" id="check_master_password" type="password" name="master_password" value=""/>
+                            <input class="form-control password" id="check_master_password" type="text" name="master_password" value=""/>
                             <small>{{ _("Needed to confirm operation")}}
                             </small>
                         </div>
