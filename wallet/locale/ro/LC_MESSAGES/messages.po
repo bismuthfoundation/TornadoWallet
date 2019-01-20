@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: ro\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:212
+#: themes/material/about_credits.html:10 themes/material/base.html:227
 msgid "Credits"
 msgstr "Merite"
 
@@ -107,31 +107,31 @@ msgstr "servere"
 msgid "Refresh from API"
 msgstr "Reîmprospătare din API"
 
-#: themes/material/base.html:42
+#: themes/material/base.html:43
 msgid "Bismuth Wallet"
 msgstr "Portofel Bismuth"
 
-#: themes/material/base.html:50
+#: themes/material/base.html:51
 msgid "Dashboard"
 msgstr "Panou de comandă"
 
-#: themes/material/base.html:56
+#: themes/material/base.html:57
 msgid "Transactions"
 msgstr "Tranzacții"
 
-#: themes/material/base.html:62
+#: themes/material/base.html:63
 msgid "Address book"
 msgstr "Agendă"
 
-#: themes/material/base.html:69 themes/material/tokens_list.html:10
+#: themes/material/base.html:70 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokeni"
 
-#: themes/material/base.html:75
+#: themes/material/base.html:76
 msgid "Messages"
 msgstr "Mesaje"
 
-#: themes/material/base.html:82
+#: themes/material/base.html:83
 msgid "Network"
 msgstr "Rețea"
 
@@ -139,35 +139,35 @@ msgstr "Rețea"
 msgid "Cristals"
 msgstr "Cristale"
 
-#: themes/material/base.html:110
+#: themes/material/base.html:122
 msgid "Toggle navigation"
 msgstr "Comutare navigație"
 
-#: themes/material/base.html:192
+#: themes/material/base.html:207
 msgid "Source"
 msgstr "Sursă"
 
-#: themes/material/base.html:197
+#: themes/material/base.html:212
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:202
+#: themes/material/base.html:217
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:222
 msgid "Donate"
 msgstr "Donează"
 
-#: themes/material/base.html:218
+#: themes/material/base.html:233
 msgid "block #"
 msgstr "block #"
 
-#: themes/material/base.html:238
+#: themes/material/base.html:253
 msgid "Sidebar Filters"
 msgstr "Filtre Bară Laterală"
 
-#: themes/material/base.html:251
+#: themes/material/base.html:266
 msgid "Images"
 msgstr "Imagini"
 
@@ -176,7 +176,7 @@ msgid "Cristals are extra functionalities you can add to your wallet"
 msgstr "Cristalele sunt funcții extra pe care le poți adăuga la portofel"
 
 #: crystals/100_bismuthprice/themes/default/about.html:15
-#: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
+#: themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "În lucru"
 
@@ -206,6 +206,7 @@ msgid "Latest transactions"
 msgstr "Ultimele tranzacții"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
+#: themes/material/wallet_load.html:37
 msgid "Updated on"
 msgstr "Actualizat la"
 
@@ -214,13 +215,13 @@ msgid "Date"
 msgstr "Dată"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:54
+#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:96
 msgid "Address"
 msgstr "Adresă"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:50
+#: themes/material/transactions_send.html:52
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Sumă"
@@ -263,63 +264,65 @@ msgid "Tokens are a core BIS functionality"
 msgstr "Tokenii sunt o funcționalitate de bază BIS\n"
 ""
 
-#: themes/material/transactions_send.html:16
+#: themes/material/transactions_send.html:15
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
 msgstr "Trimite la"
 
-#: themes/material/transactions_send.html:17
+#: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
 msgstr "Cui îi trimiți BIS."
 
-#: themes/material/transactions_send.html:21
+#: themes/material/messages.html:61 themes/material/transactions_send.html:20
 #: themes/material/transactions_send_confirm.html:33
 #: themes/material/transactions_sendpop_confirm.html:29
 msgid "Recipient"
 msgstr "Destinatar"
 
+#: themes/material/messages.html:20 themes/material/messages.html:57
 #: themes/material/transactions_receive.html:27
-#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send.html:25
 #: themes/material/transactions_send_confirm.html:39
-#: themes/material/transactions_sendpop_confirm.html:67
+#: themes/material/transactions_sendpop_confirm.html:68
 msgid "Data (message)"
 msgstr "Date (mesaj)"
 
-#: themes/material/transactions_send.html:28
+#: themes/material/transactions_send.html:27
 #: themes/material/transactions_send_confirm.html:43
-#: themes/material/transactions_sendpop_confirm.html:72
+#: themes/material/transactions_sendpop_confirm.html:73
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Opțional, puteți adăuga un mic comentariu la tranzacție. Necesar la depunerea pe exchange-uri."
 
-#: themes/material/transactions_send.html:51
+#: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "Câti BIS trimiți."
 
 #: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:57
+#: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:62
 #: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
 msgstr "Suma (BIS)"
 
 #: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:64
+#: themes/material/transactions_send.html:66
 #: themes/material/transactions_send_confirm.html:70
 #: themes/material/transactions_sendpop_confirm.html:46
 msgid "Est. fees"
 msgstr "~ Comision"
 
 #: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:69
+#: themes/material/transactions_send.html:71
 #: themes/material/transactions_send_confirm.html:75
-#: themes/material/transactions_sendpop_confirm.html:51
+#: themes/material/transactions_sendpop_confirm.html:52
 msgid "Total (BIS)"
 msgstr "Total (BIS)"
 
-#: main.py:133 main.py:161 themes/material/transactions_send.html:75
-#: themes/material/transactions_send.html:76 wallet.py:134 wallet.py:162
+#: main.py:133 main.py:161 themes/material/transactions_send.html:78
+#: themes/material/transactions_send.html:81
+#: themes/material/transactions_send.html:127 wallet.py:151 wallet.py:178
 msgid "Send BIS"
 msgstr "Trimite (BIS)"
 
@@ -347,36 +350,38 @@ msgstr "Creează un"
 msgid "new wallet"
 msgstr "portofel nou"
 
-#: themes/material/wallet_load.html:53
+#: themes/material/wallet_load.html:95
 msgid "File"
 msgstr "Fișier"
 
-#: themes/material/wallet_load.html:55
+#: themes/material/wallet_load.html:97
 msgid "Encrypted"
 msgstr "Criptat"
 
-#: themes/material/wip.html:10
+#: themes/material/messages.html:82 themes/material/wip.html:10
 msgid "W.I.P."
 msgstr "În lucru"
 
-#: themes/material/wip.html:13
+#: themes/material/messages.html:85 themes/material/wip.html:13
 msgid "This feature is under construction."
 msgstr "Această funcție este în lucru."
 
-#: main.py:243 wallet.py:244
+#: main.py:243 wallet.py:312
 msgid "Transaction list"
 msgstr "Listă tranzacții"
 
-#: main.py:203 main.py:315 main.py:324 wallet.py:204 wallet.py:316
-#: wallet.py:325
+#: main.py:203 main.py:315 main.py:324 wallet.py:257 wallet.py:361
+#: wallet.py:387 wallet.py:401 wallet.py:407 wallet.py:422 wallet.py:431
+#: wallet.py:437 wallet.py:446 wallet.py:460 wallet.py:468 wallet.py:477
+#: wallet.py:483 wallet.py:494
 msgid "Error"
 msgstr "Eroare"
 
-#: main.py:315 wallet.py:316
+#: main.py:315 wallet.py:422
 msgid "This file already exists: {}.der"
 msgstr "Acest fișier există deja: {}. der"
 
-#: main.py:324 wallet.py:325
+#: main.py:324 wallet.py:431
 msgid "Error creating {}.der"
 msgstr "Eroare la crearea {}. der"
 
@@ -421,7 +426,7 @@ msgid "This is what you will receive"
 msgstr "Asta vei primi"
 
 #: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:66
+#: themes/material/transactions_send.html:68
 #: themes/material/transactions_send_confirm.html:72
 #: themes/material/transactions_sendpop_confirm.html:48
 msgid "Fees depend on Data length"
@@ -443,21 +448,21 @@ msgstr "Acesta este codul QR pentru adresa dvs., datele și suma ca un URL BIS"
 msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "Puteți copia/lipi această imagine pentru a trimite într-un e-mail sau în altă parte"
 
-#: themes/material/transactions_send.html:59
+#: themes/material/transactions_send.html:61
 #: themes/material/transactions_send_confirm.html:65
 #: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
 msgstr "Aceasta este ceea ce destinatarul va primi\n"
 ""
 
-#: themes/material/transactions_send.html:71
+#: themes/material/transactions_send.html:73
 #: themes/material/transactions_send_confirm.html:77
-#: themes/material/transactions_sendpop_confirm.html:53
+#: themes/material/transactions_sendpop_confirm.html:54
 msgid "This is what you will pay, fees included."
 msgstr "Asta este ceea ce vei plăti, comision inclus.\n"
 ""
 
-#: themes/material/wallet_load.html:56
+#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:98
 msgid "Action"
 msgstr "Acțiune"
 
@@ -465,29 +470,29 @@ msgstr "Acțiune"
 msgid "Translations"
 msgstr "Traduceri"
 
-#: themes/material/transactions_send_confirm.html:100
-#: themes/material/transactions_sendpop_confirm.html:87
+#: themes/material/transactions_send_confirm.html:116
+#: themes/material/transactions_sendpop_confirm.html:102
 msgid "Cancel"
 msgstr "Anulează"
 
-#: themes/material/transactions_send_confirm.html:105
-#: themes/material/transactions_sendpop_confirm.html:93
+#: themes/material/transactions_send_confirm.html:121
+#: themes/material/transactions_sendpop_confirm.html:108
 msgid "Confirm and send BIS"
 msgstr "Confirmă și trimite BIS"
 
-#: main.py:144 main.py:172 wallet.py:145 wallet.py:173
+#: main.py:144 main.py:172 wallet.py:161 wallet.py:189 wallet.py:211
 msgid "Send BIS: Confirmation"
 msgstr "Trimite BIS: Confirmă"
 
-#: main.py:146 main.py:174 wallet.py:147 wallet.py:175
+#: main.py:146 main.py:174 wallet.py:163 wallet.py:191 wallet.py:213
 msgid "Please confirm this transaction"
 msgstr "Te rugăm să confirmi această tranzacție"
 
-#: main.py:147 main.py:175 wallet.py:148 wallet.py:176
+#: main.py:147 main.py:175 wallet.py:164 wallet.py:192 wallet.py:214
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Verifică dacă asta intenționezi să faci și apasă butonul \"confirmă"
 
-#: main.py:227 wallet.py:228
+#: main.py:227 wallet.py:295
 msgid "Receive BIS"
 msgstr "Primește BIS"
 
@@ -504,11 +509,13 @@ msgstr "Mulțumiri traducătorilor și corectorilor noștri\n"
 msgid "Wallet server version {}"
 msgstr "Versiune server portofel"
 
-#: themes/material/base.html:157
+#: themes/material/base.html:172
 msgid "Wallet"
 msgstr "Portofel"
 
 #: themes/material/transactions_receive.html:81
+#: themes/material/transactions_send.html:100
+#: themes/material/transactions_send.html:108
 msgid "BIS URL"
 msgstr "URL BIS"
 
@@ -520,59 +527,65 @@ msgstr "Portofelele tale Bismuth"
 msgid "Your wallets directory is {}"
 msgstr "Folderul portofelelor este {}"
 
-#: main.py:136 main.py:140 main.py:164 main.py:168 main.py:182 main.py:221
-#: wallet.py:137 wallet.py:141 wallet.py:165 wallet.py:169 wallet.py:183
-#: wallet.py:222
+#: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
+#: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
+#: wallet.py:181 wallet.py:185 wallet.py:196 wallet.py:221 wallet.py:227
+#: wallet.py:230 wallet.py:237 wallet.py:264 wallet.py:267 wallet.py:274
+#: wallet.py:289 wallet.py:606 wallet.py:610 wallet.py:617 wallet.py:629
 msgid "Error:"
 msgstr "Eroare:"
 
-#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
+#: wallet.py:264 wallet.py:606
 msgid "Load your wallet first"
 msgstr "Încarcă mai întâi portofelul"
 
-#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
+#: wallet.py:264 wallet.py:606
 msgid "No Wallet"
 msgstr "Fără Portofel"
 
-#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
+#: wallet.py:267 wallet.py:610
 msgid "Encrypted wallet"
 msgstr "Portofel cryptat"
 
-#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
+#: wallet.py:267 wallet.py:361 wallet.py:401 wallet.py:610
 msgid "You have to unlock your wallet first"
 msgstr "Trebuie să deblochezi portofelul mai întâi"
 
-#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
+#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
 msgid "Success:"
 msgstr "Succes:"
 
-#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
+#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
 msgid "Transaction sent"
 msgstr "Tranzacție trimisă"
 
-#: main.py:194 main.py:217 wallet.py:195 wallet.py:218
+#: main.py:194 main.py:217 wallet.py:248 wallet.py:285
 msgid "The transaction was submitted to the mempool."
 msgstr "Tranzacția a fost inclusă în mempool."
 
-#: main.py:196 main.py:219 wallet.py:197 wallet.py:220
+#: main.py:196 main.py:219 wallet.py:250 wallet.py:287
 msgid "Txid is {}"
 msgstr "Txid-ul este {}"
 
-#: main.py:201 main.py:221 wallet.py:202 wallet.py:222
+#: main.py:201 main.py:221 wallet.py:255 wallet.py:289
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "S-a produs o eroare la trimiterea în mempool, tranzacția nu a fost trimisă."
 
 #: crystals/200_dragginator/themes/default/about.html:89
-#: modules/basehandlers.py:37
+#: modules/basehandlers.py:51
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr "Nu există adresă Bismuth, vă rugăm să creați sau încărcați un portofel mai întâi.\n"
 ""
 
-#: themes/material/base.html:94 themes/material/crystals_list.html:11
+#: themes/material/base.html:95 themes/material/crystals_list.html:11
 msgid "Crystals"
 msgstr "Crystals"
 
-#: themes/material/base.html:119
+#: themes/material/base.html:131
 msgid "Search..."
 msgstr "Căutare..."
 
@@ -598,7 +611,7 @@ msgstr "Prețul actual Bismuth"
 msgid "BIS"
 msgstr "BIS"
 
-#: main.py:198 wallet.py:199
+#: main.py:198 wallet.py:252
 msgid "Success"
 msgstr "Succes"
 
@@ -606,8 +619,8 @@ msgstr "Succes"
 msgid "Confirm Transaction"
 msgstr "Confirmă tranzacția"
 
-#: themes/material/transactions_send.html:34
-#: themes/material/transactions_sendpop_confirm.html:60
+#: themes/material/transactions_send.html:36
+#: themes/material/transactions_sendpop_confirm.html:61
 msgid "Operation"
 msgstr "Operațiune"
 
@@ -623,31 +636,31 @@ msgstr "Căutare"
 msgid "Search Results"
 msgstr "Rezultatul căutării"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:64
 msgid "D:Air egg"
 msgstr "Ou de aer"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:63
 msgid "D:Earth egg"
 msgstr "Ou de pamant"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:63
 msgid "D:Fire egg"
 msgstr "Ou de foc"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:63
 msgid "D:Water egg"
 msgstr "Ou de apa"
 
-#: crystals/200_dragginator/__init__.py:77
+#: crystals/200_dragginator/__init__.py:68
 msgid "D:Cup"
 msgstr "Cupă"
 
-#: crystals/200_dragginator/__init__.py:77
+#: crystals/200_dragginator/__init__.py:68
 msgid "D:special egg"
 msgstr "Ou special"
 
-#: crystals/200_dragginator/__init__.py:77
+#: crystals/200_dragginator/__init__.py:68
 msgid "D:world cup 2018"
 msgstr "Cupa Mondială 2018 "
 
@@ -755,59 +768,59 @@ msgstr "Cote"
 msgid "EP:Workers"
 msgstr "Muncitori"
 
-#: modules/i18n.py:11
+#: modules/i18n.py:22
 msgid "DT:Processing..."
 msgstr "Procesează..."
 
-#: modules/i18n.py:12
+#: modules/i18n.py:23
 msgid "DT:Search&nbsp;..."
 msgstr "Caută&nbsp"
 
-#: modules/i18n.py:13
+#: modules/i18n.py:24
 msgid "DT:Display _MENU_ elements"
 msgstr "Arată elementele _MENU_ "
 
-#: modules/i18n.py:14
+#: modules/i18n.py:25
 msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
 msgstr "Arată elementele de la _START_ până la _END_ din elementele _TOTAL_"
 
-#: modules/i18n.py:15 modules/i18n.py:19
+#: modules/i18n.py:26 modules/i18n.py:30
 msgid "DT:Nothing to display"
 msgstr "Nimic de afișat"
 
-#: modules/i18n.py:16
+#: modules/i18n.py:27
 msgid "DT:filtered from _MAX_ total elements"
 msgstr "filtrat din totalul elementelor _MAX_"
 
-#: modules/i18n.py:18
+#: modules/i18n.py:29
 msgid "DT:Loading..."
 msgstr "Încarcă..."
 
-#: modules/i18n.py:20
+#: modules/i18n.py:31
 msgid "DT:No data in the table"
 msgstr "Nu exista date"
 
-#: modules/i18n.py:22
+#: modules/i18n.py:33
 msgid "DT:First"
 msgstr "Primul"
 
-#: modules/i18n.py:23
+#: modules/i18n.py:34
 msgid "DT:Previous"
 msgstr "Anterior"
 
-#: modules/i18n.py:24
+#: modules/i18n.py:35
 msgid "DT:Next"
 msgstr "Următorul"
 
-#: modules/i18n.py:25
+#: modules/i18n.py:36
 msgid "DT:Last"
 msgstr "Ultimul"
 
-#: modules/i18n.py:28
+#: modules/i18n.py:39
 msgid "DT:Sort by ascending order"
 msgstr "Sortează ascendent"
 
-#: modules/i18n.py:29
+#: modules/i18n.py:40
 msgid "DT:Sort by descending order"
 msgstr "Sortează descendent"
 
@@ -839,7 +852,259 @@ msgstr "Status tranzacție"
 msgid "OK"
 msgstr "OK"
 
-#: themes/material/transactions_send.html:36
+#: themes/material/transactions_send.html:38
 msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
 msgstr "\"operation\" se foloseste pentru puternicele caracteristici Bismuth. Lasă gol dacă nu ți s-a cerut."
+
+#: crystals/210_eggpool/__init__.py:68
+msgid "No data"
+msgstr "Lipsă date"
+
+#: crystals/210_eggpool/__init__.py:85
+msgid "This crystal is activated but needs a wallet restart."
+msgstr "Cristalul este activat dar portofelul necesită resetat."
+
+#: modules/i18n.py:8 themes/material/wallet_info.html:219
+msgid "No protection"
+msgstr "Fară protesție"
+
+#: modules/i18n.py:10 themes/material/wallet_info.html:216
+msgid "PIN Code"
+msgstr "Cod PIN"
+
+#: modules/i18n.py:12 themes/material/wallet_info.html:217
+msgid "YUBICO"
+msgstr "YUBICO"
+
+#: modules/i18n.py:14
+msgid "U2F Token"
+msgstr "Token U2F"
+
+#: themes/material/base.html:117
+msgid "Wallet info"
+msgstr "Informații portofel"
+
+#: themes/material/crystals_list.html:48
+msgid "Apply"
+msgstr "Aplică"
+
+#: themes/material/message_pop.html:23 themes/material/messages_pop.html:31
+msgid "Close"
+msgstr "Închide"
+
+#: themes/material/messages.html:15 wallet.py:604
+msgid "Sign message"
+msgstr "Semnează mesaj"
+
+#: themes/material/messages.html:16
+msgid "Sign some data for off chain usage with your private key."
+msgstr "Semnează unele date pentru utilizarea în afara lanțului cu cheia privată."
+
+#: themes/material/messages.html:26
+#: themes/material/transactions_send_confirm.html:104
+#: themes/material/transactions_sendpop_confirm.html:91
+#: themes/material/wallet_info.html:202 themes/material/wallet_info.html:203
+#: wallet.py:237 wallet.py:274 wallet.py:617
+msgid "Spend protection"
+msgstr "Protecție anticonsum"
+
+#: themes/material/messages.html:37
+msgid "Sign Message"
+msgstr "Semnează mesaj"
+
+#: themes/material/messages.html:52
+msgid "Encrypt message"
+msgstr "Criptează mesaj"
+
+#: themes/material/messages.html:53
+msgid "Encrypt data for off chain usage."
+msgstr "Criptează datele pentru utilizarea în afara lanțului."
+
+#: themes/material/messages.html:63
+msgid "You have to tell the recipient address so the message can be encrypted with his public key"
+msgstr "Trebuie să spuneți adresa destinatarului, astfel încât mesajul să poată fi criptat cu cheia sa publică"
+
+#: themes/material/messages.html:67
+msgid "Encrypt Message"
+msgstr "Criptează mesaj"
+
+#: themes/material/messages_pop.html:24
+#: themes/material/transactions_receive.html:81
+msgid "Click text to copy"
+msgstr "Faceți clic pe text pentru a copia"
+
+#: themes/material/messages_pop.html:34
+#: themes/material/transactions_receive.html:84
+msgid "Copied to Clipboard"
+msgstr "Copiat în Clipboard"
+
+#: themes/material/transactions_send.html:103
+msgid "Send a transaction from a BIS URL"
+msgstr "Trimite o tranzacție dintr-un URL BIS\n"
+""
+
+#: themes/material/transactions_send.html:110
+msgid "Paste the BIS URL you were given here"
+msgstr "Lipiți URL-ul BIS care vi s-a dat aici"
+
+#: themes/material/transactions_send.html:117
+msgid "Decode BIS URL"
+msgstr "Decodeaza URL-ul BIS"
+
+#: themes/material/transactions_send.html:123
+msgid "Send BIS URL..."
+msgstr "Trimite URL-ul BIS"
+
+#: themes/material/wallet_info.html:16
+msgid "{} Address(es)"
+msgstr "{} Addresă(e)"
+
+#: themes/material/wallet_info.html:29
+msgid "Manage"
+msgstr "Gestionează"
+
+#: themes/material/wallet_info.html:30
+msgid "addresses"
+msgstr "Adrese"
+
+#: themes/material/wallet_info.html:34
+msgid "Select one of your Bismuth addresses"
+msgstr "Selectează una din adresele tale Bismuth"
+
+#: themes/material/wallet_info.html:49
+msgid "Create a new"
+msgstr "Creează o nouă"
+
+#: themes/material/wallet_info.html:50
+msgid "address"
+msgstr "adresă"
+
+#: themes/material/wallet_info.html:72
+msgid "Wallet is locked"
+msgstr "Portofelul este blocat"
+
+#: themes/material/wallet_info.html:76
+msgid "Existing master password"
+msgstr "Parola principală existentă"
+
+#: themes/material/wallet_info.html:78
+msgid "This is the password that protects your private key(s)"
+msgstr "Aceasta este parola care protejează cheia privată(e)"
+
+#: themes/material/wallet_info.html:92
+msgid "Wallet is unlocked"
+msgstr "Portofelul este deblocat"
+
+#: themes/material/wallet_info.html:95
+msgid "You can lock it back for extra safety if you don't plan to use it soon."
+msgstr "Îl puteți bloca înapoi pentru siguranță suplimentară, dacă nu aveți de gând să-l folosiți curând.\n"
+""
+
+#: themes/material/wallet_info.html:125 themes/material/wallet_info.html:148
+#: themes/material/wallet_info.html:152 themes/material/wallet_info.html:227
+msgid "Master password"
+msgstr "Parolă principală"
+
+#: themes/material/wallet_info.html:132
+msgid "Master password is set"
+msgstr "Parola principala este setată"
+
+#: themes/material/wallet_info.html:155
+msgid "This is the password that will protect your private keys."
+msgstr "Aceasta este parola care va proteja cheile private.\n"
+""
+
+#: themes/material/wallet_info.html:159
+msgid "Retype Master password"
+msgstr "Reintroduceți parola principală"
+
+#: themes/material/wallet_info.html:162
+msgid "Losing this password means loosing your keys!"
+msgstr "Pierderea acestei parole înseamnă pierderea cheilor!"
+
+#: themes/material/wallet_info.html:170
+msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
+msgstr "Acest lucru va cripta fișierul portofelului. Este posibil să vreți o copie de rezervă a fișierului necriptată mai întâi."
+
+#: themes/material/wallet_info.html:176
+msgid "Master password is not set"
+msgstr "Parola principală nu este setată"
+
+#: themes/material/wallet_info.html:218
+msgid "U2F TOKEN"
+msgstr "U2F TOKEN"
+
+#: themes/material/wallet_info.html:229
+msgid "Needed to confirm operation"
+msgstr "Necesare pentru a confirma acțiunea"
+
+#: themes/material/wallet_info.html:243
+msgid "Spending is currently not protected"
+msgstr "Cheltuielile nu sunt în prezent protejate"
+
+#: themes/material/wallet_info.html:245
+msgid "Spending is currently protected by {}"
+msgstr "Cheltuielile sunt în prezent protejate de {}"
+
+#: themes/material/wallet_load.html:16 themes/material/wallet_load.html:36
+msgid "Your Bismuth addresses"
+msgstr "Adresa ta Bismuth"
+
+#: themes/material/wallet_load.html:20
+msgid "Your wallet directory is {}"
+msgstr "Locația portofelului este {}"
+
+#: themes/material/wallet_load.html:21
+msgid "Your wallet is {}"
+msgstr "Portofelul tau este {}"
+
+#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:69
+msgid "Label"
+msgstr "Etichetă"
+
+#: themes/material/wallet_load.html:44
+msgid "Creation date"
+msgstr "Dată creare"
+
+#: themes/material/wallet_load.html:71
+msgid "A private label for the new address"
+msgstr "O etichetă privată pentru noua adresă"
+
+#: themes/material/wallet_load.html:76
+msgid "Create a new address"
+msgstr "Crearea unei adrese noi"
+
+#: themes/material/wallet_load.html:92
+msgid "Potential legacy wallet imports"
+msgstr "Potențiale importuri de portofel moștenite"
+
+#: wallet.py:237 wallet.py:274 wallet.py:617
+msgid "Invalid PIN Number"
+msgstr "Număr PIN incorect"
+
+#: wallet.py:387 wallet.py:407 wallet.py:446 wallet.py:460 wallet.py:468
+#: wallet.py:483 wallet.py:494
+msgid "Error: {}"
+msgstr "Eroare: {}"
+
+#: wallet.py:437
+msgid "Max of {} addresses reached."
+msgstr "Maximul de {} adrese atinse."
+
+#: wallet.py:477
+msgid "Passwords do not match"
+msgstr "Parolele nu se potrivesc"
+
+#: wallet.py:623
+msgid "Your message '{}' has been signed."
+msgstr "Mesajul tău \"{}\" a fost semnat.\n"
+""
+
+#: wallet.py:625
+msgid "Signature"
+msgstr "Semnătură"
+
+#: wallet.py:629
+msgid "This feature is under construction. "
+msgstr "Această caracteristică este în construcție."
 
