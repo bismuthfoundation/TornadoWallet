@@ -37,3 +37,13 @@
         });
     });
 </script>
+
+
+
+<script>
+$(".tab-selector").click(function(){
+
+$(".tab-selector").removeClass("active");
+$( this ).addClass("active");
+});
+</script>

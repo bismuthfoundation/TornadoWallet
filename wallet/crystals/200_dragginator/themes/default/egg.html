@@ -22,8 +22,34 @@
                     {% if "erased" == data["other"] %}
                             <div class="ribbonl"><span>{{_("D:Archive")}}</span></div>
                         {% end %}
-                <img src="https://dragginator.com/data/eggs/{{ dna }}/egg.png" class="img-responsive" alt="Mountain View">
-
+                
+                
+                
+                
+                
+                {% if data['status'] == "draggon" %}
+                    <ul class="nav nav-tabs">
+                        <li class="tab-selector active"><a data-toggle="tab" href="#draggon">{{_("D:draggon")}}</a></li>
+                        <li class="tab-selector "><a data-toggle="tab" href="#egg">{{_("D:egg")}}</a></li>
+                    </ul>
+                
+                    
+                    
+                    <div class="tab-content">
+                        <div id="egg" class="tab-pane fade">
+                            <img src="https://dragginator.com/data/eggs/{{ dna }}/egg.png" class="img-responsive" alt="Mountain View">
+                        </div>
+                        <div id="draggon" class="tab-pane fade in active show">
+                            <img src="https://dragginator.com/{{ data['dragg_img'] }}" class="img-responsive" alt="Mountain View">
+                        </div>
+                    </div>
+                    
+                    
+                {% else %}
+                
+                    <img src="https://dragginator.com/data/eggs/{{ dna }}/egg.png" class="img-responsive" alt="Mountain View">
+                    
+                {% end %}
 
                 </div>
 
