@@ -74,7 +74,7 @@
                 <div class="card-body">
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Existing master password")}}</label>
-                            <input class="form-control" type="password" name="master_password" value=""/>
+                            <input class="form-control password" type="text" name="master_password" value=""/>
                             <small>{{ _("This is the password that protects your private key(s)")}}
                             </small>
                         </div>
@@ -92,6 +92,8 @@
                     <h3 class="card-title">&nbsp;{{ _("Wallet is unlocked")}}</h3>
                 </div>
                 <div class="card-body">
+
+                    {% if bismuth['master_set'] %}
                     {{ _("You can lock it back for extra safety if you don't plan to use it soon.") }}
                     <br/>
                         <div class="form-group">
@@ -99,6 +101,11 @@
                         {% raw xsrf_form_html() %}
                         <input class="btn btn-warning" type="submit" value="{{ _('Lock wallet')}}">
                         </div>
+                    {% else %}
+                    {{ _("You have to encrypt your wallet first to use this feature") }}
+                    {% end %}
+
+
                 </div>
                 {% end %}
                 <div class="card-footer">

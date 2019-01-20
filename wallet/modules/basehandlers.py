@@ -40,7 +40,11 @@ class BaseHandler(RequestHandler):
         self.bismuth_vars['address'] = self.bismuth._wallet.info()['address']  # self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
         self.bismuth_vars['extra'] = {"header":'', "footer": ''}
-        spend_type = self.bismuth.wallet()['spend']['type']
+        try:
+            spend_type = self.bismuth.wallet()['spend']['type']
+        except:
+            # will get here if encrypted and locked.
+            spend_type = None
         # Do not inject the token, or a malicious theme could get it.
         self.bismuth_vars['spend_type'] = {"type": spend_type, "label": get_spend_type(_, spend_type) }
         # print(self.bismuth.wallet())
