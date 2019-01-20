@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: no\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:212
+#: themes/material/about_credits.html:10 themes/material/base.html:227
 msgid "Credits"
 msgstr "Kreditt"
 
@@ -105,31 +105,31 @@ msgstr "tjenere"
 msgid "Refresh from API"
 msgstr "Oppfrisk fra API"
 
-#: themes/material/base.html:42
+#: themes/material/base.html:43
 msgid "Bismuth Wallet"
 msgstr "Bismuth Lommebok"
 
-#: themes/material/base.html:50
+#: themes/material/base.html:51
 msgid "Dashboard"
 msgstr "Dashbord"
 
-#: themes/material/base.html:56
+#: themes/material/base.html:57
 msgid "Transactions"
 msgstr "Transaksjoner"
 
-#: themes/material/base.html:62
+#: themes/material/base.html:63
 msgid "Address book"
 msgstr "Adressebok"
 
-#: themes/material/base.html:69 themes/material/tokens_list.html:10
+#: themes/material/base.html:70 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokens"
 
-#: themes/material/base.html:75
+#: themes/material/base.html:76
 msgid "Messages"
 msgstr "Meldinger"
 
-#: themes/material/base.html:82
+#: themes/material/base.html:83
 msgid "Network"
 msgstr "Nettverk"
 
@@ -137,35 +137,35 @@ msgstr "Nettverk"
 msgid "Cristals"
 msgstr "Krystaller"
 
-#: themes/material/base.html:110
+#: themes/material/base.html:122
 msgid "Toggle navigation"
 msgstr "Veksle navigasjon"
 
-#: themes/material/base.html:192
+#: themes/material/base.html:207
 msgid "Source"
 msgstr "Kilde"
 
-#: themes/material/base.html:197
+#: themes/material/base.html:212
 msgid "Blog"
 msgstr "Blogg"
 
-#: themes/material/base.html:202
+#: themes/material/base.html:217
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:222
 msgid "Donate"
 msgstr "Donér"
 
-#: themes/material/base.html:218
+#: themes/material/base.html:233
 msgid "block #"
 msgstr "blokk #"
 
-#: themes/material/base.html:238
+#: themes/material/base.html:253
 msgid "Sidebar Filters"
 msgstr "Sidebar filtre"
 
-#: themes/material/base.html:251
+#: themes/material/base.html:266
 msgid "Images"
 msgstr "Bilder"
 
@@ -174,7 +174,7 @@ msgid "Cristals are extra functionalities you can add to your wallet"
 msgstr "Krystaller er ekstra funksjonalitet som du kan legge til din lommebok"
 
 #: crystals/100_bismuthprice/themes/default/about.html:15
-#: themes/material/crystals_list.html:15 themes/material/tokens_list.html:14
+#: themes/material/tokens_list.html:14
 msgid "WIP"
 msgstr "WIP"
 
@@ -204,6 +204,7 @@ msgid "Latest transactions"
 msgstr "Siste transaksjoner"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
+#: themes/material/wallet_load.html:37
 msgid "Updated on"
 msgstr "Oppdatert den"
 
@@ -212,13 +213,13 @@ msgid "Date"
 msgstr "Dato"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:54
+#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:96
 msgid "Address"
 msgstr "Adresse"
 
 #: themes/material/home.html:82 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:50
+#: themes/material/transactions_send.html:52
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Beløp"
@@ -260,63 +261,65 @@ msgstr "Forrige side"
 msgid "Tokens are a core BIS functionality"
 msgstr "Tokens er en kjernefunksjonalitet i BIS"
 
-#: themes/material/transactions_send.html:16
+#: themes/material/transactions_send.html:15
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
 msgstr "Send Til"
 
-#: themes/material/transactions_send.html:17
+#: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
 msgstr "Hvem sende BIS til"
 
-#: themes/material/transactions_send.html:21
+#: themes/material/messages.html:61 themes/material/transactions_send.html:20
 #: themes/material/transactions_send_confirm.html:33
 #: themes/material/transactions_sendpop_confirm.html:29
 msgid "Recipient"
 msgstr "Mottaker"
 
+#: themes/material/messages.html:20 themes/material/messages.html:57
 #: themes/material/transactions_receive.html:27
-#: themes/material/transactions_send.html:26
+#: themes/material/transactions_send.html:25
 #: themes/material/transactions_send_confirm.html:39
-#: themes/material/transactions_sendpop_confirm.html:67
+#: themes/material/transactions_sendpop_confirm.html:68
 msgid "Data (message)"
 msgstr "Data (melding)"
 
-#: themes/material/transactions_send.html:28
+#: themes/material/transactions_send.html:27
 #: themes/material/transactions_send_confirm.html:43
-#: themes/material/transactions_sendpop_confirm.html:72
+#: themes/material/transactions_sendpop_confirm.html:73
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
 msgstr "Valgfri, du kan legge til en kort kommentar til transaksjonen. Nødvendig for innskudd på børs."
 
-#: themes/material/transactions_send.html:51
+#: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
 msgstr "Hvor mange BIS å sende"
 
 #: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:57
+#: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:62
 #: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
 msgstr "Beløp (BIS)"
 
 #: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:64
+#: themes/material/transactions_send.html:66
 #: themes/material/transactions_send_confirm.html:70
 #: themes/material/transactions_sendpop_confirm.html:46
 msgid "Est. fees"
 msgstr "Est. avgift"
 
 #: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:69
+#: themes/material/transactions_send.html:71
 #: themes/material/transactions_send_confirm.html:75
-#: themes/material/transactions_sendpop_confirm.html:51
+#: themes/material/transactions_sendpop_confirm.html:52
 msgid "Total (BIS)"
 msgstr "Total (BIS)"
 
-#: main.py:133 main.py:161 themes/material/transactions_send.html:75
-#: themes/material/transactions_send.html:76 wallet.py:134 wallet.py:162
+#: main.py:133 main.py:161 themes/material/transactions_send.html:78
+#: themes/material/transactions_send.html:81
+#: themes/material/transactions_send.html:127 wallet.py:151 wallet.py:178
 msgid "Send BIS"
 msgstr "Sende BIS"
 
@@ -344,36 +347,38 @@ msgstr "Lag en"
 msgid "new wallet"
 msgstr "ny lommebok"
 
-#: themes/material/wallet_load.html:53
+#: themes/material/wallet_load.html:95
 msgid "File"
 msgstr "Fil"
 
-#: themes/material/wallet_load.html:55
+#: themes/material/wallet_load.html:97
 msgid "Encrypted"
 msgstr "Krypert"
 
-#: themes/material/wip.html:10
+#: themes/material/messages.html:82 themes/material/wip.html:10
 msgid "W.I.P."
 msgstr "W.I.P."
 
-#: themes/material/wip.html:13
+#: themes/material/messages.html:85 themes/material/wip.html:13
 msgid "This feature is under construction."
 msgstr "Denne funksjonalitet er under konstruksjon"
 
-#: main.py:243 wallet.py:244
+#: main.py:243 wallet.py:312
 msgid "Transaction list"
 msgstr "Transaksjonsliste"
 
-#: main.py:203 main.py:315 main.py:324 wallet.py:204 wallet.py:316
-#: wallet.py:325
+#: main.py:203 main.py:315 main.py:324 wallet.py:257 wallet.py:361
+#: wallet.py:387 wallet.py:401 wallet.py:407 wallet.py:422 wallet.py:431
+#: wallet.py:437 wallet.py:446 wallet.py:460 wallet.py:468 wallet.py:477
+#: wallet.py:483 wallet.py:494
 msgid "Error"
 msgstr "Feil"
 
-#: main.py:315 wallet.py:316
+#: main.py:315 wallet.py:422
 msgid "This file already exists: {}.der"
 msgstr "Denne filen eksisterer allerede: {}.der"
 
-#: main.py:324 wallet.py:325
+#: main.py:324 wallet.py:431
 msgid "Error creating {}.der"
 msgstr "Feil ved oppretting av {}.der"
 
@@ -418,7 +423,7 @@ msgid "This is what you will receive"
 msgstr "Dette er hvor mye du vil motta"
 
 #: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:66
+#: themes/material/transactions_send.html:68
 #: themes/material/transactions_send_confirm.html:72
 #: themes/material/transactions_sendpop_confirm.html:48
 msgid "Fees depend on Data length"
@@ -440,19 +445,19 @@ msgstr "Dette er QR koden for din adresse, data og beløp som BisUrl."
 msgid "You can copy/paste this image to send in a mail or anything"
 msgstr "Du kan copy/paste dette bildet og sende i en epost eller annet"
 
-#: themes/material/transactions_send.html:59
+#: themes/material/transactions_send.html:61
 #: themes/material/transactions_send_confirm.html:65
 #: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
 msgstr "Dette er hva mottaker vil få"
 
-#: themes/material/transactions_send.html:71
+#: themes/material/transactions_send.html:73
 #: themes/material/transactions_send_confirm.html:77
-#: themes/material/transactions_sendpop_confirm.html:53
+#: themes/material/transactions_sendpop_confirm.html:54
 msgid "This is what you will pay, fees included."
 msgstr "Dette er hva du vil betale, avgift inkludert."
 
-#: themes/material/wallet_load.html:56
+#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:98
 msgid "Action"
 msgstr "Aksjon"
 
@@ -460,29 +465,29 @@ msgstr "Aksjon"
 msgid "Translations"
 msgstr "Oversettelser"
 
-#: themes/material/transactions_send_confirm.html:100
-#: themes/material/transactions_sendpop_confirm.html:87
+#: themes/material/transactions_send_confirm.html:116
+#: themes/material/transactions_sendpop_confirm.html:102
 msgid "Cancel"
 msgstr "Kansellér"
 
-#: themes/material/transactions_send_confirm.html:105
-#: themes/material/transactions_sendpop_confirm.html:93
+#: themes/material/transactions_send_confirm.html:121
+#: themes/material/transactions_sendpop_confirm.html:108
 msgid "Confirm and send BIS"
 msgstr "Bekreft og send BIS"
 
-#: main.py:144 main.py:172 wallet.py:145 wallet.py:173
+#: main.py:144 main.py:172 wallet.py:161 wallet.py:189 wallet.py:211
 msgid "Send BIS: Confirmation"
 msgstr "Send BIS: Bekreftelse"
 
-#: main.py:146 main.py:174 wallet.py:147 wallet.py:175
+#: main.py:146 main.py:174 wallet.py:163 wallet.py:191 wallet.py:213
 msgid "Please confirm this transaction"
 msgstr "Vennligst bekreft denne transaksjon"
 
-#: main.py:147 main.py:175 wallet.py:148 wallet.py:176
+#: main.py:147 main.py:175 wallet.py:164 wallet.py:192 wallet.py:214
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Sjekk at dette er hva du ønsker å gjøre og klikk på \"bekreft\" knappen"
 
-#: main.py:227 wallet.py:228
+#: main.py:227 wallet.py:295
 msgid "Receive BIS"
 msgstr "Motta BIS"
 
@@ -498,11 +503,13 @@ msgstr "Mange takk til våre oversettere og korrekturlesere"
 msgid "Wallet server version {}"
 msgstr "Lommebok tjener versjon {}"
 
-#: themes/material/base.html:157
+#: themes/material/base.html:172
 msgid "Wallet"
 msgstr "Lommebok"
 
 #: themes/material/transactions_receive.html:81
+#: themes/material/transactions_send.html:100
+#: themes/material/transactions_send.html:108
 msgid "BIS URL"
 msgstr "BIS URL"
 
@@ -514,155 +521,161 @@ msgstr "Dine Bismuth lommebøker"
 msgid "Your wallets directory is {}"
 msgstr "Din lommebok katalog er {}"
 
-#: main.py:136 main.py:140 main.py:164 main.py:168 main.py:182 main.py:221
-#: wallet.py:137 wallet.py:141 wallet.py:165 wallet.py:169 wallet.py:183
-#: wallet.py:222
+#: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
+#: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
+#: wallet.py:181 wallet.py:185 wallet.py:196 wallet.py:221 wallet.py:227
+#: wallet.py:230 wallet.py:237 wallet.py:264 wallet.py:267 wallet.py:274
+#: wallet.py:289 wallet.py:606 wallet.py:610 wallet.py:617 wallet.py:629
 msgid "Error:"
 msgstr "Feilmelding:"
 
-#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
+#: wallet.py:264 wallet.py:606
 msgid "Load your wallet first"
 msgstr "Last inn din lommebok først"
 
-#: main.py:136 main.py:164 wallet.py:137 wallet.py:165
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
+#: wallet.py:264 wallet.py:606
 msgid "No Wallet"
 msgstr "Ingen Lommebok"
 
-#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
+#: wallet.py:267 wallet.py:610
 msgid "Encrypted wallet"
 msgstr "Kryptert lommebok"
 
-#: main.py:140 main.py:168 wallet.py:141 wallet.py:169
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
+#: wallet.py:267 wallet.py:361 wallet.py:401 wallet.py:610
 msgid "You have to unlock your wallet first"
 msgstr "Du må låse opp din lommebok først"
 
-#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
+#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
 msgid "Success:"
 msgstr "Suksess:"
 
-#: main.py:193 main.py:216 wallet.py:194 wallet.py:217
+#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
 msgid "Transaction sent"
 msgstr "Transaksjon sendt"
 
-#: main.py:194 main.py:217 wallet.py:195 wallet.py:218
+#: main.py:194 main.py:217 wallet.py:248 wallet.py:285
 msgid "The transaction was submitted to the mempool."
 msgstr "Transaksjonen ble sendt til mempool."
 
-#: main.py:196 main.py:219 wallet.py:197 wallet.py:220
+#: main.py:196 main.py:219 wallet.py:250 wallet.py:287
 msgid "Txid is {}"
 msgstr "Txid er {}"
 
-#: main.py:201 main.py:221 wallet.py:202 wallet.py:222
+#: main.py:201 main.py:221 wallet.py:255 wallet.py:289
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Det oppstod en feil ved sending til mempool, transaksjonen ble ikke sendt."
 
 #: crystals/200_dragginator/themes/default/about.html:89
-#: modules/basehandlers.py:37
+#: modules/basehandlers.py:51
 msgid "No Bismuth address, please create or load a wallet first."
-msgstr "No Bismuth address, please create or load a wallet first."
+msgstr "Ingen Bismuth adresse, vennligst lag en eller last inn en lommebok først."
 
-#: themes/material/base.html:94 themes/material/crystals_list.html:11
+#: themes/material/base.html:95 themes/material/crystals_list.html:11
 msgid "Crystals"
-msgstr "Crystals"
+msgstr "Krystaller"
 
-#: themes/material/base.html:119
+#: themes/material/base.html:131
 msgid "Search..."
-msgstr "Search..."
+msgstr "Søk..."
 
 #: themes/material/crystals_list.html:12
 msgid "Crystals are extra functionalities you can add to your wallet"
-msgstr "Crystals are extra functionalities you can add to your wallet"
+msgstr "Krystaller er ekstra funksjonalitet som du kan legge til din lommebok"
 
 #: crystals/100_bismuthprice/themes/default/about.html:11
 #: crystals/100_bismuthprice/themes/default/modules/home.html:16
 msgid "Crystal"
-msgstr "Crystal"
+msgstr "Krystall"
 
 #: crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/210_eggpool/themes/default/about.html:29
 msgid "Version"
-msgstr "Version"
+msgstr "Versjon"
 
 #: crystals/100_bismuthprice/themes/default/modules/home.html:4
 msgid "Current Bismuth Prices"
-msgstr "Current Bismuth Prices"
+msgstr "Gjeldende Bismuth priser"
 
 #: crystals/200_dragginator/themes/default/egg.html:20
 msgid "BIS"
 msgstr "BIS"
 
-#: main.py:198 wallet.py:199
+#: main.py:198 wallet.py:252
 msgid "Success"
-msgstr "Success"
+msgstr "Suksess"
 
 #: themes/material/transactions_confirmpop.html:10
 msgid "Confirm Transaction"
-msgstr "Confirm Transaction"
+msgstr "Bekreft Transaksjon"
 
-#: themes/material/transactions_send.html:34
-#: themes/material/transactions_sendpop_confirm.html:60
+#: themes/material/transactions_send.html:36
+#: themes/material/transactions_sendpop_confirm.html:61
 msgid "Operation"
-msgstr "Operation"
+msgstr "Operasjon"
 
 #: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/layout_old.html:29
 msgid "Navigation"
-msgstr "Navigation"
+msgstr "Navigasjon"
 
 #: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:11
 msgid "Search"
-msgstr "Search"
+msgstr "Søk"
 
 #: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:33
 msgid "Search Results"
-msgstr "Search Results"
+msgstr "Søkeresultater"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:64
 msgid "D:Air egg"
-msgstr "Air egg"
+msgstr "Luft egg"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:63
 msgid "D:Earth egg"
-msgstr "Earth Egg"
+msgstr "Jord Egg"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:63
 msgid "D:Fire egg"
-msgstr "Fire Egg"
+msgstr "Ild Egg"
 
-#: crystals/200_dragginator/__init__.py:73
+#: crystals/200_dragginator/__init__.py:63
 msgid "D:Water egg"
-msgstr "Water egg"
+msgstr "Vann Egg"
 
-#: crystals/200_dragginator/__init__.py:77
+#: crystals/200_dragginator/__init__.py:68
 msgid "D:Cup"
 msgstr "Cup"
 
-#: crystals/200_dragginator/__init__.py:77
+#: crystals/200_dragginator/__init__.py:68
 msgid "D:special egg"
-msgstr "Special egg"
+msgstr "Spesial egg"
 
-#: crystals/200_dragginator/__init__.py:77
+#: crystals/200_dragginator/__init__.py:68
 msgid "D:world cup 2018"
 msgstr "2018 World Cup"
 
 #: crystals/200_dragginator/themes/default/about.html:21
 msgid "D:Dragginator News"
-msgstr "Dragginator news"
+msgstr "Dragginator nyheter"
 
 #: crystals/200_dragginator/themes/default/about.html:36
 msgid "D:My eggs"
-msgstr "My eggs"
+msgstr "Mine egg"
 
 #: crystals/200_dragginator/themes/default/about.html:47
 msgid "D:And you are registered to the current eggdrop"
-msgstr "And you are registered to the current eggdrop"
+msgstr "Og du er registrert for gjeldende eggdrop"
 
 #: crystals/200_dragginator/themes/default/about.html:49
 msgid "D:Register"
-msgstr "Register"
+msgstr "Registrer"
 
 #: crystals/200_dragginator/themes/default/about.html:49
 msgid "D:So you can register to the eggdrop!"
-msgstr "So you can register to the eggdrop!"
+msgstr "Du kan registrere deg for eggdrop!"
 
 #: crystals/200_dragginator/themes/default/about.html:61
 msgid "D:DNA"
@@ -676,7 +689,7 @@ msgstr "Element"
 #: crystals/200_dragginator/themes/default/about.html:63
 #: crystals/200_dragginator/themes/default/egg.html:31
 msgid "D:Species"
-msgstr "Species"
+msgstr "Art"
 
 #: crystals/200_dragginator/themes/default/egg.html:11
 msgid "D:DNA:"
@@ -684,51 +697,51 @@ msgstr "DNA:"
 
 #: crystals/200_dragginator/themes/default/egg.html:11
 msgid "D:See on Dragginator.com"
-msgstr "See on Dragginator.com"
+msgstr "Se Dragginator.com"
 
 #: crystals/200_dragginator/themes/default/egg.html:23
 msgid "D:Archive"
-msgstr "Archive"
+msgstr "Arkiv"
 
 #: crystals/200_dragginator/themes/default/egg.html:32
 msgid "D:Age"
-msgstr "Age"
+msgstr "Alder"
 
 #: crystals/200_dragginator/themes/default/egg.html:33
 msgid "D:Rarity"
-msgstr "Rarity"
+msgstr "Sjeldenhet"
 
 #: crystals/200_dragginator/themes/default/egg.html:43
 msgid "D:You own this egg"
-msgstr "You own this egg"
+msgstr "Du eier dette egget"
 
 #: crystals/200_dragginator/themes/default/egg.html:46
 msgid "D:You don't own this egg"
-msgstr "You don't own this egg"
+msgstr "Du eier ikke dette egget"
 
 #: crystals/200_dragginator/themes/default/egg.html:60
 msgid "D:Send this egg to..."
-msgstr "Send this egg to..."
+msgstr "Send dette egget til ..."
 
 #: crystals/200_dragginator/themes/default/egg.html:63
 msgid "D:Sell this egg for BIS"
-msgstr "Sell this egg for BIS"
+msgstr "Selg dette egget for BIS"
 
 #: crystals/200_dragginator/themes/default/egg.html:69
 msgid "D:Remove this egg from the marketplace"
-msgstr "Remove this egg from the marketplace"
+msgstr "Fjern dette egget fra markedsplassen"
 
 #: crystals/210_eggpool/themes/default/about.html:14
 msgid "EP:Direct Link to official Dashboard"
-msgstr "Direct Link to official Dashboard"
+msgstr "Direkte lenke til offisielt Dashboard"
 
 #: crystals/210_eggpool/themes/default/about.html:15
 msgid "EP:Get last GPU miner"
-msgstr "Get latest GPU miner"
+msgstr "Last ned siste GPU miner"
 
 #: crystals/210_eggpool/themes/default/about.html:16
 msgid "Join the Official Bismuth Discord for support"
-msgstr "Join the Official Bismuth Discord for support"
+msgstr "Bli medlem av det offisielle Bismuth Discord for hjelp"
 
 #: crystals/210_eggpool/themes/default/about.html:48
 msgid "EP:Hash Rate"
@@ -737,7 +750,7 @@ msgstr "Hash Rate"
 #: crystals/210_eggpool/themes/default/about.html:49
 #: crystals/210_eggpool/themes/default/about.html:64
 msgid "EP:Last 12 hours"
-msgstr "Last 12 hours"
+msgstr "Siste 12 timer"
 
 #: crystals/210_eggpool/themes/default/about.html:63
 msgid "EP:Shares"
@@ -745,93 +758,341 @@ msgstr "Shares"
 
 #: crystals/210_eggpool/themes/default/about.html:73
 msgid "EP:Workers"
-msgstr "Workers"
-
-#: modules/i18n.py:11
-msgid "DT:Processing..."
-msgstr "Processing..."
-
-#: modules/i18n.py:12
-msgid "DT:Search&nbsp;..."
-msgstr "Search&nbsp;..."
-
-#: modules/i18n.py:13
-msgid "DT:Display _MENU_ elements"
-msgstr "Display _MENU_ elements"
-
-#: modules/i18n.py:14
-msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
-msgstr "Display element _START_ to _END_ from _TOTAL_ elements"
-
-#: modules/i18n.py:15 modules/i18n.py:19
-msgid "DT:Nothing to display"
-msgstr "Nothing to display"
-
-#: modules/i18n.py:16
-msgid "DT:filtered from _MAX_ total elements"
-msgstr "filtered from _MAX_ total elements"
-
-#: modules/i18n.py:18
-msgid "DT:Loading..."
-msgstr "Loading..."
-
-#: modules/i18n.py:20
-msgid "DT:No data in the table"
-msgstr "No data in the table"
+msgstr "Arbeidere"
 
 #: modules/i18n.py:22
-msgid "DT:First"
-msgstr "First"
+msgid "DT:Processing..."
+msgstr "Prosesserer..."
 
 #: modules/i18n.py:23
-msgid "DT:Previous"
-msgstr "Previous"
+msgid "DT:Search&nbsp;..."
+msgstr "Søk&nbsp;..."
 
 #: modules/i18n.py:24
-msgid "DT:Next"
-msgstr "Next"
+msgid "DT:Display _MENU_ elements"
+msgstr "Vis _MENU_elements"
 
 #: modules/i18n.py:25
-msgid "DT:Last"
-msgstr "Last"
+msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
+msgstr "Vis element _START_ to _END_ from _TOTAL_ elements"
 
-#: modules/i18n.py:28
-msgid "DT:Sort by ascending order"
-msgstr "Sort by ascending order"
+#: modules/i18n.py:26 modules/i18n.py:30
+msgid "DT:Nothing to display"
+msgstr "Ingenting å vise"
+
+#: modules/i18n.py:27
+msgid "DT:filtered from _MAX_ total elements"
+msgstr "filtrert from _MAX_ total elements"
 
 #: modules/i18n.py:29
+msgid "DT:Loading..."
+msgstr "Laster..."
+
+#: modules/i18n.py:31
+msgid "DT:No data in the table"
+msgstr "Ingen data i tabellen"
+
+#: modules/i18n.py:33
+msgid "DT:First"
+msgstr "Først"
+
+#: modules/i18n.py:34
+msgid "DT:Previous"
+msgstr "Forrige"
+
+#: modules/i18n.py:35
+msgid "DT:Next"
+msgstr "Neste"
+
+#: modules/i18n.py:36
+msgid "DT:Last"
+msgstr "Siste"
+
+#: modules/i18n.py:39
+msgid "DT:Sort by ascending order"
+msgstr "Sorter i økende rekkefølge"
+
+#: modules/i18n.py:40
 msgid "DT:Sort by descending order"
-msgstr "Sort by descending order"
+msgstr "Sorter i fallende rekkefølge"
 
 #: crystals/200_dragginator/themes/default/about.html:44
 msgid "D:You don't own any egg ;("
-msgstr "You don't own any egg ;("
+msgstr "Du eier ingen egg ;("
 
 #: crystals/200_dragginator/themes/default/about.html:15
 msgid "D:Buy an egg for {} BIS"
-msgstr "Buy an egg for {} BIS"
+msgstr "Kjøp et egg for {} BIS"
 
 #: crystals/200_dragginator/themes/default/about.html:54
 msgid "D:You own {} eggs"
-msgstr "You own {} eggs"
+msgstr "Du eier {} egg"
 
 #: crystals/200_dragginator/themes/default/egg.html:78
 msgid "D:Buy for {} BIS"
-msgstr "Buy for {} BIS"
+msgstr "Kjøp for {} BIS"
 
 #: crystals/200_dragginator/themes/default/egg.html:65
 msgid "D:Price"
-msgstr "Price"
+msgstr "Pris"
 
 #: themes/material/transactions_confirmpop.html:7
 msgid "Transaction Status"
-msgstr "Transaction Status"
+msgstr "Transaksjonsstatus"
 
 #: themes/material/transactions_confirmpop.html:23
 msgid "OK"
 msgstr "OK"
 
-#: themes/material/transactions_send.html:36
+#: themes/material/transactions_send.html:38
 msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
-msgstr "\"operation\" allows for powerful Bismuth Features. Leave empty unless otherwise required."
+msgstr "\"operation\" tillater kraftige Bismuth funksjoner. La feltet være tomt hvis ikke nødvendig."
+
+#: crystals/210_eggpool/__init__.py:68
+msgid "No data"
+msgstr "Ingen data"
+
+#: crystals/210_eggpool/__init__.py:85
+msgid "This crystal is activated but needs a wallet restart."
+msgstr "Denne krystall er aktivert men lommebok må startes på nytt."
+
+#: modules/i18n.py:8 themes/material/wallet_info.html:219
+msgid "No protection"
+msgstr "Ingen beskyttelse"
+
+#: modules/i18n.py:10 themes/material/wallet_info.html:216
+msgid "PIN Code"
+msgstr "Pinkode"
+
+#: modules/i18n.py:12 themes/material/wallet_info.html:217
+msgid "YUBICO"
+msgstr "YUBICO"
+
+#: modules/i18n.py:14
+msgid "U2F Token"
+msgstr "U2F Token"
+
+#: themes/material/base.html:117
+msgid "Wallet info"
+msgstr "Informasjon om lommebok"
+
+#: themes/material/crystals_list.html:48
+msgid "Apply"
+msgstr "Anvend"
+
+#: themes/material/message_pop.html:23 themes/material/messages_pop.html:31
+msgid "Close"
+msgstr "Steng"
+
+#: themes/material/messages.html:15 wallet.py:604
+msgid "Sign message"
+msgstr "Signer melding"
+
+#: themes/material/messages.html:16
+msgid "Sign some data for off chain usage with your private key."
+msgstr "Signer data for off chain bruk med din private nøkkel."
+
+#: themes/material/messages.html:26
+#: themes/material/transactions_send_confirm.html:104
+#: themes/material/transactions_sendpop_confirm.html:91
+#: themes/material/wallet_info.html:202 themes/material/wallet_info.html:203
+#: wallet.py:237 wallet.py:274 wallet.py:617
+msgid "Spend protection"
+msgstr "Bruksbeskyttelse"
+
+#: themes/material/messages.html:37
+msgid "Sign Message"
+msgstr "Signer Melding"
+
+#: themes/material/messages.html:52
+msgid "Encrypt message"
+msgstr "Krypter melding"
+
+#: themes/material/messages.html:53
+msgid "Encrypt data for off chain usage."
+msgstr "Krypter data for off chain bruk."
+
+#: themes/material/messages.html:63
+msgid "You have to tell the recipient address so the message can be encrypted with his public key"
+msgstr "Du må fortelle mottaker adressen at meldingen kan krypteres med hans offentlige nøkkel"
+
+#: themes/material/messages.html:67
+msgid "Encrypt Message"
+msgstr "Krypter Melding"
+
+#: themes/material/messages_pop.html:24
+#: themes/material/transactions_receive.html:81
+msgid "Click text to copy"
+msgstr "Klikk tekst for å kopiere"
+
+#: themes/material/messages_pop.html:34
+#: themes/material/transactions_receive.html:84
+msgid "Copied to Clipboard"
+msgstr "Kopiert til utklippstavlen"
+
+#: themes/material/transactions_send.html:103
+msgid "Send a transaction from a BIS URL"
+msgstr "Send en transaksjon fra en BIS URL"
+
+#: themes/material/transactions_send.html:110
+msgid "Paste the BIS URL you were given here"
+msgstr "Lim inn BIS URL som du fikk her"
+
+#: themes/material/transactions_send.html:117
+msgid "Decode BIS URL"
+msgstr "Dekod BIS URL"
+
+#: themes/material/transactions_send.html:123
+msgid "Send BIS URL..."
+msgstr "Send BIS URL..."
+
+#: themes/material/wallet_info.html:16
+msgid "{} Address(es)"
+msgstr "{} Adresse(r)"
+
+#: themes/material/wallet_info.html:29
+msgid "Manage"
+msgstr "Organiser"
+
+#: themes/material/wallet_info.html:30
+msgid "addresses"
+msgstr "adresser"
+
+#: themes/material/wallet_info.html:34
+msgid "Select one of your Bismuth addresses"
+msgstr "Velg en av dine Bismuth adresser"
+
+#: themes/material/wallet_info.html:49
+msgid "Create a new"
+msgstr "Lag en ny"
+
+#: themes/material/wallet_info.html:50
+msgid "address"
+msgstr "adresse"
+
+#: themes/material/wallet_info.html:72
+msgid "Wallet is locked"
+msgstr "Lommebok er låst"
+
+#: themes/material/wallet_info.html:76
+msgid "Existing master password"
+msgstr "Eksisterende master passord"
+
+#: themes/material/wallet_info.html:78
+msgid "This is the password that protects your private key(s)"
+msgstr "Dette er passordet som beskytter din(e) private nøkkel(nøkler)"
+
+#: themes/material/wallet_info.html:92
+msgid "Wallet is unlocked"
+msgstr "Lommebok er ulåst"
+
+#: themes/material/wallet_info.html:95
+msgid "You can lock it back for extra safety if you don't plan to use it soon."
+msgstr "Du kan låse den igjen for ekstra sikkerhet hvis du ikke skal bruke den snart."
+
+#: themes/material/wallet_info.html:125 themes/material/wallet_info.html:148
+#: themes/material/wallet_info.html:152 themes/material/wallet_info.html:227
+msgid "Master password"
+msgstr "Master passord"
+
+#: themes/material/wallet_info.html:132
+msgid "Master password is set"
+msgstr "Master passord er satt"
+
+#: themes/material/wallet_info.html:155
+msgid "This is the password that will protect your private keys."
+msgstr "Dette er passordet som vil beskytte dine private nøkler."
+
+#: themes/material/wallet_info.html:159
+msgid "Retype Master password"
+msgstr "Tast Master passordet på nytt"
+
+#: themes/material/wallet_info.html:162
+msgid "Losing this password means loosing your keys!"
+msgstr "Tap av dette passordet betyr at du mister dine nøkler!"
+
+#: themes/material/wallet_info.html:170
+msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
+msgstr "Dette vil kryptere din lommebok. Du vil kanskje ta en backup av den ukrypterte filen først."
+
+#: themes/material/wallet_info.html:176
+msgid "Master password is not set"
+msgstr "Master passord er ikke definert"
+
+#: themes/material/wallet_info.html:218
+msgid "U2F TOKEN"
+msgstr "U2F TOKEN"
+
+#: themes/material/wallet_info.html:229
+msgid "Needed to confirm operation"
+msgstr "Behøvs for å bekrefte operasjon"
+
+#: themes/material/wallet_info.html:243
+msgid "Spending is currently not protected"
+msgstr "Bruk av BIS er ikke beskyttet"
+
+#: themes/material/wallet_info.html:245
+msgid "Spending is currently protected by {}"
+msgstr "Bruk av BIS er beskyttet av {}"
+
+#: themes/material/wallet_load.html:16 themes/material/wallet_load.html:36
+msgid "Your Bismuth addresses"
+msgstr "Dine Bismuth adresser"
+
+#: themes/material/wallet_load.html:20
+msgid "Your wallet directory is {}"
+msgstr "Din lommebok katalog er {}"
+
+#: themes/material/wallet_load.html:21
+msgid "Your wallet is {}"
+msgstr "Din lommebok er {}"
+
+#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:69
+msgid "Label"
+msgstr "Merkelapp"
+
+#: themes/material/wallet_load.html:44
+msgid "Creation date"
+msgstr "Opprettelsesdato"
+
+#: themes/material/wallet_load.html:71
+msgid "A private label for the new address"
+msgstr "En privat merkelapp for den nye adressen"
+
+#: themes/material/wallet_load.html:76
+msgid "Create a new address"
+msgstr "Lag en ny adresse"
+
+#: themes/material/wallet_load.html:92
+msgid "Potential legacy wallet imports"
+msgstr "Potensiell import av gammelt lommebokformat"
+
+#: wallet.py:237 wallet.py:274 wallet.py:617
+msgid "Invalid PIN Number"
+msgstr "Ugyldig PIN nummer"
+
+#: wallet.py:387 wallet.py:407 wallet.py:446 wallet.py:460 wallet.py:468
+#: wallet.py:483 wallet.py:494
+msgid "Error: {}"
+msgstr "Feilmelding: {}"
+
+#: wallet.py:437
+msgid "Max of {} addresses reached."
+msgstr "Maks av {} adresser nådd."
+
+#: wallet.py:477
+msgid "Passwords do not match"
+msgstr "Passord stemmer ikke"
+
+#: wallet.py:623
+msgid "Your message '{}' has been signed."
+msgstr "Din melding '{}' har blitt signert."
+
+#: wallet.py:625
+msgid "Signature"
+msgstr "Signatur"
+
+#: wallet.py:629
+msgid "This feature is under construction. "
+msgstr "Denne funksjonen er under konstruksjon. "
 
