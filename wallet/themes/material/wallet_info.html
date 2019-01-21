@@ -80,7 +80,9 @@
                         </div>
                         <input type="hidden" name="action" value="unlock">
                         {% raw xsrf_form_html() %}
-                        <input class="btn btn-warning" type="submit" value="{{ _('Unlock wallet')}}">
+                        <input class="btn btn-warning" type="submit" value='{{
+                        _("Unlock wallet")
+                        }}'>
                         <i class="material-icons" title="{{ _('This is likely to take some time, please do not interrupt the process.')}}">hourglass_empty</i>
                 </div>
                 {% else %}
@@ -99,7 +101,9 @@
                         <div class="form-group">
                         <input type="hidden" name="action" value="lock">
                         {% raw xsrf_form_html() %}
-                        <input class="btn btn-warning" type="submit" value="{{ _('Lock wallet')}}">
+                        <input class="btn btn-warning" type="submit" value="{{
+                        _('Lock wallet')
+                        }}">
                         </div>
                     {% else %}
                     {{ _("You have to encrypt your wallet first to use this feature") }}
@@ -136,7 +140,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <i class="material-icons">lockk</i> {{ _("Master password is set") }}
+                        <i class="material-icons">lock</i> {{ _("Master password is set") }}
                     </div>
                 </div>
             </form>
@@ -172,7 +176,9 @@
                         <br/>
                         <input type="hidden" name="action" value="set_master">
                         {% raw xsrf_form_html() %}
-                        <input class="btn btn-warning" type="submit" value="{{ _('Set master password')}}">
+                        <input class="btn btn-warning" type="submit" value="{{
+                        _('Set master password')
+                        }}">
                         <i class="material-icons" title="{{ _('This is likely to take some time, please do not interrupt the process.')}}">hourglass_empty</i>
                     <br /><small style="color:orange">{{ _("This will encrypt your wallet file. You may want to backup the unencrypted file first.")}}
                             </small>
@@ -238,7 +244,9 @@
                         </div>
                         <input type="hidden" name="action" value="set_spend">
                         {% raw xsrf_form_html() %}
-                        <input class="btn btn-warning" type="submit" value="{{ _('Set spend protection')}}">
+                        <input class="btn btn-warning" type="submit" value="{{
+                        _('Set spend protection')
+                        }}">
                         {% if bismuth['master_set'] %}
                         <i class="material-icons" title="{{ _('This is likely to take some time, please do not interrupt the process.')}}">hourglass_empty</i>
                         {% end %}

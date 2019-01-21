@@ -370,6 +370,8 @@ class WalletHandler(BaseHandler):
     """Wallet related routes"""
     async def load(self, params=None, post=False):
         _ = self.locale.translate
+        # void = _("Unlock wallet")
+        # void = _("Lock wallet")  # workaround unextractable terms
         if self.bismuth._wallet._locked:
             self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
         if not params:
