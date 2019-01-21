@@ -27,7 +27,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="bmd-label-floating">{{ _("Recipient")}}</label>
-                                <input class="form-control" id="recipient" type="text" name="recipient"
+                                <input class="form-control" id="crecipient" type="text" name="recipient"
                                        value="{{ bismuth['params'].get('recipient', '') }}" disabled/>
                             </div>
                             <br/>
@@ -36,7 +36,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">{{ _("Amount (BIS)")}}</label>
-                                        <input class="form-control" id="amount" type="text" name="amount"
+                                        <input class="form-control" id="camount" type="text" name="amount"
                                                value="{{ bismuth['params'].get('amount', '') }}" disabled/>
                                         <small>{{ _("This is what the recipient will receive")}}</small>
                                     </div>
@@ -59,14 +59,14 @@
                             <!-- br -->
                             <div class="form-group">
                                 <label class="bmd-label-floating">{{ _("Operation")}}</label>
-                                <input class="form-control" id="operation" type="text" name="operation"
+                                <input class="form-control" id="coperation" type="text" name="operation"
                                        value="{{ bismuth['params'].get('operation', '') }}" disabled/>
 
                             </div>
                             <br/>
                             <div class="form-group">
                                 <label class="bmd-label-floating">{{ _("Data (message)")}}</label>
-                                <input class="form-control" id="data" type="text" name="data"
+                                <input class="form-control" id="cdata" type="text" name="data"
                                        title="{{ bismuth['params'].get('data', '') }}"
                                        value="{{ bismuth['params'].get('data', '') }}" disabled/>
                                 <!-- small>
@@ -89,11 +89,11 @@
                                     {% if bismuth['spend_type']['type'] %}
                                     <div class="form-group">
                                             <label class="bmd-label-floating">{{ _("Spend protection")}}</label>
-                                            <input class="form-control password" id="spend_token" type="text" name="spend_token" />
+                                            <input class="form-control password" id="cspend_token" type="text" name="spend_token" />
                                             <small>{{ bismuth['spend_type']['label'] }}</small>
                                     </div>
                                     {% else %}
-                                    <input type="hidden" name="spend_token" value="" />
+                                    <input type="hidden" id="cspend_token" name="spend_token" value="" />
                                     {% end %}
                              </div>
                              <div class="col-lg-6 col-sm-12">
@@ -104,7 +104,9 @@
                              </div>
                              <div class="col-lg-6 col-sm-12">
                                 <button id="send_button" type="submit" value="confirm"
-                                        class="btn btn-success float-right" onclick="confirmed()">
+                                        class="btn btn-success float-right" onclick="confirmtx($('#crecipient').val(),
+                                        $('#cdata').val(), $('#camount').val(), $('#coperation').val(),
+                                        $('#cspend_token').val())">
                                     {{ _("Confirm and send BIS")}}
                                 </button>
                              </div>

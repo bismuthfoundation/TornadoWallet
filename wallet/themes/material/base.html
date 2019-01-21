@@ -373,27 +373,45 @@ function float_to_bis(x){
     }
 
 
-function confirmed(){
-    if(enabled){
-        enabled = false;
-        $("#payment_window").css({"cursor":"wait"});
-        $("#send_button").prop("disabled",true);
+    function confirmed(){
+        if(enabled){
+            enabled = false;
+            $("#payment_window").css({"cursor":"wait"});
+            $("#send_button").prop("disabled",true);
 
-        address = $("div.modal-dialog#recipient").val();
-        data = $("div.modal-dialog#data").val();
-        amount = $("div.modal-dialog#amount").val();
-        operation = $("div.modal-dialog#operation").val();
-        token = $("div.modal-dialog#spend_token").val();
+            address = $("div.modal-dialog#recipient").val();
+            alert(address);
+            data = $("div.modal-dialog#data").val();
+            amount = $("div.modal-dialog#amount").val();
+            operation = $("div.modal-dialog#operation").val();
+            token = $("div.modal-dialog#spend_token").val();
 
-        $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+encodeURIComponent(data)
-         +"&operation="+encodeURIComponent(operation)+"&token="+encodeURIComponent(token),function(page){
-            $("#payment_window").html(page);
-            $("#payment_window").css({"cursor":"context-menu"});
-            //$("#payment_window").modal("show");
-        });
+            $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+encodeURIComponent(data)
+             +"&operation="+encodeURIComponent(operation)+"&token="+encodeURIComponent(token),function(page){
+                $("#payment_window").html(page);
+                $("#payment_window").css({"cursor":"context-menu"});
+                //$("#payment_window").modal("show");
+            });
 
+        }
     }
-}
+
+
+function confirmtx(address, data, amount, operation, token){
+        if(enabled){
+            enabled = false;
+            $("#payment_window").css({"cursor":"wait"});
+            $("#send_button").prop("disabled",true);
+
+            $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+encodeURIComponent(data)
+             +"&operation="+encodeURIComponent(operation)+"&token="+encodeURIComponent(token),function(page){
+                $("#payment_window").html(page);
+                $("#payment_window").css({"cursor":"context-menu"});
+                //$("#payment_window").modal("show");
+            });
+
+        }
+    }
 
        function fees_calc() {
             data = $("#data").val();
