@@ -9,7 +9,7 @@ from modules.i18n import get_dt_language
 from modules.helpers import base_path, async_get_with_http_fallback
 from tornado.template import Template
 
-__version__ = '0.1b'
+__version__ = '0.2b'
 
 DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/250_autogame/themes/default')
 
@@ -29,15 +29,32 @@ class AutogameHandler(CrystalHandler):
         if len(self.bismuth_vars['address']) == 56:
             self.bismuth_vars['address'] = 'fefb575972cd8fdb086e2300b51f727bb0cbfc33282f1542e19a8f1d'
             url = "http://autogame.bismuth.live:6060/api/seed/{}".format(self.bismuth_vars['address'])
-            print(url)
+            # print(url)
             games_list = await async_get_with_http_fallback(url)
-            print(games_list)
+            # print(games_list)
             if games_list is None or len(games_list) == 0:
                 # games_list = ['da67c4db9d995c49cec1', '54c0f5571e69e26375db']
                 games_list = []
         else:
             games_list = []
+        # We need the namespace to use modules (sub templates), like here to inject custom JS in the footer.
+        namespace = self.get_template_namespace()
+        self.bismuth_vars['extra'] = {"header": '', "footer": MODULES['footer'].generate(**namespace)}
         self.render("about.html", bismuth=self.bismuth_vars, version=__version__, games_list=games_list)
+
+    async def replay_pop(self, params=None):
+        """replay, in a template without base content"""
+        hash = self.get_argument("hash", None)
+        url = "http://autogame.bismuth.live:6060/api/replay/{}".format(hash)
+        actions = await async_get_with_http_fallback(url)
+        self.render("replay_pop.html", bismuth=self.bismuth_vars, hash=hash, actions=actions)
+
+    async def status_pop(self, params=None):
+        """status of a game, in a template without base content"""
+        hash = self.get_argument("hash", None)
+        url = "http://autogame.bismuth.live:6060/api/db/{}".format(hash)
+        status = await async_get_with_http_fallback(url)
+        self.render("status_pop.html", bismuth=self.bismuth_vars, hash=hash, status=status)
 
     async def get(self, command=''):
         command, *params = command.split('/')

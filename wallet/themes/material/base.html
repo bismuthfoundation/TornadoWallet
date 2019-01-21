@@ -333,8 +333,6 @@ function float_to_bis(x){
             data = $("#data").val();
             amount = $("#amount").val();
             if (amount <= 0) { amount=0}
-            alert(data);
-            alert(amount);
             fees = 0.01+0.00001*data.length
             $("#feespop").val(float_to_bis(fees));
             $("#totalpop").val(float_to_bis(parseFloat(amount) + fees));
@@ -592,12 +590,7 @@ function confirmed(){
 
 </script>
 
-    });
-
-</script>
-
 {% raw bismuth['extra']['footer'] %}
-
 
 </body>
 
