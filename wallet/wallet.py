@@ -185,6 +185,7 @@ class TransactionsHandler(BaseHandler):
             self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         if self.get_argument('url', False):
+            print("url", self.get_argument('url'))
             # We have an url param, confirm once decoded
             self.settings["page_title"] = _("Send BIS: Confirmation")
             type='warning'  # Do not translate

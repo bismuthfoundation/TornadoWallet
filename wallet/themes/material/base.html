@@ -326,7 +326,7 @@ function float_to_bis(x){
     function sendurl(url){
         if (url == '') { return false}
         enabled = true;
-        $.get('/transactions/send_pop?url='+url,function(page){
+        $.get('/transactions/send_pop?url='+encodeURIComponent(url),function(page){
             $("#payment_window").html(page);
             $("#payment_window").modal("show");
             // TODO: missing alias and token emission
@@ -344,7 +344,8 @@ function float_to_bis(x){
         if (address == '') { return false}
         if (amount <= 0) { amount=0}
         enabled = true;
-        $.get('/transactions/send_pop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation,function(page){
+        $.get('/transactions/send_pop?recipient='+address+'&amount='+amount+"&data="+encodeURIComponent(data)
+               + "&operation="+encodeURIComponent(operation),function(page){
             $("#payment_window").html(page);
             $("#payment_window").modal("show");
             fees = 0.01+0.00001*data.length
