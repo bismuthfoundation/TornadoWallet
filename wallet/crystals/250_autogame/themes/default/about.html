@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-info">
+                <h4 class="card-title">AUTOGAME CRYSTAL</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><a href="https://github.com/hclivess/BismuthProjects/blob/master/autogame/about.md" target="_blank">{{ _('AG:Direct Link to latest autogame doc.') }}</a></li>
+                    <li><a href="https://discordapp.com/invite/2y2ZFQR" target="_blank">{{ _('Join the Official Bismuth Discord for support') }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-success">
+                <h4 class="card-title">{{ _("About") }}</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+                {{ _("Version") }} {{ version }}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+
+     <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{ _("AG:Your games") }}</h4>
+                <div class="games">
+                    <ul>
+                    {% for hash in games_list %}
+                        <li><a href="http://autogame.bismuth.live:6060/api/replay/{{hash}}" target="gamedetail"><span class="btn" style="padding:3px">{{hash}}</span></a></li>
+                        <li><a href="http://autogame.bismuth.live:6060/api/db/{{hash}}" target="gamedetail"><span class="btn" style="padding:3px">db {{hash}}</span></a></li>
+                    {% end %}
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+
+     <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{ _("AG:Game detail") }}</h4>
+                <iframe id="gamedetail" name="gamedetail">blabla</iframe>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+{% end %}

@@ -153,7 +153,7 @@ class TransactionsHandler(BaseHandler):
             await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
         # print(self.bismuth.wallet())
-        if self.bismuth.wallet()['encrypted']:
+        if self.bismuth._wallet._locked:
             self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         if query_params.get('recipient', False):
@@ -181,7 +181,7 @@ class TransactionsHandler(BaseHandler):
             await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
         # print(self.bismuth.wallet())
-        if self.bismuth.wallet()['encrypted']:
+        if self.bismuth._wallet._locked:
             self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         if self.get_argument('url', False):
@@ -232,7 +232,7 @@ class TransactionsHandler(BaseHandler):
         if not self.bismuth_vars['address']:
             await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
-        if self.bismuth.wallet()['encrypted']:
+        if self.bismuth._wallet._locked:
             self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         # check spend protection
@@ -269,7 +269,7 @@ class TransactionsHandler(BaseHandler):
         if not self.bismuth_vars['address']:
             await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
-        if self.bismuth.wallet()['encrypted']:
+        if self.bismuth._wallet._locked:
             self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         # check spend protection
@@ -301,7 +301,7 @@ class TransactionsHandler(BaseHandler):
             await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
         # print(self.bismuth.wallet())
-        if self.bismuth.wallet()['encrypted']:
+        if self.bismuth._wallet._locked:
             self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         address = self.bismuth_vars['server']['address']
@@ -469,6 +469,7 @@ class WalletHandler(BaseHandler):
         if action == 'lock':
             try:
                 self.bismuth._wallet.lock()
+                # TODO: Clear cache because sensitive info can be there (ex: API answer from crystals, transactions)
             except Exception as e:
                 self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
                             bismuth=self.bismuth_vars)
