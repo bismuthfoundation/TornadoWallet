@@ -27,7 +27,7 @@ class AutogameHandler(CrystalHandler):
     async def about(self, params=None):
 
         if len(self.bismuth_vars['address']) == 56:
-            self.bismuth_vars['address'] = 'fefb575972cd8fdb086e2300b51f727bb0cbfc33282f1542e19a8f1d'
+            # self.bismuth_vars['address'] = 'fefb575972cd8fdb086e2300b51f727bb0cbfc33282f1542e19a8f1d'  # debug
             url = "http://autogame.bismuth.live:6060/api/seed/{}".format(self.bismuth_vars['address'])
             # print(url)
             games_list = await async_get_with_http_fallback(url)
