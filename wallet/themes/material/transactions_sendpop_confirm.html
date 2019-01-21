@@ -6,7 +6,7 @@
 
             <div class="modal-body">
 
-                <form method="post" action="/transactions/confirm">
+                <!-- form method="post" action="/transactions/confirmpop" -->
 
                     <div class="card">
                         <div class="card-header card-header-{{ type }}">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
 
-                </form>
+
 
                 <div class="card">
                     <div class="card-body">
@@ -114,6 +114,8 @@
                 </div>
 
                 {% raw xsrf_form_html() %}
+
+
 
             </div>
         </div>

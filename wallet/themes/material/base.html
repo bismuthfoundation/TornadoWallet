@@ -357,7 +357,7 @@ function float_to_bis(x){
     function sign(data, token){
         if (data == '') { return false}
         enabled = true;
-        $.get('/messages/sign_pop?data='+data+"&token="+token,function(page){
+        $.get('/messages/sign_pop?data='+data+"&token="+encodeURIComponent(token),function(page){
             $("#payment_window").html(page);
             $("#payment_window").modal("show");
             });
@@ -366,7 +366,7 @@ function float_to_bis(x){
     function encrypt(data, recipient){
         if (data == '') { return false}
         enabled = true;
-        $.get('/messages/encrypt_pop?data='+data+"&recipient="+recipient,function(page){
+        $.get('/messages/encrypt_pop?data='+encodeURIComponent(data)+"&recipient="+recipient,function(page){
             $("#payment_window").html(page);
             $("#payment_window").modal("show");
             });
@@ -379,13 +379,14 @@ function confirmed(){
         $("#payment_window").css({"cursor":"wait"});
         $("#send_button").prop("disabled",true);
 
-        address = $("#recipient").val();
-        data = $("#data").val();
-        amount = $("#amount").val();
-        operation = $("#operation").val();
-        token = $("#spend_token").val();
+        address = $("div.modal-dialog#recipient").val();
+        data = $("div.modal-dialog#data").val();
+        amount = $("div.modal-dialog#amount").val();
+        operation = $("div.modal-dialog#operation").val();
+        token = $("div.modal-dialog#spend_token").val();
 
-        $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+data+"&operation="+operation+"&token="+token,function(page){
+        $.get('/transactions/confirmpop?recipient='+address+'&amount='+amount+"&data="+encodeURIComponent(data)
+         +"&operation="+encodeURIComponent(operation)+"&token="+encodeURIComponent(token),function(page){
             $("#payment_window").html(page);
             $("#payment_window").css({"cursor":"context-menu"});
             //$("#payment_window").modal("show");
