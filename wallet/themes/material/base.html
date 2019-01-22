@@ -329,13 +329,14 @@ function float_to_bis(x){
         $.get('/transactions/send_pop?url='+encodeURIComponent(url),function(page){
             $("#payment_window").html(page);
             $("#payment_window").modal("show");
+            try { $("#cspend_token").focus() } catch(err) {}
             // TODO: missing alias and token emission
             data = $("#data").val();
             amount = $("#amount").val();
             if (amount <= 0) { amount=0}
             fees = 0.01+0.00001*data.length
-            $("#feespop").val(float_to_bis(fees));
-            $("#totalpop").val(float_to_bis(parseFloat(amount) + fees));
+            $(".totalpop").val(float_to_bis(parseFloat(amount) + fees));
+            $(".feespop").val(float_to_bis(fees));
             });
     }
 
@@ -348,9 +349,10 @@ function float_to_bis(x){
                + "&operation="+encodeURIComponent(operation),function(page){
             $("#payment_window").html(page);
             $("#payment_window").modal("show");
+            try { $("#cspend_token").focus() } catch(err) {}
             fees = 0.01+0.00001*data.length
-            $("#feespop").val(float_to_bis(fees));
-            $("#totalpop").val(float_to_bis(parseFloat(amount) + fees));
+            $(".totalpop").val(float_to_bis(parseFloat(amount) + fees));
+            $(".feespop").val(float_to_bis(fees));
             });
     }
 

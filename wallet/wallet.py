@@ -526,6 +526,14 @@ class WalletHandler(BaseHandler):
 
 class AboutHandler(BaseHandler):
 
+    async def connect(self, params=None):
+        self.render("message.html", type="warning", title="WIP", message="WIP",
+                    bismuth=self.bismuth_vars)
+
+    async def refresh(self, params=None):
+        self.render("message.html", type="warning", title="WIP", message="WIP",
+                    bismuth=self.bismuth_vars)
+
     async def credits(self, params=None):
         self.render("about_credits.html", bismuth=self.bismuth_vars)
 

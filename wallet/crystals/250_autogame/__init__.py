@@ -35,12 +35,22 @@ class AutogameHandler(CrystalHandler):
             if games_list is None or len(games_list) == 0:
                 # games_list = ['da67c4db9d995c49cec1', '54c0f5571e69e26375db']
                 games_list = []
+            # TODO: cache
+            games_detail = {}
+            for game in games_list:
+                url = "http://autogame.bismuth.live:6060/api/db/{}".format(game)
+                status = await async_get_with_http_fallback(url)
+                try:
+                    games_detail[game] = status
+                except:
+                    pass
         else:
             games_list = []
         # We need the namespace to use modules (sub templates), like here to inject custom JS in the footer.
         namespace = self.get_template_namespace()
         self.bismuth_vars['extra'] = {"header": '', "footer": MODULES['footer'].generate(**namespace)}
-        self.render("about.html", bismuth=self.bismuth_vars, version=__version__, games_list=games_list)
+        self.render("about.html", bismuth=self.bismuth_vars, version=__version__, games_list=games_list,
+                    games_detail=games_detail)
 
     async def replay_pop(self, params=None):
         """replay, in a template without base content"""

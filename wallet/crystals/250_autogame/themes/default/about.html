@@ -52,8 +52,15 @@
                 <h4 class="card-title">{{ _("AG:Your games") }}</h4>
                 <div class="games">
                     <ul>
-                    {% for hash in games_list %}
-                        <li><span class="btn game_status" style="padding:3px" data-hash="{{hash}}">{{hash}}</span> (<span class="btn btn-primary game_replay"  style="padding:3px" data-hash="{{hash}}">{{ _("Replay") }}</span>)</li>
+                    {% for hash, status in games_detail.items() %}
+                        <li><span class="btn game_status" style="padding:3px" data-hash="{{hash}}">{{hash}}</span>
+                            <span class="btn btn-success" style="padding:3px;">League: {{ status['league'] }}</span> <span class="btn btn-primary" style="padding:3px;">Experience: {{ status['experience'] }}</span>
+                            {% if status['finished'] == 1 %}
+                                &nbsp;<span class="btn btn-success game_replay"  style="padding:3px" data-hash="{{hash}}">{{ _("Replay") }}</span>
+                            {% else %}
+
+                            {% end %}
+                        </li>
                     {% end %}
                     </ul>
                 </div>

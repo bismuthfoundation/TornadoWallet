@@ -102,7 +102,8 @@
                                     {% if bismuth['spend_type']['type'] %}
                                     <div class="form-group">
                                             <label class="bmd-label-floating">{{ _("Spend protection")}}</label>
-                                            <input class="form-control" id="spend_token" type="text" name="spend_token"/>
+                                            <input class="form-control" id="spend_token" type="text" name="spend_token"
+                                             autocomplete="nope8744588" readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
                                             <small>{{ bismuth['spend_type']['label'] }}</small>
                                     </div>
                                     {% else %}

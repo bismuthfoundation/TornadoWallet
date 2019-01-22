@@ -47,10 +47,10 @@
                                         <input class="form-control" id="feespop" type="text" name="fees" disabled/>
                                         <small>{{ _("Fees depend on Data length")}}</small>
                                     </div -->
-                                    <input id="feespop" type="hidden" name="feespop" />
+                                    <input id="feespop" type="hidden" name="feespop" class="feespop" />
                                     <div class="form-group">
                                         <label class="bmd-label-floating">{{ _("Total (BIS)")}}</label>
-                                        <input class="form-control" id="totalpop" type="text" name="total" disabled/>
+                                        <input class="form-control totalpop" id="totalpop" type="text" name="total" disabled/>
                                         <small>{{ _("This is what you will pay, fees included.")}}</small>
                                     </div>
                                 </div>
@@ -89,7 +89,8 @@
                                     {% if bismuth['spend_type']['type'] %}
                                     <div class="form-group">
                                             <label class="bmd-label-floating">{{ _("Spend protection")}}</label>
-                                            <input class="form-control password" id="cspend_token" type="text" name="spend_token" />
+                                            <input class="form-control password" id="cspend_token" type="text" name="spend_token"
+                                             autocomplete="nope8744588" readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
                                             <small>{{ bismuth['spend_type']['label'] }}</small>
                                     </div>
                                     {% else %}

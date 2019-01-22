@@ -63,7 +63,7 @@
 
 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
-            <form action="/wallet/protection/" method="post">
+            <form action="/wallet/protection/" method="post" autocomplete="in_your_dreams_45654762">
                 {% if bismuth['wallet_locked'] %}
                 <div class="card-header card-header-danger card-header-icon">
                     <div class="card-icon">
@@ -74,7 +74,8 @@
                 <div class="card-body">
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Existing master password")}}</label>
-                            <input class="form-control password" type="text" name="master_password" value=""/>
+                            <input class="form-control password" type="text" name="master_password" value="" autocomplete="nope459262"
+                             readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
                             <small>{{ _("This is the password that protects your private key(s)")}}
                             </small>
                         </div>
@@ -128,7 +129,7 @@
 
     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
-            <form action="/wallet/protection/" method="post">
+            <form action="/wallet/protection/" method="post" autocomplete="in_your_dreams_4973452">
                 <div class="card-header card-header-success card-header-icon">
                     <div class="card-icon">
                         <i class="material-icons">lock</i>
@@ -151,7 +152,7 @@
 
     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
-            <form action="/wallet/protection/" method="post">
+            <form action="/wallet/protection/" method="post" autocomplete="in_your_dreams_412794">
                 <div class="card-header card-header-warning card-header-icon">
                     <div class="card-icon">
                         <i class="material-icons">lock_open</i>
@@ -162,14 +163,16 @@
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Master password")}}</label>
                             <input class="form-control password" id="new_master_password" type="text" name="new_master_password"
-                                   value=""/>
+                                   autocomplete="nope8912987" value=""
+                             readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
                             <small>{{ _("This is the password that will protect your private keys.")}}
                             </small>
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Retype Master password")}}</label>
                             <input class="form-control password" id="new_master_password2" type="text" name="new_master_password2"
-                                   value=""/>
+                                   autocomplete="nope7359998" value=""
+                             readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
                             <small>{{ _("Losing this password means loosing your keys!")}}
                             </small>
                         </div>
@@ -200,7 +203,7 @@
 
     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
-            <form action="/wallet/protection/" method="post">
+            <form action="/wallet/protection/" method="post" autocomplete="in_your_dreams_459842">
                 {% if not bismuth['spend_type']['type'] %}
                 <div class="card-header card-header-warning card-header-icon">
                     <div class="card-icon">
@@ -233,12 +236,15 @@
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">Option</label>
-                            <input class="form-control password" id="data" type="text" name="spend_value" value=""/>
+                            <input class="form-control password" id="data" type="text" name="spend_value" value=""
+                            autocomplete="nope8744588" readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
                             <small id="value_detail">TODO - Depends on radio button</small>
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Master password")}}</label>
-                            <input class="form-control password" id="check_master_password" type="text" name="master_password" value=""/>
+                            <input class="form-control password" id="check_master_password" type="text"
+                                   name="master_password" value="" autocomplete="nope788844455"
+                            readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
                             <small>{{ _("Needed to confirm operation")}}
                             </small>
                         </div>
