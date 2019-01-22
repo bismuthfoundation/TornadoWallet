@@ -621,7 +621,7 @@ class MessagesHandler(BaseHandler):
             await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
         # print(self.bismuth.wallet())
-        if self.bismuth.wallet()['encrypted']:
+        if self.bismuth._wallet._locked:
             self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         # check spend protection
