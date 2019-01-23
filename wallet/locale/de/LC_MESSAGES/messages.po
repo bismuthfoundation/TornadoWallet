@@ -493,7 +493,7 @@ msgstr "Bitte bestätigen Sie die Transaktion"
 
 #: main.py:147 main.py:175 wallet.py:164 wallet.py:192 wallet.py:214
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Prüfen Sie die Transaktion bevor Sie die \"Bestätigen\" Schaltfläche drücken"
+msgstr "Prüfen Sie die Daten bevor Sie die Transaktion bestätigen"
 
 #: main.py:227 wallet.py:308
 msgid "Receive BIS"
@@ -572,7 +572,7 @@ msgstr "Die Transaktion wurde zum Mempool hinzugefügt."
 
 #: main.py:196 main.py:219 wallet.py:256 wallet.py:293
 msgid "Txid is {}"
-msgstr "Tx ID: {}"
+msgstr "Transaktions ID: {}"
 
 #: main.py:201 main.py:221 wallet.py:261 wallet.py:295
 msgid "There was an error submitting to the mempool, transaction was not sent."
@@ -752,7 +752,7 @@ msgstr "Aktuellen GPU Miner aufrufen"
 #: crystals/210_eggpool/themes/default/about.html:16
 #: crystals/250_autogame/themes/default/about.html:15
 msgid "Join the Official Bismuth Discord for support"
-msgstr "Offiziellem Bismuth Discord für Unterstützung beitreten"
+msgstr "Bei Fragen besuchen Sie den offiziellen Bismuth Discord Channel"
 
 #: crystals/210_eggpool/themes/default/about.html:48
 msgid "EP:Hash Rate"
@@ -1117,15 +1117,15 @@ msgstr "D:egg"
 
 #: crystals/250_autogame/themes/default/about.html:14
 msgid "AG:Direct Link to latest autogame doc."
-msgstr "AG:Direkter Link zur aktuellen Autogame Dok."
+msgstr "AG: Direkter Link zur aktuellen Autogame Dokumentation."
 
 #: crystals/250_autogame/themes/default/about.html:41
 msgid "AG:Your games"
-msgstr "AG:Ihre Spiele"
+msgstr "Ihre Spiele"
 
 #: crystals/250_autogame/themes/default/about.html:59
 msgid "AG:Game detail"
-msgstr "AG:Spiel Details"
+msgstr "Spiel Details"
 
 #: themes/material/wallet_info.html:84
 msgid "Unlock wallet"
