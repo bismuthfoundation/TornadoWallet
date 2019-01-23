@@ -1,9 +1,8 @@
-pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --onefile --icon=favicon.ico wallet.py
+copy wallet.py BismuthTornadoWallet.py
+pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --onefile --icon=favicon.ico BismuthTornadoWallet.py
 robocopy locale dist/locale /S /E *.mo
 mkdir dist/themes
 robocopy themes/material dist/themes/material /S /E
-robocopy themes/mobile dist/themes/mobile /S /E
-robocopy themes/raw dist/themes/raw /S /E
 robocopy crystals dist/crystals /S /E
 
 
