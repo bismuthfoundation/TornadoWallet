@@ -31,7 +31,7 @@
 
 <body class="dark-edition">
 <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{{ static_url('img/sidebar-2.jpg') }}">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{{ static_url('img/sidebar-2.jpg') }}" id="sidebar" style="" >
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
   {{ handler.request.uri }}
@@ -43,8 +43,8 @@
                 <b>{{_("Bismuth Wallet")}}</b>
             </a>
         </div>
-        <div class="sidebar-wrapper">
-            <ul class="nav">
+        <div class="sidebar-wrapper" >
+            <ul class="nav" >
                 <li class="nav-item {{ handler.active_if('/') }} ">
                 <a class="nav-link" href="/">
                     <i class="material-icons">dashboard</i>
@@ -599,6 +599,11 @@ function confirmtx(address, data, amount, operation, token){
 </script>
 <script>
     $(document).ready(function() {
+
+        if ($(window).height() < 680) {
+            $('#sidebar').css("overflow-y","scroll");
+            $('#sidebar').css("overflow-x","hidden");
+        }
         // Javascript methods body can be found in static/js/demos.js
         md.initDashboardPageCharts();
 
