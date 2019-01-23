@@ -1,5 +1,5 @@
-copy wallet.py BismuthTornadoWallet.py
-pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --onefile --icon=favicon.ico BismuthTornadoWallet.py
+copy wallet.py TornadoBismuthWallet.py
+pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --onefile --icon=favicon.ico TornadoBismuthWallet.py
 robocopy locale dist/locale /S /E *.mo
 mkdir dist/themes
 robocopy themes/material dist/themes/material /S /E
