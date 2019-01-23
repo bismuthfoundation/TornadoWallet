@@ -29,6 +29,7 @@ msgstr "<a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_bl
 
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
+#: crystals/250_autogame/themes/default/about.html:24
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "Om"
@@ -363,22 +364,22 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "Denne funksjonalitet er under konstruksjon"
 
-#: main.py:243 wallet.py:312
+#: main.py:243 wallet.py:325
 msgid "Transaction list"
 msgstr "Transaksjonsliste"
 
-#: main.py:203 main.py:315 main.py:324 wallet.py:257 wallet.py:361
-#: wallet.py:387 wallet.py:401 wallet.py:407 wallet.py:422 wallet.py:431
-#: wallet.py:437 wallet.py:446 wallet.py:460 wallet.py:468 wallet.py:477
-#: wallet.py:483 wallet.py:494
+#: main.py:203 main.py:315 main.py:324 wallet.py:263 wallet.py:376
+#: wallet.py:402 wallet.py:416 wallet.py:422 wallet.py:437 wallet.py:446
+#: wallet.py:452 wallet.py:461 wallet.py:476 wallet.py:484 wallet.py:493
+#: wallet.py:499 wallet.py:510
 msgid "Error"
 msgstr "Feil"
 
-#: main.py:315 wallet.py:422
+#: main.py:315 wallet.py:437
 msgid "This file already exists: {}.der"
 msgstr "Denne filen eksisterer allerede: {}.der"
 
-#: main.py:324 wallet.py:431
+#: main.py:324 wallet.py:446
 msgid "Error creating {}.der"
 msgstr "Feil ved oppretting av {}.der"
 
@@ -487,7 +488,7 @@ msgstr "Vennligst bekreft denne transaksjon"
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Sjekk at dette er hva du ønsker å gjøre og klikk på \"bekreft\" knappen"
 
-#: main.py:227 wallet.py:295
+#: main.py:227 wallet.py:308
 msgid "Receive BIS"
 msgstr "Motta BIS"
 
@@ -523,54 +524,55 @@ msgstr "Din lommebok katalog er {}"
 
 #: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
 #: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
-#: wallet.py:181 wallet.py:185 wallet.py:196 wallet.py:221 wallet.py:227
-#: wallet.py:230 wallet.py:237 wallet.py:264 wallet.py:267 wallet.py:274
-#: wallet.py:289 wallet.py:606 wallet.py:610 wallet.py:617 wallet.py:629
+#: wallet.py:181 wallet.py:185 wallet.py:196 wallet.py:227 wallet.py:233
+#: wallet.py:236 wallet.py:243 wallet.py:270 wallet.py:273 wallet.py:280
+#: wallet.py:295 wallet.py:301 wallet.py:305 wallet.py:622 wallet.py:626
+#: wallet.py:633 wallet.py:645
 msgid "Error:"
 msgstr "Feilmelding:"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
-#: wallet.py:264 wallet.py:606
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:233
+#: wallet.py:270 wallet.py:301 wallet.py:622
 msgid "Load your wallet first"
 msgstr "Last inn din lommebok først"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
-#: wallet.py:264 wallet.py:606
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:233
+#: wallet.py:270 wallet.py:301 wallet.py:622
 msgid "No Wallet"
 msgstr "Ingen Lommebok"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
-#: wallet.py:267 wallet.py:610
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:236
+#: wallet.py:273 wallet.py:305 wallet.py:626
 msgid "Encrypted wallet"
 msgstr "Kryptert lommebok"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
-#: wallet.py:267 wallet.py:361 wallet.py:401 wallet.py:610
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:236
+#: wallet.py:273 wallet.py:305 wallet.py:376 wallet.py:416 wallet.py:626
 msgid "You have to unlock your wallet first"
 msgstr "Du må låse opp din lommebok først"
 
-#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
+#: main.py:193 main.py:216 wallet.py:253 wallet.py:290
 msgid "Success:"
 msgstr "Suksess:"
 
-#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
+#: main.py:193 main.py:216 wallet.py:253 wallet.py:290
 msgid "Transaction sent"
 msgstr "Transaksjon sendt"
 
-#: main.py:194 main.py:217 wallet.py:248 wallet.py:285
+#: main.py:194 main.py:217 wallet.py:254 wallet.py:291
 msgid "The transaction was submitted to the mempool."
 msgstr "Transaksjonen ble sendt til mempool."
 
-#: main.py:196 main.py:219 wallet.py:250 wallet.py:287
+#: main.py:196 main.py:219 wallet.py:256 wallet.py:293
 msgid "Txid is {}"
 msgstr "Txid er {}"
 
-#: main.py:201 main.py:221 wallet.py:255 wallet.py:289
+#: main.py:201 main.py:221 wallet.py:261 wallet.py:295
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Det oppstod en feil ved sending til mempool, transaksjonen ble ikke sendt."
 
 #: crystals/200_dragginator/themes/default/about.html:89
-#: modules/basehandlers.py:51
+#: modules/basehandlers.py:55
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr "Ingen Bismuth adresse, vennligst lag en eller last inn en lommebok først."
 
@@ -593,6 +595,7 @@ msgstr "Krystall"
 
 #: crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/210_eggpool/themes/default/about.html:29
+#: crystals/250_autogame/themes/default/about.html:28
 msgid "Version"
 msgstr "Versjon"
 
@@ -604,7 +607,7 @@ msgstr "Gjeldende Bismuth priser"
 msgid "BIS"
 msgstr "BIS"
 
-#: main.py:198 wallet.py:252
+#: main.py:198 wallet.py:258
 msgid "Success"
 msgstr "Suksess"
 
@@ -682,12 +685,12 @@ msgid "D:DNA"
 msgstr "DNA"
 
 #: crystals/200_dragginator/themes/default/about.html:62
-#: crystals/200_dragginator/themes/default/egg.html:30
+#: crystals/200_dragginator/themes/default/egg.html:56
 msgid "D:Element"
 msgstr "Element"
 
 #: crystals/200_dragginator/themes/default/about.html:63
-#: crystals/200_dragginator/themes/default/egg.html:31
+#: crystals/200_dragginator/themes/default/egg.html:57
 msgid "D:Species"
 msgstr "Art"
 
@@ -703,31 +706,31 @@ msgstr "Se Dragginator.com"
 msgid "D:Archive"
 msgstr "Arkiv"
 
-#: crystals/200_dragginator/themes/default/egg.html:32
+#: crystals/200_dragginator/themes/default/egg.html:58
 msgid "D:Age"
 msgstr "Alder"
 
-#: crystals/200_dragginator/themes/default/egg.html:33
+#: crystals/200_dragginator/themes/default/egg.html:59
 msgid "D:Rarity"
 msgstr "Sjeldenhet"
 
-#: crystals/200_dragginator/themes/default/egg.html:43
+#: crystals/200_dragginator/themes/default/egg.html:69
 msgid "D:You own this egg"
 msgstr "Du eier dette egget"
 
-#: crystals/200_dragginator/themes/default/egg.html:46
+#: crystals/200_dragginator/themes/default/egg.html:72
 msgid "D:You don't own this egg"
 msgstr "Du eier ikke dette egget"
 
-#: crystals/200_dragginator/themes/default/egg.html:60
+#: crystals/200_dragginator/themes/default/egg.html:86
 msgid "D:Send this egg to..."
 msgstr "Send dette egget til ..."
 
-#: crystals/200_dragginator/themes/default/egg.html:63
+#: crystals/200_dragginator/themes/default/egg.html:89
 msgid "D:Sell this egg for BIS"
 msgstr "Selg dette egget for BIS"
 
-#: crystals/200_dragginator/themes/default/egg.html:69
+#: crystals/200_dragginator/themes/default/egg.html:95
 msgid "D:Remove this egg from the marketplace"
 msgstr "Fjern dette egget fra markedsplassen"
 
@@ -740,6 +743,7 @@ msgid "EP:Get last GPU miner"
 msgstr "Last ned siste GPU miner"
 
 #: crystals/210_eggpool/themes/default/about.html:16
+#: crystals/250_autogame/themes/default/about.html:15
 msgid "Join the Official Bismuth Discord for support"
 msgstr "Bli medlem av det offisielle Bismuth Discord for hjelp"
 
@@ -828,11 +832,11 @@ msgstr "Kjøp et egg for {} BIS"
 msgid "D:You own {} eggs"
 msgstr "Du eier {} egg"
 
-#: crystals/200_dragginator/themes/default/egg.html:78
+#: crystals/200_dragginator/themes/default/egg.html:104
 msgid "D:Buy for {} BIS"
 msgstr "Kjøp for {} BIS"
 
-#: crystals/200_dragginator/themes/default/egg.html:65
+#: crystals/200_dragginator/themes/default/egg.html:91
 msgid "D:Price"
 msgstr "Pris"
 
@@ -856,15 +860,15 @@ msgstr "Ingen data"
 msgid "This crystal is activated but needs a wallet restart."
 msgstr "Denne krystall er aktivert men lommebok må startes på nytt."
 
-#: modules/i18n.py:8 themes/material/wallet_info.html:219
+#: modules/i18n.py:8 themes/material/wallet_info.html:232
 msgid "No protection"
 msgstr "Ingen beskyttelse"
 
-#: modules/i18n.py:10 themes/material/wallet_info.html:216
+#: modules/i18n.py:10 themes/material/wallet_info.html:229
 msgid "PIN Code"
 msgstr "Pinkode"
 
-#: modules/i18n.py:12 themes/material/wallet_info.html:217
+#: modules/i18n.py:12 themes/material/wallet_info.html:230
 msgid "YUBICO"
 msgstr "YUBICO"
 
@@ -884,7 +888,7 @@ msgstr "Anvend"
 msgid "Close"
 msgstr "Steng"
 
-#: themes/material/messages.html:15 wallet.py:604
+#: themes/material/messages.html:15 wallet.py:620
 msgid "Sign message"
 msgstr "Signer melding"
 
@@ -895,8 +899,8 @@ msgstr "Signer data for off chain bruk med din private nøkkel."
 #: themes/material/messages.html:26
 #: themes/material/transactions_send_confirm.html:104
 #: themes/material/transactions_sendpop_confirm.html:91
-#: themes/material/wallet_info.html:202 themes/material/wallet_info.html:203
-#: wallet.py:237 wallet.py:274 wallet.py:617
+#: themes/material/wallet_info.html:215 themes/material/wallet_info.html:216
+#: wallet.py:243 wallet.py:280 wallet.py:633
 msgid "Spend protection"
 msgstr "Bruksbeskyttelse"
 
@@ -982,56 +986,56 @@ msgstr "Eksisterende master passord"
 msgid "This is the password that protects your private key(s)"
 msgstr "Dette er passordet som beskytter din(e) private nøkkel(nøkler)"
 
-#: themes/material/wallet_info.html:92
+#: themes/material/wallet_info.html:94
 msgid "Wallet is unlocked"
 msgstr "Lommebok er ulåst"
 
-#: themes/material/wallet_info.html:95
+#: themes/material/wallet_info.html:99
 msgid "You can lock it back for extra safety if you don't plan to use it soon."
 msgstr "Du kan låse den igjen for ekstra sikkerhet hvis du ikke skal bruke den snart."
 
-#: themes/material/wallet_info.html:125 themes/material/wallet_info.html:148
-#: themes/material/wallet_info.html:152 themes/material/wallet_info.html:227
+#: themes/material/wallet_info.html:136 themes/material/wallet_info.html:159
+#: themes/material/wallet_info.html:163 themes/material/wallet_info.html:240
 msgid "Master password"
 msgstr "Master passord"
 
-#: themes/material/wallet_info.html:132
+#: themes/material/wallet_info.html:143
 msgid "Master password is set"
 msgstr "Master passord er satt"
 
-#: themes/material/wallet_info.html:155
+#: themes/material/wallet_info.html:166
 msgid "This is the password that will protect your private keys."
 msgstr "Dette er passordet som vil beskytte dine private nøkler."
 
-#: themes/material/wallet_info.html:159
+#: themes/material/wallet_info.html:170
 msgid "Retype Master password"
 msgstr "Tast Master passordet på nytt"
 
-#: themes/material/wallet_info.html:162
+#: themes/material/wallet_info.html:173
 msgid "Losing this password means loosing your keys!"
 msgstr "Tap av dette passordet betyr at du mister dine nøkler!"
 
-#: themes/material/wallet_info.html:170
+#: themes/material/wallet_info.html:183
 msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
 msgstr "Dette vil kryptere din lommebok. Du vil kanskje ta en backup av den ukrypterte filen først."
 
-#: themes/material/wallet_info.html:176
+#: themes/material/wallet_info.html:189
 msgid "Master password is not set"
 msgstr "Master passord er ikke definert"
 
-#: themes/material/wallet_info.html:218
+#: themes/material/wallet_info.html:231
 msgid "U2F TOKEN"
 msgstr "U2F TOKEN"
 
-#: themes/material/wallet_info.html:229
+#: themes/material/wallet_info.html:242
 msgid "Needed to confirm operation"
 msgstr "Behøvs for å bekrefte operasjon"
 
-#: themes/material/wallet_info.html:243
+#: themes/material/wallet_info.html:258
 msgid "Spending is currently not protected"
 msgstr "Bruk av BIS er ikke beskyttet"
 
-#: themes/material/wallet_info.html:245
+#: themes/material/wallet_info.html:260
 msgid "Spending is currently protected by {}"
 msgstr "Bruk av BIS er beskyttet av {}"
 
@@ -1067,32 +1071,72 @@ msgstr "Lag en ny adresse"
 msgid "Potential legacy wallet imports"
 msgstr "Potensiell import av gammelt lommebokformat"
 
-#: wallet.py:237 wallet.py:274 wallet.py:617
+#: wallet.py:243 wallet.py:280 wallet.py:633
 msgid "Invalid PIN Number"
 msgstr "Ugyldig PIN nummer"
 
-#: wallet.py:387 wallet.py:407 wallet.py:446 wallet.py:460 wallet.py:468
-#: wallet.py:483 wallet.py:494
+#: wallet.py:402 wallet.py:422 wallet.py:461 wallet.py:476 wallet.py:484
+#: wallet.py:499 wallet.py:510
 msgid "Error: {}"
 msgstr "Feilmelding: {}"
 
-#: wallet.py:437
+#: wallet.py:452
 msgid "Max of {} addresses reached."
 msgstr "Maks av {} adresser nådd."
 
-#: wallet.py:477
+#: wallet.py:493
 msgid "Passwords do not match"
 msgstr "Passord stemmer ikke"
 
-#: wallet.py:623
+#: wallet.py:639
 msgid "Your message '{}' has been signed."
 msgstr "Din melding '{}' har blitt signert."
 
-#: wallet.py:625
+#: wallet.py:641
 msgid "Signature"
 msgstr "Signatur"
 
-#: wallet.py:629
+#: wallet.py:645
 msgid "This feature is under construction. "
 msgstr "Denne funksjonen er under konstruksjon. "
+
+#: crystals/200_dragginator/themes/default/egg.html:32
+msgid "D:draggon"
+msgstr "draggon"
+
+#: crystals/200_dragginator/themes/default/egg.html:33
+msgid "D:egg"
+msgstr "egg"
+
+#: crystals/250_autogame/themes/default/about.html:14
+msgid "AG:Direct Link to latest autogame doc."
+msgstr "Direct Link to latest autogame doc."
+
+#: crystals/250_autogame/themes/default/about.html:41
+msgid "AG:Your games"
+msgstr "Your games"
+
+#: crystals/250_autogame/themes/default/about.html:59
+msgid "AG:Game detail"
+msgstr "Game detail"
+
+#: themes/material/wallet_info.html:84
+msgid "Unlock wallet"
+msgstr "Unlock wallet"
+
+#: themes/material/wallet_info.html:105
+msgid "Lock wallet"
+msgstr "Lock wallet"
+
+#: themes/material/wallet_info.html:109
+msgid "You have to encrypt your wallet first to use this feature"
+msgstr "You have to encrypt your wallet first to use this feature"
+
+#: themes/material/wallet_info.html:180
+msgid "Set master password"
+msgstr "Set master password"
+
+#: themes/material/wallet_info.html:248
+msgid "Set spend protection"
+msgstr "Set spend protection"
 
