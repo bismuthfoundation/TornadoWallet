@@ -331,8 +331,8 @@ function float_to_bis(x){
             $("#payment_window").modal("show");
             try { $("#cspend_token").focus() } catch(err) {}
             // TODO: missing alias and token emission
-            data = $("#data").val();
-            amount = $("#amount").val();
+            data = $("#cdata").val();
+            amount = $("#camount").val();
             if (amount <= 0) { amount=0}
             fees = 0.01+0.00001*data.length
             $(".totalpop").val(float_to_bis(parseFloat(amount) + fees));
