@@ -1080,7 +1080,7 @@ msgstr "Crearea unei adrese noi"
 
 #: themes/material/wallet_load.html:92
 msgid "Potential legacy wallet imports"
-msgstr "Potențiale importuri de portofel moștenite"
+msgstr "Importuri potențiale de portofele moștenite"
 
 #: wallet.py:243 wallet.py:280 wallet.py:633
 msgid "Invalid PIN Number"
