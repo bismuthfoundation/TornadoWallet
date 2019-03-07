@@ -55,6 +55,16 @@ class BaseHandler(RequestHandler):
             self.bismuth_vars['address'] = _("No Bismuth address, please create or load a wallet first.")
         self.update_crystals()
         # self.bismuth_vars['dtlanguage'] = get_dt_language(_)
+        self.error = False
+        if 'blocks' not in self.bismuth_vars['server_status']:
+            self.error = {"title": _("Error"), "message": _("Wallet server did not send an answer. Please try again.")}
+            # print(self.bismuth_vars['server_status'])
+
+    def render_string(self, template_name, **kwargs):
+        if not self.error:
+            return super().render_string(template_name, **kwargs)
+        string = self.error['title'] + "\n" + self.error['message']
+        return string
 
     def update_crystals(self):
         crystals = self.application.crystals_manager.get_loaded_crystals()
