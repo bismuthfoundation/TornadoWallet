@@ -909,7 +909,7 @@ msgstr "Signiere einige Daten zur Off-Chain Verwendung mit Ihrem privaten Schlü
 #: themes/material/wallet_info.html:215 themes/material/wallet_info.html:216
 #: wallet.py:243 wallet.py:280 wallet.py:633
 msgid "Spend protection"
-msgstr "Auszahlungsschutz"
+msgstr "Zahlungsschutz"
 
 #: themes/material/messages.html:37
 msgid "Sign Message"
@@ -1024,7 +1024,7 @@ msgstr "Das Passwort zu verlieren bedeutet, dass Sie Ihre privaten Schlüssel ve
 
 #: themes/material/wallet_info.html:183
 msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
-msgstr "Dies wird Ihre Wallet Datei verschlüsseln. Sie möchten möglicherweise zuerst ein Backup von Ihrer unverschlüsselte Datei sichern."
+msgstr "Dies wird Ihre Wallet Datei verschlüsseln. Sie möchten möglicherweise zuerst ein Backup von Ihrer unverschlüsselten Datei erstellen."
 
 #: themes/material/wallet_info.html:189
 msgid "Master password is not set"
@@ -1145,5 +1145,5 @@ msgstr "Master Passwort festlegen"
 
 #: themes/material/wallet_info.html:248
 msgid "Set spend protection"
-msgstr "Auszahlungsschutz festlegen"
+msgstr "Zahlungsschutz festlegen"
 
