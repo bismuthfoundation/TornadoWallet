@@ -414,7 +414,7 @@ class WalletHandler(BaseHandler):
         if self.bismuth._wallet._locked:
             self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
         file_name = '/'.join(params)
-        # print(file_name)
+        print(file_name)
         try:
             self.bismuth._wallet.import_der(wallet_der=file_name)
         except Exception as e:
