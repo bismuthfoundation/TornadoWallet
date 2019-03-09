@@ -530,6 +530,7 @@ class AboutHandler(BaseHandler):
         # self.render("message.html", type="warning", title="WIP", message="WIP", bismuth=self.bismuth_vars)
         # print("params", params)
         self.bismuth.set_server(params[0])
+        self.bismuth.clear_cache()
         # Since these properties are calc before we swap server, we have to manually update.
         self.bismuth_vars['server'] = self.bismuth.info()
         self.bismuth_vars['server_status'] = self.bismuth.status()
@@ -537,6 +538,7 @@ class AboutHandler(BaseHandler):
         self.render("about_network.html", bismuth=self.bismuth_vars)
 
     async def refresh(self, params=None):
+        self.bismuth.refresh_server_list()
         self.bismuth_vars['server'] = self.bismuth.info()
         self.bismuth_vars['server_status'] = self.bismuth.status()
         self.bismuth_vars['balance'] = self.bismuth.balance(for_display=True)

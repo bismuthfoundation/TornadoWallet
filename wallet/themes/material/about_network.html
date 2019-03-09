@@ -22,7 +22,7 @@
                         <li>{{ _("Wallet server version {}").format(bismuth['server_status']['extended']['version'])
                             }}
                         </li>
-                        <li>{{ _("Connected clients:") }} {{ bismuth['server_status']['extended']['clients'] }}</li>
+                        <li>{{ _("Connected clients:") }} {{ bismuth['server_status']['extended']['clients'] }} / {{ bismuth['server_status']['extended']['max_clients'] }} </li>
                         <li>{{ _("Protocol") }} {{ bismuth['server_status']['protocolversion'] }}</li>
                         <li>{{ _("Node Version") }} {{ bismuth['server_status']['walletversion'] }}</li>
                         <li>{{ _("Peers connections:") }} {{ bismuth['server_status']['connections'] }}</li>
@@ -80,8 +80,9 @@
                     </div>
                     <div class="card-body">
                         <ul>
-                            {% for server in bismuth['server']['servers_list'] %}
-                            <li><a href="/about/connect/{{ server }}">{{ server }}</a></li>
+                            {% for server in bismuth['server']['full_servers_list'] %}
+                            <li><a href="/about/connect/{{ server['ip'] }}:{{ server['port'] }}">{{ server['ip'] }}:{{ server['port'] }}</a> -
+                                {{ _("Load") }} {{ server['load'] }} %, {{ _("Height") }} {{ server['height'] }}</li>
                             {% end %}
                         </ul>
                         <a href="/about/refresh"><i class="material-icons">autorenew</i> {{ _("Refresh from API") }}</a>
