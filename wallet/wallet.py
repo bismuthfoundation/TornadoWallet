@@ -527,12 +527,24 @@ class WalletHandler(BaseHandler):
 class AboutHandler(BaseHandler):
 
     async def connect(self, params=None):
-        self.render("message.html", type="warning", title="WIP", message="WIP",
-                    bismuth=self.bismuth_vars)
+        # self.render("message.html", type="warning", title="WIP", message="WIP", bismuth=self.bismuth_vars)
+        # print("params", params)
+        self.bismuth.set_server(params[0])
+        # Since these properties are calc before we swap server, we have to manually update.
+        self.bismuth_vars['server'] = self.bismuth.info()
+        self.bismuth_vars['server_status'] = self.bismuth.status()
+        self.bismuth_vars['balance'] = self.bismuth.balance(for_display=True)
+        self.render("about_network.html", bismuth=self.bismuth_vars)
 
     async def refresh(self, params=None):
+        self.bismuth_vars['server'] = self.bismuth.info()
+        self.bismuth_vars['server_status'] = self.bismuth.status()
+        self.bismuth_vars['balance'] = self.bismuth.balance(for_display=True)
+        self.render("about_network.html", bismuth=self.bismuth_vars)
+        """
         self.render("message.html", type="warning", title="WIP", message="WIP",
                     bismuth=self.bismuth_vars)
+        """
 
     async def credits(self, params=None):
         self.render("about_credits.html", bismuth=self.bismuth_vars)
