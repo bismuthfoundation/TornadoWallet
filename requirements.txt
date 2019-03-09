@@ -1,4 +1,4 @@
 tornado
-bismuthclient>=0.0.34
+bismuthclient>=0.0.35
 cachetools
 aiohttp
