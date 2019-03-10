@@ -26,7 +26,7 @@
                         <li>{{ _("Protocol") }} {{ bismuth['server_status']['protocolversion'] }}</li>
                         <li>{{ _("Node Version") }} {{ bismuth['server_status']['walletversion'] }}</li>
                         <li>{{ _("Peers connections:") }} {{ bismuth['server_status']['connections'] }}</li>
-                        <li>{{ _("UpTime:") }} {{ bismuth['server_status']['uptime'] }}</li>
+                        <li>{{ _("UpTime:") }} {{ bismuth['server_status']['uptime_human'] }}</li>
                         <li>{{ _("Consensus:") }} {{ bismuth['server_status']['consensus'] }}
                             ({{ '{:.1f}'.format(bismuth['server_status']['consensus_percent']) }}%)
                         </li>
