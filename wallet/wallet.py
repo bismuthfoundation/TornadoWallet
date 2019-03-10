@@ -460,6 +460,20 @@ class WalletHandler(BaseHandler):
             self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
                     bismuth=self.bismuth_vars)
 
+    async def set_label(self, params=None, post=False):
+        """Defines or edit the label of an address"""
+        _ = self.locale.translate
+        label = self.get_argument("label", None)
+        address = self.get_argument("address", None)
+        # print(address, label, params)
+        try:
+            self.bismuth._wallet.set_label(address=address, label=label)
+            # self.bismuth.clear_cache()
+            self.redirect("/wallet/load")
+        except Exception as e:
+            self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                    bismuth=self.bismuth_vars)
+
     async def protection(self, params=None, post=False):
         """Set lock, unlock, and other actions"""
         _ = self.locale.translate

@@ -427,6 +427,22 @@ function confirmtx(address, data, amount, operation, token){
 
     $(document).ready(function() {
 
+        $(".label_edit").click(function(event) {
+            // console.log(this)
+            $("#edit_window").css({"cursor":"context-menu"});
+            $("#label_address").html($(this).data('address'))
+            $("#label_address_input").val($(this).data('address'))
+            $("#label_input").val($(this).data('label'))
+            $("#edit_window").modal("show");
+            $("#label_address_input").focus();
+        });
+
+        $("#set_label_btn").click(function(event) {
+            $("#edit_window").css({"cursor":"wait"});
+            $("#set_label_btn").css({"cursor":"wait"});
+            $("#set_label_btn").prop("disabled",true);
+        });
+
         $("#amount").on('keyup paste', fees_calc);
         $("#data").on('keyup paste', fees_calc);
 
