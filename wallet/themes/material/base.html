@@ -21,6 +21,7 @@
     <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet"  crossorigin="anonymous">
     <!-- CSS Files -->
     <link href="{{ static_url('css/material-dashboard.css') }}" rel="stylesheet"/>
     <link href="{{ static_url('css/custom.css') }}" rel="stylesheet"/>
@@ -161,6 +162,16 @@
                                 <a class="dropdown-item" href="javascript:void(0)">Another One</a>
                             </div>
                         </li -->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-{{ bismuth['lang']['flag']}}"> </span></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                {% for locale, detail in bismuth['lang']['list'].items() %}
+                                   <a class="dropdown-item" href="/about/setlang/{{ locale }}"><span class="flag-icon flag-icon-{{detail[1]}}"> </span> &nbsp; {{ detail[0] }}</a>
+                                {% end %}
+                            </div>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="/wallet/info" title="{{ _('Wallet') }}">
                                 <i class="material-icons">account_balance_wallet</i>

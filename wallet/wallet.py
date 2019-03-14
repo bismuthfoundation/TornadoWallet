@@ -43,6 +43,7 @@ define("verbose", default=False, help="verbose mode", type=bool)
 define("theme", default='themes/material', help="theme directory, relative to the app", type=str)
 define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
 define("crystals", default=True, help="Load Crystals (Experimental)", type=bool)
+define("lang", default='', help="Force a language: en,nl,ru...", type=str)
 
 
 class Application(tornado.web.Application):
@@ -95,6 +96,7 @@ class Application(tornado.web.Application):
             compress_response=True,
             debug=options.debug,  # Also activates auto reload
             serve_traceback=options.debug,
+            lang=options.lang,
             # wallet_servers = wallet_servers
             bismuth_client = bismuth_client,
             bismuth_vars = {'wallet_version': __version__, 'bismuthclient_version': bismuthclient.__version__},
@@ -561,6 +563,13 @@ class AboutHandler(BaseHandler):
         self.render("message.html", type="warning", title="WIP", message="WIP",
                     bismuth=self.bismuth_vars)
         """
+
+    async def setlang(self, params=None):
+        lang = params[0]
+        if lang == '*':
+            self.set_cookie('lang', '')
+        self.set_cookie('lang', lang)
+        self.redirect("/")
 
     async def credits(self, params=None):
         self.render("about_credits.html", bismuth=self.bismuth_vars)

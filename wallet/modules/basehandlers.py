@@ -2,10 +2,11 @@
 
 import logging
 import sys
+from tornado import locale
 from tornado.web import RequestHandler
 from tornado.template import Loader, Template
 from os import path
-from modules.i18n import get_spend_type
+from modules.i18n import get_spend_type, get_flag_from_locale, get_label_from_locale, get_locales_list
 
 
 class BaseHandler(RequestHandler):
@@ -59,6 +60,26 @@ class BaseHandler(RequestHandler):
         if 'blocks' not in self.bismuth_vars['server_status']:
             self.error = {"title": _("Error"), "message": _("Wallet server did not send an answer. Please try again.")}
             # print(self.bismuth_vars['server_status'])
+        my_locale = self.get_user_locale_name()
+        if not my_locale or my_locale == '*':
+            my_locale = self.locale.code.split('_')[0]
+        self.bismuth_vars['lang'] = {"name": get_label_from_locale(my_locale), "flag": get_flag_from_locale(my_locale), "list": get_locales_list()}
+
+    def get_user_locale_name(self):
+        if self.settings["lang"]:
+            return self.settings["lang"]
+        user_lang = self.get_cookie("lang", False)
+        if user_lang:
+            return user_lang
+        return False
+
+    def get_user_locale(self):
+        if self.settings["lang"]:
+            return locale.get(self.settings["lang"])
+        user_lang = self.get_cookie("lang", False)
+        if user_lang:
+            return locale.get(user_lang)
+        return False
 
     def render_string(self, template_name, **kwargs):
         if not self.error:

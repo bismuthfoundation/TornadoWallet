@@ -2,6 +2,13 @@
 i18n / l18n helpers
 """
 
+LANGUAGES = {
+    '*': ['Auto', 'Auto'],
+    "en" : ['English', 'us'],
+    "fr" : ['French', 'fr'],
+    "ru": ['Russian', 'ru'],
+}
+
 
 def get_spend_type(_, spend:str) -> str:
     if spend is None:
@@ -41,3 +48,16 @@ def get_dt_language(_):
     DT_LANGUAGE += '}\n}'
     return DT_LANGUAGE
 
+
+def get_flag_from_locale(locale: str) -> str:
+    res = LANGUAGES.get(locale, [locale, locale])[1]
+    return res
+
+
+def get_label_from_locale(locale: str) -> str:
+    res = LANGUAGES.get(locale, [locale, locale])[0]
+    return res
+
+
+def get_locales_list() -> list:
+    return LANGUAGES
