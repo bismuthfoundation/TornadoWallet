@@ -3,11 +3,29 @@ i18n / l18n helpers
 """
 
 LANGUAGES = {
-    '*': ['Auto', 'Auto'],
+    '*'  : ['Auto', 'Auto'],
+    "cn" : ['Chinese', 'cn'],
+    "cs" : ['Czech', 'cz'],
+    "de" : ['German', 'de'],
+    "el" : ['Greek', 'gr'],
     "en" : ['English', 'us'],
+    "es": ['Spanish', 'es'],
+    "fi": ['Finish', 'fi'],
     "fr" : ['French', 'fr'],
+    "hu": ['Hungarian', 'hu'],
+    "it": ['Italian', 'it'],
+    "nl": ['Dutch', 'nl'],
+    "no": ['Norsk', 'no'],
+    "pl": ['Polish', 'pl'],
+    "pt-br": ['Brazilian pt', 'br'],
+    "ro": ['Romanian', 'ro'],
     "ru": ['Russian', 'ru'],
+    "sr": ['Serbian', 'sr'],
+    "tr": ['Turkish', 'tr'],
 }
+
+
+# "sv": ['Swedish', 'sw'],
 
 
 def get_spend_type(_, spend:str) -> str:
