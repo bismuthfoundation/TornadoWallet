@@ -97,7 +97,7 @@ class Application(tornado.web.Application):
             serve_traceback=options.debug,
             # wallet_servers = wallet_servers
             bismuth_client = bismuth_client,
-            bismuth_vars = {'wallet_version': __version__},
+            bismuth_vars = {'wallet_version': __version__, 'bismuthclient_version': bismuthclient.__version__},
             bismuth_crystals = {}
         )
         super(Application, self).__init__(handlers, **settings)

@@ -427,7 +427,7 @@ function confirmtx(address, data, amount, operation, token){
 
     $(document).ready(function() {
 
-        $(".label_edit").click(function(event) {
+        $(".label_edit").click(function() {
             // console.log(this)
             $("#edit_window").css({"cursor":"context-menu"});
             $("#label_address").html($(this).data('address'))
@@ -437,7 +437,7 @@ function confirmtx(address, data, amount, operation, token){
             $("#label_address_input").focus();
         });
 
-        $("#set_label_btn").click(function(event) {
+        $("#set_label_form").on('submit', function() {
             $("#edit_window").css({"cursor":"wait"});
             $("#set_label_btn").css({"cursor":"wait"});
             $("#set_label_btn").prop("disabled",true);
