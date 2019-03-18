@@ -200,7 +200,7 @@
     {% end %}
 
 
-
+    {% if bismuth['master_set'] %}
     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
         <div class="card">
             <form action="/wallet/protection/" method="post" autocomplete="in_your_dreams_459842">
@@ -235,10 +235,10 @@
                             <input type="radio" name="spend_type" value="None" {{ handler.checked_if(bismuth['spend_type']['type'] is None) }}> {{ _("No protection") }}
                         </div>
                         <div class="form-group">
-                            <label class="bmd-label-floating">Option</label>
+                            <label class="bmd-label-floating">{{ _("PIN Code") }}</label>
                             <input class="form-control password" id="data" type="password" name="spend_value" value=""
                             autocomplete="nope8744588" readonly="readonly" onfocus="javascript: this.removeAttribute('readonly')" />
-                            <small id="value_detail">TODO - Depends on radio button</small>
+                            <small id="value_detail">{{ _("PIN Code") }}</small>
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating">{{ _("Master password")}}</label>
@@ -270,6 +270,12 @@
             </form>
         </div>
     </div>
+
+
+    {% end %}
+
+
+
 {% end %}
 
 </div>
