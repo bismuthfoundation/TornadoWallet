@@ -519,6 +519,10 @@ class WalletHandler(BaseHandler):
             password = self.get_argument("master_password", None)
             spend_type = self.get_argument("spend_type", None)
             spend_value = self.get_argument("spend_value", None)
+            if spend_type != 'None' and spend_value == '':
+                self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(_("PIN code can't be empty")),
+                            bismuth=self.bismuth_vars)
+                return
             try:
                 self.bismuth._wallet.set_spend(spend_type, spend_value, password=password)
             except Exception as e:
