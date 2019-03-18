@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.0.86'
+__version__ = '0.0.87'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -147,7 +147,7 @@ class TransactionsHandler(BaseHandler):
     """
 
     async def send(self, params=None):
-        query_params = self.extract_params()
+        # query_params = self.extract_params()
         # print(params)
         _ = self.locale.translate
         self.settings["page_title"] = _("Send BIS")
@@ -158,7 +158,8 @@ class TransactionsHandler(BaseHandler):
         if self.bismuth._wallet._locked:
             self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
-        if query_params.get('recipient', False):
+        # if query_params.get('recipient', False):
+        if self.get_argument('recipient', False):
             # We have an address param, it's a confirmation
             self.settings["page_title"] = _("Send BIS: Confirmation")
             type='warning'  # Do not translate
@@ -174,8 +175,6 @@ class TransactionsHandler(BaseHandler):
 
     async def send_pop(self, params=None):
         # TODO: factorize, common code with send.
-        # query_params = self.extract_params()
-        # print(params)
         _ = self.locale.translate
         self.settings["page_title"] = _("Send BIS")
 
@@ -299,7 +298,6 @@ class TransactionsHandler(BaseHandler):
 
     async def receive(self, params=None):
         _ = self.locale.translate
-        query_params = self.extract_params()
         if not self.bismuth_vars['address']:
             await self.message(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
@@ -310,10 +308,15 @@ class TransactionsHandler(BaseHandler):
         address = self.bismuth_vars['server']['address']
         self.settings["page_title"] = _("Receive BIS")
         bisurl = ''
-        if query_params.get('address', False):
-            address = query_params['address']
-            query_params['amount'] = "{:0.8f}".format(float(query_params['amount']))
-            bisurl = BismuthUtil.create_bis_url(address, query_params['amount'], '', query_params['data'])
+        print("address", self.get_query_argument('address', 'no'))
+        if self.get_query_argument('address', False):
+            address = self.get_query_argument('address')
+            amount = "{:0.8f}".format(float(self.get_query_argument('amount', 0)))
+            data = self.get_query_argument('data', '')
+            self.bismuth_vars['params']['address'] = address
+            self.bismuth_vars['params']['amount'] = amount
+            self.bismuth_vars['params']['data'] = data
+            bisurl = BismuthUtil.create_bis_url(address, amount, '', data)
         self.render("transactions_receive.html", bismuth=self.bismuth_vars, address=address, bisurl=bisurl)
 
     async def get(self, command=''):
@@ -661,7 +664,6 @@ class MessagesHandler(BaseHandler):
         self.render("messages.html", bismuth=self.bismuth_vars)
 
     async def sign_pop(self, params=None):
-        # query_params = self.extract_params()
         _ = self.locale.translate
         message = self.get_argument("data", '')
         spend_token = self.get_argument("token", '')  # Beware naming inconsistencies token, spend_token
