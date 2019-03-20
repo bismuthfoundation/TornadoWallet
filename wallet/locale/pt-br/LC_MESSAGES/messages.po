@@ -1157,37 +1157,37 @@ msgstr "Definir a proteção contra gastos"
 
 #: crystals/250_autogame/themes/default/about.html:59
 msgid "Replay"
-msgstr ""
+msgstr "Replay"
 
 #: crystals/250_autogame/themes/default/replay_pop.html:2
 msgid "AG:Game {} replay"
-msgstr ""
+msgstr "Replay do jogo {}"
 
 #: crystals/250_autogame/themes/default/status_pop.html:2
 msgid "AG:Game {} status"
-msgstr ""
+msgstr "Status do jogo {}"
 
 #: modules/basehandlers.py:60
 msgid "Wallet server did not send an answer. Please try again."
-msgstr ""
+msgstr "O servidor da carteira não enviou uma resposta. Por favor, tente novamente."
 
 #: themes/material/about_network.html:85
 msgid "Height"
-msgstr ""
+msgstr "Altura"
 
 #: themes/material/about_network.html:85
 msgid "Load"
-msgstr ""
+msgstr "Carregar"
 
 #: themes/material/wallet_load.html:128
 msgid "Edit label"
-msgstr ""
+msgstr "Editar rótulo"
 
 #: themes/material/wallet_load.html:144
 msgid "A private label for that address"
-msgstr ""
+msgstr "Um rótulo privado para esse endereço"
 
 #: themes/material/wallet_load.html:152
 msgid "Set label"
-msgstr ""
+msgstr "Definir rótulo"
 
