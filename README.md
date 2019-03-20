@@ -2,7 +2,7 @@
 
 A Python/HTML Wallet based upon the Tornado framework.
 
-> **EXTREME WIP** Lots of work, ongoing, to be considered immature until further notice.
+First stable release, still work ongoing, but useable and nive looking!
 
 # Proof of concept
 
@@ -37,7 +37,7 @@ You may have to install xcode compiler:
 
 then `pip3 install -r requirements.txt`
 
-## Windows
+## Windows
 
 See 
 https://pycryptodome.readthedocs.io/en/latest/src/installation.html#windows-from-sources-python-3-5-and-newer
@@ -58,7 +58,7 @@ Possible command line switches:
 * `--server=ip:port`  Force a specific walelt server (like 127.0.0.1:8150)
 
 
-## Wallet(s) location
+## Wallet(s) location
 
 Wallets and other potential private info are to be stored under a "bismuth-private" dir, under the user's own home directory.
 
@@ -71,8 +71,8 @@ You should also find it on the wallet/load page:
 
 * Proof of concept (check)
 * Basic wallet functionality (check)
-* Auth
-* Multiwallet (partly done)
+* Auth (check)
+* Multiwallet (check)
 * Allinone mobile app with embedded browser and python engine
 
 # The tech
