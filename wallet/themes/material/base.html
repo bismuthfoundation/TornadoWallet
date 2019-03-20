@@ -58,8 +58,9 @@
                     <p>{{_("Transactions")}}</p>
                 </a>
                 </li>
-                <li class="nav-item  {{ handler.active_if_start('/address/') }} ">
-                <a class="nav-link disabled" href="/address/">
+                <!--
+                <li class="nav-item {{ handler.active_if_start('/address/') }} ">
+                <a class="nav-link disabled" href="#" data-real="/address/">
                     <i class="material-icons">perm_contact_calendar</i>
                     <p>{{_("Address book")}}</p>
                 </a>
@@ -67,10 +68,10 @@
                 <li class="nav-item  {{ handler.active_if_start('/tokens/') }} ">
                 <a class="nav-link" href="/tokens/">
                     <i class="material-icons">scatter_plot</i>
-                    <!-- category -->
                     <p>{{_("Tokens")}}</p>
                 </a>
                 </li>
+                -->
                 <li class="nav-item  {{ handler.active_if_start('/messages/') }} ">
                 <a class="nav-link" href="/messages/">
                     <i class="material-icons">question_answer</i>
