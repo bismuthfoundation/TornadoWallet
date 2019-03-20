@@ -8,7 +8,7 @@ LANGUAGES = OrderedDict(
     [('*'  , ['Auto', 'Auto']),
     ("cn" , ['Chinese', 'cn']),
     ("cs" , ['Czech', 'cz']),
-    ("(de" , ['German', 'de']),
+    ("de" , ['German', 'de']),
     ("el" , ['Greek', 'gr']),
     ("en" , ['English', 'us']),
     ("es" , ['Spanish', 'es']),
