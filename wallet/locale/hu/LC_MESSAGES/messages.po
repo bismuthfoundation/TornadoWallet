@@ -1161,25 +1161,25 @@ msgstr "AG:Játék {} Státusz"
 
 #: modules/basehandlers.py:60
 msgid "Wallet server did not send an answer. Please try again."
-msgstr ""
+msgstr "A mobiltárca-kiszolgáló nem küldött választ. Kérlek próbáld újra."
 
 #: themes/material/about_network.html:85
 msgid "Height"
-msgstr ""
+msgstr "Magasság"
 
 #: themes/material/about_network.html:85
 msgid "Load"
-msgstr ""
+msgstr "Betöltés"
 
 #: themes/material/wallet_load.html:128
 msgid "Edit label"
-msgstr ""
+msgstr "Címke szerkesztése"
 
 #: themes/material/wallet_load.html:144
 msgid "A private label for that address"
-msgstr ""
+msgstr "A címhez saját címke"
 
 #: themes/material/wallet_load.html:152
 msgid "Set label"
-msgstr ""
+msgstr "Címke beállítása"
 
