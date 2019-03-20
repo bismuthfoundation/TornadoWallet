@@ -1111,77 +1111,77 @@ msgstr "Αυτη η επιλογη ειναι υπο κατασκευη."
 
 #: crystals/200_dragginator/themes/default/egg.html:32
 msgid "D:draggon"
-msgstr "draggon"
+msgstr "Δρακος"
 
 #: crystals/200_dragginator/themes/default/egg.html:33
 msgid "D:egg"
-msgstr "egg"
+msgstr "αυγο"
 
 #: crystals/250_autogame/themes/default/about.html:14
 msgid "AG:Direct Link to latest autogame doc."
-msgstr "Direct Link to latest autogame doc."
+msgstr "Συνδεσμος για μεταβαση στο πιο προσφατο αυτοματο παιχνιδι"
 
 #: crystals/250_autogame/themes/default/about.html:52
 msgid "AG:Your games"
-msgstr "Your games"
+msgstr "Τα παιχνιδια σας"
 
 #: crystals/250_autogame/themes/default/about.html:76
 msgid "AG:Game detail"
-msgstr "Game detail"
+msgstr "Λεπτομερειες παιχνιδιου"
 
 #: themes/material/wallet_info.html:85
 msgid "Unlock wallet"
-msgstr "Unlock wallet"
+msgstr "Ξεκλειδωστε το πορτοφολι"
 
 #: themes/material/wallet_info.html:106
 msgid "Lock wallet"
-msgstr "Lock wallet"
+msgstr "Κλειδωστε το πορτοφολι"
 
 #: themes/material/wallet_info.html:110
 msgid "You have to encrypt your wallet first to use this feature"
-msgstr "You have to encrypt your wallet first to use this feature"
+msgstr "Πρεπει πρωτα να κρυπτογραφησετε πρωτα το πορτοφολι σας για να χρησιμοποιησετε αυτη την λειτουργια"
 
 #: themes/material/wallet_info.html:183
 msgid "Set master password"
-msgstr "Set master password"
+msgstr "Οριστε βασικο κωδικο"
 
 #: themes/material/wallet_info.html:254
 msgid "Set spend protection"
-msgstr "Set spend protection"
+msgstr "Οριστε προστασια για ξοδεμα"
 
 #: crystals/250_autogame/themes/default/about.html:59
 msgid "Replay"
-msgstr ""
+msgstr "Επαναληψη"
 
 #: crystals/250_autogame/themes/default/replay_pop.html:2
 msgid "AG:Game {} replay"
-msgstr ""
+msgstr "Επαναληψη {} παιχνιδιου"
 
 #: crystals/250_autogame/themes/default/status_pop.html:2
 msgid "AG:Game {} status"
-msgstr ""
+msgstr "Κατασταση {} παιχνιδιου"
 
 #: modules/basehandlers.py:60
 msgid "Wallet server did not send an answer. Please try again."
-msgstr ""
+msgstr "Ο διακομιστης του πορτοφολιου δεν απαντησε. Παρακαλω δοκιμαστε ξανα."
 
 #: themes/material/about_network.html:85
 msgid "Height"
-msgstr ""
+msgstr "Υψος"
 
 #: themes/material/about_network.html:85
 msgid "Load"
-msgstr ""
+msgstr "Φορτωση"
 
 #: themes/material/wallet_load.html:128
 msgid "Edit label"
-msgstr ""
+msgstr "Επεξεργαστητε την ετικετα"
 
 #: themes/material/wallet_load.html:144
 msgid "A private label for that address"
-msgstr ""
+msgstr "Μια εξατομικευμενη ετικετα για αυτη την διευθυνση"
 
 #: themes/material/wallet_load.html:152
 msgid "Set label"
-msgstr ""
+msgstr "Οριστε ετικετα"
 
