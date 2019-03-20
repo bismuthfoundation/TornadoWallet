@@ -5,3 +5,5 @@ bismuthcore
 *.spec
 main.py
 bin
+TornadoBismuthWallet.py
+dist
