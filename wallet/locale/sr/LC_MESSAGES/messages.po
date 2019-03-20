@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: sr\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:227
+#: themes/material/about_credits.html:10 themes/material/base.html:228
 msgid "Credits"
 msgstr "Zasluga"
 
@@ -29,7 +29,7 @@ msgstr "<a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_bl
 
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
-#: crystals/250_autogame/themes/default/about.html:24
+#: crystals/250_autogame/themes/default/about.html:35
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "O nama"
@@ -102,7 +102,7 @@ msgstr "Dostupni serveri novčanika"
 msgid "servers"
 msgstr "serveri"
 
-#: themes/material/about_network.html:87
+#: themes/material/about_network.html:88
 msgid "Refresh from API"
 msgstr "Osvezi iz API-ja"
 
@@ -142,31 +142,31 @@ msgstr "Kristali"
 msgid "Toggle navigation"
 msgstr "Prebaciti navigaciju"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:208
 msgid "Source"
 msgstr "Izvor"
 
-#: themes/material/base.html:212
+#: themes/material/base.html:213
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:217
+#: themes/material/base.html:218
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:222
+#: themes/material/base.html:223
 msgid "Donate"
 msgstr "Donacija"
 
-#: themes/material/base.html:233
+#: themes/material/base.html:234
 msgid "block #"
 msgstr "Blok #"
 
-#: themes/material/base.html:253
+#: themes/material/base.html:254
 msgid "Sidebar Filters"
 msgstr "Filteri bocne trake"
 
-#: themes/material/base.html:266
+#: themes/material/base.html:267
 msgid "Images"
 msgstr "Slike"
 
@@ -214,7 +214,8 @@ msgid "Date"
 msgstr "Datum"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:96
+#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:100
+#: themes/material/wallet_load.html:137
 msgid "Address"
 msgstr "Adresa"
 
@@ -348,11 +349,11 @@ msgstr "Stvoriti"
 msgid "new wallet"
 msgstr "novi novčanik"
 
-#: themes/material/wallet_load.html:95
+#: themes/material/wallet_load.html:99
 msgid "File"
 msgstr "Fajl"
 
-#: themes/material/wallet_load.html:97
+#: themes/material/wallet_load.html:101
 msgid "Encrypted"
 msgstr "Enkriptovan"
 
@@ -364,22 +365,22 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "Ova opcija je u fazi izrade."
 
-#: main.py:243 wallet.py:325
+#: main.py:243 wallet.py:326
 msgid "Transaction list"
 msgstr "Lista trnzakcije"
 
-#: main.py:203 main.py:315 main.py:324 wallet.py:263 wallet.py:376
-#: wallet.py:402 wallet.py:416 wallet.py:422 wallet.py:437 wallet.py:446
-#: wallet.py:452 wallet.py:461 wallet.py:476 wallet.py:484 wallet.py:493
-#: wallet.py:499 wallet.py:510
+#: main.py:203 main.py:315 main.py:324 modules/basehandlers.py:60
+#: wallet.py:264 wallet.py:375 wallet.py:401 wallet.py:415 wallet.py:421
+#: wallet.py:436 wallet.py:445 wallet.py:451 wallet.py:460 wallet.py:474
+#: wallet.py:489 wallet.py:497 wallet.py:506 wallet.py:512 wallet.py:523
 msgid "Error"
 msgstr "Greška"
 
-#: main.py:315 wallet.py:437
+#: main.py:315 wallet.py:436
 msgid "This file already exists: {}.der"
 msgstr "Postojeci fajl: {}.der"
 
-#: main.py:324 wallet.py:446
+#: main.py:324 wallet.py:445
 msgid "Error creating {}.der"
 msgstr "Greška stvaranje {}.der"
 
@@ -458,7 +459,7 @@ msgstr "Ovo je što je primalac primiti"
 msgid "This is what you will pay, fees included."
 msgstr "Ovo je što ćete plaćati, takse su uračunate."
 
-#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:98
+#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:102
 msgid "Action"
 msgstr "Akcija"
 
@@ -466,29 +467,30 @@ msgstr "Akcija"
 msgid "Translations"
 msgstr "Prevodi"
 
-#: themes/material/transactions_send_confirm.html:116
-#: themes/material/transactions_sendpop_confirm.html:102
+#: themes/material/transactions_send_confirm.html:117
+#: themes/material/transactions_sendpop_confirm.html:103
+#: themes/material/wallet_load.html:150
 msgid "Cancel"
 msgstr "Odustati"
 
-#: themes/material/transactions_send_confirm.html:121
-#: themes/material/transactions_sendpop_confirm.html:108
+#: themes/material/transactions_send_confirm.html:122
+#: themes/material/transactions_sendpop_confirm.html:111
 msgid "Confirm and send BIS"
 msgstr "Potvrditi i poslati BIS"
 
-#: main.py:144 main.py:172 wallet.py:161 wallet.py:189 wallet.py:211
+#: main.py:144 main.py:172 wallet.py:161 wallet.py:190 wallet.py:212
 msgid "Send BIS: Confirmation"
 msgstr "Poslati BIS: Potvrditi"
 
-#: main.py:146 main.py:174 wallet.py:163 wallet.py:191 wallet.py:213
+#: main.py:146 main.py:174 wallet.py:163 wallet.py:192 wallet.py:214
 msgid "Please confirm this transaction"
 msgstr "Molimo potvrdite ovu tranzakciju"
 
-#: main.py:147 main.py:175 wallet.py:164 wallet.py:192 wallet.py:214
+#: main.py:147 main.py:175 wallet.py:164 wallet.py:193 wallet.py:215
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Oznacite ovo je sta ste nameravali da uradite i udarite (pritisnite) dugme za potvrdu"
 
-#: main.py:227 wallet.py:308
+#: main.py:227 wallet.py:309
 msgid "Receive BIS"
 msgstr "Primiti BIS"
 
@@ -504,10 +506,11 @@ msgstr "Puno zahvala našim prevodiocima i korektorima"
 msgid "Wallet server version {}"
 msgstr "Verzija servera od novčanika {}"
 
-#: themes/material/base.html:172
+#: themes/material/base.html:173
 msgid "Wallet"
 msgstr "Novčanik"
 
+#: crystals/250_autogame/themes/default/about.html:19
 #: themes/material/transactions_receive.html:81
 #: themes/material/transactions_send.html:100
 #: themes/material/transactions_send.html:108
@@ -524,50 +527,50 @@ msgstr "Direktorijum vašeg novčanika je {}"
 
 #: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
 #: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
-#: wallet.py:181 wallet.py:185 wallet.py:196 wallet.py:227 wallet.py:233
-#: wallet.py:236 wallet.py:243 wallet.py:270 wallet.py:273 wallet.py:280
-#: wallet.py:295 wallet.py:301 wallet.py:305 wallet.py:622 wallet.py:626
-#: wallet.py:633 wallet.py:645
+#: wallet.py:181 wallet.py:185 wallet.py:197 wallet.py:228 wallet.py:234
+#: wallet.py:237 wallet.py:244 wallet.py:271 wallet.py:274 wallet.py:281
+#: wallet.py:296 wallet.py:302 wallet.py:306 wallet.py:657 wallet.py:661
+#: wallet.py:668 wallet.py:680
 msgid "Error:"
 msgstr "Greška:"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:233
-#: wallet.py:270 wallet.py:301 wallet.py:622
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
+#: wallet.py:271 wallet.py:302 wallet.py:657
 msgid "Load your wallet first"
 msgstr "Pokreni svoj novčanik prvo"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:233
-#: wallet.py:270 wallet.py:301 wallet.py:622
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
+#: wallet.py:271 wallet.py:302 wallet.py:657
 msgid "No Wallet"
 msgstr "Nema novčanika"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:236
-#: wallet.py:273 wallet.py:305 wallet.py:626
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
+#: wallet.py:274 wallet.py:306 wallet.py:661
 msgid "Encrypted wallet"
 msgstr "Kodiran novčanik"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:236
-#: wallet.py:273 wallet.py:305 wallet.py:376 wallet.py:416 wallet.py:626
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
+#: wallet.py:274 wallet.py:306 wallet.py:375 wallet.py:415 wallet.py:661
 msgid "You have to unlock your wallet first"
 msgstr "Morate prvo otključati svoj novčanik"
 
-#: main.py:193 main.py:216 wallet.py:253 wallet.py:290
+#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Success:"
 msgstr "Uspešno:"
 
-#: main.py:193 main.py:216 wallet.py:253 wallet.py:290
+#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Transaction sent"
 msgstr "Tranzakcija poslata"
 
-#: main.py:194 main.py:217 wallet.py:254 wallet.py:291
+#: main.py:194 main.py:217 wallet.py:255 wallet.py:292
 msgid "The transaction was submitted to the mempool."
 msgstr "Tranzakcija je podnešena mempool-u."
 
-#: main.py:196 main.py:219 wallet.py:256 wallet.py:293
+#: main.py:196 main.py:219 wallet.py:257 wallet.py:294
 msgid "Txid is {}"
 msgstr "Txid je {}"
 
-#: main.py:201 main.py:221 wallet.py:261 wallet.py:295
+#: main.py:201 main.py:221 wallet.py:262 wallet.py:296
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Doslo je do greske poslati na mempool, tranzakcija nije poslata."
 
@@ -595,7 +598,7 @@ msgstr "Crystal"
 
 #: crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/210_eggpool/themes/default/about.html:29
-#: crystals/250_autogame/themes/default/about.html:28
+#: crystals/250_autogame/themes/default/about.html:39
 msgid "Version"
 msgstr "Verzija"
 
@@ -607,7 +610,7 @@ msgstr "Trenutna cena BIS-a"
 msgid "BIS"
 msgstr "BIS"
 
-#: main.py:198 wallet.py:258
+#: main.py:198 wallet.py:259
 msgid "Success"
 msgstr "Uspeh"
 
@@ -673,6 +676,7 @@ msgid "D:And you are registered to the current eggdrop"
 msgstr "Registrovali ste za trenutni eggdrop"
 
 #: crystals/200_dragginator/themes/default/about.html:49
+#: crystals/250_autogame/themes/default/about.html:23
 msgid "D:Register"
 msgstr "Registracija"
 
@@ -854,21 +858,21 @@ msgstr "\"operacija\" omogućava snažan Bismuth osobine. Ostavite prazno osim a
 
 #: crystals/210_eggpool/__init__.py:68
 msgid "No data"
-msgstr "No data"
+msgstr "Nema podataka"
 
 #: crystals/210_eggpool/__init__.py:85
 msgid "This crystal is activated but needs a wallet restart."
-msgstr "This crystal is activated but needs a wallet restart."
+msgstr "Crystal je aktivirano ali treba novčaniku restart."
 
-#: modules/i18n.py:8 themes/material/wallet_info.html:232
+#: modules/i18n.py:8 themes/material/wallet_info.html:235
 msgid "No protection"
-msgstr "No protection"
+msgstr "Bez zaštite"
 
-#: modules/i18n.py:10 themes/material/wallet_info.html:229
+#: modules/i18n.py:10 themes/material/wallet_info.html:232
 msgid "PIN Code"
-msgstr "PIN Code"
+msgstr "PIN kod"
 
-#: modules/i18n.py:12 themes/material/wallet_info.html:230
+#: modules/i18n.py:12 themes/material/wallet_info.html:233
 msgid "YUBICO"
 msgstr "YUBICO"
 
@@ -878,227 +882,229 @@ msgstr "U2F Token"
 
 #: themes/material/base.html:117
 msgid "Wallet info"
-msgstr "Wallet info"
+msgstr "Informacije o novčaniku"
 
 #: themes/material/crystals_list.html:48
 msgid "Apply"
-msgstr "Apply"
+msgstr "Primeniti"
 
 #: themes/material/message_pop.html:23 themes/material/messages_pop.html:31
 msgid "Close"
-msgstr "Close"
+msgstr "Zatvoriti"
 
-#: themes/material/messages.html:15 wallet.py:620
+#: themes/material/messages.html:15 wallet.py:655
 msgid "Sign message"
-msgstr "Sign message"
+msgstr "Potpiši poruku"
 
 #: themes/material/messages.html:16
 msgid "Sign some data for off chain usage with your private key."
-msgstr "Sign some data for off chain usage with your private key."
+msgstr "Potpišite neke podatke za upotrebu van lanca sa svojim privatnim ključem."
 
 #: themes/material/messages.html:26
 #: themes/material/transactions_send_confirm.html:104
 #: themes/material/transactions_sendpop_confirm.html:91
-#: themes/material/wallet_info.html:215 themes/material/wallet_info.html:216
-#: wallet.py:243 wallet.py:280 wallet.py:633
+#: themes/material/wallet_info.html:218 themes/material/wallet_info.html:219
+#: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Spend protection"
-msgstr "Spend protection"
+msgstr "Zaštita potrošnje"
 
 #: themes/material/messages.html:37
 msgid "Sign Message"
-msgstr "Sign Message"
+msgstr "Potpiši Poruku "
 
 #: themes/material/messages.html:52
 msgid "Encrypt message"
-msgstr "Encrypt message"
+msgstr "Šifruj poruku"
 
 #: themes/material/messages.html:53
 msgid "Encrypt data for off chain usage."
-msgstr "Encrypt data for off chain usage."
+msgstr "Šifrujte podatke za upotrebu van lanca."
 
 #: themes/material/messages.html:63
 msgid "You have to tell the recipient address so the message can be encrypted with his public key"
-msgstr "You have to tell the recipient address so the message can be encrypted with his public key"
+msgstr "Morate da kažete primaoca adrese tako da se poruka može kriptovati njegovim javnim ključem"
 
 #: themes/material/messages.html:67
 msgid "Encrypt Message"
-msgstr "Encrypt Message"
+msgstr "Šifruj Poruku"
 
 #: themes/material/messages_pop.html:24
 #: themes/material/transactions_receive.html:81
 msgid "Click text to copy"
-msgstr "Click text to copy"
+msgstr "Kliknite na tekst za kopiranje"
 
 #: themes/material/messages_pop.html:34
 #: themes/material/transactions_receive.html:84
 msgid "Copied to Clipboard"
-msgstr "Copied to Clipboard"
+msgstr "Kopirano u Clipboard"
 
 #: themes/material/transactions_send.html:103
 msgid "Send a transaction from a BIS URL"
-msgstr "Send a transaction from a BIS URL"
+msgstr "Pošaljite transakciju sa BIS URL-a"
 
+#: crystals/250_autogame/themes/default/about.html:21
 #: themes/material/transactions_send.html:110
 msgid "Paste the BIS URL you were given here"
-msgstr "Paste the BIS URL you were given here"
+msgstr "Zalepite BIS URL koji ste dobili ovde"
 
 #: themes/material/transactions_send.html:117
 msgid "Decode BIS URL"
-msgstr "Decode BIS URL"
+msgstr "Dekodiraj BIS URL"
 
 #: themes/material/transactions_send.html:123
 msgid "Send BIS URL..."
-msgstr "Send BIS URL..."
+msgstr "Pošalji BIS URL..."
 
 #: themes/material/wallet_info.html:16
 msgid "{} Address(es)"
-msgstr "{} Address(es)"
+msgstr "{} Adresa(e)"
 
 #: themes/material/wallet_info.html:29
 msgid "Manage"
-msgstr "Manage"
+msgstr "Upravljati"
 
 #: themes/material/wallet_info.html:30
 msgid "addresses"
-msgstr "addresses"
+msgstr "Adrese"
 
 #: themes/material/wallet_info.html:34
 msgid "Select one of your Bismuth addresses"
-msgstr "Select one of your Bismuth addresses"
+msgstr "Izaberite jednu od Bizmutovih adresa"
 
 #: themes/material/wallet_info.html:49
 msgid "Create a new"
-msgstr "Create a new"
+msgstr "Stvoriti nova"
 
 #: themes/material/wallet_info.html:50
 msgid "address"
-msgstr "address"
+msgstr "adresa"
 
 #: themes/material/wallet_info.html:72
 msgid "Wallet is locked"
-msgstr "Wallet is locked"
+msgstr "Novčanik je zaključan"
 
 #: themes/material/wallet_info.html:76
 msgid "Existing master password"
-msgstr "Existing master password"
+msgstr "Postojeća glavna lozinka"
 
-#: themes/material/wallet_info.html:78
+#: themes/material/wallet_info.html:79
 msgid "This is the password that protects your private key(s)"
-msgstr "This is the password that protects your private key(s)"
+msgstr "Ovo je lozinka koja štiti vaše privatne ključeve"
 
-#: themes/material/wallet_info.html:94
+#: themes/material/wallet_info.html:95
 msgid "Wallet is unlocked"
-msgstr "Wallet is unlocked"
+msgstr "Novčanik je otključan"
 
-#: themes/material/wallet_info.html:99
+#: themes/material/wallet_info.html:100
 msgid "You can lock it back for extra safety if you don't plan to use it soon."
-msgstr "You can lock it back for extra safety if you don't plan to use it soon."
+msgstr "Možete ga zaključati za dodatnu sigurnost ako ga ne planirate koristiti uskoro."
 
-#: themes/material/wallet_info.html:136 themes/material/wallet_info.html:159
-#: themes/material/wallet_info.html:163 themes/material/wallet_info.html:240
+#: themes/material/wallet_info.html:137 themes/material/wallet_info.html:160
+#: themes/material/wallet_info.html:164 themes/material/wallet_info.html:244
 msgid "Master password"
-msgstr "Master password"
+msgstr "Glavna lozinka"
 
-#: themes/material/wallet_info.html:143
+#: themes/material/wallet_info.html:144
 msgid "Master password is set"
-msgstr "Master password is set"
+msgstr "Glavna lozinka je postavljena"
 
-#: themes/material/wallet_info.html:166
+#: themes/material/wallet_info.html:168
 msgid "This is the password that will protect your private keys."
-msgstr "This is the password that will protect your private keys."
+msgstr "Ovo je lozinka koja će zaštititi vaše privatne ključeve."
 
-#: themes/material/wallet_info.html:170
+#: themes/material/wallet_info.html:172
 msgid "Retype Master password"
-msgstr "Retype Master password"
+msgstr "Ponovo upišite glavnu lozinku"
 
-#: themes/material/wallet_info.html:173
+#: themes/material/wallet_info.html:176
 msgid "Losing this password means loosing your keys!"
-msgstr "Losing this password means loosing your keys!"
+msgstr "Gubljenje ove lozinke znači gubitak ključeva!"
 
-#: themes/material/wallet_info.html:183
+#: themes/material/wallet_info.html:186
 msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
-msgstr "This will encrypt your wallet file. You may want to backup the unencrypted file first."
+msgstr "Ovo će šifrovati vašu datoteku novčanika. Možda želite prvo da napravite rezervnu kopiju nešifrovane datoteke."
 
-#: themes/material/wallet_info.html:189
+#: themes/material/wallet_info.html:192
 msgid "Master password is not set"
-msgstr "Master password is not set"
+msgstr "Glavna lozinka nije postavljena"
 
-#: themes/material/wallet_info.html:231
+#: themes/material/wallet_info.html:234
 msgid "U2F TOKEN"
 msgstr "U2F TOKEN"
 
-#: themes/material/wallet_info.html:242
+#: themes/material/wallet_info.html:248
 msgid "Needed to confirm operation"
-msgstr "Needed to confirm operation"
+msgstr "Potrebno za potvrdu operacije"
 
-#: themes/material/wallet_info.html:258
+#: themes/material/wallet_info.html:264
 msgid "Spending is currently not protected"
-msgstr "Spending is currently not protected"
+msgstr "Potrošnja trenutno nije zaštićena"
 
-#: themes/material/wallet_info.html:260
+#: themes/material/wallet_info.html:266
 msgid "Spending is currently protected by {}"
-msgstr "Spending is currently protected by {}"
+msgstr "Potrošnja je trenutno zaštićena od {}"
 
 #: themes/material/wallet_load.html:16 themes/material/wallet_load.html:36
 msgid "Your Bismuth addresses"
-msgstr "Your Bismuth addresses"
+msgstr "Vaše Bismuth adrese"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallet directory is {}"
-msgstr "Your wallet directory is {}"
+msgstr "Vaša direktorija novčanika je {}"
 
 #: themes/material/wallet_load.html:21
 msgid "Your wallet is {}"
-msgstr "Your wallet is {}"
+msgstr "Vaš novčanik je {}"
 
-#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:69
+#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:73
+#: themes/material/wallet_load.html:142
 msgid "Label"
-msgstr "Label"
+msgstr "Etiketa"
 
 #: themes/material/wallet_load.html:44
 msgid "Creation date"
-msgstr "Creation date"
+msgstr "Datum izrade"
 
-#: themes/material/wallet_load.html:71
+#: themes/material/wallet_load.html:75
 msgid "A private label for the new address"
-msgstr "A private label for the new address"
+msgstr "Privatna oznaka za novu adresu"
 
-#: themes/material/wallet_load.html:76
+#: themes/material/wallet_load.html:80
 msgid "Create a new address"
-msgstr "Create a new address"
+msgstr "Napravite novu adresu"
 
-#: themes/material/wallet_load.html:92
+#: themes/material/wallet_load.html:96
 msgid "Potential legacy wallet imports"
-msgstr "Potential legacy wallet imports"
+msgstr "Potencijalni uvoz iz prethodnog novčanika"
 
-#: wallet.py:243 wallet.py:280 wallet.py:633
+#: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Invalid PIN Number"
-msgstr "Invalid PIN Number"
+msgstr "Nevažeći PIN broj"
 
-#: wallet.py:402 wallet.py:422 wallet.py:461 wallet.py:476 wallet.py:484
-#: wallet.py:499 wallet.py:510
+#: wallet.py:401 wallet.py:421 wallet.py:460 wallet.py:474 wallet.py:489
+#: wallet.py:497 wallet.py:512 wallet.py:523
 msgid "Error: {}"
-msgstr "Error: {}"
+msgstr "Greška: {}"
 
-#: wallet.py:452
+#: wallet.py:451
 msgid "Max of {} addresses reached."
-msgstr "Max of {} addresses reached."
+msgstr "Dostignuto je najviše {} adresa."
 
-#: wallet.py:493
+#: wallet.py:506
 msgid "Passwords do not match"
-msgstr "Passwords do not match"
+msgstr "Lozinke se ne poklapaju"
 
-#: wallet.py:639
+#: wallet.py:674
 msgid "Your message '{}' has been signed."
-msgstr "Your message '{}' has been signed."
+msgstr "Vaša poruka '{}' je potpisana."
 
-#: wallet.py:641
+#: wallet.py:676
 msgid "Signature"
-msgstr "Signature"
+msgstr "Potpis"
 
-#: wallet.py:645
+#: wallet.py:680
 msgid "This feature is under construction. "
-msgstr "This feature is under construction. "
+msgstr "Ova funkcija je u izgradnji."
 
 #: crystals/200_dragginator/themes/default/egg.html:32
 msgid "D:draggon"
@@ -1110,33 +1116,69 @@ msgstr "egg"
 
 #: crystals/250_autogame/themes/default/about.html:14
 msgid "AG:Direct Link to latest autogame doc."
-msgstr "Direct Link to latest autogame doc."
+msgstr "Direct Link to najnoviji autogame doc."
 
-#: crystals/250_autogame/themes/default/about.html:41
+#: crystals/250_autogame/themes/default/about.html:52
 msgid "AG:Your games"
-msgstr "Your games"
+msgstr "Vaše igre"
+
+#: crystals/250_autogame/themes/default/about.html:76
+msgid "AG:Game detail"
+msgstr "Detalj igre"
+
+#: themes/material/wallet_info.html:85
+msgid "Unlock wallet"
+msgstr "Otključaj novčanik"
+
+#: themes/material/wallet_info.html:106
+msgid "Lock wallet"
+msgstr "Zaključaj novčanik"
+
+#: themes/material/wallet_info.html:110
+msgid "You have to encrypt your wallet first to use this feature"
+msgstr "Morate prvo da šifrujete svoj novčanik da biste koristili ovu funkciju"
+
+#: themes/material/wallet_info.html:183
+msgid "Set master password"
+msgstr "Postavite glavnu lozinku"
+
+#: themes/material/wallet_info.html:254
+msgid "Set spend protection"
+msgstr "Postavite zaštitu za potrošnju"
 
 #: crystals/250_autogame/themes/default/about.html:59
-msgid "AG:Game detail"
-msgstr "Game detail"
+msgid "Replay"
+msgstr "Ponovo odigrati"
 
-#: themes/material/wallet_info.html:84
-msgid "Unlock wallet"
-msgstr "Unlock wallet"
+#: crystals/250_autogame/themes/default/replay_pop.html:2
+msgid "AG:Game {} replay"
+msgstr "Ponovo odigrati igru {}"
 
-#: themes/material/wallet_info.html:105
-msgid "Lock wallet"
-msgstr "Lock wallet"
+#: crystals/250_autogame/themes/default/status_pop.html:2
+msgid "AG:Game {} status"
+msgstr "Status {} igre"
 
-#: themes/material/wallet_info.html:109
-msgid "You have to encrypt your wallet first to use this feature"
-msgstr "You have to encrypt your wallet first to use this feature"
+#: modules/basehandlers.py:60
+msgid "Wallet server did not send an answer. Please try again."
+msgstr "Server novčanika nije poslao odgovor. Molim vas, pokušajte ponovo."
 
-#: themes/material/wallet_info.html:180
-msgid "Set master password"
-msgstr "Set master password"
+#: themes/material/about_network.html:85
+msgid "Height"
+msgstr "Visina"
 
-#: themes/material/wallet_info.html:248
-msgid "Set spend protection"
-msgstr "Set spend protection"
+#: themes/material/about_network.html:85
+msgid "Load"
+msgstr "Učitati"
+
+#: themes/material/wallet_load.html:128
+msgid "Edit label"
+msgstr "Izmeni oznaku"
+
+#: themes/material/wallet_load.html:144
+msgid "A private label for that address"
+msgstr "Privatna etiketa za tu adresu"
+
+#: themes/material/wallet_load.html:152
+msgid "Set label"
+msgstr "Podesiti etiketu"
 
