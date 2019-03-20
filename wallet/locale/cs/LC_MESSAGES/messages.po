@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: cs\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:227
+#: themes/material/about_credits.html:10 themes/material/base.html:228
 msgid "Credits"
 msgstr "Autoři"
 
@@ -30,7 +30,7 @@ msgstr "\n"
 
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
-#: crystals/250_autogame/themes/default/about.html:24
+#: crystals/250_autogame/themes/default/about.html:35
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "Podrobnosti"
@@ -103,7 +103,7 @@ msgstr "Dostupné servery peněženky"
 msgid "servers"
 msgstr "servery"
 
-#: themes/material/about_network.html:87
+#: themes/material/about_network.html:88
 msgid "Refresh from API"
 msgstr "Obnovit z API"
 
@@ -143,31 +143,31 @@ msgstr "Krystaly"
 msgid "Toggle navigation"
 msgstr "Přepnout procházení"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:208
 msgid "Source"
 msgstr "Zdroj"
 
-#: themes/material/base.html:212
+#: themes/material/base.html:213
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:217
+#: themes/material/base.html:218
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:222
+#: themes/material/base.html:223
 msgid "Donate"
 msgstr "Přispějte"
 
-#: themes/material/base.html:233
+#: themes/material/base.html:234
 msgid "block #"
 msgstr "č. bloku"
 
-#: themes/material/base.html:253
+#: themes/material/base.html:254
 msgid "Sidebar Filters"
 msgstr "Filtry postranních panelů"
 
-#: themes/material/base.html:266
+#: themes/material/base.html:267
 msgid "Images"
 msgstr "Obrázky"
 
@@ -215,7 +215,8 @@ msgid "Date"
 msgstr "Datum"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:96
+#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:100
+#: themes/material/wallet_load.html:137
 msgid "Address"
 msgstr "Adresa"
 
@@ -349,12 +350,12 @@ msgstr "Vytvořit"
 msgid "new wallet"
 msgstr "novou peněženku"
 
-#: themes/material/wallet_load.html:95
+#: themes/material/wallet_load.html:99
 msgid "File"
 msgstr "Soubor"
 
 #. zašifrováno?
-#: themes/material/wallet_load.html:97
+#: themes/material/wallet_load.html:101
 msgid "Encrypted"
 msgstr "Zaheslováno"
 
@@ -366,22 +367,22 @@ msgstr "Ve vývoji"
 msgid "This feature is under construction."
 msgstr "Tato funkce je ve vývoji"
 
-#: main.py:243 wallet.py:325
+#: main.py:243 wallet.py:326
 msgid "Transaction list"
 msgstr "Seznam pokynů"
 
-#: main.py:203 main.py:315 main.py:324 wallet.py:263 wallet.py:376
-#: wallet.py:402 wallet.py:416 wallet.py:422 wallet.py:437 wallet.py:446
-#: wallet.py:452 wallet.py:461 wallet.py:476 wallet.py:484 wallet.py:493
-#: wallet.py:499 wallet.py:510
+#: main.py:203 main.py:315 main.py:324 modules/basehandlers.py:60
+#: wallet.py:264 wallet.py:375 wallet.py:401 wallet.py:415 wallet.py:421
+#: wallet.py:436 wallet.py:445 wallet.py:451 wallet.py:460 wallet.py:474
+#: wallet.py:489 wallet.py:497 wallet.py:506 wallet.py:512 wallet.py:523
 msgid "Error"
 msgstr "Chyba"
 
-#: main.py:315 wallet.py:437
+#: main.py:315 wallet.py:436
 msgid "This file already exists: {}.der"
 msgstr "Tento soubor již existuje: {}.der"
 
-#: main.py:324 wallet.py:446
+#: main.py:324 wallet.py:445
 msgid "Error creating {}.der"
 msgstr "Chyba při vytváření {}.der"
 
@@ -462,7 +463,7 @@ msgstr "Příjemce obdrží tuto částku"
 msgid "This is what you will pay, fees included."
 msgstr "Částka k zaplacení, včetně poplatků"
 
-#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:98
+#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:102
 msgid "Action"
 msgstr "Akce"
 
@@ -470,29 +471,30 @@ msgstr "Akce"
 msgid "Translations"
 msgstr "Překlady"
 
-#: themes/material/transactions_send_confirm.html:116
-#: themes/material/transactions_sendpop_confirm.html:102
+#: themes/material/transactions_send_confirm.html:117
+#: themes/material/transactions_sendpop_confirm.html:103
+#: themes/material/wallet_load.html:150
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: themes/material/transactions_send_confirm.html:121
-#: themes/material/transactions_sendpop_confirm.html:108
+#: themes/material/transactions_send_confirm.html:122
+#: themes/material/transactions_sendpop_confirm.html:111
 msgid "Confirm and send BIS"
 msgstr "Potvrdit a odeslat BIS"
 
-#: main.py:144 main.py:172 wallet.py:161 wallet.py:189 wallet.py:211
+#: main.py:144 main.py:172 wallet.py:161 wallet.py:190 wallet.py:212
 msgid "Send BIS: Confirmation"
 msgstr "Odeslat BIS: Potvrzení"
 
-#: main.py:146 main.py:174 wallet.py:163 wallet.py:191 wallet.py:213
+#: main.py:146 main.py:174 wallet.py:163 wallet.py:192 wallet.py:214
 msgid "Please confirm this transaction"
 msgstr "Potvrďte prosím tento pokyn"
 
-#: main.py:147 main.py:175 wallet.py:164 wallet.py:192 wallet.py:214
+#: main.py:147 main.py:175 wallet.py:164 wallet.py:193 wallet.py:215
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Ujistěte se, zdali chcete učinit následující a stiskněte tlačítko \"potvrdit\""
 
-#: main.py:227 wallet.py:308
+#: main.py:227 wallet.py:309
 msgid "Receive BIS"
 msgstr "Přijmout BIS"
 
@@ -509,10 +511,11 @@ msgstr "Poděkování patří naším překladatelům a korektorům\n"
 msgid "Wallet server version {}"
 msgstr "Verze serveru peneženky"
 
-#: themes/material/base.html:172
+#: themes/material/base.html:173
 msgid "Wallet"
 msgstr "peněženka"
 
+#: crystals/250_autogame/themes/default/about.html:19
 #: themes/material/transactions_receive.html:81
 #: themes/material/transactions_send.html:100
 #: themes/material/transactions_send.html:108
@@ -529,50 +532,50 @@ msgstr "Adresář vaší peneženky je {}"
 
 #: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
 #: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
-#: wallet.py:181 wallet.py:185 wallet.py:196 wallet.py:227 wallet.py:233
-#: wallet.py:236 wallet.py:243 wallet.py:270 wallet.py:273 wallet.py:280
-#: wallet.py:295 wallet.py:301 wallet.py:305 wallet.py:622 wallet.py:626
-#: wallet.py:633 wallet.py:645
+#: wallet.py:181 wallet.py:185 wallet.py:197 wallet.py:228 wallet.py:234
+#: wallet.py:237 wallet.py:244 wallet.py:271 wallet.py:274 wallet.py:281
+#: wallet.py:296 wallet.py:302 wallet.py:306 wallet.py:657 wallet.py:661
+#: wallet.py:668 wallet.py:680
 msgid "Error:"
 msgstr "Chyba:"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:233
-#: wallet.py:270 wallet.py:301 wallet.py:622
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
+#: wallet.py:271 wallet.py:302 wallet.py:657
 msgid "Load your wallet first"
 msgstr "Nejprve načtěte svou peněženku"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:233
-#: wallet.py:270 wallet.py:301 wallet.py:622
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
+#: wallet.py:271 wallet.py:302 wallet.py:657
 msgid "No Wallet"
 msgstr "Bez peněženky"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:236
-#: wallet.py:273 wallet.py:305 wallet.py:626
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
+#: wallet.py:274 wallet.py:306 wallet.py:661
 msgid "Encrypted wallet"
 msgstr "Zaheslovaná peněženka"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:236
-#: wallet.py:273 wallet.py:305 wallet.py:376 wallet.py:416 wallet.py:626
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
+#: wallet.py:274 wallet.py:306 wallet.py:375 wallet.py:415 wallet.py:661
 msgid "You have to unlock your wallet first"
 msgstr "Nejprve musíte svou peněženku odemknout"
 
-#: main.py:193 main.py:216 wallet.py:253 wallet.py:290
+#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Success:"
 msgstr "Úspěch:"
 
-#: main.py:193 main.py:216 wallet.py:253 wallet.py:290
+#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Transaction sent"
 msgstr "Pokyn odeslán"
 
-#: main.py:194 main.py:217 wallet.py:254 wallet.py:291
+#: main.py:194 main.py:217 wallet.py:255 wallet.py:292
 msgid "The transaction was submitted to the mempool."
 msgstr "Pokyn byl přijat mempoolem"
 
-#: main.py:196 main.py:219 wallet.py:256 wallet.py:293
+#: main.py:196 main.py:219 wallet.py:257 wallet.py:294
 msgid "Txid is {}"
 msgstr "Txid {}"
 
-#: main.py:201 main.py:221 wallet.py:261 wallet.py:295
+#: main.py:201 main.py:221 wallet.py:262 wallet.py:296
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Při odeslíání do mempoolu došlo k chybě, pokyn nebyl odeslán.\n"
 ""
@@ -601,7 +604,7 @@ msgstr "Krystal"
 
 #: crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/210_eggpool/themes/default/about.html:29
-#: crystals/250_autogame/themes/default/about.html:28
+#: crystals/250_autogame/themes/default/about.html:39
 msgid "Version"
 msgstr "Verze"
 
@@ -613,7 +616,7 @@ msgstr "Současné ceny Bismuthu"
 msgid "BIS"
 msgstr "BIS"
 
-#: main.py:198 wallet.py:258
+#: main.py:198 wallet.py:259
 msgid "Success"
 msgstr "Úspěch"
 
@@ -679,6 +682,7 @@ msgid "D:And you are registered to the current eggdrop"
 msgstr "A jste registrováni do současného rozdávání vajec"
 
 #: crystals/200_dragginator/themes/default/about.html:49
+#: crystals/250_autogame/themes/default/about.html:23
 msgid "D:Register"
 msgstr "Registrovat"
 
@@ -867,15 +871,15 @@ msgstr "Žádná data"
 msgid "This crystal is activated but needs a wallet restart."
 msgstr "Tento krystal je aktivní, ale vyžaduje restart peněženky."
 
-#: modules/i18n.py:8 themes/material/wallet_info.html:232
+#: modules/i18n.py:8 themes/material/wallet_info.html:235
 msgid "No protection"
 msgstr "Bez ochrany"
 
-#: modules/i18n.py:10 themes/material/wallet_info.html:229
+#: modules/i18n.py:10 themes/material/wallet_info.html:232
 msgid "PIN Code"
 msgstr "Kód PIN"
 
-#: modules/i18n.py:12 themes/material/wallet_info.html:230
+#: modules/i18n.py:12 themes/material/wallet_info.html:233
 msgid "YUBICO"
 msgstr "YUBICO"
 
@@ -895,7 +899,7 @@ msgstr "Použít"
 msgid "Close"
 msgstr "Zavřít"
 
-#: themes/material/messages.html:15 wallet.py:620
+#: themes/material/messages.html:15 wallet.py:655
 msgid "Sign message"
 msgstr "Podepsat zprávu"
 
@@ -906,8 +910,8 @@ msgstr "Uložte data pro externí použití svým soukromým klíčem."
 #: themes/material/messages.html:26
 #: themes/material/transactions_send_confirm.html:104
 #: themes/material/transactions_sendpop_confirm.html:91
-#: themes/material/wallet_info.html:215 themes/material/wallet_info.html:216
-#: wallet.py:243 wallet.py:280 wallet.py:633
+#: themes/material/wallet_info.html:218 themes/material/wallet_info.html:219
+#: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Spend protection"
 msgstr "Ochrana před utrácením"
 
@@ -945,6 +949,7 @@ msgstr "Zkopírováno do schránky"
 msgid "Send a transaction from a BIS URL"
 msgstr "Odeslat pokyn pomocí BIS URL"
 
+#: crystals/250_autogame/themes/default/about.html:21
 #: themes/material/transactions_send.html:110
 msgid "Paste the BIS URL you were given here"
 msgstr "Zde vložte BIS URL, kterou jste dostali"
@@ -989,60 +994,60 @@ msgstr "Peněženka užamčena"
 msgid "Existing master password"
 msgstr "Existující hlavní heslo"
 
-#: themes/material/wallet_info.html:78
+#: themes/material/wallet_info.html:79
 msgid "This is the password that protects your private key(s)"
 msgstr "Toto heslo chrání vaše soukromé klíče"
 
-#: themes/material/wallet_info.html:94
+#: themes/material/wallet_info.html:95
 msgid "Wallet is unlocked"
 msgstr "Peněženka odemčena"
 
-#: themes/material/wallet_info.html:99
+#: themes/material/wallet_info.html:100
 msgid "You can lock it back for extra safety if you don't plan to use it soon."
 msgstr "Pokud ji neplánujete brzy použít, můžete ji opět uzamknout"
 
-#: themes/material/wallet_info.html:136 themes/material/wallet_info.html:159
-#: themes/material/wallet_info.html:163 themes/material/wallet_info.html:240
+#: themes/material/wallet_info.html:137 themes/material/wallet_info.html:160
+#: themes/material/wallet_info.html:164 themes/material/wallet_info.html:244
 msgid "Master password"
 msgstr "Hlavní heslo"
 
-#: themes/material/wallet_info.html:143
+#: themes/material/wallet_info.html:144
 msgid "Master password is set"
 msgstr "Hlavní heslo nastaveno"
 
-#: themes/material/wallet_info.html:166
+#: themes/material/wallet_info.html:168
 msgid "This is the password that will protect your private keys."
 msgstr "Toto heslo bude chránit vaše soukromé klíče."
 
-#: themes/material/wallet_info.html:170
+#: themes/material/wallet_info.html:172
 msgid "Retype Master password"
 msgstr "Opakujte hlavní heslo"
 
-#: themes/material/wallet_info.html:173
+#: themes/material/wallet_info.html:176
 msgid "Losing this password means loosing your keys!"
 msgstr "Přijít o toto heslo znamená přijít i o klíče!"
 
-#: themes/material/wallet_info.html:183
+#: themes/material/wallet_info.html:186
 msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
 msgstr "Tímto zaheslujete svou peněženku. Zvažte předtím zálohu nezaheslovaných souborů."
 
-#: themes/material/wallet_info.html:189
+#: themes/material/wallet_info.html:192
 msgid "Master password is not set"
 msgstr "Hlavní heslo není nastaveno"
 
-#: themes/material/wallet_info.html:231
+#: themes/material/wallet_info.html:234
 msgid "U2F TOKEN"
 msgstr "TOKEN U2F"
 
-#: themes/material/wallet_info.html:242
+#: themes/material/wallet_info.html:248
 msgid "Needed to confirm operation"
 msgstr "Je nezbytné operaci potvrdit"
 
-#: themes/material/wallet_info.html:258
+#: themes/material/wallet_info.html:264
 msgid "Spending is currently not protected"
 msgstr "Utrácení momentálně není chráněno"
 
-#: themes/material/wallet_info.html:260
+#: themes/material/wallet_info.html:266
 msgid "Spending is currently protected by {}"
 msgstr "Utrácení je momentálně chráněno {}"
 
@@ -1058,7 +1063,8 @@ msgstr "Adresář s vašimi adresami je {}"
 msgid "Your wallet is {}"
 msgstr "Vaše adresa je {}"
 
-#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:69
+#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:73
+#: themes/material/wallet_load.html:142
 msgid "Label"
 msgstr "Označení"
 
@@ -1066,45 +1072,45 @@ msgstr "Označení"
 msgid "Creation date"
 msgstr "Den vytvoření"
 
-#: themes/material/wallet_load.html:71
+#: themes/material/wallet_load.html:75
 msgid "A private label for the new address"
 msgstr "Soukromé označení nové peněženky"
 
-#: themes/material/wallet_load.html:76
+#: themes/material/wallet_load.html:80
 msgid "Create a new address"
 msgstr "Vytvořit novou adresu"
 
 #. unclear meaning, which part is potential?
-#: themes/material/wallet_load.html:92
+#: themes/material/wallet_load.html:96
 msgid "Potential legacy wallet imports"
 msgstr "Import potencíálně původní peněženky"
 
-#: wallet.py:243 wallet.py:280 wallet.py:633
+#: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Invalid PIN Number"
 msgstr "Nesprávný PIN"
 
-#: wallet.py:402 wallet.py:422 wallet.py:461 wallet.py:476 wallet.py:484
-#: wallet.py:499 wallet.py:510
+#: wallet.py:401 wallet.py:421 wallet.py:460 wallet.py:474 wallet.py:489
+#: wallet.py:497 wallet.py:512 wallet.py:523
 msgid "Error: {}"
 msgstr "Chyba: {}"
 
-#: wallet.py:452
+#: wallet.py:451
 msgid "Max of {} addresses reached."
 msgstr "Maximální počet adres dosažen: {}"
 
-#: wallet.py:493
+#: wallet.py:506
 msgid "Passwords do not match"
 msgstr "Hesla se neshodují"
 
-#: wallet.py:639
+#: wallet.py:674
 msgid "Your message '{}' has been signed."
 msgstr "Vaše zpráva \"{}\" byla podepsána."
 
-#: wallet.py:641
+#: wallet.py:676
 msgid "Signature"
 msgstr "Podpis"
 
-#: wallet.py:645
+#: wallet.py:680
 msgid "This feature is under construction. "
 msgstr "Na této funkci se pracuje"
 
@@ -1120,31 +1126,67 @@ msgstr "egg"
 msgid "AG:Direct Link to latest autogame doc."
 msgstr "Direct Link to latest autogame doc."
 
-#: crystals/250_autogame/themes/default/about.html:41
+#: crystals/250_autogame/themes/default/about.html:52
 msgid "AG:Your games"
 msgstr "Your games"
 
-#: crystals/250_autogame/themes/default/about.html:59
+#: crystals/250_autogame/themes/default/about.html:76
 msgid "AG:Game detail"
 msgstr "Game detail"
 
-#: themes/material/wallet_info.html:84
+#: themes/material/wallet_info.html:85
 msgid "Unlock wallet"
 msgstr "Unlock wallet"
 
-#: themes/material/wallet_info.html:105
+#: themes/material/wallet_info.html:106
 msgid "Lock wallet"
 msgstr "Lock wallet"
 
-#: themes/material/wallet_info.html:109
+#: themes/material/wallet_info.html:110
 msgid "You have to encrypt your wallet first to use this feature"
 msgstr "You have to encrypt your wallet first to use this feature"
 
-#: themes/material/wallet_info.html:180
+#: themes/material/wallet_info.html:183
 msgid "Set master password"
 msgstr "Set master password"
 
-#: themes/material/wallet_info.html:248
+#: themes/material/wallet_info.html:254
 msgid "Set spend protection"
 msgstr "Set spend protection"
+
+#: crystals/250_autogame/themes/default/about.html:59
+msgid "Replay"
+msgstr "Replay"
+
+#: crystals/250_autogame/themes/default/replay_pop.html:2
+msgid "AG:Game {} replay"
+msgstr "Game {} replay"
+
+#: crystals/250_autogame/themes/default/status_pop.html:2
+msgid "AG:Game {} status"
+msgstr "Game {} status"
+
+#: modules/basehandlers.py:60
+msgid "Wallet server did not send an answer. Please try again."
+msgstr "Wallet server did not send an answer. Please try again."
+
+#: themes/material/about_network.html:85
+msgid "Height"
+msgstr "Height"
+
+#: themes/material/about_network.html:85
+msgid "Load"
+msgstr "Load"
+
+#: themes/material/wallet_load.html:128
+msgid "Edit label"
+msgstr "Edit label"
+
+#: themes/material/wallet_load.html:144
+msgid "A private label for that address"
+msgstr "A private label for that address"
+
+#: themes/material/wallet_load.html:152
+msgid "Set label"
+msgstr "Set label"
 
