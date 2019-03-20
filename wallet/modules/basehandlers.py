@@ -75,13 +75,13 @@ class BaseHandler(RequestHandler):
 
     def get_user_locale(self):
         if self.settings["lang"]:
-            print("Lang forced to", self.settings["lang"])
+            # print("Lang forced to", self.settings["lang"])
             return locale.get(self.settings["lang"])
-        user_lang = False  # self.get_cookie("lang", False)
+        user_lang = self.get_cookie("lang", False)
         if user_lang:
-            print("Lang cookie to", user_lang)
+            # print("Lang cookie to", user_lang)
             return locale.get(user_lang)
-        print("Lang False")
+        # print("Lang False")
         return locale.get("en")
 
     def render_string(self, template_name, **kwargs):
