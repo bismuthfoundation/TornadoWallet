@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: zh-CN\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:227
+#: themes/material/about_credits.html:10 themes/material/base.html:228
 msgid "Credits"
 msgstr "积分"
 
@@ -29,6 +29,7 @@ msgstr "<a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_bl
 
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
+#: crystals/250_autogame/themes/default/about.html:35
 #: themes/material/about_credits.html:30
 msgid "About"
 msgstr "关于"
@@ -101,7 +102,7 @@ msgstr "可用的钱包服务器"
 msgid "servers"
 msgstr "服务器"
 
-#: themes/material/about_network.html:87
+#: themes/material/about_network.html:88
 msgid "Refresh from API"
 msgstr "从API刷新"
 
@@ -141,31 +142,31 @@ msgstr "Cristals"
 msgid "Toggle navigation"
 msgstr "切换导航"
 
-#: themes/material/base.html:207
+#: themes/material/base.html:208
 msgid "Source"
 msgstr "资源"
 
-#: themes/material/base.html:212
+#: themes/material/base.html:213
 msgid "Blog"
 msgstr "博客"
 
-#: themes/material/base.html:217
+#: themes/material/base.html:218
 msgid "Discord"
 msgstr "不和"
 
-#: themes/material/base.html:222
+#: themes/material/base.html:223
 msgid "Donate"
 msgstr "捐"
 
-#: themes/material/base.html:233
+#: themes/material/base.html:234
 msgid "block #"
 msgstr "块＃"
 
-#: themes/material/base.html:253
+#: themes/material/base.html:254
 msgid "Sidebar Filters"
 msgstr "边栏过滤器"
 
-#: themes/material/base.html:266
+#: themes/material/base.html:267
 msgid "Images"
 msgstr "图片"
 
@@ -213,7 +214,8 @@ msgid "Date"
 msgstr "日期"
 
 #: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:96
+#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:100
+#: themes/material/wallet_load.html:137
 msgid "Address"
 msgstr "地址"
 
@@ -347,11 +349,11 @@ msgstr "创建一个"
 msgid "new wallet"
 msgstr "新钱包"
 
-#: themes/material/wallet_load.html:95
+#: themes/material/wallet_load.html:99
 msgid "File"
 msgstr "文件"
 
-#: themes/material/wallet_load.html:97
+#: themes/material/wallet_load.html:101
 msgid "Encrypted"
 msgstr "加密"
 
@@ -363,22 +365,22 @@ msgstr "W.I.P."
 msgid "This feature is under construction."
 msgstr "此功能正在建设中。"
 
-#: main.py:243 wallet.py:312
+#: main.py:243 wallet.py:326
 msgid "Transaction list"
 msgstr "交易清单"
 
-#: main.py:203 main.py:315 main.py:324 wallet.py:257 wallet.py:361
-#: wallet.py:387 wallet.py:401 wallet.py:407 wallet.py:422 wallet.py:431
-#: wallet.py:437 wallet.py:446 wallet.py:460 wallet.py:468 wallet.py:477
-#: wallet.py:483 wallet.py:494
+#: main.py:203 main.py:315 main.py:324 modules/basehandlers.py:60
+#: wallet.py:264 wallet.py:375 wallet.py:401 wallet.py:415 wallet.py:421
+#: wallet.py:436 wallet.py:445 wallet.py:451 wallet.py:460 wallet.py:474
+#: wallet.py:489 wallet.py:497 wallet.py:506 wallet.py:512 wallet.py:523
 msgid "Error"
 msgstr "错误"
 
-#: main.py:315 wallet.py:422
+#: main.py:315 wallet.py:436
 msgid "This file already exists: {}.der"
 msgstr "此文件已存在：{} .der"
 
-#: main.py:324 wallet.py:431
+#: main.py:324 wallet.py:445
 msgid "Error creating {}.der"
 msgstr "创建{} .der时出错"
 
@@ -457,7 +459,7 @@ msgstr "这是收件人将收到的内容"
 msgid "This is what you will pay, fees included."
 msgstr "这是你要支付的费用，包括费用。"
 
-#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:98
+#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:102
 msgid "Action"
 msgstr "行动"
 
@@ -465,29 +467,30 @@ msgstr "行动"
 msgid "Translations"
 msgstr "翻译"
 
-#: themes/material/transactions_send_confirm.html:116
-#: themes/material/transactions_sendpop_confirm.html:102
+#: themes/material/transactions_send_confirm.html:117
+#: themes/material/transactions_sendpop_confirm.html:103
+#: themes/material/wallet_load.html:150
 msgid "Cancel"
 msgstr "取消"
 
-#: themes/material/transactions_send_confirm.html:121
-#: themes/material/transactions_sendpop_confirm.html:108
+#: themes/material/transactions_send_confirm.html:122
+#: themes/material/transactions_sendpop_confirm.html:111
 msgid "Confirm and send BIS"
 msgstr "确认并发送BIS"
 
-#: main.py:144 main.py:172 wallet.py:161 wallet.py:189 wallet.py:211
+#: main.py:144 main.py:172 wallet.py:161 wallet.py:190 wallet.py:212
 msgid "Send BIS: Confirmation"
 msgstr "发送BIS：确认"
 
-#: main.py:146 main.py:174 wallet.py:163 wallet.py:191 wallet.py:213
+#: main.py:146 main.py:174 wallet.py:163 wallet.py:192 wallet.py:214
 msgid "Please confirm this transaction"
 msgstr "请确认此交易"
 
-#: main.py:147 main.py:175 wallet.py:164 wallet.py:192 wallet.py:214
+#: main.py:147 main.py:175 wallet.py:164 wallet.py:193 wallet.py:215
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "检查这是您打算做的，然后点击“确认”按钮"
 
-#: main.py:227 wallet.py:295
+#: main.py:227 wallet.py:309
 msgid "Receive BIS"
 msgstr "收到BIS"
 
@@ -503,10 +506,11 @@ msgstr "非常感谢我们的翻译和校对员"
 msgid "Wallet server version {}"
 msgstr "电子钱包服务器版{}"
 
-#: themes/material/base.html:172
+#: themes/material/base.html:173
 msgid "Wallet"
 msgstr "钱包"
 
+#: crystals/250_autogame/themes/default/about.html:19
 #: themes/material/transactions_receive.html:81
 #: themes/material/transactions_send.html:100
 #: themes/material/transactions_send.html:108
@@ -523,54 +527,55 @@ msgstr "你的钱包目录是{}"
 
 #: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
 #: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
-#: wallet.py:181 wallet.py:185 wallet.py:196 wallet.py:221 wallet.py:227
-#: wallet.py:230 wallet.py:237 wallet.py:264 wallet.py:267 wallet.py:274
-#: wallet.py:289 wallet.py:606 wallet.py:610 wallet.py:617 wallet.py:629
+#: wallet.py:181 wallet.py:185 wallet.py:197 wallet.py:228 wallet.py:234
+#: wallet.py:237 wallet.py:244 wallet.py:271 wallet.py:274 wallet.py:281
+#: wallet.py:296 wallet.py:302 wallet.py:306 wallet.py:657 wallet.py:661
+#: wallet.py:668 wallet.py:680
 msgid "Error:"
 msgstr "错误："
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
-#: wallet.py:264 wallet.py:606
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
+#: wallet.py:271 wallet.py:302 wallet.py:657
 msgid "Load your wallet first"
 msgstr "首先装入你的钱包"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:227
-#: wallet.py:264 wallet.py:606
+#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
+#: wallet.py:271 wallet.py:302 wallet.py:657
 msgid "No Wallet"
 msgstr "没有钱包"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
-#: wallet.py:267 wallet.py:610
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
+#: wallet.py:274 wallet.py:306 wallet.py:661
 msgid "Encrypted wallet"
 msgstr "加密钱包"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:230
-#: wallet.py:267 wallet.py:361 wallet.py:401 wallet.py:610
+#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
+#: wallet.py:274 wallet.py:306 wallet.py:375 wallet.py:415 wallet.py:661
 msgid "You have to unlock your wallet first"
 msgstr "你必须先解锁你的钱包"
 
-#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
+#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Success:"
 msgstr "成功："
 
-#: main.py:193 main.py:216 wallet.py:247 wallet.py:284
+#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Transaction sent"
 msgstr "交易发送"
 
-#: main.py:194 main.py:217 wallet.py:248 wallet.py:285
+#: main.py:194 main.py:217 wallet.py:255 wallet.py:292
 msgid "The transaction was submitted to the mempool."
 msgstr "该交易已提交给mempool。"
 
-#: main.py:196 main.py:219 wallet.py:250 wallet.py:287
+#: main.py:196 main.py:219 wallet.py:257 wallet.py:294
 msgid "Txid is {}"
 msgstr "Txid是{}"
 
-#: main.py:201 main.py:221 wallet.py:255 wallet.py:289
+#: main.py:201 main.py:221 wallet.py:262 wallet.py:296
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "提交给mempool时出错，未发送交易。"
 
 #: crystals/200_dragginator/themes/default/about.html:89
-#: modules/basehandlers.py:51
+#: modules/basehandlers.py:55
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr "没有铋地址，请先创建或加载钱包。"
 
@@ -593,6 +598,7 @@ msgstr "水晶"
 
 #: crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/210_eggpool/themes/default/about.html:29
+#: crystals/250_autogame/themes/default/about.html:39
 msgid "Version"
 msgstr "版"
 
@@ -604,7 +610,7 @@ msgstr "目前的铋价格"
 msgid "BIS"
 msgstr "BIS"
 
-#: main.py:198 wallet.py:252
+#: main.py:198 wallet.py:259
 msgid "Success"
 msgstr "成功"
 
@@ -670,6 +676,7 @@ msgid "D:And you are registered to the current eggdrop"
 msgstr "而且你已注册到当前的eggdrop"
 
 #: crystals/200_dragginator/themes/default/about.html:49
+#: crystals/250_autogame/themes/default/about.html:23
 msgid "D:Register"
 msgstr "寄存器"
 
@@ -682,12 +689,12 @@ msgid "D:DNA"
 msgstr "脱氧核糖核酸"
 
 #: crystals/200_dragginator/themes/default/about.html:62
-#: crystals/200_dragginator/themes/default/egg.html:30
+#: crystals/200_dragginator/themes/default/egg.html:56
 msgid "D:Element"
 msgstr "元件"
 
 #: crystals/200_dragginator/themes/default/about.html:63
-#: crystals/200_dragginator/themes/default/egg.html:31
+#: crystals/200_dragginator/themes/default/egg.html:57
 msgid "D:Species"
 msgstr "种类"
 
@@ -703,31 +710,31 @@ msgstr "请参阅Dragginator.com"
 msgid "D:Archive"
 msgstr "档案"
 
-#: crystals/200_dragginator/themes/default/egg.html:32
+#: crystals/200_dragginator/themes/default/egg.html:58
 msgid "D:Age"
 msgstr "年龄"
 
-#: crystals/200_dragginator/themes/default/egg.html:33
+#: crystals/200_dragginator/themes/default/egg.html:59
 msgid "D:Rarity"
 msgstr "稀有"
 
-#: crystals/200_dragginator/themes/default/egg.html:43
+#: crystals/200_dragginator/themes/default/egg.html:69
 msgid "D:You own this egg"
 msgstr "你拥有这个蛋"
 
-#: crystals/200_dragginator/themes/default/egg.html:46
+#: crystals/200_dragginator/themes/default/egg.html:72
 msgid "D:You don't own this egg"
 msgstr "你不拥有这个蛋"
 
-#: crystals/200_dragginator/themes/default/egg.html:60
+#: crystals/200_dragginator/themes/default/egg.html:86
 msgid "D:Send this egg to..."
 msgstr "把这个鸡蛋送到......"
 
-#: crystals/200_dragginator/themes/default/egg.html:63
+#: crystals/200_dragginator/themes/default/egg.html:89
 msgid "D:Sell this egg for BIS"
 msgstr "为BIS出售这个鸡蛋"
 
-#: crystals/200_dragginator/themes/default/egg.html:69
+#: crystals/200_dragginator/themes/default/egg.html:95
 msgid "D:Remove this egg from the marketplace"
 msgstr "从市场上取下这个鸡蛋"
 
@@ -740,6 +747,7 @@ msgid "EP:Get last GPU miner"
 msgstr "获得最后一位GPU矿工"
 
 #: crystals/210_eggpool/themes/default/about.html:16
+#: crystals/250_autogame/themes/default/about.html:15
 msgid "Join the Official Bismuth Discord for support"
 msgstr "加入官方Bismuth Discord寻求支持"
 
@@ -828,11 +836,11 @@ msgstr "为{} BIS买一个鸡蛋"
 msgid "D:You own {} eggs"
 msgstr "你有鸡蛋"
 
-#: crystals/200_dragginator/themes/default/egg.html:78
+#: crystals/200_dragginator/themes/default/egg.html:104
 msgid "D:Buy for {} BIS"
 msgstr "购买{} BIS"
 
-#: crystals/200_dragginator/themes/default/egg.html:65
+#: crystals/200_dragginator/themes/default/egg.html:91
 msgid "D:Price"
 msgstr "价钱"
 
@@ -856,15 +864,15 @@ msgstr "没有数据"
 msgid "This crystal is activated but needs a wallet restart."
 msgstr "此晶体已激活，但需要重新启动钱包。"
 
-#: modules/i18n.py:8 themes/material/wallet_info.html:219
+#: modules/i18n.py:8 themes/material/wallet_info.html:235
 msgid "No protection"
 msgstr "没有保护"
 
-#: modules/i18n.py:10 themes/material/wallet_info.html:216
+#: modules/i18n.py:10 themes/material/wallet_info.html:232
 msgid "PIN Code"
 msgstr "PIN码"
 
-#: modules/i18n.py:12 themes/material/wallet_info.html:217
+#: modules/i18n.py:12 themes/material/wallet_info.html:233
 msgid "YUBICO"
 msgstr "YUBICO"
 
@@ -884,7 +892,7 @@ msgstr "应用"
 msgid "Close"
 msgstr "关"
 
-#: themes/material/messages.html:15 wallet.py:604
+#: themes/material/messages.html:15 wallet.py:655
 msgid "Sign message"
 msgstr "签名消息"
 
@@ -895,8 +903,8 @@ msgstr "使用您的私钥为离线使用情况签署一些数据。"
 #: themes/material/messages.html:26
 #: themes/material/transactions_send_confirm.html:104
 #: themes/material/transactions_sendpop_confirm.html:91
-#: themes/material/wallet_info.html:202 themes/material/wallet_info.html:203
-#: wallet.py:237 wallet.py:274 wallet.py:617
+#: themes/material/wallet_info.html:218 themes/material/wallet_info.html:219
+#: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Spend protection"
 msgstr "花钱保护"
 
@@ -934,6 +942,7 @@ msgstr "复制到剪贴板"
 msgid "Send a transaction from a BIS URL"
 msgstr "从BIS URL发送交易"
 
+#: crystals/250_autogame/themes/default/about.html:21
 #: themes/material/transactions_send.html:110
 msgid "Paste the BIS URL you were given here"
 msgstr "粘贴您在此处提供的BIS URL"
@@ -978,60 +987,60 @@ msgstr "钱包被锁定了"
 msgid "Existing master password"
 msgstr "现有主密码"
 
-#: themes/material/wallet_info.html:78
+#: themes/material/wallet_info.html:79
 msgid "This is the password that protects your private key(s)"
 msgstr "这是保护您的私钥的密码"
 
-#: themes/material/wallet_info.html:92
+#: themes/material/wallet_info.html:95
 msgid "Wallet is unlocked"
 msgstr "钱包已解锁"
 
-#: themes/material/wallet_info.html:95
+#: themes/material/wallet_info.html:100
 msgid "You can lock it back for extra safety if you don't plan to use it soon."
 msgstr "如果您不打算尽快使用它，可以将其锁定以获得额外的安全性。"
 
-#: themes/material/wallet_info.html:125 themes/material/wallet_info.html:148
-#: themes/material/wallet_info.html:152 themes/material/wallet_info.html:227
+#: themes/material/wallet_info.html:137 themes/material/wallet_info.html:160
+#: themes/material/wallet_info.html:164 themes/material/wallet_info.html:244
 msgid "Master password"
 msgstr "主密码"
 
-#: themes/material/wallet_info.html:132
+#: themes/material/wallet_info.html:144
 msgid "Master password is set"
 msgstr "主密码已设置"
 
-#: themes/material/wallet_info.html:155
+#: themes/material/wallet_info.html:168
 msgid "This is the password that will protect your private keys."
 msgstr "这是保护您的私钥的密码。"
 
-#: themes/material/wallet_info.html:159
+#: themes/material/wallet_info.html:172
 msgid "Retype Master password"
 msgstr "重新输入主密码"
 
-#: themes/material/wallet_info.html:162
+#: themes/material/wallet_info.html:176
 msgid "Losing this password means loosing your keys!"
 msgstr "丢失此密码意味着丢失钥匙！"
 
-#: themes/material/wallet_info.html:170
+#: themes/material/wallet_info.html:186
 msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
 msgstr "这将加密您的钱包文件。您可能希望先备份未加密的文件。"
 
-#: themes/material/wallet_info.html:176
+#: themes/material/wallet_info.html:192
 msgid "Master password is not set"
 msgstr "未设置主密码"
 
-#: themes/material/wallet_info.html:218
+#: themes/material/wallet_info.html:234
 msgid "U2F TOKEN"
 msgstr "U2F TOKEN"
 
-#: themes/material/wallet_info.html:229
+#: themes/material/wallet_info.html:248
 msgid "Needed to confirm operation"
 msgstr "需要确认操作"
 
-#: themes/material/wallet_info.html:243
+#: themes/material/wallet_info.html:264
 msgid "Spending is currently not protected"
 msgstr "消费目前尚未受到保护"
 
-#: themes/material/wallet_info.html:245
+#: themes/material/wallet_info.html:266
 msgid "Spending is currently protected by {}"
 msgstr "消费目前受{}保护"
 
@@ -1047,7 +1056,8 @@ msgstr "您的钱包目录是{}"
 msgid "Your wallet is {}"
 msgstr "你的钱包是{}"
 
-#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:69
+#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:73
+#: themes/material/wallet_load.html:142
 msgid "Label"
 msgstr "标签"
 
@@ -1055,44 +1065,120 @@ msgstr "标签"
 msgid "Creation date"
 msgstr "创立日期"
 
-#: themes/material/wallet_load.html:71
+#: themes/material/wallet_load.html:75
 msgid "A private label for the new address"
 msgstr "新地址的私人标签"
 
-#: themes/material/wallet_load.html:76
+#: themes/material/wallet_load.html:80
 msgid "Create a new address"
 msgstr "创建一个新地址"
 
-#: themes/material/wallet_load.html:92
+#: themes/material/wallet_load.html:96
 msgid "Potential legacy wallet imports"
 msgstr "潜在的传统钱包进口"
 
-#: wallet.py:237 wallet.py:274 wallet.py:617
+#: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Invalid PIN Number"
 msgstr "PIN码无效"
 
-#: wallet.py:387 wallet.py:407 wallet.py:446 wallet.py:460 wallet.py:468
-#: wallet.py:483 wallet.py:494
+#: wallet.py:401 wallet.py:421 wallet.py:460 wallet.py:474 wallet.py:489
+#: wallet.py:497 wallet.py:512 wallet.py:523
 msgid "Error: {}"
 msgstr "错误：{}"
 
-#: wallet.py:437
+#: wallet.py:451
 msgid "Max of {} addresses reached."
 msgstr "达到最多{}个地址。"
 
-#: wallet.py:477
+#: wallet.py:506
 msgid "Passwords do not match"
 msgstr "密码不匹配"
 
-#: wallet.py:623
+#: wallet.py:674
 msgid "Your message '{}' has been signed."
 msgstr "您的邮件“{}”已签名。"
 
-#: wallet.py:625
+#: wallet.py:676
 msgid "Signature"
 msgstr "签名"
 
-#: wallet.py:629
+#: wallet.py:680
 msgid "This feature is under construction. "
 msgstr "此功能正在建设中。"
+
+#: crystals/200_dragginator/themes/default/egg.html:32
+msgid "D:draggon"
+msgstr "draggon"
+
+#: crystals/200_dragginator/themes/default/egg.html:33
+msgid "D:egg"
+msgstr "蛋"
+
+#: crystals/250_autogame/themes/default/about.html:14
+msgid "AG:Direct Link to latest autogame doc."
+msgstr "直接链接到最新的autogame文档。"
+
+#: crystals/250_autogame/themes/default/about.html:52
+msgid "AG:Your games"
+msgstr "你的游戏"
+
+#: crystals/250_autogame/themes/default/about.html:76
+msgid "AG:Game detail"
+msgstr "游戏细节"
+
+#: themes/material/wallet_info.html:85
+msgid "Unlock wallet"
+msgstr "解锁钱包"
+
+#: themes/material/wallet_info.html:106
+msgid "Lock wallet"
+msgstr "锁钱包"
+
+#: themes/material/wallet_info.html:110
+msgid "You have to encrypt your wallet first to use this feature"
+msgstr "您必须先加密您的钱包才能使用此功能"
+
+#: themes/material/wallet_info.html:183
+msgid "Set master password"
+msgstr "设置主密码"
+
+#: themes/material/wallet_info.html:254
+msgid "Set spend protection"
+msgstr "设置花费保护"
+
+#: crystals/250_autogame/themes/default/about.html:59
+msgid "Replay"
+msgstr "重播"
+
+#: crystals/250_autogame/themes/default/replay_pop.html:2
+msgid "AG:Game {} replay"
+msgstr "游戏{}重播"
+
+#: crystals/250_autogame/themes/default/status_pop.html:2
+msgid "AG:Game {} status"
+msgstr "游戏{}状态"
+
+#: modules/basehandlers.py:60
+msgid "Wallet server did not send an answer. Please try again."
+msgstr "电子钱包服务器没有发送答案。请再试一次。"
+
+#: themes/material/about_network.html:85
+msgid "Height"
+msgstr "高度"
+
+#: themes/material/about_network.html:85
+msgid "Load"
+msgstr "加载"
+
+#: themes/material/wallet_load.html:128
+msgid "Edit label"
+msgstr "编辑标签"
+
+#: themes/material/wallet_load.html:144
+msgid "A private label for that address"
+msgstr "该地址的私人标签"
+
+#: themes/material/wallet_load.html:152
+msgid "Set label"
+msgstr "设置标签"
 
