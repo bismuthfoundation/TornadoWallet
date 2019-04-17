@@ -61,6 +61,7 @@
                         <th>{{_("D:DNA")}}</th>
                         <th>{{_("D:Element")}}</th>
                         <th>{{_("D:Species")}}</th>
+                        <th>{{_("D:Class")}}</th>
 
                         </tr>
                       </thead>
@@ -71,8 +72,10 @@
                               {% end %}
                             <tr>
                                 <td><a href="egg/{{egg['dna']}}">{{egg["dna"]}}</a></td>
-                                <td>{{locale.translate("D:"+egg["type"] + " egg")}}</a></td>
-                                <td>{{locale.translate(egg["species"])}}</a></td>
+                                <td>{{_("D:"+egg["type"] + " egg")}}</td>
+                                <td>{{_(egg["species"])}}</td>
+                                <td>{{_("D:"+egg["status"])}}</td>
+                                
                             </tr>
                             {% end %}
                         </tr>

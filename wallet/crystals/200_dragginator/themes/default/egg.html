@@ -63,6 +63,7 @@
 
     <div class="col-lg-6 col-md-12">
         <div class="card">
+            
 
             {% if data['owner'] == bismuth['address'] %}
             <div class="card-header card-header-success">
@@ -89,7 +90,29 @@
                         <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:sell', '{{dna}}:*:'+$('#price').val())">{{ _("D:Sell this egg for BIS")}}</button>
                         <input class="form-control" id="price" type="text" placeholder="{{_('D:Price')}}" />
                         <!-- {{_('D:Price')}} -->
+                        
+                        
+                        {% if data["game_allowed"]%}
+                            {% if  data["hunt_data"] is None  %}
+                            <br><hr>
+                            <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:hunt', '{{dna}}')">{{ _("D:Register this egg to the hunt")}}</button>
 
+                            {% else %}
+                                
+                                {% import time %}
+                                {% if data["hunt_data"]["status"] == "1" or time.time()-float(data["hunt_data"]["timestamp"]) > 86400 %}
+                                    <br><hr>
+                                    <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:hatch', '{{dna}}')">{{ _("D:This egg can hatch")}}</button>
+                                {% elif data["hunt_data"]["status"] == "0" %}
+                                    <br><hr>
+                                    <a href="https://dragginator.com/help.php?help=6" target="_blank"><button class="btn btn-primary " >{{ _("D:You can find this egg")}}</button></a>
+                                    
+                                {% end %}
+                            {% end %}
+                            
+                        {% end %}
+                        
+                        
                         {% if "9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf" == data["seller"] %}
                         <br><hr>
                         <button class="btn btn-primary " onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', 0, 'dragg:unsell', '{{dna}}')">{{ _("D:Remove this egg from the marketplace")}}</button>
@@ -103,7 +126,12 @@
 
                         <button class="btn btn-primary" onclick="send('9ba0f8ca03439a8b4222b256a5f56f4f563f6d83755f525992fa5daf', {{ data['cost']}}, 'dragg:buy', '{{ dna }}')">{{_("D:Buy for {} BIS").format(data["cost"])}}</button>
                         {% end %}
-
+                        
+                        
+                        
+                        
+                        
+                        
 
                     </div>
                 </div>
