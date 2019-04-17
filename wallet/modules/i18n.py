@@ -19,7 +19,7 @@ LANGUAGES = OrderedDict(
     ("nl" , ['Dutch', 'nl']),
     ("no" , ['Norsk', 'no']),
     ("pl" , ['Polish', 'pl']),
-    ("pt-br" , ['Brazilian pt', 'br']),
+    ("br" , ['Brazilian pt', 'br']),
     ("ro" , ['Romanian', 'ro']),
     ("ru" , ['Russian', 'ru']),
     ("sr" , ['Serbian', 'sr']),

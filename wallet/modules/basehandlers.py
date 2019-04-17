@@ -60,6 +60,8 @@ class BaseHandler(RequestHandler):
         if 'blocks' not in self.bismuth_vars['server_status']:
             self.error = {"title": _("Error"), "message": _("Wallet server did not send an answer. Please try again.")}
             # print(self.bismuth_vars['server_status'])
+        if 'uptime_human' not in self.bismuth_vars['server_status']:
+            self.bismuth_vars['server_status']['uptime_human'] = 'NON COMPATIBLE SERVER'
         my_locale = self.get_user_locale_name()
         if not my_locale or my_locale == '*':
             my_locale = self.locale.code.split('_')[0]
@@ -79,7 +81,7 @@ class BaseHandler(RequestHandler):
             return locale.get(self.settings["lang"])
         user_lang = self.get_cookie("lang", False)
         if user_lang:
-            # print("Lang cookie to", user_lang)
+            print("Lang cookie to", user_lang)
             return locale.get(user_lang)
         # print("Lang False")
         return locale.get("en")
