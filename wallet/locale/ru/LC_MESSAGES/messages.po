@@ -30,7 +30,7 @@ msgstr "Python, высококлассный язык программирова
 #. if yes, we should leave "Tornado" in english?
 #: themes/material/about_credits.html:20
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "каркас веб-приложения <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Торнадо</a>"
+msgstr "фреймворк веб-приложения <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Торнадо</a>"
 
 #. About what? In Russian it would be necessary to add, e.g. About authors, About the software, etc... Об авторах, о программе
 #: crystals/100_bismuthprice/themes/default/about.html:23
@@ -47,7 +47,7 @@ msgstr "Версия кошелька Торнадо {}"
 #. by what from what? Example?
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr "Этa тема кошелька по умолчанию создана разработчиком {} ({})"
+msgstr "Стандартная тема кошелька создана разработчиком {} ({})"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
@@ -79,7 +79,7 @@ msgstr "Протокол"
 
 #: themes/material/about_network.html:27
 msgid "Node Version"
-msgstr "Версия нода"
+msgstr "Версия ноды"
 
 #: themes/material/about_network.html:28
 msgid "Peers connections:"
@@ -112,7 +112,7 @@ msgstr "Серверы"
 
 #: themes/material/about_network.html:88
 msgid "Refresh from API"
-msgstr "Обновить с помощью API"
+msgstr "Обновить"
 
 #. Bismuth? without translation?
 #: themes/material/base.html:43
@@ -190,7 +190,7 @@ msgstr "Картинки"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "Кристаллы - это дополнительные функции, которые вы можете добавить к своему кошельку"
+msgstr "Кристаллы - это расширенный функционал кошелька, доступный для использования"
 
 #. Is that Work in progress? then "В разработке..."
 #: crystals/100_bismuthprice/themes/default/about.html:15
@@ -221,12 +221,12 @@ msgstr "Запросить оплату в $ BIS"
 
 #: themes/material/home.html:74 themes/material/transactions.html:73
 msgid "Latest transactions"
-msgstr "Последние транзакции"
+msgstr "Последние переводы"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 #: themes/material/wallet_load.html:37
 msgid "Updated on"
-msgstr "Дата последнего обнавления"
+msgstr "Дата последнего обновления"
 
 #: themes/material/home.html:80 themes/material/transactions.html:80
 msgid "Date"
@@ -248,7 +248,7 @@ msgstr "Сумма"
 #. What is type here? Verb, noun? To type smth on a keyboard... or different species?
 #: themes/material/home.html:83 themes/material/transactions.html:83
 msgid "Type"
-msgstr "Тип транзакции"
+msgstr "Тип"
 
 #: themes/material/home.html:150
 msgid "Bismuth news"
@@ -260,7 +260,7 @@ msgstr "Bismuth к Доллару США"
 
 #: crystals/100_bismuthprice/themes/default/modules/home.html:33
 msgid "This is a mockup with fake data"
-msgstr "Это образец с выдуманными данными"
+msgstr "Это фейковый макет"
 
 #: themes/material/home.html:136
 msgid "Account balance"
@@ -272,7 +272,7 @@ msgstr "Последние 12 месяцев"
 
 #: themes/material/home.html:141
 msgid "Mockup with fake data"
-msgstr "Образец с выдуманными данными"
+msgstr "Фейковый макет"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
@@ -281,12 +281,12 @@ msgstr "Предыдущая страница"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "Токены являются основной функциональностью BIS"
+msgstr "Токены - это базовая функция BIS"
 
 #: themes/material/transactions_send.html:15
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
-msgstr "Отправить на этот адрес"
+msgstr "Отправить на адрес:"
 
 #: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:29
@@ -311,19 +311,19 @@ msgstr "Данные (сообщение)"
 #: themes/material/transactions_send_confirm.html:43
 #: themes/material/transactions_sendpop_confirm.html:73
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции. Требуется для отправки средств на биржи."
+msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции. Требуется для отправки монет на биржи."
 
 #: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr "Колличество BIS для отправки."
+msgstr "Количество BIS для отправки."
 
 #: themes/material/transactions_receive.html:53
 #: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:62
 #: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
-msgstr "Колличество (BIS)."
+msgstr "Количество (BIS)."
 
 #: themes/material/transactions_receive.html:61
 #: themes/material/transactions_send.html:66
@@ -388,7 +388,7 @@ msgstr "Эта функция в разработке."
 
 #: main.py:243 wallet.py:326
 msgid "Transaction list"
-msgstr "Список транзакций"
+msgstr "История переводов"
 
 #: main.py:203 main.py:315 main.py:324 modules/basehandlers.py:60
 #: wallet.py:264 wallet.py:375 wallet.py:401 wallet.py:415 wallet.py:421
@@ -427,15 +427,15 @@ msgstr "Ваш адрес"
 
 #: themes/material/transactions_receive.html:22
 msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "Это адрес Вашего текущего кошелька, но Вы можете изменить его при необходимости. Затем перепроверьте."
+msgstr "Это адрес Вашего текущего кошелька, но Вы можете изменить, если нужно. Дважды перепроверьте."
 
 #: themes/material/transactions_receive.html:30
 msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции, например, собственную ссылку. Будет храниться в блокчейн."
+msgstr "При желании Вы можете добавить небольшой комментарий к Вашей транзакции, например, собственную ссылку. Он будет храниться в блокчейне."
 
 #: themes/material/transactions_receive.html:35
 msgid "This is the QR code for your address only."
-msgstr "Это QR код для адреса Вашего кошелька"
+msgstr "Это QR код адреса Вашего кошелька"
 
 #: themes/material/transactions_receive.html:47
 msgid "How many BIS to request."
@@ -451,7 +451,7 @@ msgstr "Сумма, которую Вы получите"
 #: themes/material/transactions_send_confirm.html:72
 #: themes/material/transactions_sendpop_confirm.html:48
 msgid "Fees depend on Data length"
-msgstr "Комиссия зависит от длины поля \"Данные\""
+msgstr "Комиссия зависит от количества символов в поле \"Данные\""
 
 #: themes/material/transactions_receive.html:68
 msgid "This is what the sender will pay"
@@ -463,7 +463,7 @@ msgstr "Получить BIS URL"
 
 #: themes/material/transactions_receive.html:78
 msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "Это QR код для полной BIS URL включая адрес Вашего кошелька и запрашиваемой суммы"
+msgstr "Это QR-код ссылки, содержащей адрес кошелька, сообщения и суммы BIS"
 
 #: themes/material/transactions_receive.html:79
 msgid "You can copy/paste this image to send in a mail or anything"
@@ -473,7 +473,7 @@ msgstr "Вы можете скопировать и вставить это из
 #: themes/material/transactions_send_confirm.html:65
 #: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
-msgstr "Сумма, которую получит получатель"
+msgstr "Сумма, которую получит адресат"
 
 #. would you say "fee" would be :
 #. a) network charge
@@ -483,7 +483,7 @@ msgstr "Сумма, которую получит получатель"
 #: themes/material/transactions_send_confirm.html:77
 #: themes/material/transactions_sendpop_confirm.html:54
 msgid "This is what you will pay, fees included."
-msgstr "Сумма к оплате, включая комиссию за транзакцию"
+msgstr "Сумма к оплате, включая комиссию за перевод"
 
 #: themes/material/wallet_load.html:45 themes/material/wallet_load.html:102
 msgid "Action"
@@ -491,7 +491,7 @@ msgstr "Действие"
 
 #: themes/material/about_credits.html:52
 msgid "Translations"
-msgstr "Перевод"
+msgstr "Переводы"
 
 #: themes/material/transactions_send_confirm.html:117
 #: themes/material/transactions_sendpop_confirm.html:103
@@ -510,11 +510,11 @@ msgstr "Отправить BIS: Подтверждение"
 
 #: main.py:146 main.py:174 wallet.py:163 wallet.py:192 wallet.py:214
 msgid "Please confirm this transaction"
-msgstr "Пожалуйста, подтвердите эту транзакцию"
+msgstr "Пожалуйста, подтвердите этот перевод"
 
 #: main.py:147 main.py:175 wallet.py:164 wallet.py:193 wallet.py:215
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Убедитесь в том, что Вы намерены сделать, и нажмите кнопку \"Подтвердить\"."
+msgstr "Если уверены в вашем в действии, нажмите кнопку \"Подтвердить\"."
 
 #: main.py:227 wallet.py:309
 msgid "Receive BIS"
@@ -522,11 +522,11 @@ msgstr "Получить BIS"
 
 #: themes/material/about_credits.html:36
 msgid "Wallet template {} by {}."
-msgstr "Шаблон кошелька {} (автор {})"
+msgstr "Тема оформления кошелька {} (автор {})"
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr "Большое спасибо нашим переводчикам и корректорам"
+msgstr "Выражаем благодарность нашим переводчикам и корректорам"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
@@ -545,7 +545,7 @@ msgstr "BIS URL"
 
 #: themes/material/wallet_load.html:16
 msgid "Your Bismuth wallets"
-msgstr "Ваш Bismuth кошелек"
+msgstr "Ваши Bismuth кошельки"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallets directory is {}"
@@ -579,7 +579,7 @@ msgstr "Зашифрованный кошелек"
 #: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
 #: wallet.py:274 wallet.py:306 wallet.py:375 wallet.py:415 wallet.py:661
 msgid "You have to unlock your wallet first"
-msgstr "Вы должны сначала разблокировать свой кошелек"
+msgstr "Сначала разблокируйте ваш кошелек"
 
 #: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Success:"
@@ -587,11 +587,11 @@ msgstr "Получилось:"
 
 #: main.py:193 main.py:216 wallet.py:254 wallet.py:291
 msgid "Transaction sent"
-msgstr "Транзакция отправлена"
+msgstr "Перевод совершен"
 
 #: main.py:194 main.py:217 wallet.py:255 wallet.py:292
 msgid "The transaction was submitted to the mempool."
-msgstr "Транзакция размещена в блокчейн"
+msgstr "Информация о переводе записана в блокчейн"
 
 #: main.py:196 main.py:219 wallet.py:257 wallet.py:294
 msgid "Txid is {}"
@@ -600,12 +600,12 @@ msgstr "Txid Вашей транзакции: {}"
 #. To Anykayebuka: транзакция не была размещена в блокчейн vs транзакция не была отправлена. The 1st case there may give a wrong impression that the money is gone, but didn't reach the blockchain, while in the 2nd case it's clear that nothing happened. Money is safe. What do you think?
 #: main.py:201 main.py:221 wallet.py:262 wallet.py:296
 msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr "Произошла ошибка, транзакция не была отправлена в блокчейн"
+msgstr "Произошла ошибка с записью в блокчейн, перевод не был совершен"
 
 #: crystals/200_dragginator/themes/default/about.html:89
 #: modules/basehandlers.py:55
 msgid "No Bismuth address, please create or load a wallet first."
-msgstr "Bismuth адрес не найден, пожалуйста сначала создайте или зазгрузите кошелёк"
+msgstr "Bismuth адрес не найден. Сначала создайте или загрузите кошелёк"
 
 #: themes/material/base.html:95 themes/material/crystals_list.html:11
 msgid "Crystals"
@@ -613,12 +613,11 @@ msgstr "Кристаллы"
 
 #: themes/material/base.html:131
 msgid "Search..."
-msgstr "\n"
-"Поиск"
+msgstr "Поиск..."
 
 #: themes/material/crystals_list.html:12
 msgid "Crystals are extra functionalities you can add to your wallet"
-msgstr "Кристаллы - это дополнительные функции, которые вы можете добавить в свой кошелек"
+msgstr "Кристаллы - это дополнительные функции, которые вы можете использовать в своем кошельке"
 
 #: crystals/100_bismuthprice/themes/default/about.html:11
 #: crystals/100_bismuthprice/themes/default/modules/home.html:16
@@ -633,8 +632,7 @@ msgstr "Версия"
 
 #: crystals/100_bismuthprice/themes/default/modules/home.html:4
 msgid "Current Bismuth Prices"
-msgstr "\n"
-"Текущие цены на Bismuth"
+msgstr "Текущие цены на Bismuth"
 
 #: crystals/200_dragginator/themes/default/egg.html:20
 msgid "BIS"
@@ -646,7 +644,7 @@ msgstr "Успех"
 
 #: themes/material/transactions_confirmpop.html:10
 msgid "Confirm Transaction"
-msgstr "Подтвердите транзакцию"
+msgstr "Подтвердите перевод"
 
 #: themes/material/transactions_send.html:36
 #: themes/material/transactions_sendpop_confirm.html:61
@@ -703,7 +701,7 @@ msgstr "Мои яйца"
 
 #: crystals/200_dragginator/themes/default/about.html:47
 msgid "D:And you are registered to the current eggdrop"
-msgstr "И вы зарегистрированы на следующую раздачу яиц"
+msgstr "Вы зарегистрированы на текущую бесплатную раздачу яиц"
 
 #: crystals/200_dragginator/themes/default/about.html:49
 #: crystals/250_autogame/themes/default/about.html:23
@@ -712,7 +710,7 @@ msgstr "Зарегистрироваться"
 
 #: crystals/200_dragginator/themes/default/about.html:49
 msgid "D:So you can register to the eggdrop!"
-msgstr "Вы можете зарегистрироваться на раздачу яиц"
+msgstr "Вы можете зарегистрироваться на бесплатную раздачу яиц"
 
 #: crystals/200_dragginator/themes/default/about.html:61
 msgid "D:DNA"
@@ -750,11 +748,11 @@ msgstr "Редкость"
 
 #: crystals/200_dragginator/themes/default/egg.html:69
 msgid "D:You own this egg"
-msgstr "Это яйцо принадлежит вам"
+msgstr "Это ваше яйцо"
 
 #: crystals/200_dragginator/themes/default/egg.html:72
 msgid "D:You don't own this egg"
-msgstr "Это яйцо вам не принадлежит"
+msgstr "Это не ваше яйцо"
 
 #: crystals/200_dragginator/themes/default/egg.html:86
 msgid "D:Send this egg to..."
@@ -766,7 +764,7 @@ msgstr "Продать это яйцо за BIS"
 
 #: crystals/200_dragginator/themes/default/egg.html:95
 msgid "D:Remove this egg from the marketplace"
-msgstr "Снять это яйцо с продажи на рынке"
+msgstr "Снять это яйцо с продажи"
 
 #: crystals/210_eggpool/themes/default/about.html:14
 msgid "EP:Direct Link to official Dashboard"
@@ -779,7 +777,7 @@ msgstr "Скачать последнюю версию GPU майнера"
 #: crystals/210_eggpool/themes/default/about.html:16
 #: crystals/250_autogame/themes/default/about.html:15
 msgid "Join the Official Bismuth Discord for support"
-msgstr "Присоединяйтесь к Официальному каналу на Дискорде для технической поддержки"
+msgstr "Присоединяйтесь к Официальному каналу на Дискорде для получения технической поддержки"
 
 #. may be worth leaving as "Hash Rate"
 #: crystals/210_eggpool/themes/default/about.html:48
@@ -797,7 +795,7 @@ msgstr "Акции"
 
 #: crystals/210_eggpool/themes/default/about.html:73
 msgid "EP:Workers"
-msgstr "Ферма"
+msgstr "Фермы"
 
 #: modules/i18n.py:22
 msgid "DT:Processing..."
@@ -810,19 +808,20 @@ msgstr "Поиск&nbsp;..."
 
 #: modules/i18n.py:24
 msgid "DT:Display _MENU_ elements"
-msgstr "Показать меню"
+msgstr "Показать элементы _Menu_"
 
+#. is it real text or piece of code?
 #: modules/i18n.py:25
 msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
-msgstr "Display element _START_ to _END_ from _TOTAL_ elements"
+msgstr "Показать элемент _START_ до _END_ из _TOTAL_ элементов"
 
 #: modules/i18n.py:26 modules/i18n.py:30
 msgid "DT:Nothing to display"
-msgstr "Данные отсустсвуют"
+msgstr "Данные отсутствуют"
 
 #: modules/i18n.py:27
 msgid "DT:filtered from _MAX_ total elements"
-msgstr "filtered from _MAX_ total elements"
+msgstr "Результаты фильтра:"
 
 #: modules/i18n.py:29
 msgid "DT:Loading..."
@@ -879,7 +878,7 @@ msgstr "Цена"
 
 #: themes/material/transactions_confirmpop.html:7
 msgid "Transaction Status"
-msgstr "Статус транзакции"
+msgstr "Статус перевода"
 
 #: themes/material/transactions_confirmpop.html:23
 msgid "OK"
@@ -887,20 +886,19 @@ msgstr "OK"
 
 #: themes/material/transactions_send.html:38
 msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
-msgstr "\"операции\" используются для особых функций Bismuth. Для обычных транзакций это поле должно оставаться пустым. Используйте его только если Вы знаете что делаете."
+msgstr "\"операции\" используются для дополнительных функций Bismuth. Для обычных транзакций это поле должно оставаться пустым. Используйте его, если только знаете, что делаете."
 
 #: crystals/210_eggpool/__init__.py:68
 msgid "No data"
-msgstr "\n"
-"Нет данных"
+msgstr "Нет данных"
 
 #: crystals/210_eggpool/__init__.py:85
 msgid "This crystal is activated but needs a wallet restart."
-msgstr "Этот кристалл активирован, но нуждается в перезагрузке кошелька."
+msgstr "Этот кристалл активирован, но требуется перезагрузка кошелька."
 
 #: modules/i18n.py:8 themes/material/wallet_info.html:235
 msgid "No protection"
-msgstr "Нет защиты"
+msgstr "Без защиты"
 
 #: modules/i18n.py:10 themes/material/wallet_info.html:232
 msgid "PIN Code"
@@ -913,7 +911,7 @@ msgstr "YUBICO"
 
 #: modules/i18n.py:14
 msgid "U2F Token"
-msgstr "U2F Token"
+msgstr "ключ U2F"
 
 #: themes/material/base.html:117
 msgid "Wallet info"
@@ -933,7 +931,7 @@ msgstr "Подпишите сообщение"
 
 #: themes/material/messages.html:16
 msgid "Sign some data for off chain usage with your private key."
-msgstr "Подпишите некоторые данные для использования вне цепочки с вашим закрытым ключом."
+msgstr "Подпишите данные с помощью приватного ключа для их передачи вне блокчейна (иными способами)"
 
 #: themes/material/messages.html:26
 #: themes/material/transactions_send_confirm.html:104
@@ -941,7 +939,7 @@ msgstr "Подпишите некоторые данные для использ
 #: themes/material/wallet_info.html:218 themes/material/wallet_info.html:219
 #: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Spend protection"
-msgstr "Spend protection"
+msgstr "Ограничить расходы"
 
 #: themes/material/messages.html:37
 msgid "Sign Message"
@@ -952,14 +950,14 @@ msgstr "\n"
 msgid "Encrypt message"
 msgstr "Зашифровать сообщение"
 
+#. What does it mean "off chain usage"?
 #: themes/material/messages.html:53
 msgid "Encrypt data for off chain usage."
-msgstr "Зашифровать данные для использования вне цепи"
+msgstr "Зашифровать данные для их передачи вне блокчейна (иными способами)"
 
 #: themes/material/messages.html:63
 msgid "You have to tell the recipient address so the message can be encrypted with his public key"
-msgstr "\n"
-"Вы должны указать адрес получателя, чтобы сообщение могло быть зашифровано его открытым ключом"
+msgstr "Вы должны указать адрес получателя, чтобы сообщение могло быть зашифровано его открытым ключом"
 
 #: themes/material/messages.html:67
 msgid "Encrypt Message"
@@ -968,13 +966,12 @@ msgstr "Зашифровать сообщение"
 #: themes/material/messages_pop.html:24
 #: themes/material/transactions_receive.html:81
 msgid "Click text to copy"
-msgstr "\n"
-"Нажмите на текст, чтобы скопировать"
+msgstr "Нажмите на текст, чтобы скопировать "
 
 #: themes/material/messages_pop.html:34
 #: themes/material/transactions_receive.html:84
 msgid "Copied to Clipboard"
-msgstr "Copied to Clipboard"
+msgstr "Скопировано в буфер обмена"
 
 #: themes/material/transactions_send.html:103
 msgid "Send a transaction from a BIS URL"
@@ -983,7 +980,7 @@ msgstr "Отправить транзакцию с BIS URL"
 #: crystals/250_autogame/themes/default/about.html:21
 #: themes/material/transactions_send.html:110
 msgid "Paste the BIS URL you were given here"
-msgstr "Вставьте URL BIS, который вы дали здесь"
+msgstr "Вставьте URL BIS, который вам дали"
 
 #: themes/material/transactions_send.html:117
 msgid "Decode BIS URL"
@@ -1025,9 +1022,10 @@ msgstr "Кошелек заблокирован"
 msgid "Existing master password"
 msgstr "Существующий мастер-пароль"
 
+#. https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%81_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%BC_%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%BC
 #: themes/material/wallet_info.html:79
 msgid "This is the password that protects your private key(s)"
-msgstr "Это пароль, который защищает ваш закрытый ключ (ы)"
+msgstr "Это пароль, который защищает ваш(и) закрытый(е) ключ(и)"
 
 #: themes/material/wallet_info.html:95
 msgid "Wallet is unlocked"
@@ -1048,7 +1046,7 @@ msgstr "Мастер-пароль установлен"
 
 #: themes/material/wallet_info.html:168
 msgid "This is the password that will protect your private keys."
-msgstr "Это пароль, который будет защищать ваши личные ключи."
+msgstr "Это пароль, который будет защищать ваши закрытые ключи."
 
 #: themes/material/wallet_info.html:172
 msgid "Retype Master password"
@@ -1061,7 +1059,7 @@ msgstr "Потеря этого пароля означает потерю ва�
 #. changed "you may want to" to " recommended" to make sense
 #: themes/material/wallet_info.html:186
 msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
-msgstr "Это зашифрует ваш файл кошелька. Рекомендуется сначала сделать резервную копию незашифрованного файла."
+msgstr "Файл вашего кошелька будет зашифрован. Рекомендуем сделать резервную копию незашифрованного файла."
 
 #: themes/material/wallet_info.html:192
 msgid "Master password is not set"
@@ -1069,7 +1067,7 @@ msgstr "Мастер-пароль не установлен"
 
 #: themes/material/wallet_info.html:234
 msgid "U2F TOKEN"
-msgstr "U2F TOKEN"
+msgstr "U2F ключ"
 
 #: themes/material/wallet_info.html:248
 msgid "Needed to confirm operation"
@@ -1077,11 +1075,12 @@ msgstr "Необходимо подтвердить операцию"
 
 #: themes/material/wallet_info.html:264
 msgid "Spending is currently not protected"
-msgstr "Расходы в настоящее время не защищены"
+msgstr "Защита от сомнительных операций не установлена"
 
+#. What kind of info will be in {}. Please example.
 #: themes/material/wallet_info.html:266
 msgid "Spending is currently protected by {}"
-msgstr "Расходы в настоящее время защищены"
+msgstr "Защита от сомнительных операций установлена {}"
 
 #: themes/material/wallet_load.html:16 themes/material/wallet_load.html:36
 msgid "Your Bismuth addresses"
@@ -1089,11 +1088,11 @@ msgstr "Ваши адреса BISMUTH"
 
 #: themes/material/wallet_load.html:20
 msgid "Your wallet directory is {}"
-msgstr "Your wallet directory is {}"
+msgstr "Директория вашего кошелька - {}"
 
 #: themes/material/wallet_load.html:21
 msgid "Your wallet is {}"
-msgstr "Ваш кошелек"
+msgstr "Ваш кошелек - {}"
 
 #: themes/material/wallet_load.html:42 themes/material/wallet_load.html:73
 #: themes/material/wallet_load.html:142
@@ -1106,7 +1105,7 @@ msgstr "Дата создания"
 
 #: themes/material/wallet_load.html:75
 msgid "A private label for the new address"
-msgstr "Частный ярлык для нового адреса"
+msgstr "Приватный ярлык нового адреса"
 
 #: themes/material/wallet_load.html:80
 msgid "Create a new address"
@@ -1114,7 +1113,7 @@ msgstr "Создать новый адрес"
 
 #: themes/material/wallet_load.html:96
 msgid "Potential legacy wallet imports"
-msgstr "Потенциальный импорт старых кошельков"
+msgstr "Для импорта найдены устаревшие кошельки"
 
 #: wallet.py:244 wallet.py:281 wallet.py:668
 msgid "Invalid PIN Number"
@@ -1127,7 +1126,7 @@ msgstr "Ошибка: {}"
 
 #: wallet.py:451
 msgid "Max of {} addresses reached."
-msgstr "Max of {} addresses reached."
+msgstr "Достигнут максимум {} адресов."
 
 #: wallet.py:506
 msgid "Passwords do not match"
@@ -1145,9 +1144,10 @@ msgstr "Подпись"
 msgid "This feature is under construction. "
 msgstr "Эта функция находится в стадии разработки"
 
+#. is it an dragon or what?
 #: crystals/200_dragginator/themes/default/egg.html:32
 msgid "D:draggon"
-msgstr "draggon"
+msgstr "дракон"
 
 #: crystals/200_dragginator/themes/default/egg.html:33
 msgid "D:egg"
@@ -1171,7 +1171,7 @@ msgstr "Разблокировать кошелек"
 
 #: themes/material/wallet_info.html:106
 msgid "Lock wallet"
-msgstr "заблокировать кошелек"
+msgstr "Заблокировать кошелек"
 
 #: themes/material/wallet_info.html:110
 msgid "You have to encrypt your wallet first to use this feature"
@@ -1183,31 +1183,32 @@ msgstr "Установить мастер-пароль"
 
 #: themes/material/wallet_info.html:254
 msgid "Set spend protection"
-msgstr "Установить защиту расходов"
+msgstr "Установить защиту от сомнительных операций"
 
 #: crystals/250_autogame/themes/default/about.html:59
 msgid "Replay"
 msgstr "Повтор"
 
+#. What kind of information will be in {}?  Please some examples.
 #: crystals/250_autogame/themes/default/replay_pop.html:2
 msgid "AG:Game {} replay"
-msgstr "Повтор игры"
+msgstr "Повтор игры {}"
 
 #: crystals/250_autogame/themes/default/status_pop.html:2
 msgid "AG:Game {} status"
-msgstr "Статус {} игры"
+msgstr "Статус игры {}"
 
 #: modules/basehandlers.py:60
 msgid "Wallet server did not send an answer. Please try again."
-msgstr "Сервер кошелька не отправил ответ. Пожалуйста, попробуйте еще раз."
+msgstr "Сервер кошелька не ответил. Пожалуйста, попробуйте еще раз."
 
 #: themes/material/about_network.html:85
 msgid "Height"
-msgstr "Рост"
+msgstr "Высоты блока"
 
 #: themes/material/about_network.html:85
 msgid "Load"
-msgstr "загрузить"
+msgstr "Загрузить"
 
 #: themes/material/wallet_load.html:128
 msgid "Edit label"
@@ -1215,9 +1216,9 @@ msgstr "Изменить ярлык"
 
 #: themes/material/wallet_load.html:144
 msgid "A private label for that address"
-msgstr "Частный ярлык для этого адреса"
+msgstr "Приватный ярлык для этого адреса"
 
 #: themes/material/wallet_load.html:152
 msgid "Set label"
-msgstr "создать ярлык"
+msgstr "Создать ярлык"
 
