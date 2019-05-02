@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -42,7 +42,7 @@ define("debug", default=False, help="debug mode", type=bool)
 define("verbose", default=False, help="verbose mode", type=bool)
 define("theme", default='themes/material', help="theme directory, relative to the app", type=str)
 define("server", default='', help="Force a specific wallet server (ip:port)", type=str)
-define("crystals", default=True, help="Load Crystals (Experimental)", type=bool)
+define("crystals", default=True, help="Load Crystals", type=bool)
 define("lang", default='', help="Force a language: en,nl,ru...", type=str)
 
 
@@ -741,11 +741,13 @@ def port_in_use(port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(1)
     result = sock.connect_ex(('127.0.0.1', port))
+    print(result)
     return result == 0
 
 
 if __name__ == "__main__":
-    if port_in_use(options.port):
+    if False:  # port_in_use(options.port):
+        print("Port {} is in use, opening url".format(options.port))
         open_url("http://127.0.0.1:{}".format(options.port))
     else:
         # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/

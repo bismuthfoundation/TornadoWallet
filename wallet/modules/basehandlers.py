@@ -6,6 +6,7 @@ from tornado import locale
 from tornado.web import RequestHandler
 from tornado.template import Loader, Template
 from os import path
+from time import time
 from modules.i18n import get_spend_type, get_flag_from_locale, get_label_from_locale, get_locales_list
 
 
@@ -37,6 +38,7 @@ class BaseHandler(RequestHandler):
         self.settings["page_title"] = self.settings["app_title"]
         self.bismuth_vars['server'] = self.bismuth.info()
         self.bismuth_vars['server_status'] = self.bismuth.status()
+        print('status', self.bismuth.status())
         self.bismuth_vars['balance'] = self.bismuth.balance(for_display=True)
         self.bismuth_vars['address'] = self.bismuth._wallet.info()['address']  # self.bismuth_vars['server']['address']
         self.bismuth_vars['params'] = {}
