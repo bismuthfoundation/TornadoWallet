@@ -1116,77 +1116,78 @@ msgstr "Na této funkci se pracuje"
 
 #: crystals/200_dragginator/themes/default/egg.html:32
 msgid "D:draggon"
-msgstr "draggon"
+msgstr "drak"
 
 #: crystals/200_dragginator/themes/default/egg.html:33
 msgid "D:egg"
-msgstr "egg"
+msgstr "vejce"
 
 #: crystals/250_autogame/themes/default/about.html:14
 msgid "AG:Direct Link to latest autogame doc."
-msgstr "Direct Link to latest autogame doc."
+msgstr "Přímý odkaz na nejnovější dokumentaci k Autogame"
 
 #: crystals/250_autogame/themes/default/about.html:52
 msgid "AG:Your games"
-msgstr "Your games"
+msgstr "Vaše hry"
 
 #: crystals/250_autogame/themes/default/about.html:76
 msgid "AG:Game detail"
-msgstr "Game detail"
+msgstr "Herní podrobnosti"
 
 #: themes/material/wallet_info.html:85
 msgid "Unlock wallet"
-msgstr "Unlock wallet"
+msgstr "Odeknout peněženku"
 
 #: themes/material/wallet_info.html:106
 msgid "Lock wallet"
-msgstr "Lock wallet"
+msgstr "Uzamknout peněženku"
 
 #: themes/material/wallet_info.html:110
 msgid "You have to encrypt your wallet first to use this feature"
-msgstr "You have to encrypt your wallet first to use this feature"
+msgstr "Pokud chcete vidět tuto funkci, musíte nejdříve peněženku odemknout"
 
 #: themes/material/wallet_info.html:183
 msgid "Set master password"
-msgstr "Set master password"
+msgstr "Určit hlavní heslo"
 
 #: themes/material/wallet_info.html:254
 msgid "Set spend protection"
-msgstr "Set spend protection"
+msgstr "Nastavit limit utrácení"
 
 #: crystals/250_autogame/themes/default/about.html:59
 msgid "Replay"
-msgstr "Replay"
+msgstr "Přehrát"
 
 #: crystals/250_autogame/themes/default/replay_pop.html:2
 msgid "AG:Game {} replay"
-msgstr "Game {} replay"
+msgstr "Záznam hry {}"
 
 #: crystals/250_autogame/themes/default/status_pop.html:2
 msgid "AG:Game {} status"
-msgstr "Game {} status"
+msgstr "Stav hry {}"
 
 #: modules/basehandlers.py:60
 msgid "Wallet server did not send an answer. Please try again."
-msgstr "Wallet server did not send an answer. Please try again."
+msgstr "Sever peněženky neodpověděl. Prosím zkuste to později."
 
+#. I assume block height is meant. Translators beware.
 #: themes/material/about_network.html:85
 msgid "Height"
-msgstr "Height"
+msgstr "Číslo bloku"
 
 #: themes/material/about_network.html:85
 msgid "Load"
-msgstr "Load"
+msgstr "Zatížení"
 
 #: themes/material/wallet_load.html:128
 msgid "Edit label"
-msgstr "Edit label"
+msgstr "Upravit popisek"
 
 #: themes/material/wallet_load.html:144
 msgid "A private label for that address"
-msgstr "A private label for that address"
+msgstr "Soukromé označení této adresy"
 
 #: themes/material/wallet_load.html:152
 msgid "Set label"
-msgstr "Set label"
+msgstr "Nastavit označení"
 
