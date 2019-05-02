@@ -378,23 +378,18 @@ class WalletHandler(BaseHandler):
         _ = self.locale.translate
         if self.bismuth._wallet._locked:
             self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
-        if not params:
-            wallet_dir = helpers.get_private_dir()
-            # This lists the old style wallets
-            wallets = self.bismuth.list_wallets(wallet_dir)
-            # TODO: fix private access
-            addresses = self.bismuth._wallet._addresses
-            self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars, wallet_dir=wallet_dir,
-                        addresses=addresses)
-        else:
-            """
-            # load a wallet
-            file_name = '/'.join(params)
-            self.bismuth.load_wallet(file_name)
-            # TODO: store as cookie
-            self.set_cookie('wallet', file_name)
-            """
-            self.redirect("/wallet/load")
+        global_balance = _('Click')
+        if 'global' in params:
+            # Ask the global balance
+            global_balance = self.bismuth.global_balance(for_display=True)
+        wallet_dir = helpers.get_private_dir()
+        # This lists the old style wallets
+        wallets = self.bismuth.list_wallets(wallet_dir)
+        # TODO: fix private access
+        addresses = self.bismuth._wallet._addresses
+        self.render("wallet_load.html", wallets=wallets, bismuth=self.bismuth_vars, wallet_dir=wallet_dir,
+                    global_balance=global_balance, addresses=addresses)
+
 
     async def load_address(self, params=None, post=False):
         """Set an address from the multiwallet as current address"""
