@@ -456,6 +456,13 @@ function confirmtx(address, data, amount, operation, token){
             $("#set_label_btn").prop("disabled",true);
         });
 
+        $("#waitform").on('submit', function() {
+            $(".content").css({"cursor":"wait"});
+            $("#btn_submit").css({"cursor":"wait"});
+            $("#btn_submit").prop("disabled",true);
+        });
+
+
         $("#amount").on('keyup paste', fees_calc);
         $("#data").on('keyup paste', fees_calc);
 
@@ -643,6 +650,9 @@ function confirmtx(address, data, amount, operation, token){
             document.execCommand('copy');
             $(".copied").show().fadeOut(2500);
         });
+
+
+
     });
 
 </script>

@@ -186,7 +186,7 @@ class TransactionsHandler(BaseHandler):
             self.message(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
             return
         if self.get_argument('url', False):
-            print("url", self.get_argument('url'))
+            # print("url", self.get_argument('url'))
             # We have an url param, confirm once decoded
             self.settings["page_title"] = _("Send BIS: Confirmation")
             type='warning'  # Do not translate
@@ -198,7 +198,7 @@ class TransactionsHandler(BaseHandler):
                 self.message_pop(_("Error:") , _(decoded['Error']),
                                  "warning")
                 return
-            print(decoded)
+            # print(decoded)
             self.bismuth_vars['params']['recipient'] = decoded['recipient']
             self.bismuth_vars['params']['amount'] = decoded['amount']
             self.bismuth_vars['params']['operation'] = decoded['operation']
@@ -240,7 +240,7 @@ class TransactionsHandler(BaseHandler):
         # check spend protection
         # TODO: add more methods
         if self.bismuth.wallet()['spend']['type'] == 'PIN':
-            print(spend_token, self.bismuth.wallet()['spend'])
+            # print(spend_token, self.bismuth.wallet()['spend'])
             if spend_token != self.bismuth.wallet()['spend']['value']:
                 self.message_pop(_("Error:") + " " + _("Spend protection"), _("Invalid PIN Number"),
                                  "warning")
@@ -250,7 +250,7 @@ class TransactionsHandler(BaseHandler):
         data = self.get_argument("data", '')
         operation = self.get_argument("operation", '')
         txid = self.bismuth.send(recipient, amount, operation, data)
-        print("txidpop", txid)
+        # print("txidpop", txid)
         if txid:
             message = _("Success:") + " " + _("Transaction sent") + "<br>" +\
                          _("The transaction was submitted to the mempool.")\
@@ -277,7 +277,7 @@ class TransactionsHandler(BaseHandler):
         # check spend protection
         # TODO: add more methods
         if self.bismuth.wallet()['spend']['type'] == 'PIN':
-            print(spend_token, self.bismuth.wallet()['spend'])
+            # print(spend_token, self.bismuth.wallet()['spend'])
             if spend_token != self.bismuth.wallet()['spend']['value']:
                 self.message_pop(_("Error:") + " " + _("Spend protection"), _("Invalid PIN Number"),
                                  "warning")
@@ -287,7 +287,7 @@ class TransactionsHandler(BaseHandler):
         data = self.get_argument("data", '')
         operation = self.get_argument("operation", '')
         txid = self.bismuth.send(recipient, amount, operation, data)
-        print("txid1", txid)
+        # print("txid1", txid)
         if txid:
             self.message(_("Success:") + " " + _("Transaction sent"),
                          _("The transaction was submitted to the mempool.")
@@ -308,7 +308,7 @@ class TransactionsHandler(BaseHandler):
         address = self.bismuth_vars['server']['address']
         self.settings["page_title"] = _("Receive BIS")
         bisurl = ''
-        print("address", self.get_query_argument('address', 'no'))
+        # print("address", self.get_query_argument('address', 'no'))
         if self.get_query_argument('address', False):
             address = self.get_query_argument('address')
             amount = "{:0.8f}".format(float(self.get_query_argument('amount', 0)))
@@ -380,7 +380,7 @@ class WalletHandler(BaseHandler):
             self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
         if not params:
             wallet_dir = helpers.get_private_dir()
-            # This lists the old stlye wallets
+            # This lists the old style wallets
             wallets = self.bismuth.list_wallets(wallet_dir)
             # TODO: fix private access
             addresses = self.bismuth._wallet._addresses
@@ -419,7 +419,7 @@ class WalletHandler(BaseHandler):
         if self.bismuth._wallet._locked:
             self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
         file_name = '/'.join(params)
-        print(file_name)
+        # print(file_name)
         try:
             self.bismuth._wallet.import_der(wallet_der=file_name)
         except Exception as e:
@@ -427,6 +427,33 @@ class WalletHandler(BaseHandler):
                         bismuth=self.bismuth_vars)
             return
         self.redirect("/wallet/load")
+
+    async def import_encrypted_der1(self, params=None, post: bool=False):
+        """Ask for pass"""
+        _ = self.locale.translate
+        if self.bismuth._wallet._locked:
+            self.render("message.html", type="warning", title=_("Error"), message=_("You have to unlock your wallet first"), bismuth=self.bismuth_vars)
+        file_name = '/'.join(params)
+        # print(file_name)
+        self.render("wallet_import_encrypted_der1.html", wallet_file=file_name, bismuth=self.bismuth_vars)
+
+    async def import_encrypted_der2(self, params=None, post: bool=False):
+        """Ask for pass"""
+        _ = self.locale.translate
+        if not post:
+            self.render("message.html", type="warning", title=_("Error"), message=_("Error"), bismuth=self.bismuth_vars)
+            return
+        wallet_file = self.get_argument("wallet_file")
+        wallet_password = self.get_argument("wallet_password")
+        # print(wallet_file, wallet_password)
+        try:
+            self.bismuth._wallet.import_der(wallet_der=wallet_file, source_password=wallet_password)
+        except Exception as e:
+            self.render("message.html", type="warning", title=_("Error"), message=_("Error: {}").format(e),
+                        bismuth=self.bismuth_vars)
+            return
+        self.redirect("/wallet/load")
+
 
     async def create(self, params=None, post: bool=False):
         # self.write(json.dumps(self.request))
@@ -678,7 +705,7 @@ class MessagesHandler(BaseHandler):
         # check spend protection
         # TODO: add more methods
         if self.bismuth.wallet()['spend']['type'] == 'PIN':
-            print(spend_token, self.bismuth.wallet()['spend'])
+            # print(spend_token, self.bismuth.wallet()['spend'])
             if spend_token != self.bismuth.wallet()['spend']['value']:
                 self.message_pop(_("Error:") + " " + _("Spend protection"), _("Invalid PIN Number"),
                                  "warning")
@@ -741,7 +768,6 @@ def port_in_use(port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(1)
     result = sock.connect_ex(('127.0.0.1', port))
-    print(result)
     return result == 0
 
 
