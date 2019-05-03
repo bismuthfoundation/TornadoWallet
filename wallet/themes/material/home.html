@@ -77,6 +77,7 @@
 			<div class="card-body table-responsive">
 			  <table class="table table-hover">
 				<thead class="text-warning">
+				  <th class="center">{{ _("Txid")}}</th>
 				  <th>{{ _("Date")}}</th>
 				  <th>{{ _("Address")}}</th>
 				  <th class="amount">{{ _("Amount")}}</th>
@@ -89,6 +90,9 @@
   			    <!-- module Transaction(transaction) -->
 					<tr>
 						<!-- td>{{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}</td -->
+                        <td class="center"><i class="material-icons copy-title-to-clipboard-base"
+                                              title="{{ transaction['signature'][:56] }}">receipt</i>
+						</td>
 						<td>{{ transaction['datetime'] }}</td>
 						<!-- td>{{ transaction['signature'][:56] }}</td -->
 						{% if transaction['recipient'] == bismuth['address'] and transaction['address'] == bismuth['address']%}
@@ -108,7 +112,14 @@
                         {% end %}</td>
 					</tr>
 				{% end %}
-
+						<tr id="copied" style="display:none;">
+                        <td colspan="2">
+                            <button type="button" class="btn btn-success" >
+                                        <i class="material-icons">done_outline</i> {{ _('Copied to Clipboard') }}
+                            </button>
+                        </td>
+                        <td colspan="3"></td>
+                    </tr>
 				</tbody>
 			  </table>
 			</div>

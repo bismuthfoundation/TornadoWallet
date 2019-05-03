@@ -89,10 +89,10 @@
                     {% for transaction in bismuth['transactions'] %}
                     <!-- module Transaction(transaction) -->
                     <tr>
-                        <td class="center"><i class="material-icons"
+                        <td class="center"><i class="material-icons copy-title-to-clipboard-base"
                                               title="{{ transaction['signature'][:56] }}">receipt</i></td>
                         <td>
-{{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}
+                        {{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
                         {% if transaction['recipient'] == bismuth['address'] and transaction['address'] == bismuth['address']%}
                         <!-- tx to self-->
@@ -116,6 +116,14 @@
                         {% end %}</td>
                     </tr>
                     {% end %}
+                    <tr id="copied" style="display:none;">
+                        <td colspan="2">
+                            <button type="button" class="btn btn-success" >
+                                        <i class="material-icons">done_outline</i> {{ _('Copied to Clipboard') }}
+                            </button>
+                        </td>
+                        <td colspan="8"></td>
+                    </tr>
 
                     </tbody>
                 </table>

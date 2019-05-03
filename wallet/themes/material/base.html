@@ -635,6 +635,7 @@ function confirmtx(address, data, amount, operation, token){
 
 </script>
 <script>
+
     $(document).ready(function() {
 
         if ($(window).height() < 680) {
@@ -652,6 +653,21 @@ function confirmtx(address, data, amount, operation, token){
         });
 
 
+        function copyTitleToClipboard(element) {
+            var str = $(this).attr('title');
+            //alert(str);
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val(str).select();
+            document.execCommand("copy");
+            $temp.remove();
+            //console.log($($(this).parents("tr")[0]))
+            //$("#copied").detach().appendTo($(this).parents("tr")[0]);
+            $("#copied").detach().insertAfter($(this).closest('tr'))
+            $("#copied").show().fadeOut(2500);
+        };
+
+        $('.copy-title-to-clipboard-base').on('click', copyTitleToClipboard);
 
     });
 

@@ -165,6 +165,11 @@ class TransactionsHandler(BaseHandler):
             type='warning'  # Do not translate
             title=_("Please confirm this transaction")
             message=_("Check this is what you intended to do and hit the \"confirm\" button")
+
+            if self.get_argument('data', '') == '' and self.bismuth.reject_empty_message_for(self.get_argument('recipient')):
+                await self.message(_("Error:") + " " + _("No message"), _("Sending to this recipient needs a proper message"), "danger")
+                return
+
             # TODO: address ok?
             # todo: amount ok
             # todo: enough balance?
@@ -203,6 +208,9 @@ class TransactionsHandler(BaseHandler):
             self.bismuth_vars['params']['amount'] = decoded['amount']
             self.bismuth_vars['params']['operation'] = decoded['operation']
             self.bismuth_vars['params']['data'] = decoded['openfield']
+            if self.bismuth_vars['params']['data'] == '' and self.bismuth.reject_empty_message_for(self.bismuth_vars['params']['recipient']):
+                await self.message_pop(_("Error:") + " " + _("No message"), _("Sending to this recipient needs a proper message"), "danger")
+                return
             # TODO: address ok?
             # todo: amount ok
             # todo: enough balance?
@@ -219,6 +227,9 @@ class TransactionsHandler(BaseHandler):
             self.bismuth_vars['params']['amount'] = self.get_argument('amount', '0.00000000')
             self.bismuth_vars['params']['operation'] = self.get_argument('operation', '')
             self.bismuth_vars['params']['data'] = self.get_argument('data', '')
+            if self.bismuth_vars['params']['data'] == '' and self.bismuth.reject_empty_message_for(self.bismuth_vars['params']['recipient']):
+                await self.message_pop(_("Error:") + " " + _("No message"), _("Sending to this recipient needs a proper message"), "danger")
+                return
 
             # TODO: address ok?
             # todo: amount ok
