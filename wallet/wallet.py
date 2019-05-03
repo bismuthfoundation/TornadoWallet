@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.1.1'
+__version__ = '0.1.11'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -613,6 +613,9 @@ class AboutHandler(BaseHandler):
 
     async def credits(self, params=None):
         self.render("about_credits.html", bismuth=self.bismuth_vars)
+
+    async def help(self, params=None):
+        self.render("about_help.html", bismuth=self.bismuth_vars)
 
     async def network(self, params=None):
         self.render("about_network.html", bismuth=self.bismuth_vars)
