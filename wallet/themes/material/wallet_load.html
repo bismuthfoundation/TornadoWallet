@@ -69,7 +69,13 @@
                         <td><a href="#" data-address="{{ address['address'] }}" data-label="{{ address['label'] }}" class="label_edit">
                             <i class="material-icons md-18" title="{{ _('Edit this label')}}" style="font-size:16px;">create</i></a>
                             </a>{{ address['label'] }}</td>
-                        <td><a href="/wallet/load_address/{{ address['address'] }}">{{ address['address'] }}</a></td>
+                        <td>
+                            {% if bismuth['address'] == address['address'] %}
+                                <i class="material-icons md-18 primary" style="font-size:16px;">done</i> <b>{{ address['address'] }}</b>
+                            {% else %}
+                                <a href="/wallet/load_address/{{ address['address'] }}">{{ address['address'] }}</a>
+                            {% end %}
+                        </td>
                         <td>{{ datetime.datetime.utcfromtimestamp(address['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
                         <td><a href="/wallet/load_address/{{ address['address'] }}">
