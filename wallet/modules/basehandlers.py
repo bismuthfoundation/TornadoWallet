@@ -125,6 +125,12 @@ class BaseHandler(RequestHandler):
             return "disabled"
         return ''
 
+    def address_with_alias(self, address: str, aliases: dict) -> str:
+        alias = aliases.get(address, '')
+        if alias and alias != address:
+            return '{} ({})'.format(address, alias)
+        else:
+            return address
 
     def message(self, title, message, type="info"):
         """Display message template page"""

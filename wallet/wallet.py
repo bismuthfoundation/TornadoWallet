@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.1.11'
+__version__ = '0.1.12'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -59,6 +59,7 @@ class Application(tornado.web.Application):
         print("Please store your wallets under '{}'".format(wallet_dir))
         # self.load_user_data("{}/options.json".format(wallet_dir))
         bismuth_client.load_multi_wallet("{}/wallet.json".format(wallet_dir))
+        bismuth_client.set_alias_cache_file("{}/alias_cache.json".format(wallet_dir))
         bismuth_client.get_server()
         # Convert relative to absolute
         options.theme = os.path.join(helpers.base_path(), options.theme)
@@ -345,6 +346,11 @@ class TransactionsHandler(BaseHandler):
             _ = self.locale.translate
             self.settings["page_title"] = _("Transaction list")
             self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(count, offset=start, for_display=True)
+            addresses = set()
+            for tx in self.bismuth_vars['transactions']:
+                addresses.update([tx['recipient'], tx['address']])
+            aliases = self.bismuth.get_aliases_of(addresses)
+            self.bismuth_vars['aliases'] = aliases
             self.render("transactions.html", bismuth=self.bismuth_vars, offset=start, count=count)
 
     async def post(self, command=''):

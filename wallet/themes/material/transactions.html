@@ -96,13 +96,13 @@
                         </td>
                         {% if transaction['recipient'] == bismuth['address'] and transaction['address'] == bismuth['address']%}
                         <!-- tx to self-->
-                        <td>{{ transaction['recipient'] }}</td>
+                        <td>{{ handler.address_with_alias(transaction['recipient'], bismuth['aliases']) }}</td>
                         <td class="text-info amount"> {{ transaction['amount'] }}</td>
                         {% elif transaction['address'] == bismuth['address'] %}
-                        <td>{{ transaction['recipient'] }}</td>
+                        <td>{{ handler.address_with_alias(transaction['recipient'], bismuth['aliases']) }}</td>
                         <td class="text-warning amount">-{{ transaction['amount'] }}</td>
                         {% else %}
-                        <td>{{ transaction['address'] }}</td>
+                        <td>{{ handler.address_with_alias(transaction['address'], bismuth['aliases']) }}</td>
                         <td class="text-success amount"> {{ transaction['amount'] }}</td>
                         {% end %}
                         <td class="center">{{ transaction['operation'][:10] }}
@@ -133,10 +133,10 @@
 
                         <td>
                             <form method="get" action="/transactions/">
-                            <button type="submit" class="btn btn-success"  name="start" value="0" {{ handler.disabled_if(offset==0) }} ><i class="material-icons">first_page</i></button>
-                            <button type="submit" class="btn btn-info"   name="start" value="{{ offset - count }}" {{ handler.disabled_if(offset==0) }}><i class="material-icons">chevron_left</i> -{{ count }}</button>
+                            <button type="submit" class="btn btn-success" name="start" value="0" {{ handler.disabled_if(offset==0) }} ><i class="material-icons">first_page</i></button>
+                            <button type="submit" class="btn btn-info" name="start" value="{{ offset - count }}" {{ handler.disabled_if(offset==0) }}><i class="material-icons">chevron_left</i> -{{ count }}</button>
                             <button type="button" class="btn btn-primary" disabled>{{ offset }}</button>
-                            <button type="submit" class="btn btn-info" name="start" value="{{ offset + count }}"><i class="material-icons">chevron_right</i> +{{ count }}</button>
+                            <button type="submit" class="btn btn-info" name="start" value="{{ offset + count }}">+{{ count }} <i class="material-icons">chevron_right</i></button>
                             </form>
                         </td>
 
