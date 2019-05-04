@@ -345,7 +345,7 @@ class TransactionsHandler(BaseHandler):
             _ = self.locale.translate
             self.settings["page_title"] = _("Transaction list")
             self.bismuth_vars['transactions'] = self.bismuth.latest_transactions(count, offset=start, for_display=True)
-            self.render("transactions.html", bismuth=self.bismuth_vars)
+            self.render("transactions.html", bismuth=self.bismuth_vars, offset=start, count=count)
 
     async def post(self, command=''):
         """

@@ -115,10 +115,16 @@ class BaseHandler(RequestHandler):
             return "active"
         return ''
 
-    def checked_if(self, condition:bool):
+    def checked_if(self, condition:bool) -> str:
         if condition:
             return "checked"
         return ''
+
+    def disabled_if(self, condition:bool) -> str:
+        if condition:
+            return "disabled"
+        return ''
+
 
     def message(self, title, message, type="info"):
         """Display message template page"""

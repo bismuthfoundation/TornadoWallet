@@ -125,6 +125,28 @@
                         <td colspan="8"></td>
                     </tr>
 
+                    <tr>
+                        <td class="center">
+                        <td>
+
+                        </td>
+
+                        <td>
+                            <form method="get" action="/transactions/">
+                            <button type="submit" class="btn btn-success"  name="start" value="0" {{ handler.disabled_if(offset==0) }} ><i class="material-icons">first_page</i></button>
+                            <button type="submit" class="btn btn-info"   name="start" value="{{ offset - count }}" {{ handler.disabled_if(offset==0) }}><i class="material-icons">chevron_left</i> -{{ count }}</button>
+                            <button type="button" class="btn btn-primary" disabled>{{ offset }}</button>
+                            <button type="submit" class="btn btn-info" name="start" value="{{ offset + count }}"><i class="material-icons">chevron_right</i> +{{ count }}</button>
+                            </form>
+                        </td>
+
+                        <td class="text-warning amount"></td>
+
+                        <td class="center"></td>
+                        <td class="amount"></td>
+                        <td></td>
+                    </tr>
+
                     </tbody>
                 </table>
             </div>
