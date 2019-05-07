@@ -334,13 +334,10 @@
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{ static_url('js/material-dashboard.js') }}"></script>
 <!-- Material Dashboard DEMO methods, dont include it in your project -->
-<script src="{{ static_url('demo/demo.js') }}"></script>
+<!-- script src="{{ static_url('demo/demo.js') }}"></script -->
+<!-- Helpers for base and crystals. Used to factorize common functions crystals may need -->
+<script src="{{ static_url('helpers.js') }}"></script>
 <script>
-
-function float_to_bis(x){
-  return x.toFixed(8).replace(/\.?0*$/,'');
-}
-
 
     function sendurl(url){
         if (url == '') { return false}
@@ -358,7 +355,6 @@ function float_to_bis(x){
             $(".feespop").val(float_to_bis(fees));
             });
     }
-
 
     function send(address, amount, operation, data){
         if (address == '') { return false}
@@ -418,7 +414,7 @@ function float_to_bis(x){
     }
 
 
-function confirmtx(address, data, amount, operation, token){
+    function confirmtx(address, data, amount, operation, token){
         if(enabled){
             enabled = false;
             $("#payment_window").css({"cursor":"wait"});
@@ -434,14 +430,14 @@ function confirmtx(address, data, amount, operation, token){
         }
     }
 
-       function fees_calc() {
-            data = $("#data").val();
-            amount = $("#amount").val();
-            if (amount <= 0) { amount=0}
-            fees = 0.01+0.00001*data.length
-            $("#fees").val(float_to_bis(fees));
-            $("#total").val(float_to_bis(parseFloat(amount) + fees));
-       }
+   function fees_calc() {
+        data = $("#data").val();
+        amount = $("#amount").val();
+        if (amount <= 0) { amount=0}
+        fees = 0.01+0.00001*data.length
+        $("#fees").val(float_to_bis(fees));
+        $("#total").val(float_to_bis(parseFloat(amount) + fees));
+   }
 
     $(document).ready(function() {
 
@@ -638,8 +634,6 @@ function confirmtx(address, data, amount, operation, token){
       });
     });
 
-</script>
-<script>
 
     $(document).ready(function() {
 

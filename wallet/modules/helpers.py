@@ -1,3 +1,4 @@
+import mimetypes
 import sys
 from os import path
 import aiohttp
@@ -80,4 +81,25 @@ async def async_get_with_http_fallback(https_url, is_json=True):
         http_url = https_url.replace("https://", "http://")
         data = await async_get(http_url, is_json=is_json)
     return data
+
+
+# Unused
+"""
+def get_content_type(filename: str) -> str:
+    # Returns the ``Content-Type`` header to be used for this request.
+    mime_type, encoding = mimetypes.guess_type(filename)
+    # per RFC 6713, use the appropriate type for a gzip compressed file
+    if encoding == "gzip":
+        return "application/gzip"
+    # As of 2015-07-21 there is no bzip2 encoding defined at
+    # http://www.iana.org/assignments/media-types/media-types.xhtml
+    # So for that (and any other encoding), use octet-stream.
+    elif encoding is not None:
+        return "application/octet-stream"
+    elif mime_type is not None:
+        return mime_type
+    # if mime_type not detected, use application/octet-stream
+    else:
+        return "application/octet-stream"
+"""
 

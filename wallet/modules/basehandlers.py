@@ -6,12 +6,13 @@ from tornado import locale
 from tornado.web import RequestHandler
 from tornado.template import Loader, Template
 from os import path
-from time import time
+# from time import time
+# from modules.helpers import base_path
 from modules.i18n import get_spend_type, get_flag_from_locale, get_label_from_locale, get_locales_list
 
 
 class BaseHandler(RequestHandler):
-    """Common ancestor for ann route handlers"""
+    """Common ancestor for all route handlers"""
 
     def initialize(self):
         """Common init for every request"""

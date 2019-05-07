@@ -17,8 +17,10 @@ from os import path, listdir
 
 from modules import helpers
 import tornado.autoreload
+from tornado.web import StaticFileHandler
+from modules.helpers import base_path
 
-__version__ = '0.2'
+__version__ = '0.3'
 
 
 class CrystalManager:
@@ -189,9 +191,14 @@ class CrystalManager:
                 module = crystal_info['module']
                 name = key.split('_')[1]
                 hook_func_name ="{}Handler".format( name.capitalize())
-                # print(key, "hook_func_name", hook_func_name)
+                print(key, "hook_func_name", hook_func_name)
                 if hasattr(module, hook_func_name):
                     hook_class = getattr(module, hook_func_name)
+                    # Add a static handler if there is a static method
+                    if hasattr(hook_class, 'static'):
+                        static_path =  path.join(base_path(), 'crystals/{}/static/'.format(key))
+                        # print('need static', static_path)
+                        handlers.append((r"/crystal/{}/static/(.*)".format(name), StaticFileHandler, dict(path=static_path)))
                     handlers.append((r"/crystal/{}/(.*)".format(name), hook_class))
 
             except Exception as e:
