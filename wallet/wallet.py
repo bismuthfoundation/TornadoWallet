@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.1.13'
+__version__ = '0.1.14'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -261,7 +261,8 @@ class TransactionsHandler(BaseHandler):
         recipient = self.get_argument("recipient")
         data = self.get_argument("data", '')
         operation = self.get_argument("operation", '')
-        txid = self.bismuth.send(recipient, amount, operation, data)
+        reply = list()
+        txid = self.bismuth.send(recipient, amount, operation, data, reply)
         # print("txidpop", txid)
         if txid:
             message = _("Success:") + " " + _("Transaction sent") + "<br>" +\
@@ -273,6 +274,8 @@ class TransactionsHandler(BaseHandler):
 
         else:
             message =  _("There was an error submitting to the mempool, transaction was not sent.")
+            message += "<br />"
+            message += ",".join(reply)
             color = "danger"
             title = _("Error")
         self.render("transactions_confirmpop.html", bismuth=self.bismuth_vars, message=message, color=color, title=title)
