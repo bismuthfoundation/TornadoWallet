@@ -91,9 +91,15 @@ class CrystalManager:
                 location = path.join(self.crystal_folder, possible)
                 if path.isdir(location) and self.main_module + '.py' in listdir(location):
                     info = importlib.machinery.PathFinder().find_spec(self.main_module, [location])
+                    about_filename = path.join(location, 'about.json')
+                    about = {'author': 'N/A', 'description': 'N/A', 'email': 'N/A', 'version': 'N/A', 'date': 'N/A', 'url': 'N/A'}
+                    if path.isfile(about_filename):
+                        with open(about_filename) as fp:
+                            about = json.load(fp)
                     crystals[possible] = {
                         'name': possible,
                         'info': info,
+                        'about': about,
                         'autoload': True  # Todo
                     }
         except Exception as e:

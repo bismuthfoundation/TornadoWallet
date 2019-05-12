@@ -5,7 +5,7 @@
 
 <div class="row">
 
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-12 col-md-12">
         <div class="card">
             <div class="card-header card-header-info">
                 <h4 class="card-title">{{ _("Crystals")}}</h4>
@@ -15,6 +15,14 @@
                 <form method="post" action="/crystals/">
 
                     <table class="table">
+                        <tr>
+                            <td>{{ _('Active') }}</td>
+                            <td>{{ _('Name') }} </td>
+                            <td>{{ _('Version') }} / {{ _('Date') }}</td>
+                            <td>{{ _('Description') }} </td>
+                            <td>{{ _('Author') }} </td>
+                            <td>{{ _('Learn more...') }} </td>
+                        </tr>
                         <tbody>
                         {% for name, data in crystals.items() %}
                         <tr>
@@ -30,14 +38,11 @@
                                 </div>
                             </td>
                             <td>{{ name }}</td>
-                            <td class="td-actions text-right">
-                                <!-- a href="/crystal/{{ name }}/">
-                                    <button type="button" rel="tooltip" title=""
-                                            class="btn btn-white btn-link btn-sm">
-                                        <i class="material-icons">edit</i>
-                                    </button>
-                                </a -->
-                            </td>
+                            <td>v {{ data['about']['version'] }} / {{ data['about']['date'] }}</td>
+                            <td>{{ data['about']['description'] }}</td>
+                            <td>{{ data['about']['author'] }}</td>
+                            <td><a href="{{ data['about']['url'] }}" target="_blank">{{ _('More...') }}</a></td>
+
                         </tr>
                         {% end %}
                         </tbody>

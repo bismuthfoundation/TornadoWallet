@@ -661,7 +661,9 @@ class CrystalsHandler(BaseHandler):
         available_crystals = self.application.crystals_manager.get_available_crystals()
         # crystal_names = [name.split('_')[1] for name in available_crystals.keys()]
         # crystals = {name.split('_')[1]: name in loaded_crystals for name in available_crystals}
-        crystals = {name.split('_')[1]: {"active": name in loaded_crystals, "fullname":name} for name in available_crystals}
+        crystals = {name.split('_')[1]: {"active": name in loaded_crystals, "fullname":name,
+                                         "about": available_crystals[name]['about'] }
+                    for name in available_crystals}
         if post:
             new_actives = { data['fullname']: bool(self.get_argument("active_"+data['fullname'], False)) for data in crystals.values()}
             # print("New actives", new_actives)
@@ -677,9 +679,10 @@ class CrystalsHandler(BaseHandler):
                                                   )
             loaded_crystals = self.application.crystals_manager.get_loaded_crystals()
             self.update_crystals()
-            crystals = {name.split('_')[1]: {"active": name in loaded_crystals, "fullname":name} for name in available_crystals}
+            crystals = {name.split('_')[1]: {"active": name in loaded_crystals, "fullname": name,
+                                             "about": available_crystals[name]['about'] }
+                        for name in available_crystals}
 
-        # print(crystals)
         self.render("crystals_list.html", bismuth=self.bismuth_vars, crystals=crystals)
 
     async def get(self, command=''):
