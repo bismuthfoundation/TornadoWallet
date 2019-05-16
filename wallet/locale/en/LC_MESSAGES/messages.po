@@ -1,31 +1,206 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: TornadoWallet\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-16 16:02+0200\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: TornadoWallet\n"
-"Language: en\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:228
-msgid "Credits"
-msgstr "Credits"
+#: TornadoBismuthWallet.py:153 TornadoBismuthWallet.py:179
+#: themes/material/transactions_send.html:78
+#: themes/material/transactions_send.html:81
+#: themes/material/transactions_send.html:127 wallet.py:154 wallet.py:185
+msgid "Send BIS"
+msgstr "Send BIS"
 
-#: themes/material/about_credits.html:11
-msgid "This wallet wouldn't have existed without..."
-msgstr "This wallet wouldn't have existed without..."
+#: TornadoBismuthWallet.py:155 TornadoBismuthWallet.py:159
+#: TornadoBismuthWallet.py:182 TornadoBismuthWallet.py:186
+#: TornadoBismuthWallet.py:198 TornadoBismuthWallet.py:229
+#: TornadoBismuthWallet.py:235 TornadoBismuthWallet.py:238
+#: TornadoBismuthWallet.py:245 TornadoBismuthWallet.py:272
+#: TornadoBismuthWallet.py:275 TornadoBismuthWallet.py:282
+#: TornadoBismuthWallet.py:297 TornadoBismuthWallet.py:302
+#: TornadoBismuthWallet.py:306 TornadoBismuthWallet.py:672
+#: TornadoBismuthWallet.py:676 TornadoBismuthWallet.py:683
+#: TornadoBismuthWallet.py:695 crystals/210_eggpool/__init__.py:85
+#: wallet.py:156 wallet.py:160 wallet.py:171 wallet.py:188 wallet.py:192
+#: wallet.py:204 wallet.py:213 wallet.py:232 wallet.py:241 wallet.py:247
+#: wallet.py:250 wallet.py:257 wallet.py:287 wallet.py:290 wallet.py:297
+#: wallet.py:312 wallet.py:317 wallet.py:321 wallet.py:724 wallet.py:728
+#: wallet.py:735 wallet.py:747
+msgid "Error:"
+msgstr "Error:"
 
-#: themes/material/about_credits.html:16
-msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
+#: TornadoBismuthWallet.py:155 TornadoBismuthWallet.py:182
+#: TornadoBismuthWallet.py:235 TornadoBismuthWallet.py:272
+#: TornadoBismuthWallet.py:302 TornadoBismuthWallet.py:672 wallet.py:156
+#: wallet.py:188 wallet.py:247 wallet.py:287 wallet.py:317 wallet.py:724
+msgid "Load your wallet first"
+msgstr "Load your wallet first"
 
-#: themes/material/about_credits.html:19
-msgid "Python, awesome language!"
-msgstr "Python, awesome language!"
+#: TornadoBismuthWallet.py:155 TornadoBismuthWallet.py:182
+#: TornadoBismuthWallet.py:235 TornadoBismuthWallet.py:272
+#: TornadoBismuthWallet.py:302 TornadoBismuthWallet.py:672 wallet.py:156
+#: wallet.py:188 wallet.py:247 wallet.py:287 wallet.py:317 wallet.py:724
+msgid "No Wallet"
+msgstr "No Wallet"
 
-#: themes/material/about_credits.html:20
-msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
+#: TornadoBismuthWallet.py:159 TornadoBismuthWallet.py:186
+#: TornadoBismuthWallet.py:238 TornadoBismuthWallet.py:275
+#: TornadoBismuthWallet.py:306 TornadoBismuthWallet.py:676 wallet.py:160
+#: wallet.py:192 wallet.py:250 wallet.py:290 wallet.py:321 wallet.py:728
+msgid "Encrypted wallet"
+msgstr "Encrypted wallet"
+
+#: TornadoBismuthWallet.py:159 TornadoBismuthWallet.py:186
+#: TornadoBismuthWallet.py:238 TornadoBismuthWallet.py:275
+#: TornadoBismuthWallet.py:306 TornadoBismuthWallet.py:380
+#: TornadoBismuthWallet.py:420 TornadoBismuthWallet.py:676 wallet.py:160
+#: wallet.py:192 wallet.py:250 wallet.py:290 wallet.py:321 wallet.py:404
+#: wallet.py:439 wallet.py:454 wallet.py:728
+msgid "You have to unlock your wallet first"
+msgstr "You have to unlock your wallet first"
+
+#: TornadoBismuthWallet.py:164 TornadoBismuthWallet.py:191
+#: TornadoBismuthWallet.py:213 wallet.py:165 wallet.py:197 wallet.py:222
+msgid "Send BIS: Confirmation"
+msgstr "Send BIS: Confirmation"
+
+#: TornadoBismuthWallet.py:166 TornadoBismuthWallet.py:193
+#: TornadoBismuthWallet.py:215 wallet.py:167 wallet.py:199 wallet.py:224
+msgid "Please confirm this transaction"
+msgstr "Please confirm this transaction"
+
+#: TornadoBismuthWallet.py:167 TornadoBismuthWallet.py:194
+#: TornadoBismuthWallet.py:216 wallet.py:168 wallet.py:200 wallet.py:225
+msgid "Check this is what you intended to do and hit the \"confirm\" button"
+msgstr "Check this is what you intended to do and hit the \"confirm\" button"
+
+#: TornadoBismuthWallet.py:245 TornadoBismuthWallet.py:282
+#: TornadoBismuthWallet.py:683 wallet.py:257 wallet.py:297 wallet.py:735
+msgid "Invalid PIN Number"
+msgstr "Invalid PIN Number"
+
+#: TornadoBismuthWallet.py:245 TornadoBismuthWallet.py:282
+#: TornadoBismuthWallet.py:683 themes/material/messages.html:26
+#: themes/material/transactions_send_confirm.html:104
+#: themes/material/transactions_sendpop_confirm.html:91
+#: themes/material/wallet_info.html:218 themes/material/wallet_info.html:219
+#: wallet.py:257 wallet.py:297 wallet.py:735
+msgid "Spend protection"
+msgstr "Spend protection"
+
+#: TornadoBismuthWallet.py:255 TornadoBismuthWallet.py:292 wallet.py:268
+#: wallet.py:307
+msgid "Success:"
+msgstr "Success:"
+
+#: TornadoBismuthWallet.py:255 TornadoBismuthWallet.py:292 wallet.py:268
+#: wallet.py:307
+msgid "Transaction sent"
+msgstr "Transaction sent"
+
+#: TornadoBismuthWallet.py:256 TornadoBismuthWallet.py:293 wallet.py:269
+#: wallet.py:308
+msgid "The transaction was submitted to the mempool."
+msgstr "The transaction was submitted to the mempool."
+
+#: TornadoBismuthWallet.py:258 TornadoBismuthWallet.py:295 wallet.py:271
+#: wallet.py:310
+msgid "Txid is {}"
+msgstr "Txid is {}"
+
+#: TornadoBismuthWallet.py:260 wallet.py:273
+msgid "Success"
+msgstr "Success"
+
+#: TornadoBismuthWallet.py:263 TornadoBismuthWallet.py:297 wallet.py:276
+#: wallet.py:312
+msgid "There was an error submitting to the mempool, transaction was not sent."
+msgstr "There was an error submitting to the mempool, transaction was not sent."
+
+#: TornadoBismuthWallet.py:265 TornadoBismuthWallet.py:380
+#: TornadoBismuthWallet.py:406 TornadoBismuthWallet.py:420
+#: TornadoBismuthWallet.py:426 TornadoBismuthWallet.py:441
+#: TornadoBismuthWallet.py:450 TornadoBismuthWallet.py:456
+#: TornadoBismuthWallet.py:465 TornadoBismuthWallet.py:479
+#: TornadoBismuthWallet.py:494 TornadoBismuthWallet.py:502
+#: TornadoBismuthWallet.py:511 TornadoBismuthWallet.py:517
+#: TornadoBismuthWallet.py:526 TornadoBismuthWallet.py:532
+#: modules/basehandlers.py:64 wallet.py:280 wallet.py:404 wallet.py:425
+#: wallet.py:439 wallet.py:445 wallet.py:454 wallet.py:463 wallet.py:471
+#: wallet.py:487 wallet.py:496 wallet.py:502 wallet.py:511 wallet.py:525
+#: wallet.py:540 wallet.py:548 wallet.py:557 wallet.py:563 wallet.py:572
+#: wallet.py:578
+msgid "Error"
+msgstr "Error"
+
+#: TornadoBismuthWallet.py:309 wallet.py:324
+msgid "Receive BIS"
+msgstr "Receive BIS"
+
+#: TornadoBismuthWallet.py:331 wallet.py:350
+msgid "Transaction list"
+msgstr "Transaction list"
+
+#: TornadoBismuthWallet.py:406 TornadoBismuthWallet.py:426
+#: TornadoBismuthWallet.py:465 TornadoBismuthWallet.py:479
+#: TornadoBismuthWallet.py:494 TornadoBismuthWallet.py:502
+#: TornadoBismuthWallet.py:517 TornadoBismuthWallet.py:526
+#: TornadoBismuthWallet.py:532 wallet.py:425 wallet.py:445 wallet.py:471
+#: wallet.py:511 wallet.py:525 wallet.py:540 wallet.py:548 wallet.py:563
+#: wallet.py:572 wallet.py:578
+msgid "Error: {}"
+msgstr "Error: {}"
+
+#: TornadoBismuthWallet.py:441 wallet.py:487
+msgid "This file already exists: {}.der"
+msgstr "This file already exists: {}.der"
+
+#: TornadoBismuthWallet.py:450 wallet.py:496
+msgid "Error creating {}.der"
+msgstr "Error creating {}.der"
+
+#: TornadoBismuthWallet.py:456 wallet.py:502
+msgid "Max of {} addresses reached."
+msgstr "Max of {} addresses reached."
+
+#: TornadoBismuthWallet.py:511 wallet.py:557
+msgid "Passwords do not match"
+msgstr "Passwords do not match"
+
+#: TornadoBismuthWallet.py:526 wallet.py:572
+msgid "PIN code can't be empty"
+msgstr ""
+
+#: TornadoBismuthWallet.py:670 themes/material/messages.html:15 wallet.py:722
+msgid "Sign message"
+msgstr "Sign message"
+
+#: TornadoBismuthWallet.py:689 wallet.py:741
+msgid "Your message '{}' has been signed."
+msgstr "Your message '{}' has been signed."
+
+#: TornadoBismuthWallet.py:691 wallet.py:743
+msgid "Signature"
+msgstr "Signature"
+
+#: TornadoBismuthWallet.py:695 wallet.py:747
+msgid "This feature is under construction. "
+msgstr "This feature is under construction. "
+
+#: crystals/100_bismuthprice/themes/default/about.html:11
+#: crystals/100_bismuthprice/themes/default/modules/home.html:16
+msgid "Crystal"
+msgstr "Crystal"
+
+#: crystals/100_bismuthprice/themes/default/about.html:15
+#: themes/material/tokens_list.html:14
+msgid "WIP"
+msgstr "WIP"
 
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
@@ -34,205 +209,16 @@ msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\
 msgid "About"
 msgstr "About"
 
-#: themes/material/about_credits.html:35
-msgid "Tornado wallet version {}"
-msgstr "Tornado wallet version {}"
+#: crystals/100_bismuthprice/themes/default/about.html:28
+#: crystals/210_eggpool/themes/default/about.html:29
+#: crystals/250_autogame/themes/default/about.html:39
+#: themes/material/crystals_list.html:21
+msgid "Version"
+msgstr "Version"
 
-#: themes/material/about_credits.html:39
-msgid "This is the default wallet theme by {} from {}."
-msgstr "This is the default wallet theme by {} from {}."
-
-#: themes/material/about_network.html:14
-msgid "Current wallet server"
-msgstr "Current wallet server"
-
-#: themes/material/about_network.html:16
-msgid "This is the server you're connected to."
-msgstr "This is the server you're connected to."
-
-#: themes/material/about_network.html:19
-msgid "Server:"
-msgstr "Server:"
-
-#: themes/material/about_network.html:21
-msgid "IP"
-msgstr "IP"
-
-#: themes/material/about_network.html:21
-msgid "Wallet  server version {}"
-msgstr "Wallet  server version {}"
-
-#: themes/material/about_network.html:25
-msgid "Connected clients:"
-msgstr "Connected clients:"
-
-#: themes/material/about_network.html:26
-msgid "Protocol"
-msgstr "Protocol"
-
-#: themes/material/about_network.html:27
-msgid "Node Version"
-msgstr "Node Version"
-
-#: themes/material/about_network.html:28
-msgid "Peers connections:"
-msgstr "Peers connections:"
-
-#: themes/material/about_network.html:29
-msgid "UpTime:"
-msgstr "UpTime:"
-
-#: themes/material/about_network.html:30
-msgid "Consensus:"
-msgstr "Consensus:"
-
-#: themes/material/about_network.html:52
-msgid "Block"
-msgstr "Block"
-
-#: themes/material/about_network.html:64
-msgid "Difficulty"
-msgstr "Difficulty"
-
-#: themes/material/about_network.html:77
-msgid "Available wallet servers"
-msgstr "Available wallet servers"
-
-#: themes/material/about_network.html:79
-msgid "servers"
-msgstr "servers"
-
-#: themes/material/about_network.html:88
-msgid "Refresh from API"
-msgstr "Refresh from API"
-
-#: themes/material/base.html:43
-msgid "Bismuth Wallet"
-msgstr "Bismuth Wallet"
-
-#: themes/material/base.html:51
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: themes/material/base.html:57
-msgid "Transactions"
-msgstr "Transactions"
-
-#: themes/material/base.html:63
-msgid "Address book"
-msgstr "Address book"
-
-#: themes/material/base.html:70 themes/material/tokens_list.html:10
-msgid "Tokens"
-msgstr "Tokens"
-
-#: themes/material/base.html:76
-msgid "Messages"
-msgstr "Messages"
-
-#: themes/material/base.html:83
-msgid "Network"
-msgstr "Network"
-
-#: themes/material/base.html:86 themes/material/cristals_list.html:10
-msgid "Cristals"
-msgstr "Crystals"
-
-#: themes/material/base.html:122
-msgid "Toggle navigation"
-msgstr "Toggle navigation"
-
-#: themes/material/base.html:208
-msgid "Source"
-msgstr "Source"
-
-#: themes/material/base.html:213
-msgid "Blog"
-msgstr "Blog"
-
-#: themes/material/base.html:218
-msgid "Discord"
-msgstr "Discord"
-
-#: themes/material/base.html:223
-msgid "Donate"
-msgstr "Donate"
-
-#: themes/material/base.html:234
-msgid "block #"
-msgstr "block #"
-
-#: themes/material/base.html:254
-msgid "Sidebar Filters"
-msgstr "Sidebar Filters"
-
-#: themes/material/base.html:267
-msgid "Images"
-msgstr "Images"
-
-#: themes/material/cristals_list.html:11
-msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "Crystals are extra functionalities you can add to your wallet"
-
-#: crystals/100_bismuthprice/themes/default/about.html:15
-#: themes/material/tokens_list.html:14
-msgid "WIP"
-msgstr "WIP"
-
-#: themes/material/home.html:15 themes/material/transactions.html:15
-msgid "Balance"
-msgstr "Balance"
-
-#: themes/material/home.html:34 themes/material/transactions.html:34
-msgid "Send"
-msgstr "Send"
-
-#: themes/material/home.html:39 themes/material/transactions.html:39
-msgid "Send $BIS to..."
-msgstr "Send $BIS to..."
-
-#: themes/material/home.html:53 themes/material/transactions.html:53
-#: themes/material/transactions_receive.html:15
-msgid "Receive"
-msgstr "Receive"
-
-#: themes/material/home.html:58 themes/material/transactions.html:58
-msgid "Request a $BIS payment"
-msgstr "Request a $BIS payment"
-
-#: themes/material/home.html:74 themes/material/transactions.html:73
-msgid "Latest transactions"
-msgstr "Latest transactions"
-
-#: themes/material/home.html:75 themes/material/transactions.html:74
-#: themes/material/wallet_load.html:37
-msgid "Updated on"
-msgstr "Updated on"
-
-#: themes/material/home.html:80 themes/material/transactions.html:80
-msgid "Date"
-msgstr "Date"
-
-#: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:100
-#: themes/material/wallet_load.html:137
-msgid "Address"
-msgstr "Address"
-
-#: themes/material/home.html:82 themes/material/transactions.html:82
-#: themes/material/transactions_receive.html:46
-#: themes/material/transactions_send.html:52
-#: themes/material/transactions_send_confirm.html:55
-msgid "Amount"
-msgstr "Amount"
-
-#: themes/material/home.html:83 themes/material/transactions.html:83
-msgid "Type"
-msgstr "Type"
-
-#: themes/material/home.html:150
-msgid "Bismuth news"
-msgstr "Bismuth news"
+#: crystals/100_bismuthprice/themes/default/modules/home.html:4
+msgid "Current Bismuth Prices"
+msgstr "Current Bismuth Prices"
 
 #: crystals/100_bismuthprice/themes/default/modules/home.html:28
 msgid "Bismuth vs USD"
@@ -241,403 +227,6 @@ msgstr "Bismuth vs USD"
 #: crystals/100_bismuthprice/themes/default/modules/home.html:33
 msgid "This is a mockup with fake data"
 msgstr "This is a mockup with fake data"
-
-#: themes/material/home.html:136
-msgid "Account balance"
-msgstr "Account balance"
-
-#: themes/material/home.html:137
-msgid "Last 12 months"
-msgstr "Last 12 months"
-
-#: themes/material/home.html:141
-msgid "Mockup with fake data"
-msgstr "Mockup with fake data"
-
-#: themes/material/message.html:16
-#: themes/material/transactions_send_confirm.html:16
-msgid "Previous page"
-msgstr "Previous page"
-
-#: themes/material/tokens_list.html:11
-msgid "Tokens are a core BIS functionality"
-msgstr "Tokens are a core BIS functionality"
-
-#: themes/material/transactions_send.html:15
-#: themes/material/transactions_send_confirm.html:28
-msgid "Send To"
-msgstr "Send To"
-
-#: themes/material/transactions_send.html:16
-#: themes/material/transactions_send_confirm.html:29
-msgid "To whom send BIS."
-msgstr "To whom send BIS."
-
-#: themes/material/messages.html:61 themes/material/transactions_send.html:20
-#: themes/material/transactions_send_confirm.html:33
-#: themes/material/transactions_sendpop_confirm.html:29
-msgid "Recipient"
-msgstr "Recipient"
-
-#: themes/material/messages.html:20 themes/material/messages.html:57
-#: themes/material/transactions_receive.html:27
-#: themes/material/transactions_send.html:25
-#: themes/material/transactions_send_confirm.html:39
-#: themes/material/transactions_sendpop_confirm.html:68
-msgid "Data (message)"
-msgstr "Data (message)"
-
-#: themes/material/transactions_send.html:27
-#: themes/material/transactions_send_confirm.html:43
-#: themes/material/transactions_sendpop_confirm.html:73
-msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-
-#: themes/material/transactions_send.html:53
-#: themes/material/transactions_send_confirm.html:56
-msgid "How many BIS to send."
-msgstr "How many BIS to send."
-
-#: themes/material/transactions_receive.html:53
-#: themes/material/transactions_send.html:59
-#: themes/material/transactions_send_confirm.html:62
-#: themes/material/transactions_sendpop_confirm.html:38
-msgid "Amount (BIS)"
-msgstr "Amount (BIS)"
-
-#: themes/material/transactions_receive.html:61
-#: themes/material/transactions_send.html:66
-#: themes/material/transactions_send_confirm.html:70
-#: themes/material/transactions_sendpop_confirm.html:46
-msgid "Est. fees"
-msgstr "Est. fees"
-
-#: themes/material/transactions_receive.html:66
-#: themes/material/transactions_send.html:71
-#: themes/material/transactions_send_confirm.html:75
-#: themes/material/transactions_sendpop_confirm.html:52
-msgid "Total (BIS)"
-msgstr "Total (BIS)"
-
-#: main.py:133 main.py:161 themes/material/transactions_send.html:78
-#: themes/material/transactions_send.html:81
-#: themes/material/transactions_send.html:127 wallet.py:151 wallet.py:178
-msgid "Send BIS"
-msgstr "Send BIS"
-
-#: themes/material/wallet_info.html:11
-msgid "Current Wallet"
-msgstr "Current Wallet"
-
-#: themes/material/wallet_info.html:28
-msgid "Open existing"
-msgstr "Open existing"
-
-#: themes/material/wallet_info.html:29
-msgid "wallet"
-msgstr "wallet"
-
-#: themes/material/wallet_info.html:33
-msgid "Load a wallet from disk"
-msgstr "Load a wallet from disk"
-
-#: themes/material/wallet_info.html:47 themes/material/wallet_load.html:34
-msgid "Create a"
-msgstr "Create a"
-
-#: themes/material/wallet_info.html:48 themes/material/wallet_load.html:35
-msgid "new wallet"
-msgstr "new wallet"
-
-#: themes/material/wallet_load.html:99
-msgid "File"
-msgstr "File"
-
-#: themes/material/wallet_load.html:101
-msgid "Encrypted"
-msgstr "Encrypted"
-
-#: themes/material/messages.html:82 themes/material/wip.html:10
-msgid "W.I.P."
-msgstr "W.I.P."
-
-#: themes/material/messages.html:85 themes/material/wip.html:13
-msgid "This feature is under construction."
-msgstr "This feature is under construction."
-
-#: main.py:243 wallet.py:326
-msgid "Transaction list"
-msgstr "Transaction list"
-
-#: main.py:203 main.py:315 main.py:324 modules/basehandlers.py:60
-#: wallet.py:264 wallet.py:375 wallet.py:401 wallet.py:415 wallet.py:421
-#: wallet.py:436 wallet.py:445 wallet.py:451 wallet.py:460 wallet.py:474
-#: wallet.py:489 wallet.py:497 wallet.py:506 wallet.py:512 wallet.py:523
-msgid "Error"
-msgstr "Error"
-
-#: main.py:315 wallet.py:436
-msgid "This file already exists: {}.der"
-msgstr "This file already exists: {}.der"
-
-#: main.py:324 wallet.py:445
-msgid "Error creating {}.der"
-msgstr "Error creating {}.der"
-
-#: themes/material/transactions.html:79
-msgid "Txid"
-msgstr "Txid"
-
-#: themes/material/transactions.html:84
-msgid "Fees"
-msgstr "Fees"
-
-#: themes/material/transactions.html:85
-msgid "Data"
-msgstr "Data"
-
-#: themes/material/transactions_receive.html:16
-msgid "Request BIS"
-msgstr "Request BIS"
-
-#: themes/material/transactions_receive.html:20
-msgid "Your address"
-msgstr "Your address"
-
-#: themes/material/transactions_receive.html:22
-msgid "This is your address for current wallet, but you can change it if needed. Double check then."
-msgstr "This is your address for current wallet, but you can change it if needed. Double check then."
-
-#: themes/material/transactions_receive.html:30
-msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-msgstr "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
-
-#: themes/material/transactions_receive.html:35
-msgid "This is the QR code for your address only."
-msgstr "This is the QR code for your address only."
-
-#: themes/material/transactions_receive.html:47
-msgid "How many BIS to request."
-msgstr "How many BIS to request."
-
-#: themes/material/transactions_receive.html:56
-msgid "This is what you will receive"
-msgstr "This is what you will receive"
-
-#: themes/material/transactions_receive.html:63
-#: themes/material/transactions_send.html:68
-#: themes/material/transactions_send_confirm.html:72
-#: themes/material/transactions_sendpop_confirm.html:48
-msgid "Fees depend on Data length"
-msgstr "Fees depend on Data length"
-
-#: themes/material/transactions_receive.html:68
-msgid "This is what the sender will pay"
-msgstr "This is what the sender will pay"
-
-#: themes/material/transactions_receive.html:72
-msgid "Get BIS URL"
-msgstr "Get BIS URL"
-
-#: themes/material/transactions_receive.html:78
-msgid "This is the QR code for your address, data and amount as a BisUrl."
-msgstr "This is the QR code for your address, data and amount as a BIS URL"
-
-#: themes/material/transactions_receive.html:79
-msgid "You can copy/paste this image to send in a mail or anything"
-msgstr "You can copy/paste this image to send in a mail or elsewhere"
-
-#: themes/material/transactions_send.html:61
-#: themes/material/transactions_send_confirm.html:65
-#: themes/material/transactions_sendpop_confirm.html:41
-msgid "This is what the recipient will receive"
-msgstr "This is what the recipient will receive"
-
-#: themes/material/transactions_send.html:73
-#: themes/material/transactions_send_confirm.html:77
-#: themes/material/transactions_sendpop_confirm.html:54
-msgid "This is what you will pay, fees included."
-msgstr "This is what you will pay, fees included."
-
-#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:102
-msgid "Action"
-msgstr "Action"
-
-#: themes/material/about_credits.html:52
-msgid "Translations"
-msgstr "Translations"
-
-#: themes/material/transactions_send_confirm.html:117
-#: themes/material/transactions_sendpop_confirm.html:103
-#: themes/material/wallet_load.html:150
-msgid "Cancel"
-msgstr "Cancel"
-
-#: themes/material/transactions_send_confirm.html:122
-#: themes/material/transactions_sendpop_confirm.html:111
-msgid "Confirm and send BIS"
-msgstr "Confirm and send BIS"
-
-#: main.py:144 main.py:172 wallet.py:161 wallet.py:190 wallet.py:212
-msgid "Send BIS: Confirmation"
-msgstr "Send BIS: Confirmation"
-
-#: main.py:146 main.py:174 wallet.py:163 wallet.py:192 wallet.py:214
-msgid "Please confirm this transaction"
-msgstr "Please confirm this transaction"
-
-#: main.py:147 main.py:175 wallet.py:164 wallet.py:193 wallet.py:215
-msgid "Check this is what you intended to do and hit the \"confirm\" button"
-msgstr "Check this is what you intended to do and hit the \"confirm\" button"
-
-#: main.py:227 wallet.py:309
-msgid "Receive BIS"
-msgstr "Receive BIS"
-
-#: themes/material/about_credits.html:36
-msgid "Wallet template {} by {}."
-msgstr "Wallet template {} by {}."
-
-#: themes/material/about_credits.html:53
-msgid "Many thanks to our translators and proofreaders"
-msgstr "Many thanks to our translators and proofreaders"
-
-#: themes/material/about_network.html:22
-msgid "Wallet server version {}"
-msgstr "Wallet  server version {}"
-
-#: themes/material/base.html:173
-msgid "Wallet"
-msgstr "wallet"
-
-#: crystals/250_autogame/themes/default/about.html:19
-#: themes/material/transactions_receive.html:81
-#: themes/material/transactions_send.html:100
-#: themes/material/transactions_send.html:108
-msgid "BIS URL"
-msgstr "BIS URL"
-
-#: themes/material/wallet_load.html:16
-msgid "Your Bismuth wallets"
-msgstr "Your Bismuth wallets"
-
-#: themes/material/wallet_load.html:20
-msgid "Your wallets directory is {}"
-msgstr "Your wallets directory is {}"
-
-#: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
-#: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
-#: wallet.py:181 wallet.py:185 wallet.py:197 wallet.py:228 wallet.py:234
-#: wallet.py:237 wallet.py:244 wallet.py:271 wallet.py:274 wallet.py:281
-#: wallet.py:296 wallet.py:302 wallet.py:306 wallet.py:657 wallet.py:661
-#: wallet.py:668 wallet.py:680
-msgid "Error:"
-msgstr "Error:"
-
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
-#: wallet.py:271 wallet.py:302 wallet.py:657
-msgid "Load your wallet first"
-msgstr "Load your wallet first"
-
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
-#: wallet.py:271 wallet.py:302 wallet.py:657
-msgid "No Wallet"
-msgstr "No Wallet"
-
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
-#: wallet.py:274 wallet.py:306 wallet.py:661
-msgid "Encrypted wallet"
-msgstr "Encrypted wallet"
-
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
-#: wallet.py:274 wallet.py:306 wallet.py:375 wallet.py:415 wallet.py:661
-msgid "You have to unlock your wallet first"
-msgstr "You have to unlock your wallet first"
-
-#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
-msgid "Success:"
-msgstr "Success:"
-
-#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
-msgid "Transaction sent"
-msgstr "Transaction sent"
-
-#: main.py:194 main.py:217 wallet.py:255 wallet.py:292
-msgid "The transaction was submitted to the mempool."
-msgstr "The transaction was submitted to the mempool."
-
-#: main.py:196 main.py:219 wallet.py:257 wallet.py:294
-msgid "Txid is {}"
-msgstr "Txid is {}"
-
-#: main.py:201 main.py:221 wallet.py:262 wallet.py:296
-msgid "There was an error submitting to the mempool, transaction was not sent."
-msgstr "There was an error submitting to the mempool, transaction was not sent."
-
-#: crystals/200_dragginator/themes/default/about.html:89
-#: modules/basehandlers.py:55
-msgid "No Bismuth address, please create or load a wallet first."
-msgstr "No Bismuth address, please create or load a wallet first."
-
-#: themes/material/base.html:95 themes/material/crystals_list.html:11
-msgid "Crystals"
-msgstr "Crystals"
-
-#: themes/material/base.html:131
-msgid "Search..."
-msgstr "Search..."
-
-#: themes/material/crystals_list.html:12
-msgid "Crystals are extra functionalities you can add to your wallet"
-msgstr "Crystals are extra functionalities you can add to your wallet"
-
-#: crystals/100_bismuthprice/themes/default/about.html:11
-#: crystals/100_bismuthprice/themes/default/modules/home.html:16
-msgid "Crystal"
-msgstr "Crystal"
-
-#: crystals/100_bismuthprice/themes/default/about.html:28
-#: crystals/210_eggpool/themes/default/about.html:29
-#: crystals/250_autogame/themes/default/about.html:39
-msgid "Version"
-msgstr "Version"
-
-#: crystals/100_bismuthprice/themes/default/modules/home.html:4
-msgid "Current Bismuth Prices"
-msgstr "Current Bismuth Prices"
-
-#: crystals/200_dragginator/themes/default/egg.html:20
-msgid "BIS"
-msgstr "BIS"
-
-#: main.py:198 wallet.py:259
-msgid "Success"
-msgstr "Success"
-
-#: themes/material/transactions_confirmpop.html:10
-msgid "Confirm Transaction"
-msgstr "Confirm Transaction"
-
-#: themes/material/transactions_send.html:36
-#: themes/material/transactions_sendpop_confirm.html:61
-msgid "Operation"
-msgstr "Operation"
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/layout_old.html:29
-msgid "Navigation"
-msgstr "Navigation"
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:11
-msgid "Search"
-msgstr "Search"
-
-#: .buildozer/android/platform/python-for-android-new-toolchain/doc/source/ext/sphinx_rtd_theme/sphinx_rtd_theme/search.html:33
-msgid "Search Results"
-msgstr "Search Results"
-
-#: crystals/200_dragginator/__init__.py:64
-msgid "D:Air egg"
-msgstr "Air egg"
 
 #: crystals/200_dragginator/__init__.py:63
 msgid "D:Earth egg"
@@ -651,6 +240,10 @@ msgstr "Fire Egg"
 msgid "D:Water egg"
 msgstr "Water egg"
 
+#: crystals/200_dragginator/__init__.py:64
+msgid "D:Air egg"
+msgstr "Air egg"
+
 #: crystals/200_dragginator/__init__.py:68
 msgid "D:Cup"
 msgstr "Cup"
@@ -663,6 +256,10 @@ msgstr "Special egg"
 msgid "D:world cup 2018"
 msgstr "2018 World Cup"
 
+#: crystals/200_dragginator/themes/default/about.html:15
+msgid "D:Buy an egg for {} BIS"
+msgstr "Buy an egg for {} BIS"
+
 #: crystals/200_dragginator/themes/default/about.html:21
 msgid "D:Dragginator News"
 msgstr "Dragginator news"
@@ -670,6 +267,10 @@ msgstr "Dragginator news"
 #: crystals/200_dragginator/themes/default/about.html:36
 msgid "D:My eggs"
 msgstr "My eggs"
+
+#: crystals/200_dragginator/themes/default/about.html:44
+msgid "D:You don't own any egg ;("
+msgstr "You don't own any egg ;("
 
 #: crystals/200_dragginator/themes/default/about.html:47
 msgid "D:And you are registered to the current eggdrop"
@@ -683,6 +284,10 @@ msgstr "Register"
 #: crystals/200_dragginator/themes/default/about.html:49
 msgid "D:So you can register to the eggdrop!"
 msgstr "So you can register to the eggdrop!"
+
+#: crystals/200_dragginator/themes/default/about.html:54
+msgid "D:You own {} eggs"
+msgstr "You own {} eggs"
 
 #: crystals/200_dragginator/themes/default/about.html:61
 msgid "D:DNA"
@@ -698,6 +303,20 @@ msgstr "Element"
 msgid "D:Species"
 msgstr "Species"
 
+#: crystals/200_dragginator/themes/default/about.html:64
+msgid "D:Class"
+msgstr ""
+
+#: crystals/200_dragginator/themes/default/about.html:75
+#: crystals/200_dragginator/themes/default/about.html:77
+msgid "D:"
+msgstr ""
+
+#: crystals/200_dragginator/themes/default/about.html:92
+#: modules/basehandlers.py:59
+msgid "No Bismuth address, please create or load a wallet first."
+msgstr "No Bismuth address, please create or load a wallet first."
+
 #: crystals/200_dragginator/themes/default/egg.html:11
 msgid "D:DNA:"
 msgstr "DNA:"
@@ -706,9 +325,21 @@ msgstr "DNA:"
 msgid "D:See on Dragginator.com"
 msgstr "See on Dragginator.com"
 
+#: crystals/200_dragginator/themes/default/egg.html:20
+msgid "BIS"
+msgstr "BIS"
+
 #: crystals/200_dragginator/themes/default/egg.html:23
 msgid "D:Archive"
 msgstr "Archive"
+
+#: crystals/200_dragginator/themes/default/egg.html:32
+msgid "D:draggon"
+msgstr "draggon"
+
+#: crystals/200_dragginator/themes/default/egg.html:33
+msgid "D:egg"
+msgstr "egg"
 
 #: crystals/200_dragginator/themes/default/egg.html:58
 msgid "D:Age"
@@ -718,25 +349,55 @@ msgstr "Age"
 msgid "D:Rarity"
 msgstr "Rarity"
 
-#: crystals/200_dragginator/themes/default/egg.html:69
+#: crystals/200_dragginator/themes/default/egg.html:70
 msgid "D:You own this egg"
 msgstr "You own this egg"
 
-#: crystals/200_dragginator/themes/default/egg.html:72
+#: crystals/200_dragginator/themes/default/egg.html:73
 msgid "D:You don't own this egg"
 msgstr "You don't own this egg"
 
-#: crystals/200_dragginator/themes/default/egg.html:86
+#: crystals/200_dragginator/themes/default/egg.html:87
 msgid "D:Send this egg to..."
 msgstr "Send this egg to..."
 
-#: crystals/200_dragginator/themes/default/egg.html:89
+#: crystals/200_dragginator/themes/default/egg.html:90
 msgid "D:Sell this egg for BIS"
 msgstr "Sell this egg for BIS"
 
-#: crystals/200_dragginator/themes/default/egg.html:95
+#: crystals/200_dragginator/themes/default/egg.html:92
+msgid "D:Price"
+msgstr "Price"
+
+#: crystals/200_dragginator/themes/default/egg.html:98
+#, fuzzy
+msgid "D:Register this egg to the hunt"
+msgstr "Remove this egg from the marketplace"
+
+#: crystals/200_dragginator/themes/default/egg.html:105
+msgid "D:This egg can hatch"
+msgstr ""
+
+#: crystals/200_dragginator/themes/default/egg.html:108
+#, fuzzy
+msgid "D:You can find this egg"
+msgstr "You own this egg"
+
+#: crystals/200_dragginator/themes/default/egg.html:118
 msgid "D:Remove this egg from the marketplace"
 msgstr "Remove this egg from the marketplace"
+
+#: crystals/200_dragginator/themes/default/egg.html:127
+msgid "D:Buy for {} BIS"
+msgstr "Buy for {} BIS"
+
+#: crystals/210_eggpool/__init__.py:68
+msgid "No data"
+msgstr "No data"
+
+#: crystals/210_eggpool/__init__.py:85
+msgid "This crystal is activated but needs a wallet restart."
+msgstr "This crystal is activated but needs a wallet restart."
 
 #: crystals/210_eggpool/themes/default/about.html:14
 msgid "EP:Direct Link to official Dashboard"
@@ -768,146 +429,468 @@ msgstr "Shares"
 msgid "EP:Workers"
 msgstr "Workers"
 
-#: modules/i18n.py:22
-msgid "DT:Processing..."
-msgstr "Processing..."
+#: crystals/212_docshield/themes/default/about.html:34
+msgid "Load Document"
+msgstr ""
 
-#: modules/i18n.py:23
-msgid "DT:Search&nbsp;..."
-msgstr "Search&nbsp;..."
+#: crystals/212_docshield/themes/default/about.html:74
+#, fuzzy
+msgid "Submit Transaction 1"
+msgstr "Transactions"
 
-#: modules/i18n.py:24
-msgid "DT:Display _MENU_ elements"
-msgstr "Display _MENU_ elements"
+#: crystals/212_docshield/themes/default/about.html:75
+#, fuzzy
+msgid "Submit Transaction 2"
+msgstr "Transactions"
 
-#: modules/i18n.py:25
-msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
-msgstr "Display element _START_ to _END_ from _TOTAL_ elements"
+#: crystals/250_autogame/themes/default/about.html:14
+msgid "AG:Direct Link to latest autogame doc."
+msgstr "Direct Link to latest autogame doc."
 
-#: modules/i18n.py:26 modules/i18n.py:30
-msgid "DT:Nothing to display"
-msgstr "Nothing to display"
+#: crystals/250_autogame/themes/default/about.html:19
+#: themes/material/transactions_receive.html:81
+#: themes/material/transactions_send.html:100
+#: themes/material/transactions_send.html:108
+msgid "BIS URL"
+msgstr "BIS URL"
 
-#: modules/i18n.py:27
-msgid "DT:filtered from _MAX_ total elements"
-msgstr "filtered from _MAX_ total elements"
+#: crystals/250_autogame/themes/default/about.html:21
+#: themes/material/transactions_send.html:110
+msgid "Paste the BIS URL you were given here"
+msgstr "Paste the BIS URL you were given here"
 
-#: modules/i18n.py:29
-msgid "DT:Loading..."
-msgstr "Loading..."
+#: crystals/250_autogame/themes/default/about.html:52
+msgid "AG:Your games"
+msgstr "Your games"
 
-#: modules/i18n.py:31
-msgid "DT:No data in the table"
-msgstr "No data in the table"
+#: crystals/250_autogame/themes/default/about.html:59
+msgid "Replay"
+msgstr "Replay"
 
-#: modules/i18n.py:33
-msgid "DT:First"
-msgstr "First"
+#: crystals/250_autogame/themes/default/about.html:76
+msgid "AG:Game detail"
+msgstr "Game detail"
 
-#: modules/i18n.py:34
-msgid "DT:Previous"
-msgstr "Previous"
+#: crystals/250_autogame/themes/default/replay_pop.html:2
+msgid "AG:Game {} replay"
+msgstr "Game {} replay"
 
-#: modules/i18n.py:35
-msgid "DT:Next"
-msgstr "Next"
+#: crystals/250_autogame/themes/default/status_pop.html:2
+msgid "AG:Game {} status"
+msgstr "Game {} status"
 
-#: modules/i18n.py:36
-msgid "DT:Last"
-msgstr "Last"
+#: modules/basehandlers.py:64
+msgid "Wallet server did not send an answer. Please try again."
+msgstr "Wallet server did not send an answer. Please try again."
 
-#: modules/i18n.py:39
-msgid "DT:Sort by ascending order"
-msgstr "Sort by ascending order"
-
-#: modules/i18n.py:40
-msgid "DT:Sort by descending order"
-msgstr "Sort by descending order"
-
-#: crystals/200_dragginator/themes/default/about.html:44
-msgid "D:You don't own any egg ;("
-msgstr "You don't own any egg ;("
-
-#: crystals/200_dragginator/themes/default/about.html:15
-msgid "D:Buy an egg for {} BIS"
-msgstr "Buy an egg for {} BIS"
-
-#: crystals/200_dragginator/themes/default/about.html:54
-msgid "D:You own {} eggs"
-msgstr "You own {} eggs"
-
-#: crystals/200_dragginator/themes/default/egg.html:104
-msgid "D:Buy for {} BIS"
-msgstr "Buy for {} BIS"
-
-#: crystals/200_dragginator/themes/default/egg.html:91
-msgid "D:Price"
-msgstr "Price"
-
-#: themes/material/transactions_confirmpop.html:7
-msgid "Transaction Status"
-msgstr "Transaction Status"
-
-#: themes/material/transactions_confirmpop.html:23
-msgid "OK"
-msgstr "OK"
-
-#. Mentally replace "until" by "unless"
-#: themes/material/transactions_send.html:38
-msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
-msgstr "\"operation\" allows for powerful Bismuth Features. Leave empty unless otherwise required."
-
-#: crystals/210_eggpool/__init__.py:68
-msgid "No data"
-msgstr "No data"
-
-#: crystals/210_eggpool/__init__.py:85
-msgid "This crystal is activated but needs a wallet restart."
-msgstr "This crystal is activated but needs a wallet restart."
-
-#: modules/i18n.py:8 themes/material/wallet_info.html:235
+#: modules/i18n.py:58 themes/material/wallet_info.html:235
 msgid "No protection"
 msgstr "No protection"
 
-#: modules/i18n.py:10 themes/material/wallet_info.html:232
+#: modules/i18n.py:60 themes/material/wallet_info.html:232
+#: themes/material/wallet_info.html:238 themes/material/wallet_info.html:241
 msgid "PIN Code"
 msgstr "PIN Code"
 
-#: modules/i18n.py:12 themes/material/wallet_info.html:233
+#: modules/i18n.py:62 themes/material/wallet_info.html:233
 msgid "YUBICO"
 msgstr "YUBICO"
 
-#: modules/i18n.py:14
+#: modules/i18n.py:64
 msgid "U2F Token"
 msgstr "U2F Token"
 
-#: themes/material/base.html:117
+#: modules/i18n.py:72
+msgid "DT:Processing..."
+msgstr "Processing..."
+
+#: modules/i18n.py:73
+msgid "DT:Search&nbsp;..."
+msgstr "Search&nbsp;..."
+
+#: modules/i18n.py:74
+msgid "DT:Display _MENU_ elements"
+msgstr "Display _MENU_ elements"
+
+#: modules/i18n.py:75
+msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
+msgstr "Display element _START_ to _END_ from _TOTAL_ elements"
+
+#: modules/i18n.py:76 modules/i18n.py:80
+msgid "DT:Nothing to display"
+msgstr "Nothing to display"
+
+#: modules/i18n.py:77
+msgid "DT:filtered from _MAX_ total elements"
+msgstr "filtered from _MAX_ total elements"
+
+#: modules/i18n.py:79
+msgid "DT:Loading..."
+msgstr "Loading..."
+
+#: modules/i18n.py:81
+msgid "DT:No data in the table"
+msgstr "No data in the table"
+
+#: modules/i18n.py:83
+msgid "DT:First"
+msgstr "First"
+
+#: modules/i18n.py:84
+msgid "DT:Previous"
+msgstr "Previous"
+
+#: modules/i18n.py:85
+msgid "DT:Next"
+msgstr "Next"
+
+#: modules/i18n.py:86
+msgid "DT:Last"
+msgstr "Last"
+
+#: modules/i18n.py:89
+msgid "DT:Sort by ascending order"
+msgstr "Sort by ascending order"
+
+#: modules/i18n.py:90
+msgid "DT:Sort by descending order"
+msgstr "Sort by descending order"
+
+#: themes/material/about_credits.html:10 themes/material/base.html:246
+msgid "Credits"
+msgstr "Credits"
+
+#: themes/material/about_credits.html:11
+msgid "This wallet wouldn't have existed without..."
+msgstr "This wallet wouldn't have existed without..."
+
+#: themes/material/about_credits.html:19
+msgid "Python, awesome language!"
+msgstr "Python, awesome language!"
+
+#: themes/material/about_credits.html:20
+msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
+msgstr "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
+
+#: themes/material/about_credits.html:35
+msgid "Tornado wallet version {}"
+msgstr "Tornado wallet version {}"
+
+#: themes/material/about_credits.html:36
+msgid "BismuthClient version {}"
+msgstr ""
+
+#: themes/material/about_credits.html:37
+msgid "Wallet template {} by {}."
+msgstr "Wallet template {} by {}."
+
+#: themes/material/about_credits.html:53
+msgid "Translations"
+msgstr "Translations"
+
+#: themes/material/about_credits.html:54
+msgid "Many thanks to our translators and proofreaders"
+msgstr "Many thanks to our translators and proofreaders"
+
+#: themes/material/about_help.html:10
+msgid "Get help"
+msgstr ""
+
+#: themes/material/about_help.html:15
+#, fuzzy
+msgid "Wallet F.A.Q."
+msgstr "wallet"
+
+#: themes/material/about_help.html:18 themes/material/base.html:231
+msgid "Discord"
+msgstr "Discord"
+
+#: themes/material/about_network.html:14
+msgid "Current wallet server"
+msgstr "Current wallet server"
+
+#: themes/material/about_network.html:16
+msgid "This is the server you're connected to."
+msgstr "This is the server you're connected to."
+
+#: themes/material/about_network.html:19
+msgid "Server:"
+msgstr "Server:"
+
+#: themes/material/about_network.html:21
+msgid "IP"
+msgstr "IP"
+
+#: themes/material/about_network.html:22
+msgid "Wallet server version {}"
+msgstr "Wallet  server version {}"
+
+#: themes/material/about_network.html:25
+msgid "Connected clients:"
+msgstr "Connected clients:"
+
+#: themes/material/about_network.html:26
+msgid "Protocol"
+msgstr "Protocol"
+
+#: themes/material/about_network.html:27
+msgid "Node Version"
+msgstr "Node Version"
+
+#: themes/material/about_network.html:28
+msgid "Peers connections:"
+msgstr "Peers connections:"
+
+#: themes/material/about_network.html:29
+msgid "UpTime:"
+msgstr "UpTime:"
+
+#: themes/material/about_network.html:30
+msgid "Time Drift:"
+msgstr ""
+
+#: themes/material/about_network.html:31
+msgid "Consensus:"
+msgstr "Consensus:"
+
+#: themes/material/about_network.html:53
+msgid "Block"
+msgstr "Block"
+
+#: themes/material/about_network.html:65
+msgid "Difficulty"
+msgstr "Difficulty"
+
+#: themes/material/about_network.html:78
+msgid "Available wallet servers"
+msgstr "Available wallet servers"
+
+#: themes/material/about_network.html:80
+msgid "servers"
+msgstr "servers"
+
+#: themes/material/about_network.html:86
+msgid "Height"
+msgstr "Height"
+
+#: themes/material/about_network.html:86
+msgid "Load"
+msgstr "Load"
+
+#: themes/material/about_network.html:89
+msgid "Refresh from API"
+msgstr "Refresh from API"
+
+#: themes/material/base.html:44
+msgid "Bismuth Wallet"
+msgstr "Bismuth Wallet"
+
+#: themes/material/base.html:52
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: themes/material/base.html:58
+msgid "Transactions"
+msgstr "Transactions"
+
+#: themes/material/base.html:65
+msgid "Address book"
+msgstr "Address book"
+
+#: themes/material/base.html:71 themes/material/tokens_list.html:10
+msgid "Tokens"
+msgstr "Tokens"
+
+#: themes/material/base.html:78
+msgid "Messages"
+msgstr "Messages"
+
+#: themes/material/base.html:85
+msgid "Network"
+msgstr "Network"
+
+#: themes/material/base.html:97 themes/material/crystals_list.html:11
+msgid "Crystals"
+msgstr "Crystals"
+
+#: themes/material/base.html:119
 msgid "Wallet info"
 msgstr "Wallet info"
 
-#: themes/material/crystals_list.html:48
+#: themes/material/base.html:125
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: themes/material/base.html:134
+msgid "Search..."
+msgstr "Search..."
+
+#: themes/material/base.html:186
+msgid "Wallet"
+msgstr "wallet"
+
+#: themes/material/base.html:221
+msgid "Source"
+msgstr "Source"
+
+#: themes/material/base.html:226
+msgid "Blog"
+msgstr "Blog"
+
+#: themes/material/base.html:236
+msgid "Donate"
+msgstr "Donate"
+
+#: themes/material/base.html:241
+msgid "Help"
+msgstr ""
+
+#: themes/material/base.html:252
+msgid "block #"
+msgstr "block #"
+
+#: themes/material/base.html:272
+msgid "Sidebar Filters"
+msgstr "Sidebar Filters"
+
+#: themes/material/base.html:285
+msgid "Images"
+msgstr "Images"
+
+#: themes/material/crystals_list.html:12
+msgid "Crystals are extra functionalities you can add to your wallet"
+msgstr "Crystals are extra functionalities you can add to your wallet"
+
+#: themes/material/crystals_list.html:19
+#, fuzzy
+msgid "Active"
+msgstr "Action"
+
+#: themes/material/crystals_list.html:20
+msgid "Name"
+msgstr ""
+
+#: themes/material/crystals_list.html:21 themes/material/home.html:81
+#: themes/material/transactions.html:80
+msgid "Date"
+msgstr "Date"
+
+#: themes/material/crystals_list.html:22
+#, fuzzy
+msgid "Description"
+msgstr "Operation"
+
+#: themes/material/crystals_list.html:23
+msgid "Author"
+msgstr ""
+
+#: themes/material/crystals_list.html:24
+msgid "Learn more..."
+msgstr ""
+
+#: themes/material/crystals_list.html:44
+msgid "More..."
+msgstr ""
+
+#: themes/material/crystals_list.html:53
 msgid "Apply"
 msgstr "Apply"
+
+#: themes/material/home.html:15 themes/material/transactions.html:15
+#: themes/material/wallet_load.html:35
+msgid "Balance"
+msgstr "Balance"
+
+#: themes/material/home.html:34 themes/material/transactions.html:34
+msgid "Send"
+msgstr "Send"
+
+#: themes/material/home.html:39 themes/material/transactions.html:39
+msgid "Send $BIS to..."
+msgstr "Send $BIS to..."
+
+#: themes/material/home.html:53 themes/material/transactions.html:53
+#: themes/material/transactions_receive.html:15
+msgid "Receive"
+msgstr "Receive"
+
+#: themes/material/home.html:58 themes/material/transactions.html:58
+msgid "Request a $BIS payment"
+msgstr "Request a $BIS payment"
+
+#: themes/material/home.html:74 themes/material/transactions.html:73
+msgid "Latest transactions"
+msgstr "Latest transactions"
+
+#: themes/material/home.html:75 themes/material/transactions.html:74
+#: themes/material/wallet_load.html:56
+msgid "Updated on"
+msgstr "Updated on"
+
+#: themes/material/home.html:80 themes/material/transactions.html:79
+msgid "Txid"
+msgstr "Txid"
+
+#: themes/material/home.html:82 themes/material/transactions.html:81
+#: themes/material/wallet_load.html:62 themes/material/wallet_load.html:125
+#: themes/material/wallet_load.html:166
+msgid "Address"
+msgstr "Address"
+
+#: themes/material/home.html:83 themes/material/transactions.html:82
+#: themes/material/transactions_receive.html:46
+#: themes/material/transactions_send.html:52
+#: themes/material/transactions_send_confirm.html:55
+msgid "Amount"
+msgstr "Amount"
+
+#: themes/material/home.html:84 themes/material/transactions.html:83
+msgid "Type"
+msgstr "Type"
+
+#: themes/material/home.html:118 themes/material/messages_pop.html:34
+#: themes/material/transactions.html:122
+#: themes/material/transactions_receive.html:84
+msgid "Copied to Clipboard"
+msgstr "Copied to Clipboard"
+
+#: themes/material/home.html:147
+msgid "Account balance"
+msgstr "Account balance"
+
+#: themes/material/home.html:148
+msgid "Last 12 months"
+msgstr "Last 12 months"
+
+#: themes/material/home.html:152
+msgid "Mockup with fake data"
+msgstr "Mockup with fake data"
+
+#: themes/material/home.html:161
+msgid "Bismuth news"
+msgstr "Bismuth news"
+
+#: themes/material/message.html:16
+#: themes/material/transactions_send_confirm.html:16
+#: themes/material/wallet_import_encrypted_der1.html:48
+msgid "Previous page"
+msgstr "Previous page"
 
 #: themes/material/message_pop.html:23 themes/material/messages_pop.html:31
 msgid "Close"
 msgstr "Close"
 
-#: themes/material/messages.html:15 wallet.py:655
-msgid "Sign message"
-msgstr "Sign message"
-
 #: themes/material/messages.html:16
 msgid "Sign some data for off chain usage with your private key."
 msgstr "Sign some data for off chain usage with your private key."
 
-#: themes/material/messages.html:26
-#: themes/material/transactions_send_confirm.html:104
-#: themes/material/transactions_sendpop_confirm.html:91
-#: themes/material/wallet_info.html:218 themes/material/wallet_info.html:219
-#: wallet.py:244 wallet.py:281 wallet.py:668
-msgid "Spend protection"
-msgstr "Spend protection"
+#: themes/material/messages.html:20 themes/material/messages.html:57
+#: themes/material/transactions_receive.html:27
+#: themes/material/transactions_send.html:25
+#: themes/material/transactions_send_confirm.html:39
+#: themes/material/transactions_sendpop_confirm.html:68
+msgid "Data (message)"
+msgstr "Data (message)"
 
 #: themes/material/messages.html:37
 msgid "Sign Message"
@@ -921,6 +904,12 @@ msgstr "Encrypt message"
 msgid "Encrypt data for off chain usage."
 msgstr "Encrypt data for off chain usage."
 
+#: themes/material/messages.html:61 themes/material/transactions_send.html:20
+#: themes/material/transactions_send_confirm.html:33
+#: themes/material/transactions_sendpop_confirm.html:29
+msgid "Recipient"
+msgstr "Recipient"
+
 #: themes/material/messages.html:63
 msgid "You have to tell the recipient address so the message can be encrypted with his public key"
 msgstr "You have to tell the recipient address so the message can be encrypted with his public key"
@@ -929,24 +918,156 @@ msgstr "You have to tell the recipient address so the message can be encrypted w
 msgid "Encrypt Message"
 msgstr "Encrypt Message"
 
+#: themes/material/messages.html:82 themes/material/wip.html:10
+msgid "W.I.P."
+msgstr "W.I.P."
+
+#: themes/material/messages.html:85 themes/material/wip.html:13
+msgid "This feature is under construction."
+msgstr "This feature is under construction."
+
 #: themes/material/messages_pop.html:24
 #: themes/material/transactions_receive.html:81
 msgid "Click text to copy"
 msgstr "Click text to copy"
 
-#: themes/material/messages_pop.html:34
-#: themes/material/transactions_receive.html:84
-msgid "Copied to Clipboard"
-msgstr "Copied to Clipboard"
+#: themes/material/tokens_list.html:11
+msgid "Tokens are a core BIS functionality"
+msgstr "Tokens are a core BIS functionality"
+
+#: themes/material/transactions.html:84
+msgid "Fees"
+msgstr "Fees"
+
+#: themes/material/transactions.html:85
+msgid "Data"
+msgstr "Data"
+
+#: themes/material/transactions_confirmpop.html:7
+msgid "Transaction Status"
+msgstr "Transaction Status"
+
+#: themes/material/transactions_confirmpop.html:23
+msgid "OK"
+msgstr "OK"
+
+#: themes/material/transactions_receive.html:16
+msgid "Request BIS"
+msgstr "Request BIS"
+
+#: themes/material/transactions_receive.html:20
+msgid "Your address"
+msgstr "Your address"
+
+#: themes/material/transactions_receive.html:22
+msgid "This is your address for current wallet, but you can change it if needed. Double check then."
+msgstr "This is your address for current wallet, but you can change it if needed. Double check then."
+
+#: themes/material/transactions_receive.html:30
+msgid "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+msgstr "Optionally, you can add a small comment to your transaction, like a reference of your own. Will be stored on chain."
+
+#: themes/material/transactions_receive.html:35
+msgid "This is the QR code for your address only."
+msgstr "This is the QR code for your address only."
+
+#: themes/material/transactions_receive.html:47
+msgid "How many BIS to request."
+msgstr "How many BIS to request."
+
+#: themes/material/transactions_receive.html:53
+#: themes/material/transactions_send.html:59
+#: themes/material/transactions_send_confirm.html:62
+#: themes/material/transactions_sendpop_confirm.html:38
+msgid "Amount (BIS)"
+msgstr "Amount (BIS)"
+
+#: themes/material/transactions_receive.html:56
+msgid "This is what you will receive"
+msgstr "This is what you will receive"
+
+#: themes/material/transactions_receive.html:61
+#: themes/material/transactions_send.html:66
+#: themes/material/transactions_send_confirm.html:70
+#: themes/material/transactions_sendpop_confirm.html:46
+msgid "Est. fees"
+msgstr "Est. fees"
+
+#: themes/material/transactions_receive.html:63
+#: themes/material/transactions_send.html:68
+#: themes/material/transactions_send_confirm.html:72
+#: themes/material/transactions_sendpop_confirm.html:48
+msgid "Fees depend on Data length"
+msgstr "Fees depend on Data length"
+
+#: themes/material/transactions_receive.html:66
+#: themes/material/transactions_send.html:71
+#: themes/material/transactions_send_confirm.html:75
+#: themes/material/transactions_sendpop_confirm.html:52
+msgid "Total (BIS)"
+msgstr "Total (BIS)"
+
+#: themes/material/transactions_receive.html:68
+msgid "This is what the sender will pay"
+msgstr "This is what the sender will pay"
+
+#: themes/material/transactions_receive.html:72
+msgid "Get BIS URL"
+msgstr "Get BIS URL"
+
+#: themes/material/transactions_receive.html:78
+msgid "This is the QR code for your address, data and amount as a BisUrl."
+msgstr "This is the QR code for your address, data and amount as a BIS URL"
+
+#: themes/material/transactions_receive.html:79
+msgid "You can copy/paste this image to send in a mail or anything"
+msgstr "You can copy/paste this image to send in a mail or elsewhere"
+
+#: themes/material/transactions_send.html:15
+#: themes/material/transactions_send_confirm.html:28
+msgid "Send To"
+msgstr "Send To"
+
+#: themes/material/transactions_send.html:16
+#: themes/material/transactions_send_confirm.html:29
+msgid "To whom send BIS."
+msgstr "To whom send BIS."
+
+#: themes/material/transactions_send.html:27
+#: themes/material/transactions_send_confirm.html:43
+#: themes/material/transactions_sendpop_confirm.html:73
+msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
+msgstr "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
+
+#: themes/material/transactions_send.html:36
+#: themes/material/transactions_sendpop_confirm.html:61
+msgid "Operation"
+msgstr "Operation"
+
+#: themes/material/transactions_send.html:38
+msgid "\"operation\" allows for powerful Bismuth Features. Leave empty until otherwise required."
+msgstr "\"operation\" allows for powerful Bismuth Features. Leave empty unless otherwise required."
+
+#: themes/material/transactions_send.html:53
+#: themes/material/transactions_send_confirm.html:56
+msgid "How many BIS to send."
+msgstr "How many BIS to send."
+
+#: themes/material/transactions_send.html:61
+#: themes/material/transactions_send_confirm.html:65
+#: themes/material/transactions_sendpop_confirm.html:41
+msgid "This is what the recipient will receive"
+msgstr "This is what the recipient will receive"
+
+#: themes/material/transactions_send.html:73
+#: themes/material/transactions_send_confirm.html:77
+#: themes/material/transactions_sendpop_confirm.html:54
+msgid "This is what you will pay, fees included."
+msgstr "This is what you will pay, fees included."
 
 #: themes/material/transactions_send.html:103
 msgid "Send a transaction from a BIS URL"
 msgstr "Send a transaction from a BIS URL"
-
-#: crystals/250_autogame/themes/default/about.html:21
-#: themes/material/transactions_send.html:110
-msgid "Paste the BIS URL you were given here"
-msgstr "Paste the BIS URL you were given here"
 
 #: themes/material/transactions_send.html:117
 msgid "Decode BIS URL"
@@ -955,6 +1076,44 @@ msgstr "Decode BIS URL"
 #: themes/material/transactions_send.html:123
 msgid "Send BIS URL..."
 msgstr "Send BIS URL..."
+
+#: themes/material/transactions_send_confirm.html:117
+#: themes/material/transactions_sendpop_confirm.html:103
+#: themes/material/wallet_load.html:179
+msgid "Cancel"
+msgstr "Cancel"
+
+#: themes/material/transactions_send_confirm.html:122
+#: themes/material/transactions_sendpop_confirm.html:111
+msgid "Confirm and send BIS"
+msgstr "Confirm and send BIS"
+
+#: themes/material/wallet_import_encrypted_der1.html:10
+#, fuzzy
+msgid "Password"
+msgstr "Master password"
+
+#: themes/material/wallet_import_encrypted_der1.html:20
+msgid "Enter wallet password for {}"
+msgstr ""
+
+#: themes/material/wallet_import_encrypted_der1.html:24
+#, fuzzy
+msgid "Wallet password"
+msgstr "Master password"
+
+#: themes/material/wallet_import_encrypted_der1.html:34
+#, fuzzy
+msgid "Import wallet"
+msgstr "Lock wallet"
+
+#: themes/material/wallet_import_encrypted_der1.html:41
+msgid "Wallet will be decrypted, imported, and re-encrypted ith the main wallet master password"
+msgstr ""
+
+#: themes/material/wallet_info.html:11
+msgid "Current Wallet"
+msgstr "Current Wallet"
 
 #: themes/material/wallet_info.html:16
 msgid "{} Address(es)"
@@ -992,6 +1151,10 @@ msgstr "Existing master password"
 msgid "This is the password that protects your private key(s)"
 msgstr "This is the password that protects your private key(s)"
 
+#: themes/material/wallet_info.html:85
+msgid "Unlock wallet"
+msgstr "Unlock wallet"
+
 #: themes/material/wallet_info.html:95
 msgid "Wallet is unlocked"
 msgstr "Wallet is unlocked"
@@ -999,6 +1162,14 @@ msgstr "Wallet is unlocked"
 #: themes/material/wallet_info.html:100
 msgid "You can lock it back for extra safety if you don't plan to use it soon."
 msgstr "You can lock it back for extra safety if you don't plan to use it soon."
+
+#: themes/material/wallet_info.html:106
+msgid "Lock wallet"
+msgstr "Lock wallet"
+
+#: themes/material/wallet_info.html:110
+msgid "You have to encrypt your wallet first to use this feature"
+msgstr "You have to encrypt your wallet first to use this feature"
 
 #: themes/material/wallet_info.html:137 themes/material/wallet_info.html:160
 #: themes/material/wallet_info.html:164 themes/material/wallet_info.html:244
@@ -1021,6 +1192,10 @@ msgstr "Retype Master password"
 msgid "Losing this password means loosing your keys!"
 msgstr "Losing this password means loosing your keys!"
 
+#: themes/material/wallet_info.html:183
+msgid "Set master password"
+msgstr "Set master password"
+
 #: themes/material/wallet_info.html:186
 msgid "This will encrypt your wallet file. You may want to backup the unencrypted file first."
 msgstr "This will encrypt your wallet file. You may want to backup the unencrypted file first."
@@ -1037,6 +1212,10 @@ msgstr "U2F TOKEN"
 msgid "Needed to confirm operation"
 msgstr "Needed to confirm operation"
 
+#: themes/material/wallet_info.html:254
+msgid "Set spend protection"
+msgstr "Set spend protection"
+
 #: themes/material/wallet_info.html:264
 msgid "Spending is currently not protected"
 msgstr "Spending is currently not protected"
@@ -1045,7 +1224,7 @@ msgstr "Spending is currently not protected"
 msgid "Spending is currently protected by {}"
 msgstr "Spending is currently protected by {}"
 
-#: themes/material/wallet_load.html:16 themes/material/wallet_load.html:36
+#: themes/material/wallet_load.html:16 themes/material/wallet_load.html:55
 msgid "Your Bismuth addresses"
 msgstr "Your Bismuth addresses"
 
@@ -1057,129 +1236,116 @@ msgstr "Your wallet directory is {}"
 msgid "Your wallet is {}"
 msgstr "Your wallet is {}"
 
-#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:73
-#: themes/material/wallet_load.html:142
+#: themes/material/wallet_load.html:40
+msgid "Click to query total balance"
+msgstr ""
+
+#: themes/material/wallet_load.html:61 themes/material/wallet_load.html:98
+#: themes/material/wallet_load.html:171
 msgid "Label"
 msgstr "Label"
 
-#: themes/material/wallet_load.html:44
+#: themes/material/wallet_load.html:63
 msgid "Creation date"
 msgstr "Creation date"
 
-#: themes/material/wallet_load.html:75
+#: themes/material/wallet_load.html:64 themes/material/wallet_load.html:127
+msgid "Action"
+msgstr "Action"
+
+#: themes/material/wallet_load.html:100
 msgid "A private label for the new address"
 msgstr "A private label for the new address"
 
-#: themes/material/wallet_load.html:80
+#: themes/material/wallet_load.html:105
 msgid "Create a new address"
 msgstr "Create a new address"
 
-#: themes/material/wallet_load.html:96
+#: themes/material/wallet_load.html:121
 msgid "Potential legacy wallet imports"
 msgstr "Potential legacy wallet imports"
 
-#: wallet.py:244 wallet.py:281 wallet.py:668
-msgid "Invalid PIN Number"
-msgstr "Invalid PIN Number"
+#: themes/material/wallet_load.html:124
+msgid "File"
+msgstr "File"
 
-#: wallet.py:401 wallet.py:421 wallet.py:460 wallet.py:474 wallet.py:489
-#: wallet.py:497 wallet.py:512 wallet.py:523
-msgid "Error: {}"
-msgstr "Error: {}"
+#: themes/material/wallet_load.html:126
+msgid "Encrypted"
+msgstr "Encrypted"
 
-#: wallet.py:451
-msgid "Max of {} addresses reached."
-msgstr "Max of {} addresses reached."
-
-#: wallet.py:506
-msgid "Passwords do not match"
-msgstr "Passwords do not match"
-
-#: wallet.py:674
-msgid "Your message '{}' has been signed."
-msgstr "Your message '{}' has been signed."
-
-#: wallet.py:676
-msgid "Signature"
-msgstr "Signature"
-
-#: wallet.py:680
-msgid "This feature is under construction. "
-msgstr "This feature is under construction. "
-
-#: crystals/200_dragginator/themes/default/egg.html:32
-msgid "D:draggon"
-msgstr "draggon"
-
-#: crystals/200_dragginator/themes/default/egg.html:33
-msgid "D:egg"
-msgstr "egg"
-
-#: crystals/250_autogame/themes/default/about.html:14
-msgid "AG:Direct Link to latest autogame doc."
-msgstr "Direct Link to latest autogame doc."
-
-#: crystals/250_autogame/themes/default/about.html:52
-msgid "AG:Your games"
-msgstr "Your games"
-
-#: crystals/250_autogame/themes/default/about.html:76
-msgid "AG:Game detail"
-msgstr "Game detail"
-
-#: themes/material/wallet_info.html:85
-msgid "Unlock wallet"
-msgstr "Unlock wallet"
-
-#: themes/material/wallet_info.html:106
-msgid "Lock wallet"
-msgstr "Lock wallet"
-
-#: themes/material/wallet_info.html:110
-msgid "You have to encrypt your wallet first to use this feature"
-msgstr "You have to encrypt your wallet first to use this feature"
-
-#: themes/material/wallet_info.html:183
-msgid "Set master password"
-msgstr "Set master password"
-
-#: themes/material/wallet_info.html:254
-msgid "Set spend protection"
-msgstr "Set spend protection"
-
-#: crystals/250_autogame/themes/default/about.html:59
-msgid "Replay"
-msgstr "Replay"
-
-#: crystals/250_autogame/themes/default/replay_pop.html:2
-msgid "AG:Game {} replay"
-msgstr "Game {} replay"
-
-#: crystals/250_autogame/themes/default/status_pop.html:2
-msgid "AG:Game {} status"
-msgstr "Game {} status"
-
-#: modules/basehandlers.py:60
-msgid "Wallet server did not send an answer. Please try again."
-msgstr "Wallet server did not send an answer. Please try again."
-
-#: themes/material/about_network.html:85
-msgid "Height"
-msgstr "Height"
-
-#: themes/material/about_network.html:85
-msgid "Load"
-msgstr "Load"
-
-#: themes/material/wallet_load.html:128
+#: themes/material/wallet_load.html:157
 msgid "Edit label"
 msgstr "Edit label"
 
-#: themes/material/wallet_load.html:144
+#: themes/material/wallet_load.html:173
 msgid "A private label for that address"
 msgstr "A private label for that address"
 
-#: themes/material/wallet_load.html:152
+#: themes/material/wallet_load.html:181
 msgid "Set label"
 msgstr "Set label"
 
+#: themes/material/wallet_load.html:182
+msgid "This can take some time, especially if your wallet is encrypted. Do not interrupt."
+msgstr ""
+
+#: wallet.py:171 wallet.py:213 wallet.py:232
+#, fuzzy
+msgid "No message"
+msgstr "Sign message"
+
+#: wallet.py:171 wallet.py:213 wallet.py:232
+msgid "Sending to this recipient needs a proper message"
+msgstr ""
+
+#: wallet.py:405
+msgid "Click"
+msgstr ""
+
+#~ msgid "Search Results"
+#~ msgstr "Search Results"
+
+#~ msgid "Search"
+#~ msgstr "Search"
+
+#~ msgid "Navigation"
+#~ msgstr "Navigation"
+
+#~ msgid "Confirm Transaction"
+#~ msgstr "Confirm Transaction"
+
+#~ msgid "Your wallets directory is {}"
+#~ msgstr "Your wallets directory is {}"
+
+#~ msgid "Your Bismuth wallets"
+#~ msgstr "Your Bismuth wallets"
+
+#~ msgid "new wallet"
+#~ msgstr "new wallet"
+
+#~ msgid "Create a"
+#~ msgstr "Create a"
+
+#~ msgid "Load a wallet from disk"
+#~ msgstr "Load a wallet from disk"
+
+#~ msgid "wallet"
+#~ msgstr "wallet"
+
+#~ msgid "Open existing"
+#~ msgstr "Open existing"
+
+#~ msgid "Cristals are extra functionalities you can add to your wallet"
+#~ msgstr "Crystals are extra functionalities you can add to your wallet"
+
+#~ msgid "Cristals"
+#~ msgstr "Crystals"
+
+#~ msgid "Wallet  server version {}"
+#~ msgstr "Wallet  server version {}"
+
+#~ msgid "This is the default wallet theme by {} from {}."
+#~ msgstr "This is the default wallet theme by {} from {}."
+
+#~ msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
+#~ msgstr "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
