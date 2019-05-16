@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.1.14'
+__version__ = '0.1.15'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
