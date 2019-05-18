@@ -9,7 +9,7 @@
 <script>
 var table = $('#missionTable').DataTable();
 
-function update_table(address) {
+function update_table_deprecated(address) {
     // Ledger query
     url = 'http://127.0.0.1:8888/json/addlist/' + address;
     // TODO: maybe a stricter query could be use, to avoid huge data on busy addresses
@@ -22,6 +22,22 @@ function update_table(address) {
         }
     }
 }
+
+function add_from_url(url) {
+    response = JSON.parse(httpGet(url));
+    for(i=0; i<response.length; i++) {
+        table.row.add([response[i][0], ts_to_ymdhms(response[i][1]),response[i][10],response[i][11]]).draw();
+    }
+}
+
+function update_table(address) {
+    $(".content").css({"cursor":"wait"});
+    table.clear();
+    add_from_url('http://127.0.0.1:8888/json/addlistopfrom/' + address + '/dochash:json')
+    add_from_url('http://127.0.0.1:8888/json/addlistopfrom/' + address + '/dochash:sha256')
+    $(".content").css({"cursor":"default"});
+}
+
 
 function check_exactopdata(op, data, field) {
     // Lookup for an exact match on operation and data fields.
@@ -110,5 +126,9 @@ function ipSubmit(tx,balance) {
         alert("Not a valid recipient address.");
     }
 }
+
+$(function() {
+    update_table(address)
+});
 
 </script>
