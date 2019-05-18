@@ -133,13 +133,17 @@
             <td>{{ wallet['file'] }}</td>
             {% if wallet['encrypted'] == False %}
                 <td><a href="/wallet/import_der/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
+                <td>{{ wallet['encrypted'] }}</td>
+                <td><a href="/wallet/import_der/{{ wallet['file'] }}">
+                    <i class="material-icons" title="{{ _('Import')}}">get_app</i>
+                </a></td>
             {% else %}
                 <td><a href="/wallet/import_encrypted_der1/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
+                <td>{{ wallet['encrypted'] }}</td>
+                <td><a href="/wallet/import_encrypted_der1/{{ wallet['file'] }}">
+                    <i class="material-icons" title="{{ _('Import')}}">get_app</i>
+                </a></td>
             {% end %}
-            <td>{{ wallet['encrypted'] }}</td>
-            <td><a href="/wallet/import_der/{{ wallet['file'] }}">
-                <i class="material-icons" title="{{ _('Import')}}">get_app</i>
-            </a></td>
         </tr>
         {% end %}
         </tbody>

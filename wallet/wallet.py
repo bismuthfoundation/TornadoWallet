@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.1.15'
+__version__ = '0.1.17'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -405,7 +405,14 @@ class WalletHandler(BaseHandler):
         global_balance = _('Click')
         if 'global' in params:
             # Ask the global balance
-            global_balance = self.bismuth.global_balance(for_display=True)
+            try:
+                global_balance = self.bismuth.global_balance(for_display=True)
+            except Exception as e:
+                self.app_log.warning("Exception {} global balance".format(e))
+                self.render("message.html", type="warning", title=_("Error"), message=_("Time out, please try reloading").format(e),
+                            bismuth=self.bismuth_vars)
+                return
+
         wallet_dir = helpers.get_private_dir()
         # This lists the old style wallets
         wallets = self.bismuth.list_wallets(wallet_dir)
