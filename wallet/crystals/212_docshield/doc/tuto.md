@@ -1,35 +1,31 @@
 # Docshield Tutorial: From need, to idea, to wallet embedded dApp.
 
-In this tutorial I'll guide you behind the scenes, in the making of the DocShield crystal dApp.  
-The Docshield itself is a nice use case for the Bismuth blockchain, 
-but the ease of development of such an application on top of the Bismuth infrastructure demoes better than anything 
-why BIS is a platform of choice for dApp developers, be them experienced or not, at ease with python or not. 
+In this tutorial I'll guide you behind the scenes in the making of the DocShield Crystal dApp.  
+The Docshield itself is a nice use case for the Bismuth blockchain, but the ease of development of such an application on top of Bismuth’s infrastructure demonstrates better than anything why BIS is a platform of choice for dApp developers-  no matter their experience or familiarity with Python.  
 
 ## The beginning
 
-Crystal Author GH2 had a precise need for Intellectual property protection, exposed in the ..... post.  
-That could be done with on chain registration/query of data, and he gave a try to build a simple but effective dapp with the crystals framework.  
+One of our Crystal developers had a precise need for Intellectual property protection, exposed in the https://hypernodes.bismuth.live/?p=494 post.  
+That could be done with on-chain registration/query of data, and he gave a try to build a simple but effective dApp with the Crystal framework.
 
 ## Tornado Wallet
-The tornado wallet (LINK) is both a regular GUI wallet and a powerful framework and API server.  
-It embeds
-- A low level connection layer to bismuth wallet server infrastrcuture (no obligation to run a local node)
-- Python framework with many helpers, and plugin support
-- A Web server
-- A themable HTML wallet, running on top of the framework
-- An Json API server for any wallet server supported command
-- A JS framework
+The Tornado wallet (https://github.com/bismuthfoundation/TornadoWallet) is a regular GUI wallet, a powerful framework, and API server.  
+It embeds:
+- A low level connection layer to the Bismuth wallet server infrastructure (no obligation to run a local node)  
+- Python framework with many helpers and plugin support  
+- A Web server  
+- A them-able HTML wallet, running on top of the framework  
+- A JSON API server for any wallet server supported command  
+- A JS framework  
 
 ## Crystals 
-Crystals can be seen as plugins. They are additional code that add features to the wallet, 
-and allow to seamlessly interact with dApps.  
-The framework is powerful, and allow to code the same thing via different approaches.
+Crystals can be seen as plugins. They are additional code that adds features to the wallet, and allows to seamlessly interact with dApps.  
+The framework is powerful, and allows to code the same thing via different approaches.
 
 # The Approach
 
-This crystal will focus on the JS framework. We'll suppose you have minimal python experience, 
-and handle most of the code as vanilla javascript and jQuery.  
-Crystal development is easy for anyone with basic web development knowledge, no need to be a blockchain or python guru. 
+This Crystal will focus on the JS framework. We'll suppose you have minimal Python experience, and handle most of the code as vanilla Javascript and jQuery.  
+Crystal development is easy for anyone with basic web development knowledge- no need to be a blockchain or python guru.
 
 ## Only 3 "code" files
 
