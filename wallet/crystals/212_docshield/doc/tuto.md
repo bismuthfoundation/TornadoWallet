@@ -126,7 +126,7 @@ The base theme uses the bootstrap css framework, should not be new for any web d
 
 The content itself is 4 blocks:
 
-(SCREEN)
+![docshield screenshot](https://hypernodes.bismuth.live/wp-content/uploads/2019/05/docshield2b.png)
 
 - 1: Logo
 - 2: Document loading form and info
@@ -140,7 +140,7 @@ No code in there, you'll just find a few "onclick" events to trigger the require
 Here comes the real code, that interacts with the chain.  
 Don't be afraid, there's only a few lines of code there.
 
-Full code: (LINK)
+Full code: https://github.com/bismuthfoundation/TornadoWallet/blob/master/wallet/crystals/212_docshield/themes/default/docshield.js
 
 As you can see, a few additional libraries were added.
 With time, most commonly used libraries will be integrated as part of the framework/main theme. 
@@ -261,7 +261,7 @@ function check_exactopdata(op, data, field) {
 
 `httpGet(url)` is a js function defined by the framework, you can use it also.
 
-See the wallet server supported commands : (LINK)
+See the wallet server supported commands : https://github.com/bismuthfoundation/WalletServer/tree/master/Doc
 
 #### Build the datatable content
 
