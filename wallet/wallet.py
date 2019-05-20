@@ -34,7 +34,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller
 
-__version__ = '0.1.17'
+__version__ = '0.1.18'
 
 define("port", default=8888, help="run on the given port", type=int)
 define("listen", default="127.0.0.1", help="On which address to listen, locked by default to localhost for safety", type=str)
@@ -728,7 +728,7 @@ class MessagesHandler(BaseHandler):
         spend_token = self.get_argument("token", '')  # Beware naming inconsistencies token, spend_token
         self.settings["page_title"] = _("Sign message")
         if not self.bismuth_vars['address']:
-            await self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
             return
         # print(self.bismuth.wallet())
         if self.bismuth._wallet._locked:
@@ -749,10 +749,45 @@ class MessagesHandler(BaseHandler):
         self.render("messages_pop.html", bismuth=self.bismuth_vars, title=self.settings["page_title"], message=message,
                     color="success", what=_('Signature'), data=data)
 
+    async def decrypt_pop(self, params=None, post=True):
+        _ = self.locale.translate
+        message = self.get_argument("data", '')
+        spend_token = self.get_argument("token", '')  # Beware naming inconsistencies token, spend_token
+        self.settings["page_title"] = _("Decrypt message")
+        if not self.bismuth_vars['address']:
+            self.message_pop(_("Error:")+" "+_("No Wallet"), _("Load your wallet first"), "danger")
+            return
+        # print(self.bismuth.wallet())
+        if self.bismuth._wallet._locked:
+            self.message_pop(_("Error:")+" "+_("Encrypted wallet"), _("You have to unlock your wallet first"), "danger")
+            return
+        # check spend protection
+        # TODO: add more methods and factorize that code
+        if self.bismuth.wallet()['spend']['type'] == 'PIN':
+            # print(spend_token, self.bismuth.wallet()['spend'])
+            if spend_token != self.bismuth.wallet()['spend']['value']:
+                self.message_pop(_("Error:") + " " + _("Spend protection"), _("Invalid PIN Number"),
+                                 "warning")
+                return
+        data = self.bismuth.decrypt(message)
+        message = _("Your message has been decrypted.")
+        self.render("messages_pop.html", bismuth=self.bismuth_vars, title=self.settings["page_title"], message=message,
+                    color="success", what=_('Signature'), data=data)
+
     async def encrypt_pop(self, params=None):
         _ = self.locale.translate
-        await self.message_pop(_("Error:") , _("This feature is under construction. "), "warning")
-        return
+        message = self.get_argument("data", '')
+        recipient = self.get_argument("recipient", '')
+        if message == '':
+            self.message_pop(_("Error:") , _("Message is empty"), "warning")
+            return
+        if recipient == '':
+            self.message_pop(_("Error:") , _("Recipient is empty"), "warning")
+            return
+        data = self.bismuth.encrypt(message, recipient)
+        message = _("Your message has been encrypted.")
+        self.render("messages_pop.html", bismuth=self.bismuth_vars, title=self.settings["page_title"], message=message,
+                    color="success", what=_('Message'), data=data)
 
     async def get(self, command=''):
         command, *params = command.split('/')

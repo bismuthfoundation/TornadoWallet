@@ -372,6 +372,7 @@
     }
 
     function sign(data, token){
+        // TODO: convert to post for lengthy data
         if (data == '') { return false}
         enabled = true;
         $.get('/messages/sign_pop?data='+data+"&token="+encodeURIComponent(token),function(page){
@@ -379,6 +380,18 @@
             $("#payment_window").modal("show");
             });
     }
+
+
+    function decrypt(data, token){
+        if (data == '') { return false}
+        enabled = true;
+        var xsrf = $("[name='_xsrf']").val();
+        $.post('/messages/decrypt_pop', { data: data, token: token, _xsrf: xsrf } ,function(page){
+            $("#payment_window").html(page);
+            $("#payment_window").modal("show");
+            });
+    }
+
 
     function encrypt(data, recipient){
         if (data == '') { return false}
