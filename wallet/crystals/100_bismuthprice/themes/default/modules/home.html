@@ -4,10 +4,10 @@
             {{ _('Current Bismuth Prices') }}
         </div>
         <div class="card-body">
-            {% for key, value in api['markets'].items() %}
+            {% for key, value in api.items() %}
             <h4>{{ key }}</h4>
             <p class="card-category">
-                {{ "{:0.8f}".format(value['BTC']['lastPrice']) }} BTC ( {{ "{:0.2f}".format(value['USD']['lastPrice']) }}USD)
+                {{ "{:0.8f}".format(value[0]) }} BTC ( {{ "{:0.2f}".format(value[1]) }}USD)
             </p>
             {% end %}
         </div>

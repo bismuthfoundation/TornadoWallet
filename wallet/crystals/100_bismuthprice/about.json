@@ -1,8 +1,8 @@
 {
   "author": "EggdraSyl",
-  "description": "Aggregates $BIS price from various exchanges. Makes use of the API from Discord user @Cipery.",
+  "description": "Aggregates $BIS price from various exchanges. Updated to use coingecko's API",
   "email": "dev@eggpool.net",
-  "version": "0.2",
-  "date": "2018-12-18",
+  "version": "0.3",
+  "date": "2019-05-22",
   "url":"https://github.com/bismuthfoundation/TornadoWallet"
 }
