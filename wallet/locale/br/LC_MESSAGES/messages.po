@@ -1003,7 +1003,7 @@ msgstr "Carteira desbloqueada"
 #: themes/material/wallet_info.html:100
 #, fuzzy
 msgid "You can lock it back for extra safety if you don't plan to use it soon."
-msgstr "Você pode bloqueá-lo de volta para segurança extra se você não pretende usá-lo em breve."
+msgstr "Você pode bloqueá-lo de volta por segurança extra se você não pretende usá-lo em breve."
 
 #: themes/material/wallet_info.html:137 themes/material/wallet_info.html:160
 #: themes/material/wallet_info.html:164 themes/material/wallet_info.html:244

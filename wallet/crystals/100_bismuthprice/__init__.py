@@ -57,7 +57,7 @@ def filter_home(params):
         )  # gets as dict, and cache for 10 min
         api_filtered = {}
         for market in api["tickers"]:
-            print(market)
+            # print(market)
             if market["market"]["identifier"] in MARKETS:
                 if market["target"] == "BTC":
                     api_filtered[market["market"]["name"]] = (
