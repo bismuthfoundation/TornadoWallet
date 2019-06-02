@@ -8,6 +8,7 @@ import os.path
 
 # import re
 import json
+
 # import logging
 # import random
 # import string
@@ -44,7 +45,7 @@ define("port", default=8888, help="run on the given port", type=int)
 define(
     "listen",
     default="127.0.0.1",
-    help="On which address to listen, locked by default to localhost for safety",
+    help="What address to listen on, locked by default to localhost for safety",
     type=str,
 )
 define("debug", default=False, help="debug mode", type=bool)
