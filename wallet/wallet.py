@@ -13,7 +13,7 @@ import json
 # import random
 # import string
 
-# import time
+
 # import datetime
 import tornado.escape
 import tornado.httpserver
@@ -30,6 +30,7 @@ import sys
 import socket
 
 from tornado.options import define, options
+from time import time
 
 # from bismuthclient import bismuthapi
 from bismuthclient import bismuthclient
@@ -39,7 +40,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.18b"
+__version__ = "0.1.18c"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -1170,12 +1171,31 @@ def port_in_use(port):
     return result == 0
 
 
+def logf(msg: str):
+    with open("logf.log", "a+") as f:
+        f.write(str(int(time())) + ' : ' + msg + "\n")
+
+
 if __name__ == "__main__":
-    if port_in_use(options.port):
+    try:
+        logf("=== Start ===")
+        port_in_use = port_in_use(options.port)
+        logf("Port in use {}".format(port_in_use))
+    except Exception as e:
+        logf("Exception port in use {}".format(e))
+    if port_in_use:
+        logf("Opening url")
         print("Port {} is in use, opening url".format(options.port))
         open_url("http://127.0.0.1:{}".format(options.port))
     else:
+        logf("Port not in use")
         # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
-        locale_path = os.path.join(helpers.base_path(), "locale")
-        tornado.locale.load_gettext_translations(locale_path, "messages")
-        tornado.ioloop.IOLoop.current().run_sync(main)
+        try:
+            locale_path = os.path.join(helpers.base_path(), "locale")
+            tornado.locale.load_gettext_translations(locale_path, "messages")
+            tornado.ioloop.IOLoop.current().run_sync(main)
+        except Exception as e:
+            logf("Exception start {}".format(e))
+            logf("Opening url")
+            open_url("http://127.0.0.1:{}".format(options.port))
+    logf("=== End ===")
