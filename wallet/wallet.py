@@ -1171,7 +1171,7 @@ def port_in_use(port):
 
 
 if __name__ == "__main__":
-    if False:  # port_in_use(options.port):
+    if port_in_use(options.port):
         print("Port {} is in use, opening url".format(options.port))
         open_url("http://127.0.0.1:{}".format(options.port))
     else:
