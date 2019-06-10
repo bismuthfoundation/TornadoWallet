@@ -9,22 +9,28 @@ from modules.helpers import base_path, get_api_10, graph_colors_rgba
 from tornado.template import Template
 
 
-__version__ = '0.1b'
+__version__ = "0.1c"
 
 
-DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/210_eggpool/themes/default')
+DEFAULT_THEME_PATH = path.join(base_path(), "crystals/210_eggpool/themes/default")
 MODULES = {}
 
 ACTIVE = False
 
-class EggpoolHandler(CrystalHandler):
 
+class EggpoolHandler(CrystalHandler):
     async def about(self, params=None):
         _ = self.locale.translate
-        url = 'https://eggpool.net/index.php?action=api&miner={}&type=detail'.format(self.bismuth_vars['address'])
-        # TODO: rewrite as async with parametrized cache ttl, see dragginator crystal
-        api = get_api_10(url, is_json=True)  # gets as dict, and cache for 10 min
-        print("eggpool, api", api)
+        # print("address", self.bismuth_vars["address"])
+        if len(self.bismuth_vars["address"]) > 4:
+            url = "https://eggpool.net/index.php?action=api&miner={}&type=detail".format(
+                self.bismuth_vars["address"]
+            )
+            # TODO: rewrite as async with parametrized cache ttl, see dragginator crystal
+            api = get_api_10(url, is_json=True)  # gets as dict, and cache for 10 min
+            print("eggpool, api", api)
+        else:
+            api = {}
         """
         # detail
         {'last_event': 1544822567, 
@@ -56,33 +62,53 @@ class EggpoolHandler(CrystalHandler):
         hr_datasets = []
         i = 0
         gcolors = graph_colors_rgba()
-        if api['lastround']:
-            for worker, data in api['workers']['detail'].items():
+        if api.get("lastround", False):
+            for worker, data in api["workers"]["detail"].items():
                 # shares_series += json.dumps(data[3])+',\n'
                 rgba = gcolors[i % len(gcolors)]
                 workers_name[worker] = rgba
-                sh_datasets.append({"label": worker, "data":data[3], "strokeColor": rgba})
-                hr_datasets.append({"label": worker, "data":data[2], "strokeColor": rgba})
+                sh_datasets.append(
+                    {"label": worker, "data": data[3], "strokeColor": rgba}
+                )
+                hr_datasets.append(
+                    {"label": worker, "data": data[2], "strokeColor": rgba}
+                )
                 i += 1
         else:
-            workers_name[_('No data')] = gcolors[0]
+            workers_name[_("No data")] = gcolors[0]
 
         namespace = self.get_template_namespace()
-        kwargs = {"bismuth": self.bismuth_vars, "workers_name": workers_name,
-                  "hr_datasets": json.dumps(hr_datasets), "sh_datasets": json.dumps(sh_datasets),
-                  'version': __version__}
+        kwargs = {
+            "bismuth": self.bismuth_vars,
+            "workers_name": workers_name,
+            "hr_datasets": json.dumps(hr_datasets),
+            "sh_datasets": json.dumps(sh_datasets),
+            "version": __version__,
+        }
         namespace.update(kwargs)
-        self.bismuth_vars['extra'] = {"header": '', "footer": MODULES['about_charts'].generate(**namespace)}
+        self.bismuth_vars["extra"] = {
+            "header": "",
+            "footer": MODULES["about_charts"].generate(**namespace),
+        }
 
-        self.render("about.html", bismuth=self.bismuth_vars, workers_name=workers_name, version=__version__)
+        self.render(
+            "about.html",
+            bismuth=self.bismuth_vars,
+            workers_name=workers_name,
+            version=__version__,
+        )
 
-    async def get(self, command=''):
-        command, *params = command.split('/')
+    async def get(self, command=""):
+        command, *params = command.split("/")
         if not command:
-            command = 'about'
+            command = "about"
         if not ACTIVE:
             _ = self.locale.translate
-            self.message(_("Error:"), _("This crystal is activated but needs a wallet restart."),'danger')
+            self.message(
+                _("Error:"),
+                _("This crystal is activated but needs a wallet restart."),
+                "danger",
+            )
         await getattr(self, command)(params)
 
     def get_template_path(self):
@@ -98,11 +124,11 @@ def action_init(params=None):
     """Load and compiles module templates"""
     global ACTIVE
     ACTIVE = True
-    modules_dir = path.join(DEFAULT_THEME_PATH, 'modules')
+    modules_dir = path.join(DEFAULT_THEME_PATH, "modules")
     for module in listdir(modules_dir):
-        module_name = module.split('.')[0]
+        module_name = module.split(".")[0]
         file_name = path.join(modules_dir, module)
-        with open(file_name, 'rb') as f:
+        with open(file_name, "rb") as f:
             MODULES[module_name] = Template(f.read())
 
 

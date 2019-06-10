@@ -3,42 +3,47 @@ Docshield Crystal for Tornado wallet
 """
 
 from os import path, listdir
+
 # import sys
 
 from modules.basehandlers import CrystalHandler
 from modules.i18n import get_dt_language
 from modules.helpers import base_path
+
 # from tornado.template import Template
 
 
-DEFAULT_THEME_PATH = path.join(base_path(), 'crystals/212_docshield/themes/default')
+DEFAULT_THEME_PATH = path.join(base_path(), "crystals/212_docshield/themes/default")
 
 MODULES = {}
 
-__version__ = '1.0.1'
+__version__ = "1.0.2"
 
 
 class DocshieldHandler(CrystalHandler):
-
     def initialize(self):
         # Parent init
         super().initialize()
         # Inject our local js file in the template footer, so js code is seen after jquery
-        with open('crystals/212_docshield/themes/default/docshield.js', 'r') as file:
+        js_inject_file_path = path.join(DEFAULT_THEME_PATH, "docshield.js")  # Never use relative file paths
+        with open(js_inject_file_path) as file:
             data = file.read()
-        self.bismuth_vars['extra'] = {"header":'<!-- DOCHASH HEADER -->', "footer": data}
+        self.bismuth_vars["extra"] = {
+            "header": "<!-- DOCHASH HEADER -->",
+            "footer": data,
+        }
 
     async def about(self, params=None):
         namespace = self.get_template_namespace()
-        self.bismuth_vars['dtlanguage'] = get_dt_language(self.locale.translate)
+        self.bismuth_vars["dtlanguage"] = get_dt_language(self.locale.translate)
         kwargs = {"bismuth": self.bismuth_vars}
         namespace.update(kwargs)
         self.render("about.html", bismuth=self.bismuth_vars)
 
-    async def get(self, command=''):
-        command, *params = command.split('/')
+    async def get(self, command=""):
+        command, *params = command.split("/")
         if not command:
-            command = 'about'
+            command = "about"
         await getattr(self, command)(params)
 
     def get_template_path(self):
