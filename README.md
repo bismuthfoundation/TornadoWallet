@@ -4,18 +4,21 @@ A Python/HTML Wallet based upon the Tornado framework.
 
 First stable release, still work ongoing, but useable and nice looking!
 
-# Proof of concept
+# First stable version 0.1.9
 
 Goal is to re-use the existing python code for behind the scene heavy lifting, but leverage HTML/JS flexibility for GUI.
 
-First release only has minimal features
+First release has following features
 
-- manage wallets (unencrypted)
+- manage wallets (several addresses)
 - auto connect to an available wallet server
 - check balance and transactions
 - request BIS payments
 - Send simple BIS transactions
 - network status
+- encrypt and decrypt off chain messages
+- spend protection
+- support for crystals (plugins, like dApps running in the wallet)
 
 # Installation from release
 
@@ -57,6 +60,7 @@ Possible command line switches:
 * `--theme=themes/material`  Force a specific theme
 * `--server=ip:port`  Force a specific walelt server (like 127.0.0.1:8150)
 
+See the FAQ: https://github.com/bismuthfoundation/Bismuth-FAQ/tree/master/Wallet/Tornado
 
 ## Wallet(s) location
 
@@ -73,6 +77,7 @@ You should also find it on the wallet/load page:
 * Basic wallet functionality (check)
 * Auth (check)
 * Multiwallet (check)
+* Plugins (check: See crystals)
 * Allinone mobile app with embedded browser and python engine
 
 # The tech
@@ -82,9 +87,6 @@ You should also find it on the wallet/load page:
 * JS
 * Embedded local webserver
 
-# References
-
-First HTML template derived from mBitcoin wallet.  
 
 # Translations
 
