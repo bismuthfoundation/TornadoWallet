@@ -4,7 +4,7 @@ A Python/HTML Wallet based upon the Tornado framework.
 
 First stable release, still work ongoing, but useable and nice looking!
 
-# First stable version 0.1.9
+# First stable version 0.1.19
 
 Goal is to re-use the existing python code for behind the scene heavy lifting, but leverage HTML/JS flexibility for GUI.
 

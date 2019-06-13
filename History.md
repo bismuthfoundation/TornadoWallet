@@ -1,5 +1,18 @@
 # History
 
+## 0.1.19 - 2019-06-13
+
+First "stable" release, packaged. 
+- support for encrypted wallet imports
+- update to crystals
+- new apis
+- message encrypt/decrypt
+- many bugfixes and gui tweaks
+
+## 0.1.0 - 2019-03-20
+
+First useable "beta" release 
+
 ## 0.0.65 - 2018-12-11
 
 Incremental fixes to wallet creation location and small template tweak.
