@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Language: de\n"
 
-#: themes/material/about_credits.html:10 themes/material/base.html:228
+#: themes/material/about_credits.html:10 themes/material/base.html:246
 msgid "Credits"
 msgstr "Danksagung"
 
@@ -82,55 +82,55 @@ msgstr "Peer Verbindungen:"
 msgid "UpTime:"
 msgstr "UpTime:"
 
-#: themes/material/about_network.html:30
+#: themes/material/about_network.html:31
 msgid "Consensus:"
 msgstr "Konsens:"
 
-#: themes/material/about_network.html:52
+#: themes/material/about_network.html:53
 msgid "Block"
 msgstr "Block"
 
-#: themes/material/about_network.html:64
+#: themes/material/about_network.html:65
 msgid "Difficulty"
 msgstr "Schwierigkeit"
 
-#: themes/material/about_network.html:77
+#: themes/material/about_network.html:78
 msgid "Available wallet servers"
 msgstr "Verfügbare Wallet Server"
 
-#: themes/material/about_network.html:79
+#: themes/material/about_network.html:80
 msgid "servers"
 msgstr "Server"
 
-#: themes/material/about_network.html:88
+#: themes/material/about_network.html:89
 msgid "Refresh from API"
 msgstr "Aktualisieren von API"
 
-#: themes/material/base.html:43
+#: themes/material/base.html:44
 msgid "Bismuth Wallet"
 msgstr "Bismuth Wallet"
 
-#: themes/material/base.html:51
+#: themes/material/base.html:52
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: themes/material/base.html:57
+#: themes/material/base.html:58
 msgid "Transactions"
 msgstr "Transaktionen"
 
-#: themes/material/base.html:63
+#: themes/material/base.html:65
 msgid "Address book"
 msgstr "Kontakte"
 
-#: themes/material/base.html:70 themes/material/tokens_list.html:10
+#: themes/material/base.html:71 themes/material/tokens_list.html:10
 msgid "Tokens"
 msgstr "Tokens"
 
-#: themes/material/base.html:76
+#: themes/material/base.html:78
 msgid "Messages"
 msgstr "Nachrichten"
 
-#: themes/material/base.html:83
+#: themes/material/base.html:85
 msgid "Network"
 msgstr "Netzwerk"
 
@@ -138,37 +138,37 @@ msgstr "Netzwerk"
 msgid "Cristals"
 msgstr "Crystals"
 
-#: themes/material/base.html:122
+#: themes/material/base.html:125
 msgid "Toggle navigation"
 msgstr "Navigation umschalten"
 
-#: themes/material/base.html:208
+#: themes/material/base.html:221
 msgid "Source"
 msgstr "Quelle"
 
-#: themes/material/base.html:213
+#: themes/material/base.html:226
 msgid "Blog"
 msgstr "Blog"
 
-#: themes/material/base.html:218
+#: themes/material/about_help.html:18 themes/material/base.html:231
 msgid "Discord"
 msgstr "Discord"
 
-#: themes/material/base.html:223
+#: themes/material/base.html:236
 msgid "Donate"
 msgstr "Spenden"
 
 #. Capitalization question: how is this string used? As in "Wallet at block 10" or as in a simple label "Block 10"?
-#: themes/material/base.html:234
+#: themes/material/base.html:252
 msgid "block #"
 msgstr "block #"
 
-#: themes/material/base.html:254
+#: themes/material/base.html:272
 msgid "Sidebar Filters"
 msgstr "Seitenleiste Filter"
 
 #. Is there an example sentence?
-#: themes/material/base.html:267
+#: themes/material/base.html:285
 msgid "Images"
 msgstr "Bilder"
 
@@ -183,6 +183,7 @@ msgid "WIP"
 msgstr "WIP"
 
 #: themes/material/home.html:15 themes/material/transactions.html:15
+#: themes/material/wallet_load.html:35
 msgid "Balance"
 msgstr "Kontostand"
 
@@ -209,33 +210,34 @@ msgid "Latest transactions"
 msgstr "Letzten Transaktionen"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
-#: themes/material/wallet_load.html:37
+#: themes/material/wallet_load.html:56
 msgid "Updated on"
 msgstr "Aktualisiert am"
 
-#: themes/material/home.html:80 themes/material/transactions.html:80
+#: themes/material/crystals_list.html:21 themes/material/home.html:81
+#: themes/material/transactions.html:80
 msgid "Date"
 msgstr "Datum"
 
-#: themes/material/home.html:81 themes/material/transactions.html:81
-#: themes/material/wallet_load.html:43 themes/material/wallet_load.html:100
-#: themes/material/wallet_load.html:137
+#: themes/material/home.html:82 themes/material/transactions.html:81
+#: themes/material/wallet_load.html:62 themes/material/wallet_load.html:125
+#: themes/material/wallet_load.html:170
 msgid "Address"
 msgstr "Adresse"
 
-#: themes/material/home.html:82 themes/material/transactions.html:82
+#: themes/material/home.html:83 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
 #: themes/material/transactions_send.html:52
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
 msgstr "Betrag"
 
-#: themes/material/home.html:83 themes/material/transactions.html:83
+#: themes/material/home.html:84 themes/material/transactions.html:83
 msgid "Type"
 msgstr "Typ"
 
 #. "Neuigkeiten" maybe?
-#: themes/material/home.html:150
+#: themes/material/home.html:161
 msgid "Bismuth news"
 msgstr "Bismuth Neuigkeiten"
 
@@ -248,20 +250,21 @@ msgstr "Bismuth vs USD"
 msgid "This is a mockup with fake data"
 msgstr "Dies ist eine Attrappe mit erfundenen Daten"
 
-#: themes/material/home.html:136
+#: themes/material/home.html:147
 msgid "Account balance"
 msgstr "Kontostand"
 
-#: themes/material/home.html:137
+#: themes/material/home.html:148
 msgid "Last 12 months"
 msgstr "Letzten 12 Monate"
 
-#: themes/material/home.html:141
+#: themes/material/home.html:152
 msgid "Mockup with fake data"
 msgstr "Dies ist eine Attrappe mit erfundenen Daten"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
+#: themes/material/wallet_import_encrypted_der1.html:48
 msgid "Previous page"
 msgstr "Vorherige Seite"
 
@@ -325,9 +328,10 @@ msgstr "Geschätzte Gebühren"
 msgid "Total (BIS)"
 msgstr "Gesamt (BIS)"
 
-#: main.py:133 main.py:161 themes/material/transactions_send.html:78
+#: TornadoBismuthWallet.py:153 TornadoBismuthWallet.py:179
+#: themes/material/transactions_send.html:78
 #: themes/material/transactions_send.html:81
-#: themes/material/transactions_send.html:127 wallet.py:151 wallet.py:178
+#: themes/material/transactions_send.html:127 wallet.py:183 wallet.py:237
 msgid "Send BIS"
 msgstr "BIS senden"
 
@@ -356,42 +360,51 @@ msgstr "Erstelle ein"
 msgid "new wallet"
 msgstr "neues Wallet"
 
-#: themes/material/wallet_load.html:99
+#: themes/material/wallet_load.html:124
 msgid "File"
 msgstr "Datei"
 
-#: themes/material/wallet_load.html:101
+#: themes/material/wallet_load.html:126
 msgid "Encrypted"
 msgstr "Verschlüsselt"
 
-#: themes/material/messages.html:82 themes/material/wip.html:10
+#: themes/material/messages.html:123 themes/material/wip.html:10
 msgid "W.I.P."
 msgstr "W.I.P."
 
-#: themes/material/messages.html:85 themes/material/wip.html:13
+#: themes/material/messages.html:126 themes/material/wip.html:13
 msgid "This feature is under construction."
 msgstr "Diese Funktion ist in Bearbeitung."
 
-#: main.py:243 wallet.py:326
+#: TornadoBismuthWallet.py:331 wallet.py:504
 msgid "Transaction list"
 msgstr "Transaktionsliste"
 
-#: main.py:203 main.py:315 main.py:324 modules/basehandlers.py:60
-#: wallet.py:264 wallet.py:375 wallet.py:401 wallet.py:415 wallet.py:421
-#: wallet.py:436 wallet.py:445 wallet.py:451 wallet.py:460 wallet.py:474
-#: wallet.py:489 wallet.py:497 wallet.py:506 wallet.py:512 wallet.py:523
+#: TornadoBismuthWallet.py:265 TornadoBismuthWallet.py:380
+#: TornadoBismuthWallet.py:406 TornadoBismuthWallet.py:420
+#: TornadoBismuthWallet.py:426 TornadoBismuthWallet.py:441
+#: TornadoBismuthWallet.py:450 TornadoBismuthWallet.py:456
+#: TornadoBismuthWallet.py:465 TornadoBismuthWallet.py:479
+#: TornadoBismuthWallet.py:494 TornadoBismuthWallet.py:502
+#: TornadoBismuthWallet.py:511 TornadoBismuthWallet.py:517
+#: TornadoBismuthWallet.py:526 TornadoBismuthWallet.py:532
+#: modules/basehandlers.py:78 wallet.py:393 wallet.py:569 wallet.py:583
+#: wallet.py:613 wallet.py:632 wallet.py:644 wallet.py:658 wallet.py:677
+#: wallet.py:678 wallet.py:693 wallet.py:713 wallet.py:728 wallet.py:740
+#: wallet.py:754 wallet.py:773 wallet.py:793 wallet.py:806 wallet.py:820
+#: wallet.py:831 wallet.py:845 wallet.py:858
 msgid "Error"
 msgstr "Fehler"
 
-#: main.py:315 wallet.py:436
+#: TornadoBismuthWallet.py:441 wallet.py:714
 msgid "This file already exists: {}.der"
 msgstr "Diese Datei existiert bereits: {}.der"
 
-#: main.py:324 wallet.py:445
+#: TornadoBismuthWallet.py:450 wallet.py:729
 msgid "Error creating {}.der"
 msgstr "Fehler beim Erzeugen von {}.der"
 
-#: themes/material/transactions.html:79
+#: themes/material/home.html:80 themes/material/transactions.html:79
 msgid "Txid"
 msgstr "Txid"
 
@@ -466,17 +479,17 @@ msgstr "Empfänger erhält diesen Betrag."
 msgid "This is what you will pay, fees included."
 msgstr "Sie zahlen den Gesamtbetrag, inkl. Gebühren."
 
-#: themes/material/wallet_load.html:45 themes/material/wallet_load.html:102
+#: themes/material/wallet_load.html:64 themes/material/wallet_load.html:127
 msgid "Action"
 msgstr "Aktion"
 
-#: themes/material/about_credits.html:52
+#: themes/material/about_credits.html:53
 msgid "Translations"
 msgstr "Übersetzungen"
 
 #: themes/material/transactions_send_confirm.html:117
 #: themes/material/transactions_sendpop_confirm.html:103
-#: themes/material/wallet_load.html:150
+#: themes/material/wallet_load.html:183
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -485,27 +498,30 @@ msgstr "Abbrechen"
 msgid "Confirm and send BIS"
 msgstr "Bestätigen und BIS senden"
 
-#: main.py:144 main.py:172 wallet.py:161 wallet.py:190 wallet.py:212
+#: TornadoBismuthWallet.py:164 TornadoBismuthWallet.py:191
+#: TornadoBismuthWallet.py:213 wallet.py:202 wallet.py:257 wallet.py:296
 msgid "Send BIS: Confirmation"
 msgstr "Sende BIS: Bestätigung"
 
-#: main.py:146 main.py:174 wallet.py:163 wallet.py:192 wallet.py:214
+#: TornadoBismuthWallet.py:166 TornadoBismuthWallet.py:193
+#: TornadoBismuthWallet.py:215 wallet.py:204 wallet.py:259 wallet.py:298
 msgid "Please confirm this transaction"
 msgstr "Bitte bestätigen Sie die Transaktion"
 
-#: main.py:147 main.py:175 wallet.py:164 wallet.py:193 wallet.py:215
+#: TornadoBismuthWallet.py:167 TornadoBismuthWallet.py:194
+#: TornadoBismuthWallet.py:216 wallet.py:206 wallet.py:261 wallet.py:300
 msgid "Check this is what you intended to do and hit the \"confirm\" button"
 msgstr "Prüfen Sie die Daten bevor Sie die Transaktion bestätigen"
 
-#: main.py:227 wallet.py:309
+#: TornadoBismuthWallet.py:309 wallet.py:473
 msgid "Receive BIS"
 msgstr "BIS erhalten"
 
-#: themes/material/about_credits.html:36
+#: themes/material/about_credits.html:37
 msgid "Wallet template {} by {}."
 msgstr "Wallet Template {} von {}."
 
-#: themes/material/about_credits.html:53
+#: themes/material/about_credits.html:54
 msgid "Many thanks to our translators and proofreaders"
 msgstr "Vielen Dank an unsere Übersetzer und Korrekturleser"
 
@@ -513,7 +529,7 @@ msgstr "Vielen Dank an unsere Übersetzer und Korrekturleser"
 msgid "Wallet server version {}"
 msgstr "Wallet Server Version {}"
 
-#: themes/material/base.html:173
+#: themes/material/base.html:186
 msgid "Wallet"
 msgstr "Wallet"
 
@@ -532,65 +548,93 @@ msgstr "Ihre Bismuth Wallets"
 msgid "Your wallets directory is {}"
 msgstr "Ihr Wallet-Verzeichnis ist {}"
 
-#: crystals/210_eggpool/__init__.py:85 main.py:136 main.py:140 main.py:164
-#: main.py:168 main.py:182 main.py:221 wallet.py:153 wallet.py:157
-#: wallet.py:181 wallet.py:185 wallet.py:197 wallet.py:228 wallet.py:234
-#: wallet.py:237 wallet.py:244 wallet.py:271 wallet.py:274 wallet.py:281
-#: wallet.py:296 wallet.py:302 wallet.py:306 wallet.py:657 wallet.py:661
-#: wallet.py:668 wallet.py:680
+#: TornadoBismuthWallet.py:155 TornadoBismuthWallet.py:159
+#: TornadoBismuthWallet.py:182 TornadoBismuthWallet.py:186
+#: TornadoBismuthWallet.py:198 TornadoBismuthWallet.py:229
+#: TornadoBismuthWallet.py:235 TornadoBismuthWallet.py:238
+#: TornadoBismuthWallet.py:245 TornadoBismuthWallet.py:272
+#: TornadoBismuthWallet.py:275 TornadoBismuthWallet.py:282
+#: TornadoBismuthWallet.py:297 TornadoBismuthWallet.py:302
+#: TornadoBismuthWallet.py:306 TornadoBismuthWallet.py:672
+#: TornadoBismuthWallet.py:676 TornadoBismuthWallet.py:683
+#: TornadoBismuthWallet.py:695 crystals/210_eggpool/__init__.py:85
+#: wallet.py:186 wallet.py:194 wallet.py:215 wallet.py:241 wallet.py:249
+#: wallet.py:266 wallet.py:279 wallet.py:317 wallet.py:334 wallet.py:343
+#: wallet.py:350 wallet.py:361 wallet.py:409 wallet.py:416 wallet.py:427
+#: wallet.py:448 wallet.py:459 wallet.py:467 wallet.py:1019 wallet.py:1027
+#: wallet.py:1038 wallet.py:1066 wallet.py:1074 wallet.py:1085 wallet.py:1107
+#: wallet.py:1110
 msgid "Error:"
 msgstr "Fehler:"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
-#: wallet.py:271 wallet.py:302 wallet.py:657
+#: TornadoBismuthWallet.py:155 TornadoBismuthWallet.py:182
+#: TornadoBismuthWallet.py:235 TornadoBismuthWallet.py:272
+#: TornadoBismuthWallet.py:302 TornadoBismuthWallet.py:672 wallet.py:187
+#: wallet.py:242 wallet.py:344 wallet.py:410 wallet.py:460 wallet.py:1020
+#: wallet.py:1067
 msgid "Load your wallet first"
 msgstr "Laden Sie zunächst Ihr Wallet"
 
-#: main.py:136 main.py:164 wallet.py:153 wallet.py:181 wallet.py:234
-#: wallet.py:271 wallet.py:302 wallet.py:657
+#: TornadoBismuthWallet.py:155 TornadoBismuthWallet.py:182
+#: TornadoBismuthWallet.py:235 TornadoBismuthWallet.py:272
+#: TornadoBismuthWallet.py:302 TornadoBismuthWallet.py:672 wallet.py:186
+#: wallet.py:241 wallet.py:343 wallet.py:409 wallet.py:459 wallet.py:1019
+#: wallet.py:1066
 msgid "No Wallet"
 msgstr "Kein Wallet"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
-#: wallet.py:274 wallet.py:306 wallet.py:661
+#: TornadoBismuthWallet.py:159 TornadoBismuthWallet.py:186
+#: TornadoBismuthWallet.py:238 TornadoBismuthWallet.py:275
+#: TornadoBismuthWallet.py:306 TornadoBismuthWallet.py:676 wallet.py:194
+#: wallet.py:249 wallet.py:350 wallet.py:416 wallet.py:467 wallet.py:1027
+#: wallet.py:1074
 msgid "Encrypted wallet"
 msgstr "Verschlüsseltes Wallet"
 
-#: main.py:140 main.py:168 wallet.py:157 wallet.py:185 wallet.py:237
-#: wallet.py:274 wallet.py:306 wallet.py:375 wallet.py:415 wallet.py:661
+#: TornadoBismuthWallet.py:159 TornadoBismuthWallet.py:186
+#: TornadoBismuthWallet.py:238 TornadoBismuthWallet.py:275
+#: TornadoBismuthWallet.py:306 TornadoBismuthWallet.py:380
+#: TornadoBismuthWallet.py:420 TornadoBismuthWallet.py:676 wallet.py:195
+#: wallet.py:250 wallet.py:351 wallet.py:417 wallet.py:468 wallet.py:570
+#: wallet.py:633 wallet.py:659 wallet.py:1028 wallet.py:1075
 msgid "You have to unlock your wallet first"
 msgstr "Sie müssen zunächst Ihr Wallet entsperren"
 
-#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
+#: TornadoBismuthWallet.py:255 TornadoBismuthWallet.py:292 wallet.py:375
+#: wallet.py:440
 msgid "Success:"
 msgstr "Erfolg:"
 
-#: main.py:193 main.py:216 wallet.py:254 wallet.py:291
+#: TornadoBismuthWallet.py:255 TornadoBismuthWallet.py:292 wallet.py:377
+#: wallet.py:440
 msgid "Transaction sent"
 msgstr "Transaktion gesendet"
 
-#: main.py:194 main.py:217 wallet.py:255 wallet.py:292
+#: TornadoBismuthWallet.py:256 TornadoBismuthWallet.py:293 wallet.py:379
+#: wallet.py:441
 msgid "The transaction was submitted to the mempool."
 msgstr "Die Transaktion wurde zum Mempool hinzugefügt."
 
-#: main.py:196 main.py:219 wallet.py:257 wallet.py:294
+#: TornadoBismuthWallet.py:258 TornadoBismuthWallet.py:295 wallet.py:381
+#: wallet.py:443
 msgid "Txid is {}"
 msgstr "Transaktions ID: {}"
 
-#: main.py:201 main.py:221 wallet.py:262 wallet.py:296
+#: TornadoBismuthWallet.py:263 TornadoBismuthWallet.py:297 wallet.py:388
+#: wallet.py:450
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr "Fehler beim Hinzufügen zum mempool - Transaktion wurde nicht gesendet."
 
-#: crystals/200_dragginator/themes/default/about.html:89
-#: modules/basehandlers.py:55
+#: crystals/200_dragginator/themes/default/about.html:92
+#: modules/basehandlers.py:71
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr "Keine aktive Bismuth Adresse, bitte erstellen oder laden Sie zuerst ein Wallet."
 
-#: themes/material/base.html:95 themes/material/crystals_list.html:11
+#: themes/material/base.html:97 themes/material/crystals_list.html:11
 msgid "Crystals"
 msgstr "Crystals"
 
-#: themes/material/base.html:131
+#: themes/material/base.html:134
 msgid "Search..."
 msgstr "Suchen..."
 
@@ -606,6 +650,7 @@ msgstr "Crystal"
 #: crystals/100_bismuthprice/themes/default/about.html:28
 #: crystals/210_eggpool/themes/default/about.html:29
 #: crystals/250_autogame/themes/default/about.html:39
+#: themes/material/crystals_list.html:21
 msgid "Version"
 msgstr "Version"
 
@@ -617,7 +662,7 @@ msgstr "Derzeitige Bismuth Preise"
 msgid "BIS"
 msgstr "BIS"
 
-#: main.py:198 wallet.py:259
+#: TornadoBismuthWallet.py:260 wallet.py:384
 msgid "Success"
 msgstr "Erfolg"
 
@@ -725,23 +770,23 @@ msgstr "Alter"
 msgid "D:Rarity"
 msgstr "Seltenheit"
 
-#: crystals/200_dragginator/themes/default/egg.html:69
+#: crystals/200_dragginator/themes/default/egg.html:70
 msgid "D:You own this egg"
 msgstr "Sie besitzen dieses Ei"
 
-#: crystals/200_dragginator/themes/default/egg.html:72
+#: crystals/200_dragginator/themes/default/egg.html:73
 msgid "D:You don't own this egg"
 msgstr "Sie besitzen dieses Ei nicht"
 
-#: crystals/200_dragginator/themes/default/egg.html:86
+#: crystals/200_dragginator/themes/default/egg.html:87
 msgid "D:Send this egg to..."
 msgstr "Sende dieses Ei an..."
 
-#: crystals/200_dragginator/themes/default/egg.html:89
+#: crystals/200_dragginator/themes/default/egg.html:90
 msgid "D:Sell this egg for BIS"
 msgstr "Verkaufe dieses Ei für BIS"
 
-#: crystals/200_dragginator/themes/default/egg.html:95
+#: crystals/200_dragginator/themes/default/egg.html:118
 msgid "D:Remove this egg from the marketplace"
 msgstr "Dieses Ei vom Marktplatz entfernen"
 
@@ -775,59 +820,59 @@ msgstr "Anteile"
 msgid "EP:Workers"
 msgstr "Arbeiter"
 
-#: modules/i18n.py:22
+#: modules/i18n.py:74
 msgid "DT:Processing..."
 msgstr "Verarbeitend..."
 
-#: modules/i18n.py:23
+#: modules/i18n.py:75
 msgid "DT:Search&nbsp;..."
 msgstr "Suchen&nbsp;..."
 
-#: modules/i18n.py:24
+#: modules/i18n.py:76
 msgid "DT:Display _MENU_ elements"
 msgstr "Zeige _MENU_ Elemente an"
 
-#: modules/i18n.py:25
+#: modules/i18n.py:78
 msgid "DT:Display element _START_ to _END_ from _TOTAL_ elements"
 msgstr "Element anzeigen von _START_ bis _END_ von _TOTAL_ Elementen"
 
-#: modules/i18n.py:26 modules/i18n.py:30
+#: modules/i18n.py:80 modules/i18n.py:86
 msgid "DT:Nothing to display"
 msgstr "Nichts zum Anzeigen"
 
-#: modules/i18n.py:27
+#: modules/i18n.py:82
 msgid "DT:filtered from _MAX_ total elements"
 msgstr "Gefiltert von _MAX_ insgesamten Elementen"
 
-#: modules/i18n.py:29
+#: modules/i18n.py:85
 msgid "DT:Loading..."
 msgstr "Lädt..."
 
-#: modules/i18n.py:31
+#: modules/i18n.py:87
 msgid "DT:No data in the table"
 msgstr "Keine Daten in der Tabelle"
 
-#: modules/i18n.py:33
+#: modules/i18n.py:89
 msgid "DT:First"
 msgstr "Erste"
 
-#: modules/i18n.py:34
+#: modules/i18n.py:90
 msgid "DT:Previous"
 msgstr "Vorherige"
 
-#: modules/i18n.py:35
+#: modules/i18n.py:91
 msgid "DT:Next"
 msgstr "Nächste"
 
-#: modules/i18n.py:36
+#: modules/i18n.py:92
 msgid "DT:Last"
 msgstr "Letzte"
 
-#: modules/i18n.py:39
+#: modules/i18n.py:95
 msgid "DT:Sort by ascending order"
 msgstr "Sortieren nach aufsteigender Anordnung"
 
-#: modules/i18n.py:40
+#: modules/i18n.py:96
 msgid "DT:Sort by descending order"
 msgstr "Sortieren nach absteigender Anordnung "
 
@@ -843,11 +888,11 @@ msgstr "Kaufe ein Ei für {} BIS"
 msgid "D:You own {} eggs"
 msgstr "Sie besitzen {} Eier."
 
-#: crystals/200_dragginator/themes/default/egg.html:104
+#: crystals/200_dragginator/themes/default/egg.html:127
 msgid "D:Buy for {} BIS"
 msgstr "Kaufen für {} BIS"
 
-#: crystals/200_dragginator/themes/default/egg.html:91
+#: crystals/200_dragginator/themes/default/egg.html:92
 msgid "D:Price"
 msgstr "Preis"
 
@@ -871,27 +916,28 @@ msgstr "Keine Daten"
 msgid "This crystal is activated but needs a wallet restart."
 msgstr "Dieses Crystal ist aktiviert, benötigt aber einen Wallet Neustart."
 
-#: modules/i18n.py:8 themes/material/wallet_info.html:235
+#: modules/i18n.py:60 themes/material/wallet_info.html:235
 msgid "No protection"
 msgstr "Kein Schutz"
 
-#: modules/i18n.py:10 themes/material/wallet_info.html:232
+#: modules/i18n.py:62 themes/material/wallet_info.html:232
+#: themes/material/wallet_info.html:238 themes/material/wallet_info.html:241
 msgid "PIN Code"
 msgstr "PIN Code"
 
-#: modules/i18n.py:12 themes/material/wallet_info.html:233
+#: modules/i18n.py:64 themes/material/wallet_info.html:233
 msgid "YUBICO"
 msgstr "YUBICO"
 
-#: modules/i18n.py:14
+#: modules/i18n.py:66
 msgid "U2F Token"
 msgstr "U2F Token"
 
-#: themes/material/base.html:117
+#: themes/material/base.html:119
 msgid "Wallet info"
 msgstr "Wallet Info"
 
-#: themes/material/crystals_list.html:48
+#: themes/material/crystals_list.html:53
 msgid "Apply"
 msgstr "Anwenden"
 
@@ -899,7 +945,7 @@ msgstr "Anwenden"
 msgid "Close"
 msgstr "Schließen"
 
-#: themes/material/messages.html:15 wallet.py:655
+#: TornadoBismuthWallet.py:670 themes/material/messages.html:15 wallet.py:1016
 msgid "Sign message"
 msgstr "Nachricht signieren"
 
@@ -907,11 +953,13 @@ msgstr "Nachricht signieren"
 msgid "Sign some data for off chain usage with your private key."
 msgstr "Signiere einige Daten zur Off-Chain Verwendung mit Ihrem privaten Schlüssel."
 
-#: themes/material/messages.html:26
+#: TornadoBismuthWallet.py:245 TornadoBismuthWallet.py:282
+#: TornadoBismuthWallet.py:683 themes/material/messages.html:26
+#: themes/material/messages.html:96
 #: themes/material/transactions_send_confirm.html:104
 #: themes/material/transactions_sendpop_confirm.html:91
 #: themes/material/wallet_info.html:218 themes/material/wallet_info.html:219
-#: wallet.py:244 wallet.py:281 wallet.py:668
+#: wallet.py:361 wallet.py:427 wallet.py:1038 wallet.py:1085
 msgid "Spend protection"
 msgstr "Zahlungsschutz"
 
@@ -940,7 +988,8 @@ msgstr "Nachricht verschlüsseln"
 msgid "Click text to copy"
 msgstr "Text anklicken um zu kopieren"
 
-#: themes/material/messages_pop.html:34
+#: themes/material/home.html:118 themes/material/messages_pop.html:34
+#: themes/material/transactions.html:122
 #: themes/material/transactions_receive.html:84
 msgid "Copied to Clipboard"
 msgstr "Kopiert in Ablage"
@@ -1051,7 +1100,7 @@ msgstr "Auszahlungen sind derzeitig nicht geschützt"
 msgid "Spending is currently protected by {}"
 msgstr "Auszahlungen sind derzeitig geschützt von {}"
 
-#: themes/material/wallet_load.html:16 themes/material/wallet_load.html:36
+#: themes/material/wallet_load.html:16 themes/material/wallet_load.html:55
 msgid "Your Bismuth addresses"
 msgstr "Ihre Bismuth Adresse"
 
@@ -1063,53 +1112,60 @@ msgstr "Ihr Wallet Verzeichnis ist {}"
 msgid "Your wallet is {}"
 msgstr "Ihr Wallet ist {}"
 
-#: themes/material/wallet_load.html:42 themes/material/wallet_load.html:73
-#: themes/material/wallet_load.html:142
+#: themes/material/wallet_load.html:61 themes/material/wallet_load.html:98
+#: themes/material/wallet_load.html:175
 msgid "Label"
 msgstr "Bezeichnung"
 
-#: themes/material/wallet_load.html:44
+#: themes/material/wallet_load.html:63
 msgid "Creation date"
 msgstr "Erstellungsdatum"
 
-#: themes/material/wallet_load.html:75
+#: themes/material/wallet_load.html:100
 msgid "A private label for the new address"
 msgstr "Eine private Bezeichnung für diese neue Adresse"
 
-#: themes/material/wallet_load.html:80
+#: themes/material/wallet_load.html:105
 msgid "Create a new address"
 msgstr "Eine neue Adresse erstellen"
 
-#: themes/material/wallet_load.html:96
+#: themes/material/wallet_load.html:121
 msgid "Potential legacy wallet imports"
 msgstr "Mögliche alte Wallets importiert"
 
-#: wallet.py:244 wallet.py:281 wallet.py:668
+#: TornadoBismuthWallet.py:245 TornadoBismuthWallet.py:282
+#: TornadoBismuthWallet.py:683 wallet.py:362 wallet.py:428 wallet.py:1039
+#: wallet.py:1086
 msgid "Invalid PIN Number"
 msgstr "Ungültige PIN Nummer"
 
-#: wallet.py:401 wallet.py:421 wallet.py:460 wallet.py:474 wallet.py:489
-#: wallet.py:497 wallet.py:512 wallet.py:523
+#: TornadoBismuthWallet.py:406 TornadoBismuthWallet.py:426
+#: TornadoBismuthWallet.py:465 TornadoBismuthWallet.py:479
+#: TornadoBismuthWallet.py:494 TornadoBismuthWallet.py:502
+#: TornadoBismuthWallet.py:517 TornadoBismuthWallet.py:526
+#: TornadoBismuthWallet.py:532 wallet.py:614 wallet.py:645 wallet.py:694
+#: wallet.py:755 wallet.py:774 wallet.py:794 wallet.py:807 wallet.py:832
+#: wallet.py:846 wallet.py:859
 msgid "Error: {}"
 msgstr "Fehler: {}"
 
-#: wallet.py:451
+#: TornadoBismuthWallet.py:456 wallet.py:741
 msgid "Max of {} addresses reached."
 msgstr "Maximale Anzahl von {} Adressen erreicht."
 
-#: wallet.py:506
+#: TornadoBismuthWallet.py:511 wallet.py:821
 msgid "Passwords do not match"
 msgstr "Passwörter stimmen nicht überein"
 
-#: wallet.py:674
+#: TornadoBismuthWallet.py:689 wallet.py:1046
 msgid "Your message '{}' has been signed."
 msgstr "Ihre Nachricht '{}' wurde signiert."
 
-#: wallet.py:676
+#: TornadoBismuthWallet.py:691 wallet.py:1053 wallet.py:1098
 msgid "Signature"
 msgstr "Signatur"
 
-#: wallet.py:680
+#: TornadoBismuthWallet.py:695
 msgid "This feature is under construction. "
 msgstr "Diese Funktion ist in Bearbeitung. "
 
@@ -1165,27 +1221,188 @@ msgstr "AG:Game {} replay"
 msgid "AG:Game {} status"
 msgstr "AG:Game {} status"
 
-#: modules/basehandlers.py:60
+#: modules/basehandlers.py:79
 msgid "Wallet server did not send an answer. Please try again."
 msgstr "Wallet Server hat keine Antwort gesendet. Bitte versuche es nochmal."
 
-#: themes/material/about_network.html:85
+#: themes/material/about_network.html:86
 msgid "Height"
 msgstr "Height"
 
-#: themes/material/about_network.html:85
+#: themes/material/about_network.html:86
 msgid "Load"
 msgstr "Load"
 
-#: themes/material/wallet_load.html:128
+#: themes/material/wallet_load.html:161
 msgid "Edit label"
 msgstr "Bezeichnung ändern"
 
-#: themes/material/wallet_load.html:144
+#: themes/material/wallet_load.html:177
 msgid "A private label for that address"
 msgstr "Eine private Bezeichnung für die Adresse"
 
-#: themes/material/wallet_load.html:152
+#: themes/material/wallet_load.html:185
 msgid "Set label"
 msgstr "Bezeichnung festlegen"
+
+#: TornadoBismuthWallet.py:526 wallet.py:846
+msgid "PIN code can't be empty"
+msgstr "PIN Code kann nicht leer sein"
+
+#: crystals/200_dragginator/themes/default/about.html:64
+msgid "D:Class"
+msgstr "Class"
+
+#: crystals/200_dragginator/themes/default/about.html:75
+#: crystals/200_dragginator/themes/default/about.html:77
+msgid "D:"
+msgstr "D:"
+
+#: crystals/200_dragginator/themes/default/egg.html:98
+msgid "D:Register this egg to the hunt"
+msgstr "Registrieren Sie dieses Ei zum Jagen"
+
+#: crystals/200_dragginator/themes/default/egg.html:105
+msgid "D:This egg can hatch"
+msgstr "Dieses Ei kann schlüpfen"
+
+#: crystals/200_dragginator/themes/default/egg.html:108
+msgid "D:You can find this egg"
+msgstr "Sie können dieses Ei finden"
+
+#: crystals/212_docshield/themes/default/about.html:34
+msgid "Load Document"
+msgstr "Dokument laden"
+
+#: crystals/212_docshield/themes/default/about.html:74
+msgid "Submit Transaction 1"
+msgstr "Sende Transaktion 1"
+
+#: crystals/212_docshield/themes/default/about.html:75
+msgid "Submit Transaction 2"
+msgstr "Sende Transaktion 2"
+
+#: themes/material/about_credits.html:36
+msgid "BismuthClient version {}"
+msgstr "BismuthClient version {}"
+
+#: themes/material/about_help.html:10
+msgid "Get help"
+msgstr "Hilfe bekommen"
+
+#: themes/material/about_help.html:15
+msgid "Wallet F.A.Q."
+msgstr "Wallet F.A.Q"
+
+#: themes/material/about_network.html:30
+msgid "Time Drift:"
+msgstr "Zeit Abweichung:"
+
+#: themes/material/base.html:241
+msgid "Help"
+msgstr "Hilfe"
+
+#: themes/material/crystals_list.html:19
+msgid "Active"
+msgstr "Aktiv"
+
+#: themes/material/crystals_list.html:20
+msgid "Name"
+msgstr "Name"
+
+#: themes/material/crystals_list.html:22
+msgid "Description"
+msgstr "Beschreibung"
+
+#: themes/material/crystals_list.html:23
+msgid "Author"
+msgstr "Autor"
+
+#: themes/material/crystals_list.html:24
+msgid "Learn more..."
+msgstr "Mehr erfahren"
+
+#: themes/material/crystals_list.html:44
+msgid "More..."
+msgstr "Mehr..."
+
+#: themes/material/messages.html:85 wallet.py:1063
+msgid "Decrypt message"
+msgstr "Nachricht entschlüsseln"
+
+#: themes/material/messages.html:86
+msgid "Decrypt off chain message with your private key."
+msgstr "Off Chain Nachricht mit dem privaten Schlüssel entschlüsseln"
+
+#: themes/material/messages.html:90
+msgid "Encrypted message"
+msgstr "Verschlüsselte Nachricht"
+
+#: themes/material/messages.html:107
+msgid "Decrypt Message"
+msgstr "Nachricht entschlüsseln"
+
+#: themes/material/wallet_import_encrypted_der1.html:10
+msgid "Password"
+msgstr "Passwort"
+
+#: themes/material/wallet_import_encrypted_der1.html:20
+msgid "Enter wallet password for {}"
+msgstr "Fügen Sie das Wallet Passwort für {} ein"
+
+#: themes/material/wallet_import_encrypted_der1.html:24
+msgid "Wallet password"
+msgstr "Wallet Passwort"
+
+#: themes/material/wallet_import_encrypted_der1.html:34
+msgid "Import wallet"
+msgstr "Wallet importieren"
+
+#: themes/material/wallet_import_encrypted_der1.html:41
+msgid "Wallet will be decrypted, imported, and re-encrypted ith the main wallet master password"
+msgstr "Wallet wird entschlüsselt, importiert und erneut verschlüsselt mit dem primären Master Passwort"
+
+#: themes/material/wallet_load.html:40
+msgid "Click to query total balance"
+msgstr "Klicken um den gesamten Kontostand abzufragen"
+
+#: themes/material/wallet_load.html:186
+msgid "This can take some time, especially if your wallet is encrypted. Do not interrupt."
+msgstr "Dies kann einige Zeit in Anspruch nehmen besonders wenn Ihr Wallet verschlüsselt ist. Bitte nicht unterbrechen."
+
+#: wallet.py:215 wallet.py:279 wallet.py:317
+msgid "No message"
+msgstr "Keine Nachricht"
+
+#: wallet.py:216 wallet.py:280 wallet.py:318
+msgid "Sending to this recipient needs a proper message"
+msgstr "Das Versenden an den Empfänger benötigt eine ordnungsgemäße Nachricht"
+
+#: wallet.py:573
+msgid "Click"
+msgstr "Klicke"
+
+#: wallet.py:584
+msgid "Time out, please try reloading"
+msgstr "Zeitsperre, bitte erneut laden"
+
+#: wallet.py:1091
+msgid "Your message has been decrypted."
+msgstr "Ihre Nachricht wurde entschlüsselt"
+
+#: wallet.py:1107
+msgid "Message is empty"
+msgstr "Nachricht ist leer"
+
+#: wallet.py:1110
+msgid "Recipient is empty"
+msgstr "Empfänger ist leer"
+
+#: wallet.py:1113
+msgid "Your message has been encrypted."
+msgstr "Ihre Nachricht wurde verschlüsselt."
+
+#: wallet.py:1120
+msgid "Message"
+msgstr "Nachricht"
 
