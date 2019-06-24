@@ -7,6 +7,7 @@ from collections import OrderedDict
 LANGUAGES = OrderedDict(
     [
         ("*", ["Auto", "Auto"]),
+        ("ko", ["Korean", "kr"]),
         ("cn", ["Chinese", "cn"]),
         ("cs", ["Czech", "cz"]),
         ("de", ["German", "de"]),
