@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.19"
+__version__ = "0.1.20"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -267,6 +267,15 @@ class TransactionsHandler(BaseHandler):
                 return
             # print(decoded)
             self.bismuth_vars["params"]["recipient"] = decoded["recipient"]
+            # TODO: verify the sender address is a correct one
+            # address ok?
+            if not BismuthUtil.valid_address(self.bismuth_vars["params"]["recipient"]):
+                await self.message_pop(
+                    _("Error:") + " " + _("Bad address"),
+                    _("Recipient address '{}' seems invalid").format(self.bismuth_vars["params"]["recipient"]),
+                    "warning",
+                )
+                return
             self.bismuth_vars["params"]["amount"] = decoded["amount"]
             self.bismuth_vars["params"]["operation"] = decoded["operation"]
             self.bismuth_vars["params"]["data"] = decoded["openfield"]
@@ -281,7 +290,6 @@ class TransactionsHandler(BaseHandler):
                     "danger",
                 )
                 return
-            # TODO: address ok?
             # todo: amount ok
             # todo: enough balance?
             self.render(
@@ -319,8 +327,14 @@ class TransactionsHandler(BaseHandler):
                     "danger",
                 )
                 return
-
-            # TODO: address ok?
+            # address ok?
+            if not BismuthUtil.valid_address(self.bismuth_vars["params"]["recipient"]):
+                await self.message_pop(
+                    _("Error:") + " " + _("Bad address"),
+                    _("Recipient address '{}' seems invalid").format(self.bismuth_vars["params"]["recipient"]),
+                    "warning",
+                )
+                return
             # todo: amount ok
             # todo: enough balance?
             self.render(
