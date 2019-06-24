@@ -733,6 +733,7 @@ class WalletHandler(BaseHandler):
     async def new_address(self, params=None, post=False):
         """Adds a new address to the current multiwallet."""
         _ = self.locale.translate
+        # TODO: config item w/default?
         if len(self.bismuth._wallet._data["addresses"]) >= 10:
             self.render(
                 "message.html",
