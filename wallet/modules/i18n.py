@@ -17,6 +17,7 @@ LANGUAGES = OrderedDict(
         ("fr", ["French", "fr"]),
         ("hu", ["Hungarian", "hu"]),
         ("it", ["Italian", "it"]),
+        ("jp", ["Japanese", "jp"]),
         ("ko", ["Korean", "kr"]),
         ("nl", ["Dutch", "nl"]),
         ("no", ["Norsk", "no"]),
