@@ -14,7 +14,7 @@ MODULES = {}
 
 __version__ = "0.3"
 
-MARKETS = ["qtrade", "vinex"]  # Markets we want to list
+MARKETS = ["qtrade", "vinex", "graviex"]  # Markets we want to list
 
 
 class BismuthpriceHandler(CrystalHandler):

@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.20"
+__version__ = "0.1.21"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -154,7 +154,7 @@ class HomeHandler(BaseHandler):
             self.redirect("/wallet/info")
             return
         self.bismuth_vars["transactions"] = self.bismuth.latest_transactions(
-            5, for_display=True
+            5, for_display=True, mempool_included=True
         )
         home_crystals = {
             "address": self.bismuth_vars["address"],
@@ -517,7 +517,7 @@ class TransactionsHandler(BaseHandler):
             _ = self.locale.translate
             self.settings["page_title"] = _("Transaction list")
             self.bismuth_vars["transactions"] = self.bismuth.latest_transactions(
-                count, offset=start, for_display=True
+                count, offset=start, for_display=True, mempool_included=True
             )
             addresses = set()
             for tx in self.bismuth_vars["transactions"]:

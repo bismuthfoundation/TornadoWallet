@@ -88,9 +88,19 @@
 
                     {% for transaction in bismuth['transactions'] %}
                     <!-- module Transaction(transaction) -->
-                    <tr>
-                        <td class="center"><i class="material-icons copy-title-to-clipboard-base"
-                                              title="{{ transaction['signature'][:56] }}">receipt</i></td>
+                    {% if transaction['block_height'] < 0 %}
+                        <tr style="font-style:italic;">
+                    {% else %}
+                        <tr>
+                    {% end %}
+                        <td class="center">
+                        {% if transaction['block_height'] < 0 %}
+							<i class="material-icons" title="{{ _('In mempool...')}}">schedule</i>
+                        {% else %}
+                            <i class="material-icons copy-title-to-clipboard-base"
+                                              title="{{ transaction['signature'][:56] }}">receipt</i>
+						{% end %}
+                        </td>
                         <td>
                         {{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
