@@ -59,6 +59,7 @@ define(
 define("server", default="", help="Force a specific wallet server (ip:port)", type=str)
 define("crystals", default=True, help="Load Crystals", type=bool)
 define("lang", default="", help="Force a language: en,nl,ru...", type=str)
+define("maxa", default=10, help="maxa", type=int)
 
 
 class Application(tornado.web.Application):
@@ -116,6 +117,7 @@ class Application(tornado.web.Application):
             compress_response=True,
             debug=options.debug,  # Also activates auto reload
             serve_traceback=options.debug,
+            max_addresses=options.maxa,
             lang=options.lang,
             # wallet_servers = wallet_servers
             bismuth_client=bismuth_client,
@@ -748,12 +750,12 @@ class WalletHandler(BaseHandler):
         """Adds a new address to the current multiwallet."""
         _ = self.locale.translate
         # TODO: config item w/default?
-        if len(self.bismuth._wallet._data["addresses"]) >= 10:
+        if len(self.bismuth._wallet._data["addresses"]) >= self.settings["max_addresses"]:
             self.render(
                 "message.html",
                 type="warning",
                 title=_("Error"),
-                message=_("Max of {} addresses reached.").format(10),
+                message=_("Max of {} addresses reached.").format(self.settings["max_addresses"]),
                 bismuth=self.bismuth_vars,
             )
             return
@@ -1164,7 +1166,6 @@ def open_url(url):
 
 
 async def main():
-    tornado.options.parse_command_line()
     app = Application()
     app.listen(options.port, options.listen)
     # In this demo the server will simply run until interrupted
@@ -1186,6 +1187,7 @@ def port_in_use(port):
 
 
 if __name__ == "__main__":
+    tornado.options.parse_command_line()
     if port_in_use(options.port):
         print("Port {} is in use, opening url".format(options.port))
         open_url("http://127.0.0.1:{}".format(options.port))
