@@ -2,3 +2,6 @@ tornado
 bismuthclient>=0.0.47
 cachetools
 aiohttp
+mnemonic
+coincurve
+pycryptodomex
