@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.22"
+__version__ = "0.1.23"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
