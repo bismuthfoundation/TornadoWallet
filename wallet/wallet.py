@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.21"
+__version__ = "0.1.22"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -607,14 +607,27 @@ class WalletHandler(BaseHandler):
         wallets = self.bismuth.list_wallets(wallet_dir)
         # TODO: fix private access
         addresses = self.bismuth._wallet._addresses
-        self.render(
-            "wallet_load.html",
-            wallets=wallets,
-            bismuth=self.bismuth_vars,
-            wallet_dir=wallet_dir,
-            global_balance=global_balance,
-            addresses=addresses,
-        )
+        if "detail" in params:
+            # get balance of every address
+            balances = self.bismuth.all_balances(for_display=True)
+            self.render(
+                "wallet_load_detail.html",
+                wallets=wallets,
+                bismuth=self.bismuth_vars,
+                wallet_dir=wallet_dir,
+                global_balance=global_balance,
+                balances=balances,
+                addresses=addresses,
+            )
+        else:
+            self.render(
+                "wallet_load.html",
+                wallets=wallets,
+                bismuth=self.bismuth_vars,
+                wallet_dir=wallet_dir,
+                global_balance=global_balance,
+                addresses=addresses,
+            )
 
     async def load_address(self, params=None, post=False):
         """Set an address from the multiwallet as current address"""

@@ -18,7 +18,7 @@ crystals/100_bismuthprice/
 crystals/200_dragginator/
 
 A crystal directory has to be formatted as `000_crystalname`. The numerical prefix acts as a priority level. Lowest prio gets run first.  
-Priorities of 000-099 are reserved for low level crystals.  
+Priorities of 000-099 are reserved for low level and core crystals.  
 100-199 for demo and example crystals.  
 900-999 for test crystals.
 In each crystal directory, at least one `__init__.py` file containing the crystal code is needed.
