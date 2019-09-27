@@ -27,7 +27,7 @@ BGVP_MOTIONS = [
         "Motion_txid": "motion_0_txid_this_would_be_a_b64_encoded_string",
         "Motion_number": "TEST",
         "Motion_url": "https://hypernodes.bismuth.live/?p=863",
-        "Motion address": "FAKE_ADDRESS_DO_NOT_USE",
+        "Motion_address": "FAKE_ADDRESS_DO_NOT_USE",
         "Vote_start_date": 1569931200,
         "Vote_reading_date": 1572609600,
         "Vote_end_date": 1573387200,
@@ -42,7 +42,7 @@ BGVP_MOTIONS = [
         "Motion_txid": "motion_1_txid_this_would_be_a_b64_encoded_string",
         "Motion_number": 1,
         "Motion_url": "https://hypernodes.bismuth.live/?p=820",
-        "Motion address": "FAKE_ADDRESS_DO_NOT_USE",
+        "Motion_address": "FAKE_ADDRESS_DO_NOT_USE",
         "Vote_start_date": 1569931200,
         "Vote_reading_date": 1572609600,
         "Vote_end_date": 1573387200,
@@ -70,6 +70,23 @@ class BismuthvoteHandler(CrystalHandler):
         voting["bgvp_motions"] = BGVP_MOTIONS
         self.render(
             "about.html", bismuth=self.bismuth_vars, version=__version__, voting=voting
+        )
+
+    async def motion(self, params=None):
+        # TODO: message if no key is set.
+        motion = BGVP_MOTIONS[1]  # FAKE, lookup the real one.
+        transactions = [
+            {
+                "signature": "random_sig",
+                "timestamp": 1569932200,
+                "amount": 50,
+                "operation": "bgvp:vote",
+                "openfield": "1:454fdkl54e==",
+                "decoded": "1:C"
+            }
+        ]
+        self.render(
+            "motion.html", bismuth=self.bismuth_vars, version=__version__, motion=motion, transactions=transactions
         )
 
     async def set_key(self, params=None):

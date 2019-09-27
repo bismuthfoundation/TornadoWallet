@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+<!-- "../../../../themes/material/base.html" -->
+
+{% block body %}
+
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-info">
+                <h4 class="card-title">{{ _('BISMUTH VOTING') }} : BGV-{{ motion["Motion_number"] }}</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>id: {{ motion["Motion_number"] }}</li>
+                    <li>Txid: {{ motion["Motion_txid"] }}</li>
+                    <li>Url:  <a href="/crystal/bismuthvote/motion/{{ motion['Motion_number']}}">{{ motion["Motion_url"] }} <i class="material-icons">open_in_browser</i></a></li>
+                    <li>Address: {{ motion["Motion_address"] }}</li>
+                    <li>Start date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_start_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
+                    <li>Reveal date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_reading_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
+                    <li>End date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_end_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
+                    <li>Status: <i class="material-icons" title="">{{ motion["material_status"] }}</i> {{ motion['text_status'] }}</li>
+                </ul>
+
+                Vote Options: <ul>
+                {% for option in motion["Options"] %}
+                <li>BGV-{{ motion["Motion_number"] }}/{{ option["option_value"] }} : {{ option["option_title"] }}</li>
+                {% end %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-success">
+                <h4 class="card-title">{{ _("About") }}</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+                TODO: FAQ about the process.
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title">{{ _('Your transactions for this motion') }}</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body table-responsive">
+                <table class="table table-hover">
+                    <thead class="text-warning">
+                     <th class="center">{{ _("Txid")}}</th>
+                    <th>{{ _("Date")}}</th>
+                    <th class="amount">{{ _("Amount")}}</th>
+                    <th class="center">{{ _("Type")}}</th>
+                    <th>{{ _("Data")}}</th>
+                    <th>{{ _("Status")}}</th>
+                    </thead>
+                    <tbody>
+
+                    {% for transaction in transactions %}
+                    {% if False %}
+                        <tr style="font-style:italic;">
+                    {% else %}
+                        <tr>
+                    {% end %}
+
+                        <td class="center">
+                            <i class="material-icons copy-title-to-clipboard-base"
+                                              title="{{ transaction['signature'][:56] }}">receipt</i>
+                        </td>
+                        <td>
+                        {{ datetime.datetime.utcfromtimestamp(transaction['timestamp']).strftime('%Y-%m-%d %H:%M:%S') }}
+                        </td>
+                        <td class="text-success amount"> {{ transaction['amount'] }}</td>
+                        <td class="center"> {{ transaction['operation'] }}</td>
+                        <td>
+                            {{ transaction['decoded'] }}
+                        </td>
+                        <td>
+                            <i class="material-icons">done</i>
+                        </td>
+                    </tr>
+                    {% end %}
+                    <tr id="copied" style="display:none;">
+                        <td colspan="2">
+                            <button type="button" class="btn btn-success" >
+                                        <i class="material-icons">done_outline</i> {{ _('Copied to Clipboard') }}
+                            </button>
+                        </td>
+                        <td colspan="8"></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+{% end %}
