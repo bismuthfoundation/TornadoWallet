@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.23"
+__version__ = "0.1.24"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -725,6 +725,42 @@ class WalletHandler(BaseHandler):
             )
             return
         self.redirect("/wallet/load")
+
+    async def import_ecdsa(self, params=None, post: bool = False):
+        """Check key is good and show address for confirm"""
+        _ = self.locale.translate
+        if self.bismuth._wallet._locked:
+            self.render(
+                "message.html",
+                type="warning",
+                title=_("Error"),
+                message=_("You have to unlock your wallet first"),
+                bismuth=self.bismuth_vars,
+            )
+        privkey = self.get_argument("privkey").strip()
+        label = self.get_argument("label").strip()
+        import_confirmation = self.get_argument("import", False)
+        # print({ k: self.get_argument(k) for k in self.request.arguments })
+        if self.get_argument("cancel", False):
+            self.redirect("/wallet/load")
+        elif import_confirmation:
+            # We confirmed, import for good.
+            self.bismuth._wallet.import_ecdsa_pk(privkey, label)
+            self.redirect("/wallet/load")
+        else:
+            # Ask for confirm
+            signer = self.bismuth._wallet.get_ecdsa_key(privkey)
+            address = signer['address']
+            pubkey = signer['public_key']
+            # print(file_name)
+            self.render(
+                "wallet_import_ecdsa1.html",
+                privkey=privkey,
+                pubkey=pubkey,
+                label=label,
+                address=address,
+                bismuth=self.bismuth_vars,
+            )
 
     async def create(self, params=None, post: bool = False):
         # self.write(json.dumps(self.request))
