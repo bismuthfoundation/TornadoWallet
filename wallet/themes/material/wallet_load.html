@@ -89,26 +89,7 @@
                 </table>
             </div>
 
-            <form method="post" action="/wallet/new_address">
-            <div class="card-body">
-                <div class="row">
 
-                    <div class="col-lg-3 col-md-3 col-xs12">
-                        <div class="form-group">
-                            <label class="bmd-label-floating">{{ _("Label")}}</label>
-                            <input class="form-control" type="text" name="label"/>
-                            <small>{{ _("A private label for the new address")}}</small>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs12">
-                        {% raw xsrf_form_html() %}
-                        <button type="submit" class="btn btn-warning"><i class="material-icons">create_new_folder</i>&nbsp;{{ _("Create a new address")}}</button>
-                        <i class="material-icons" title="{{ _('This is likely to take some time, please do not interrupt the process.')}}">hourglass_empty</i>
-                    </div>
-
-                </div>
-            </div>
-            </form>
 
         </div>
     </div>
@@ -117,8 +98,70 @@
 </div>
 
 
-<div class="card-body table-responsive">
-    {{ _("Potential legacy wallet imports")}}
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+     <div class="card card-nav-tabs card-plain">
+       <div class="card-header card-header-info">
+        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+                <ul class="nav nav-tabs nav-tabs-warning" data-tabs="tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#newaddress" data-toggle="tab">{{ _("Create a new address")}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#legacy" data-toggle="tab">{{ _("Potential legacy wallet imports")}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pkimport" data-toggle="tab">{{ _("ECDSA PK Import")}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><div class="card-body ">
+        <div class="tab-content">
+
+             <div class="tab-pane active" id="newaddress">
+
+                 <form method="post" action="/wallet/new_address">
+
+                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">{{ _("Label")}}</label>
+                                <input class="form-control" type="text" name="label"/>
+                                <small>{{ _("A private label for the new address")}}</small>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">{{ _("Address type")}}</label><br />
+                                <input type="radio" name="addresstype" value="RSA" id="RSA" checked>
+                                <label for="RSA">RSA</label><br />
+                                <input type="radio" name="addresstype" value="ECDSA"  id="ECDSA" disabled>
+                                <label for="ECDSA">ECDSA (WIP)</label><br />
+                                <input type="radio" name="addresstype" value="ED25519"  id ="ED25519" disabled>
+                                <label for="ED25519">ED25519 (WIP)</label><br />
+                                <small>{{ _("What kind of crypto to use?")}}</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% raw xsrf_form_html() %}
+                    <button type="submit" class="btn btn-warning"><i class="material-icons">create_new_folder</i>&nbsp;{{ _("Create a new address")}}</button>
+                    <i class="material-icons" title="{{ _('This is likely to take some time, please do not interrupt the process.')}}">hourglass_empty</i>
+
+                    <div class="clearfix"></div>
+                </form>
+
+
+            </div>
+
+            <div class="tab-pane" id="legacy">
+
+                <div class="card-body table-responsive">
     <table class="table table-hover">
         <thead class="text-warning">
         <th>{{ _("File")}}</th>
@@ -149,6 +192,44 @@
         </tbody>
     </table>
 </div>
+
+
+            </div>
+            <div class="tab-pane" id="pkimport">
+                <form method="post" action="/wallet/import_ecdsa">
+
+                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">{{ _("Label")}}</label>
+                                <input class="form-control" type="text" name="label"/>
+                                <small>{{ _("A private label for that address")}}</small>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">{{ _("Private Key (hex)")}}</label>
+                                <input class="form-control" type="text" name="privkey"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% raw xsrf_form_html() %}
+                    <button type="submit" class="btn btn-warning"><i class="material-icons">get_app</i>&nbsp;{{ _("Import ECDSA privkey")}}</button>
+<br />WIP - Not functional.
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
 
 
 <div id="edit_window" class="modal" tabindex="-1" role="dialog">
