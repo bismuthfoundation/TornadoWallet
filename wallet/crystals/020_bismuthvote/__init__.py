@@ -100,7 +100,10 @@ class BismuthvoteHandler(CrystalHandler):
         )
 
     async def motion(self, params=None):
-        # TODO: message if no key is set.
+        # message if no key is set.
+        if not MASTER_KEY:
+            self.message("Master Key needed", "You need to define your master key first.", type="warning")
+            return
         await fill_motions()
         motion_id = str(int(params[0]))  # avoid invalid inputs
         motion = BGVP_MOTIONS[motion_id]
