@@ -12,18 +12,19 @@
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
+                <b>BGV-{{ motion["Motion_number"] }}: {{ motion["Motion_title"] }}</b>
                 <ul>
                     <li>id: {{ motion["Motion_number"] }}</li>
-                    <li>Txid: {{ motion["Motion_txid"] }}</li>
-                    <li>Url:  <a href="/crystal/bismuthvote/motion/{{ motion['Motion_number']}}">{{ motion["Motion_url"] }} <i class="material-icons">open_in_browser</i></a></li>
+                    <li>Txid: {{ motion["Motion_id"] }}</li>
+                    <li>Url:  <a href="{{ motion["Motion_url"] }}">{{ motion["Motion_url"] }} <i class="material-icons">open_in_new</i></a></li>
                     <li>Address: {{ motion["Motion_address"] }}</li>
                     <li>Start date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_start_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
                     <li>Reveal date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_reading_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
                     <li>End date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_end_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
-                    <li>Status: <i class="material-icons" title="">{{ motion["material_status"] }}</i> {{ motion['text_status'] }}</li>
+                    <li>Status: <i class="material-icons" >{{ motion["Material_status"] }}</i> {{ motion['Status'] }}</li>
                 </ul>
 
-                Vote Options: <ul>
+                <b>Vote Options:</b> <ul>
                 {% for option in motion["Options"] %}
                 <li>BGV-{{ motion["Motion_number"] }}/{{ option["option_value"] }} : {{ option["option_title"] }}</li>
                 {% end %}
@@ -36,12 +37,26 @@
     <div class="col-lg-6 col-md-12">
         <div class="card">
             <div class="card-header card-header-success">
-                <h4 class="card-title">{{ _("About") }}</h4>
+                <h4 class="card-title">BGV-{{ motion["Motion_number"] }} {{ _("Stats") }}</h4>
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
-                TODO: FAQ about the process.
-
+                <table class="table table-hover">
+                    <tbody>
+                    <tr><td>Status</td><td>{{ motion['Status'] }}</td><td><i class="material-icons" >{{ motion["Material_status"] }}</i></td></tr>
+                    <tr><td>Total Voters</td><td>{{ stats["total_voters"][0] }}</td><td><i class="material-icons">how_to_reg</i></td></tr>
+                    <tr><td>Total Votes</td><td>{{ stats["total_votes_count"][0] }}</td><td><i class="material-icons">how_to_vote</i></td></tr>
+                    <tr><td>Total Votes Amount</td><td>{{ stats["total_votes_amount"][0] }} $BIS</td><td><i class="material-icons">attach_money</i></td></tr>
+                    <tr><td>Total Votes changes</td><td>{{ stats["total_change_count"][0] }}</td><td><i class="material-icons">cached</i></td></tr>
+                    <tr><td>Total Reveals</td><td>{{ stats["total_reveals"][0] }}</td><td><i class="material-icons">record_voice_over</i></td></tr>
+                    </tbody>
+                </table>
+                <b>Votes:</b>
+                <ul>
+                    {% for option, result in stats["Votes"].items() %}
+                    <li>BGV-{{ motion["Motion_number"] }}/{{ option }}: {{ result }}</li>
+                    {% end %}
+                </ul>
             </div>
         </div>
     </div>

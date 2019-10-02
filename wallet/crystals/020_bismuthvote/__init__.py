@@ -77,19 +77,23 @@ def status_to_gui_status(status: str) -> str:
     return "assignment_turned_in"
 
 
+async def fill_motions():
+    global BGVP_MOTIONS
+    BGVP_MOTIONS = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/voting/motions.json")
+    # print(BGVP_MOTIONS)
+    for id, motion in BGVP_MOTIONS.items():
+        BGVP_MOTIONS[id]["Material_status"] = status_to_gui_status(motion["Status"])
+
+
 class BismuthvoteHandler(CrystalHandler):
     async def about(self, params=None):
-        global BGVP_MOTIONS
+
         voting = {
             "masterkey": MASTER_KEY,
             "masterkey_file": KEYFILE,
             "key_check": BIP39.check(MASTER_KEY),
         }
-        # TODO: get from the chain (+ cache)
-        BGVP_MOTIONS = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/voting/motions.json")
-        # print(BGVP_MOTIONS)
-        for id, motion in BGVP_MOTIONS.items():
-            BGVP_MOTIONS[id]["Material_status"] = status_to_gui_status(motion["Status"])
+        await fill_motions()
         voting["bgvp_motions"] = BGVP_MOTIONS
         self.render(
             "about.html", bismuth=self.bismuth_vars, version=__version__, voting=voting
@@ -97,7 +101,10 @@ class BismuthvoteHandler(CrystalHandler):
 
     async def motion(self, params=None):
         # TODO: message if no key is set.
-        motion = BGVP_MOTIONS[1]  # FAKE, lookup the real one.
+        await fill_motions()
+        motion_id = str(int(params[0]))  # avoid invalid inputs
+        motion = BGVP_MOTIONS[motion_id]
+        stats = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/voting/{}.json".format(motion_id))
         transactions = [
             {
                 "signature": "random_sig",
@@ -108,9 +115,7 @@ class BismuthvoteHandler(CrystalHandler):
                 "decoded": "1:C"
             }
         ]
-        self.render(
-            "motion.html", bismuth=self.bismuth_vars, version=__version__, motion=motion, transactions=transactions
-        )
+        self.render("motion.html", bismuth=self.bismuth_vars, version=__version__, motion=motion, transactions=transactions, stats=stats)
 
     async def set_key(self, params=None):
         masterkey = self.get_argument("masterkey", None)
