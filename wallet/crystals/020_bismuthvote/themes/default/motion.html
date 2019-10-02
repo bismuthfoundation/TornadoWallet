@@ -122,7 +122,40 @@
 
 </div>
 
-
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="card">
+            <div class="card-header card-header-warning">
+                <h4 class="card-title">{{ _('Cast your vote') }}: BGV-{{ motion["Motion_number"] }}</h4>
+                <p class="card-category"></p>
+            </div>
+            <div class="card-body">
+                <form>
+                    <b>BGV-{{ motion["Motion_number"] }}: {{ motion["Motion_title"] }}</b>
+                    <ul>
+                    {% for option in motion["Options"] %}
+                    <li>BGV-{{ motion["Motion_number"] }}/{{ option["option_value"] }} : {{ option["option_title"] }}</li>
+                    {% end %}
+                    </ul>
+                    <div class="form-group">
+                        <label class="bmd-label-floating">{{ _("Amount (BIS)")}}</label>
+                        <input class="form-control" id="amount" type="number" name="amount"/>
+                        <small>{{ _("This is your voting weight")}}</small>
+                    </div>
+                    <div class="row">
+                    {% for click in motion["Clicks"] %}
+                        <div class="col-lg-6 col-md-12">
+                            <center>
+                            <button class="btn btn-primary" title="{{ click['control'] }}" onclick="{% raw click['js'] %};return false">{% raw click['text1'] %}</button><br />
+                            <b>{% raw click['text2'] %}</b>
+                            </center>
+                        </div>
+                    {% end %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 {% end %}

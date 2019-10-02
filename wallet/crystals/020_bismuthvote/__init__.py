@@ -9,13 +9,15 @@ from modules.basehandlers import CrystalHandler
 from modules.helpers import base_path, get_private_dir, async_get_with_http_fallback
 from tornado.template import Template
 from bismuthvoting.bip39 import BIP39
+from bismuthvoting.derivablekey import DerivableKey
 from secrets import token_bytes
+from base64 import b64encode
 
 DEFAULT_THEME_PATH = path.join(base_path(), "crystals/020_bismuthvote/themes/default")
 
 MODULES = {}
 
-__version__ = "0.1"
+__version__ = "0.2"
 
 
 MASTER_KEY = ""
@@ -85,6 +87,32 @@ async def fill_motions():
         BGVP_MOTIONS[id]["Material_status"] = status_to_gui_status(motion["Status"])
 
 
+def fill_click(motion, address):
+    """Quick and dirty trick to avoid escape hell and too specific js code in the framework.
+    Python generated js code
+    Not happy with it, but does the job."""
+    if not MASTER_KEY:
+        return
+    # Get the key ready
+    print("Derivation path", "{}/{}".format(address, motion["Motion_id"]))
+    voting_key = DerivableKey.get_from_path(MASTER_KEY, "{}/{}".format(address, motion["Motion_id"]))
+    clicks = []
+    for option in motion["Options"]:
+        encrypted = DerivableKey.encrypt_vote(voting_key.to_aes_key(), option['option_value'])
+        # Precalc the messages, so we can use the js framework to send only.
+        openfield = b64encode(encrypted).decode("utf-8")
+        js = "if(document.getElementById('amount').value<=0){{alert('Enter vote weight!');return false;}};send('{}', document.getElementById('amount').value, 'bgvp:vote', '{}')" \
+            .format(motion["Motion_address"], openfield)
+        text1 = "BGV-{}/{}".format(motion["Motion_number"], option['option_value'])
+        text2 = option['option_title']
+        control = DerivableKey.decrypt_vote(voting_key.to_aes_key(), encrypted)
+        if control != option['option_value']:
+            raise RuntimeWarning("Assertion error checking vote")
+        clicks.append({'js': js, 'text1': text1, 'text2': text2, "control": control})
+    motion['Clicks'] = clicks
+    return motion
+
+
 class BismuthvoteHandler(CrystalHandler):
     async def about(self, params=None):
 
@@ -107,6 +135,7 @@ class BismuthvoteHandler(CrystalHandler):
         await fill_motions()
         motion_id = str(int(params[0]))  # avoid invalid inputs
         motion = BGVP_MOTIONS[motion_id]
+        motion = fill_click(motion, self.bismuth_vars['address'])
         stats = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/voting/{}.json".format(motion_id))
         transactions = [
             {
