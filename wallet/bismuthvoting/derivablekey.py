@@ -131,7 +131,7 @@ class DerivableKey:
             iv = "Bismuth BGVP IV.".encode("utf-8")
         clear = cls.decrypt(aes_key, data, iv=iv)
         # print(clear)
-        clear, _ = clear.split(b" ")
+        clear, _ = clear.split(b" ", 1)
         return clear.decode("utf-8")
 
     @classmethod

@@ -2,12 +2,14 @@
 Bismuth Voting Crystal for Tornado wallet
 """
 
-import json
-from os import path, listdir
+# import json
+from os import path
+# from os import listdir
+from time import time
 
 from modules.basehandlers import CrystalHandler
 from modules.helpers import base_path, get_private_dir, async_get_with_http_fallback
-from tornado.template import Template
+# from tornado.template import Template
 from bismuthvoting.bip39 import BIP39
 from bismuthvoting.derivablekey import DerivableKey
 from secrets import token_bytes
@@ -23,49 +25,7 @@ __version__ = "0.3"
 MASTER_KEY = ""
 KEYFILE = ""
 
-# Temporarily hardcoded
-# material status is the icon name assignment_late: ongoing assignment_turned_in: ended, assignment: not started yet
-# {"Motion_number":"0","Motion_title":"Test motion","Motion_url":"https://hypernodes.bismuth.live/?p=863","Motion_address":"Bis1Gov1CztEShtDDddMjmzCDv9GQkuFqTzdH","Vote_start_date":1569931200,"Vote_reading_date":1571140800,"Vote_end_date":1572609600,"Options":[{"option_value":"A","option_title":"Test motion vote A"},{"option_value":"B","option_title":"Test motion vote B"}]}
-# {"Motion_number":1,"Motion_title":"Reduce supply emission?","Motion_url":"https://hypernodes.bismuth.live/?p=820","Motion_address":"Bis1SUPPLYFimnbVEx9sBxLAdPWNeTyEWMVf3","Vote_start_date":1569931200,"Vote_reading_date":1572609600,"Vote_end_date":1573387200,"Options":[{"option_value":"A","option_title":"Do not change supply emission."},{"option_value":"B","option_title":"Change the supply emission to lower the dilution."}]}
 BGVP_MOTIONS = {}
-"""
-    {
-        "Motion_txid": "motion_0_txid_this_would_be_a_b64_encoded_string",
-        "Motion_number": "0",
-        "Motion_title": "Test motion",
-        "Motion_url": "https://hypernodes.bismuth.live/?p=863",
-        "Motion_address": "Bis1Gov1CztEShtDDddMjmzCDv9GQkuFqTzdH",
-        "Vote_start_date": 1569931200,
-        "Vote_reading_date": 1571140800,
-        "Vote_end_date": 1572609600,
-        "Options": [
-            {"option_value": "A", "option_title": "Test motion vote A"},
-            {"option_value": "B", "option_title": "Test motion vote B"},
-        ],
-        "material_status": "assignment_late",
-        "text_status": "TEST only"
-    },
-    {
-        "Motion_txid": "MEQCIAPObnznl/wywdGtNYfIt8R2FTaBjjw2s1WMPozdwJEtAiBsoTo4",
-        "Motion_number": 1,
-        "Motion_title": "Reduce supply emission?",
-        "Motion_url": "https://hypernodes.bismuth.live/?p=820",
-        "Motion_address": "Bis1SUPPLYFimnbVEx9sBxLAdPWNeTyEWMVf3",
-        "Vote_start_date": 1569931200,
-        "Vote_reading_date": 1572609600,
-        "Vote_end_date": 1573387200,
-        "Options": [
-            {"option_value": "A", "option_title": "Do not change supply emission."},
-            {
-                "option_value": "B",
-                "option_title": "Change the supply emission to lower the dilution.",
-            },
-        ],
-        "material_status": "assignment",
-        "text_status": "Not started yet"
-    },
-]
-"""
 
 
 def status_to_gui_status(status: str) -> str:
@@ -93,7 +53,7 @@ def fill_click(motion, address, voting_key=None):
     Not happy with it, but does the job."""
     if not MASTER_KEY:
         return
-    # Get the key ready
+    # Get the key ready if not provided
     if voting_key is None:
         # print("Derivation path", "{}/{}".format(address, motion["Motion_id"]))
         voting_key = DerivableKey.get_from_path(MASTER_KEY, "{}/{}".format(address, motion["Motion_id"]))
@@ -111,11 +71,14 @@ def fill_click(motion, address, voting_key=None):
             raise RuntimeWarning("Assertion error checking vote")
         clicks.append({'js': js, 'text1': text1, 'text2': text2, "control": control})
     motion['Clicks'] = clicks
+    openfield = "{}:{}".format(motion["Motion_number"], b64encode(voting_key.to_aes_key()).decode("utf-8"))
+    js = "send('{}', 0, 'bgvp:reveal', '{}')".format(motion["Motion_address"], openfield)
+    motion['Reveal_click'] = js
     return motion
 
 
 def decode_tx(motion: dict, transaction: dict, voting_key) -> dict:
-    """Add decoded key to the transaction"""
+    """Add decoded key to the transaction, with ok an error info as well."""
     decoded = "Error"
     transaction["ok"] = False
     transaction["error"] = "N/A"
@@ -174,30 +137,19 @@ class BismuthvoteHandler(CrystalHandler):
         motion = fill_click(motion, my_address, voting_key)
         motion["aes_key_hex"] = voting_key.to_aes_key().hex()
         stats = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/voting/{}.json".format(motion_id))
-        """
-        transactions = [
-            {
-                "signature": "random_sig",
-                "timestamp": 1569932200,
-                "amount": 50,
-                "operation": "bgvp:vote",
-                "openfield": "1:454fdkl54e==",
-                "decoded": "1:C"
-            }
-        ]
-        """
+        # Optimized command from wallet server.
         command = "addlistopfromjson"
         bismuth_params = [self.bismuth_vars['address'], 'bgvp:vote']
         votes = self.bismuth.command(command, bismuth_params)
         bismuth_params = [self.bismuth_vars['address'], 'bgvp:change']
         changes = self.bismuth.command(command, bismuth_params)
-        # TODO: validate changes
+        # TODO: validate changes (can be done in decode_tx)
         bismuth_params = [self.bismuth_vars['address'], 'bgvp:reveal']
         reveals = self.bismuth.command(command, bismuth_params)
+        # TODO: validate reveals (can be done in decode_tx)
         transactions = votes + changes + reveals
         transactions = [decode_tx(motion, transaction, voting_key) for transaction in transactions]
-        # TODO: changes, reveals
-        self.render("motion.html", bismuth=self.bismuth_vars, version=__version__, motion=motion, transactions=transactions, stats=stats)
+        self.render("motion.html", bismuth=self.bismuth_vars, version=__version__, motion=motion, transactions=transactions, stats=stats, now=time())
 
     async def set_key(self, params=None):
         masterkey = self.get_argument("masterkey", None)
