@@ -148,7 +148,7 @@ class BismuthvoteHandler(CrystalHandler):
         reveals = self.bismuth.command(command, bismuth_params)
         # TODO: validate reveals (can be done in decode_tx)
         transactions = votes + changes + reveals
-        transactions = [decode_tx(motion, transaction, voting_key) for transaction in transactions]
+        transactions = [decode_tx(motion, transaction, voting_key) for transaction in transactions if transaction['recipient'] == motion['Motion_address'] and transaction['openfield'].split(':', 1)[0] == str(motion['Motion_number'])]
         self.render("motion.html", bismuth=self.bismuth_vars, version=__version__, motion=motion, transactions=transactions, stats=stats, now=time())
 
     async def set_key(self, params=None):
