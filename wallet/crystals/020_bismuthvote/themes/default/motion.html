@@ -30,6 +30,17 @@
                 {% end %}
                 </ul>
 
+                <span data-toggle="collapse" data-target="#master_option">
+                            <i id="extra" class="material-icons" style="color:#029eb1;" title="{{ _('AES Key')}}">
+                                arrow_drop_down</i></span>
+                <div id="master_option" class="collapse">
+                        <div id="extra_option2" class="form-group">
+                            <label class="bmd-label-floating">{{ _("AES voting key")}}</label>
+                            <input class="form-control" id="masterkey" type="text" name="masterkey" value="{{ motion['aes_key_hex'] }}"/>
+                            <small>{{ _('This is the AES disposable key for this motion, derived from your master key')}}
+                            </small>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
@@ -101,7 +112,11 @@
                             {{ transaction['decoded'] }}
                         </td>
                         <td>
-                            <i class="material-icons">done</i>
+                            {% if transaction['ok'] %}
+                                <i class="material-icons">done</i>
+                            {% else %}
+                                <i class="material-icons" title="{{ transaction['error'] }}">bug_report</i>
+                            {% end %}
                         </td>
                     </tr>
                     {% end %}

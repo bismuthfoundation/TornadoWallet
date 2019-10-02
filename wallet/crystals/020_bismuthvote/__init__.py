@@ -11,13 +11,13 @@ from tornado.template import Template
 from bismuthvoting.bip39 import BIP39
 from bismuthvoting.derivablekey import DerivableKey
 from secrets import token_bytes
-from base64 import b64encode
+from base64 import b64encode, b64decode
 
 DEFAULT_THEME_PATH = path.join(base_path(), "crystals/020_bismuthvote/themes/default")
 
 MODULES = {}
 
-__version__ = "0.2"
+__version__ = "0.3"
 
 
 MASTER_KEY = ""
@@ -27,7 +27,7 @@ KEYFILE = ""
 # material status is the icon name assignment_late: ongoing assignment_turned_in: ended, assignment: not started yet
 # {"Motion_number":"0","Motion_title":"Test motion","Motion_url":"https://hypernodes.bismuth.live/?p=863","Motion_address":"Bis1Gov1CztEShtDDddMjmzCDv9GQkuFqTzdH","Vote_start_date":1569931200,"Vote_reading_date":1571140800,"Vote_end_date":1572609600,"Options":[{"option_value":"A","option_title":"Test motion vote A"},{"option_value":"B","option_title":"Test motion vote B"}]}
 # {"Motion_number":1,"Motion_title":"Reduce supply emission?","Motion_url":"https://hypernodes.bismuth.live/?p=820","Motion_address":"Bis1SUPPLYFimnbVEx9sBxLAdPWNeTyEWMVf3","Vote_start_date":1569931200,"Vote_reading_date":1572609600,"Vote_end_date":1573387200,"Options":[{"option_value":"A","option_title":"Do not change supply emission."},{"option_value":"B","option_title":"Change the supply emission to lower the dilution."}]}
-BGVP_MOTIONS = []
+BGVP_MOTIONS = {}
 """
     {
         "Motion_txid": "motion_0_txid_this_would_be_a_b64_encoded_string",
@@ -87,20 +87,21 @@ async def fill_motions():
         BGVP_MOTIONS[id]["Material_status"] = status_to_gui_status(motion["Status"])
 
 
-def fill_click(motion, address):
+def fill_click(motion, address, voting_key=None):
     """Quick and dirty trick to avoid escape hell and too specific js code in the framework.
     Python generated js code
     Not happy with it, but does the job."""
     if not MASTER_KEY:
         return
     # Get the key ready
-    print("Derivation path", "{}/{}".format(address, motion["Motion_id"]))
-    voting_key = DerivableKey.get_from_path(MASTER_KEY, "{}/{}".format(address, motion["Motion_id"]))
+    if voting_key is None:
+        # print("Derivation path", "{}/{}".format(address, motion["Motion_id"]))
+        voting_key = DerivableKey.get_from_path(MASTER_KEY, "{}/{}".format(address, motion["Motion_id"]))
     clicks = []
     for option in motion["Options"]:
         encrypted = DerivableKey.encrypt_vote(voting_key.to_aes_key(), option['option_value'])
         # Precalc the messages, so we can use the js framework to send only.
-        openfield = b64encode(encrypted).decode("utf-8")
+        openfield = "{}:{}".format(motion["Motion_number"], b64encode(encrypted).decode("utf-8"))
         js = "if(document.getElementById('amount').value<=0){{alert('Enter vote weight!');return false;}};send('{}', document.getElementById('amount').value, 'bgvp:vote', '{}')" \
             .format(motion["Motion_address"], openfield)
         text1 = "BGV-{}/{}".format(motion["Motion_number"], option['option_value'])
@@ -111,6 +112,39 @@ def fill_click(motion, address):
         clicks.append({'js': js, 'text1': text1, 'text2': text2, "control": control})
     motion['Clicks'] = clicks
     return motion
+
+
+def decode_tx(motion: dict, transaction: dict, voting_key) -> dict:
+    """Add decoded key to the transaction"""
+    decoded = "Error"
+    transaction["ok"] = False
+    transaction["error"] = "N/A"
+    try:
+        if transaction['operation'] == "bgvp:vote":
+            # decode the vote
+            num, b64 = transaction["openfield"].split(":")
+            encrypted = b64decode(b64)
+            decoded = "{}:{}".format(num, DerivableKey.decrypt_vote(voting_key.to_aes_key(), encrypted))
+            # TODO: make sure vote is one of the motion option
+            transaction["ok"] = True
+        elif transaction['operation'] == "bgvp:change":
+            # decode the vote chyange
+            num, b64 = transaction["openfield"].split(":")
+            encrypted = b64decode(b64)
+            decoded = "{}:{}".format(num, DerivableKey.decrypt_vote(voting_key.to_aes_key(), encrypted))
+            # TODO: make sure vote is one of the motion option
+            transaction["ok"] = True
+        elif transaction['operation'] == "bgvp:reveal":
+            num, b64 = transaction["openfield"].split(":")
+            decoded = "{}:{}".format(num, b64decode(b64).hex())
+            # TODO: make sure it's the current aes key
+            transaction["ok"] = True
+    except Exception as e:
+        decoded = "Error"
+        transaction["ok"] = False
+        transaction["error"] = str(e)
+    transaction["decoded"] = decoded
+    return transaction
 
 
 class BismuthvoteHandler(CrystalHandler):
@@ -135,8 +169,12 @@ class BismuthvoteHandler(CrystalHandler):
         await fill_motions()
         motion_id = str(int(params[0]))  # avoid invalid inputs
         motion = BGVP_MOTIONS[motion_id]
-        motion = fill_click(motion, self.bismuth_vars['address'])
+        my_address = self.bismuth_vars['address']
+        voting_key = DerivableKey.get_from_path(MASTER_KEY, "{}/{}".format(my_address, motion["Motion_id"]))
+        motion = fill_click(motion, my_address, voting_key)
+        motion["aes_key_hex"] = voting_key.to_aes_key().hex()
         stats = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/voting/{}.json".format(motion_id))
+        """
         transactions = [
             {
                 "signature": "random_sig",
@@ -147,6 +185,18 @@ class BismuthvoteHandler(CrystalHandler):
                 "decoded": "1:C"
             }
         ]
+        """
+        command = "addlistopfromjson"
+        bismuth_params = [self.bismuth_vars['address'], 'bgvp:vote']
+        votes = self.bismuth.command(command, bismuth_params)
+        bismuth_params = [self.bismuth_vars['address'], 'bgvp:change']
+        changes = self.bismuth.command(command, bismuth_params)
+        # TODO: validate changes
+        bismuth_params = [self.bismuth_vars['address'], 'bgvp:reveal']
+        reveals = self.bismuth.command(command, bismuth_params)
+        transactions = votes + changes + reveals
+        transactions = [decode_tx(motion, transaction, voting_key) for transaction in transactions]
+        # TODO: changes, reveals
         self.render("motion.html", bismuth=self.bismuth_vars, version=__version__, motion=motion, transactions=transactions, stats=stats)
 
     async def set_key(self, params=None):
