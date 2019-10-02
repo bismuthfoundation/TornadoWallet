@@ -74,6 +74,7 @@
                     <thead class="text-warning">
                     <th class="center">&nbsp;</th>
                     <th class="center">{{ _("Motion ID")}}</th>
+                    <th>{{ _("Motion Title")}}</th>
                     <th>{{ _("Start Date (UTC)")}}</th>
                     <th >{{ _("Reveal Date")}}</th>
                     <th >{{ _("End Date")}}</th>
@@ -81,7 +82,7 @@
                     </thead>
                     <tbody>
 
-                    {% for motion in voting["bgvp_motions"] %}
+                    {% for id, motion in voting["bgvp_motions"].items() %}
                     {% if False %}
                         <tr style="font-style:italic;">
                     {% else %}
@@ -94,6 +95,9 @@
                         <td class="center">
                             <a href="/crystal/bismuthvote/motion/{{ motion['Motion_number']}}">BGV-{{ motion["Motion_number"] }}</a>  <a href="{{ motion["Motion_url"] }}" target="_blank"><i class="material-icons">link</i></a>
                         </td>
+                         <td>
+                        {{ motion["Motion_title"] }}
+                        </td>
                         <td>
                         {{ datetime.datetime.utcfromtimestamp(motion["Vote_start_date"]).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
@@ -104,7 +108,7 @@
                         {{ datetime.datetime.utcfromtimestamp(motion["Vote_end_date"]).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
                         <td>
-                            <i class="material-icons" title="{{ motion['text_status'] }}">{{ motion["material_status"] }}</i></a>
+                            <i class="material-icons" title="{{ motion['Status'] }}">{{ motion["Material_status"] }}</i></a>
                         </td>
                     </tr>
                     {% end %}
