@@ -31,13 +31,15 @@
                 </ul>
 
                 <span data-toggle="collapse" data-target="#master_option">
+                    <i class="material-icons" style="color:#029eb1;" title="{{ _('AES Key')}}">
+                                vpn_key</i>
                             <i id="extra" class="material-icons" style="color:#029eb1;" title="{{ _('AES Key')}}">
                                 arrow_drop_down</i></span>
                 <div id="master_option" class="collapse">
                         <div id="extra_option2" class="form-group">
                             <label class="bmd-label-floating">{{ _("AES voting key")}}</label>
-                            <input class="form-control" id="masterkey" type="text" name="masterkey" value="{{ motion['aes_key_hex'] }}"/>
-                            <small>{{ _('This is the AES disposable key for this motion, derived from your master key')}}
+                            <input class="form-control" id="masterkey" type="text" name="masterkey" value="{{ motion['aes_key_hex'] }}" />
+                            <small>{{ _('This is the AES disposable key for this address and motion, derived from your master key')}}
                             </small>
                         </div>
                 </div>
@@ -49,6 +51,7 @@
         <div class="card">
             <div class="card-header card-header-success">
                 <h4 class="card-title">BGV-{{ motion["Motion_number"] }} {{ _("Stats") }}</h4>
+
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
@@ -68,6 +71,7 @@
                     <li>BGV-{{ motion["Motion_number"] }}/{{ option }}: {{ result }}</li>
                     {% end %}
                 </ul>
+                <div class="text-right"><div class="btn" style="background-color:rgba(211, 84, 0,1.0);padding:3px;margin:0">Updated /15min</div></div>
             </div>
         </div>
     </div>
@@ -130,7 +134,7 @@
                     </tr>
                     </tbody>
                 </table>
-
+                <i class="material-icons">help</i> {{ _('Data is the decoded message, thanks to your own voting key. Only you can see it, everyone else only sees the encrypted data.') }}
             </div>
         </div>
     </div>
