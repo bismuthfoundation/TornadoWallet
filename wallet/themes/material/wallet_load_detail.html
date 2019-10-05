@@ -89,66 +89,12 @@
                 </table>
             </div>
 
-            <form method="post" action="/wallet/new_address">
-            <div class="card-body">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-3 col-xs12">
-                        <div class="form-group">
-                            <label class="bmd-label-floating">{{ _("Label")}}</label>
-                            <input class="form-control" type="text" name="label"/>
-                            <small>{{ _("A private label for the new address")}}</small>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-xs12">
-                        {% raw xsrf_form_html() %}
-                        <button type="submit" class="btn btn-warning"><i class="material-icons">create_new_folder</i>&nbsp;{{ _("Create a new address")}}</button>
-                        <i class="material-icons" title="{{ _('This is likely to take some time, please do not interrupt the process.')}}">hourglass_empty</i>
-                    </div>
-
-                </div>
-            </div>
-            </form>
-
         </div>
     </div>
 
 
 </div>
 
-
-<div class="card-body table-responsive">
-    {{ _("Potential legacy wallet imports")}}
-    <table class="table table-hover">
-        <thead class="text-warning">
-        <th>{{ _("File")}}</th>
-        <th>{{ _("Address")}}</th>
-        <th>{{ _("Encrypted")}}</th>
-        <th>{{ _("Action")}}</th>
-        </thead>
-        <tbody>
-        {% for wallet in wallets %}
-        <!-- TODO: do not allow to import more than once -->
-        <tr style="border-bottom:1px solid #808080;">
-            <td>{{ wallet['file'] }}</td>
-            {% if wallet['encrypted'] == False %}
-                <td><a href="/wallet/import_der/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
-                <td>{{ wallet['encrypted'] }}</td>
-                <td><a href="/wallet/import_der/{{ wallet['file'] }}">
-                    <i class="material-icons" title="{{ _('Import')}}">get_app</i>
-                </a></td>
-            {% else %}
-                <td><a href="/wallet/import_encrypted_der1/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
-                <td>{{ wallet['encrypted'] }}</td>
-                <td><a href="/wallet/import_encrypted_der1/{{ wallet['file'] }}">
-                    <i class="material-icons" title="{{ _('Import')}}">get_app</i>
-                </a></td>
-            {% end %}
-        </tr>
-        {% end %}
-        </tbody>
-    </table>
-</div>
 
 
 <div id="edit_window" class="modal" tabindex="-1" role="dialog">

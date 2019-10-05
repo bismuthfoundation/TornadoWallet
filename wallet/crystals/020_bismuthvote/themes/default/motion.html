@@ -16,11 +16,11 @@
                 <ul>
                     <li>id: {{ motion["Motion_number"] }}</li>
                     <li>Txid: {{ motion["Motion_id"] }}</li>
-                    <li>Url:  <a href="{{ motion["Motion_url"] }}">{{ motion["Motion_url"] }} <i class="material-icons">open_in_new</i></a></li>
+                    <li>Url:  <a href="{{ motion['Motion_url'] }}">{{ motion["Motion_url"] }} <i class="material-icons">open_in_new</i></a></li>
                     <li>Address: {{ motion["Motion_address"] }}</li>
-                    <li>Start date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_start_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
-                    <li>Reveal date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_reading_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
-                    <li>End date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_end_date"]).strftime('%Y-%m-%d %H:%M:%S') }}</li>
+                    <li>Start date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_start_date"]).strftime('%Y-%m-%d %H:%M:%S') }} UTC</li>
+                    <li>Reveal date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_reading_date"]).strftime('%Y-%m-%d %H:%M:%S') }} UTC</li>
+                    <li>End date: {{ datetime.datetime.utcfromtimestamp(motion["Vote_end_date"]).strftime('%Y-%m-%d %H:%M:%S') }}  UTC</li>
                     <li>Status: <i class="material-icons" >{{ motion["Material_status"] }}</i> {{ motion['Status'] }}</li>
                 </ul>
 
