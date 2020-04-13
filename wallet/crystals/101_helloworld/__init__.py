@@ -25,11 +25,11 @@ class HelloworldHandler(CrystalHandler):
         self.render("about.html", bismuth=self.bismuth_vars)
 
     async def message_popup(self, params=None):
-        title = 'Hello World Message!'
+        title = self.get_argument("title", default=None, strip=False)
         message = self.get_argument("msg", default=None, strip=False)
-        type= "info"
+        type = self.get_argument("type", default=None, strip=False)
         self.render("message_pop.html", bismuth=self.bismuth_vars, title=title, message=message, type=type)
-
+        
     async def page1(self, params=None):
         data = {}
         data['txs'] = {}
