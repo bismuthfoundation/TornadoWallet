@@ -5,17 +5,16 @@
 {% raw xsrf_form_html() %}
 
 <script>
-function message_get(){
-    $.get('message_popup?msg=' + $("#mytext").val(),function(page){
+function message_get(title,msg,type){
+    $.get('message_popup?msg=' + msg + '&title=' + title + '&type=' + type,function(page){
         $("#message_window").html(page);
         $("#message_window").modal("show");
         });
 }
 
-function message_post(){
+function message_post(title,msg,type){
     var xsrf = $("[name='_xsrf']").val();
-    var msg = $("#mytext").val();
-    $.post('message_popup', { msg: msg, _xsrf: xsrf }, function(page){
+    $.post('message_popup', { msg: msg, title: title, type: type, _xsrf: xsrf }, function(page){
         $("#message_window").html(page);
         $("#message_window").modal("show");
     });
@@ -38,12 +37,13 @@ function message_post(){
             Hypernodes:<br/>
             <input type="submit" name="button2" value="Show Hypernodes">
             <br/>
+            <br/>
             Message:<br/>
             Enter your message here: <input type="text" id="mytext" name="mytext">&nbsp;&nbsp;
             </form>
             <br/>
-            <input type="submit" name="button3" value="Submit (Get)" onclick="message_get();">&nbsp;&nbsp;
-            <input type="submit" name="button3" value="Submit (Post)" onclick="message_post();">
+            <input type="submit" name="button3" value="Submit (Get)" onclick="message_get('Hellow World Message!',$('#mytext').val(),'warning');">&nbsp;&nbsp;
+            <input type="submit" name="button4" value="Submit (Post)" onclick="message_post('Hello World Message!',$('#mytext').val(),'info');">
             </div>
         </div>
     </div>
