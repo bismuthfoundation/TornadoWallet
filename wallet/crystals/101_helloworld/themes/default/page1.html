@@ -32,18 +32,18 @@ function message_post(title,msg,type){
             <div class="card-body">
             Bismuth Blockchain:<br/>
             <form method="get">
-            <input type="submit" name="button1" value="Show Latest Account Transactions">
+            <input type="submit" class="btn btn-info" name="button1" value="Show Latest Account Transactions">
             <br/>
             Hypernodes:<br/>
-            <input type="submit" name="button2" value="Show Hypernodes">
+            <input type="submit" class="btn btn-info" name="button2" value="Show Hypernodes">
             <br/>
             <br/>
             Message:<br/>
-            Enter your message here: <input type="text" id="mytext" name="mytext">&nbsp;&nbsp;
+            Enter your message here: <input type="text" class="form-control" id="mytext" name="mytext">&nbsp;&nbsp;
             </form>
             <br/>
-            <input type="submit" name="button3" value="Submit (Get)" onclick="message_get('Hellow World Message!',$('#mytext').val(),'warning');">&nbsp;&nbsp;
-            <input type="submit" name="button4" value="Submit (Post)" onclick="message_post('Hello World Message!',$('#mytext').val(),'info');">
+            <input type="submit" class="btn btn-info" name="button3" value="Submit (Get)" onclick="message_get('Hellow World Message!',$('#mytext').val(),'warning');">&nbsp;&nbsp;
+            <input type="submit" class="btn btn-info" name="button4" value="Submit (Post)" onclick="message_post('Hello World Message!',$('#mytext').val(),'info');">
             </div>
         </div>
     </div>
