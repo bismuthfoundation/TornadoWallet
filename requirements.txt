@@ -5,3 +5,4 @@ aiohttp
 mnemonic
 coincurve
 pycryptodomex
+requests_oauth2
