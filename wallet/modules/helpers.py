@@ -59,7 +59,7 @@ def get_api_10(url, is_json=True):
     return ""
 
 
-async def async_get(url, is_json=False):
+async def async_get(url, is_json=False, ignore_ssl_errors=False):
     """Async gets an url content.
 
     If is_json, decodes the content
@@ -69,8 +69,11 @@ async def async_get(url, is_json=False):
     # TODO: retry on error?
     if not HTTP_SESSION:
         HTTP_SESSION = aiohttp.ClientSession()
+    session = HTTP_SESSION
+    if ignore_ssl_errors:
+        session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=False))
     try:
-        async with HTTP_SESSION.get(url) as resp:
+        async with session.get(url) as resp:
             if is_json:
                 try:
                     return json.loads(await resp.text())
@@ -81,6 +84,7 @@ async def async_get(url, is_json=False):
                 return await resp.text()
             # TODO: could use resp content-type to decide
     except Exception as e:
+        print("Async get {}: {}".format(url, e))
         return None
 
 
@@ -88,7 +92,7 @@ async def async_get_with_http_fallback(https_url, is_json=True):
     data = await async_get(https_url, is_json=is_json)
     if data is None:
         http_url = https_url.replace("https://", "http://")
-        data = await async_get(http_url, is_json=is_json)
+        data = await async_get(http_url, is_json=is_json, ignore_ssl_errors=True)
     return data
 
 

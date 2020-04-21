@@ -42,7 +42,7 @@ def status_to_gui_status(status: str) -> str:
 async def fill_motions():
     global BGVP_MOTIONS
     BGVP_MOTIONS = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/voting/motions.json")
-    # print(BGVP_MOTIONS)
+    print(BGVP_MOTIONS)
     for id, motion in BGVP_MOTIONS.items():
         BGVP_MOTIONS[id]["Material_status"] = status_to_gui_status(motion["Status"])
 

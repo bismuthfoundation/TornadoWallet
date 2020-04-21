@@ -773,7 +773,7 @@ class WalletHandler(BaseHandler):
         file_name = os.path.join(wallet_dir, "{}.der".format(wallet))
         if os.path.isfile(file_name):
             self.render(
-                "message.html",
+                "message.htm+l",
                 type="warning",
                 title=_("Error"),
                 message=_("This file already exists: {}.der").format(wallet),

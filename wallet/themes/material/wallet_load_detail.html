@@ -76,7 +76,7 @@
                                 <a href="/wallet/load_address/{{ address['address'] }}">{{ address['address'] }}</a>
                             {% end %}
                         </td>
-                        <td style="text-align: right; padding-right:10px;">{{ balances[address['address']] }}
+                        <td style="text-align: right; padding-right:10px;">{{ balances.get(address['address'], "ERR: Reload") }}
                         </td>
                         <td><a href="/wallet/load_address/{{ address['address'] }}">
                             <i class="fa fa-envelope-open" title="{{ _('Set this address as current one')}}"></i>
