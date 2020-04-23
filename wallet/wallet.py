@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.27"
+__version__ = "0.1.29"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -60,6 +60,8 @@ define("server", default="", help="Force a specific wallet server (ip:port)", ty
 define("crystals", default=True, help="Load Crystals", type=bool)
 define("lang", default="", help="Force a language: en,nl,ru...", type=str)
 define("maxa", default=10, help="maxa", type=int)
+define("romode", default=False, help="Read Only Mode - WIP", type=bool)
+define("nowallet", default=False, help="No Wallet Mode - WIP, do NOT use yet", type=bool)
 
 
 class Application(tornado.web.Application):
@@ -74,13 +76,21 @@ class Application(tornado.web.Application):
         wallet_dir = helpers.get_private_dir()
         self.wallet_settings = None
         print("Please store your wallets under '{}'".format(wallet_dir))
+        if options.romode:
+            print("Read only mode")
         # self.load_user_data("{}/options.json".format(wallet_dir))
-        bismuth_client.load_multi_wallet("{}/wallet.json".format(wallet_dir))
+        if options.nowallet:
+            print("No Wallet mode")
+            bismuth_client.wallet_file = None
+            bismuth_client.address = 'FakeAddressMode'
+        else:
+            bismuth_client.load_multi_wallet("{}/wallet.json".format(wallet_dir))
         bismuth_client.set_alias_cache_file("{}/alias_cache.json".format(wallet_dir))
         bismuth_client.get_server()
         # Convert relative to absolute
         options.theme = os.path.join(helpers.base_path(), options.theme)
         static_path = os.path.join(options.theme, "static")
+        common_path = os.path.join(helpers.base_path(), "themes/common")
         self.default_handlers = [
             (r"/", HomeHandler),
             (r"/transactions/(.*)", TransactionsHandler),
@@ -97,6 +107,7 @@ class Application(tornado.web.Application):
                 tornado.web.StaticFileHandler,
                 dict(path=static_path),
             ),
+            (r'/common/(.*)', tornado.web.StaticFileHandler, {'path': common_path}),
         ]
         # Parse crystals dir, import and plug handlers.
         self.crystals_manager = CrystalManager(init=options.crystals)
@@ -1239,7 +1250,8 @@ if __name__ == "__main__":
     tornado.options.parse_command_line()
     if port_in_use(options.port):
         print("Port {} is in use, opening url".format(options.port))
-        open_url("http://127.0.0.1:{}".format(options.port))
+        if not options.romode:  # Do not auto open url in read only mode
+            open_url("http://127.0.0.1:{}".format(options.port))
     else:
         # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
         locale_path = os.path.join(helpers.base_path(), "locale")
