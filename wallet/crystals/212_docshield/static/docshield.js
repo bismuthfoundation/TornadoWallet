@@ -1,13 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/static/css/dataTables.min.css">
-<script src="/static/js/plugins/jquery.dataTables.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha256.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-hex.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-latin1.min.js"></script>
-
-<script>
 var table = $('#missionTable').DataTable();
 
 function update_table_deprecated(address) {
@@ -132,4 +122,3 @@ $(function() {
     update_table(address)
 });
 
-</script>

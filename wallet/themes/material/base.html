@@ -28,6 +28,7 @@
     <!-- CSS Just for demo purpose, dont include it in your project -->
     <link href="{{ static_url('demo/demo.css') }}" rel="stylesheet"/>
     {% raw bismuth['extra']['header'] %}
+    {% block header %}{% end %}
 </head>
 
 <body class="dark-edition">
@@ -318,19 +319,19 @@
     </div>
 </div -->
 <!--   Core JS Files   -->
-<script src="{{ static_url('js/core/jquery.min.js') }}"></script>
-<script src="{{ static_url('js/core/popper.min.js') }}"></script>
+<script src="{{ handler.common_url('js/core/jquery.min.js') }}"></script>
+<script src="{{ handler.common_url('js/core/popper.min.js') }}"></script><!-- t -->
 <script src="{{ static_url('js/core/bootstrap-material-design.min.js') }}"></script>
 <script src="https://unpkg.com/default-passive-events"></script>
-<script src="{{ static_url('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
+<script src="{{ handler.common_url('js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <!-- script async defer src="https://buttons.github.io/buttons.js"></script -->
 <!--  Google Maps Plugin    -->
 <!-- script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script -->
 <!-- Chartist JS -->
-<script src="{{ static_url('js/plugins/chartist.min.js') }}"></script>
+<script src="{{ handler.common_url('js/plugins/chartist.min.js') }}"></script>
 <!--  Notifications Plugin    -->
-<script src="{{ static_url('js/plugins/bootstrap-notify.js') }}"></script>
+<script src="{{ handler.common_url('js/plugins/bootstrap-notify.js') }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{ static_url('js/material-dashboard.js') }}"></script>
 <!-- Material Dashboard DEMO methods, dont include it in your project -->
@@ -686,7 +687,7 @@
 </script>
 
 {% raw bismuth['extra']['footer'] %}
-
+{% block footer %}{% end %}
 </body>
 
 </html>

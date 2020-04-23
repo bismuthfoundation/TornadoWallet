@@ -1,7 +1,7 @@
 import logging
 import sys
 from tornado import locale
-from tornado.web import RequestHandler
+from tornado.web import RequestHandler, StaticFileHandler
 from tornado.template import Loader, Template
 from os import path
 
@@ -89,6 +89,38 @@ class BaseHandler(RequestHandler):
             "flag": get_flag_from_locale(my_locale),
             "list": get_locales_list(),
         }
+        self.common_path = path.abspath("themes/common")
+
+
+    def common_url(self, path):
+        """Returns a static URL for the given relative static file path.
+
+        This method requires you set the 'static_path' setting in your
+        application (which specifies the root directory of your static
+        files).
+
+        We append ?v=<signature> to the returned URL, which makes our
+        static file handler set an infinite expiration header on the
+        returned content. The signature is based on the content of the
+        file.
+
+        If this handler has a "include_host" attribute, we include the
+        full host for every static URL, including the "http://". Set
+        this attribute for handlers whose output needs non-relative static
+        path names.
+        """
+        self.require_setting("static_path", "static_url")
+        static_handler_class = self.settings.get(
+            "static_handler_class", StaticFileHandler)
+        if getattr(self, "include_host", False):
+            base = self.request.protocol + "://" + self.request.host
+        else:
+            base = ""
+        settings_new = dict(self.settings)
+        settings_new["static_path"] = self.common_path
+        res = base + static_handler_class.make_static_url(settings_new, path)
+        res = res.replace("/static", "/common")
+        return res
 
     def get_user_locale_name(self):
         if self.settings["lang"]:

@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 <!-- "../../../../themes/material/base.html" -->
 
-{% block body %}
-
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{{ handler.common_url('css/dataTables.min.css') }}">
 <style>
 input, td {
   background-color:#202940;
@@ -15,6 +15,9 @@ input, td {
   margin-bottom:6px;
 }
 </style>
+{%end %}
+
+{% block body %}
 
 <div class="row">
 
@@ -103,9 +106,22 @@ input, td {
     </div>
 </div>
 
+
 <script>
     // To be used by docshield.js
     var address = "{{bismuth['address']}}";
 </script>
 
+{% end %}
+
+{% block footer %}
+<!-- this goes after default includes, like jquery -->
+<script src="{{ handler.common_url('js/plugins/jquery.dataTables.min.js') }}"></script>
+<!-- no etag, versionning or helper yet -->
+<script src="/crystal/docshield/static/docshield.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha256.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-hex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-latin1.min.js"></script>
 {% end %}

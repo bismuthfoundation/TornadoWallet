@@ -17,17 +17,21 @@ DEFAULT_THEME_PATH = path.join(base_path(), "crystals/212_docshield/themes/defau
 
 MODULES = {}
 
-__version__ = "1.0.2"
+__version__ = "1.0.5"
 
 
 class DocshieldHandler(CrystalHandler):
     def initialize(self):
         # Parent init
         super().initialize()
+        """
+        # DEPRECATED, see footer block in about .html instead.
         # Inject our local js file in the template footer, so js code is seen after jquery
         js_inject_file_path = path.join(DEFAULT_THEME_PATH, "docshield.js")  # Never use relative file paths
         with open(js_inject_file_path) as file:
             data = file.read()
+        """
+        data = ""
         self.bismuth_vars["extra"] = {
             "header": "<!-- DOCHASH HEADER -->",
             "footer": data,
