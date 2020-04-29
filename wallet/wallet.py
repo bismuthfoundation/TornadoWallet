@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.31"
+__version__ = "0.1.32"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -62,6 +62,7 @@ define("lang", default="", help="Force a language: en,nl,ru...", type=str)
 define("maxa", default=10, help="maxa", type=int)
 define("romode", default=False, help="Read Only Mode - WIP", type=bool)
 define("nowallet", default=False, help="No Wallet Mode - WIP, do NOT use yet", type=bool)
+define("missing_address_route", default="/wallet/info", help="Route when no address is defined", type=str)
 
 
 # Decorator to limit available methods when in read only mode
@@ -182,7 +183,8 @@ class HomeHandler(BaseHandler):
         # self.render("home.html", balance="101", wallet_servers=','.join(self.settings['wallet_servers']))
         if not self.bismuth_vars["address"]:
             self.bismuth_vars["address"] = "None"
-            self.redirect("/wallet/info")
+            # self.redirect("/wallet/info")
+            self.redirect(options.missing_address_route)
             return
         self.bismuth_vars["transactions"] = self.bismuth.latest_transactions(
             5, for_display=True, mempool_included=True
