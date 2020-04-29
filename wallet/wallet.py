@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.30"
+__version__ = "0.1.31"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -62,6 +62,23 @@ define("lang", default="", help="Force a language: en,nl,ru...", type=str)
 define("maxa", default=10, help="maxa", type=int)
 define("romode", default=False, help="Read Only Mode - WIP", type=bool)
 define("nowallet", default=False, help="No Wallet Mode - WIP, do NOT use yet", type=bool)
+
+
+# Decorator to limit available methods when in read only mode
+def write_protected(func):
+    async def decorator(obj, *args, **kwargs):
+        _ = obj.locale.translate
+        if obj.ro_mode:
+            obj.render(
+                "message.html",
+                type="warning",
+                title=_("Error"),
+                message=_("Read only mode, command is not allowed"),
+                bismuth=obj.bismuth_vars,
+            )
+            return
+        await func(obj, *args, **kwargs)
+    return decorator
 
 
 class Application(tornado.web.Application):
@@ -189,11 +206,11 @@ class TransactionsHandler(BaseHandler):
     def randhex(self, size):
         return ''.join(random.choices(string.ascii_lowercase + string.digits, k=size))
     """
-
+    @write_protected
     async def send(self, params=None):
+        _ = self.locale.translate
         # query_params = self.extract_params()
         # print(params)
-        _ = self.locale.translate
         self.settings["page_title"] = _("Send BIS")
         if not self.bismuth_vars["address"]:
             await self.message(
@@ -245,6 +262,7 @@ class TransactionsHandler(BaseHandler):
         else:
             self.render("transactions_send.html", bismuth=self.bismuth_vars)
 
+    @write_protected
     async def send_pop(self, params=None):
         # TODO: factorize, common code with send.
         _ = self.locale.translate
@@ -361,6 +379,7 @@ class TransactionsHandler(BaseHandler):
         else:
             self.message(_("Error:"), "No recipient", "warning")
 
+    @write_protected
     async def confirmpop(self, params=None):
         _ = self.locale.translate
         spend_token = self.get_argument(
@@ -427,6 +446,7 @@ class TransactionsHandler(BaseHandler):
             title=title,
         )
 
+    @write_protected
     async def confirm(self, params=None):
         _ = self.locale.translate
         spend_token = self.get_argument(
@@ -664,6 +684,7 @@ class WalletHandler(BaseHandler):
         # self.bismuth_vars['spend_type']['type'] = 'YUBICO'
         self.render("wallet_info.html", wallet=wallet_info, bismuth=self.bismuth_vars)
 
+    @write_protected
     async def import_der(self, params=None, post: bool = False):
         _ = self.locale.translate
         if self.bismuth._wallet._locked:
@@ -689,6 +710,7 @@ class WalletHandler(BaseHandler):
             return
         self.redirect("/wallet/load")
 
+    @write_protected
     async def import_encrypted_der1(self, params=None, post: bool = False):
         """Ask for pass"""
         _ = self.locale.translate
@@ -708,6 +730,7 @@ class WalletHandler(BaseHandler):
             bismuth=self.bismuth_vars,
         )
 
+    @write_protected
     async def import_encrypted_der2(self, params=None, post: bool = False):
         """Ask for pass"""
         _ = self.locale.translate
@@ -738,6 +761,7 @@ class WalletHandler(BaseHandler):
             return
         self.redirect("/wallet/load")
 
+    @write_protected
     async def import_ecdsa(self, params=None, post: bool = False):
         """Check key is good and show address for confirm"""
         _ = self.locale.translate
@@ -774,6 +798,7 @@ class WalletHandler(BaseHandler):
                 bismuth=self.bismuth_vars,
             )
 
+    @write_protected
     async def create(self, params=None, post: bool = False):
         # self.write(json.dumps(self.request))
         # TODO: DEPRECATED
@@ -807,6 +832,7 @@ class WalletHandler(BaseHandler):
                     bismuth=self.bismuth_vars,
                 )
 
+    @write_protected
     async def new_address(self, params=None, post=False):
         """Adds a new address to the current multiwallet."""
         _ = self.locale.translate
@@ -834,6 +860,7 @@ class WalletHandler(BaseHandler):
                 bismuth=self.bismuth_vars,
             )
 
+    @write_protected
     async def set_label(self, params=None, post=False):
         """Defines or edit the label of an address"""
         _ = self.locale.translate
@@ -888,6 +915,8 @@ class WalletHandler(BaseHandler):
                 return
             self.redirect("/wallet/info")
         elif action == "set_master":
+            if self.ro_mode:
+                return
             current_password = self.get_argument("master_password", None)
             new_password = self.get_argument("new_master_password", None)
             new_password2 = self.get_argument("new_master_password2", None)
@@ -913,6 +942,8 @@ class WalletHandler(BaseHandler):
                 return
             self.redirect("/wallet/info")
         elif action == "set_spend":
+            if self.ro_mode:
+                return
             password = self.get_argument("master_password", None)
             spend_type = self.get_argument("spend_type", None)
             spend_value = self.get_argument("spend_value", None)
@@ -1085,6 +1116,7 @@ class MessagesHandler(BaseHandler):
     async def index(self, params=None, post=False):
         self.render("messages.html", bismuth=self.bismuth_vars)
 
+    @write_protected
     async def sign_pop(self, params=None):
         _ = self.locale.translate
         message = self.get_argument("data", "")
@@ -1132,6 +1164,7 @@ class MessagesHandler(BaseHandler):
             data=data,
         )
 
+    @write_protected
     async def decrypt_pop(self, params=None, post=True):
         _ = self.locale.translate
         message = self.get_argument("data", "")
@@ -1177,6 +1210,7 @@ class MessagesHandler(BaseHandler):
             data=data,
         )
 
+    @write_protected
     async def encrypt_pop(self, params=None):
         _ = self.locale.translate
         message = self.get_argument("data", "")
