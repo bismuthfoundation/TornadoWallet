@@ -130,6 +130,7 @@ class Application(tornado.web.Application):
             serve_traceback=options.debug,
             max_addresses=options.maxa,
             lang=options.lang,
+            ro_mode=options.romode,
             # wallet_servers = wallet_servers
             bismuth_client=bismuth_client,
             bismuth_vars={
