@@ -39,7 +39,7 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.32"
+__version__ = "0.1.33"
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -63,6 +63,7 @@ define("maxa", default=10, help="maxa", type=int)
 define("romode", default=False, help="Read Only Mode - WIP", type=bool)
 define("nowallet", default=False, help="No Wallet Mode - WIP, do NOT use yet", type=bool)
 define("missing_address_route", default="/wallet/info", help="Route when no address is defined", type=str)
+define("app_title", default=u"Tornado Bismuth Wallet", help="Custom app title", type=str)
 
 
 # Decorator to limit available methods when in read only mode
@@ -135,7 +136,7 @@ class Application(tornado.web.Application):
         self.crystals_manager.execute_action_hook("init")
 
         settings = dict(
-            app_title=u"Tornado Bismuth Wallet",
+            app_title=options.app_title,
             # template_loader = CrystalLoader(options.theme),
             template_path=os.path.join(os.path.dirname(__file__), options.theme),
             static_path=os.path.join(os.path.dirname(__file__), static_path),
