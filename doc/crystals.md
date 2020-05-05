@@ -121,3 +121,5 @@ They are supposed to extend `base.html` that is the code from the main template,
 WIP
 
 See [https://github.com/bismuthfoundation/TornadoWallet/tree/master/wallet/crystals/](crystals/) directory.
+
+For documentation of 101_helloworld, see https://hypernodes.bismuth.live/?p=1320
