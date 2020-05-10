@@ -326,7 +326,7 @@ function plotData() {
     var d1 = $("#enddate").val();
 
     if(variable_desc == "Temperature") {
-        variable_desc = variable_desc + " (deg " + localStorage.getItem("phone_temperature") + ")";
+        variable_desc = variable_desc + " (deg " + getLocal("phone_temperature",temperature_opt[0]) + ")";
     }
     updateLocalStorage();
 
