@@ -11,7 +11,7 @@ $(document).ready(function() {
         if(localStorage.getItem("phone_startdate") === null) {
             localStorage.setItem("phone_startdate", "2020-01-01");
             localStorage.setItem("phone_enddate", today());
-            localStorage.setItem("phone_pdfimage", "logo.png");
+            localStorage.setItem("phone_pdfimage", "pdflogo.png");
         }
     } catch(e) {}
 });

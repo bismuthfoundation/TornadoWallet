@@ -84,10 +84,10 @@ function FetchID() {
 }
 
 function temperature(celsius) {
-    //Displays temperature (C or F) in $("#temperature")
-    var temp_select = $("#temperature option:selected").index();
+    //Displays temperatature (C or F) in localStorage 'phone_temperature'
+    var temperature = getLocal("phone_temperature",temperature_opt[0]);
     var out = celsius;
-    if(temp_select == 1) {
+    if(temperature == "F") {
         out = celsius_to_fahrenheit(celsius);
     }
     return out;
@@ -134,7 +134,6 @@ function FetchPhoneData() {
     var xsrf = $("[name='_xsrf']").val();
     message_post('Android Phone','Fetching battery data using Termux API. Wait a few seconds. If it fails, try again.','info');
 
-    localStorage.setItem("phone_temperature", $("#temperature option:selected").val());
     localStorage.setItem("phone_pwd", $("#phone_pwd").val());
     var pwd = $('#phone_pwd').val();
 
@@ -286,6 +285,7 @@ function radioClick(id_array,desc,val,i,N) {
             $(tag).prop("checked", false);
         }
     }
+    changeFunc();
 }
 
 function getLocal(id,def) {
