@@ -13,6 +13,52 @@ var PDFOptions_opt = ["1","2","3","4"];
 
 // Start of function declarations
 
+function display_mode(mode) {
+    //Defines Day or Night Mode
+    localStorage.setItem("phone_mode",mode);
+    if(mode == "Day") {
+        var bg = "#ffffff";
+        var bg_card = "#eeeeee";
+        var fg = "#000000";
+    } else {
+        var bg = "#192035";
+        var bg_card = "#202940";
+        var fg = "#8b92a9";
+    }
+    document.body.style.background = bg;
+
+    var elements = document.getElementsByClassName("card");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor=bg_card;
+    }
+    var elements = document.getElementsByClassName("input");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.backgroundColor=bg_card;
+    }
+    var elements = document.getElementsByClassName("card-body");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.color=fg;
+    }
+}
+
+function getColors() {
+    out = "style='background-color:#202940;color:#8b92a9;'";
+    mode = localStorage.getItem("phone_mode");
+    if(mode == "Day") {
+        out = "style='background-color:#eeeeee;color:#000000;'";
+    }
+    return out;
+}
+
+function getbgColor() {
+    out = "#202940;";
+    mode = localStorage.getItem("phone_mode");
+    if(mode == "Day") {
+        out = "#eeeeee;";
+    }
+    return out;
+}
+
 function FetchID() {
     //Fetches asset ID number and displays in $('#asset_id')
     var xsrf = $("[name='_xsrf']").val();
@@ -38,10 +84,10 @@ function FetchID() {
 }
 
 function temperature(celsius) {
-    //Displays temperatature (C or F) in localStorage.getItem('phone_temperature')
-    var temperature = getLocal("phone_temperature",temperature_opt[0]);
+    //Displays temperature (C or F) in $("#temperature")
+    var temp_select = $("#temperature option:selected").index();
     var out = celsius;
-    if(temperature == "F") {
+    if(temp_select == 1) {
         out = celsius_to_fahrenheit(celsius);
     }
     return out;
@@ -88,6 +134,7 @@ function FetchPhoneData() {
     var xsrf = $("[name='_xsrf']").val();
     message_post('Android Phone','Fetching battery data using Termux API. Wait a few seconds. If it fails, try again.','info');
 
+    localStorage.setItem("phone_temperature", $("#temperature option:selected").val());
     localStorage.setItem("phone_pwd", $("#phone_pwd").val());
     var pwd = $('#phone_pwd').val();
 
@@ -216,6 +263,7 @@ function showTable() {
                     table.row.add([d1 + " (Sum)", mysum]);
                 }
                 table.draw();
+                $('#table2 td').css('background-color',getbgColor());
                 $(".content").css({"cursor":"default"});
             });
         }
@@ -238,7 +286,6 @@ function radioClick(id_array,desc,val,i,N) {
             $(tag).prop("checked", false);
         }
     }
-    changeFunc();
 }
 
 function getLocal(id,def) {
@@ -271,13 +318,14 @@ function search_asset_ids() {
         text = text.replace(/&quot;/g,'"');
         var data = JSON.parse(text);
         if(data.total>0) {
-            var html = ("<div><div class='cell'><div class='cell-overflow'><table id='table2'><thead><tr><th>Asset ID</th><th>Address</th></tr></thead></table></div></div>");
-            html = html.concat("<br/>Selected ID: <input type='text' id='selected_id' readonly>");
-            html = html.concat("<br/><br/>Start Date: <input type='text' readonly='true' value='", localStorage.getItem("phone_startdate"), "' id='startdate' class='form-control' id='datepicker'");
-            html = html.concat(" onClick='pickDate($(this));' style='background-color:#202940;'>");
-            html = html.concat("End Date: <input type='text' value='", localStorage.getItem("phone_enddate"), "' readonly='true' id='enddate' class='form-control' id='datepicker'");
-            html = html.concat(" onClick='pickDate($(this));' style='background-color:#202940;'>");
-            html = html.concat("<br/><table width='100%'><tr><td width='50%'>");
+            var html = ("<div><div class='cell'><div class='cell-overflow'>");
+            html = html.concat("<table id='table2' ", getColors(), "><thead><tr><th>Asset ID</th><th>Address</th></tr></thead></table></div></div>");
+            html = html.concat("<br/><table><tr><td>Selected ID:&nbsp;</td><td><input type='text' size='10' id='selected_id' readonly ", getColors(), "></td></tr>");
+            html = html.concat("<tr><td>Start Date:&nbsp;</td><td><input type='text' size='10' readonly='true' value='", localStorage.getItem("phone_startdate"), "' id='startdate'");
+            html = html.concat(" onClick='pickDate($(this));' ", getColors(), "'>");
+            html = html.concat("</td></tr><tr><td>End Date:</td><td><input type='text' size='10' value='", localStorage.getItem("phone_enddate"), "' readonly='true' id='enddate'");
+            html = html.concat(" onClick='pickDate($(this));' ", getColors(), "'>");
+            html = html.concat("</td></tr></table><br/><table width='100%'><tr><td width='50%'>");
             html = html.concat("Show Temperature As:&nbsp;&nbsp;&nbsp;<br/>", radio(temperature_desc,temperature_opt,["phone_temperature_desc","phone_temperature"]), "<br/>");
             html = html.concat("Select Plot Variable:<br/>", radio(plotoptions_desc,plotoptions_opt,["phone_plotoptions_desc", "phone_plotoptions"]), "<br/>");
             html = html.concat("Plot Type:<br/>", radio(plottype_desc,plottype_opt,["phone_plottype_desc", "phone_plottype"]), "<br/>");
@@ -286,7 +334,7 @@ function search_asset_ids() {
             html = html.concat("Select Table Variable:");
             html = html.concat("<br/>", radio(tablevar_desc,tablevar_opt,["phone_tablevar_desc", "phone_tablevar"]), "<br/>");
             html = html.concat("PDF Format:<br/>", radio(PDFOptions_desc,PDFOptions_opt,["phone_PDFOptions_desc", "phone_PDFOptions"]), "<br/>");
-            html = html.concat("Image (stored in /static): <input type='text' value='", localStorage.getItem("phone_pdfimage"), "' id='pdf_image' class='form-control'>");
+            html = html.concat("PDF Image File (stored in wallet/crystals/400_phonebattery/static): <input type='text' value='", localStorage.getItem("phone_pdfimage"), "' id='pdf_image' class='form-control'", getColors(), ">");
             html = html.concat("<button onclick='showTable();' class='btn btn-secondary'>Show Table</button>");
             html = html.concat("</td></tr></table></div>");
             $("#p_selectBox").html(html);
@@ -294,18 +342,24 @@ function search_asset_ids() {
             $(".content").css({"cursor":"wait"});
             $('#table2').DataTable().clear().destroy();
             $('#table2').show();
-            var table = $('#table2').DataTable();
+            var table = $('#table2').DataTable({"info": false});
             for(i=0; i<data.total; i++) {
                 asset_id = data.asset_id[i];
                 address = data[asset_id].address;
                 table.row.add([asset_id, address]);
             }
             table.draw();
+            $('#table2 td').css('background-color',getbgColor());
             var row = table.rows({selected:true}).data();
             if(row[0].length>0) {
                 $('#selected_id').val(row[0]);
             }
-            $('#table2 tbody').on('click', 'tr', function () { $('#selected_id').val(table.row(this).data()); });
+            try {
+                if(localStorage.getItem("phone_selected_id").length>0) {
+                    $('#selected_id').val(localStorage.getItem("phone_selected_id"));
+                }
+            } catch(e) {}
+            $('#table2 tbody').on('click', 'tr', function () { $('#selected_id').val(table.row(this).data()); localStorage.setItem('phone_selected_id',$('#selected_id').val()); });
             $(".content").css({"cursor":"default"});
         }
     });

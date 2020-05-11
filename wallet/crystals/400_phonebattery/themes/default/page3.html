@@ -11,14 +11,10 @@ body { color: white; background-color: #d8da3d }
 #table1 tr:nth-child(even){background-color: #727272;}
 #table1 tr:hover {background-color: #ddd;}
 #table1 th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #4CAF50; color: white; }
-.ui-datepicker { background: #202940; }
-.select2-search { background: #202940; }
-.select2-search input { background: #202940; }
-.select2-results { background: #202940; }
-.select2-results__option{ overflow:hidden; }
-#table2 td { background-color:#202940; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#table2 { table-layout: fixed }
-input { background-color:#202940; color:white; }
+.ui-datepicker { background: #888888; }
+#table2 td { background-color:#eeeeee; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#table2 { table-layout: fixed; }
+.dataTables_info, .dataTables_length { color: red; }
 .cell { box-sizing: border-box; display: block; padding: 8px; width: 100%; }
 .cell-overflow { box-sizing: border-box; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 </style>
@@ -37,14 +33,19 @@ input { background-color:#202940; color:white; }
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
-                Documentation: <a href="https://hypernodes.bismuth.live/?p=1696">https://hypernodes.bismuth.live/?p=1696</a><br/>
+                Documentation: <a href="https://hypernodes.bismuth.live/?p=1696" style="color: #07a1b3">https://hypernodes.bismuth.live/?p=1696</a><br/>
                 <br/>
                 Search filter for phone asset ids (empty=all):<br/>
                 <input type="text" id="asset_search" class="form-control">
                 <input type="submit" class="btn btn-primary" value="Search" onClick="search_asset_ids();">
                 <br/><br/>
-                <p id="p_selectBox"></p>
+                <p id="p_selectBox">
+                <br/><br/>
+                <button onclick='display_mode("Day");' class='btn btn-secondary'>Day Mode</button>
+                &nbsp;&nbsp;
+                <button onclick='display_mode("Night");' class='btn btn-secondary'>Night Mode</button>
                 <br/>
+                </p>
             </div>
         </div>
     </div>
