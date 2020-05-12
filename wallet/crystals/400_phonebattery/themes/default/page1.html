@@ -8,7 +8,7 @@
 {% block body %}
 {% raw xsrf_form_html() %}
 
-<nav class="nav"><a class="nav-link active" href="about">HOME</a></nav>
+<nav class="nav"><a class="nav-link active" href="about" style="color:#888888">HOME</a></nav>
 <div class="row">
 
     <div class="col-lg-6 col-md-12">
@@ -18,7 +18,7 @@
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
-                Anonymizer Password (remember this for later): <input type="password" style="color: #913f9e" id="phone_pwd" class="form-control">
+                Anonymizer Password (remember this for later): <input type="password" style="color: #888888" id="phone_pwd" class="form-control">
                 <br/>
                 <input type="submit" class="btn btn-primary" value="Fetch Your Phone ID" onClick="FetchID();">
                 <br/>
@@ -37,7 +37,7 @@
                 <br/><br/>
                 <div id="div_reg" style="display:none">
                     List of Your Anonymized Asset ID numbers:<br/>
-                    <select id="asset_id" class="form-control"></select>
+                    <select id="asset_id" class="form-control" style='color:#888888'></select>
                     <br/><br/>
                     Register your Android phone on the Bismuth blockchain:<br/>
                     <input type="submit" class="btn btn-primary" name="reg" value="Register Phone" onClick="RegisterPhone();">

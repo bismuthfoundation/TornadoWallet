@@ -142,7 +142,7 @@ function FetchPhoneData() {
         text = text.replace(/&quot;/g,'"');
         var data = JSON.parse(text);
         if(data.total>0) {
-            var html = "<select id='selectBox' class='form-control' onChange='changeFunc();'>";
+            var html = "<select id='selectBox' class='form-control' onChange='changeFunc();' style='color:#888888'>";
             for(i=0; i<data.total; i++) {
                 value = data.asset_id[i];
                 html = html.concat("<option value='", value, "'>", value, "</option>");
@@ -289,9 +289,11 @@ function radioClick(id_array,desc,val,i,N) {
 }
 
 function getLocal(id,def) {
-    var out = "";
-    out = localStorage.getItem(id);
-    if(!out) { out = def; }
+    var out = def;
+    try {
+        out = localStorage.getItem(id);
+        if(!out) { out=def };
+    } catch(e) {}
     return out;
 }
 

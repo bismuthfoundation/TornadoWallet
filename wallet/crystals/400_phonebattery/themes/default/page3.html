@@ -23,7 +23,7 @@ body { color: white; background-color: #d8da3d }
 {% block body %}
 {% raw xsrf_form_html() %}
 
-<nav class="nav"><a class="nav-link active" href="about">HOME</a></nav>
+<nav class="nav"><a class="nav-link active" href="about" style="color:#888888">HOME</a></nav>
 <div class="row">
 
     <div class="col-lg-6 col-md-12">
@@ -36,7 +36,7 @@ body { color: white; background-color: #d8da3d }
                 Documentation: <a href="https://hypernodes.bismuth.live/?p=1696" style="color: #07a1b3">https://hypernodes.bismuth.live/?p=1696</a><br/>
                 <br/>
                 Search filter for phone asset ids (empty=all):<br/>
-                <input type="text" style="color: #913f9e" id="asset_search" class="form-control">
+                <input type="text" style="color: #888888" id="asset_search" class="form-control">
                 <input type="submit" class="btn btn-primary" value="Search" onClick="search_asset_ids();">
                 <br/><br/>
                 <p id="p_selectBox">
