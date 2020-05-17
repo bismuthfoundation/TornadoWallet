@@ -6,3 +6,4 @@ mnemonic
 coincurve
 pycryptodomex
 requests_oauth2
+rainflow

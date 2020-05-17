@@ -4,6 +4,7 @@ import json
 import hashlib
 import datetime
 import requests
+import rainflow
 from subprocess import Popen, PIPE
 
 class PhoneAPIHandler():
@@ -68,6 +69,23 @@ class PhoneAPIHandler():
                     except:
                         pass
 
+        return out
+
+    def get_cycle_data(self,addresses,id,variable,temperature,startdate,enddate):
+        """
+        Returns cycle data on chain as specified by 'variable' between start and end dates
+        """
+        out = {}
+        out["x"] = []
+        out["y"] = []
+        data = self.get_chain_data(addresses,id,variable,temperature,startdate,enddate)
+        cycles = rainflow.count_cycles(data["y"], binsize=10.0)
+        sum = 0.0
+        for i in range(len(cycles)):
+            out["x"].append("Cycle {}-{}%".format(cycles[i][0]-10,cycles[i][0]))
+            out["y"].append(cycles[i][1])
+            sum += self.full_cycle_equivalent(cycles[i])
+        out["full_cycle_equivalent"] = sum
         return out
 
     def asset_id(self,pwd):
@@ -153,3 +171,7 @@ class PhoneAPIHandler():
     def sanitize(self,input):
         out = re.sub('[\W_]', '', input)
         return out
+
+    def full_cycle_equivalent(self,cycle):
+        factor = { 10: 0.043, 20: 0.086, 30: 0.155, 40: 0.225, 50: 0.400, 60: 0.500, 70: 0.600, 80: 0.700, 90: 0.850, 100: 1.0 }
+        return round(100 * factor[cycle[0]] * cycle[1])/100.0

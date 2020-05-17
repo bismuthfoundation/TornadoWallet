@@ -2,10 +2,10 @@
 var asset_data;
 var plottype_desc = ["Line", "Line (Filled)", "Bar"];
 var plottype_opt = ["line","line","bar"];
-var plotoptions_desc = ["Battery Level (%)", "Current (mA)", "Temperature"];
-var plotoptions_opt = ["percentage", "current", "temperature"];
-var tablevar_desc = ["Battery Level (%)", "Current (mA)", "Temperature", "Phone Status", "Phone Health", "Plugged"];
-var tablevar_opt = ["percentage", "current", "temperature", "status", "health", "plugged"];
+var plotoptions_desc = ["Battery Level (%)", "Current (mA)", "Temperature","Number of Cycles"];
+var plotoptions_opt = ["percentage", "current", "temperature","battery_cycles"];
+var tablevar_desc = ["Battery Level (%)", "Current (mA)", "Temperature", "Phone Status", "Phone Health", "Plugged", "Number of Cycles"];
+var tablevar_opt = ["percentage", "current", "temperature", "status", "health", "plugged", "battery_cycles"];
 var temperature_desc = ["Celsius","Fahrenheit"];
 var temperature_opt = ["C","F"];
 var PDFOptions_desc = ["A4 + Portrait", "A4 + Landscape", "US Legal + Portrait", "US Legal + Landscape"];
@@ -242,13 +242,19 @@ function showTable() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(img, 0, 0);
             var dataURL = $("#canvas")[0].toDataURL();
-            var table = $('#table1').DataTable({dom: 'Bfrtip', buttons: [ { extend: 'pdfHtml5', orientation: orientation, pageSize: pageSize, title: 'Asset ID: ' + asset_id, customize: function ( doc ) { doc.content.splice( 1, 0, { margin: [ 0, 0, 0, 12 ], alignment: 'center', image: dataURL });} }, { extend: 'csvHtml5', title: asset_id } ], retrieve: true, columnDefs: [{ targets: -1, className: 'dt-body-right' } ] });
+            var table = $('#table1').DataTable({"pageLength": 25, dom: 'Bfrtip', buttons: [ { extend: 'pdfHtml5', orientation: orientation, pageSize: pageSize, title: 'Asset ID: ' + asset_id, customize: function ( doc ) { doc.content.splice( 1, 0, { margin: [ 0, 0, 0, 12 ], alignment: 'center', image: dataURL });} }, { extend: 'csvHtml5', title: asset_id } ], retrieve: true, columnDefs: [{ targets: -1, className: 'dt-body-right' } ] });
 
             $.post('get_chain_data', { asset_id: asset_id, address: address, variable: variable, temperature: temperature, startdate: d0, enddate: d1, _xsrf: xsrf }, function(text){
                 text = text.replace(/&#39;/g,'"');
                 text = text.replace(/&quot;/g,'"');
                 var data = JSON.parse(text);
+                var xname = table.column(0).header();
                 var column = table.column(1).header();
+                if(variable == "battery_cycles") {
+                    $(xname).html("Cycle Percentage Levels");
+                } else {
+                    $(xname).html("Date/Time");
+                }
                 $(column).html(variable_desc);
                 for(i=0; i<data.x.length; i++) {
                     table.row.add([data.x[i], data.y[i]]);
@@ -260,6 +266,8 @@ function showTable() {
                 }
                 if(variable_desc.search("Sum") == 0) {
                     table.row.add([d1 + " (Sum)", mysum]);
+                } else if(variable == "battery_cycles") {
+                    table.row.add(["Full Cycle Equivalent", data.full_cycle_equivalent]);
                 }
                 table.draw();
                 $('#table2 td').css('background-color',getbgColor());
@@ -404,6 +412,9 @@ function plotData() {
             var ctx = $('#myChart').get(0).getContext('2d');
             var col = "rgba(77,166,83,1.0)";
             var fill = false;
+            if(variable == "battery_cycles") {
+                plottype = "bar";
+            }
             if(plot_desc.indexOf("Fill") >= 0) { fill = true; }
             var options = { "scales": { "xAxes": [{ "ticks": { "autoSkip": false, "maxRotation": 90, "minRotation": 90 } }] } }
             var chart = new Chart(ctx,{"type":plottype,"data":{"labels": x ,"datasets":[{"label":variable_desc,"backgroundColor":col,"data": y,"fill":fill, "pointRadius": 4, "borderColor":"gray"}]},"options": options});

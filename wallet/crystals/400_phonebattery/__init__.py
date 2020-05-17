@@ -113,7 +113,10 @@ class PhonebatteryHandler(CrystalHandler):
         temperature = self.get_argument("temperature", default=None, strip=False)
         startdate = self.get_argument("startdate", default=None, strip=False)
         enddate = self.get_argument("enddate", default=None, strip=False)
-        out = self.phonehandler.get_chain_data(addresses,asset_id,variable,temperature,startdate,enddate)
+        if variable == "battery_cycles":
+            out = self.phonehandler.get_cycle_data(addresses,asset_id,"percentage",temperature,startdate,enddate)
+        else:
+            out = self.phonehandler.get_chain_data(addresses,asset_id,variable,temperature,startdate,enddate)
         self.render("json.html", data=out)
 
     async def page1(self, params=None):
