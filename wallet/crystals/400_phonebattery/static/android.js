@@ -2,9 +2,9 @@
 var asset_data;
 var plottype_desc = ["Line", "Line (Filled)", "Bar"];
 var plottype_opt = ["line","line","bar"];
-var plotoptions_desc = ["Battery Level (%)", "Current (mA)", "Temperature","Number of Cycles"];
+var plotoptions_desc = ["Battery Level (%)", "Current (mA)", "Temperature","Number of Battery Cycles"];
 var plotoptions_opt = ["percentage", "current", "temperature","battery_cycles"];
-var tablevar_desc = ["Battery Level (%)", "Current (mA)", "Temperature", "Phone Status", "Phone Health", "Plugged", "Number of Cycles"];
+var tablevar_desc = ["Battery Level (%)", "Current (mA)", "Temperature", "Phone Status", "Phone Health", "Plugged", "Number of Battery Cycles"];
 var tablevar_opt = ["percentage", "current", "temperature", "status", "health", "plugged", "battery_cycles"];
 var temperature_desc = ["Celsius","Fahrenheit"];
 var temperature_opt = ["C","F"];
@@ -267,7 +267,9 @@ function showTable() {
                 if(variable_desc.search("Sum") == 0) {
                     table.row.add([d1 + " (Sum)", mysum]);
                 } else if(variable == "battery_cycles") {
-                    table.row.add(["Full Cycle Equivalent", data.full_cycle_equivalent]);
+                    if(data.x.length>0) {
+                        table.row.add(["Full Cycle Equivalent", data.full_cycle_equivalent]);
+                    }
                 }
                 table.draw();
                 $('#table2 td').css('background-color',getbgColor());

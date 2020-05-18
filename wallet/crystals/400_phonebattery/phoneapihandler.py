@@ -79,13 +79,16 @@ class PhoneAPIHandler():
         out["x"] = []
         out["y"] = []
         data = self.get_chain_data(addresses,id,variable,temperature,startdate,enddate)
-        cycles = rainflow.count_cycles(data["y"], binsize=10.0)
-        sum = 0.0
-        for i in range(len(cycles)):
-            out["x"].append("Cycle {}-{}%".format(cycles[i][0]-10,cycles[i][0]))
-            out["y"].append(cycles[i][1])
-            sum += self.full_cycle_equivalent(cycles[i])
-        out["full_cycle_equivalent"] = sum
+        try:
+            cycles = rainflow.count_cycles(data["y"], binsize=10.0)
+            sum = 0.0
+            for i in range(len(cycles)):
+                out["x"].append("Cycle {}-{}%".format(cycles[i][0]-10,cycles[i][0]))
+                out["y"].append(cycles[i][1])
+                sum += self.full_cycle_equivalent(cycles[i])
+            out["full_cycle_equivalent"] = sum
+        except:
+            pass
         return out
 
     def asset_id(self,pwd):
