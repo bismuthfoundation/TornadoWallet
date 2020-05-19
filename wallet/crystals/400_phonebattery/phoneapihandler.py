@@ -86,7 +86,7 @@ class PhoneAPIHandler():
                 out["x"].append("Cycle {}-{}%".format(cycles[i][0]-10,cycles[i][0]))
                 out["y"].append(cycles[i][1])
                 sum += self.full_cycle_equivalent(cycles[i])
-            out["full_cycle_equivalent"] = sum
+            out["full_cycle_equivalent"] = round(100*sum)/100
         except:
             pass
         return out

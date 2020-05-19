@@ -418,7 +418,7 @@ function plotData() {
                 plottype = "bar";
             }
             if(plot_desc.indexOf("Fill") >= 0) { fill = true; }
-            var options = { "scales": { "xAxes": [{ "ticks": { "autoSkip": false, "maxRotation": 90, "minRotation": 90 } }] } }
+            var options = { "scales": { "xAxes": [{ "ticks": { "autoSkip": true, "maxRotation": 90, "minRotation": 90 } }] } }
             var chart = new Chart(ctx,{"type":plottype,"data":{"labels": x ,"datasets":[{"label":variable_desc,"backgroundColor":col,"data": y,"fill":fill, "pointRadius": 4, "borderColor":"gray"}]},"options": options});
         });
     }
