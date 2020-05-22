@@ -4,10 +4,11 @@ del /f /s /q build 1>nul
 rmdir /s /q build
 
 copy wallet.py TornadoBismuthWallet.py
-pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --onefile --icon=favicon.ico TornadoBismuthWallet.py
+pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --hidden-import requests_oauth2 --onefile --icon=favicon.ico TornadoBismuthWallet.py
 robocopy locale dist/locale /S /E *.mo
 mkdir dist/themes
 robocopy themes/material dist/themes/material /S /E
+robocopy themes/common dist/themes/common /S /E
 robocopy crystals dist/crystals /S /E
 
 

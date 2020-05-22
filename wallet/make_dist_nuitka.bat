@@ -11,6 +11,7 @@ ren TornadoBismuthWallet.build build
 robocopy locale dist/locale /S /E *.mo
 mkdir dist/themes
 robocopy themes/material dist/themes/material /S /E
+robocopy themes/common dist/themes/common /S /E
 robocopy crystals dist/crystals /S /E
 
 REM see https://nsis.sourceforge.io/Main_Page , make installer from zip
