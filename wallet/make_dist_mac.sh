@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 cp wallet.py TornadoBismuthWallet.py
-pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --hidden-import requests_oauth2 --onefile --icon=favicon.ico TornadoBismuthWallet.py
+pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --hidden-import requests_oauth2 --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
 cp -R locale dist/locale
 cp -R crystals dist/crystals
 cp -R modules dist/modules
