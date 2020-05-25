@@ -1,5 +1,12 @@
 # History
 
+## 0.1.36 - 2020-05-25
+
+Second packaged release.
+- updates and new crystals
+- new apis
+- many bugfixes and gui tweaks
+
 ## 0.1.19 - 2019-06-13
 
 First "stable" release, packaged. 
