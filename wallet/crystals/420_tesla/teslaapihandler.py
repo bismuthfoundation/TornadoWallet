@@ -49,8 +49,8 @@ class TeslaAPIHandler():
             out[vin]["charge_miles_added_rated"] = data["vehicle"][i]["charge_miles_added_rated"]
             out[vin]["ideal_battery_range"] = data["vehicle"][i]["ideal_battery_range"]
             out[vin]["est_battery_range"] = data["vehicle"][i]["est_battery_range"]
-            out[vin]["outside_temp"] = data["vehicle"][i]["outside_temp"]
-            out[vin]["inside_temp"] = data["vehicle"][i]["inside_temp"]
+            out[vin]["outside_temp"] = json.dumps(data["vehicle"][i]["outside_temp"])
+            out[vin]["inside_temp"] = json.dumps(data["vehicle"][i]["inside_temp"])
             out[vin]["odometer"] = data["vehicle"][i]["odometer"]
             out[vin]["timestamp"] = data["vehicle"][i]["timestamp"]
             out[vin]["car_version"] = data["vehicle"][i]["car_version"]
