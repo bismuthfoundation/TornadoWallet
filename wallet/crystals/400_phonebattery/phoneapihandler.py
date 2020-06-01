@@ -52,22 +52,48 @@ class PhoneAPIHandler():
         t0 = time.mktime(datetime.datetime.strptime(startdate, "%Y-%m-%d").timetuple())
         t1 = time.mktime(datetime.datetime.strptime(enddate, "%Y-%m-%d").timetuple())
         t1 = t1 + 24*60*60 #Enddate Time 23:59:59
+        last_month = ""
+        cycle_start = startdate
+        cycle_end = enddate
+        sum_monthly = -1
 
         for sender in addresses.split(","):
             bisdata = self.bismuth.command(command, [sender,rec,op,1,False,t0,t1])
             for i in range(0,len(bisdata)):
                 data = json.loads(bisdata[i][11])
                 asset_id = self.sanitize(data["asset_id"]["0"])
-                if (asset_id == id) and (self.checkID(asset_id)==1):
-                    ts = int(data[asset_id]["timestamp"])/1000
-                    mydate = datetime.datetime.fromtimestamp(ts)
-                    try:
-                        if id == asset_id:
-                            out["y"].append(self.data_units(data[asset_id][variable],variable,temperature))
-                            out["x"].append(f"{mydate:%Y-%m-%d %H:%M:%S}")
-                            out["z"] = 0
-                    except:
-                        pass
+                if "monthly_" in variable:
+                    if id == asset_id:
+                        ts = int(data[id]["timestamp"])/1000
+                        month = datetime.datetime.fromtimestamp(ts).strftime("%B %Y")
+                        if month != last_month:
+                            if sum_monthly != -1:
+                                out["x"].append(last_month)
+                                if "_cycles" in variable:
+                                    cycle_end = datetime.datetime.fromtimestamp(ts-86400).strftime("%Y-%m-%d")
+                                    cycle_data = self.get_cycle_data(sender,asset_id,"percentage",temperature,cycle_start,cycle_end)
+                                    cycle_start = datetime.datetime.fromtimestamp(ts).strftime("%Y-%m-%d")
+                                    out["y"].append(cycle_data["full_cycle_equivalent"])
+                            sum_monthly = 0
+                        last_month = datetime.datetime.fromtimestamp(ts).strftime("%B %Y")
+                else:
+                    if (asset_id == id) and (self.checkID(asset_id)==1):
+                        ts = int(data[asset_id]["timestamp"])/1000
+                        mydate = datetime.datetime.fromtimestamp(ts)
+                        try:
+                            if id == asset_id:
+                                out["y"].append(self.data_units(data[asset_id][variable],variable,temperature))
+                                out["x"].append(f"{mydate:%Y-%m-%d %H:%M:%S}")
+                                out["z"] = 0
+                        except:
+                            pass
+
+        if "monthly_" in variable:
+            out["x"].append(datetime.datetime.fromtimestamp(ts).strftime("%B %Y"))
+            if "_cycles" in variable:
+                cycle_end = datetime.datetime.fromtimestamp(ts+86400).strftime("%Y-%m-%d")
+                cycle_data = self.get_cycle_data(sender,asset_id,"percentage",temperature,cycle_start,cycle_end)
+                out["y"].append(cycle_data["full_cycle_equivalent"])
 
         return out
 
@@ -78,6 +104,7 @@ class PhoneAPIHandler():
         out = {}
         out["x"] = []
         out["y"] = []
+        out["full_cycle_equivalent"] = 0
         data = self.get_chain_data(addresses,id,variable,temperature,startdate,enddate)
         try:
             cycles = rainflow.count_cycles(data["y"], binsize=10.0)
