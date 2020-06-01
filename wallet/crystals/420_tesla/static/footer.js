@@ -21,7 +21,7 @@ $(document).ready(function() {
         if(localStorage.getItem("tesla_startdate") === null) {
             localStorage.setItem("tesla_startdate", "2020-01-01");
             localStorage.setItem("tesla_enddate", today());
-            localStorage.setItem("tesla_pdfimage", "car.png");
+            localStorage.setItem("tesla_pdfimage", "pdflogo.png");
         }
     } catch(e) {}
 });

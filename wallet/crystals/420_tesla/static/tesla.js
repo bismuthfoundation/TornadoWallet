@@ -4,8 +4,8 @@ var plottype_desc = ["Line", "Line (Filled)", "Bar"];
 var plottype_opt = ["line","line","bar"];
 var plotoptions_desc = ["Battery Level (%)", "Usable Battery Level (%)", "Battery Range", "Ideal Battery Range", "Estimated Battery Range", "Last Charge Current Request (A)", "Last Charge Energy Added (kWh)", "Last Charge Range Added Ideal", "Last Charge Range Added Rated", "Inside Temperature", "Outside Temperature", "Odometer", "Estimated Max Range","Estimated Max Range vs. Odometer", "Number of Battery Cycles"];
 var plotoptions_opt = ["battery_level", "usable_battery_level", "battery_range", "ideal_battery_range", "est_battery_range", "charge_current_request", "charge_energy_added", "charge_miles_added_ideal", "charge_miles_added_rated", "inside_temp", "outside_temp", "odometer", "est_max_range","max_range_vs_odometer", "battery_cycles"];
-var tablevar_desc = ["Estimated Max Range","Car Version","Sum Charge Energy Added (kWh)","Distance Driven", "Number of Battery Cycles", "Battery Type"];
-var tablevar_opt = ["est_max_range","car_version","charge_energy_added","odometer","battery_cycles","battery_type"];
+var tablevar_desc = ["Estimated Max Range","Car Version","Sum Charge Energy Added (kWh)","Distance Driven","Number of Battery Cycles","Battery Type","Monthly Distance","Monthly Energy (kWh)","Monthly Efficiency (Wh/mi)","Monthly Battery Cycles"];
+var tablevar_opt = ["est_max_range","car_version","charge_energy_added","odometer","battery_cycles","battery_type","monthly_distance","monthly_energy","monthly_efficiency","monthly_cycles"];
 var temperature_desc = ["Celsius","Fahrenheit"];
 var temperature_opt = ["C","F"];
 var range_desc = ["Kilometers","Miles"];
@@ -402,6 +402,7 @@ function searchVehicles() {
             html = html.concat("Select Table Variable:");
             html = html.concat("<br/>", radio(tablevar_desc,tablevar_opt,["tesla_tablevar_desc", "tesla_tablevar"]), "<br/>");
             html = html.concat("PDF Format:<br/>", radio(PDFOptions_desc,PDFOptions_opt,["tesla_PDFOptions_desc", "tesla_PDFOptions"]), "<br/>");
+            html = html.concat("PDF Image File (stored in wallet/crystals/420_tesla/static): <input type='text' value='",localStorage.getItem("tesla_pdfimage"), "' id='pdf_image' class='form-control'", getColors(), ">");
             html = html.concat("</form><button onclick='showTable();' class='btn btn-secondary'>Show Table</button>");
             html = html.concat("</td></tr></table></div>");
             $("#p_selectBox").html(html);
