@@ -109,12 +109,12 @@ class TeslaAPIHandler():
                             sum_charge = 0
                             sum_monthly = 0
 
-                        sum_distance += (data[vin]["odometer"] - last_distance)
+                        sum_distance += data[vin]["odometer"]-last_distance
                         if data[vin]["charge_energy_added"] != last_charge:
                             sum_charge += data[vin]["charge_energy_added"]
 
                         if "monthly_distance" in variable:
-                            sum_monthly += (data[vin]["odometer"] - last_distance)
+                            sum_monthly += data[vin]["odometer"] - last_distance
                         if "monthly_energy" in variable:
                             if data[vin]["charge_energy_added"] != last_charge:
                                 sum_monthly += data[vin]["charge_energy_added"]
@@ -380,7 +380,8 @@ class TeslaAPIHandler():
                 out = round(data*1.8 + 32.0,1)
 
         if range_unit == "km":
-            if (var.find("miles") > 0) or (var.find("range") > 0) or (var.find("meter") > 0):
+            if (var.find("miles") > 0) or (var.find("range") > 0) or \
+                (var.find("meter") > 0) or (var.find("distance") > 0):
                 out = round(data*1.609344,3)
 
         return out
