@@ -240,7 +240,6 @@ function changeFunc() {
 function updateLocalStorage() {
     //Stores user input selections in localStorage
     localStorage.setItem("tesla_startdate", $("#startdate").val());
-    localStorage.setItem("tesla_enddate", $("#enddate").val());
     localStorage.setItem("tesla_pdfimage", $("#pdf_image").val());
 }
 
@@ -389,7 +388,7 @@ function searchVehicles() {
             html = html.concat("<br/><table><tr><td>Selected ID:&nbsp;</td><td><input type='text' size='10' id='selected_id' readonly ", getColors(), "></td></tr>");
             html = html.concat("<tr><td>Start Date:&nbsp;</td><td><input type='text' size='10' readonly='true' value='", localStorage.getItem("tesla_startdate"), "' id='startdate'");
             html = html.concat(" onClick='pickDate($(this));' ", getColors(), "'>");
-            html = html.concat("</td></tr><tr><td>End Date:</td><td><input type='text' size='10' value='", localStorage.getItem("tesla_enddate"), "' readonly='true' id='enddate'");
+            html = html.concat("</td></tr><tr><td>End Date:</td><td><input type='text' size='10' value='", today(), "' readonly='true' id='enddate'");
             html = html.concat(" onClick='pickDate($(this));' ", getColors(), "'>");
             html = html.concat("</td></tr></table><br/><table width='100%'><tr><td width='50%'>");
             html = html.concat("Select Plot Variable:<br/>", radio(plotoptions_desc,plotoptions_opt,["tesla_plotoptions_desc", "tesla_plotoptions"]), "<br/>");
