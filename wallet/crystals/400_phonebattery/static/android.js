@@ -335,7 +335,7 @@ function search_asset_ids() {
             html = html.concat("<br/><table><tr><td>Selected ID:&nbsp;</td><td><input type='text' size='10' id='selected_id' readonly ", getColors(), "></td></tr>");
             html = html.concat("<tr><td>Start Date:&nbsp;</td><td><input type='text' size='10' readonly='true' value='", localStorage.getItem("phone_startdate"), "' id='startdate'");
             html = html.concat(" onClick='pickDate($(this));' ", getColors(), "'>");
-            html = html.concat("</td></tr><tr><td>End Date:</td><td><input type='text' size='10' value='", localStorage.getItem("phone_enddate"), "' readonly='true' id='enddate'");
+            html = html.concat("</td></tr><tr><td>End Date:</td><td><input type='text' size='10' value='", today(), "' readonly='true' id='enddate'");
             html = html.concat(" onClick='pickDate($(this));' ", getColors(), "'>");
             html = html.concat("</td></tr></table><br/><table width='100%'><tr><td width='50%'>");
             html = html.concat("Show Temperature As:&nbsp;&nbsp;&nbsp;<br/>", radio(temperature_desc,temperature_opt,["phone_temperature_desc","phone_temperature"]), "<br/>");
