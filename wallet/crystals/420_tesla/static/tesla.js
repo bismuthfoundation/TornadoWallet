@@ -4,8 +4,8 @@ var plottype_desc = ["Line", "Line (Filled)", "Bar"];
 var plottype_opt = ["line","line","bar"];
 var plotoptions_desc = ["Battery Level (%)", "Usable Battery Level (%)", "Battery Range", "Ideal Battery Range", "Estimated Battery Range", "Last Charge Current Request (A)", "Last Charge Energy Added (kWh)", "Last Charge Range Added Ideal", "Last Charge Range Added Rated", "Inside Temperature", "Outside Temperature", "Odometer", "Estimated Max Range","Estimated Max Range vs. Odometer", "Number of Battery Cycles"];
 var plotoptions_opt = ["battery_level", "usable_battery_level", "battery_range", "ideal_battery_range", "est_battery_range", "charge_current_request", "charge_energy_added", "charge_miles_added_ideal", "charge_miles_added_rated", "inside_temp", "outside_temp", "odometer", "est_max_range","max_range_vs_odometer", "battery_cycles"];
-var tablevar_desc = ["Estimated Max Range","Car Version","Sum Charge Energy Added (kWh)","Distance Driven","Number of Battery Cycles","Battery Type","Monthly Distance","Monthly Energy (kWh)","Monthly Efficiency (Wh/mi)","Monthly Battery Cycles"];
-var tablevar_opt = ["est_max_range","car_version","charge_energy_added","odometer","battery_cycles","battery_type","monthly_distance","monthly_energy","monthly_efficiency","monthly_cycles"];
+var tablevar_desc = ["Estimated Max Range","Car Version","Car Type", "Exterior Color", "Wheel Type", "Sum Charge Energy Added (kWh)","Distance Driven","Number of Battery Cycles","Battery Type","Monthly Distance","Monthly Energy (kWh)","Monthly Efficiency (Wh/mi)","Monthly Battery Cycles"];
+var tablevar_opt = ["est_max_range","car_version","car_type","exterior_color","wheel_type","charge_energy_added","odometer","battery_cycles","battery_type","monthly_distance","monthly_energy","monthly_efficiency","monthly_cycles"];
 var temperature_desc = ["Celsius","Fahrenheit"];
 var temperature_opt = ["C","F"];
 var range_desc = ["Kilometers","Miles"];
@@ -142,6 +142,9 @@ function updateHTML(vin) {
         $("#odometer").html(range(vehicle_data[vin].odometer));
         $("#car_version").html(sanitize(vehicle_data[vin].car_version));
         $("#battery_type").html(vehicle_data[vin].battery_type);
+        $("#car_type").html(vehicle_data[vin].car_type);
+        $("#exterior_color").html(vehicle_data[vin].exterior_color);
+        $("#wheel_type").html(vehicle_data[vin].wheel_type);
         $("#timestamp").html(ts.toLocaleString());
     } catch(e) {
     }

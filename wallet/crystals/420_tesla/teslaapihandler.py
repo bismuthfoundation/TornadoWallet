@@ -54,6 +54,9 @@ class TeslaAPIHandler():
             out[vin]["odometer"] = data["vehicle"][i]["odometer"]
             out[vin]["timestamp"] = data["vehicle"][i]["timestamp"]
             out[vin]["car_version"] = data["vehicle"][i]["car_version"]
+            out[vin]["car_type"] = data["vehicle"][i]["car_type"]
+            out[vin]["exterior_color"] = data["vehicle"][i]["exterior_color"]
+            out[vin]["wheel_type"] = data["vehicle"][i]["wheel_type"]
 
         return out
 
@@ -299,6 +302,9 @@ class TeslaAPIHandler():
                     out["vehicle"][i]["outside_temp"] = data["climate_state"]["outside_temp"]
                     out["vehicle"][i]["car_version"] = data["vehicle_state"]["car_version"]
                     out["vehicle"][i]["battery_type"] = battery_type
+                    out["vehicle"][i]["car_type"] = data["vehicle_config"]["car_type"]
+                    out["vehicle"][i]["exterior_color"] = data["vehicle_config"]["exterior_color"]
+                    out["vehicle"][i]["wheel_type"] = data["vehicle_config"]["wheel_type"]
                     out["vehicle"][i]["vin"] = vin
 
             except:
