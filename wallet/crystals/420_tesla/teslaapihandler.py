@@ -83,7 +83,7 @@ class TeslaAPIHandler():
         cycle_end = enddate
 
         for sender in addresses.split(","):
-            bisdata = self.bismuth.command(command, [sender,rec,op,10,False,t0,t1])
+            bisdata = self.bismuth.command(command, [sender,rec,op,1,False,t0,t1])
             for i in range(0,len(bisdata)):
                 data = json.loads(bisdata[i][11])
                 vin = data["vin"]["0"]

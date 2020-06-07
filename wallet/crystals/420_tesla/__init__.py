@@ -36,7 +36,7 @@ class TeslaHandler(CrystalHandler):
 
         self.teslahandler = TeslaAPIHandler(self.bismuth,reg,unreg,op_data)
         address = "Bis1TeSLaWhTC2ByEwZnYWtsPVK5428uqnL46"
-        thresholds = {"reg": 50}
+        thresholds = {"reg": 25}
         checkfunc = {"f": self.teslahandler.checkID}
         self.assethandler = BismuthSimpleAsset(self.bismuth,address,reg,unreg,transfer,thresholds,checkfunc)
 

@@ -163,7 +163,7 @@ function teslaSubmit() {
     //If the account can unregister, it can also submit data
     $.post('check_vin_unregister', { vin_input: vin_input, _xsrf: xsrf }, function(data){
         if(data != -1) {
-           send(address, 10.0, operation, out);
+           send(address, 1.0, operation, out);
         } else {
            message_post("Data submission not possible.","Check if the current wallet address has previously registered this VIN: " + vin_input,"warning");
         }
@@ -210,7 +210,7 @@ function RegisterVehicle() {
     var xsrf = $("[name='_xsrf']").val();
     $.post('check_vin_register', { vin_input: vin_input, _xsrf: xsrf }, function(data){
         if(data != -1) {
-           send(to, 50.0, operation, vin_input);
+           send(to, 25.0, operation, vin_input);
         } else {
            message_post("Invalid VIN or already registered.",vin_input,"warning");
         }
