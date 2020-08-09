@@ -60,6 +60,11 @@ class BismuthtokensHandler(CrystalHandler):
             command = "about"
         await getattr(self, command)(params)
 
+    async def send_token_popup(self, params=None):
+        token = self.get_argument("token", default=None, strip=False)
+        print("send_token_popup {}".format(token))
+        self.render("send_token_pop.html", bismuth=self.bismuth_vars, token=token)
+
     def get_template_path(self):
         """Override to customize template path for each handler.
         """

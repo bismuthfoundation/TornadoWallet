@@ -352,6 +352,9 @@
             amount = $("#camount").val();
             if (amount <= 0) { amount=0}
             fees = 0.01+0.00001*data.length
+            operation = $("#coperation").val();
+            if (operation == "token:issue") { fees += 10 }
+            if (operation == "alias:register") { fees += 1 }
             $(".totalpop").val(float_to_bis(parseFloat(amount) + fees));
             $(".feespop").val(float_to_bis(fees));
             });
@@ -367,6 +370,8 @@
             $("#payment_window").modal("show");
             try { $("#cspend_token").focus() } catch(err) {}
             fees = 0.01+0.00001*data.length
+            if (operation == "token:issue") { fees += 10 }
+            if (operation == "alias:register") { fees += 1 }
             $(".totalpop").val(float_to_bis(parseFloat(amount) + fees));
             $(".feespop").val(float_to_bis(fees));
             });

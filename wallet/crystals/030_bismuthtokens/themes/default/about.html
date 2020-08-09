@@ -81,7 +81,7 @@
                           {{ tokens['all'][token[0]][3] }}
                         </td>
                         <td class="center">
-                           <a href="#" title="Send {{ token[0] }} to..."><i class="material-icons">send</i> </a>
+                           <a href="#" onclick="send_token('{{ token[0] }}');return false;" title="Send {{ token[0] }} to..."><i class="material-icons">send</i> </a>
 
                         </td>
                     </tr>
@@ -96,7 +96,14 @@
             </div>
         </div>
     </div>
+
+
+
 </div>
+
+
+    <div id="message_window" class="modal" tabindex="-1" role="dialog"></div>
+    </div>
 
 <div class="row">
     <div class="col-lg-12 col-md-12">
@@ -125,7 +132,7 @@
                     {% end %}
 
                         <td class="center">
-                           <!-- a href="/crystal/bismuthtokens/owners/{{ token[0]}}"><i class="material-icons">open_in_browser</i></a -->
+                           <a href="https://bismuth.today/balances/{{ id }}" target="_blank"><i class="material-icons">open_in_new</i></a>
                         </td>
                         <td class="center">
                             <!-- a href="/crystal/bismuthtokens/owners/{{ token[0]}}">{{ token[0] }}</a -->
@@ -165,22 +172,22 @@
             </div>
             <div class="card-body">
                 <form>
-                        <div class="form-group">
-                            <label class="bmd-label-floating">{{ _("Token name (string, lowercase)")}}</label>
-                            <input class="form-control" id="token_name" type="text" name="token_name"/>
-                            <small>{{ _("Name of your token. Has to be unique. Only lowercase ascii chars a..z 0..9")}}</small>
+                    <div class="form-group">
+                        <label class="bmd-label-floating">{{ _("Token name (string, lowercase)")}}</label>
+                        <input class="form-control" id="token_name" type="text" name="token_name"/>
+                        <small>{{ _("Name of your token. Has to be unique. Only lowercase ascii chars a..z 0..9")}}</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="bmd-label-floating">{{ _("Total supply (Integer)")}}</label>
+                        <input class="form-control" id="token_supply" type="number" name="token_supply"/>
+                        <small>{{ _("Total number of tokens you'll get. Can not be changed afterward.")}}</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <button class="btn btn-warning" title="" onclick="send('{{ bismuth['address'] }}', 0, 'token:issue', $('#token_name').val()+':'+$('#token_supply').val());return false;">{% raw '' %}Create Token (WIP - Non functional)</button><br />
                         </div>
-                        <div class="form-group">
-                            <label class="bmd-label-floating">{{ _("Total supply (Integer)")}}</label>
-                            <input class="form-control" id="token_supply" type="number" name="token_supply"/>
-                            <small>{{ _("Total number of tokens you'll get. Can not be changed afterward.")}}</small>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <button class="btn btn-warning" title="" onclick="{% raw '' %};return false">{% raw '' %}Create Token (WIP - Non functional)</button><br />
-                            </div>
-                        </div>
-                    </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -188,14 +195,15 @@
     <div class="col-lg-6 col-md-12">
         <div class="card">
             <div class="card-header card-header-success">
-                <h4 class="card-title">{{ _("About token creation") }}</h4>
+                <h4 class="card-title">{{ _("About token registration") }}</h4>
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
                 <ul>
-                    <li>name:....</li>
-                    <li>fee:....</li>
+                    <li>{{ _("Token Name: only ascii chars, lower case: a..z and 0..9, no space, 32 chars max.") }}</li>
+                    <li>{{ _("Fees: 10 Bis in addition to regular data fees.") }}</li>
                     <li>{{ _("Tokens unit is an integer. Minimal amount you can create or transfer is 1 unit.") }}</li>
+                    <li>{{ _("Make sure the token you want to register does not already exist. Your registration would not be valid, but the fees would apply anyway.") }}</li>
                 </ul>
 
 
@@ -212,6 +220,14 @@
 <script>
     var table = $('#my_tokens').DataTable();
     var table = $('#all_tokens').DataTable();
+
+    function send_token(token) {
+        $.get('send_token_popup?token='+token, function(page){
+            $('#message_window').html(page);
+            $('#message_window').modal('show');
+        });
+        return false;
+    }
 </script>
 {% end %}
 
