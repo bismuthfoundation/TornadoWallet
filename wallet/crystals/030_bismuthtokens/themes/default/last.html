@@ -9,7 +9,7 @@
     <div class="col-lg-12 col-md-12">
         <div class="card">
             <div class="card-header card-header-success">
-                <h4 class="card-title">{{ _('My last BISMUTH Tokens transactions') }}</h4>
+                <h4 class="card-title">{{ _('My latest BISMUTH Tokens transactions') }}</h4>
                 <p class="card-category"></p>
             </div>
             <div class="card-body table-responsive">
@@ -17,13 +17,16 @@
                     <thead class="text-warning">
                     <th class="center">&nbsp;</th>
                     <th class="center">{{ _("Token ID")}}</th>
-                    <th>{{ _("Balance")}}</th>
-                    <th>{{ _("Total supply")}}</th>
-                    <th >{{ _("Owners count")}}</th>
+                    <th>{{ _("Block")}}</th>
+                    <th>{{ _("Timestamp")}}</th>
+                    <th >{{ _("Sender")}}</th>
+                    <th >{{ _("Recipient")}}</th>
+                    <th >{{ _("Amount")}}</th>
+                    <th >{{ _("Payload")}}</th>
                     </thead>
                     <tbody>
 
-                    {% for id, token in tokens.items() %}
+                    {% for id, token in enumerate(last) %}
                     {% if False %}
                         <tr style="font-style:italic;">
                     {% else %}
@@ -31,19 +34,36 @@
                     {% end %}
 
                         <td class="center">
-                           <a href="/crystal/bismuthtokens/owners/{{ token['token_id']}}"><i class="material-icons">open_in_browser</i></a>
+                           <a href="https://bismuth.today/transactions/{{ token[0] }}"><i class="material-icons">open_in_new</i></a>
                         </td>
                         <td class="center">
-                            <a href="/crystal/bismuthtokens/owners/{{ token['token_id']}}">{{ token["token_id"] }}</a>
+                            {{ token[0] }}
                         </td>
                          <td>
-                        ..
+                            {{ token[1] }}
                         </td>
                         <td>
-                        ..
+                            {{ datetime.datetime.utcfromtimestamp(token[2]).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
                         <td>
-                        .. send token ..
+                            {{ token[3] }}
+                        </td>
+                        <td>
+                            {{ token[4] }}
+                        </td>
+                        {% if token[5] == bismuth['address'] %}
+                        <td class="text-warning amount">-
+                        {% else %}
+                        <td class="text-success amount">
+                        {% end %}
+                            {{ token[5] }}
+                        </td>
+                        <td>
+                            {% if len(token) >= 7 %}
+                            <a href="#" title="{{ token[6] }}" alt="{{ token[6] }}"><i class="material-icons">markunread_mailbox</i></a>
+                            {% else %}
+                            &nbsp;
+                            {% end %}
                         </td>
                     </tr>
                     {% end %}

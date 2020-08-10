@@ -377,6 +377,29 @@
             });
     }
 
+    function send_token(token, address, amount, message, txid){
+        if (address == '') { return false}
+        if (amount <= 0) { amount=0}
+        var extra='';
+        if (message != '') {
+            extra = {"message": message};
+            if (txid != '') {
+                extra["TxId"] = txid;
+            }
+        } else {
+            if (txid != '') {
+                extra = {"TxId": txid};
+            }
+        }
+        var data =token + ":" + Math.round(amount);
+        if (extra != '') {
+            extra = JSON.stringify(extra);
+            data += ':' + extra;
+        }
+        send(address, 0, "token:transfer", data);
+    }
+
+
     function sign(data, token){
         // TODO: convert to post for lengthy data
         if (data == '') { return false}

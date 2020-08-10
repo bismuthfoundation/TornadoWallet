@@ -26,6 +26,26 @@
                                     <input class="form-control" id="amount" type="number" name="amount"/>
                                     <small>{{ _("Number of tokens you'll send to the recipient.")}}</small>
                                 </div>
+
+                                 <span data-toggle="collapse" data-target="#extra_option">
+                                    {{ _("Options") }}
+                                    <i id="extra" class="material-icons" style="color:#029eb1;" title="{{ _('Expert')}}">arrow_drop_down</i>
+                                 </span>
+                <div id="extra_option" class="collapse">
+                    <div id="extra_option2" class="form-group">
+                        <label class="bmd-label-floating">{{ _("message")}}</label>
+                        <input class="form-control" id="extra_message" type="text" name="extra_message"/>
+                        <small>{{ _('You can add an optional message to your transaction')}}
+                        </small>
+                    </div>
+                    <div id="extra_option3" class="form-group">
+                        <label class="bmd-label-floating">{{ _("TxId")}}</label>
+                        <input class="form-control" id="extra_txid" type="text" name="extra_txid"/>
+                        <small>{{ _('You can add an optional Bismuth TxId as reference')}}
+                        </small>
+                    </div>
+                </div>
+
                             </form>
                         </div>
 
@@ -40,8 +60,9 @@
                                     </button>
                                  </div>
                                  <div class="col-lg-6 col-sm-12">
-                                    <button id="send_button" type="submit" value="confirm" data-dismiss="modal"
-                                            class="btn btn-success float-right" onclick="close();send($('#recipient').val(), 0, 'token:transfer', '{{ token }}:'+$('#amount').val());return false;">
+                                    <!-- button id="send_button" type="submit" value="confirm" data-dismiss="modal" class="btn btn-success float-right" onclick="close();send($('#recipient').val(), 0, 'token:transfer', '{{ token }}:'+$('#amount').val());return false;" -->
+                                    <button id="send_button" type="submit" value="confirm" data-dismiss="modal" class="btn btn-success float-right"
+                                            onclick="send_token('{{ token }}', $('#recipient').val(), $('#amount').val(), $('#extra_message').val(), $('#extra_txid').val());return false;">
                                         {{ _("Send...")}}
                                     </button>
                                  </div>

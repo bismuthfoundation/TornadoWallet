@@ -15,7 +15,7 @@ MODULES = {}
 CACHED_DATA = {}
 CACHED_ALL = {}
 
-__version__ = "0.1"
+__version__ = "0.2"
 
 
 async def get_data(address):
@@ -49,9 +49,10 @@ class BismuthtokensHandler(CrystalHandler):
     async def last(self, params=None):
         data = await get_data(self.bismuth_vars['address'])
         tokens = {}
-        last = await async_get_with_http_fallback("https://bismuth.today/api/transactions/{}".format(self.bismuth_vars['address']))
+        last = await async_get_with_http_fallback("https://bismuth.today/api/transactions/{}"
+                                                  .format(self.bismuth_vars['address']))
         self.render(
-            "last.html", bismuth=self.bismuth_vars, version=__version__, tokens=tokens, last = last
+            "last.html", bismuth=self.bismuth_vars, version=__version__, tokens=tokens, last=last
         )
 
     async def get(self, command=""):

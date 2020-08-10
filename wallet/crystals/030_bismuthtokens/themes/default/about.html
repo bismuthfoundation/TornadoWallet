@@ -80,7 +80,7 @@
                           {{ tokens['all'][token[0]][3] }}
                         </td>
                         <td class="center">
-                           <a href="#" onclick="send_token('{{ token[0] }}');return false;" title="Send {{ token[0] }} to..."><i class="material-icons">send</i> </a>
+                           <a href="#" onclick="send_token_popup('{{ token[0] }}');return false;" title="Send {{ token[0] }} to..."><i class="material-icons">send</i> </a>
 
                         </td>
                     </tr>
@@ -138,7 +138,7 @@
                             <b>{{ id }}</b>
                         </td>
                          <td>
-                          {{ token[2] }}
+                          {{ datetime.datetime.utcfromtimestamp(token[2]).strftime('%Y-%m-%d %H:%M:%S') }}
                         </td>
                         <td>
                           {{ token[0] }}
@@ -220,7 +220,7 @@
     var table = $('#my_tokens').DataTable();
     var table = $('#all_tokens').DataTable();
 
-    function send_token(token) {
+    function send_token_popup(token) {
         $.get('send_token_popup?token='+token, function(page){
             $('#message_window').html(page);
             $('#message_window').modal('show');
