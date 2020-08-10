@@ -6,6 +6,7 @@ from os import path
 from time import time
 
 from modules.basehandlers import CrystalHandler
+from modules.i18n import get_dt_language
 from modules.helpers import base_path, get_private_dir, async_get_with_http_fallback
 
 DEFAULT_THEME_PATH = path.join(base_path(), "crystals/030_bismuthtokens/themes/default")
@@ -41,7 +42,11 @@ class BismuthtokensHandler(CrystalHandler):
 
     async def about(self, params=None):
         tokens = await get_data(self.bismuth_vars['address'])
-        print(tokens)
+        # print(tokens)
+        namespace = self.get_template_namespace()
+        self.bismuth_vars["dtlanguage"] = get_dt_language(self.locale.translate)
+        kwargs = {"bismuth": self.bismuth_vars}
+        namespace.update(kwargs)
         self.render(
             "about.html", bismuth=self.bismuth_vars, version=__version__, tokens=tokens
         )
@@ -51,6 +56,10 @@ class BismuthtokensHandler(CrystalHandler):
         tokens = {}
         last = await async_get_with_http_fallback("https://bismuth.today/api/transactions/{}"
                                                   .format(self.bismuth_vars['address']))
+        namespace = self.get_template_namespace()
+        self.bismuth_vars["dtlanguage"] = get_dt_language(self.locale.translate)
+        kwargs = {"bismuth": self.bismuth_vars}
+        namespace.update(kwargs)
         self.render(
             "last.html", bismuth=self.bismuth_vars, version=__version__, tokens=tokens, last=last
         )
