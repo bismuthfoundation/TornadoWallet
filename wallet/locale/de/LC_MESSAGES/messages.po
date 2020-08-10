@@ -109,7 +109,7 @@ msgstr "UpTime:"
 msgid "Consensus:"
 msgstr "Konsens:"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:20
+#: crystals/030_bismuthtokens/themes/default/last.html:25
 #: dist/themes/material/about_network.html:53
 #: themes/material/about_network.html:53
 msgid "Block"
@@ -282,7 +282,7 @@ msgid "Address"
 msgstr "Adresse"
 
 #: crystals/020_bismuthvote/themes/default/motion.html:92
-#: crystals/030_bismuthtokens/themes/default/last.html:24
+#: crystals/030_bismuthtokens/themes/default/last.html:29
 #: dist/themes/material/home.html:83 dist/themes/material/transactions.html:82
 #: dist/themes/material/transactions_receive.html:46
 #: dist/themes/material/transactions_send.html:52
@@ -357,7 +357,7 @@ msgstr "Senden An"
 msgid "To whom send BIS."
 msgstr "An wen BIS senden."
 
-#: crystals/030_bismuthtokens/themes/default/last.html:23
+#: crystals/030_bismuthtokens/themes/default/last.html:28
 #: dist/themes/material/messages.html:61
 #: dist/themes/material/transactions_send.html:20
 #: dist/themes/material/transactions_send_confirm.html:33
@@ -490,7 +490,7 @@ msgstr "Diese Funktion ist in Bearbeitung."
 msgid "Transaction list"
 msgstr "Transaktionsliste"
 
-#: modules/basehandlers.py:79 wallet.py:77 wallet.py:443 wallet.py:620
+#: modules/basehandlers.py:80 wallet.py:77 wallet.py:443 wallet.py:620
 #: wallet.py:634 wallet.py:677 wallet.py:697 wallet.py:709 wallet.py:724
 #: wallet.py:744 wallet.py:745 wallet.py:760 wallet.py:775 wallet.py:818
 #: wallet.py:833 wallet.py:847 wallet.py:861 wallet.py:881 wallet.py:901
@@ -745,7 +745,7 @@ msgstr "Fehler beim Hinzufügen zum mempool - Transaktion wurde nicht gesendet."
 
 #: crystals/200_dragginator/themes/default/about.html:94
 #: dist/crystals/200_dragginator/themes/default/about.html:92
-#: modules/basehandlers.py:72
+#: modules/basehandlers.py:73
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr "Keine aktive Bismuth Adresse, bitte erstellen oder laden Sie zuerst ein Wallet."
 
@@ -1481,7 +1481,7 @@ msgstr "AG:Game {} replay"
 msgid "AG:Game {} status"
 msgstr "AG:Game {} status"
 
-#: modules/basehandlers.py:80
+#: modules/basehandlers.py:81
 msgid "Wallet server did not send an answer. Please try again."
 msgstr "Wallet Server hat keine Antwort gesendet. Bitte versuche es nochmal."
 
@@ -1785,7 +1785,7 @@ msgstr "BISMUTH TOKENS"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:20
 msgid "List a wallet's tokens, create and manage Bismuth tokens."
-msgstr "Wallet Tokens auflisten, erstellen/ verwalten Sie Tokens."
+msgstr "Wallet Tokens Auflistung. Token Verwaltung/ Erstellung."
 
 #: crystals/030_bismuthtokens/themes/default/about.html:34
 msgid "For reference, see <a href=\"https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md\" target=\"_blank\">Bismuth Tokens Protocol</a>"
@@ -1797,14 +1797,14 @@ msgstr "Meine BISMUTH Tokens"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:54
 #: crystals/030_bismuthtokens/themes/default/about.html:118
-#: crystals/030_bismuthtokens/themes/default/last.html:19
+#: crystals/030_bismuthtokens/themes/default/last.html:24
 msgid "Token ID"
 msgstr "Token ID"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:56
 #: crystals/030_bismuthtokens/themes/default/about.html:121
 msgid "Total supply"
-msgstr "Gesamte Anzahl"
+msgstr "Gesamtzahl"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:57
 #: crystals/030_bismuthtokens/themes/default/about.html:122
@@ -1813,7 +1813,7 @@ msgstr "Besitzer Anzahl"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:94
 msgid "View my latest - valid - Token transactions."
-msgstr "Letzte gültige Token Transaktionen ansehen"
+msgstr "Aktuelle gültige Token Transaktionen ansehen"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:111
 msgid "All BISMUTH Tokens"
@@ -1837,11 +1837,11 @@ msgstr "Token Name (Zeichen, kleingeschrieben)"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:177
 msgid "Name of your token. Has to be unique. Only lowercase ascii chars a..z 0..9"
-msgstr "Token Name. Muss "
+msgstr "Token Name muss einmalig sein. Nur kleingeschriebene Ascii Zeichen a-z 0-9"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:180
 msgid "Total supply (Integer)"
-msgstr "Gesamte Anzahl (ganze Zahl)"
+msgstr "Gesamtzahl (ganze Zahl)"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:182
 msgid "Total number of tokens you'll get. Can not be changed afterward."
@@ -1871,19 +1871,19 @@ msgstr "Token Einheit ist eine ganze Zahl. Mini. Anzahl die transferiert werden 
 msgid "Make sure the token you want to register does not already exist. Your registration would not be valid, but the fees would apply anyway."
 msgstr "Prüfe Sie ob der zu erstellende Token Name frei ist. Die Registrierung wäre ungültig, die fälligen Gebühren würden dennoch entstehen."
 
-#: crystals/030_bismuthtokens/themes/default/last.html:12
+#: crystals/030_bismuthtokens/themes/default/last.html:17
 msgid "My latest BISMUTH Tokens transactions"
 msgstr "Meine aktuellen Token Transaktionen"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:21
+#: crystals/030_bismuthtokens/themes/default/last.html:26
 msgid "Timestamp"
 msgstr "Zeitstempel"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:22
+#: crystals/030_bismuthtokens/themes/default/last.html:27
 msgid "Sender"
 msgstr "Absender"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:25
+#: crystals/030_bismuthtokens/themes/default/last.html:30
 msgid "Payload"
 msgstr "Nutzdaten"
 
@@ -1984,4 +1984,20 @@ msgstr "Bad address"
 #: wallet.py:310 wallet.py:369
 msgid "Recipient address '{}' seems invalid"
 msgstr "Recipient address '{}' seems invalid"
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "(In english)"
+msgstr "(auf Englisch)"
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "Bismuth Tokens Protocol"
+msgstr "Bismuth Token Protokol"
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "For reference, see:"
+msgstr "Zum Nachschlagen:"
+
+#: crystals/030_bismuthtokens/themes/default/last.html:81
+msgid "Back to tokens"
+msgstr "Zurück zu Tokens"
 
