@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 17:50+0200\n"
+"POT-Creation-Date: 2020-08-10 18:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -141,7 +141,7 @@ msgid "Date"
 msgstr ""
 
 #: crystals/020_bismuthvote/themes/default/motion.html:92
-#: crystals/030_bismuthtokens/themes/default/last.html:24
+#: crystals/030_bismuthtokens/themes/default/last.html:29
 #: dist/themes/material/home.html:83 dist/themes/material/transactions.html:82
 #: dist/themes/material/transactions_receive.html:46
 #: dist/themes/material/transactions_send.html:52
@@ -230,7 +230,7 @@ msgstr ""
 
 #: crystals/030_bismuthtokens/themes/default/about.html:54
 #: crystals/030_bismuthtokens/themes/default/about.html:118
-#: crystals/030_bismuthtokens/themes/default/last.html:19
+#: crystals/030_bismuthtokens/themes/default/last.html:24
 msgid "Token ID"
 msgstr ""
 
@@ -313,25 +313,25 @@ msgstr ""
 msgid "Make sure the token you want to register does not already exist. Your registration would not be valid, but the fees would apply anyway."
 msgstr ""
 
-#: crystals/030_bismuthtokens/themes/default/last.html:12
+#: crystals/030_bismuthtokens/themes/default/last.html:17
 msgid "My latest BISMUTH Tokens transactions"
 msgstr ""
 
-#: crystals/030_bismuthtokens/themes/default/last.html:20
+#: crystals/030_bismuthtokens/themes/default/last.html:25
 #: dist/themes/material/about_network.html:53
 #: themes/material/about_network.html:53
 msgid "Block"
 msgstr ""
 
-#: crystals/030_bismuthtokens/themes/default/last.html:21
+#: crystals/030_bismuthtokens/themes/default/last.html:26
 msgid "Timestamp"
 msgstr ""
 
-#: crystals/030_bismuthtokens/themes/default/last.html:22
+#: crystals/030_bismuthtokens/themes/default/last.html:27
 msgid "Sender"
 msgstr ""
 
-#: crystals/030_bismuthtokens/themes/default/last.html:23
+#: crystals/030_bismuthtokens/themes/default/last.html:28
 #: dist/themes/material/messages.html:61
 #: dist/themes/material/transactions_send.html:20
 #: dist/themes/material/transactions_send_confirm.html:33
@@ -342,8 +342,12 @@ msgstr ""
 msgid "Recipient"
 msgstr ""
 
-#: crystals/030_bismuthtokens/themes/default/last.html:25
+#: crystals/030_bismuthtokens/themes/default/last.html:30
 msgid "Payload"
+msgstr ""
+
+#: crystals/030_bismuthtokens/themes/default/last.html:81
+msgid "Back to tokens"
 msgstr ""
 
 #: crystals/030_bismuthtokens/themes/default/send_token_pop.html:10

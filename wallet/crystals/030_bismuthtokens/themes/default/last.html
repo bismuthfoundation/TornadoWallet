@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 <!-- "../../../../themes/material/base.html" -->
 
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{{ handler.common_url('css/bisdataTables.css') }}">
+{% end %}
+
+
 {% block body %}
 
 
@@ -13,7 +18,7 @@
                 <p class="card-category"></p>
             </div>
             <div class="card-body table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover" id="Last">
                     <thead class="text-warning">
                     <th class="center">&nbsp;</th>
                     <th class="center">{{ _("Token ID")}}</th>
@@ -73,11 +78,17 @@
 
             </div>
             <div class="card-footer">
-                <a href="../"><i class="material-icons">arrow_back</i> Back to tokens</a>
+                <a href="../"><i class="material-icons">arrow_back</i> {{ _('Back to tokens') }}</a>
             </div>
         </div>
     </div>
 </div>
 
-
+{% end %}
+{% block footer %}
+<!-- this goes after default includes, like jquery -->
+<script src="{{ handler.common_url('js/plugins/jquery.dataTables.min.js') }}"></script>
+<script>
+    var table = $('#Last').DataTable({ {% raw bismuth['dtlanguage'] %} });
+</script>
 {% end %}
