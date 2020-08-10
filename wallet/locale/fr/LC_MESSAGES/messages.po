@@ -491,7 +491,7 @@ msgstr "Cette fonctionalité est en cours de développement."
 msgid "Transaction list"
 msgstr "Liste des transactions"
 
-#: modules/basehandlers.py:79 wallet.py:77 wallet.py:443 wallet.py:620
+#: modules/basehandlers.py:80 wallet.py:77 wallet.py:443 wallet.py:620
 #: wallet.py:634 wallet.py:677 wallet.py:697 wallet.py:709 wallet.py:724
 #: wallet.py:744 wallet.py:745 wallet.py:760 wallet.py:775 wallet.py:818
 #: wallet.py:833 wallet.py:847 wallet.py:861 wallet.py:881 wallet.py:901
@@ -757,7 +757,7 @@ msgstr "Erreur en soumettant à la mempool, la transaction n'a pas été émise.
 
 #: crystals/200_dragginator/themes/default/about.html:94
 #: dist/crystals/200_dragginator/themes/default/about.html:92
-#: modules/basehandlers.py:72
+#: modules/basehandlers.py:73
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr "Pas d'adresse Bismuth, merci de créer ou charger un portemonnaie."
 
@@ -1496,7 +1496,7 @@ msgstr "Rejouer le match {}"
 msgid "AG:Game {} status"
 msgstr "Etat du match {}"
 
-#: modules/basehandlers.py:80
+#: modules/basehandlers.py:81
 msgid "Wallet server did not send an answer. Please try again."
 msgstr "Le serveur n'a pas retourné de réponse. Merci de re-essayer."
 
@@ -1999,4 +1999,16 @@ msgstr "Mauvaise adresse"
 #: wallet.py:310 wallet.py:369
 msgid "Recipient address '{}' seems invalid"
 msgstr "L'adresse du destinataire '{}' semble invalide."
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "(In english)"
+msgstr "(En anglais)"
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "Bismuth Tokens Protocol"
+msgstr "Protocole de Tokens Bismuth"
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "For reference, see:"
+msgstr "Pour référence, voir :"
 
