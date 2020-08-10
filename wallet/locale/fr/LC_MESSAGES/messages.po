@@ -109,7 +109,7 @@ msgstr "Temps de service :"
 msgid "Consensus:"
 msgstr "Consensus :"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:20
+#: crystals/030_bismuthtokens/themes/default/last.html:25
 #: dist/themes/material/about_network.html:53
 #: themes/material/about_network.html:53
 msgid "Block"
@@ -278,7 +278,7 @@ msgid "Address"
 msgstr "Adresse"
 
 #: crystals/020_bismuthvote/themes/default/motion.html:92
-#: crystals/030_bismuthtokens/themes/default/last.html:24
+#: crystals/030_bismuthtokens/themes/default/last.html:29
 #: dist/themes/material/home.html:83 dist/themes/material/transactions.html:82
 #: dist/themes/material/transactions_receive.html:46
 #: dist/themes/material/transactions_send.html:52
@@ -351,7 +351,7 @@ msgstr "Envoyer à"
 msgid "To whom send BIS."
 msgstr "À qui envoyer des BIS."
 
-#: crystals/030_bismuthtokens/themes/default/last.html:23
+#: crystals/030_bismuthtokens/themes/default/last.html:28
 #: dist/themes/material/messages.html:61
 #: dist/themes/material/transactions_send.html:20
 #: dist/themes/material/transactions_send_confirm.html:33
@@ -1812,7 +1812,7 @@ msgstr "Mes tokens BISMUTH"
 
 #: crystals/030_bismuthtokens/themes/default/about.html:54
 #: crystals/030_bismuthtokens/themes/default/about.html:118
-#: crystals/030_bismuthtokens/themes/default/last.html:19
+#: crystals/030_bismuthtokens/themes/default/last.html:24
 msgid "Token ID"
 msgstr "ID Token"
 
@@ -1886,19 +1886,19 @@ msgstr "Les unités de token sont des nombres entiers. Le nombre minimal que vou
 msgid "Make sure the token you want to register does not already exist. Your registration would not be valid, but the fees would apply anyway."
 msgstr "Assurez vous de choisir un token qui n'existe pas déjà. Sinon votre enregistrement ne serait pas valide, mais vous payeriez tout de même les frais."
 
-#: crystals/030_bismuthtokens/themes/default/last.html:12
+#: crystals/030_bismuthtokens/themes/default/last.html:17
 msgid "My latest BISMUTH Tokens transactions"
 msgstr "Mes dernières transactions de Tokens BISLUTH"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:21
+#: crystals/030_bismuthtokens/themes/default/last.html:26
 msgid "Timestamp"
 msgstr "Date"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:22
+#: crystals/030_bismuthtokens/themes/default/last.html:27
 msgid "Sender"
 msgstr "Emetteur"
 
-#: crystals/030_bismuthtokens/themes/default/last.html:25
+#: crystals/030_bismuthtokens/themes/default/last.html:30
 msgid "Payload"
 msgstr "Post it"
 
@@ -2011,4 +2011,8 @@ msgstr "Protocole de Tokens Bismuth"
 #: crystals/030_bismuthtokens/themes/default/about.html:34
 msgid "For reference, see:"
 msgstr "Pour référence, voir :"
+
+#: crystals/030_bismuthtokens/themes/default/last.html:81
+msgid "Back to tokens"
+msgstr "Retour aux Tokens"
 
