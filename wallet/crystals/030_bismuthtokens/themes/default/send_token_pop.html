@@ -15,7 +15,7 @@
                         </div>
                         <div class="card-body">
                             <form>
-                                <h4>Transfer Token "{{ token }}" to...</h4>
+                                <h4>"{{ token }}": {{ _("Transfer Token to...") }}</h4>
                                 <div class="form-group">
                                     <label class="bmd-label-floating">{{ _("Recipient (Bis Address)")}}</label>
                                     <input class="form-control" id="recipient" type="string" name="recipient"/>
@@ -33,13 +33,13 @@
                                  </span>
                 <div id="extra_option" class="collapse">
                     <div id="extra_option2" class="form-group">
-                        <label class="bmd-label-floating">{{ _("message")}}</label>
+                        <label class="bmd-label-floating">{{ _("message") }}</label>
                         <input class="form-control" id="extra_message" type="text" name="extra_message"/>
                         <small>{{ _('You can add an optional message to your transaction')}}
                         </small>
                     </div>
                     <div id="extra_option3" class="form-group">
-                        <label class="bmd-label-floating">{{ _("TxId")}}</label>
+                        <label class="bmd-label-floating">{{ _("TxId") }}</label>
                         <input class="form-control" id="extra_txid" type="text" name="extra_txid"/>
                         <small>{{ _('You can add an optional Bismuth TxId as reference')}}
                         </small>
@@ -56,7 +56,7 @@
                             <div class="row">
                                  <div class="col-lg-6 col-sm-12">
                                     <button value="cancel" class="btn btn-warning"
-                                            onclick="close()" data-dismiss="modal">{{ _("Cancel")}}
+                                            onclick="close()" data-dismiss="modal">{{ _("Cancel") }}
                                     </button>
                                  </div>
                                  <div class="col-lg-6 col-sm-12">

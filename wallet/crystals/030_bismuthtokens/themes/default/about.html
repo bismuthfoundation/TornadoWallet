@@ -17,7 +17,7 @@
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
-                List a wallet's tokens, create and manage Bismuth tokens.
+                {{ _("List a wallet's tokens, create and manage Bismuth tokens.") }}
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
             <div class="card-body">
                 <ul>
                     <li>{{ _('Version') }} {{ version }}</li>
-                    <li>For reference, see <a href="https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md" target="_blank">Bismuth Tokens Protocol</a></li>
+                    <li>{{ _('For reference, see <a href="https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md" target="_blank">Bismuth Tokens Protocol</a>') }}</li>
                 </ul>
 
 
@@ -80,7 +80,7 @@
                           {{ tokens['all'][token[0]][3] }}
                         </td>
                         <td class="center">
-                           <a href="#" onclick="send_token_popup('{{ token[0] }}');return false;" title="Send {{ token[0] }} to..."><i class="material-icons">send</i> </a>
+                           <a href="#" onclick="send_token_popup('{{ token[0] }}');return false;" title="{{ token[0] }}: {{ _('Send  to...') }}"><i class="material-icons">send</i> </a>
 
                         </td>
                     </tr>
@@ -91,7 +91,7 @@
 
             </div>
             <div class="card-footer">
-                <a href="last/"><i class="material-icons">content_paste</i> View my latest - valid - Token transactions.</a>
+                <a href="last/"><i class="material-icons">content_paste</i> {{ _("View my latest - valid - Token transactions.") }}</a>
             </div>
         </div>
     </div>
