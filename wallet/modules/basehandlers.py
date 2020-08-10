@@ -1,3 +1,4 @@
+# import html
 import logging
 import sys
 from tornado import locale
@@ -156,6 +157,13 @@ class BaseHandler(RequestHandler):
     # This could be static, but its easier to let it there so the template have direct access.
     def bool2str(self, a_boolean, iftrue, iffalse):
         return iftrue if a_boolean else iffalse
+
+    """    
+    def html_entity_decode(self, text: str) -> str:
+        text = html.unescape(text)
+        text = text.replace("&lt;", "<").replace("&gt;", ">")
+        return text
+    """
 
     def active_if(self, path: str):
         """return the 'active' string if the request uri is the one in path. Used for menu css"""

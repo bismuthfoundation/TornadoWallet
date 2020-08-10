@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TornadoWallet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 15:39+0200\n"
+"POT-Creation-Date: 2020-08-10 17:50+0200\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -207,7 +207,15 @@ msgid "List a wallet's tokens, create and manage Bismuth tokens."
 msgstr ""
 
 #: crystals/030_bismuthtokens/themes/default/about.html:34
-msgid "For reference, see <a href=\"https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md\" target=\"_blank\">Bismuth Tokens Protocol</a>"
+msgid "(In english)"
+msgstr ""
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "Bismuth Tokens Protocol"
+msgstr ""
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "For reference, see:"
 msgstr ""
 
 #: crystals/030_bismuthtokens/themes/default/about.html:47
@@ -542,7 +550,7 @@ msgstr ""
 
 #: crystals/200_dragginator/themes/default/about.html:94
 #: dist/crystals/200_dragginator/themes/default/about.html:92
-#: modules/basehandlers.py:72
+#: modules/basehandlers.py:73
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr "No Bismuth address, please create or load a wallet first."
 
@@ -1677,7 +1685,7 @@ msgstr "Set label"
 msgid "This can take some time, especially if your wallet is encrypted. Do not interrupt."
 msgstr "This can take some time, especially if your wallet is encrypted. Do not interrupt."
 
-#: modules/basehandlers.py:79 wallet.py:77 wallet.py:443 wallet.py:620
+#: modules/basehandlers.py:80 wallet.py:77 wallet.py:443 wallet.py:620
 #: wallet.py:634 wallet.py:677 wallet.py:697 wallet.py:709 wallet.py:724
 #: wallet.py:744 wallet.py:745 wallet.py:760 wallet.py:775 wallet.py:818
 #: wallet.py:833 wallet.py:847 wallet.py:861 wallet.py:881 wallet.py:901
@@ -1685,7 +1693,7 @@ msgstr "This can take some time, especially if your wallet is encrypted. Do not 
 msgid "Error"
 msgstr "Error"
 
-#: modules/basehandlers.py:80
+#: modules/basehandlers.py:81
 msgid "Wallet server did not send an answer. Please try again."
 msgstr "Wallet server did not send an answer. Please try again."
 
@@ -1931,50 +1939,50 @@ msgstr "Your message has been encrypted."
 msgid "Message"
 msgstr "Message"
 
-#~ msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-#~ msgstr "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-
-#~ msgid "This is the default wallet theme by {} from {}."
-#~ msgstr "This is the default wallet theme by {} from {}."
-
-#~ msgid "Wallet  server version {}"
-#~ msgstr "Wallet  server version {}"
-
-#~ msgid "Cristals"
-#~ msgstr "Crystals"
-
-#~ msgid "Cristals are extra functionalities you can add to your wallet"
-#~ msgstr "Crystals are extra functionalities you can add to your wallet"
-
-#~ msgid "Open existing"
-#~ msgstr "Open existing"
-
-#~ msgid "wallet"
-#~ msgstr "wallet"
-
-#~ msgid "Load a wallet from disk"
-#~ msgstr "Load a wallet from disk"
-
-#~ msgid "new wallet"
-#~ msgstr "new wallet"
-
-#~ msgid "Your Bismuth wallets"
-#~ msgstr "Your Bismuth wallets"
-
-#~ msgid "Your wallets directory is {}"
-#~ msgstr "Your wallets directory is {}"
-
-#~ msgid "Confirm Transaction"
-#~ msgstr "Confirm Transaction"
-
-#~ msgid "Navigation"
-#~ msgstr "Navigation"
-
-#~ msgid "Search"
-#~ msgstr "Search"
+#~ msgid "This feature is under construction. "
+#~ msgstr "This feature is under construction. "
 
 #~ msgid "Search Results"
 #~ msgstr "Search Results"
 
-#~ msgid "This feature is under construction. "
-#~ msgstr "This feature is under construction. "
+#~ msgid "Search"
+#~ msgstr "Search"
+
+#~ msgid "Navigation"
+#~ msgstr "Navigation"
+
+#~ msgid "Confirm Transaction"
+#~ msgstr "Confirm Transaction"
+
+#~ msgid "Your wallets directory is {}"
+#~ msgstr "Your wallets directory is {}"
+
+#~ msgid "Your Bismuth wallets"
+#~ msgstr "Your Bismuth wallets"
+
+#~ msgid "new wallet"
+#~ msgstr "new wallet"
+
+#~ msgid "Load a wallet from disk"
+#~ msgstr "Load a wallet from disk"
+
+#~ msgid "wallet"
+#~ msgstr "wallet"
+
+#~ msgid "Open existing"
+#~ msgstr "Open existing"
+
+#~ msgid "Cristals are extra functionalities you can add to your wallet"
+#~ msgstr "Crystals are extra functionalities you can add to your wallet"
+
+#~ msgid "Cristals"
+#~ msgstr "Crystals"
+
+#~ msgid "Wallet  server version {}"
+#~ msgstr "Wallet  server version {}"
+
+#~ msgid "This is the default wallet theme by {} from {}."
+#~ msgstr "This is the default wallet theme by {} from {}."
+
+#~ msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
+#~ msgstr "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"

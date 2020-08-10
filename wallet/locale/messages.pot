@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 15:39+0200\n"
+"POT-Creation-Date: 2020-08-10 17:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -213,7 +213,15 @@ msgid "List a wallet's tokens, create and manage Bismuth tokens."
 msgstr ""
 
 #: crystals/030_bismuthtokens/themes/default/about.html:34
-msgid "For reference, see <a href=\"https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md\" target=\"_blank\">Bismuth Tokens Protocol</a>"
+msgid "(In english)"
+msgstr ""
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "Bismuth Tokens Protocol"
+msgstr ""
+
+#: crystals/030_bismuthtokens/themes/default/about.html:34
+msgid "For reference, see:"
 msgstr ""
 
 #: crystals/030_bismuthtokens/themes/default/about.html:47
@@ -535,7 +543,7 @@ msgstr ""
 
 #: crystals/200_dragginator/themes/default/about.html:94
 #: dist/crystals/200_dragginator/themes/default/about.html:92
-#: modules/basehandlers.py:72
+#: modules/basehandlers.py:73
 msgid "No Bismuth address, please create or load a wallet first."
 msgstr ""
 
@@ -1669,7 +1677,7 @@ msgstr ""
 msgid "This can take some time, especially if your wallet is encrypted. Do not interrupt."
 msgstr ""
 
-#: modules/basehandlers.py:79 wallet.py:77 wallet.py:443 wallet.py:620
+#: modules/basehandlers.py:80 wallet.py:77 wallet.py:443 wallet.py:620
 #: wallet.py:634 wallet.py:677 wallet.py:697 wallet.py:709 wallet.py:724
 #: wallet.py:744 wallet.py:745 wallet.py:760 wallet.py:775 wallet.py:818
 #: wallet.py:833 wallet.py:847 wallet.py:861 wallet.py:881 wallet.py:901
@@ -1677,7 +1685,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: modules/basehandlers.py:80
+#: modules/basehandlers.py:81
 msgid "Wallet server did not send an answer. Please try again."
 msgstr ""
 
