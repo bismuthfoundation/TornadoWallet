@@ -85,87 +85,66 @@ class TeslaAPIHandler():
         cycle_start = startdate
         cycle_end = enddate
 
-        life_scale = {}
-        life_scale["BT37"] = 310/100
-        battery_life = False
-        if variable == "battery_life":
-            battery_life = True
-            variable = "max_range_vs_odometer"
-
         for sender in addresses.split(","):
             bisdata = self.bismuth.command(command, [sender,rec,op,1,False,t0,t1])
             for i in range(0,len(bisdata)):
                 data = json.loads(bisdata[i][11])
-                try:
-                    vin = data["vin"]["0"]
-                except:
-                    vin = ''
-
-                if len(vin)>0:
-                    if "monthly_" in variable:
-                        if vin == asset_id:
-                            ts = int(data[vin]["timestamp"])/1000
-                            month = datetime.datetime.fromtimestamp(ts).strftime("%B %Y")
-                            if month != last_month:
-                                if sum_monthly != -1:
-                                    out["x"].append(last_month)
-                                    if "_efficiency" in variable:
-                                        if sum_distance>0:
-                                            out["y"].append(round(1e6*sum_charge/sum_distance)/1e3)
-                                        else:
-                                            out["y"].append("Not defined")
-                                    elif "_cycles" in variable:
-                                        cycle_end = datetime.datetime.fromtimestamp(ts-86400).strftime("%Y-%m-%d")
-                                        cycle_data = self.get_cycle_data(asset_id,sender,"battery_level",0,range_unit,temperature,cycle_start,cycle_end)
-                                        cycle_start = datetime.datetime.fromtimestamp(ts).strftime("%Y-%m-%d")
-                                        out["y"].append(cycle_data["full_cycle_equivalent"])
-                                    else:
-                                        out["y"].append(self.data_units(round(1000*sum_monthly)/1000,variable,range_unit,temperature))
-                                else:
-                                    last_distance = data[vin]["odometer"]
-                                sum_distance = 0
-                                sum_charge = 0
-                                sum_monthly = 0
-
-                            sum_distance += data[vin]["odometer"]-last_distance
-                            if data[vin]["charge_energy_added"] != last_charge:
-                                sum_charge += data[vin]["charge_energy_added"]
-
-                            if "monthly_distance" in variable:
-                                sum_monthly += data[vin]["odometer"] - last_distance
-                            if "monthly_energy" in variable:
-                                if data[vin]["charge_energy_added"] != last_charge:
-                                    sum_monthly += data[vin]["charge_energy_added"]
-
-                            last_distance = data[vin]["odometer"]
-                            last_charge = data[vin]["charge_energy_added"]
-                            last_month = datetime.datetime.fromtimestamp(ts).strftime("%B %Y")
-                    else:
-                        if variable == "max_range_vs_odometer":
-                            scale = 1
-                            if battery_life:
-                                try:
-                                    scale = life_scale[data[vin]["battery_type"]]
-                                except:
-                                    pass
-                            data[vin]["max_range_vs_odometer"] = self.__get_max_range(data[vin]) / scale
-                        if variable == "est_max_range":
-                            data[vin]["est_max_range"] = self.__get_max_range(data[vin])
+                vin = data["vin"]["0"]
+                if "monthly_" in variable:
+                    if vin == asset_id:
                         ts = int(data[vin]["timestamp"])/1000
-                        mydate = datetime.datetime.fromtimestamp(ts)
-                        try:
-                            if vin == asset_id:
-                                if battery_life:
-                                    out["y"].append(round(100*data[vin][variable])/100)
+                        month = datetime.datetime.fromtimestamp(ts).strftime("%B %Y")
+                        if month != last_month:
+                            if sum_monthly != -1:
+                                out["x"].append(last_month)
+                                if "_efficiency" in variable:
+                                    if sum_distance>0:
+                                        out["y"].append(round(1e6*sum_charge/sum_distance)/1e3)
+                                    else:
+                                        out["y"].append("Not defined")
+                                elif "_cycles" in variable:
+                                    cycle_end = datetime.datetime.fromtimestamp(ts-86400).strftime("%Y-%m-%d")
+                                    cycle_data = self.get_cycle_data(asset_id,sender,"battery_level",0,range_unit,temperature,cycle_start,cycle_end)
+                                    cycle_start = datetime.datetime.fromtimestamp(ts).strftime("%Y-%m-%d")
+                                    out["y"].append(cycle_data["full_cycle_equivalent"])
                                 else:
-                                    out["y"].append(self.data_units(data[vin][variable],variable,range_unit,temperature))
-                                if "_vs_odometer" in variable:
-                                    out["x"].append(data[vin]["odometer"])
-                                else:
-                                    out["x"].append(f"{mydate:%Y-%m-%d %H:%M:%S}")
-                                out["z"] = 0
-                        except:
-                            pass
+                                    out["y"].append(self.data_units(round(1000*sum_monthly)/1000,variable,range_unit,temperature))
+                            else:
+                                last_distance = data[vin]["odometer"]
+                            sum_distance = 0
+                            sum_charge = 0
+                            sum_monthly = 0
+
+                        sum_distance += data[vin]["odometer"]-last_distance
+                        if data[vin]["charge_energy_added"] != last_charge:
+                            sum_charge += data[vin]["charge_energy_added"]
+
+                        if "monthly_distance" in variable:
+                            sum_monthly += data[vin]["odometer"] - last_distance
+                        if "monthly_energy" in variable:
+                            if data[vin]["charge_energy_added"] != last_charge:
+                                sum_monthly += data[vin]["charge_energy_added"]
+
+                        last_distance = data[vin]["odometer"]
+                        last_charge = data[vin]["charge_energy_added"]
+                        last_month = datetime.datetime.fromtimestamp(ts).strftime("%B %Y")
+                else:
+                    if variable == "max_range_vs_odometer":
+                        data[vin]["max_range_vs_odometer"] = self.__get_max_range(data[vin])
+                    if variable == "est_max_range":
+                        data[vin]["est_max_range"] = self.__get_max_range(data[vin])
+                    ts = int(data[vin]["timestamp"])/1000
+                    mydate = datetime.datetime.fromtimestamp(ts)
+                    try:
+                        if vin == asset_id:
+                            out["y"].append(self.data_units(data[vin][variable],variable,range_unit,temperature))
+                            if "_vs_odometer" in variable:
+                                out["x"].append(data[vin]["odometer"])
+                            else:
+                                out["x"].append(f"{mydate:%Y-%m-%d %H:%M:%S}")
+                            out["z"] = 0
+                    except:
+                        pass
 
         if "monthly_" in variable:
             out["x"].append(datetime.datetime.fromtimestamp(ts).strftime("%B %Y"))
