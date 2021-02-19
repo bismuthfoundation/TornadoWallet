@@ -6,6 +6,9 @@ import requests
 import rainflow
 import mypolyfit as mp
 from requests_oauth2 import OAuth2BearerToken
+import string
+import random
+import base64
 
 class TeslaAPIHandler():
 
@@ -189,19 +192,73 @@ class TeslaAPIHandler():
             pass
         return out
 
+    def myparse(self,html,search_string):
+        L = len(search_string)
+        i = html.find(search_string)
+        j = html.find('"',i+L+1)
+        return html[i+L:j]
+
+    def myparse2(self,html,search_string):
+        L = len(search_string)
+        i = html.find(search_string)
+        j = html.find('&',i+L+1)
+        return html[i+L:j]
+
+    def html_parse(self,data,html):
+        data['_csrf'] = self.myparse(html,'name="_csrf" value="')
+        data['_phase'] = self.myparse(html,'name="_phase" value="')
+        data['_process'] = self.myparse(html,'name="_process" value="')
+        data['transaction_id'] = self.myparse(html,'name="transaction_id" value="')
+        return data
+
     def __tesla_connect(self,email, pwd):
         """
         Checks if valid email and password
         """
+
+        code_verifier = ''.join(random.choices(string.ascii_letters+string.digits, k=86))
+        code_challenge = hashlib.sha256(code_verifier.encode('utf-8')).hexdigest()
+
         data = {}
-        data['grant_type']='password'
+        data['client_id']='ownerapi'
+        data['code_challenge']=code_challenge
+        data['code_challenge_method']='S256'
+        data['redirect_uri']='https://auth.tesla.com/void/callback'
+        data['response_type']='code'
+        data['scope']='openid email offline_access'
+        data['state']='123'
+        data['login_hint']=email
+
+        r = requests.get('https://auth.tesla.com/oauth2/v3/authorize', data)
+        cookies = r.cookies
+        data = self.html_parse(data,r.text)
+        data['identity'] = email
+        data['credential'] = pwd
+
+        r = requests.post('https://auth.tesla.com/oauth2/v3/authorize', data=data, cookies=cookies, allow_redirects=False)
+        code = self.myparse2(r.text,'code=')
+
+        data = {}
+        data['grant_type'] = 'authorization_code'
+        data['client_id'] = 'ownerapi'
+        data['code'] = code
+        data['code_verifier'] = code_verifier
+        data['redirect_uri'] = 'https://auth.tesla.com/void/callback'        
+        r = requests.post('https://auth.tesla.com/oauth2/v3/token', data=data)
+        S = json.loads(r.text)
+
+        data = {}
+        data['grant_type'] = 'urn:ietf:params:oauth:grant-type:jwt-bearer'
         data['client_id']=self.CLIENT_ID
         data['client_secret']=self.CLIENT_SECRET
-        data['email']=email
-        data['password']=pwd
-
-        r = requests.post(self.TESLA_URL + '/oauth/token',data)
-        S = json.loads(r.text)
+        with requests.Session() as s:
+            try:
+                s.auth = OAuth2BearerToken(S['access_token'])
+                r = s.post(self.TESLA_URL + '/oauth/token',data)
+                S = json.loads(r.text)
+            except:
+                pass
+		
         time.sleep(1)
         return S
 
