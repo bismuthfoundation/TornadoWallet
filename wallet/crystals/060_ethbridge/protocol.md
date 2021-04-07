@@ -21,6 +21,7 @@ The bridge sends a BIS tx with the signature
 - Data is bistxidhash(hex):signature(0x....):amount(int format, original - fees)
 
 
+
 ## Proxymint wBIS
 
 The user proxy mints his wBIS from the sig
@@ -33,6 +34,7 @@ ETH Oracle sees the eth tx and posts to BIS once ETH conf passed.
 - Operation is "ethbridge:proxymint"
 - Data is bistxidhash(hex):eth_txid(0x):eth_recipient (0x):minted amount(int format, original -fees)
 
+
 # wBIS to BIS
 
 ## Burn wBIS on ETH
@@ -44,7 +46,6 @@ ETH Oracle sees the eth tx and posts to BIS once ETH conf passed.
 - Amount is 0
 - Operation is "ethbridge:burn"
 - Data is ETH txid 0x...:tx_block_height:eth_block_height:eth_sender 0x:the amount 1000000000 (int format)
-
 
 ## Send native BIS
 
