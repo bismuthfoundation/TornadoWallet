@@ -40,7 +40,7 @@
             </div>
             <div class="card-body">
 
-                {% if len(bismuth['address']) == 56 %}
+                {% if len(bismuth['address']) > 4 %}
 
                 {% if len(data) == 0 %}
                     {{_("D:You don't own any egg ;(")}}<br>

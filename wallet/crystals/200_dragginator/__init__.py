@@ -25,7 +25,7 @@ class DragginatorHandler(CrystalHandler):
 
     async def about(self, params=None):
         eggdrop = False
-        if len(self.bismuth_vars['address']) == 56:
+        if len(self.bismuth_vars['address']) > 4:
             data = await async_get_with_http_fallback("https://dragginator.com/api/info.php?address={}&type=list"
                                                       .format(self.bismuth_vars['address']))
             if len(data) == 0:

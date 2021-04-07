@@ -93,7 +93,6 @@ class BaseHandler(RequestHandler):
         }
         self.common_path = path.abspath("themes/common")
 
-
     def common_url(self, path):
         """Returns a static URL for the given relative static file path.
 
