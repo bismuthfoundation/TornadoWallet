@@ -13,7 +13,7 @@ DEFAULT_THEME_PATH = path.join(base_path(), "crystals/060_ethbridge/themes/defau
 
 MODULES = {}
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 ETH_BRIDGE_ADDRESS = "Bis1SCxtbRiDgEjwu5DZ6tb6P3PnZY2j3CJWg"  # Test
@@ -173,6 +173,9 @@ class EthbridgeHandler(CrystalHandler):
                 print("burn ex", e)
                 pass
         # print("burn", bis_data)
+
+
+
         data['eth_transactions'] = bis_data
 
         bismuth_params = [ETH_BRIDGE_ADDRESS, data["bis_address"], 'ethbridge:signature', '0.00000000', True, 0, 9e10]

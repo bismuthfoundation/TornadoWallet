@@ -167,7 +167,7 @@
                     </thead>
                     <tbody>
 
-                    {% for hash, swap in data['hashes'].items() %}
+                    {% for hash, swap in sorted(data['hashes'].items(), key=lambda x: -x[1]["ts1"]) %}
                         {% if swap["status"] > 0 %}
                             <tr style="border-top:2px solid #666666;">
                                 <td>
