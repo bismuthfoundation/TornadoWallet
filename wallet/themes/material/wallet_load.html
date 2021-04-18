@@ -171,21 +171,38 @@
         </thead>
         <tbody>
         {% for wallet in wallets %}
+            {% set present = False %}
+            {% for address in addresses %}
+                {% if wallet['address'] == address['address'] %}
+                    {% set present = True %}
+                {% end %}
+            {% end %}
         <!-- TODO: do not allow to import more than once -->
         <tr style="border-bottom:1px solid #808080;">
             <td>{{ wallet['file'] }}</td>
+            <td><span class="text">{{ wallet['address'] }}</span></td>
             {% if wallet['encrypted'] == False %}
-                <td><a href="/wallet/import_der/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
                 <td>{{ wallet['encrypted'] }}</td>
-                <td><a href="/wallet/import_der/{{ wallet['file'] }}">
-                    <i class="material-icons" title="{{ _('Import')}}">get_app</i>
-                </a></td>
+                <td>
+                    {% if present %}
+                        <i class="material-icons" title="{{ _('Import')}}">done</i>
+                    {% else %}
+                        <a href="/wallet/import_der/{{ wallet['file'] }}">
+                        <i class="material-icons" title="{{ _('Import')}}">get_app</i>
+                        </a>
+                    {% end %}
+                </td>
             {% else %}
-                <td><a href="/wallet/import_encrypted_der1/{{ wallet['file'] }}">{{ wallet['address'] }}</a></td>
                 <td>{{ wallet['encrypted'] }}</td>
-                <td><a href="/wallet/import_encrypted_der1/{{ wallet['file'] }}">
-                    <i class="material-icons" title="{{ _('Import')}}">get_app</i>
-                </a></td>
+                <td>
+                    {% if present %}
+                        <i class="material-icons" title="{{ _('Import')}}">done</i>
+                    {% else %}
+                        <a href="/wallet/import_encrypted_der1/{{ wallet['file'] }}">
+                        <i class="material-icons" title="{{ _('Import')}}">get_app</i>
+                        </a>
+                    {% end %}
+                </td>
             {% end %}
         </tr>
         {% end %}
@@ -217,8 +234,8 @@
                     </div>
 
                     {% raw xsrf_form_html() %}
-                    <button type="submit" class="btn btn-warning"><i class="material-icons">get_app</i>&nbsp;{{ _("Import ECDSA privkey")}}</button>
-<br />WIP - Not functional.
+                    <button type="submit" class="btn btn-warning"><i class="material-icons">get_app</i>&nbsp;{{ _("Import ECDSA privkey...")}}</button>
+
                     <div class="clearfix"></div>
                 </form>
             </div>
