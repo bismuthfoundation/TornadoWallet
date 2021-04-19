@@ -22,7 +22,7 @@ ETH_BRIDGE_ADDRESS = "Bis1SCxtbRiDgEjwu5DZ6tb6P3PnZY2j3CJWg"  # Test
 ETH_ORACLE_ADDRESS = "Bis1WaEthEtHeyEbh8wckQrnZnR88XJK8xDFb"  # Test
 # ETH_ORACLE_ADDRESS = ""  # Prod
 
-ETH_SC_ADDRESS = "0xDBeDe52e4E727EB269494eBaF3e0f20f32C9746b"  # Test
+ETH_SC_ADDRESS = "0x29B3fF6d2E194ac99D4ca4356251829651D08b94"  # Test v6
 ETH_wBIS_URL = "https://raw.githubusercontent.com/bismuthfoundation/MEDIA-KIT/master/Logo_v2/wbis500x500.png"
 ETH_EXPLORER = "https://goerli.etherscan.io"  # test
 

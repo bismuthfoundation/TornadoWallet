@@ -115,8 +115,8 @@
 						<td>{{ transaction['address'] }}</td>
 						<td class="text-success amount"> {{ transaction['amount'] }}</td>
 						{% end %}
-						<td class="center">{{ transaction['operation'][:10] }}
-                        {% if len(transaction['operation']) > 10 %}
+						<td class="center" title="{{ transaction['operation'] }}">{{ transaction['operation'][:14] }}
+                        {% if len(transaction['operation']) > 14 %}
                         <small>[...]</small>
                         {% end %}</td>
 					</tr>

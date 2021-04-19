@@ -2,7 +2,7 @@
 if (typeof Contracts === "undefined") var Contracts = { Token: { abi: [] } };
 
 var _data = {
-    address: "0xDBeDe52e4E727EB269494eBaF3e0f20f32C9746b",
+    address: "0x29B3fF6d2E194ac99D4ca4356251829651D08b94",
     owner: "0xD376C7cE2baE29F3A9462C024B960512B54725Cf",
     chain_id: 5,
     chain_name: "Goerli network",
@@ -11,20 +11,6 @@ var _data = {
     network: "browser",
     endpoint: "http://localhost:8545",
     abi: [
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "mintingFinished",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
         {
             "constant": true,
             "inputs": [],
@@ -245,20 +231,6 @@ var _data = {
             "inputs": [],
             "name": "renounceOwnership",
             "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "constant": false,
-            "inputs": [],
-            "name": "finishMinting",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "function"

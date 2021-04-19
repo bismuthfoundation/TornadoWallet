@@ -121,6 +121,7 @@ class Application(tornado.web.Application):
             (r"/tokens/(.*)", TokensHandler),
             (r"/search/(.*)", SearchHandler),
             (r"/crystals/(.*)", CrystalsHandler),
+            (r"/tools/(.*)", ToolsHandler),
             (
                 r"/(apple-touch-icon\.png)",
                 tornado.web.StaticFileHandler,
@@ -1247,6 +1248,47 @@ class MessagesHandler(BaseHandler):
         if not command:
             command = "sign"
         await getattr(self, command)(params, post=True)
+
+
+class ToolsHandler(BaseHandler):
+    async def index(self, params=None, post=False):
+        self.render("tools.html", bismuth=self.bismuth_vars)
+
+    @write_protected
+    async def sublimate(self, params=None):
+        _ = self.locale.translate
+        message = self.get_argument("data", "")
+        recipient = self.get_argument("recipient", "")
+        if message == "":
+            self.message_pop(_("Error:"), _("Message is empty"), "warning")
+            return
+        if recipient == "":
+            self.message_pop(_("Error:"), _("Recipient is empty"), "warning")
+            return
+        data = self.bismuth.encrypt(message, recipient)
+        message = _("Your message has been encrypted.")
+        self.render(
+            "messages_pop.html",
+            bismuth=self.bismuth_vars,
+            title=self.settings["page_title"],
+            message=message,
+            color="success",
+            what=_("Message"),
+            data=data,
+        )
+
+    async def get(self, command=""):
+        command, *params = command.split("/")
+        if not command:
+            command = "index"
+        await getattr(self, command)(params)
+
+    async def post(self, command=""):
+        command, *params = command.split("/")
+        if not command:
+            command = "sublimate"
+        await getattr(self, command)(params, post=True)
+
 
 
 class TxModule(tornado.web.UIModule):

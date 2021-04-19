@@ -179,7 +179,12 @@
             {% end %}
         <!-- TODO: do not allow to import more than once -->
         <tr style="border-bottom:1px solid #808080;">
-            <td>{{ wallet['file'] }}</td>
+            <td>
+                {{ wallet['file'] }}
+                {% if wallet.get("old", False) %}
+                <b>(OLD Style)</b>
+                {% end %}
+            </td>
             <td><span class="text">{{ wallet['address'] }}</span></td>
             {% if wallet['encrypted'] == False %}
                 <td>{{ wallet['encrypted'] }}</td>

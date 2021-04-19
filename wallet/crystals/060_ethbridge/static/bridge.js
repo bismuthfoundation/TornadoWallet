@@ -250,9 +250,9 @@ Token.prototype.mintTokens = async function () {
             txid,
             auth
         ).send({from: $("#user_eth_address").val(),
-            gas: 100000,
+            gas: 150000,
             gasPrice: 100000000000,
-            gasLimit: 200000
+            gasLimit: 150000
             });
         console.log(tx.transactionHash);
             $("#mint_result").html("<span class=\"label label-success\">tx:<a target=\"_blank\" href=\"https://etherscan.io/tx/"

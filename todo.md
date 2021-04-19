@@ -59,3 +59,9 @@ OK - pin to send tx
 - define usual addresses with local labels
 - store bisurl for easy sending
 - attach colored label (like category with color) to our addresses, help differentiate our own adds from service ones.
+
+- API Feed (news on home, bridge legalese) from on chain info.
+Common method, useable by crystals as well.
+
+- Tools page 
+- 
