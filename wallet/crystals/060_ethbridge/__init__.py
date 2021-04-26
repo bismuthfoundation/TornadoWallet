@@ -13,18 +13,20 @@ DEFAULT_THEME_PATH = path.join(base_path(), "crystals/060_ethbridge/themes/defau
 
 MODULES = {}
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 
-ETH_BRIDGE_ADDRESS = "Bis1SCxtbRiDgEjwu5DZ6tb6P3PnZY2j3CJWg"  # Test
-# ETH_BRIDGE_ADDRESS = "Bis1UBRiDGEQc9mBywXpwFZX6LF7hN4i8Qy9m"  # Prod
+# ETH_BRIDGE_ADDRESS = "Bis1SCxtbRiDgEjwu5DZ6tb6P3PnZY2j3CJWg"  # Test
+ETH_BRIDGE_ADDRESS = "Bis1UBRiDGEQc9mBywXpwFZX6LF7hN4i8Qy9m"  # Prod
 
-ETH_ORACLE_ADDRESS = "Bis1WaEthEtHeyEbh8wckQrnZnR88XJK8xDFb"  # Test
-# ETH_ORACLE_ADDRESS = ""  # Prod
+# ETH_ORACLE_ADDRESS = "Bis1WaEthEtHeyEbh8wckQrnZnR88XJK8xDFb"  # Test
+ETH_ORACLE_ADDRESS = "Bis1XETHbisxnShtghYQJDbf8o5gsQczW8Gp2"  # Prod
 
-ETH_SC_ADDRESS = "0x29B3fF6d2E194ac99D4ca4356251829651D08b94"  # Test v6
+# ETH_SC_ADDRESS = "0x29B3fF6d2E194ac99D4ca4356251829651D08b94"  # Test v6
+ETH_SC_ADDRESS = "0xf5cB350b40726B5BcF170d12e162B6193b291B41"  # Mainnet
 ETH_wBIS_URL = "https://raw.githubusercontent.com/bismuthfoundation/MEDIA-KIT/master/Logo_v2/wbis500x500.png"
-ETH_EXPLORER = "https://goerli.etherscan.io"  # test
+# ETH_EXPLORER = "https://goerli.etherscan.io"  # test
+ETH_EXPLORER = "https://etherscan.io"  # mainnet
 
 BIS_FIXED_FEES_FLOAT = 5.0
 BIS_FIXED_FEES_INT = 500000000
@@ -58,6 +60,7 @@ class EthbridgeHandler(CrystalHandler):
             footer += f'<script src= "/crystal/ethbridge/static/{script}"></script>\n'
         self.bismuth_vars['extra'] = {"header": '', "footer": footer,
                                       "ethbridge_address": ETH_BRIDGE_ADDRESS,
+                                      "ethoracle_address": ETH_ORACLE_ADDRESS,
                                       "eth_sc_address": ETH_SC_ADDRESS,
                                       "eth_wbis_url": ETH_wBIS_URL,
                                       "eth_explorer": ETH_EXPLORER,
@@ -70,6 +73,13 @@ class EthbridgeHandler(CrystalHandler):
 
     async def about(self, params=None):
         self.bismuth_vars['extra']["footer"] += f'<script src= "/crystal/ethbridge/static/about.js"></script>\n'
+        self.bismuth_vars['extra']["circulating"] = "N/A"
+        try:
+            res = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/coinsupply.php")
+            print(res)
+            self.bismuth_vars['extra']["circulating"] = res["circulating"]
+        except:
+            pass
         self.render("about.html", bismuth=self.bismuth_vars)
 
     async def message_popup(self, params=None):
@@ -173,8 +183,6 @@ class EthbridgeHandler(CrystalHandler):
                 print("burn ex", e)
                 pass
         # print("burn", bis_data)
-
-
 
         data['eth_transactions'] = bis_data
 

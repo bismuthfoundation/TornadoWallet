@@ -1,5 +1,5 @@
 tornado
-bismuthclient>=0.0.51
+bismuthclient>=0.0.52
 cachetools
 aiohttp
 mnemonic

@@ -57,16 +57,12 @@ Token.prototype.init = function () {
     this.instance = contract_interface;
 };
 
-Token.prototype.showTotal = function () {
-    this.instance.totalSupply(function (error, total) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log("wBIS total:", total / 1E8);
-            $("#wbis_total").html(total.toNumber() / 1E8);
-        }
-    });
-}
+Token.prototype.showTotal = async function () {
+    balance = await this.instance.methods.totalSupply().call();
+    console.log("wBIS total:", balance / 1E8);
+    $("#wbis_total").html(balance / 1E8);
+
+};
 
 // Displays the token balance of an address, triggered by the "Check balance" button
 Token.prototype.showAddressBalance = async function (hash, cb) {
@@ -110,6 +106,7 @@ Token.prototype.burnTokens = async function () {
     // Gets form input values
     var address = $("#burn_recipient").val();
     var amount = $("#burn_amount").val();
+    var gwei = $("#gwei").val();
     console.log("start burn:", address, amount);
 
     // Validates address using utility function
@@ -142,7 +139,8 @@ Token.prototype.burnTokens = async function () {
             bisAddressToHex(address)
         ).send({from: $("#user_eth_address").val(),
             gas: 100000,
-            gasPrice: 100000000000,
+            //gasPrice: 150000000000,
+            gasPrice: gwei * 1000000000,
             gasLimit: 200000
             });
         console.log(txHash.transactionHash);
@@ -201,7 +199,7 @@ Token.prototype.signMint = async function () {
             txid
         ).send({from: $("#user_eth_address").val(),
             gas: 100000,
-            gasPrice: 100000000000,
+            gasPrice: 150000000000,
             gasLimit: 200000
             });
    console.log("tx", tx);
@@ -217,6 +215,7 @@ Token.prototype.mintTokens = async function () {
     var amount = $("#mint_amount").val();
     var txid = $("#mint_tx").val();
     var auth = $("#mint_auth").val();
+    var gwei = $("#gwei").val();
     console.log("start mint:", address, amount, txid, auth);
 
     // Validates address using utility function
@@ -251,7 +250,8 @@ Token.prototype.mintTokens = async function () {
             auth
         ).send({from: $("#user_eth_address").val(),
             gas: 150000,
-            gasPrice: 100000000000,
+            //gasPrice: 150000000000,
+            gasPrice: gwei * 1000000000,
             gasLimit: 150000
             });
         console.log(tx.transactionHash);
@@ -358,6 +358,11 @@ Token.prototype.onBurnReady = async function () {
     //if (this.hasContractDeployed()) {
     //    this.updateDisplayContent();
     this.bindBurnButtons();
+    chain_id = await window.web3.eth.getChainId();
+    if (token.Contract.chain_id != chain_id) {
+        alert("Your Metamask is on the wrong chain. Please switch to "+token.Contract.chain_name);
+    }
+
     //    this.showTotal();
     window.web3.eth.getAccounts(
         async function(error, accounts){
@@ -373,6 +378,11 @@ Token.prototype.onMintReady = async function () {
     //if (this.hasContractDeployed()) {
     //    this.updateDisplayContent();
     this.bindMintButtons();
+    chain_id = await window.web3.eth.getChainId();
+    if (token.Contract.chain_id != chain_id) {
+        alert("Your Metamask is on the wrong chain. Please switch to "+token.Contract.chain_name);
+    }
+
     window.web3.eth.getAccounts(
         async function(error, accounts){
             $("#user_eth_address").val(accounts[0]);
@@ -399,6 +409,23 @@ Token.prototype.onAboutReady = async function () {
         }
     );*/
     //    this.showTotal();
+      window.web3.eth.getAccounts(
+        async function(error, accounts){
+            $("#my_ethaddress").html(accounts[0]);
+
+              // Gets the value stored within the `balances` mapping of the contract
+            await token.getBalance(accounts[0], function (error, balance) {
+                if (error) {
+                    console.log(error);
+                    $("#wbis_amount").html(error.message);
+                } else {
+                    //console.log(balance / 1E8);
+                    $("#wbis_amount").html(balance / 1E8);
+                }
+            });
+        }
+      );
+      await token.showTotal();
 };
 
 

@@ -45,7 +45,7 @@ function message_post(title,msg,type){
                     <li>Mint your wBIS</li>
                 </ul>
                 <br />
-                <b style="color:red;">TESTNET VERSION! Only use if you know what you are doing!</b>
+                <b style="color:orange;">Please read the manual! See <a href="https://hypernodes.bismuth.live/?p=2818" style="color:orange;text-decoration:underline;" target="_blank">Blog post</a></b>
             </div>
         </div>
     </div>
@@ -81,8 +81,18 @@ function message_post(title,msg,type){
                         <label class="bmd-label-floating">{{ _("Auth (signed by the bridge)")}}</label>
                         <input class="form-control" id="mint_auth" type="text" name="mint_auth" value="{{ mint['auth']}}"/>
                     </div>
-                    <br />
-                        Do not mess with prefilled params. Params get auto-filled when coming from "Transactions" page.<br />
+
+                        Do not mess with prefilled params above. Params get auto-filled when coming from "Transactions" page.<br />
+                &nbsp;
+                <hr />
+
+                    <div class="form-group">
+                        <label class="bmd-label-floating">{{ _("Gas price (gwei)")}}</label>
+                        <input class="form-control" id="gwei" type="number" name="gwei" value="150"/>
+
+                        <small>Gas price will decide if your transaction waits forever or is processed quickly. <br/>
+                            150 Gwei is there as default, but you'd better check <a href="https://ethgasstation.info" target="_blank">EthGasStation</a> for the current appropriate price.</small>
+                    </div>
                        <button id = "mint" name="mint" type="submit" value="" class="btn btn-success">
                            <i class="material-icons">flare</i> Mint wBIS
                        </button>

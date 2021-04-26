@@ -2,11 +2,16 @@
 if (typeof Contracts === "undefined") var Contracts = { Token: { abi: [] } };
 
 var _data = {
-    address: "0x29B3fF6d2E194ac99D4ca4356251829651D08b94",
-    owner: "0xD376C7cE2baE29F3A9462C024B960512B54725Cf",
-    chain_id: 5,
-    chain_name: "Goerli network",
+    address6: "0x29B3fF6d2E194ac99D4ca4356251829651D08b94",
+    address: "0xf5cB350b40726B5BcF170d12e162B6193b291B41",
+    owner6: "0xD376C7cE2baE29F3A9462C024B960512B54725Cf",
+    owner: "0xBf56eD4F9B58Ca485563F25c17FB7183a743F288",
+    chain_id6: 5,
+    chain_name6: "Goerli network",
+    chain_id: 1,
+    chain_name: "ETH Mainnet",
     image_url: "https://raw.githubusercontent.com/bismuthfoundation/MEDIA-KIT/master/Logo_v2/wbis500x500.png",
+    image_url_no: "http://127.0.0.1:8888/crystal/ethbridge/static/wbisb.png",
 
     network: "browser",
     endpoint: "http://localhost:8545",

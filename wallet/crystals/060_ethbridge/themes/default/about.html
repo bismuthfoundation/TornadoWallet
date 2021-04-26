@@ -13,8 +13,8 @@
             </div>
             <div class="card-body">
                    BIS <-> wBIS Bridge Crystal for Bismuth Tornado Wallet<br/>
-                   Version 1.0.1<br/>
-                   <b style="color:red;">TESTNET VERSION! Only use if you know what you are doing!</b>
+                   Version 1.0.3<br/>
+                <b style="color:orange;">Please read the manual! See <a href="https://hypernodes.bismuth.live/?p=2818" style="color:orange;text-decoration:underline;" target="_blank">Blog post</a></b>
                    <br/>&nbsp
                <!--    <br/>
                    GitHub Link: <a href='https://github.com/bismuthfoundation/TornadoWallet/tree/master/wallet/crystals/060_ethbridge'>https://github.com/bismuthfoundation/TornadoWallet/tree/master/wallet/crystals/060_ethbridge</a><br/>
@@ -81,7 +81,16 @@
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
-                TODO: stats about total wrapped supply, contract address, uniswap link, graphs....
+                <b>Circulating BIS Supply:</b> <span id="circulating_bis">{{ bismuth['extra']['circulating'] }}</span><br />
+                <b>My BIS balance:</b> <span id="my_bis">{{ escape(bismuth['balance']) }}&nbsp;$BIS</span><br />
+                &nbsp;<br />
+                <b>Total Wrapped BIS:</b> <span id="wbis_total"></span><br />
+                <b>My ETH Address:</b> <span id="my_ethaddress"></span><br />
+                <b>My wBIS balance:</b> <span id="wbis_amount"></span><br />
+                &nbsp;<br />
+                <b>ETH Contract Address:</b> <a href="https://etherscan.io/address/{{ bismuth['extra']['eth_sc_address'] }}" target="_blank">{{ bismuth['extra']['eth_sc_address'] }}</a><br />
+                <b>BIS Bridge Address:</b> <a href="http://bismuth.online/search?quicksearch={{ bismuth['extra']['ethbridge_address'] }}" target="_blank">{{ bismuth['extra']['ethbridge_address'] }}</a><br />
+                <b>BIS Oracle Address:</b> <a href="http://bismuth.online/search?quicksearch={{ bismuth['extra']['ethoracle_address'] }}" target="_blank">{{ bismuth['extra']['ethoracle_address'] }}</a><br />
             </div>
         </div>
     </div>
@@ -115,17 +124,7 @@
         </div>
     </div>
 
-    <div class="col-lg-6 col-md-12">
-        <div class="card">
-            <div class="card-header card-header-info">
-                <h4 class="card-title">--</h4>
-                <p class="card-category"></p>
-            </div>
-            <div class="card-body">
-                TODO
-            </div>
-        </div>
-    </div>
+
 
 </div>
 
