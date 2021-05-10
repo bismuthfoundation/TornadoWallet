@@ -37,7 +37,7 @@ function message_post(title,msg,type){
             </div>
             <div class="card-body table-responsive">
                 <ul>
-                    <li>Send your native $BIS to the bridge address</li>
+                    <li>Send your native $BIS to the ETH bridge address</li>
                     <li>Wait for the Mint transaction to be signed</li>
                     <li>Check the <a href="/crystal/ethbridge/swaps">"Swaps"</a> page for current status.</li>
                 </ul>
@@ -54,7 +54,7 @@ function message_post(title,msg,type){
         <div class="card">
             <div class="card-header card-header-text card-header-success">
                 <div class="card-text">
-                  <h4 class="card-title" style="color:#fff">Send BIS to Bridge</h4>
+                  <h4 class="card-title" style="color:#fff">Send BIS to ETH Bridge</h4>
                 </div>
             </div>
             <div class="card-body table-responsive">
@@ -69,7 +69,7 @@ function message_post(title,msg,type){
                         <input class="form-control" id="mint_amount" type="number" name="mint_amount" value="{{ 10 }}"/>
                     </div>
                     <br />
-                    Send from {{ bismuth['address'] }} <br />to Bridge address {{ bismuth['extra']['ethbridge_address'] }}
+                    Send from {{ bismuth['address'] }} <br />to ETH Bridge address {{ bismuth['extra']['ethbridge_address'] }}
                 <br /><b><span style="color:red;">Make extra sure the recipient ETH address is the right one. There is no going back!</span></b><br />
                     <!-- button class="btn btn-primary " onclick="send('{{ bismuth['extra']['ethbridge_address'] }}', $('#mint_amount').val(), 'ethbridge:send', $('#mint_recipient').val()); return false;"-->
                     <button class="btn btn-primary " onclick="sendbis($('#mint_recipient').val(), $('#mint_amount').val()); return false;">

@@ -12,8 +12,8 @@
                 <p class="card-category"></p>
             </div>
             <div class="card-body">
-                   BIS <-> wBIS Bridge Crystal for Bismuth Tornado Wallet<br/>
-                   Version 1.0.3<br/>
+                   BIS <-> wBIS (ERC-20) Bridge Crystal for Bismuth Tornado Wallet<br/>
+                   Version 1.0.4<br/>
                 <b style="color:orange;">Please read the manual! See <a href="https://hypernodes.bismuth.live/?p=2818" style="color:orange;text-decoration:underline;" target="_blank">Blog post</a></b>
                    <br/>&nbsp
                <!--    <br/>
@@ -37,9 +37,9 @@
                 <!-- form action='page1'>
                     <input type="submit" class="btn btn-success" value="Example Commands">
                 </form -->
-                <a class="btn btn-success" href='swaps'><i class="material-icons">receipt</i> Swaps</a> View pending and latest swaps<br />
+                <a class="btn btn-success" href='swaps'><i class="material-icons">receipt</i> Swaps</a> View pending and latest ERC swaps<br />
                 &nbsp;<br />
-                <a class="btn btn-info" href='to_eth1'><i class="material-icons">arrow_forward</i> BIS->wBIS 1/2</a> Send native $BIS to the bridge<br />
+                <a class="btn btn-info" href='to_eth1'><i class="material-icons">arrow_forward</i> BIS->wBIS 1/2</a> Send native $BIS to the ETH bridge<br />
                 <a class="btn btn-primary" href='to_eth2'><i class="material-icons">arrow_forward</i> BIS->wBIS 2/2</a> Mint your wBIS ERC20 on ETH<br />
                 &nbsp;<br />
                 <a class="btn btn-info" href='from_eth1'><i class="material-icons">arrow_back</i> wBIS->BIS</a> Burn your wBIS ERC20 on ETH and get native BIS<br />
@@ -84,13 +84,13 @@
                 <b>Circulating BIS Supply:</b> <span id="circulating_bis">{{ bismuth['extra']['circulating'] }}</span><br />
                 <b>My BIS balance:</b> <span id="my_bis">{{ escape(bismuth['balance']) }}&nbsp;$BIS</span><br />
                 &nbsp;<br />
-                <b>Total Wrapped BIS:</b> <span id="wbis_total"></span><br />
+                <b>Total Wrapped BIS (ERC-20):</b> <span id="wbis_total"></span><br />
                 <b>My ETH Address:</b> <span id="my_ethaddress"></span><br />
-                <b>My wBIS balance:</b> <span id="wbis_amount"></span><br />
+                <b>My wBIS balance (ERC-20):</b> <span id="wbis_amount"></span><br />
                 &nbsp;<br />
                 <b>ETH Contract Address:</b> <a href="https://etherscan.io/address/{{ bismuth['extra']['eth_sc_address'] }}" target="_blank">{{ bismuth['extra']['eth_sc_address'] }}</a><br />
-                <b>BIS Bridge Address:</b> <a href="http://bismuth.online/search?quicksearch={{ bismuth['extra']['ethbridge_address'] }}" target="_blank">{{ bismuth['extra']['ethbridge_address'] }}</a><br />
-                <b>BIS Oracle Address:</b> <a href="http://bismuth.online/search?quicksearch={{ bismuth['extra']['ethoracle_address'] }}" target="_blank">{{ bismuth['extra']['ethoracle_address'] }}</a><br />
+                <b>BIS ETH Bridge Address:</b> <a href="http://bismuth.online/search?quicksearch={{ bismuth['extra']['ethbridge_address'] }}" target="_blank">{{ bismuth['extra']['ethbridge_address'] }}</a><br />
+                <b>BIS ETH Oracle Address:</b> <a href="http://bismuth.online/search?quicksearch={{ bismuth['extra']['ethoracle_address'] }}" target="_blank">{{ bismuth['extra']['ethoracle_address'] }}</a><br />
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
                 End users local legislation may apply. It's up to the user to check whether usage of the service(s) are compliant to their local legislation.
 
                 <h3>Fees</h3>
-                A fixed fees of $BIS {{ bismuth['extra']['bis_fixed_fees'] }} applies to every swap. wBIS are proxy minted on ETH chain by the end user.
+                A fixed fees of $BIS {{ bismuth['extra']['bis_fixed_fees'] }} applies to every swap. wBIS are ERC-20, proxy minted on ETH chain by the end user.
             </div>
         </div>
     </div>

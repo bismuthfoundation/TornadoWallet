@@ -13,7 +13,7 @@ DEFAULT_THEME_PATH = path.join(base_path(), "crystals/060_ethbridge/themes/defau
 
 MODULES = {}
 
-__version__ = "1.0.2"
+__version__ = "1.0.4"
 
 
 # ETH_BRIDGE_ADDRESS = "Bis1SCxtbRiDgEjwu5DZ6tb6P3PnZY2j3CJWg"  # Test
@@ -76,7 +76,7 @@ class EthbridgeHandler(CrystalHandler):
         self.bismuth_vars['extra']["circulating"] = "N/A"
         try:
             res = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/coinsupply.php")
-            print(res)
+            # print(res)
             self.bismuth_vars['extra']["circulating"] = res["circulating"]
         except:
             pass
