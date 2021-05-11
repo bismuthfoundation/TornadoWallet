@@ -152,6 +152,7 @@ class BaseHandler(RequestHandler):
         crystals = self.application.crystals_manager.get_loaded_crystals()
         crystal_names = [name.split("_")[1] for name in crystals.keys()]
         self.bismuth_vars["crystals"] = crystal_names
+        self.bismuth_vars["crystals_icons"] = [crystals[name].get("icon", False) for name in crystals.keys()]
 
     # This could be static, but its easier to let it there so the template have direct access.
     def bool2str(self, a_boolean, iftrue, iffalse):
@@ -175,6 +176,10 @@ class BaseHandler(RequestHandler):
         if self.request.uri.startswith(path):
             return "active"
         return ""
+
+    def if_start(self, path: str):
+        """return True if the request uri begins with the one in path. Used for menu css"""
+        return self.request.uri.startswith(path)
 
     def checked_if(self, condition: bool) -> str:
         if condition:

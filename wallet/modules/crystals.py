@@ -174,6 +174,7 @@ class CrystalManager:
                     "info": self.available_crystals[crystal_name]["info"],
                     "module": module,
                     "active": active,
+                    "icon": self.available_crystals[crystal_name]["about"].get("icon", False)
                 }
                 if self.verbose:
                     self.app_log.info("Crystal '{}' loaded".format(crystal_name))

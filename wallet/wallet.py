@@ -1290,7 +1290,6 @@ class ToolsHandler(BaseHandler):
         await getattr(self, command)(params, post=True)
 
 
-
 class TxModule(tornado.web.UIModule):
     def render(self, tx):
         return self.render_string("modules/transaction.html", tx=tx)

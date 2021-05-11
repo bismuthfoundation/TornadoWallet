@@ -99,8 +99,22 @@
                 </a>
                     {% if handler.active_if_start('/crystal') %}
                     <ul class="nav" style="padding-left:20px">
-                        {% for crystal in bismuth['crystals'] %}
-                        <li class="nav-item  {{ handler.active_if_start('/crystal/'+crystal) }}"><a class="nav-link" href="/crystal/{{ crystal }}/"><i class="material-icons">brightness_high</i> {{ crystal }}</a></li>
+                        {% for i, crystal in enumerate(bismuth['crystals']) %}
+                        <li class="nav-item  {{ handler.active_if_start('/crystal/'+crystal) }}">
+                            <a class="nav-link" href="/crystal/{{ crystal }}/">
+                                {% if bismuth['crystals_icons'][i] %}
+                                    {% if handler.if_start('/crystal/'+crystal) %}
+                                        <img src="/static/crystals/{{ bismuth['crystals_icons'][i] }}" width="32" style="margin-right:10px;"/>
+                                    {% else %}
+                                        <img src="/static/crystals/{{ bismuth['crystals_icons'][i] }}" width="32" style="margin-right:10px; filter:saturate(0);" />
+                                    {% end %}
+
+                                {% else %}
+                                    <i class="material-icons">brightness_high</i>
+                                {% end %}
+                                {{ crystal }}
+                            </a>
+                        </li>
                         {% end %}
                     </ul>
                     {% end %}
