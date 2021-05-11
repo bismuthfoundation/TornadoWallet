@@ -17,6 +17,7 @@
                     <table class="table">
                         <tr>
                             <td>{{ _('Active') }}</td>
+                            <td>{{ _('Icon') }} </td>
                             <td>{{ _('Name') }} </td>
                             <td>{{ _('Version') }} / {{ _('Date') }}</td>
                             <td>{{ _('Description') }} </td>
@@ -36,6 +37,12 @@
                                   </span>
                                     </label>
                                 </div>
+                            </td>
+                            <td> {% if data['about'].get('icon', False) %}
+                                <img src="/static/crystals/{{ data['about']['icon'] }}" width="32" style="margin-right:10px;"/>
+                                {% else %}
+                                &nbsp;
+                                {% end %}
                             </td>
                             <td>{{ name }}</td>
                             <td>v {{ data['about']['version'] }} / {{ data['about']['date'] }}</td>
