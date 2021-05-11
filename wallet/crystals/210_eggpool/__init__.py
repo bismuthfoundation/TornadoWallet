@@ -63,17 +63,19 @@ class EggpoolHandler(CrystalHandler):
         i = 0
         gcolors = graph_colors_rgba()
         if api.get("lastround", False):
-            for worker, data in api["workers"]["detail"].items():
-                # shares_series += json.dumps(data[3])+',\n'
-                rgba = gcolors[i % len(gcolors)]
-                workers_name[worker] = rgba
-                sh_datasets.append(
-                    {"label": worker, "data": data[3], "strokeColor": rgba}
-                )
-                hr_datasets.append(
-                    {"label": worker, "data": data[2], "strokeColor": rgba}
-                )
-                i += 1
+            try:
+                for worker, data in api["workers"]["detail"].items():
+                    # shares_series += json.dumps(data[3])+',\n'
+                    rgba = gcolors[i % len(gcolors)]
+                    workers_name[worker] = rgba
+                    # sh_datasets.append({"label": worker, "data": data[3], "strokeColor": rgba, "borderColor": rgba})
+                    sh_datasets.append({"label": worker, "data": data[3], "borderColor": rgba, "fill": False})
+                    # hr_datasets.append({"label": worker, "data": data[2], "strokeColor": rgba})
+                    hr_datasets.append({"label": worker, "data": data[2], "borderColor": rgba, "fill": False})
+                    i += 1
+            except Exception as e:
+                print(e)
+                workers_name[_("No data")] = gcolors[0]
         else:
             workers_name[_("No data")] = gcolors[0]
 

@@ -63,17 +63,25 @@ $(document).ready(function() {
         //- LINE CHART -
         //--------------
         var lineChartCanvas = $('#lineChartHR').get(0).getContext('2d')
-        var lineChart = new Chart(lineChartCanvas)
-        var lineChartOptions = lineChartOptions
-        lineChart.Line(lineChartDataHR, lineChartOptions)
-
+        //var lineChart = new Chart(lineChartCanvas)
+        /* var lineChartOptions = lineChartOptions
+        lineChart.line(lineChartDataHR, lineChartOptions) */
+        var lineChart = new Chart(lineChartCanvas, {
+            type: 'line',
+            data: lineChartDataHR,
+            options: lineChartOptions
+        });
 
         var lineChartCanvas2 = $('#lineChartSH').get(0).getContext('2d')
-        var lineChart2 = new Chart(lineChartCanvas2)
+        //var lineChart2 = new Chart(lineChartCanvas2)
         var lineChartOptions2 = lineChartOptions
         //lineChartOptions2.legendTemplate = false
-        lineChart2.Line(lineChartDataSH, lineChartOptions2)
-
+        //lineChart2.line(lineChartDataSH, lineChartOptions2)
+        var lineChart2 = new Chart(lineChartCanvas2, {
+            type: 'line',
+            data: lineChartDataSH,
+            options: lineChartOptions2
+        });
 
 
     });
