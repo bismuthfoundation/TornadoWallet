@@ -69,14 +69,12 @@ function FetchVIN() {
     message_post('Tesla Account','Checking credentials','info');
 
     email = $("#tesla_email").val();
-    password = $("#tesla_password").val();
     pwd = $("#tesla_pwd").val();
 
     localStorage.setItem("tesla_email", email);
-    localStorage.setItem("tesla_password", password);
     localStorage.setItem("tesla_pwd", pwd);
 
-    $.post('fetch_asset_id', { pwd: pwd, email: email, password: password, _xsrf: xsrf }, function(text){
+    $.post('fetch_asset_id', { pwd: pwd, email: email, _xsrf: xsrf }, function(text){
         text = text.replace(/&#39;/g,'"');
         text = text.replace(/&quot;/g,'"');
         var data = JSON.parse(text);
@@ -176,15 +174,13 @@ function FetchVehicleData() {
     message_post('Tesla Account','Checking your credentials and fetching data. Wait typically 10-30 seconds.','info');
 
     email = $("#tesla_email").val();
-    password = $("#tesla_password").val();
     pwd = $("#tesla_pwd").val();
     localStorage.setItem("tesla_email", email);
-    localStorage.setItem("tesla_password", password);
     localStorage.setItem("tesla_pwd", pwd);
     localStorage.setItem("tesla_range", $("#range option:selected").val());
     localStorage.setItem("tesla_temperature", $("#temperature option:selected").val());
 
-    $.post('fetch_api_data', { email: email, password: password, pwd: pwd, _xsrf: xsrf }, function(text){
+    $.post('fetch_api_data', { email: email, pwd: pwd, _xsrf: xsrf }, function(text){
         text = text.replace(/&#39;/g,'"');
         text = text.replace(/&quot;/g,'"');
         var data = JSON.parse(text);

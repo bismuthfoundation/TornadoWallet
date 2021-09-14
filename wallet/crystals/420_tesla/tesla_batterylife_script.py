@@ -36,11 +36,10 @@ if __name__ == "__main__":
         client.set_address(address)
         print("Selected address = ", client.address)
         email = input("Enter your Tesla email address: ")
-        password = input("Enter your Tesla password: ")
-        pwd = input("Enter your anonymizer password: ")
+        pwd = input("Enter your vehicle anonymizer password (not your Tesla account password): ")
 
         tesla = TeslaAPIHandler("", "", "", "")
-        out = tesla.fetch_vehicle_data(email, password, pwd)
+        out = tesla.fetch_vehicle_data(email, pwd)
         operation = "tesla:battery"
         recipient = "Bis1TeSLaWhTC2ByEwZnYWtsPVK5428uqnL46"
         data = json.dumps(out)

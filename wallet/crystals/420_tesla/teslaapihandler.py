@@ -9,25 +9,27 @@ from requests_oauth2 import OAuth2BearerToken
 import string
 import random
 import base64
+from teslapy import Tesla
 
 class TeslaAPIHandler():
 
     def __init__(self,bismuth,reg,unreg,op_data):
-        self.CLIENT_ID = "81527cff06843c8634fdc09e8ac0abefb46ac849f38fe1e431c2ef2106796384"
-        self.CLIENT_SECRET = "c7257eb71a564034f9419ee651c7d0e5f7aa6bfbd18bafb5c5c033b093bb2fa3"
-        self.TESLA_URL = "https://owner-api.teslamotors.com"
-        self.API = "/api/1"
         self.address = "Bis1TeSLaWhTC2ByEwZnYWtsPVK5428uqnL46"
         self.bismuth = bismuth
         self.register = reg
         self.unregister = unreg
         self.op_data = op_data
 
-    def fetch_vehicle_data(self,email,password,pwd):
+    def fetch_vehicle_data(self,email,pwd):
         """
         Returns a dict with vehicle data for all VINs using Tesla API
         """
-        data = self.tesla_data(email,password,pwd)
+        try:
+            data = self.tesla_data(email)
+        except:
+            print("Vehicle unavailable, trying again. ")
+            data = self.tesla_data(email)
+
         N = data["count"]
         out = {}
         out["total"] = N
@@ -216,161 +218,72 @@ class TeslaAPIHandler():
         data['transaction_id'] = self.myparse(html,'name="transaction_id" value="')
         return data
 
-    def __tesla_connect(self,email, pwd):
+    def __tesla_connect(self,email):
         """
-        Checks if valid email and password
+        Connect to vehicles associated with email address
         """
+        self.tesla = Tesla(email)
+        self.tesla.fetch_token()
 
-        code_verifier = ''.join(random.choices(string.ascii_letters+string.digits, k=86))
-        code_challenge = hashlib.sha256(code_verifier.encode('utf-8')).hexdigest()
-
-        data = {}
-        data['client_id']='ownerapi'
-        data['code_challenge']=code_challenge
-        data['code_challenge_method']='S256'
-        data['redirect_uri']='https://auth.tesla.com/void/callback'
-        data['response_type']='code'
-        data['scope']='openid email offline_access'
-        data['state']='123'
-        data['login_hint']=email
-
-        r = requests.get('https://auth.tesla.com/oauth2/v3/authorize', data)
-        cookies = r.cookies
-        data = self.html_parse(data,r.text)
-        data['identity'] = email
-        data['credential'] = pwd
-
-        r = requests.post('https://auth.tesla.com/oauth2/v3/authorize', data=data, cookies=cookies, allow_redirects=False)
-        code = self.myparse2(r.text,'code=')
-
-        data = {}
-        data['grant_type'] = 'authorization_code'
-        data['client_id'] = 'ownerapi'
-        data['code'] = code
-        data['code_verifier'] = code_verifier
-        data['redirect_uri'] = 'https://auth.tesla.com/void/callback'        
-        r = requests.post('https://auth.tesla.com/oauth2/v3/token', data=data)
-        S = json.loads(r.text)
-
-        data = {}
-        data['grant_type'] = 'urn:ietf:params:oauth:grant-type:jwt-bearer'
-        data['client_id']=self.CLIENT_ID
-        data['client_secret']=self.CLIENT_SECRET
-        with requests.Session() as s:
-            try:
-                s.auth = OAuth2BearerToken(S['access_token'])
-                r = s.post(self.TESLA_URL + '/oauth/token',data)
-                S = json.loads(r.text)
-            except:
-                pass
-		
-        time.sleep(1)
-        return S
-
-    def tesla_vins(self,email,password,pwd):
+    def tesla_vins(self,email,pwd):
         """
-        Returns all VIN numbers associated with specified email and password
+        Returns all VIN numbers associated with specified email
         """
-        S = self.__tesla_connect(email, password)
+        self.__tesla_connect(email)
+        vehicle = self.fetch_vehicle_data(email,pwd)
         out = {}
-        out["count"] = 0
-        with requests.Session() as s:
-            try:
-                s.auth = OAuth2BearerToken(S['access_token'])
-                r = s.get(self.TESLA_URL + self.API + '/vehicles')
-                vehicle = r.json()
-                L = vehicle['count']
-                out["vehicle"] = {}
-                out["count"] = L
-                for i in range(0,L):
-                    vin=vehicle['response'][i]['vin']
-                    if len(pwd) == 0:
-                        asset_id=vin
-                    else:
-                        asset_id = (vin + pwd).encode("utf-8")
-                        asset_id = hashlib.sha256(asset_id).hexdigest()
-                    checksum = self.checksum(asset_id,True)
-                    out["vehicle"][str(i)] = asset_id + checksum
-            except:
-                pass
+        L = vehicle["total"]
+        out["vehicle"] = {}
+        out["count"] = L
+        for i in range(0,L):
+            vin=vehicle['vin'][str(i)]
+            out["vehicle"][str(i)] = vin
 
         return out
 
-    def tesla_data(self,email,password,pwd):
+    def tesla_data(self,email):
         """
-        Returns selected vehicle data given email, password.
+        Returns selected vehicle data given email.
         If owner has multiple vehicles, data for all of them is returned.
         """
-        S = self.__tesla_connect(email,password)
+        S = self.__tesla_connect(email)
         out = {}
         out["vehicle"] = {}
         out["count"] = 0
 
-        with requests.Session() as s:
-            try:
-                s.auth = OAuth2BearerToken(S['access_token'])
-                r = s.get(self.TESLA_URL + self.API + '/vehicles')
-                vehicle = r.json()
-                L = vehicle['count']
-                out["count"] = L
+        selected = prod = self.tesla.vehicle_list()
+        for i, product in enumerate(selected):
+            product.sync_wake_up()
+            out["count"] = out["count"] + 1
+            data = product.get_vehicle_data()
+            battery_type = ""
+            option_codes = data["option_codes"].split(",")
+            for j in range(len(option_codes)):
+                if option_codes[j].find("BT") == 0:
+                    battery_type = option_codes[j]
+                    break
 
-                for i in range(0,L):
-                    while True:
-                        time.sleep(2)
-                        url = self.TESLA_URL + self.API + '/vehicles/' + str(vehicle['response'][i]['id']) + "/wake_up"
-                        r = s.post(url)
-                        R = json.loads(r.text)
-                        if "vehicle_id" in R['response']:
-                            print("----> Vehicle woke up")
-                            break
-                        else:
-                            print("----> Trying to wake up vehicle again")
-
-                    while True:
-                        time.sleep(5)
-                        url = self.TESLA_URL + self.API + '/vehicles/' + str(vehicle['response'][i]['id']) + '/vehicle_data'
-                        r = s.get(url)
-                        data = r.json()
-                        try:
-                            if "vin" in data["response"]:
-                                print("----> Received vehicle data")
-                                break
-                        except:
-                            print("----> Trying to receive vehicle data again")
-                            pass
-
-                    data = data["response"]
-                    battery_type = ""
-                    option_codes = data["option_codes"].split(",")
-                    for j in range(len(option_codes)):
-                        if option_codes[j].find("BT") == 0:
-                            battery_type = option_codes[j]
-                            break
-
-                    vin=data["vin"]
-                    out["vehicle"][i] = {}
-                    out["vehicle"][i]["charge_energy_added"] = data["charge_state"]["charge_energy_added"]
-                    out["vehicle"][i]["charge_miles_added_rated"] = data["charge_state"]["charge_miles_added_rated"]
-                    out["vehicle"][i]["charge_miles_added_ideal"] = data["charge_state"]["charge_miles_added_ideal"]
-                    out["vehicle"][i]["est_battery_range"] = data["charge_state"]["est_battery_range"]
-                    out["vehicle"][i]["ideal_battery_range"] = data["charge_state"]["ideal_battery_range"]
-                    out["vehicle"][i]["charge_current_request"] = data["charge_state"]["charge_current_request"]
-                    out["vehicle"][i]["usable_battery_level"] = data["charge_state"]["usable_battery_level"]
-                    out["vehicle"][i]["battery_range"] = data["charge_state"]["battery_range"]
-                    out["vehicle"][i]["battery_level"] = data["charge_state"]["battery_level"]
-                    out["vehicle"][i]["timestamp"] = data["charge_state"]["timestamp"]
-                    out["vehicle"][i]["odometer"] = data["vehicle_state"]["odometer"]
-                    out["vehicle"][i]["inside_temp"] = data["climate_state"]["inside_temp"]
-                    out["vehicle"][i]["outside_temp"] = data["climate_state"]["outside_temp"]
-                    out["vehicle"][i]["car_version"] = data["vehicle_state"]["car_version"]
-                    out["vehicle"][i]["battery_type"] = battery_type
-                    out["vehicle"][i]["car_type"] = data["vehicle_config"]["car_type"]
-                    out["vehicle"][i]["exterior_color"] = data["vehicle_config"]["exterior_color"]
-                    out["vehicle"][i]["wheel_type"] = data["vehicle_config"]["wheel_type"]
-                    out["vehicle"][i]["vin"] = vin
-
-            except:
-                pass
+            vin=data["vin"]
+            out["vehicle"][i] = {}
+            out["vehicle"][i]["charge_energy_added"] = data["charge_state"]["charge_energy_added"]
+            out["vehicle"][i]["charge_miles_added_rated"] = data["charge_state"]["charge_miles_added_rated"]
+            out["vehicle"][i]["charge_miles_added_ideal"] = data["charge_state"]["charge_miles_added_ideal"]
+            out["vehicle"][i]["est_battery_range"] = data["charge_state"]["est_battery_range"]
+            out["vehicle"][i]["ideal_battery_range"] = data["charge_state"]["ideal_battery_range"]
+            out["vehicle"][i]["charge_current_request"] = data["charge_state"]["charge_current_request"]
+            out["vehicle"][i]["usable_battery_level"] = data["charge_state"]["usable_battery_level"]
+            out["vehicle"][i]["battery_range"] = data["charge_state"]["battery_range"]
+            out["vehicle"][i]["battery_level"] = data["charge_state"]["battery_level"]
+            out["vehicle"][i]["timestamp"] = data["charge_state"]["timestamp"]
+            out["vehicle"][i]["odometer"] = data["vehicle_state"]["odometer"]
+            out["vehicle"][i]["inside_temp"] = data["climate_state"]["inside_temp"]
+            out["vehicle"][i]["outside_temp"] = data["climate_state"]["outside_temp"]
+            out["vehicle"][i]["car_version"] = data["vehicle_state"]["car_version"]
+            out["vehicle"][i]["battery_type"] = battery_type
+            out["vehicle"][i]["car_type"] = data["vehicle_config"]["car_type"]
+            out["vehicle"][i]["exterior_color"] = data["vehicle_config"]["exterior_color"]
+            out["vehicle"][i]["wheel_type"] = data["vehicle_config"]["wheel_type"]
+            out["vehicle"][i]["vin"] = vin
 
         return out
 

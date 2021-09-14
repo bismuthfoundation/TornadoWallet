@@ -10,7 +10,6 @@ $(document).ready(function() {
     try { //Page2
         if($("#tesla_email").val() === "") {
             $("#tesla_email").val(localStorage.getItem("tesla_email"));
-            $("#tesla_password").val(localStorage.getItem("tesla_password"));
             a = localStorage.getItem("tesla_range");
             $("#range option:contains(", a, ")").attr('selected', 'selected');
             a = localStorage.getItem("tesla_temperature");

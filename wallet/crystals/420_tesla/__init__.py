@@ -55,23 +55,21 @@ class TeslaHandler(CrystalHandler):
 
     async def fetch_asset_id(self, params=None):
         """"
-        Fetch asset ID associated with email and password
+        Fetch asset ID associated with email address. pwd is the vehicle anonymizer
         """
         email = self.get_argument("email", default=None, strip=False)
-        password = self.get_argument("password", default=None, strip=False)
         pwd = self.get_argument("pwd", default=None, strip=False) #For XOR
-        data = self.teslahandler.tesla_vins(email, password, pwd)
+        data = self.teslahandler.tesla_vins(email, pwd)
         time.sleep(1)
         self.render("json.html", data=data)
 
     async def fetch_api_data(self, params=None):
         """
-        Returns a dict with vehicle data for all VINs associated with email and password
+        Returns a dict with vehicle data for all VINs associated with email and anonymizer
         """
         email = self.get_argument("email", default=None, strip=False)
-        password = self.get_argument("password", default=None, strip=False)
         pwd = self.get_argument("pwd", default=None, strip=False) #For XOR
-        out = self.teslahandler.fetch_vehicle_data(email,password,pwd)
+        out = self.teslahandler.fetch_vehicle_data(email,pwd)
         self.render("json.html", data=out)
 
     async def check_vin_registrant(self, params=None):
