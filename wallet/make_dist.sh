@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 cp wallet.py TornadoBismuthWallet.py
-pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --hidden-import requests_oauth2 --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
+pyinstaller --hidden-import requests_oauth2 --hidden-import oauthlib --hidden-import tornado.locale --hidden-import aiohttp --hidden-import teslapy --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
 cp -r locale dist/locale
+rm -rd dist/themes
+rm -rd dist/crystals
 mkdir dist/themes
 cp -r themes/material dist/themes/material
 cp -r themes/common dist/themes/common
-cp -r crystals dist/crystals
+cp -r crystals dist/
 rm TornadoBismuthWallet.py
 
 # Compilation of TornadoWallet on Ubuntu 16.04
