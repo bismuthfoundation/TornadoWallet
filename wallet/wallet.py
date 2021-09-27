@@ -1334,5 +1334,6 @@ if __name__ == "__main__":
     else:
         # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
         locale_path = os.path.join(helpers.base_path(), "locale")
+        print(f"base path {helpers.base_path()} locale path {locale_path}")
         tornado.locale.load_gettext_translations(locale_path, "messages")
         tornado.ioloop.IOLoop.current().run_sync(main)
