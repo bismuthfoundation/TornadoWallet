@@ -4,5 +4,6 @@
   "email": "dev@eggpool.net",
   "version": "0.3",
   "date": "2019-05-22",
-  "url":"https://github.com/bismuthfoundation/TornadoWallet"
+  "url":"https://github.com/bismuthfoundation/TornadoWallet",
+  "icon": "bismuthprice.icon.png"
 }
