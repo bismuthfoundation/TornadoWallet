@@ -257,11 +257,14 @@ class TeslaAPIHandler():
             out["count"] = out["count"] + 1
             data = product.get_vehicle_data()
             battery_type = ""
-            option_codes = data["option_codes"].split(",")
-            for j in range(len(option_codes)):
-                if option_codes[j].find("BT") == 0:
-                    battery_type = option_codes[j]
-                    break
+            try:
+                option_codes = data["option_codes"].split(",")
+                for j in range(len(option_codes)):
+                    if option_codes[j].find("BT") == 0:
+                        battery_type = option_codes[j]
+                        break
+            except:
+                pass
 
             vin=data["vin"]
             out["vehicle"][i] = {}
