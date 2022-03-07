@@ -18,7 +18,7 @@ from bismuthclient.bismuthclient import BismuthClient
 from teslaapihandler import TeslaAPIHandler
 
 if __name__ == "__main__":
-    client = BismuthClient(servers_list={'wallet.bismuth.online:5658','wallet2.bismuth.online:5658'})
+    client = BismuthClient() #Empty server list to use api
     client.load_multi_wallet("../../../../bismuth-private/wallet.json")
     n = len(client._wallet._addresses)
     print("Available addresses in multi-wallet:")
