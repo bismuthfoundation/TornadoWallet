@@ -1,5 +1,7 @@
 # TornadoWallet
 
+![Thumbnail](https://raw.githubusercontent.com/bismuthfoundation/MEDIA-KIT/eaf7845473b06f090564d38591ddd43564997f0a/Screenshots/TornadoWallet/tornado_home.png "Thumbnail")
+
 A Python/HTML Wallet based upon the Tornado framework.
 
 First stable release, still work ongoing, but useable and nice looking!
