@@ -4,7 +4,7 @@ del /f /s /q build 1>nul
 rmdir /s /q build
 
 copy wallet.py TornadoBismuthWallet.py
-pyinstaller --hidden-import requests_oauth2 --hidden-import oauthlib --hidden-import tornado.locale --hidden-import aiohttp --hidden-import teslapy --hidden-import bismuthsimpleasset --hidden-import mypolyfit --hidden-import phoneapihandler --hidden-import rainflow --hidden-import testlaapihandler --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
+pyinstaller --hidden-import requests_oauth2 --hidden-import oauthlib --hidden-import tornado.locale --hidden-import aiohttp --hidden-import teslapy --hidden-import bismuthsimpleasset --hidden-import mypolyfit --hidden-import phoneapihandler --hidden-import rainflow --hidden-import teslaapihandler --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
 
 robocopy locale dist/locale /S /E *.mo
 mkdir dist/themes

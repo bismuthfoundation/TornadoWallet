@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cp wallet.py TornadoBismuthWallet.py
 # pyinstaller --hidden-import tornado.locale --hidden-import aiohttp --hidden-import requests_oauth2 --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
-pyinstaller --hidden-import requests_oauth2 --hidden-import oauthlib --hidden-import tornado.locale --hidden-import aiohttp --hidden-import teslapy --hidden-import bismuthsimpleasset --hidden-import mypolyfit --hidden-import phoneapihandler --hidden-import rainflow --hidden-import testlaapihandler --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
+pyinstaller --hidden-import requests_oauth2 --hidden-import oauthlib --hidden-import tornado.locale --hidden-import aiohttp --hidden-import teslapy --hidden-import bismuthsimpleasset --hidden-import mypolyfit --hidden-import phoneapihandler --hidden-import rainflow --hidden-import teslaapihandler --hidden-import six --onefile --icon=favicon.ico TornadoBismuthWallet.py
 
 cp -R locale dist/locale
 cp -R crystals dist/crystals
