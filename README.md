@@ -60,7 +60,7 @@ If you have no wallet yet, you'll be redirected to the wallet load page.
 Possible command line switches:    
 * `--verbose --debug`
 * `--theme=themes/material`  Force a specific theme
-* `--server=ip:port`  Force a specific walelt server (like 127.0.0.1:8150)
+* `--server=ip:port`  Force a specific wallet server (like 127.0.0.1:8150)
 
 See the FAQ: https://github.com/bismuthfoundation/Bismuth-FAQ/tree/master/Wallet/Tornado
 
