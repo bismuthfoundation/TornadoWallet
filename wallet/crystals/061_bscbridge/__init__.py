@@ -8,6 +8,9 @@ from modules.basehandlers import CrystalHandler
 from modules.helpers import base_path
 from hashlib import sha256
 from decimal import Decimal, getcontext, ROUND_HALF_EVEN
+import aiohttp
+import ssl
+import certifi
 
 DEFAULT_THEME_PATH = path.join(base_path(), "crystals/061_bscbridge/themes/default")
 
@@ -45,6 +48,11 @@ def f8_to_int(a_str: str):
     # Helper function to convert a legacy string 0.8f to compact int format
     return int(Decimal(a_str) * DECIMAL_1E8)
 
+async def fetch_json(url):
+    ssl_context = ssl.create_default_context(cafile=certifi.where())
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, ssl=ssl_context) as response:
+            return await response.json()
 
 class BscbridgeHandler(CrystalHandler):
 
@@ -69,16 +77,17 @@ class BscbridgeHandler(CrystalHandler):
     @staticmethod
     def sha256(txid: str):
         return sha256(txid.encode('utf-8')).hexdigest()
-
+   
     async def about(self, params=None):
         self.bismuth_vars['extra']["footer"] += f'<script src= "/crystal/bscbridge/static/about.js"></script>\n'
         self.bismuth_vars['extra']["circulating"] = "N/A"
         try:
-            res = await async_get_with_http_fallback("https://hypernodes.bismuth.live/api/coinsupply.php")
-            # print(res)
-            self.bismuth_vars['extra']["circulating"] = res["circulating"]
-        except:
-            pass
+            url = "https://bismuth.im/api/info/coinsupply"
+            res = await fetch_json(url)
+            if res:
+                self.bismuth_vars['extra']["circulating"] = res.get("circulating", "N/A")
+        except Exception as e:
+            print(f"Error in about method: {e}")
         self.render("about.html", bismuth=self.bismuth_vars)
 
     async def message_popup(self, params=None):
