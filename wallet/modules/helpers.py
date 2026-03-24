@@ -11,6 +11,7 @@ from bismuthclient.bismuthclient import BismuthClient
 # Where the wallets and other potential private info are to be stored.
 # It's a dir under the user's own home directory.
 BISMUTH_PRIVATE_DIR = "bismuth-private"
+NEWS_URL = "https://raw.githubusercontent.com/bismuthfoundation/TornadoWallet/master/news.json"
 
 HTTP_SESSION = None
 
@@ -50,13 +51,42 @@ def base_path():
 @cachetools.func.ttl_cache(maxsize=5, ttl=600)
 def get_api_10(url, is_json=True):
     """A Cached API getter, with 10 min cache"""
-    response = requests.get(url)
+    response = requests.get(url, timeout=5)
     if response.status_code == 200:
         if is_json:
             return response.json()
         else:
             return response.content
     return ""
+
+
+def _load_local_json(filename):
+    with open(filename, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _normalize_news_payload(data):
+    if isinstance(data, dict):
+        items = data.get("items", [])
+        if isinstance(items, list):
+            return [str(item) for item in items if item]
+    elif isinstance(data, list):
+        return [str(item) for item in data if item]
+    return []
+
+
+@cachetools.func.ttl_cache(maxsize=1, ttl=600)
+def get_news():
+    fallback_file = path.join(base_path(), "news.json")
+    fallback = _normalize_news_payload(_load_local_json(fallback_file))
+    try:
+        remote = get_api_10(NEWS_URL, is_json=True)
+        remote_items = _normalize_news_payload(remote)
+        if remote_items:
+            return remote_items
+    except Exception as e:
+        print("News fetch fallback: {}".format(e))
+    return fallback
 
 
 async def async_get(url, is_json=False, ignore_ssl_errors=False):

@@ -1,9 +1,10 @@
 tornado
-bismuthclient>=0.0.53
+bismuthclient>=0.0.55
 cachetools
 aiohttp
 mnemonic
 coincurve
+PyNaCl
 pycryptodomex
 requests_oauth2
 teslapy

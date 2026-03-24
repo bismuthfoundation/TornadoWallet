@@ -1,0 +1,8 @@
+{
+  "items": [
+    "Supports multiple address schemes (RSA, ECDSA, ED25519)",
+    "Supports message encryption for RSA, ECDSA and ED25519 addresses",
+    "Tornado Wallet is build on Bismuth",
+    "Pure Proof-of-Work Python blockchain"
+  ]
+}

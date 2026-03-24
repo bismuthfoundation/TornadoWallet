@@ -28,6 +28,8 @@ import subprocess
 import webbrowser
 import sys
 import socket
+import threading
+import asyncio
 
 from tornado.options import define, options
 
@@ -39,7 +41,10 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.46"
+__version__ = "0.1.47"
+SHUTDOWN_EVENT = None
+SERVER_IOLOOP = None
+MACOS_APP = False
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -201,6 +206,7 @@ class HomeHandler(BaseHandler):
             "home", home_crystals, first_only=False
         )
         self.bismuth_vars["extra"] = home_crystals["extra"]
+        self.bismuth_vars["news"] = helpers.get_news()
         self.render("home.html", bismuth=self.bismuth_vars, home_crystals=home_crystals)
         # self.app_log.info("> home")
 
@@ -766,7 +772,7 @@ class WalletHandler(BaseHandler):
         self.redirect("/wallet/load")
 
     @write_protected
-    async def import_ecdsa(self, params=None, post: bool = False):
+    async def import_key(self, params=None, post: bool = False):
         """Check key is good and show address for confirm"""
         _ = self.locale.translate
         if self.bismuth._wallet._locked:
@@ -777,6 +783,8 @@ class WalletHandler(BaseHandler):
                 message=_("You have to unlock your wallet first"),
                 bismuth=self.bismuth_vars,
             )
+            return
+        key_type = self.get_argument("key_type", "ECDSA").strip().upper()
         privkey = self.get_argument("privkey").strip()
         label = self.get_argument("label").strip()
         import_confirmation = self.get_argument("import", False)
@@ -785,16 +793,23 @@ class WalletHandler(BaseHandler):
             self.redirect("/wallet/load")
         elif import_confirmation:
             # We confirmed, import for good.
-            self.bismuth._wallet.import_ecdsa_pk(privkey, label)
+            if key_type == "ED25519":
+                self.bismuth._wallet.import_ed25519_pk(privkey, label)
+            else:
+                self.bismuth._wallet.import_ecdsa_pk(privkey, label)
             self.redirect("/wallet/load")
         else:
             # Ask for confirm
-            signer = self.bismuth._wallet.get_ecdsa_key(privkey)
+            if key_type == "ED25519":
+                signer = self.bismuth._wallet.get_ed25519_key(privkey)
+            else:
+                signer = self.bismuth._wallet.get_ecdsa_key(privkey)
             address = signer['address']
             pubkey = signer['public_key']
             # print(file_name)
             self.render(
                 "wallet_import_ecdsa1.html",
+                key_type=key_type,
                 privkey=privkey,
                 pubkey=pubkey,
                 label=label,
@@ -851,9 +866,10 @@ class WalletHandler(BaseHandler):
             )
             return
         label = self.get_argument("label", None)
+        address_type = self.get_argument("addresstype", "RSA")
         # TODO: check and block if this label already exists?
         try:
-            self.bismuth._wallet.new_address(label=label)
+            self.bismuth._wallet.new_address(label=label, type=address_type)
             self.redirect("/wallet/load")
         except Exception as e:
             self.render(
@@ -1027,6 +1043,17 @@ class AboutHandler(BaseHandler):
     async def network(self, params=None):
         self.render("about_network.html", bismuth=self.bismuth_vars)
 
+    async def quit(self, params=None):
+        _ = self.locale.translate
+        self.render(
+            "message.html",
+            type="success",
+            title=_("Quit"),
+            message=_("Tornado Wallet is shutting down."),
+            bismuth=self.bismuth_vars,
+        )
+        tornado.ioloop.IOLoop.current().call_later(0.2, request_shutdown)
+
     async def get(self, command=""):
         command, *params = command.split("/")
         if not command:
@@ -1154,7 +1181,15 @@ class MessagesHandler(BaseHandler):
                     "warning",
                 )
                 return
-        data = self.bismuth.sign(message)
+        try:
+            data = self.bismuth.sign(message)
+        except Exception as e:
+            self.message_pop(
+                _("Error:"),
+                _("Could not sign the message.") + " " + str(e),
+                "danger",
+            )
+            return
         if len(message) > 50:
             message = message[:50] + "[...]"
         message = _("Your message '{}' has been signed.").format(message)
@@ -1202,7 +1237,15 @@ class MessagesHandler(BaseHandler):
                     "warning",
                 )
                 return
-        data = self.bismuth.decrypt(message)
+        try:
+            data = self.bismuth.decrypt(message)
+        except Exception as e:
+            self.message_pop(
+                _("Error:"),
+                _("Could not decrypt the message.") + " " + str(e),
+                "danger",
+            )
+            return
         message = _("Your message has been decrypted.")
         self.render(
             "messages_pop.html",
@@ -1219,13 +1262,22 @@ class MessagesHandler(BaseHandler):
         _ = self.locale.translate
         message = self.get_argument("data", "")
         recipient = self.get_argument("recipient", "")
+        self.settings["page_title"] = _("Encrypt message")
         if message == "":
             self.message_pop(_("Error:"), _("Message is empty"), "warning")
             return
         if recipient == "":
             self.message_pop(_("Error:"), _("Recipient is empty"), "warning")
             return
-        data = self.bismuth.encrypt(message, recipient)
+        try:
+            data = self.bismuth.encrypt(message, recipient)
+        except Exception as e:
+            self.message_pop(
+                _("Error:"),
+                _("Could not encrypt the message.") + " " + str(e),
+                "danger",
+            )
+            return
         message = _("Your message has been encrypted.")
         self.render(
             "messages_pop.html",
@@ -1241,13 +1293,29 @@ class MessagesHandler(BaseHandler):
         command, *params = command.split("/")
         if not command:
             command = "index"
-        await getattr(self, command)(params)
+        try:
+            await getattr(self, command)(params)
+        except Exception as e:
+            self.app_log.exception("Unhandled /messages/ GET error")
+            self.message_pop(
+                self.locale.translate("Error:"),
+                self.locale.translate("Unexpected error while processing the message request.") + " " + str(e),
+                "danger",
+            )
 
     async def post(self, command=""):
         command, *params = command.split("/")
         if not command:
             command = "sign"
-        await getattr(self, command)(params, post=True)
+        try:
+            await getattr(self, command)(params, post=True)
+        except Exception as e:
+            self.app_log.exception("Unhandled /messages/ POST error")
+            self.message_pop(
+                self.locale.translate("Error:"),
+                self.locale.translate("Unexpected error while processing the message request.") + " " + str(e),
+                "danger",
+            )
 
 
 class ToolsHandler(BaseHandler):
@@ -1304,18 +1372,145 @@ def open_url(url):
         webbrowser.open_new_tab(url)
 
 
+def request_shutdown():
+    global SERVER_IOLOOP
+    if SHUTDOWN_EVENT is not None and SERVER_IOLOOP is not None:
+        SERVER_IOLOOP.add_callback(SHUTDOWN_EVENT.set)
+    if MACOS_APP:
+        try:
+            from AppKit import NSApp
+            from PyObjCTools import AppHelper
+            AppHelper.callAfter(NSApp.terminate_, None)
+        except Exception:
+            pass
+
+
+def run_server_thread():
+    global SERVER_IOLOOP
+    locale_path = os.path.join(helpers.base_path(), "locale")
+    tornado.locale.load_gettext_translations(locale_path, "messages")
+    asyncio.set_event_loop(asyncio.new_event_loop())
+    SERVER_IOLOOP = tornado.ioloop.IOLoop.current()
+    try:
+        SERVER_IOLOOP.run_sync(main)
+    finally:
+        SERVER_IOLOOP = None
+
+
+def run_macos_app():
+    global MACOS_APP
+    import objc
+    from Foundation import NSObject, NSMakeRect
+    from AppKit import (
+        NSApp,
+        NSApplication,
+        NSApplicationActivationPolicyRegular,
+        NSBackingStoreBuffered,
+        NSBezelStyleRounded,
+        NSButton,
+        NSTextField,
+        NSWindow,
+        NSWindowStyleMaskClosable,
+        NSWindowStyleMaskMiniaturizable,
+        NSWindowStyleMaskResizable,
+        NSWindowStyleMaskTitled,
+    )
+    from PyObjCTools import AppHelper
+
+    url = "http://127.0.0.1:{}".format(options.port)
+    MACOS_APP = True
+    server_thread = threading.Thread(target=run_server_thread, daemon=True)
+    server_thread.start()
+
+    class WalletAppDelegate(NSObject):
+        window = objc.ivar()
+
+        def applicationDidFinishLaunching_(self, notification):
+            frame = NSMakeRect(200.0, 200.0, 360.0, 130.0)
+            style = (
+                NSWindowStyleMaskTitled
+                | NSWindowStyleMaskClosable
+                | NSWindowStyleMaskMiniaturizable
+            )
+            self.window = NSWindow.alloc().initWithContentRect_styleMask_backing_defer_(
+                frame,
+                style,
+                NSBackingStoreBuffered,
+                False,
+            )
+            self.window.setTitle_(options.app_title)
+            self.window.center()
+            self.window.setDelegate_(self)
+
+            content = self.window.contentView()
+
+            status = NSTextField.alloc().initWithFrame_(NSMakeRect(20.0, 72.0, 320.0, 22.0))
+            status.setStringValue_("Wallet running at {}".format(url))
+            status.setBezeled_(False)
+            status.setDrawsBackground_(False)
+            status.setEditable_(False)
+            status.setSelectable_(True)
+            content.addSubview_(status)
+
+            open_button = NSButton.alloc().initWithFrame_(NSMakeRect(20.0, 22.0, 130.0, 32.0))
+            open_button.setTitle_("Open Browser")
+            open_button.setBezelStyle_(NSBezelStyleRounded)
+            open_button.setTarget_(self)
+            open_button.setAction_("openWallet:")
+            content.addSubview_(open_button)
+
+            quit_button = NSButton.alloc().initWithFrame_(NSMakeRect(165.0, 22.0, 90.0, 32.0))
+            quit_button.setTitle_("Quit")
+            quit_button.setBezelStyle_(NSBezelStyleRounded)
+            quit_button.setTarget_(self)
+            quit_button.setAction_("quitApp:")
+            content.addSubview_(quit_button)
+
+            self.window.makeKeyAndOrderFront_(None)
+            NSApp.activateIgnoringOtherApps_(True)
+            open_url(url)
+
+        def openWallet_(self, sender):
+            open_url(url)
+
+        def quitApp_(self, sender):
+            request_shutdown()
+            NSApp.terminate_(None)
+
+        def applicationShouldTerminate_(self, sender):
+            request_shutdown()
+            return True
+
+        def windowWillClose_(self, notification):
+            request_shutdown()
+            NSApp.terminate_(None)
+
+    app = NSApplication.sharedApplication()
+    app.setActivationPolicy_(NSApplicationActivationPolicyRegular)
+    delegate = WalletAppDelegate.alloc().init()
+    app.setDelegate_(delegate)
+    AppHelper.runEventLoop()
+    MACOS_APP = False
+
+    if server_thread.is_alive():
+        server_thread.join(timeout=3)
+
+
 async def main():
+    global SHUTDOWN_EVENT
     app = Application()
     app.listen(options.port, options.listen)
     # In this demo the server will simply run until interrupted
     # with Ctrl-C, but if you want to shut down more gracefully,
     # call shutdown_event.set().
     shutdown_event = tornado.locks.Event()
+    SHUTDOWN_EVENT = shutdown_event
     if not options.debug:
         # In debug mode, any code change will restart the server and launch another tab.
         # This goes in the way, so we deactivate in debug.
         open_url("http://127.0.0.1:{}".format(options.port))
     await shutdown_event.wait()
+    SHUTDOWN_EVENT = None
 
 
 def port_in_use(port):
@@ -1331,9 +1526,8 @@ if __name__ == "__main__":
         print("Port {} is in use, opening url".format(options.port))
         if not options.romode:  # Do not auto open url in read only mode
             open_url("http://127.0.0.1:{}".format(options.port))
+    elif sys.platform == "darwin" and getattr(sys, "frozen", False):
+        run_macos_app()
     else:
         # See http://www.lexev.org/en/2015/tornado-internationalization-and-localization/
-        locale_path = os.path.join(helpers.base_path(), "locale")
-        # print(f"base path {helpers.base_path()} locale path {locale_path}")
-        tornado.locale.load_gettext_translations(locale_path, "messages")
-        tornado.ioloop.IOLoop.current().run_sync(main)
+        run_server_thread()

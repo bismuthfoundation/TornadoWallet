@@ -168,7 +168,24 @@ class CrystalManager:
             if crystal_name not in self.loaded_crystals:
                 spec = self.available_crystals[crystal_name]["info"]
                 module = importlib.util.module_from_spec(spec)
-                spec.loader.exec_module(module)
+                crystal_dir = path.dirname(spec.origin)
+                added_to_path = False
+                try:
+                    if crystal_dir not in sys.path:
+                        sys.path.insert(0, crystal_dir)
+                        added_to_path = True
+                    spec.loader.exec_module(module)
+                except Exception as e:
+                    self.app_log.warning(
+                        "Crystal '{}' could not be loaded: {}".format(crystal_name, e)
+                    )
+                    return
+                finally:
+                    if added_to_path:
+                        try:
+                            sys.path.remove(crystal_dir)
+                        except ValueError:
+                            pass
                 self.loaded_crystals[crystal_name] = {
                     "name": crystal_name,
                     "info": self.available_crystals[crystal_name]["info"],

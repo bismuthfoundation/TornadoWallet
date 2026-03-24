@@ -7,12 +7,12 @@
     <div class="col-lg-12 col-md-12">
         <div class="card">
             <div class="card-header card-header-success">
-                <h4 class="card-title">{{ _("ECDSA PK Import")}}</h4>
+                <h4 class="card-title">{{ _("{} PK Import".format(key_type))}}</h4>
             </div>
             <div class="card-body">
 
 
-                 <form action="/wallet/import_ecdsa" method="post" autocomplete="in_your_dreams_43452794">
+                 <form action="/wallet/import_key" method="post" autocomplete="in_your_dreams_43452794">
                 <div class="card-header card-header-warning card-header-icon">
                     <div class="card-icon">
                         <i class="material-icons">person</i>
@@ -33,6 +33,7 @@
 
                         <input type="hidden" name="label" value="{{ label }}"/>
                         <input type="hidden" name="privkey" value="{{ privkey }}"/>
+                        <input type="hidden" name="key_type" value="{{ key_type }}"/>
 
                         <input name="import" id="btn_submit" class="btn btn-warning" type="submit" value="{{ _('Import Address') }}">
                         <input name="cancel" id="btn_cancel" class="btn btn-success" type="submit" value="{{ _('Cancel') }}">

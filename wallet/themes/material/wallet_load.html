@@ -113,7 +113,7 @@
                         <a class="nav-link" href="#legacy" data-toggle="tab">{{ _("Potential legacy wallet imports")}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pkimport" data-toggle="tab">{{ _("ECDSA PK Import")}}</a>
+                        <a class="nav-link" href="#pkimport" data-toggle="tab">{{ _("Private Key Import")}}</a>
                     </li>
                 </ul>
             </div>
@@ -140,10 +140,10 @@
                                 <label class="bmd-label-floating">{{ _("Address type")}}</label><br />
                                 <input type="radio" name="addresstype" value="RSA" id="RSA" checked>
                                 <label for="RSA">RSA</label><br />
-                                <input type="radio" name="addresstype" value="ECDSA"  id="ECDSA" disabled>
-                                <label for="ECDSA">ECDSA (WIP)</label><br />
-                                <input type="radio" name="addresstype" value="ED25519"  id ="ED25519" disabled>
-                                <label for="ED25519">ED25519 (WIP)</label><br />
+                                <input type="radio" name="addresstype" value="ECDSA"  id="ECDSA">
+                                <label for="ECDSA">ECDSA</label><br />
+                                <input type="radio" name="addresstype" value="ED25519"  id ="ED25519">
+                                <label for="ED25519">ED25519</label><br />
                                 <small>{{ _("What kind of crypto to use?")}}</small>
                             </div>
                         </div>
@@ -218,7 +218,7 @@
 
             </div>
             <div class="tab-pane" id="pkimport">
-                <form method="post" action="/wallet/import_ecdsa">
+                <form method="post" action="/wallet/import_key">
 
                      <div class="row">
                         <div class="col-md-6">
@@ -232,6 +232,18 @@
                      <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label class="bmd-label-floating">{{ _("Key type")}}</label><br />
+                                <input type="radio" name="key_type" value="ECDSA" id="PK_ECDSA" checked>
+                                <label for="PK_ECDSA">ECDSA</label><br />
+                                <input type="radio" name="key_type" value="ED25519" id="PK_ED25519">
+                                <label for="PK_ED25519">ED25519</label><br />
+                                <small>{{ _("Select the private key format to import")}}</small>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label class="bmd-label-floating">{{ _("Private Key (hex)")}}</label>
                                 <input class="form-control" type="text" name="privkey"/>
                             </div>
@@ -239,7 +251,7 @@
                     </div>
 
                     {% raw xsrf_form_html() %}
-                    <button type="submit" class="btn btn-warning"><i class="material-icons">get_app</i>&nbsp;{{ _("Import ECDSA privkey...")}}</button>
+                    <button type="submit" class="btn btn-warning"><i class="material-icons">get_app</i>&nbsp;{{ _("Import private key...")}}</button>
 
                     <div class="clearfix"></div>
                 </form>

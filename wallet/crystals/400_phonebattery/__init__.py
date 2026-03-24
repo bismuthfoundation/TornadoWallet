@@ -2,7 +2,6 @@
 Phone Battery Crystal for Tornado wallet
 """
 
-import sys
 import time
 from os import path
 from modules.basehandlers import CrystalHandler
@@ -10,7 +9,6 @@ from modules.i18n import get_dt_language
 from modules.helpers import base_path
 from modules.helpers import async_get_with_http_fallback
 
-sys.path.append('crystals/400_phonebattery')
 from bismuthsimpleasset import BismuthSimpleAsset
 from phoneapihandler import PhoneAPIHandler
 

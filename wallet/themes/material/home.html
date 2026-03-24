@@ -172,9 +172,9 @@
 			</div>
 			<div class="card-body">
 				<ul>
-					<li>This awesome wallet is Tornado based and comes with themes</li>
-					<li>Bismuth is listed on Xeggex.com exchange</li>
-					<li>More than 9,000,000 BIS is locked in Hypernodes as collateral</li>
+					{% for item in bismuth.get('news', []) %}
+					<li>{{ item }}</li>
+					{% end %}
 				</ul>
 
 			</div>
