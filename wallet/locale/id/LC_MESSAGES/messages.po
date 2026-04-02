@@ -1398,4 +1398,30 @@ msgstr "Your message has been encrypted."
 #: wallet.py:1120
 msgid "Message"
 msgstr "Message"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Mode Offline"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Server dompet tidak tersedia saat ini. Antarmuka tetap tersedia; atur server di Jaringan untuk menyambung kembali."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Server dompet kustom"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Pilih host dan port API tertentu."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Simpan server kustom"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Gunakan penemuan otomatis"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Salin alamat"
 

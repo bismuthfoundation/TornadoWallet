@@ -1181,4 +1181,30 @@ msgstr "A private label for that address"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Set label"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Modo sin conexión"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "El servidor de la cartera no está disponible en este momento. La interfaz sigue disponible; configura un servidor en Red para volver a conectarte."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Servidor personalizado de la cartera"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Elige un host y un puerto específicos de la API."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Guardar servidor personalizado"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Usar descubrimiento automático"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Copiar dirección"
 

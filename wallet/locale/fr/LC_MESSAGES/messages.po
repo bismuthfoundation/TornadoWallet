@@ -2015,4 +2015,30 @@ msgstr "Pour référence, voir :"
 #: crystals/030_bismuthtokens/themes/default/last.html:81
 msgid "Back to tokens"
 msgstr "Retour aux Tokens"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Mode hors ligne"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Le serveur du portefeuille est indisponible pour le moment. L'interface reste disponible ; configurez un serveur dans Réseau pour vous reconnecter."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Serveur de portefeuille personnalisé"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Choisissez un hôte API et un port spécifiques."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Enregistrer le serveur personnalisé"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Utiliser la découverte automatique"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Copier l'adresse"
 

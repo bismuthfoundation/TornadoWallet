@@ -1931,3 +1931,30 @@ msgstr ""
 #: wallet.py:1235
 msgid "Message"
 msgstr ""
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr ""
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr ""
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr ""
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr ""
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr ""
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr ""
+#: themes/material/base.html
+msgid "Copy address"
+msgstr ""
+

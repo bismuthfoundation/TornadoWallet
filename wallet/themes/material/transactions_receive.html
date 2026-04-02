@@ -31,7 +31,7 @@
                             </small>
                         </div>
                         <br/>
-                        <img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl={{ bismuth['server']['address'] }}&chld=H|0"/><br/>
+                        <div id="address-qr" data-qr-text="{{ address }}" style="display:inline-block;background:#fff;padding:8px;border-radius:4px;"></div><br/>
                         {{ _("This is the QR code for your address only.")}}
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                     {% if bisurl %}
 
                     <br/>
-                    <img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl={{ bisurl }}&chld=H|0"/><br/>
+                    <div id="bisurl-qr" data-qr-text="{{ bisurl }}" style="display:inline-block;background:#fff;padding:8px;border-radius:4px;"></div><br/>
                     {{ _("This is the QR code for your address, data and amount as a BisUrl.")}}<br/>
                     {{ _("You can copy/paste this image to send in a mail or anything")}}
                     <br/>
@@ -94,5 +94,30 @@
 </form>
 
 
+{% end %}
 
+{% block scripts %}
+<script src="{{ handler.common_url('js/plugins/jquery.qrcode.min.js') }}"></script>
+<script>
+    function renderQr(selector) {
+        const node = $(selector);
+        const text = node.data("qr-text");
+        if (!text) {
+            return;
+        }
+        node.empty().qrcode({
+            render: "canvas",
+            width: 300,
+            height: 300,
+            text: String(text),
+            background: "#ffffff",
+            foreground: "#000000"
+        });
+    }
+
+    $(function() {
+        renderQr("#address-qr");
+        renderQr("#bisurl-qr");
+    });
+</script>
 {% end %}

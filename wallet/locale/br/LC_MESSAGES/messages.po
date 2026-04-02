@@ -1402,4 +1402,30 @@ msgstr "Sua mensagem foi criptografada."
 #: wallet.py:1120
 msgid "Message"
 msgstr "Mensagem"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Modo offline"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "O servidor da carteira está indisponível no momento. A interface continua disponível; configure um servidor em Rede para reconectar."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Servidor personalizado da carteira"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Escolha um host e uma porta específicos da API."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Salvar servidor personalizado"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Usar descoberta automática"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Copiar endereço"
 

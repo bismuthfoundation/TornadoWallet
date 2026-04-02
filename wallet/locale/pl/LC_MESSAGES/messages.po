@@ -1181,4 +1181,30 @@ msgstr "Prywatny opis dla tego adresu"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Ustaw opis"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Tryb offline"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Serwer portfela jest obecnie niedostępny. Interfejs pozostaje dostępny; skonfiguruj serwer w sekcji Sieć, aby połączyć się ponownie."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Niestandardowy serwer portfela"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Wybierz konkretny host API i port."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Zapisz niestandardowy serwer"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Użyj automatycznego wykrywania"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Kopiuj adres"
 

@@ -127,13 +127,23 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
             <div class="container-fluid">
-                <div class="navbar-wrapper">
+                <div class="navbar-wrapper navbar-address-wrapper">
                     {% if bismuth['address'] %}
-                    <span class="navbar-brand" >{{ bismuth['address'] }}</span>
+                    <div class="navbar-address-bar">
+                        <a class="navbar-brand navbar-address-action" href="/wallet/load" title="{{_('Manage')}} {{_('addresses')}}">
+                            <i class="material-icons">find_replace</i>
+                        </a>
+                        <span class="navbar-brand navbar-address-text" title="{{ bismuth['address'] }}">{{ bismuth['address'] }}</span>
+                        <button type="button"
+                                class="navbar-brand navbar-address-action js-copy-text"
+                                data-copy-text="{{ bismuth['address'] }}"
+                                title="{{ _('Copy address') }}">
+                            <i class="material-icons">content_copy</i>
+                        </button>
+                    </div>
                     {% else %}
                     <a class="navbar-brand" href="/wallet/info">{{ _("Wallet info") }}</a>
                     {% end %}
-                     <a class="navbar-brand" href="/wallet/load"><i class="material-icons" title="{{_('Manage')}} {{_('addresses')}}">find_replace</i></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
@@ -217,6 +227,12 @@
         <!-- End Navbar -->
         <div class="content">
             <div class="container-fluid">
+                {% if bismuth.get('network_error') %}
+                <div class="alert alert-warning" role="alert">
+                    <strong>{{ bismuth['network_error']['title'] }}</strong>
+                    {{ bismuth['network_error']['message'] }}
+                </div>
+                {% end %}
 
 
                 {% block body %}{% end %}
@@ -235,23 +251,18 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.bismuthplatform.com/" target="_blank">
-                                BismuthPlatform.com
-                            </a>
-                        </li>
-                        <li>
                             <a href="https://github.com/BismuthFoundation/TornadoWallet/"  target="_blank">
                                 {{ _("Source")}}
                             </a>
                         </li>
                         <li>
-                            <a href="https://hypernodes.bismuth.live/?page_id=20" target="_blank">
-                                {{ _("Blog")}}
+                            <a href="https://discord.com/invite/mfxEHek"  target="_blank">
+                                {{ _("Discord")}}
                             </a>
                         </li>
                         <li>
-                            <a href="https://discordapp.com/invite/8KvA3JU"  target="_blank">
-                                {{ _("Discord")}}
+                            <a href="https://t.me/cryptobismuth" target="_blank">
+                                {{ _("Telegram")}}
                             </a>
                         </li>
                         <!-- li>
@@ -360,6 +371,7 @@
 <!-- script src="{{ static_url('demo/demo.js') }}"></script -->
 <!-- Helpers for base and crystals. Used to factorize common functions crystals may need -->
 <script src="{{ static_url('helpers.js') }}"></script>
+{% block scripts %}{% end %}
 <script>
 
     function sendurl(url){
@@ -700,6 +712,32 @@
 
 
     $(document).ready(function() {
+        function showClipboardNotification() {
+            $.notify({
+                icon: "done_outline",
+                message: "{{ _('Copied to Clipboard') }}"
+            }, {
+                type: "success",
+                timer: 1500,
+                placement: {
+                    from: "top",
+                    align: "right"
+                }
+            });
+        }
+
+        function copyTextToClipboard(text) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val(text).select();
+            document.execCommand("copy");
+            $temp.remove();
+            showClipboardNotification();
+        }
+
+        $('.js-copy-text').on('click', function() {
+            copyTextToClipboard($(this).data('copy-text'));
+        });
 
         if ($(window).height() < 680) {
             $('#sidebar').css("overflow-y","scroll");

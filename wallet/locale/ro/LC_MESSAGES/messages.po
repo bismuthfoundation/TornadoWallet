@@ -1,11 +1,5 @@
 msgid ""
-msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: TornadoWallet\n"
-"Language: ro\n"
+msgstr "MIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Generator: POEditor.com\nProject-Id-Version: TornadoWallet\nLanguage: ro"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:228
 msgid "Credits"
@@ -13,13 +7,11 @@ msgstr "Merite"
 
 #: themes/material/about_credits.html:11
 msgid "This wallet wouldn't have existed without..."
-msgstr "Acest portofel nu ar fi existat fără...\n"
-""
+msgstr "Acest portofel nu ar fi existat fără..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr "Șablon \"Material Dark\" de <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>\n"
-""
+msgstr "Șablon \"Material Dark\" de <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
 
 #: themes/material/about_credits.html:19
 msgid "Python, awesome language!"
@@ -263,8 +255,7 @@ msgstr "Pagina anterioară"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "Tokenii sunt o funcționalitate de bază BIS\n"
-""
+msgstr "Tokenii sunt o funcționalitate de bază BIS"
 
 #: themes/material/transactions_send.html:15
 #: themes/material/transactions_send_confirm.html:28
@@ -454,15 +445,13 @@ msgstr "Puteți copia/lipi această imagine pentru a trimite într-un e-mail sau
 #: themes/material/transactions_send_confirm.html:65
 #: themes/material/transactions_sendpop_confirm.html:41
 msgid "This is what the recipient will receive"
-msgstr "Aceasta este ceea ce destinatarul va primi\n"
-""
+msgstr "Aceasta este ceea ce destinatarul va primi"
 
 #: themes/material/transactions_send.html:73
 #: themes/material/transactions_send_confirm.html:77
 #: themes/material/transactions_sendpop_confirm.html:54
 msgid "This is what you will pay, fees included."
-msgstr "Asta este ceea ce vei plăti, comision inclus.\n"
-""
+msgstr "Asta este ceea ce vei plăti, comision inclus."
 
 #: themes/material/wallet_load.html:45 themes/material/wallet_load.html:102
 msgid "Action"
@@ -505,8 +494,7 @@ msgstr "Șablon portofel {} de {}."
 
 #: themes/material/about_credits.html:53
 msgid "Many thanks to our translators and proofreaders"
-msgstr "Mulțumiri traducătorilor și corectorilor noștri\n"
-""
+msgstr "Mulțumiri traducătorilor și corectorilor noștri"
 
 #: themes/material/about_network.html:22
 msgid "Wallet server version {}"
@@ -583,8 +571,7 @@ msgstr "S-a produs o eroare la trimiterea în mempool, tranzacția nu a fost tri
 #: crystals/200_dragginator/themes/default/about.html:89
 #: modules/basehandlers.py:55
 msgid "No Bismuth address, please create or load a wallet first."
-msgstr "Nu există adresă Bismuth, vă rugăm să creați sau încărcați un portofel mai întâi.\n"
-""
+msgstr "Nu există adresă Bismuth, vă rugăm să creați sau încărcați un portofel mai întâi."
 
 #: themes/material/base.html:95 themes/material/crystals_list.html:11
 msgid "Crystals"
@@ -680,8 +667,7 @@ msgstr "Ouăle mele"
 
 #: crystals/200_dragginator/themes/default/about.html:47
 msgid "D:And you are registered to the current eggdrop"
-msgstr "Acum sunteți înregistrat la eggdrop-ul curent\n"
-""
+msgstr "Acum sunteți înregistrat la eggdrop-ul curent"
 
 #: crystals/200_dragginator/themes/default/about.html:49
 #: crystals/250_autogame/themes/default/about.html:23
@@ -948,8 +934,7 @@ msgstr "Copiat în Clipboard"
 
 #: themes/material/transactions_send.html:103
 msgid "Send a transaction from a BIS URL"
-msgstr "Trimite o tranzacție dintr-un URL BIS\n"
-""
+msgstr "Trimite o tranzacție dintr-un URL BIS"
 
 #: crystals/250_autogame/themes/default/about.html:21
 #: themes/material/transactions_send.html:110
@@ -1006,8 +991,7 @@ msgstr "Portofelul este deblocat"
 
 #: themes/material/wallet_info.html:100
 msgid "You can lock it back for extra safety if you don't plan to use it soon."
-msgstr "Îl puteți bloca înapoi pentru siguranță suplimentară, dacă nu aveți de gând să-l folosiți curând.\n"
-""
+msgstr "Îl puteți bloca înapoi pentru siguranță suplimentară, dacă nu aveți de gând să-l folosiți curând."
 
 #: themes/material/wallet_info.html:137 themes/material/wallet_info.html:160
 #: themes/material/wallet_info.html:164 themes/material/wallet_info.html:244
@@ -1020,8 +1004,7 @@ msgstr "Parola principala este setată"
 
 #: themes/material/wallet_info.html:168
 msgid "This is the password that will protect your private keys."
-msgstr "Aceasta este parola care va proteja cheile private.\n"
-""
+msgstr "Aceasta este parola care va proteja cheile private."
 
 #: themes/material/wallet_info.html:172
 msgid "Retype Master password"
@@ -1107,8 +1090,7 @@ msgstr "Parolele nu se potrivesc"
 
 #: wallet.py:674
 msgid "Your message '{}' has been signed."
-msgstr "Mesajul tău \"{}\" a fost semnat.\n"
-""
+msgstr "Mesajul tău \"{}\" a fost semnat."
 
 #: wallet.py:676
 msgid "Signature"
@@ -1193,4 +1175,30 @@ msgstr "Etichetă privată pentru acea adresă"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Setează etichetă"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Mod offline"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Serverul portofelului este indisponibil acum. Interfața rămâne disponibilă; configurează un server în Rețea pentru a te reconecta."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Server personalizat pentru portofel"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Alege un host API și un port specifice."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Salvează serverul personalizat"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Folosește descoperirea automată"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Copiază adresa"
 

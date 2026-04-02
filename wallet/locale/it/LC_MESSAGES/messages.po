@@ -1,11 +1,5 @@
 msgid ""
-msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: TornadoWallet\n"
-"Language: it\n"
+msgstr "MIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Generator: POEditor.com\nProject-Id-Version: TornadoWallet\nLanguage: it"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:228
 msgid "Credits"
@@ -25,8 +19,7 @@ msgstr "Python, un fantastico linguaggio!"
 
 #: themes/material/about_credits.html:20
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr "Web application framework <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>\n"
-""
+msgstr "Web application framework <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a>"
 
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
@@ -1182,4 +1175,30 @@ msgstr "Etichetta privata per quell'indirizzo"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Imposta etichetta"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Modalità offline"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Il server del portafoglio non è disponibile al momento. L'interfaccia resta disponibile; configura un server in Rete per riconnetterti."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Server portafoglio personalizzato"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Scegli un host API e una porta specifici."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Salva server personalizzato"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Usa rilevamento automatico"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Copia indirizzo"
 

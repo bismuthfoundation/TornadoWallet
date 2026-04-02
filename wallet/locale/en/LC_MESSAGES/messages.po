@@ -1990,3 +1990,30 @@ msgstr "Message"
 
 #~ msgid "This feature is under construction. "
 #~ msgstr "This feature is under construction. "
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Offline Mode"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Custom wallet server"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Choose a specific API host and port."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Save custom server"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Use automatic discovery"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Copy address"
+

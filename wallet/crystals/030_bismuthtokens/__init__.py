@@ -24,13 +24,13 @@ async def get_data(address):
     if address in CACHED_DATA and CACHED_DATA[address][1] > time():
         # cached version still is valid
         return CACHED_DATA[address][0]
-    all = await async_get_with_http_fallback("https://bismuth.today/api/tokens/")
+    all = await async_get_with_http_fallback("https://bismuth.im/api/token/list")
     """
     'all': [
       ['ekn', '7bdc435229fb95321f74ead695bef31b05db0e71c4be605dc1bfc915', 21000000, 1554574309.19, 1], 
       ['ico', '7ef68a880a86ae48e077f43c509b1f959f1dd399cb8e3766e229876e', 50000, 1541578009.48, 2], 
     """
-    balances = await async_get_with_http_fallback("https://bismuth.today/api/balances/{}".format(address))
+    balances = await async_get_with_http_fallback("https://bismuth.im/api/token/balances/{}".format(address))
     """
      'balances': [['egg', 10], ['ico', 29]]
     """
@@ -54,7 +54,7 @@ class BismuthtokensHandler(CrystalHandler):
     async def last(self, params=None):
         data = await get_data(self.bismuth_vars['address'])
         tokens = {}
-        last = await async_get_with_http_fallback("https://bismuth.today/api/transactions/{}"
+        last = await async_get_with_http_fallback("https://bismuth.im/api/token/transactions/{}"
                                                   .format(self.bismuth_vars['address']))
         namespace = self.get_template_namespace()
         self.bismuth_vars["dtlanguage"] = get_dt_language(self.locale.translate)

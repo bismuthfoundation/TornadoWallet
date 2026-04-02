@@ -1,11 +1,5 @@
 msgid ""
-msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: TornadoWallet\n"
-"Language: ja\n"
+msgstr "MIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Generator: POEditor.com\nProject-Id-Version: TornadoWallet\nLanguage: ja"
 
 #: themes/material/about_credits.html:10 themes/material/base.html:246
 msgid "Credits"
@@ -17,9 +11,7 @@ msgstr "この財布は存在しなかっただろう..."
 
 #: themes/material/about_credits.html:16
 msgid "The \"Material Dark\" template by <a href=\"https://www.creative-tim.com\" target=\"_blank\">Creative Tim</a>"
-msgstr "「マテリアルダーク」テンプレート<a href=\"https://www.creative-tim.com\" target=\"_blank\">クリエイティブティム</a>\n"
-"\n"
-""
+msgstr "「マテリアルダーク」テンプレート<a href=\"https://www.creative-tim.com\" target=\"_blank\">クリエイティブティム</a>"
 
 #: themes/material/about_credits.html:19
 msgid "Python, awesome language!"
@@ -27,9 +19,7 @@ msgstr "パイソン、素晴らしい言語!"
 
 #: themes/material/about_credits.html:20
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
-msgstr " <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> ウェブアプリケーション\n"
-" フレームワーク\n"
-""
+msgstr " <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> ウェブアプリケーション\n フレームワーク"
 
 #: crystals/100_bismuthprice/themes/default/about.html:23
 #: crystals/210_eggpool/themes/default/about.html:25
@@ -44,8 +34,7 @@ msgstr "Tornado ウォレットバージョン{}"
 
 #: themes/material/about_credits.html:39
 msgid "This is the default wallet theme by {} from {}."
-msgstr "これは{} から {} による既定のウォレット テーマです。\n"
-""
+msgstr "これは{} から {} による既定のウォレット テーマです。"
 
 #: themes/material/about_network.html:14
 msgid "Current wallet server"
@@ -93,128 +82,91 @@ msgstr "コンセンサス:"
 
 #: themes/material/about_network.html:53
 msgid "Block"
-msgstr "ブロック\n"
-""
+msgstr "ブロック"
 
 #: themes/material/about_network.html:65
 msgid "Difficulty"
-msgstr "困難\n"
-"\n"
-""
+msgstr "困難"
 
 #: themes/material/about_network.html:78
 msgid "Available wallet servers"
-msgstr "利用可能なウォレットサーバー\n"
-""
+msgstr "利用可能なウォレットサーバー"
 
 #: themes/material/about_network.html:80
 msgid "servers"
-msgstr "サーバー\n"
-""
+msgstr "サーバー"
 
 #: themes/material/about_network.html:89
 msgid "Refresh from API"
-msgstr "API から更新する\n"
-"\n"
-""
+msgstr "API から更新する"
 
 #: themes/material/base.html:44
 msgid "Bismuth Wallet"
-msgstr "BISMUTH 財布\n"
-"\n"
-"\n"
-"\n"
-""
+msgstr "BISMUTH 財布"
 
 #: themes/material/base.html:52
 msgid "Dashboard"
-msgstr "ダッシュ ボード\n"
-""
+msgstr "ダッシュ ボード"
 
 #: themes/material/base.html:58
 msgid "Transactions"
-msgstr "トランザクション\n"
-"\n"
-""
+msgstr "トランザクション"
 
 #: themes/material/base.html:65
 msgid "Address book"
-msgstr "アドレス帳\n"
-"\n"
-""
+msgstr "アドレス帳"
 
 #: themes/material/base.html:71 themes/material/tokens_list.html:10
 msgid "Tokens"
-msgstr "トークン\n"
-""
+msgstr "トークン"
 
 #: themes/material/base.html:78
 msgid "Messages"
-msgstr "メッセージ\n"
-""
+msgstr "メッセージ"
 
 #: themes/material/base.html:85
 msgid "Network"
-msgstr "ネットワーク\n"
-""
+msgstr "ネットワーク"
 
 #: themes/material/base.html:86 themes/material/cristals_list.html:10
 msgid "Cristals"
-msgstr "結晶\n"
-"\n"
-""
+msgstr "結晶"
 
 #: themes/material/base.html:125
 msgid "Toggle navigation"
-msgstr "ナビゲーションの切り替\n"
-"\n"
-""
+msgstr "ナビゲーションの切り替"
 
 #: themes/material/base.html:221
 msgid "Source"
-msgstr "ソース\n"
-""
+msgstr "ソース"
 
 #: themes/material/base.html:226
 msgid "Blog"
-msgstr "ブログ\n"
-""
+msgstr "ブログ"
 
 #: themes/material/about_help.html:18 themes/material/base.html:231
 msgid "Discord"
-msgstr "不和\n"
-"\n"
-""
+msgstr "不和"
 
 #: themes/material/base.html:236
 msgid "Donate"
-msgstr "寄付\n"
-"\n"
-""
+msgstr "寄付"
 
 #: themes/material/base.html:252
 msgid "block #"
-msgstr "ブロック #\n"
-"\n"
-""
+msgstr "ブロック #"
 
 #: themes/material/base.html:272
 msgid "Sidebar Filters"
-msgstr "サイドバーフィルタ\n"
-"\n"
-""
+msgstr "サイドバーフィルタ"
 
 #: themes/material/base.html:285
 msgid "Images"
-msgstr "画像\n"
-"\n"
-""
+msgstr "画像"
 
 #: themes/material/cristals_list.html:11
 msgid "Cristals are extra functionalities you can add to your wallet"
-msgstr "クリスタルは、あなたの財布に追加することができ、余分な機能です\n"
-"\n"
-""
+msgstr "クリスタルは、あなたの財布に追加することができ、余分な機能です"
 
 #: crystals/100_bismuthprice/themes/default/about.html:15
 #: themes/material/tokens_list.html:14
@@ -224,79 +176,59 @@ msgstr "WIP"
 #: themes/material/home.html:15 themes/material/transactions.html:15
 #: themes/material/wallet_load.html:35
 msgid "Balance"
-msgstr "バランス\n"
-""
+msgstr "バランス"
 
 #: themes/material/home.html:34 themes/material/transactions.html:34
 msgid "Send"
-msgstr "送信\n"
-"\n"
-""
+msgstr "送信"
 
 #: themes/material/home.html:39 themes/material/transactions.html:39
 msgid "Send $BIS to..."
-msgstr "$BISを送信する...\n"
-"\n"
-""
+msgstr "$BISを送信する..."
 
 #: themes/material/home.html:53 themes/material/transactions.html:53
 #: themes/material/transactions_receive.html:15
 msgid "Receive"
-msgstr "受信\n"
-"\n"
-""
+msgstr "受信"
 
 #: themes/material/home.html:58 themes/material/transactions.html:58
 msgid "Request a $BIS payment"
-msgstr "$BIS支払いをリクエストする\n"
-"\n"
-""
+msgstr "$BIS支払いをリクエストする"
 
 #: themes/material/home.html:74 themes/material/transactions.html:73
 msgid "Latest transactions"
-msgstr "最新のトランザクション\n"
-"\n"
-""
+msgstr "最新のトランザクション"
 
 #: themes/material/home.html:75 themes/material/transactions.html:74
 #: themes/material/wallet_load.html:56
 msgid "Updated on"
-msgstr "更新日\n"
-"\n"
-""
+msgstr "更新日"
 
 #: themes/material/crystals_list.html:21 themes/material/home.html:81
 #: themes/material/transactions.html:80
 msgid "Date"
-msgstr "日付\n"
-"\n"
-""
+msgstr "日付"
 
 #: themes/material/home.html:82 themes/material/transactions.html:81
 #: themes/material/wallet_load.html:62 themes/material/wallet_load.html:125
 #: themes/material/wallet_load.html:170
 msgid "Address"
-msgstr "アドレス\n"
-""
+msgstr "アドレス"
 
 #: themes/material/home.html:83 themes/material/transactions.html:82
 #: themes/material/transactions_receive.html:46
 #: themes/material/transactions_send.html:52
 #: themes/material/transactions_send_confirm.html:55
 msgid "Amount"
-msgstr "量\n"
-"\n"
-""
+msgstr "量"
 
 #: themes/material/home.html:84 themes/material/transactions.html:83
 msgid "Type"
-msgstr "型\n"
-""
+msgstr "型"
 
 #: themes/material/home.html:161
 msgid "Bismuth news"
-msgstr "Bismuth ニュース\n"
-""
+msgstr "Bismuth ニュース"
 
 #: crystals/100_bismuthprice/themes/default/modules/home.html:28
 msgid "Bismuth vs USD"
@@ -304,62 +236,45 @@ msgstr "Bismuth vs USD"
 
 #: crystals/100_bismuthprice/themes/default/modules/home.html:33
 msgid "This is a mockup with fake data"
-msgstr "これは偽のデータを持つモックアップです\n"
-""
+msgstr "これは偽のデータを持つモックアップです"
 
 #: themes/material/home.html:147
 msgid "Account balance"
-msgstr "勘定残高\n"
-"\n"
-""
+msgstr "勘定残高"
 
 #: themes/material/home.html:148
 msgid "Last 12 months"
-msgstr "過去 12 か月間\n"
-"\n"
-""
+msgstr "過去 12 か月間"
 
 #: themes/material/home.html:152
 msgid "Mockup with fake data"
-msgstr "偽のデータを持つモックアップ\n"
-"\n"
-""
+msgstr "偽のデータを持つモックアップ"
 
 #: themes/material/message.html:16
 #: themes/material/transactions_send_confirm.html:16
 #: themes/material/wallet_import_encrypted_der1.html:48
 msgid "Previous page"
-msgstr "前のページ\n"
-"\n"
-""
+msgstr "前のページ"
 
 #: themes/material/tokens_list.html:11
 msgid "Tokens are a core BIS functionality"
-msgstr "トークンは BIS のコア機能です。\n"
-"\n"
-""
+msgstr "トークンは BIS のコア機能です。"
 
 #: themes/material/transactions_send.html:15
 #: themes/material/transactions_send_confirm.html:28
 msgid "Send To"
-msgstr "送信先\n"
-"\n"
-""
+msgstr "送信先"
 
 #: themes/material/transactions_send.html:16
 #: themes/material/transactions_send_confirm.html:29
 msgid "To whom send BIS."
-msgstr "BIS を送信する相手。\n"
-"\n"
-""
+msgstr "BIS を送信する相手。"
 
 #: themes/material/messages.html:61 themes/material/transactions_send.html:20
 #: themes/material/transactions_send_confirm.html:33
 #: themes/material/transactions_sendpop_confirm.html:29
 msgid "Recipient"
-msgstr "受信者\n"
-"\n"
-""
+msgstr "受信者"
 
 #: themes/material/messages.html:20 themes/material/messages.html:57
 #: themes/material/transactions_receive.html:27
@@ -367,108 +282,78 @@ msgstr "受信者\n"
 #: themes/material/transactions_send_confirm.html:39
 #: themes/material/transactions_sendpop_confirm.html:68
 msgid "Data (message)"
-msgstr "データ (メッセージ)\n"
-"\n"
-""
+msgstr "データ (メッセージ)"
 
 #: themes/material/transactions_send.html:27
 #: themes/material/transactions_send_confirm.html:43
 #: themes/material/transactions_sendpop_confirm.html:73
 msgid "Optionally, you can add a small comment to your transaction. Required for exchanges deposit."
-msgstr "必要に応じて、トランザクションに小さなコメントを追加できます。交換預金に必要です。\n"
-"\n"
-""
+msgstr "必要に応じて、トランザクションに小さなコメントを追加できます。交換預金に必要です。"
 
 #: themes/material/transactions_send.html:53
 #: themes/material/transactions_send_confirm.html:56
 msgid "How many BIS to send."
-msgstr "送信する BIS の数。\n"
-"\n"
-""
+msgstr "送信する BIS の数。"
 
 #: themes/material/transactions_receive.html:53
 #: themes/material/transactions_send.html:59
 #: themes/material/transactions_send_confirm.html:62
 #: themes/material/transactions_sendpop_confirm.html:38
 msgid "Amount (BIS)"
-msgstr "金額 (BIS)\n"
-"\n"
-""
+msgstr "金額 (BIS)"
 
 #: themes/material/transactions_receive.html:61
 #: themes/material/transactions_send.html:66
 #: themes/material/transactions_send_confirm.html:70
 #: themes/material/transactions_sendpop_confirm.html:46
 msgid "Est. fees"
-msgstr "見積手数料\n"
-"\n"
-""
+msgstr "見積手数料"
 
 #: themes/material/transactions_receive.html:66
 #: themes/material/transactions_send.html:71
 #: themes/material/transactions_send_confirm.html:75
 #: themes/material/transactions_sendpop_confirm.html:52
 msgid "Total (BIS)"
-msgstr "合計 (BIS)\n"
-"\n"
-""
+msgstr "合計 (BIS)"
 
 #: TornadoBismuthWallet.py:153 TornadoBismuthWallet.py:179
 #: themes/material/transactions_send.html:78
 #: themes/material/transactions_send.html:81
 #: themes/material/transactions_send.html:127 wallet.py:183 wallet.py:237
 msgid "Send BIS"
-msgstr "送信 BIS\n"
-"\n"
-""
+msgstr "送信 BIS"
 
 #: themes/material/wallet_info.html:11
 msgid "Current Wallet"
-msgstr "現在のウォレット\n"
-"\n"
-""
+msgstr "現在のウォレット"
 
 #: themes/material/wallet_info.html:28
 msgid "Open existing"
-msgstr "既存を開く\n"
-"\n"
-""
+msgstr "既存を開く"
 
 #: themes/material/wallet_info.html:29
 msgid "wallet"
-msgstr "財布\n"
-"\n"
-""
+msgstr "財布"
 
 #: themes/material/wallet_info.html:33
 msgid "Load a wallet from disk"
-msgstr "ディスクからウォレットを読み込む\n"
-"\n"
-""
+msgstr "ディスクからウォレットを読み込む"
 
 #: themes/material/wallet_info.html:47 themes/material/wallet_load.html:34
 msgid "Create a"
-msgstr "を作成する\n"
-"\n"
-""
+msgstr "を作成する"
 
 #: themes/material/wallet_info.html:48 themes/material/wallet_load.html:35
 msgid "new wallet"
-msgstr "新しい財布\n"
-"\n"
-""
+msgstr "新しい財布"
 
 #: themes/material/wallet_load.html:124
 msgid "File"
-msgstr "ファイル\n"
-"\n"
-""
+msgstr "ファイル"
 
 #: themes/material/wallet_load.html:126
 msgid "Encrypted"
-msgstr "暗号化\n"
-"\n"
-""
+msgstr "暗号化"
 
 #: themes/material/messages.html:123 themes/material/wip.html:10
 msgid "W.I.P."
@@ -1507,4 +1392,30 @@ msgstr "Your message has been encrypted."
 #: wallet.py:1120
 msgid "Message"
 msgstr "Message"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "オフラインモード"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "ウォレットサーバーは現在利用できません。インターフェースは引き続き利用できます。再接続するには、ネットワークでサーバーを設定してください。"
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "カスタムウォレットサーバー"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "特定のAPIホストとポートを選択してください。"
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "カスタムサーバーを保存"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "自動検出を使用"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "アドレスをコピー"
 

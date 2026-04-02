@@ -41,10 +41,11 @@ from modules import helpers
 from modules.crystals import CrystalManager
 from modules import i18n  # helps pyinstaller, do not remove
 
-__version__ = "0.1.47"
+__version__ = "0.1.48"
 SHUTDOWN_EVENT = None
 SERVER_IOLOOP = None
 MACOS_APP = False
+DEFAULT_API_PORT = 5658
 
 define("port", default=8888, help="run on the given port", type=int)
 define(
@@ -71,6 +72,47 @@ define("missing_address_route", default="/wallet/info", help="Route when no addr
 define("app_title", default=u"Tornado Bismuth Wallet", help="Custom app title", type=str)
 
 
+def load_app_options(filename):
+    if not os.path.isfile(filename):
+        return {}
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            return data
+    except Exception as e:
+        print("Could not load app options {}: {}".format(filename, e))
+    return {}
+
+
+def save_app_options(filename, data):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, sort_keys=True)
+
+
+def normalize_api_server(server, port):
+    server = (server or "").strip()
+    port = str(port or "").strip()
+    if not server:
+        return {"server": "", "port": "", "ipport": ""}
+    if ":" in server and not port:
+        server, port = server.rsplit(":", 1)
+        server = server.strip()
+        port = port.strip()
+    if not port:
+        port = str(DEFAULT_API_PORT)
+    try:
+        port_int = int(port)
+    except (TypeError, ValueError):
+        raise ValueError("Port must be a valid number.")
+    if port_int < 1 or port_int > 65535:
+        raise ValueError("Port must be between 1 and 65535.")
+    if not server:
+        raise ValueError("Server must not be empty.")
+    return {"server": server, "port": str(port_int), "ipport": "{}:{}".format(server, port_int)}
+
+
 # Decorator to limit available methods when in read only mode
 def write_protected(func):
     async def decorator(obj, *args, **kwargs):
@@ -91,13 +133,28 @@ def write_protected(func):
 class Application(tornado.web.Application):
     def __init__(self):
         # wallet_servers = bismuthapi.get_wallet_servers_legacy()
+        wallet_dir = helpers.get_private_dir()
+        self.wallet_dir = wallet_dir
+        self.options_file = os.path.join(wallet_dir, "options.json")
+        self.app_options = load_app_options(self.options_file)
+        self.custom_api = {"server": "", "port": "", "ipport": ""}
         servers = None
         if options.server:
-            servers = [options.server]
+            self.custom_api = normalize_api_server(options.server, "")
+            servers = [self.custom_api["ipport"]]
+        else:
+            try:
+                self.custom_api = normalize_api_server(
+                    self.app_options.get("custom_api_server", ""),
+                    self.app_options.get("custom_api_port", ""),
+                )
+            except ValueError:
+                self.custom_api = {"server": "", "port": "", "ipport": ""}
+            if self.custom_api["ipport"]:
+                servers = [self.custom_api["ipport"]]
         bismuth_client = bismuthclient.BismuthClient(
             verbose=options.verbose, servers_list=servers
         )
-        wallet_dir = helpers.get_private_dir()
         self.wallet_settings = None
         print("Please store your wallets under '{}'".format(wallet_dir))
         if options.romode:
@@ -110,7 +167,6 @@ class Application(tornado.web.Application):
         else:
             bismuth_client.load_multi_wallet("{}/wallet.json".format(wallet_dir))
         bismuth_client.set_alias_cache_file("{}/alias_cache.json".format(wallet_dir))
-        bismuth_client.get_server()
         # Convert relative to absolute
         options.theme = os.path.join(helpers.base_path(), options.theme)
         static_path = os.path.join(options.theme, "static")
@@ -158,6 +214,7 @@ class Application(tornado.web.Application):
             ro_mode=options.romode,
             # wallet_servers = wallet_servers
             bismuth_client=bismuth_client,
+            custom_api=self.custom_api,
             bismuth_vars={
                 "wallet_version": __version__,
                 "bismuthclient_version": bismuthclient.__version__,
@@ -165,6 +222,75 @@ class Application(tornado.web.Application):
             bismuth_crystals={},
         )
         super(Application, self).__init__(handlers, **settings)
+        self._server_connect_thread = None
+        self._server_connect_lock = threading.Lock()
+        self.connect_server_async(force=True)
+
+    def set_custom_api(self, server, port):
+        custom_api = normalize_api_server(server, port)
+        self.custom_api = custom_api
+        self.settings["custom_api"] = custom_api
+        self.app_options["custom_api_server"] = custom_api["server"]
+        self.app_options["custom_api_port"] = custom_api["port"]
+        save_app_options(self.options_file, self.app_options)
+        client = self.settings["bismuth_client"]
+        client.initial_servers_list = [custom_api["ipport"]] if custom_api["ipport"] else []
+        client.servers_list = list(client.initial_servers_list)
+        client.full_servers_list = (
+            [{"ip": custom_api["server"], "port": custom_api["port"], "load": "N/A", "height": "N/A"}]
+            if custom_api["ipport"]
+            else []
+        )
+        client._current_server = None
+        client._connection = None
+        client.clear_cache()
+        return custom_api
+
+    def clear_custom_api(self):
+        self.custom_api = {"server": "", "port": "", "ipport": ""}
+        self.settings["custom_api"] = self.custom_api
+        self.app_options["custom_api_server"] = ""
+        self.app_options["custom_api_port"] = ""
+        save_app_options(self.options_file, self.app_options)
+        client = self.settings["bismuth_client"]
+        client.initial_servers_list = []
+        client.servers_list = []
+        client.full_servers_list = []
+        client._current_server = None
+        client._connection = None
+        client.clear_cache()
+
+    def connect_server_async(self, force=False):
+        with self._server_connect_lock:
+            if (
+                not force
+                and self._server_connect_thread
+                and self._server_connect_thread.is_alive()
+            ):
+                return
+
+            def worker():
+                try:
+                    client = self.settings["bismuth_client"]
+                    client.get_server()
+                    if client._current_server and not client.initial_servers_list:
+                        try:
+                            client.refresh_server_list()
+                        except Exception as e:
+                            print("Background server list refresh failed: {}".format(e))
+                    client.clear_cache()
+                except Exception as e:
+                    print("Background server connection failed: {}".format(e))
+
+            self._server_connect_thread = threading.Thread(
+                target=worker, name="wallet-server-connect", daemon=True
+            )
+            self._server_connect_thread.start()
+
+    def wait_for_initial_server(self, timeout=4.0):
+        thread = self._server_connect_thread
+        if thread and thread.is_alive():
+            thread.join(timeout=timeout)
 
     def load_user_data(self, filename: str):
         """User data is config + optional integrated wallets."""
@@ -193,9 +319,12 @@ class HomeHandler(BaseHandler):
             # self.redirect("/wallet/info")
             self.redirect(options.missing_address_route)
             return
-        self.bismuth_vars["transactions"] = self.bismuth.latest_transactions(
-            5, for_display=True, mempool_included=True
-        )
+        try:
+            self.bismuth_vars["transactions"] = self.bismuth.latest_transactions(
+                5, for_display=True, mempool_included=True
+            )
+        except Exception:
+            self.bismuth_vars["transactions"] = []
         home_crystals = {
             "address": self.bismuth_vars["address"],
             "content": b"",
@@ -1005,22 +1134,56 @@ class WalletHandler(BaseHandler):
 
 
 class AboutHandler(BaseHandler):
+    def refresh_network_servers(self):
+        active_servers = []
+        try:
+            active_servers = helpers.get_active_fallback_wallet_servers()
+            if not active_servers:
+                active_servers = helpers.get_active_wallet_servers()
+        except Exception:
+            active_servers = []
+        self.bismuth_vars["network_servers"] = active_servers
+        if not self.settings.get("custom_api", {}).get("ipport"):
+            try:
+                if active_servers:
+                    self.bismuth.full_servers_list = active_servers
+                    self.bismuth.servers_list = [
+                        "{}:{}".format(server["ip"], server["port"])
+                        for server in active_servers
+                    ]
+                else:
+                    self.bismuth.refresh_server_list()
+                    self.bismuth_vars["network_servers"] = self.bismuth.full_servers_list or []
+            except Exception:
+                pass
+
     async def connect(self, params=None):
         # self.render("message.html", type="warning", title="WIP", message="WIP", bismuth=self.bismuth_vars)
         # print("params", params)
-        self.bismuth.set_server(params[0])
-        self.bismuth.clear_cache()
-        # Since these properties are calc before we swap server, we have to manually update.
-        self.bismuth_vars["server"] = self.bismuth.info()
-        self.bismuth_vars["server_status"] = self.bismuth.status()
-        self.bismuth_vars["balance"] = self.bismuth.balance(for_display=True)
+        _ = self.locale.translate
+        server = params[0]
+        host, port = server.rsplit(":", 1)
+        self.application.set_custom_api(host, port)
+        if not self.bismuth.set_server(server):
+            self.application.connect_server_async(force=True)
+            self.bismuth_vars["network_message"] = {
+                "type": "warning",
+                "title": _("Network"),
+                "message": _("Could not connect to the selected wallet server. The setting was saved."),
+            }
+        self.refresh_bismuth_state()
         self.render("about_network.html", bismuth=self.bismuth_vars)
 
     async def refresh(self, params=None):
-        self.bismuth.refresh_server_list()
-        self.bismuth_vars["server"] = self.bismuth.info()
-        self.bismuth_vars["server_status"] = self.bismuth.status()
-        self.bismuth_vars["balance"] = self.bismuth.balance(for_display=True)
+        _ = self.locale.translate
+        self.refresh_network_servers()
+        self.application.connect_server_async(force=True)
+        self.bismuth_vars["network_message"] = {
+            "type": "info",
+            "title": _("Network"),
+            "message": _("Refreshing wallet server information in the background."),
+        }
+        self.refresh_bismuth_state()
         self.render("about_network.html", bismuth=self.bismuth_vars)
         """
         self.render("message.html", type="warning", title="WIP", message="WIP",
@@ -1040,7 +1203,40 @@ class AboutHandler(BaseHandler):
     async def help(self, params=None):
         self.render("about_help.html", bismuth=self.bismuth_vars)
 
-    async def network(self, params=None):
+    async def network(self, params=None, post=False):
+        _ = self.locale.translate
+        if post:
+            action = self.get_body_argument("action", "save")
+            try:
+                if action == "clear":
+                    self.application.clear_custom_api()
+                    self.application.connect_server_async(force=True)
+                    self.bismuth_vars["network_message"] = {
+                        "type": "info",
+                        "title": _("Network"),
+                        "message": _("Custom wallet server removed. Automatic discovery is enabled again."),
+                    }
+                else:
+                    custom_api = self.application.set_custom_api(
+                        self.get_body_argument("api_server", ""),
+                        self.get_body_argument("api_port", ""),
+                    )
+                    self.application.connect_server_async(force=True)
+                    self.bismuth_vars["network_message"] = {
+                        "type": "success",
+                        "title": _("Network"),
+                        "message": _("Custom wallet server saved: {}").format(custom_api["ipport"]),
+                    }
+            except ValueError as e:
+                self.bismuth_vars["network_message"] = {
+                    "type": "warning",
+                    "title": _("Error"),
+                    "message": str(e),
+                }
+            self.refresh_bismuth_state()
+        else:
+            self.refresh_network_servers()
+            self.refresh_bismuth_state()
         self.render("about_network.html", bismuth=self.bismuth_vars)
 
     async def quit(self, params=None):
@@ -1059,6 +1255,12 @@ class AboutHandler(BaseHandler):
         if not command:
             command = "credits"
         await getattr(self, command)(params)
+
+    async def post(self, command=""):
+        command, *params = command.split("/")
+        if not command:
+            command = "network"
+        await getattr(self, command)(params, post=True)
 
 
 class TokensHandler(BaseHandler):
@@ -1468,7 +1670,8 @@ def run_macos_app():
 
             self.window.makeKeyAndOrderFront_(None)
             NSApp.activateIgnoringOtherApps_(True)
-            open_url(url)
+            # The server thread already auto-opens the wallet after binding the port.
+            # Avoid a second launch here in the frozen macOS bundle.
 
         def openWallet_(self, sender):
             open_url(url)

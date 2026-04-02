@@ -1,12 +1,12 @@
 [Setup]
 AppName=Tornado Bismuth Wallet
-AppVersion=0.1.47
+AppVersion=0.1.48
 DefaultDirName={autopf}\Tornado Bismuth Wallet
 DefaultGroupName=Tornado Bismuth Wallet
 UninstallDisplayIcon={app}\TornadoBismuthWallet.exe
 Compression=lzma2
 SolidCompression=yes
-OutputBaseFilename=TornadoBismuthWallet-0.1.47-setup
+OutputBaseFilename=TornadoBismuthWallet-0.1.48-setup
 SetupIconFile=favicon.ico
 DisableDirPage=no
 WizardStyle=modern

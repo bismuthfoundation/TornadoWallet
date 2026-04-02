@@ -1181,4 +1181,30 @@ msgstr "Een privélabel voor het adres"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Stel label in"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Offline-modus"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "De walletserver is momenteel niet beschikbaar. De interface blijft beschikbaar; configureer een server in Netwerk om opnieuw verbinding te maken."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Aangepaste walletserver"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Kies een specifieke API-host en poort."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Aangepaste server opslaan"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Automatische detectie gebruiken"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Adres kopiëren"
 
