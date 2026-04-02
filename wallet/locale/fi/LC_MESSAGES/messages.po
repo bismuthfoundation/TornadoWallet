@@ -1,11 +1,5 @@
 msgid ""
-msgstr ""
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: TornadoWallet\n"
-"Language: fi\n"
+msgstr "MIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Generator: POEditor.com\nProject-Id-Version: TornadoWallet\nLanguage: fi"
 
 #. Credits as if you made it is : Tekijät
 #. Yep, that's the one in this context!
@@ -23,8 +17,7 @@ msgstr "\"Materiaalinen Pimeys\" malli <a href=\"https://www.creative-tim.com\" 
 
 #: themes/material/about_credits.html:19
 msgid "Python, awesome language!"
-msgstr "Python, loistava ohjelmointikieli!\n"
-""
+msgstr "Python, loistava ohjelmointikieli!"
 
 #: themes/material/about_credits.html:20
 msgid "The <a href=\"https://www.tornadoweb.org/en/stable/index.html\" target=\"_blank\">Tornado</a> web application framework"
@@ -111,8 +104,7 @@ msgstr "API-lähteen päivittäminen"
 
 #: themes/material/base.html:43
 msgid "Bismuth Wallet"
-msgstr "Bismuth Lompakko\n"
-""
+msgstr "Bismuth Lompakko"
 
 #: themes/material/base.html:51
 msgid "Dashboard"
@@ -693,8 +685,7 @@ msgstr "Sinä voit rekisteröityä eggdroppiin"
 
 #: crystals/200_dragginator/themes/default/about.html:61
 msgid "D:DNA"
-msgstr "DNA\n"
-""
+msgstr "DNA"
 
 #: crystals/200_dragginator/themes/default/about.html:62
 #: crystals/200_dragginator/themes/default/egg.html:56
@@ -1189,4 +1180,30 @@ msgstr "A private label for that address"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Set label"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Offline-tila"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Lompakkopalvelin ei ole juuri nyt käytettävissä. Käyttöliittymä pysyy saatavilla; määritä palvelin Verkko-osiossa, jotta yhteys muodostetaan uudelleen."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Mukautettu lompakkopalvelin"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Valitse tietty API-isäntä ja portti."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Tallenna mukautettu palvelin"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Käytä automaattista palvelinhakua"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Kopioi osoite"
 

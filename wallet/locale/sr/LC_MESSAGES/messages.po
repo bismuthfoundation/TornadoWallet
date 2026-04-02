@@ -1181,4 +1181,30 @@ msgstr "Privatna etiketa za tu adresu"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Podesiti etiketu"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Režim van mreže"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Server novčanika trenutno nije dostupan. Interfejs ostaje dostupan; podesite server u odeljku Mreža da biste se ponovo povezali."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Prilagođeni server novčanika"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Izaberite određeni API host i port."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Sačuvaj prilagođeni server"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Koristi automatsko otkrivanje"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Kopiraj adresu"
 

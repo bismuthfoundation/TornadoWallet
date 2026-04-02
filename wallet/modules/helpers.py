@@ -7,11 +7,14 @@ import json
 import cachetools.func
 import requests
 from bismuthclient.bismuthclient import BismuthClient
+from bismuthclient import bismuthapi
+from distutils.version import LooseVersion
 
 # Where the wallets and other potential private info are to be stored.
 # It's a dir under the user's own home directory.
 BISMUTH_PRIVATE_DIR = "bismuth-private"
 NEWS_URL = "https://raw.githubusercontent.com/bismuthfoundation/TornadoWallet/master/news.json"
+FALLBACK_WALLET_SERVERS_URL = "https://bismuth.world/api/legacy.json"
 
 HTTP_SESSION = None
 
@@ -87,6 +90,48 @@ def get_news():
     except Exception as e:
         print("News fetch fallback: {}".format(e))
     return fallback
+
+
+def get_active_wallet_servers():
+    try:
+        return bismuthapi.get_wallet_servers_legacy(as_dict=True)
+    except Exception as e:
+        print("Active wallet server fetch failed: {}".format(e))
+        return []
+
+
+def get_active_fallback_wallet_servers():
+    try:
+        response = requests.get(
+            FALLBACK_WALLET_SERVERS_URL, timeout=bismuthapi.API_REQUEST_TIMEOUT
+        )
+        if response.status_code != 200:
+            return []
+        wallets = response.json()
+        if not isinstance(wallets, list):
+            return []
+        active_wallets = [
+            wallet for wallet in wallets
+            if wallet.get("active")
+            and LooseVersion(str(wallet.get("version", "0"))) >= LooseVersion("0.1.5")
+        ]
+        active_wallets.sort(
+            key=lambda wallet: (wallet.get("clients", 0) + 1) / (wallet.get("total_slots", 0) + 2)
+        )
+        return [
+            {
+                "ip": wallet["ip"],
+                "port": wallet["port"],
+                "load": "{:.0f}".format(
+                    (wallet.get("clients", 0) + 1) * 100 / (wallet.get("total_slots", 0) + 2)
+                ),
+                "height": wallet.get("height", "N/A"),
+            }
+            for wallet in active_wallets
+        ]
+    except Exception as e:
+        print("Active fallback wallet server fetch failed: {}".format(e))
+        return []
 
 
 async def async_get(url, is_json=False, ignore_ssl_errors=False):

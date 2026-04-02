@@ -34,8 +34,8 @@ The current macOS bundle uses a small native Cocoa wrapper via `PyObjC`.
 - Tornado runs in a background thread.
 - A native `NSApplication` event loop is started.
 - A small Cocoa control window is shown.
-- The browser is opened automatically.
-- Quiting from the Dock, closing the Cocoa window, or using `/about/quit` shuts down both the native app and the Tornado server.
+- The browser is opened automatically once.
+- Quitting from the Dock, closing the Cocoa window, or using `/about/quit` shuts down both the native app and the Tornado server.
 
 This is implemented in:
 
@@ -87,6 +87,10 @@ PYTHONPATH=/Users/urbit/Projects/codex/BismuthClient/bismuthclient \
 PYINSTALLER_CONFIG_DIR=/Users/urbit/Projects/codex/TornadoWallet/wallet/.pyinstaller-cache \
 bash make_dist_mac.sh
 ```
+
+Important:
+- `make_dist_mac.sh` defaults to `python3` if `PYTHON_BIN` is not set.
+- In this workspace, using the system `python3` does not have the required build/runtime modules, so use the explicit environment shown above.
 
 Output:
 
@@ -151,7 +155,7 @@ On macOS, the packaged app should now:
 
 - show a normal Dock icon
 - stop bouncing after launch
-- open the wallet in the browser
+- open the wallet in the browser in a single tab
 - show a small native control window
 - quit correctly when:
   - using `Cmd+Q`

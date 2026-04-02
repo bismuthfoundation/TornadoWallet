@@ -24,3 +24,52 @@
     -webkit-text-security:disc; !important;
     -moz-text-security:disc; !important;
 }
+
+.navbar .navbar-wrapper.navbar-address-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.navbar-address-bar {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.navbar .navbar-address-action,
+.navbar .navbar-address-text {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-address-action {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.navbar .navbar-address-text {
+  color: inherit;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar .navbar-address-action .material-icons {
+  display: block;
+}

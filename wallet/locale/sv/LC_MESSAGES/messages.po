@@ -537,4 +537,30 @@ msgstr ""
 #: wallet.py:198
 msgid "There was an error submitting to the mempool, transaction was not sent."
 msgstr ""
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Offlineläge"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Plånboksservern är inte tillgänglig just nu. Gränssnittet är fortfarande tillgängligt; konfigurera en server under Nätverk för att återansluta."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Anpassad plånboksserver"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Välj en specifik API-värd och port."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Spara anpassad server"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Använd automatisk upptäckt"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Kopiera adress"
 

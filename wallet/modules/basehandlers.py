@@ -19,6 +19,82 @@ from modules.i18n import (
 class BaseHandler(RequestHandler):
     """Common ancestor for all route handlers"""
 
+    def _default_server_info(self):
+        _ = self.locale.translate
+        custom_api = self.settings.get("custom_api", {})
+        configured_server = custom_api.get("ipport", "")
+        return {
+            "wallet": self.bismuth.wallet_file,
+            "address": self.bismuth.address,
+            "server": configured_server or _("Not connected"),
+            "servers_list": [],
+            "full_servers_list": [],
+            "connected": False,
+        }
+
+    def _default_server_status(self):
+        return {
+            "blocks": "N/A",
+            "difficulty": 0.0,
+            "protocolversion": "N/A",
+            "walletversion": "N/A",
+            "connections": "N/A",
+            "uptime_human": "N/A",
+            "time_drift": "N/A",
+            "consensus": "N/A",
+            "consensus_percent": 0.0,
+            "extended": {
+                "version": "N/A",
+                "clients": "N/A",
+                "max_clients": "N/A",
+            },
+        }
+
+    def refresh_bismuth_state(self):
+        _ = self.locale.translate
+        self.application.wait_for_initial_server()
+        server_info = self._default_server_info()
+        try:
+            live_info = self.bismuth.info() or {}
+            server_info.update(live_info)
+        except Exception:
+            pass
+        server_info["servers_list"] = server_info.get("servers_list") or []
+        server_info["full_servers_list"] = server_info.get("full_servers_list") or []
+        server_info["connected"] = bool(server_info.get("connected")) and bool(server_info.get("server"))
+        if not server_info.get("server"):
+            server_info["server"] = self._default_server_info()["server"]
+
+        server_status = self._default_server_status()
+        if server_info["connected"]:
+            try:
+                live_status = self.bismuth.status() or {}
+                if live_status:
+                    server_status.update(live_status)
+            except Exception:
+                pass
+        extended = server_status.get("extended") or {}
+        merged_extended = self._default_server_status()["extended"]
+        merged_extended.update(extended)
+        server_status["extended"] = merged_extended
+
+        self.bismuth_vars["server"] = server_info
+        self.bismuth_vars["server_status"] = server_status
+        self.bismuth_vars["custom_api"] = self.settings.get("custom_api", {})
+        self.bismuth_vars["network_error"] = False
+        if not server_info["connected"]:
+            self.bismuth_vars["network_error"] = {
+                "title": _("Offline Mode"),
+                "message": _(
+                    "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+                ),
+            }
+        elif server_status.get("blocks") in ("N/A", None, ""):
+            self.bismuth_vars["network_error"] = {
+                "title": _("Error"),
+                "message": _("Wallet server did not send an answer. Please try again."),
+            }
+
     def initialize(self):
         """Common init for every request"""
         # TODO: advantage in using Tornado Babel maybe? https://media.readthedocs.org/pdf/tornado-babel/0.1/tornado-babel.pdf
@@ -42,9 +118,8 @@ class BaseHandler(RequestHandler):
         # self.bismuth_vars['wallet'] =
         # reflect server info
         self.settings["page_title"] = self.settings["app_title"]
-        self.bismuth_vars["server"] = self.bismuth.info()
-        self.bismuth_vars["server_status"] = self.bismuth.status()
-        print("status", self.bismuth.status())
+        self.bismuth_vars["network_message"] = False
+        self.refresh_bismuth_state()
         self.bismuth_vars["balance"] = self.bismuth.balance(for_display=True)
         self.bismuth_vars["address"] = self.bismuth._wallet.info()[
             "address"
@@ -75,14 +150,6 @@ class BaseHandler(RequestHandler):
         self.update_crystals()
         # self.bismuth_vars['dtlanguage'] = get_dt_language(_)
         self.error = False
-        if "blocks" not in self.bismuth_vars["server_status"]:
-            self.error = {
-                "title": _("Error"),
-                "message": _("Wallet server did not send an answer. Please try again."),
-            }
-            # print(self.bismuth_vars['server_status'])
-        if "uptime_human" not in self.bismuth_vars["server_status"]:
-            self.bismuth_vars["server_status"]["uptime_human"] = "NON COMPATIBLE SERVER"
         my_locale = self.get_user_locale_name()
         if not my_locale or my_locale == "*":
             my_locale = self.locale.code.split("_")[0]
@@ -143,10 +210,7 @@ class BaseHandler(RequestHandler):
         return locale.get("en")
 
     def render_string(self, template_name, **kwargs):
-        if not self.error:
-            return super().render_string(template_name, **kwargs)
-        string = self.error["title"] + "\n" + self.error["message"]
-        return string
+        return super().render_string(template_name, **kwargs)
 
     def update_crystals(self):
         crystals = self.application.crystals_manager.get_loaded_crystals()

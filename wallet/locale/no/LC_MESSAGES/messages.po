@@ -1181,4 +1181,30 @@ msgstr "En privat merkelapp for den adressen"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "Set merkelapp"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "Frakoblet modus"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "Wallet-serveren er ikke tilgjengelig akkurat nå. Grensesnittet er fortsatt tilgjengelig; konfigurer en server under Nettverk for å koble til igjen."
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "Tilpasset wallet-server"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "Velg en spesifikk API-vert og port."
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "Lagre tilpasset server"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "Bruk automatisk oppdagelse"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "Kopier adresse"
 

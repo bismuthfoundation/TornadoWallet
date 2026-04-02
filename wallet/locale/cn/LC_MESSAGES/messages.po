@@ -1181,4 +1181,30 @@ msgstr "该地址的私人标签"
 #: themes/material/wallet_load.html:152
 msgid "Set label"
 msgstr "设置标签"
+#: modules/basehandlers.py
+msgid "Offline Mode"
+msgstr "离线模式"
+
+#: modules/basehandlers.py
+msgid "Wallet server is unavailable right now. The interface stays available; configure a server in Network to reconnect."
+msgstr "钱包服务器当前不可用。界面仍可使用；请在“网络”中配置服务器以重新连接。"
+
+#: themes/material/about_network.html
+msgid "Custom wallet server"
+msgstr "自定义钱包服务器"
+
+#: themes/material/about_network.html
+msgid "Choose a specific API host and port."
+msgstr "选择特定的 API 主机和端口。"
+
+#: themes/material/about_network.html
+msgid "Save custom server"
+msgstr "保存自定义服务器"
+
+#: themes/material/about_network.html
+msgid "Use automatic discovery"
+msgstr "使用自动发现"
+#: themes/material/base.html
+msgid "Copy address"
+msgstr "复制地址"
 

@@ -105,9 +105,9 @@ After the standalone bundle is ready, build the installer with Inno Setup using:
 Current installer settings:
 
 - App name: `Tornado Bismuth Wallet`
-- App version: `0.1.47`
+- App version: `0.1.48`
 - Default install folder: `Tornado Bismuth Wallet`
-- Output filename: `TornadoBismuthWallet-0.1.47-setup`
+- Output filename: `TornadoBismuthWallet-0.1.48-setup`
 
 The installer currently packages everything from:
 
